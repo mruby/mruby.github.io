@@ -1,30 +1,36 @@
 ---
-layout: default
+layout: home
 title: mruby
 ---
 
-<div id="home">
-  <div>
-    <h2>About mruby</h2>
+<div class="row clearfix">
+  <div class="col-md-12 column mruby-is">
+    <img src="/images/mruby_logo_red_icon.png"/>
     <p>
-      mruby is the lightweight implementation of the Ruby language complying to (part of) the 
-      ISO standard. mruby can be linked and embedded within your application. We provide the 
-      interpreter program "mruby" and the interactive mruby shell "mirb" as examples. You can 
-      also compile Ruby programs into compiled byte code using the mruby compiler "mrbc". All 
-      those tools reside in "bin" directory. The "mrbc" is also able to generate compiled byte 
-      code in a C source file. You can check the "mrbtest" program under the "test" directory.
+    mruby is the lightweight implementation of the Ruby language complying with part of the <a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=59579">ISO standard</a>. mruby can be linked and embedded within your application. 
     </p>
 
-    <p>
-      This achievement was sponsored by the Regional Innovation Creation R&amp;D Programs of 
-      the Ministry of Economy, Trade and Industry of Japan.
-    </p>
+    <div class="mruby-is-get">
+      <a href="https://github.com/mruby/mruby/archive/1.0.0.zip" class="btn btn-lg btn-default" role="button">Download 1.0.0 Source</a>
+      &nbsp; or &nbsp;
+      <a href="https://github.com/mruby/mruby" class="btn btn-lg btn-default" role="button">Find on Github</a>
+    </div>
   </div>
 
-  <div>
-    <h2>Downloads</h2>
-    <p>
-      <b>Current stable</b>: <a href="https://github.com/mruby/mruby/archive/1.0.0.zip">mruby 1.0.0</a>
-    </p>
+  <div class="col-md-12">
+    <div id="home">
+      <div>
+        <h2>Latest News</h2>
+        <ul class="posts">
+          {% for post in site.posts %}
+            <li>
+              <p>{{ post.date | date_to_string }}</p>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
   </div>
+
 </div>
