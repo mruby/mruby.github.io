@@ -1,0 +1,7 @@
+name: mruby
+markdown: redcarpet
+pygments: true
+exclude:
+- Gemfile
+- Gemfile.lock
+- README.md
