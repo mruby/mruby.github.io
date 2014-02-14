@@ -5,3 +5,4 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - README.md
+- gen_mgemdata.rb
