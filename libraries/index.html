@@ -6,8 +6,14 @@ title: mruby - libraries
 <div id="home">
   <div>
     <h2>Libraries</h2>
-    <p>
-      Coming soon...
-    </p>
+
+    {% for mgem_data in site.data.mgems %}
+      <p>
+        <b>Name:</b> <a href="{{ mgem_data.website }}">{{ mgem_data.name }}</a> <br/>
+        <b>Description:</b> {{ mgem_data.description }} <br/>
+        <b>Author:</b> {{ mgem_data.author }} <br/>
+      </p>
+    {% endfor %}
+
   </div>
 </div>
