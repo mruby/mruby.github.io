@@ -86,7 +86,7 @@
 }
 
 .mruby-is img {
-  width: 100px;
+  width: auto;
   height: 90px;
   float: left;
   padding-right: 20px;
