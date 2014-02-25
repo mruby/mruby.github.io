@@ -6,32 +6,27 @@
   <body>
 
     <div class="container">
+
+      {% include navigation.html %}
+
       <div class="row clearfix">
+        <div class="col-md-9 column">
 
-        <div class="col-md-12 column">
+          {{ content }}
 
-          {% include navigation.html %}
+        </div>
+        <div class="col-md-3 column">
 
-          <div class="row clearfix">
-            <div class="col-md-9 column">
-
-              {{ content }}
-
-            </div>
-            <div class="col-md-3 column">
-
-              <h2>Latest News</h2>
-              <ul class="posts">
-                {% for post in site.posts %}
-                  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
-              </ul>
-
-            </div>
-          </div>
+          <h2>Latest News</h2>
+          <ul class="posts">
+            {% for post in site.posts %}
+              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
 
         </div>
       </div>
+
     </div>
 
     {% include footer.html %}

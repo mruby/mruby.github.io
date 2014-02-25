@@ -1,6 +1,18 @@
-.navbar-header img {
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+a { color: #ce2812; }
+a:hover { color: #AD2D1D;}
+
+.logo {
+  float: left;
+}
+
+.logo img {
   padding-top: 4px;
   padding-left: 8px;
+  margin-right: 8px;
 }
 
 .footer {
@@ -8,76 +20,46 @@
   padding-top: 20px;
   margin-top: 20px;
   text-align: center;
+  color: #999;
+  font-size: .75em;
 }
 
-.navbar-default {
-  background-color: #eee;
-  border-color: #eee;
-}
-.navbar-default .navbar-brand {
-  color: #ce2812;
-}
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #f00;
-}
-.navbar-default .navbar-text {
-  color: #ce2812;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #ce2812;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #f00;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #f00;
-  background-color: #eee;
-}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #f00;
-  background-color: #eee;
-}
-.navbar-default .navbar-toggle {
-  border-color: #eee;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #eee;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #ce2812;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #ce2812;
-}
-.navbar-default .navbar-link {
-  color: #ce2812;
-}
-.navbar-default .navbar-link:hover {
-  color: #f00;
-}
-
-@media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #ce2812;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #f00;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #f00;
-    background-color: #eee;
-  }
+nav {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+  overflow: hidden; /* clearfix */
 }
 
 .mruby-is {
-  padding: 5px 20px 20px 20px;
+  padding: 25px 40px 40px 40px;
   border-bottom: 1px solid #e5e5e5;
+  background-color: #ce2812;
+  color: #fff;
+}
+
+.mruby-is a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .mruby-is p {
   font-size: 150%;
   padding-top: 15px;
+}
+
+.mruby-is .btn {
+  text-decoration: none;
+  border: 1px solid #fff;
+  background: none;
+  color: #fff;
+  opacity: .9;
+}
+
+.mruby-is .btn:hover {
+  border: 1px solid #fff;
+  background: #fff;
+  color: #ce2812;
+  opacity: 1; 
 }
 
 .mruby-is-get {
