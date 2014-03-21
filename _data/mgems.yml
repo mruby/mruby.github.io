@@ -74,7 +74,7 @@
   author: charlescui
   website: https://github.com/charlescui/mruby-cache
   protocol: git
-  repository: git@github.com:charlescui/mruby-cache.git
+  repository: https://github.com/charlescui/mruby-cache.git
   repooptions: 
 - name: mruby-capability
   description: Linux Capability Binding
@@ -295,6 +295,13 @@
   protocol: git
   repository: https://github.com/mattn/mruby-iconv.git
   repooptions: 
+- name: mruby-iijson
+  description: JSON parser and generator
+  author: iij
+  website: https://github.com/iij/mruby-iijson
+  protocol: git
+  repository: https://github.com/iij/mruby-iijson.git
+  repooptions: 
 - name: mruby-io
   description: IO, File class implementation
   author: iij
@@ -308,6 +315,13 @@
   website: https://github.com/iij/mruby-ipaddr
   protocol: git
   repository: https://github.com/iij/mruby-ipaddr.git
+  repooptions: 
+- name: mruby-ipvs
+  description: interface to IP Virtual Server (IPVS) for mruby
+  author: YOSHIKAWA Ryota
+  website: https://github.com/rrreeeyyy/mruby-ipvs
+  protocol: git
+  repository: https://github.com/rrreeeyyy/mruby-ipvs
   repooptions: 
 - name: mruby-javascriptcore
   description: bindings to an from JavaScript for JavaScriptCore from WebKitGTK
@@ -371,6 +385,20 @@
   website: https://github.com/mattn/mruby-mecab
   protocol: git
   repository: https://github.com/mattn/mruby-mecab.git
+  repooptions: 
+- name: mruby-memcached
+  description: libmemcached bindings by mruby
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumoto-r/mruby-memcached
+  protocol: git
+  repository: https://github.com/matsumoto-r/mruby-memcached.git
+  repooptions: 
+- name: mruby-merb
+  description: ERB-like mruby gem
+  author: pbosetti
+  website: https://github.com/pbosetti/mruby-merb
+  protocol: git
+  repository: https://github.com/pbosetti/mruby-merb.git
   repooptions: 
 - name: mruby-minigame
   description: 2D Game Framework for rapid prototyping
@@ -450,6 +478,13 @@
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-netlink.git
   repooptions: 
+- name: mruby-ngx-mruby-ext
+  description: Nginx ext class
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumoto-r/mruby-ngx-mruby-ext
+  protocol: git
+  repository: https://github.com/matsumoto-r/mruby-ngx-mruby-ext.git
+  repooptions: 
 - name: mruby-oauth
   description: OAuth class
   author: MATSUMOTO Ryosuke
@@ -463,6 +498,13 @@
   website: https://github.com/mattn/mruby-onig-regexp
   protocol: git
   repository: https://github.com/mattn/mruby-onig-regexp.git
+  repooptions: 
+- name: mruby-ostruct
+  description: OpenStruct binding in mruby
+  author: ksss
+  website: https://github.com/ksss/mruby-ostruct
+  protocol: git
+  repository: https://github.com/ksss/mruby-ostruct.git
   repooptions: 
 - name: mruby-pack
   description: Array#pack implementation
@@ -484,6 +526,13 @@
   website: https://github.com/cadwallion/mruby-pid
   protocol: git
   repository: https://github.com/cadwallion/mruby-pid.git
+  repooptions: 
+- name: mruby-ping
+  description: ping hosts using ICMP or ARP packets.
+  author: Julien Ammous
+  website: https://github.com/schmurfy/mruby-ping
+  protocol: git
+  repository: https://github.com/schmurfy/mruby-ping
   repooptions: 
 - name: mruby-polarssl
   description: SSL and cryptography functionality from PolarSSL in your mruby programs
