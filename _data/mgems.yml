@@ -344,12 +344,26 @@
   protocol: git
   repository: https://github.com/mattn/mruby-json.git
   repooptions: 
+- name: mruby-kmp
+  description: KMP searching algorithm in mruby
+  author: santazhang
+  website: https://github.com/santazhang/mruby-kmp
+  protocol: git
+  repository: https://github.com/santazhang/mruby-kmp.git
+  repooptions: 
 - name: mruby-leapmotion
   description: Providing wrapper classes for Leap Motion SDK.
   author: crimsonwoods
   website: https://github.com/crimsonwoods/mruby-leapmotion
   protocol: git
   repository: https://github.com/crimsonwoods/mruby-leapmotion.git
+  repooptions: 
+- name: mruby-leveldb
+  description: mruby LevelDB binding
+  author: Takeshi Watanabe
+  website: https://github.com/take-cheeze/mruby-leveldb
+  protocol: git
+  repository: https://github.com/take-cheeze/mruby-leveldb.git
   repooptions: 
 - name: mruby-libqrng
   description: libQRNG interface
@@ -534,6 +548,13 @@
   protocol: git
   repository: https://github.com/schmurfy/mruby-ping
   repooptions: 
+- name: mruby-pjson
+  description: JSON Parser written in pure mruby
+  author: mattn
+  website: https://github.com/mattn/mruby-pjson
+  protocol: git
+  repository: https://github.com/mattn/mruby-pjson.git
+  repooptions: 
 - name: mruby-polarssl
   description: SSL and cryptography functionality from PolarSSL in your mruby programs
   author: luisbebop
@@ -583,6 +604,13 @@
   protocol: git
   repository: https://github.com/schmurfy/mruby-rubyffi-compat.git
   repooptions: 
+- name: mruby-serialport
+  description: Serialport support
+  author: Monami-ya LLC, Japan
+  website: https://github.com/monami-ya-mrb/mruby-serialport/
+  protocol: git
+  repository: https://github.com/monami-ya-mrb/mruby-serialport.git
+  repooptions: 
 - name: mruby-sha1
   description: SHA1 Hash Alghorithm
   author: mattn
@@ -624,6 +652,13 @@
   website: https://github.com/mattn/mruby-sinatic
   protocol: git
   repository: https://github.com/mattn/mruby-sinatic.git
+  repooptions: 
+- name: mruby-singleton
+  description: Singleton module in mruby
+  author: ksss
+  website: https://github.com/ksss/mruby-singleton
+  protocol: git
+  repository: https://github.com/ksss/mruby-singleton.git
   repooptions: 
 - name: mruby-siphash
   description: Message digest by SipHash
