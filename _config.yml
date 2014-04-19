@@ -1,5 +1,7 @@
 name: mruby
-markdown: redcarpet
+markdown: kramdown
+kramdown:
+  input: GFM
 pygments: true
 exclude:
 - Gemfile
