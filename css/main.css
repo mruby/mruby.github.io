@@ -102,3 +102,8 @@
 .posts a {
   font-size: 120%;
 }
+
+table td,th {
+  border:2px solid #eee;
+  padding:4px;
+}
