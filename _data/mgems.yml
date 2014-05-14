@@ -55,6 +55,13 @@
   protocol: git
   repository: https://github.com/crimsonwoods/mruby-backtrace.git
   repooptions: 
+- name: mruby-base58
+  description: Base58 Encoder/Decoder
+  author: h2so5
+  website: https://github.com/h2so5/mruby-base58
+  protocol: git
+  repository: https://github.com/h2so5/mruby-base58.git
+  repooptions: 
 - name: mruby-base64
   description: Base64 Encoder/Decoder
   author: mattn
@@ -111,6 +118,13 @@
   website: https://github.com/matsumoto-r/mruby-config
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-config.git
+  repooptions: 
+- name: mruby-criu
+  description: CRIU, Checkpoint Restart In Userspace for Linux, class
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumoto-r/mruby-criu
+  protocol: git
+  repository: https://github.com/matsumoto-r/mruby-criu.git
   repooptions: 
 - name: mruby-curl
   description: CURL HTTP Client
@@ -385,7 +399,7 @@
   website: https://github.com/carsonmcdonald/mruby-markdown
   protocol: git
   repository: https://github.com/carsonmcdonald/mruby-markdown.git
-  repooptions: --recursive
+  repooptions: "--recursive"
 - name: mruby-md5
   description: MD5 Hash Alghorithm
   author: mattn
