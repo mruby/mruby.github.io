@@ -399,7 +399,14 @@
   website: https://github.com/carsonmcdonald/mruby-markdown
   protocol: git
   repository: https://github.com/carsonmcdonald/mruby-markdown.git
-  repooptions: "--recursive"
+  repooptions: --recursive
+- name: mruby-marshal
+  description: Marshal module for mruby
+  author: Takeshi Watanabe
+  website: https://github.com/take-cheeze/mruby-marshal
+  protocol: git
+  repository: https://github.com/take-cheeze/mruby-marshal.git
+  repooptions: 
 - name: mruby-md5
   description: MD5 Hash Alghorithm
   author: mattn
@@ -660,6 +667,13 @@
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-simplehttp.git
   repooptions: 
+- name: mruby-simplehttpserver
+  description: SimpleHttpServer class
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumoto-r/mruby-simplehttpserver
+  protocol: git
+  repository: https://github.com/matsumoto-r/mruby-simplehttpserver.git
+  repooptions: 
 - name: mruby-sinatic
   description: Sinatra like Web Framework
   author: mattn
@@ -743,6 +757,13 @@
   website: https://github.com/h2so5/mruby-tinyxml2
   protocol: git
   repository: https://github.com/h2so5/mruby-tinyxml2.git
+  repooptions: 
+- name: mruby-uname
+  description: Uname class
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumoto-r/mruby-uname
+  protocol: git
+  repository: https://github.com/matsumoto-r/mruby-uname.git
   repooptions: 
 - name: mruby-updategems
   description: Rake task to update GEMs
