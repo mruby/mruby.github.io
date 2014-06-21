@@ -104,6 +104,13 @@
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-cgroup.git
   repooptions: 
+- name: mruby-clang-plugin
+  description: clang plugin to check mruby API call mistakes.
+  author: Takeshi Watanabe
+  website: https://github.com/take-cheeze/mruby-clang-plugin
+  protocol: git
+  repository: https://github.com/take-cheeze/mruby-clang-plugin.git
+  repooptions: 
 - name: mruby-cocoa
   description: Interface to Cocoa based on Objective-C Runtime and mruby-cfunc.
   author: Yuichiro MASUI
@@ -182,6 +189,13 @@
   protocol: git
   repository: https://github.com/iij/mruby-errno.git
   repooptions: 
+- name: mruby-file-stat
+  description: File::Stat class implementation
+  author: ksss
+  website: https://github.com/ksss/mruby-file-stat
+  protocol: git
+  repository: https://github.com/ksss/mruby-file-stat.git
+  repooptions: 
 - name: mruby-fltk3
   description: FLTK3 GUI binding.
   author: mattn
@@ -224,6 +238,13 @@
   website: https://github.com/xxuejie/mruby-gles
   protocol: git
   repository: https://github.com/xxuejie/mruby-gles.git
+  repooptions: 
+- name: mruby-glfw3
+  description: GLFW3 binding
+  author: Takeshi Watanabe
+  website: https://github.com/take-cheeze/mruby-glfw3
+  protocol: git
+  repository: https://github.com/take-cheeze/mruby-glfw3.git
   repooptions: 
 - name: mruby-glib2
   description: Bindings to GLib 2.x. uses mruby-girffi
@@ -399,7 +420,7 @@
   website: https://github.com/carsonmcdonald/mruby-markdown
   protocol: git
   repository: https://github.com/carsonmcdonald/mruby-markdown.git
-  repooptions: --recursive
+  repooptions: "--recursive"
 - name: mruby-marshal
   description: Marshal module for mruby
   author: Takeshi Watanabe
