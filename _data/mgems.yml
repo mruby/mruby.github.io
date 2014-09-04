@@ -154,6 +154,13 @@
   protocol: git
   repository: https://github.com/iij/mruby-dir.git
   repooptions: 
+- name: mruby-dir-glob
+  description: File.fnmatch() & Dir.glob()
+  author: Alexander Gromnitsky
+  website: https://github.com/gromnitsky/mruby-dir-glob
+  protocol: git
+  repository: https://github.com/gromnitsky/mruby-dir-glob.git
+  repooptions:
 - name: mruby-discount
   description: html generater from markdown using discount
   author: MATSUMOTO Ryosuke
