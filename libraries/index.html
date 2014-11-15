@@ -3,17 +3,41 @@ layout: default
 title: mruby - libraries
 ---
 
-<div id="home">
-  <div>
-    <h2>Libraries</h2>
-
-    {% for mgem_data in site.data.mgems %}
-      <p>
-        <b>Name:</b> <a href="{{ mgem_data.website }}">{{ mgem_data.name }}</a> <br/>
-        <b>Description:</b> {{ mgem_data.description }} <br/>
-        <b>Author:</b> {{ mgem_data.author }} <br/>
-      </p>
-    {% endfor %}
-
+<div class='row'>
+  <div class='col-md-12'>
+    <h2 class='page-header'>Libraries</h2>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-md-12'>
+    <p>
+      <strong>mrbgems</strong> is mruby's package manager. See the <a href="https://github.com/mruby/mruby/tree/master/doc/mrbgems">mrbgems README</a> for more information about how to use it.
+    </p>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-md-12'>
+    <table class='table table-striped table-bordered'>
+      <thead>
+        <th> Name </th>
+        <th> Description </th>
+        <th> Author </th>
+      </thead>
+      <tbody>
+        {% for mgem_data in site.data.mgems %}
+          <tr>
+            <td>
+              <a href="{{ mgem_data.website }}">{{ mgem_data.name }}</a>
+            </td>
+            <td>
+              {{ mgem_data.description }}
+            </td>
+            <td>
+              {{ mgem_data.author }}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 </div>
