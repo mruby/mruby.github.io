@@ -1,0 +1,20 @@
+<div class='row'>
+  <div class='col-md-12'>
+    <h2>Latest News</h2>
+  </div>
+</div>
+</div>
+<div class='row'>
+  <div class="col-md-12">
+    <ul class="posts">
+      {% for post in site.posts %}
+        <li>
+          <p class='lead'>
+            <strong>{{ post.date | date_to_string }}:</strong>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
