@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "mruby 1.1.0 released"
+date:   2014-11-19 12:13:55
+categories: releases
+---
+
+mruby 1.1.0 released
+====================
+
+mruby 1.1.0 is released. Download [mruby 1.1.0][mruby-1.1.0-dl] now.
+
+[mruby-1.1.0-dl]: https://github.com/mruby/mruby/archive/1.1.0.zip
+
+what's new in mruby 1.1.0
+=========================
+
+* CUI debugger gem (mruby-bin-debugger)
+* lot of small bug fixes
