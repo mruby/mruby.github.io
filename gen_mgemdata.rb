@@ -19,6 +19,8 @@ mgems.each do |mgem|
   }
 end
 
+mgem_info.sort! { |a,b| a['name'].downcase <=> b['name'].downcase }
+
 File.open('_data/mgems.yml', 'w') do |f| 
   f.write(mgem_info.to_yaml)
 end
