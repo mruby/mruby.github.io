@@ -1,6 +1,7 @@
 require 'mgem'
 require 'yaml'
 
+include Mrbgem
 mgems = load_gems 
 
 mgems.update!
