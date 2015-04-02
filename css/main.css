@@ -126,17 +126,6 @@ a {
   padding-right: 20px;
 }
 
-.posts p {
-  font-size: 120%;
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-}
-
-.posts a {
-  font-size: 120%;
-}
-
 table td,th {
   border:2px solid #eee;
   padding:4px;
