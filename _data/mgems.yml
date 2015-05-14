@@ -90,6 +90,13 @@
   protocol: git
   repository: https://github.com/sdottaka/mruby-bin-scite-mruby.git
   repooptions: 
+- name: mruby-blendish
+  description: Duangle OUI-blendish bindings.
+  author: Corey Powell
+  website: https://github.com/IceDragon200/mruby-blendish
+  protocol: git
+  repository: https://github.com/IceDragon200/mruby-blendish
+  repooptions: 
 - name: mruby-cache
   description: mruby inter process share memory cache
   author: charlescui
@@ -104,6 +111,13 @@
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-capability.git
   repooptions: 
+- name: mruby-catch-throw
+  description: catch and throw for mruby.
+  author: Corey Powell
+  website: https://github.com/IceDragon200/mruby-catch-throw
+  protocol: git
+  repository: https://github.com/IceDragon200/mruby-catch-throw
+  repooptions: 
 - name: mruby-cfunc
   description: Interface to C functions based on libffi.
   author: Yuichiro MASUI
@@ -117,6 +131,13 @@
   website: https://github.com/matsumoto-r/mruby-cgroup
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-cgroup.git
+  repooptions: 
+- name: mruby-chipmunk2d
+  description: chipmunk2d bindings
+  author: Corey Powell
+  website: https://github.com/IceDragon200/mruby-chipmunk2d
+  protocol: git
+  repository: https://github.com/IceDragon200/mruby-chipmunk2d
   repooptions: 
 - name: mruby-clang-plugin
   description: clang plugin to check mruby API call mistakes.
@@ -153,6 +174,13 @@
   website: https://github.com/matsumoto-r/mruby-criu
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-criu.git
+  repooptions: 
+- name: mruby-cross-compile-on-mac-osx
+  description: Cross compile osx, linux or win32 binary of mruby on Mac OSX
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumoto-r/mruby-cross-compile-on-mac-osx
+  protocol: git
+  repository: https://github.com/matsumoto-r/mruby-cross-compile-on-mac-osx.git
   repooptions: 
 - name: mruby-curl
   description: CURL HTTP Client
@@ -237,6 +265,13 @@
   website: https://github.com/y-ken/fluent-logger-mruby
   protocol: git
   repository: https://github.com/y-ken/fluent-logger-mruby.git
+  repooptions: 
+- name: mruby-fsm
+  description: Finite State Machine.
+  author: Paolo Bosetti, University of Trento
+  website: https://github.com/UniTN-Mechatronics/mruby-fsm
+  protocol: git
+  repository: https://github.com/UniTN-Mechatronics/mruby-fsm.git
   repooptions: 
 - name: mruby-ftp
   description: FTP client library.
@@ -497,7 +532,7 @@
   website: https://github.com/carsonmcdonald/mruby-markdown
   protocol: git
   repository: https://github.com/carsonmcdonald/mruby-markdown.git
-  repooptions: "--recursive"
+  repooptions: --recursive
 - name: mruby-marshal
   description: Marshal module for mruby
   author: Takeshi Watanabe
@@ -604,6 +639,13 @@
   protocol: git
   repository: https://github.com/ppibburr/mruby-named-constants.git
   repooptions: 
+- name: mruby-nanovg
+  description: nanovg bindings
+  author: Corey Powell
+  website: https://github.com/IceDragon200/mruby-nanovg
+  protocol: git
+  repository: https://github.com/IceDragon200/mruby-nanovg
+  repooptions: 
 - name: mruby-netlink
   description: libnetlink binding
   author: MATSUMOTO Ryosuke
@@ -638,6 +680,13 @@
   website: https://github.com/ksss/mruby-ostruct
   protocol: git
   repository: https://github.com/ksss/mruby-ostruct.git
+  repooptions: 
+- name: mruby-oui
+  description: Duangle OUI bindings.
+  author: Corey Powell
+  website: https://github.com/IceDragon200/mruby-oui
+  protocol: git
+  repository: https://github.com/IceDragon200/mruby-oui
   repooptions: 
 - name: mruby-pack
   description: Array#pack implementation
@@ -701,6 +750,13 @@
   website: https://github.com/matsumoto-r/mruby-random
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-random.git
+  repooptions: 
+- name: mruby-raspberry
+  description: Wrapper for WiringPi library for accessing Raspberry Pi hardware.
+  author: Paolo Bosetti, University of Trento
+  website: https://github.com/UniTN-Mechatronics/mruby-raspberry
+  protocol: git
+  repository: https://github.com/UniTN-Mechatronics/mruby-raspberry.git
   repooptions: 
 - name: mruby-redis
   description: redis client using hiredis
