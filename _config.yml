@@ -2,7 +2,7 @@ name: mruby
 markdown: kramdown
 kramdown:
   input: GFM
-pygments: true
+highlighter: pygments
 exclude:
 - Gemfile
 - Gemfile.lock
