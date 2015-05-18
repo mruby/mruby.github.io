@@ -1,7 +1,5 @@
 name: mruby
 markdown: kramdown
-kramdown:
-  input: GFM
 highlighter: pygments
 exclude:
 - Gemfile

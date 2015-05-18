@@ -5,7 +5,11 @@ title: mruby - docs
 
 # Documentation
 
-At the moment the source code ([`mruby/doc/`](https://github.com/mruby/mruby/tree/master/doc)) includes further documentation about compiling, configurating (`mrbconf`), debugging (`mrdb`), and extending (`mrbgems`) mruby.
+At the moment the source code ([`mruby/doc/`][mruby-doc]) includes further
+documentation about compiling, configurating (`mrbconf`), debugging (`mrdb`),
+and extending (`mrbgems`) mruby.
+
+[mruby-doc]: https://github.com/mruby/mruby/tree/master/doc
 
 ## Articles
 

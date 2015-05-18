@@ -8,7 +8,12 @@ categories: articles
 
 **originally written by [Daniel Bovensiepen](http://bovensiepen.net/)**
 
-The traditional way to execute Ruby code is distributing the plain source code and requiring a Ruby interpreter with lots of files to be installed. mruby can be used like that too. So if you have experience with another Ruby implementation you may know some of the examples listed here. However with mruby you can also build standalone programs and compileto bytecode which can be dumped and loaded.
+The traditional way to execute Ruby code is distributing the plain source code
+and requiring a Ruby interpreter with lots of files to be installed.
+mruby can be used like that too. So if you have experience with
+another Ruby implementation you may know some of the examples listed here.
+However with mruby you can also build standalone programs and compile to
+bytecode which can be dumped and loaded.
 
 A file called `test_program.rb` is used in some of the examples. Its content is:
 
@@ -18,7 +23,8 @@ puts 'hello world'
 
 ## REPL (mirb)
 
-Not exactly directly used for program execution but still, Ruby code can be evaluated by using the `mirb` program:
+Not exactly directly used for program execution but still,
+Ruby code can be evaluated by using the `mirb` program:
 
 ~~~
 $ mruby/bin/mirb
@@ -35,11 +41,13 @@ hello world
 
 ✘ not usable for productive execution
 
-✘ the input needs to be parsed twice: first `mirb` checks if the code is complete and afterwards `mirb` compiles it into bytecode and executes it
+✘ the input needs to be parsed twice: first `mirb` checks if the code is
+complete and afterwards `mirb` compiles it into bytecode and executes it
 
 ## Source code (.rb)
 
-The probably most common way to run Ruby code is by passing a filename as argument to an interpreter. In mruby that's the `mruby` program:
+The probably most common way to run Ruby code is by passing a filename as
+argument to an interpreter. In mruby that's the `mruby` program:
 
 ~~~
 $ mruby/bin/mruby test_program.rb
@@ -58,7 +66,8 @@ hello world
 
 ## Source code (.c)
 
-Ruby code can also be written as a C string. This is similar to the `-e` switch of the `mruby` program.
+Ruby code can also be written as a C string. This is similar to
+the `-e` switch of the `mruby` program.
 
 ~~~c
 #include "mruby.h"
@@ -69,7 +78,7 @@ main(void)
 {
   mrb_state *mrb = mrb_open();
   if (!mrb) { /* handle error */ }
-  // mrb_load_nstring() for strings without null terminator or known length
+  // mrb_load_nstring() for strings without null terminator or with known length
   mrb_load_string(mrb, "puts 'hello world'");
   mrb_close(mrb);
 }
@@ -78,7 +87,8 @@ main(void)
 To compile and link:
 
 ~~~
-$ gcc -std=c99 -Imruby/include test_program.c -o test_program test_program.o mruby/build/host/lib/libmruby.a
+$ gcc -std=c99 -Imruby/include test_program.c -o test_program
+test_program.o mruby/build/host/lib/libmruby.a
 ~~~
 
 To execute:
@@ -90,7 +100,8 @@ hello world
 
 ### Pros & Cons
 
-✔ simple development cycle: programming → compiling (`gcc`) → testing → programming
+✔ simple development cycle:
+programming → compiling (`gcc`) → testing → programming
 
 ✔ the program is fully standalone
 
@@ -98,11 +109,13 @@ hello world
 
 ✘ Ruby code has to be parsed and compiled to bytecode before its execution
 
-✘ updating the Ruby code might require a recompilation of the C code or an advanced updating mechanism
+✘ updating the Ruby code might require a recompilation of the C code or
+an advanced updating mechanism
 
 ## Bytecode (.mrb)
 
-mruby provides a Java-like execution style by compiling to an intermediate representation form which then will be executed.
+mruby provides a Java-like execution style by compiling to an
+intermediate representation form which then will be executed.
 
 The first step is to compile source code to bytecode with the `mrbc` program:
 
@@ -110,7 +123,8 @@ The first step is to compile source code to bytecode with the `mrbc` program:
 $ mruby/bin/mrbc test_program.rb
 ~~~
 
-This will produce a file called `test_program.mrb` which contains the intermediate representation of the previously given Ruby code:
+This will produce a file called `test_program.mrb` which contains the
+intermediate representation of the previously given Ruby code:
 
 ~~~
 $ hexdump -C test_program.mrb
@@ -124,7 +138,9 @@ $ hexdump -C test_program.mrb
 00000065
 ~~~
 
-This file can be executed by the `mruby` program or the `mrb_load_irep_file()` function. The `-b` switch tells the program that the file is binary rather than plain Ruby code:
+This file can be executed by the `mruby` program or the `mrb_load_irep_file()`
+function. The `-b` switch tells the program that the file is binary rather than
+plain Ruby code:
 
 ~~~
 $ mruby/bin/mruby -b test_program.mrb
@@ -139,21 +155,25 @@ hello world
 
 ✔ bytecode can easily be updated by replacing the file
 
-✘ complex development cycle: programming → compiling (`mrbc`) → testing (`mruby`) → programming
+✘ complex development cycle:
+programming → compiling (`mrbc`) → testing (`mruby`) → programming
 
 ✘ the `mruby` program and a file system is required
 
 ## Bytecode (.c)
 
-This variant is interesting for those who want to integrate Ruby code directly into their C code. It will create a C array containg the bytecode which you then have to execute by yourself.
+This variant is interesting for those who want to integrate Ruby code directly
+into their C code. It will create a C array containg the bytecode which you
+then have to execute by yourself.
 
-The first step is to compile the Ruby program. This is done by using `mrbc` and its `-B` switch. An identifier for the array also has to be given:
+The first step is to compile the Ruby program. This is done by using `mrbc`
+and its `-B` switch. An identifier for the array also has to be given:
 
 ~~~
 $ mruby/bin/mrbc -Btest_symbol test_program.rb
 ~~~
 
-This will create a C file called `test_program.c` containing the `test_symbol` array:
+This creates a file called `test_program.c` containing the `test_symbol` array:
 
 ~~~c
 /* dumped in little endian order.
@@ -176,7 +196,8 @@ test_symbol[] = {
 };
 ~~~
 
-To execute this bytecode the following boilerplate has to be written. It reads the array and executes the bytecode immediately:
+To execute this bytecode the following boilerplate has to be written.
+It reads the array and executes the bytecode immediately:
 
 ~~~c
 #include "mruby.h"
@@ -195,7 +216,8 @@ main(void)
 To compile and link:
 
 ~~~
-$ gcc -std=c99 -Imruby/include test_program.c -o test_program test_program.o mruby/build/host/lib/libmruby.a
+$ gcc -std=c99 -Imruby/include test_program.c -o test_program
+test_program.o mruby/build/host/lib/libmruby.a
 ~~~
 
 To execute:
@@ -213,9 +235,10 @@ hello world
 
 ✔ the program is fully standalone
 
-✘ even more complex development cycle: programming → compiling (`mrbc`) → integrating C code → compiling (`gcc`) → testing → programming
+✘ even more complex development cycle: programming → compiling (`mrbc`) →
+integrating C code → compiling (`gcc`) → testing → programming
 
 ✘ additional boilerplate is needed to get the program up and running
 
-✘ updating the bytecode requires a recompilation of the C code or an advanced updating mechanism
-
+✘ updating the bytecode requires a recompilation of the C code or
+an advanced updating mechanism
