@@ -8,6 +8,7 @@ categories: releases
 mruby 1.0.0 released
 ====================
 
-The first release of mruby is now available. Download [mruby 1.0.0][mruby-1.0.0-dl] now.
+The first release of mruby is now available.
+Download [mruby 1.0.0][mruby-1.0.0-dl] now.
 
 [mruby-1.0.0-dl]: https://github.com/mruby/mruby/archive/1.0.0.zip
