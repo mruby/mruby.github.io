@@ -66,7 +66,7 @@ hello world
 
 ## Source code (.c)
 
-Ruby code can also be written as a C string. This is similar to
+Ruby code can also be executed from C. This is similar to
 the `-e` switch of the `mruby` program.
 
 ~~~c
@@ -115,9 +115,9 @@ an advanced updating mechanism
 ## Bytecode (.mrb)
 
 mruby provides a Java-like execution style by compiling to an
-intermediate representation form which then will be executed.
+intermediate representation which will then be executed.
 
-The first step is to compile source code to bytecode with the `mrbc` program:
+The first step is to compile the source code to bytecode with the `mrbc` program:
 
 ~~~
 $ mruby/bin/mrbc test_program.rb
@@ -139,7 +139,7 @@ $ hexdump -C test_program.mrb
 ~~~
 
 This file can be executed by the `mruby` program or the `mrb_load_irep_file()`
-function. The `-b` switch tells the program that the file is binary rather than
+function. The `-b` switch tells the program that the file is bytecode rather than
 plain Ruby code:
 
 ~~~
@@ -153,7 +153,7 @@ hello world
 
 ✔ no Ruby code has to be parsed
 
-✔ bytecode can easily be updated by replacing the file
+✔ bytecode can easily be updated by replacing the .mrb file
 
 ✘ complex development cycle:
 programming → compiling (`mrbc`) → testing (`mruby`) → programming
@@ -196,8 +196,7 @@ test_symbol[] = {
 };
 ~~~
 
-To execute this bytecode the following boilerplate has to be written.
-It reads the array and executes the bytecode immediately:
+To execute this bytecode the following boilerplate has to be written:
 
 ~~~c
 #include "mruby.h"
@@ -212,6 +211,8 @@ main(void)
   mrb_close(mrb);
 }
 ~~~
+
+This will read the bytecode from the array and executes it immediately:
 
 To compile and link:
 
@@ -242,3 +243,16 @@ integrating C code → compiling (`gcc`) → testing → programming
 
 ✘ updating the bytecode requires a recompilation of the C code or
 an advanced updating mechanism
+
+## Fazit
+
+The **REPL (mirb)** is mainly used during the early development.
+**Source code (.rb)** is the most common usage of mruby these
+days as it emphasises Ruby as a scripting language which can easily be
+modified by changing the source code on the machine. **Source code (.c)**
+is the easiest step to embed mruby into your own application.
+**Bytecode (.mrb)** provides the feeling of a Java application, which can
+be file based installed but doesn't provide access to the source code.
+**Bytecode (.c)** is quite likely for many people the most complex way to
+use mruby but at the same time it provides the most efficient way to
+execute mruby code inside of program.
