@@ -66,7 +66,7 @@ hello world
 
 ## Source code (.c)
 
-Ruby code can also be executed from C. This is similar to
+Ruby code can also be written as a C String. This is similar to
 the `-e` switch of the `mruby` program.
 
 ~~~c
@@ -115,7 +115,7 @@ an advanced updating mechanism
 ## Bytecode (.mrb)
 
 mruby provides a Java-like execution style by compiling to an
-intermediate representation which will then be executed.
+intermediate representation form which will then be executed.
 
 The first step is to compile the source code to bytecode with the `mrbc` program:
 
