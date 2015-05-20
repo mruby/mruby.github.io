@@ -66,7 +66,7 @@ hello world
 
 ## Source code (.c)
 
-Ruby code can also be written as a C String. This is similar to
+Ruby code can also be written as a C string. This is similar to
 the `-e` switch of the `mruby` program.
 
 ~~~c
