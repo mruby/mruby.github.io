@@ -24,4 +24,5 @@ and extending (`mrbgems`) mruby.
 
 ## Components
 
+- [C API docs](c-api)
 - [Core](Core.html)
