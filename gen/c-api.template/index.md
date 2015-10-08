@@ -1,1 +1,0 @@
-# MRuby C API documentation
