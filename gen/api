@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -euo pipefail
+IFS=$'\n\t'
+
+if [ -d "mruby" ]; then
+	pushd mruby
+	# Fetch updated sources
+	git pull
+	popd
+else
+	# Clone a fresh mruby repo
+	git clone https://github.com/mruby/mruby.git
+fi
+
+# Clean old docs
+rm -rf docs/api
+
+# Generate docs
+pushd mruby
+bundle exec mrbdoc -o ../docs/api
+popd
+touch docs/api/.nojekyll

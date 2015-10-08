@@ -5,6 +5,7 @@ GEM
     blankslate (2.1.2.4)
     classifier (1.3.4)
       fast-stemmer (>= 1.0.0)
+    coderay (1.1.0)
     colorator (0.1)
     commander (4.1.5)
       highline (~> 1.6.11)
@@ -56,6 +57,12 @@ GEM
     toml (0.1.0)
       parslet (~> 1.5.0)
     yajl-ruby (1.1.0)
+    yard (0.8.7.6)
+    yard-coderay (0.1.0)
+      coderay
+      yard
+    yard-mruby (0.2.0)
+      yard
 
 PLATFORMS
   ruby
@@ -64,3 +71,8 @@ DEPENDENCIES
   git
   github-pages
   mgem
+  yard-coderay
+  yard-mruby
+
+BUNDLED WITH
+   1.10.6
