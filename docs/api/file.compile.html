@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: compile
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.compile.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: compile</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Compile</h1>
+
+<p>mruby uses Rake to compile and cross-compile all libraries and
+binaries.</p>
+
+<h2>Prerequisites</h2>
+
+<p>To compile mruby out of the source code you need the following tools:</p>
+
+<ul>
+<li>C Compiler (i.e. <code>gcc</code>)</li>
+<li>Linker (i.e. <code>gcc</code>)</li>
+<li>Archive utility (i.e. <code>ar</code>)</li>
+<li>Parser generator (i.e. <code>bison</code>)</li>
+<li>Ruby 1.8 or 1.9 (i.e. <code>ruby</code> or <code>jruby</code>)</li>
+</ul>
+
+<p>Optional:</p>
+
+<ul>
+<li>GIT (to update mruby source and integrate mrbgems easier)</li>
+<li>C++ compiler (to use GEMs which include *.cpp, *.cxx, *.cc)</li>
+<li>Assembler (to use GEMs which include *.asm)</li>
+</ul>
+
+<h2>Usage</h2>
+
+<p>Inside of the root directory of the mruby source a file exists
+called <em>build_config.rb</em>. This file contains the build configuration
+of mruby and looks like this for example:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">MRuby</span>::<span style="color:#036;font-weight:bold">Build</span>.new <span style="color:#080;font-weight:bold">do</span> |conf|
+  toolchain <span style="color:#A60">:gcc</span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<p>All tools necessary to compile mruby can be set or modified here. In case
+you want to maintain an additional <em>build_config.rb</em> you can define a
+customized path using the <em>$MRUBY_CONFIG</em> environment variable.</p>
+
+<p>To compile just call <code>./minirake</code> inside of the mruby source root. To
+generate and execute the test tools call <code>./minirake test</code>. To clean
+all build files call <code>./minirake clean</code>. To see full command line on
+build, call <code>./minirake -v</code>.</p>
+
+<h2>Build Configuration</h2>
+
+<p>Inside of the <em>build_config.rb</em> the following options can be configured
+based on your environment.</p>
+
+<h3>Toolchains</h3>
+
+<p>The mruby build system already contains a set of toolchain templates which
+configure the build environment for specific compiler infrastructures.</p>
+
+<h4>GCC</h4>
+
+<p>Toolchain configuration for the GNU C Compiler.</p>
+
+<pre class="code ruby"><code class="ruby">toolchain <span style="color:#A60">:gcc</span>
+</code></pre>
+
+<h4>clang</h4>
+
+<p>Toolchain configuration for the LLVM C Compiler clang. Mainly equal to the
+GCC toolchain.</p>
+
+<pre class="code ruby"><code class="ruby">toolchain <span style="color:#A60">:clang</span>
+</code></pre>
+
+<h4>Visual Studio 2010, 2012 and 2013</h4>
+
+<p>Toolchain configuration for Visual Studio on Windows. If you use the
+<a href="http://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx">Visual Studio Command Prompt</a>,
+you normally do not have to specify this manually, since it gets automatically detected by our build process.</p>
+
+<pre class="code ruby"><code class="ruby">toolchain <span style="color:#A60">:visualcpp</span>
+</code></pre>
+
+<h4>Android</h4>
+
+<p>Toolchain configuration for Android.</p>
+
+<pre class="code ruby"><code class="ruby">toolchain <span style="color:#A60">:androideabi</span>
+</code></pre>
+
+<p>Requires the custom standalone Android NDK and the toolchain path
+in <code>ANDROID_STANDALONE_TOOLCHAIN</code>.</p>
+
+<h3>Binaries</h3>
+
+<p>It is possible to select which tools should be compiled during the compilation
+process. The following tools can be selected:</p>
+
+<ul>
+<li>mruby (mruby interpreter)</li>
+<li>mirb (mruby interactive shell)</li>
+</ul>
+
+<p>To select them declare conf.gem as follows:</p>
+
+<pre class="code ruby"><code class="ruby">conf.gem <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>root<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">/mrbgems/mruby-bin-mruby</span><span style="color:#710">&quot;</span></span>
+conf.gem <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>root<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">/mrbgems/mruby-bin-mirb</span><span style="color:#710">&quot;</span></span>
+</code></pre>
+
+<h3>File Separator</h3>
+
+<p>Some environments require a different file separator character. It is possible to
+set the character via <code>conf.file_separator</code>.</p>
+
+<pre class="code ruby"><code class="ruby">conf.file_separator = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">/</span><span style="color:#710">'</span></span>
+</code></pre>
+
+<h3>C Compiler</h3>
+
+<p>Configuration of the C compiler binary, flags and include paths.</p>
+
+<pre class="code ruby"><code class="ruby">conf.cc <span style="color:#080;font-weight:bold">do</span> |cc|
+  cc.command = ...
+  cc.flags = ...
+  cc.include_paths = ...
+  cc.defines = ...
+  cc.option_include_path = ...
+  cc.option_define = ...
+  cc.compile_options = ...
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<p>C Compiler has header searcher to detect installed library.</p>
+
+<p>If you need a include path of header file use <code>search_header_path</code>:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Searches ```iconv.h```.</span>
+<span style="color:#777"># If found it will return include path of the header file.</span>
+<span style="color:#777"># Otherwise it will return nil .</span>
+fail <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">iconv.h not found</span><span style="color:#710">'</span></span> <span style="color:#080;font-weight:bold">unless</span> conf.cc.search_header_path <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">iconv.h</span><span style="color:#710">'</span></span>
+</code></pre>
+
+<p>If you need a full file name of header file use <code>search_header</code>:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Searches ```iconv.h```.</span>
+<span style="color:#777"># If found it will return full path of the header file.</span>
+<span style="color:#777"># Otherwise it will return nil .</span>
+iconv_h = conf.cc.search_header <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">iconv.h</span><span style="color:#710">'</span></span>
+print <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">iconv.h found: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>iconv_h<span style="font-weight:bold;color:#666">}</span></span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>
+</code></pre>
+
+<p>Header searcher uses compiler&#39;s <code>include_paths</code> by default.
+When you are using GCC toolchain (including clang toolchain since its base is gcc toolchain)
+it will use compiler specific include paths too. (For example <code>/usr/local/include</code>, <code>/usr/include</code>)</p>
+
+<p>If you need a special header search paths define a singleton method <code>header_search_paths</code> to C compiler:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">def</span> conf.cc.<span style="color:#06B;font-weight:bold">header_search_paths</span>
+  [<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">/opt/local/include</span><span style="color:#710">'</span></span>] + include_paths
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<h3>Linker</h3>
+
+<p>Configuration of the Linker binary, flags and library paths.</p>
+
+<pre class="code ruby"><code class="ruby">conf.linker <span style="color:#080;font-weight:bold">do</span> |linker|
+  linker.command = ...
+  linker.flags = ...
+  linker.flags_before_libraries = ...
+  linker.libraries = ...
+  linker.flags_after_libraries = ...
+  linker.library_paths = ....
+  linker.option_library = ...
+  linker.option_library_path = ...
+  linker.link_options = ...
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<h3>Archiver</h3>
+
+<p>Configuration of the Archiver binary and flags.</p>
+
+<pre class="code ruby"><code class="ruby">conf.archiver <span style="color:#080;font-weight:bold">do</span> |archiver|
+  archiver.command = ...
+  archiver.archive_options = ...
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<h3>Parser Generator</h3>
+
+<p>Configuration of the Parser Generator binary and flags.</p>
+
+<pre class="code ruby"><code class="ruby">conf.yacc <span style="color:#080;font-weight:bold">do</span> |yacc|
+  yacc.command = ...
+  yacc.compile_options = ...
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<h3>GPerf</h3>
+
+<p>Configuration of the GPerf binary and flags.</p>
+
+<pre class="code ruby"><code class="ruby">conf.gperf <span style="color:#080;font-weight:bold">do</span> |gperf|
+  gperf.command = ...
+  gperf.compile_options = ...
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<h3>File Extensions</h3>
+
+<pre class="code ruby"><code class="ruby">conf.exts <span style="color:#080;font-weight:bold">do</span> |exts|
+  exts.object = ...
+  exts.executable = ...
+  exts.library = ...
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<h3>Mrbgems</h3>
+
+<p>Integrate GEMs in the build process.</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Integrate GEM with additional configuration</span>
+conf.gem <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">path/to/gem</span><span style="color:#710">'</span></span> <span style="color:#080;font-weight:bold">do</span> |g|
+  g.cc.flags &lt;&lt; ...
+<span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#777"># Integrate GEM without additional configuration</span>
+conf.gem <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">path/to/another/gem</span><span style="color:#710">'</span></span>
+</code></pre>
+
+<p>See doc/mrbgems/README.md for more option about mrbgems.</p>
+
+<h3>Mrbtest</h3>
+
+<p>Configuration Mrbtest build process.</p>
+
+<p>If you want mrbtest.a only, You should set <code>conf.build_mrbtest_lib_only</code></p>
+
+<pre class="code ruby"><code class="ruby">conf.build_mrbtest_lib_only
+</code></pre>
+
+<h3>Bintest</h3>
+
+<p>Tests for mrbgem tools using CRuby.
+To have bintests place *.rb scripts to <code>bintest/</code> directory of mrbgems.
+See <code>mruby-bin-*/bintest/*.rb</code> if you need examples.
+If you want a temporary files use <code>tempfile</code> module of CRuby instead of <code>/tmp/</code>.</p>
+
+<p>You can enable it with following:</p>
+
+<pre class="code ruby"><code class="ruby">conf.enable_bintest
+</code></pre>
+
+<h3>C++ ABI</h3>
+
+<p>mruby can use C++ exception to raise exception internally.
+It is called C++ ABI mode.
+By using C++ exception it can release C++ stack object correctly.
+Whenever you mix C++ code C++ ABI mode would be enabled automatically.
+If you need to enable C++ ABI mode explicitly add the following:</p>
+
+<pre class="code ruby"><code class="ruby">conf.enable_cxx_abi
+</code></pre>
+
+<h4>C++ exception disabling.</h4>
+
+<p>If you need to force C++ exception disable
+(For example using a compiler option to disable C++ exception)
+add following:</p>
+
+<pre class="code ruby"><code class="ruby">conf.disable_cxx_exception
+</code></pre>
+
+<p>Note that it must be called before <code>enable_cxx_abi</code> or <code>gem</code> method.</p>
+
+<h3>Debugging mode</h3>
+
+<p>To enable debugging mode add the following:</p>
+
+<pre class="code ruby"><code class="ruby">conf.enable_debug
+</code></pre>
+
+<p>When debugging mode is enabled</p>
+
+<ul>
+<li>Macro <code>MRB_DEBUG</code> would be defined.
+
+<ul>
+<li>Which means <code>mrb_assert()</code> macro is enabled.</li>
+</ul></li>
+<li>Debug information of irep would be generated by <code>mrbc</code>.
+
+<ul>
+<li>Because <code>-g</code> flag would be added to <code>mrbc</code> runner.</li>
+<li>You can have better backtrace of mruby scripts with this.</li>
+</ul></li>
+</ul>
+
+<h2>Cross-Compilation</h2>
+
+<p>mruby can also be cross-compiled from one platform to another. To
+achieve this the <em>build_config.rb</em> needs to contain an instance of
+<code>MRuby::CrossBuild</code>. This instance defines the compilation
+tools and flags for the target platform. An example could look
+like this:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">MRuby</span>::<span style="color:#036;font-weight:bold">CrossBuild</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">32bit</span><span style="color:#710">'</span></span>) <span style="color:#080;font-weight:bold">do</span> |conf|
+  toolchain <span style="color:#A60">:gcc</span>
+
+  conf.cc.flags &lt;&lt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">-m32</span><span style="color:#710">&quot;</span></span>
+  conf.linker.flags &lt;&lt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">-m32</span><span style="color:#710">&quot;</span></span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<p>All configuration options of <code>MRuby::Build</code> can also be used
+in <code>MRuby::CrossBuild</code>.</p>
+
+<h3>Mrbtest in Cross-Compilation</h3>
+
+<p>In cross compilation, you can run <code>mrbtest</code> on emulator if
+you have it by changing configuration of test runner.</p>
+
+<pre class="code ruby"><code class="ruby">conf.test_runner <span style="color:#080;font-weight:bold">do</span> |t|
+  t.command = ... <span style="color:#777"># set emulator. this value must be non nil or false</span>
+  t.flags = ... <span style="color:#777"># set flags of emulator</span>
+
+  <span style="color:#080;font-weight:bold">def</span> t.<span style="color:#06B;font-weight:bold">run</span>(bin) <span style="color:#777"># override `run` if you need to change the behavior of it</span>
+    ... <span style="color:#777"># `bin` is the full path of mrbtest</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<h2>Build process</h2>
+
+<p>During the build process the directory <em>build</em> will be created in the
+root directory. The structure of this directory will look like this:</p>
+
+<pre class="code ruby"><code class="ruby">+- build
+   |
+   +-  host
+       |
+       +- bin          &lt;- <span style="color:#036;font-weight:bold">Binaries</span> (mirb, mrbc <span style="color:#080;font-weight:bold">and</span> mruby)
+       |
+       +- lib          &lt;- <span style="color:#036;font-weight:bold">Libraries</span> (libmruby.a <span style="color:#080;font-weight:bold">and</span> libmruby_core.a)
+       |
+       +- mrblib
+       |
+       +- src
+       |
+       +- test         &lt;- mrbtest tool
+       |
+       +- tools
+          |
+          +- mirb
+          |
+          +- mrbc
+          |
+          +- mruby
+</code></pre>
+
+<p>The compilation workflow will look like this:</p>
+
+<ul>
+<li>compile all files under <em>src</em> (object files will be stored
+in <em>build/host/src</em>)</li>
+<li>generate parser grammar out of <em>src/parse.y</em> (generated
+result will be stored in <em>build/host/src/y.tab.c</em>)</li>
+<li>compile  <em>build/host/src/y.tab.c</em> to  <em>build/host/src/y.tab.o</em></li>
+<li>create <em>build/host/lib/libmruby_core.a</em> out of all object files (C only)</li>
+<li>create <code>build/host/bin/mrbc</code> by compiling <em>tools/mrbc/mrbc.c</em> and
+linking with <em>build/host/lib/libmruby_core.a</em></li>
+<li>create <em>build/host/mrblib/mrblib.c</em> by compiling all *.rb files
+under <em>mrblib</em> with <code>build/host/bin/mrbc</code></li>
+<li>compile <em>build/host/mrblib/mrblib.c</em> to <em>build/host/mrblib/mrblib.o</em></li>
+<li>create <em>build/host/lib/libmruby.a</em> out of all object files (C and Ruby)</li>
+<li>create <code>build/host/bin/mruby</code> by compiling <em>mrbgems/mruby-bin-mruby/tools/mruby/mruby.c</em> and
+linking with <em>build/host/lib/libmruby.a</em></li>
+<li>create <code>build/host/bin/mirb</code> by compiling <em>mrbgems/mruby-bin-mirb/tools/mirb/mirb.c</em> and
+linking with <em>build/host/lib/libmruby.a</em></li>
+</ul>
+
+<pre class="code ruby"><code class="ruby"> _____    _____    ______    ____    ____    _____    _____    ____
+| <span style="color:#036;font-weight:bold">CC</span>  |-&gt;|<span style="color:#036;font-weight:bold">GEN</span>  |-&gt;|<span style="color:#036;font-weight:bold">AR</span>    |-&gt;|<span style="color:#036;font-weight:bold">CC</span>  |-&gt;|<span style="color:#036;font-weight:bold">CC</span>  |-&gt;|<span style="color:#036;font-weight:bold">AR</span>   |-&gt;|<span style="color:#036;font-weight:bold">CC</span>   |-&gt;|<span style="color:#036;font-weight:bold">CC</span>  |
+| *.c |  |y.tab|  |core.a|  |mrbc|  |*.rb|  |lib.a|  |mruby|  |mirb|
+ -----    -----    ------    ----    ----    -----    -----    ----
+</code></pre>
+
+<h3>Cross-Compilation</h3>
+
+<p>In case of a cross-compilation to <em>i386</em> the <em>build</em> directory structure looks
+like this:</p>
+
+<pre class="code ruby"><code class="ruby">+- build
+   |
+   +-  host
+   |   |
+   |   +- bin           &lt;- <span style="color:#036;font-weight:bold">Native</span> <span style="color:#036;font-weight:bold">Binaries</span>
+   |   |
+   |   +- lib           &lt;- <span style="color:#036;font-weight:bold">Native</span> <span style="color:#036;font-weight:bold">Libraries</span>
+   |   |
+   |   +- mrblib
+   |   |
+   |   +- src
+   |   |
+   |   +- test          &lt;- <span style="color:#036;font-weight:bold">Native</span> mrbtest tool
+   |   |
+   |   +- tools
+   |      |
+   |      +- mirb
+   |      |
+   |      +- mrbc
+   |      |
+   |      +- mruby
+   +- i386
+      |
+      +- bin            &lt;- <span style="color:#036;font-weight:bold">Cross</span>-compiled <span style="color:#036;font-weight:bold">Binaries</span>
+      |
+      +- lib            &lt;- <span style="color:#036;font-weight:bold">Cross</span>-compiled <span style="color:#036;font-weight:bold">Libraries</span>
+      |
+      +- mrblib
+      |
+      +- src
+      |
+      +- test           &lt;- <span style="color:#036;font-weight:bold">Cross</span>-compiled mrbtest tool
+      |
+      +- tools
+         |
+         +- mirb
+         |
+         +- mrbc
+         |
+         +- mruby
+</code></pre>
+
+<p>An extra directory is created for the target platform. In case you
+compile for <em>i386</em> a directory called <em>i386</em> is created under the
+build directory.</p>
+
+<p>The cross compilation workflow starts in the same way as the normal
+compilation by compiling all <em>native</em> libraries and binaries.
+Afterwards the cross compilation process proceeds like this:</p>
+
+<ul>
+<li>cross-compile all files under <em>src</em> (object files will be stored
+in <em>build/i386/src</em>)</li>
+<li>generate parser grammar out of <em>src/parse.y</em> (generated
+result will be stored in <em>build/i386/src/y.tab.c</em>)</li>
+<li>cross-compile <em>build/i386/src/y.tab.c</em> to <em>build/i386/src/y.tab.o</em></li>
+<li>create <em>build/i386/mrblib/mrblib.c</em> by compiling all *.rb files
+under <em>mrblib</em> with the native <code>build/host/bin/mrbc</code></li>
+<li>cross-compile <em>build/host/mrblib/mrblib.c</em> to <em>build/host/mrblib/mrblib.o</em></li>
+<li>create <em>build/i386/lib/libmruby.a</em> out of all object files (C and Ruby)</li>
+<li>create <code>build/i386/bin/mruby</code> by cross-compiling <em>mrbgems/mruby-bin-mruby/tools/mruby/mruby.c</em> and
+linking with <em>build/i386/lib/libmruby.a</em></li>
+<li>create <code>build/i386/bin/mirb</code> by cross-compiling <em>mrbgems/mruby-bin-mirb/tools/mirb/mirb.c</em> and
+linking with <em>build/i386/lib/libmruby.a</em></li>
+<li>create <em>build/i386/lib/libmruby_core.a</em> out of all object files (C only)</li>
+<li>create <code>build/i386/bin/mrbc</code> by cross-compiling <em>tools/mrbc/mrbc.c</em> and
+linking with <em>build/i386/lib/libmruby_core.a</em></li>
+</ul>
+
+<pre class="code ruby"><code class="ruby"> _______________________________________________________________
+|              <span style="color:#036;font-weight:bold">Native</span> <span style="color:#036;font-weight:bold">Compilation</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Host</span> <span style="color:#036;font-weight:bold">System</span>               |
+|  _____      ______      _____      ____      ____      _____  |
+| | <span style="color:#036;font-weight:bold">CC</span>  | -&gt; |<span style="color:#036;font-weight:bold">AR</span>    | -&gt; |<span style="color:#036;font-weight:bold">GEN</span>  | -&gt; |<span style="color:#036;font-weight:bold">CC</span>  | -&gt; |<span style="color:#036;font-weight:bold">CC</span>  | -&gt; |<span style="color:#036;font-weight:bold">AR</span>   | |
+| | *.c |    |core.a|    |y.tab|    |mrbc|    |*.rb|    |lib.a| |
+|  -----      ------      -----      ----      ----      -----  |
+ ---------------------------------------------------------------
+                                ||
+                               <span style="color:#F00;background-color:#FAA">\</span>||<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">
+                                </span><span style="color:#D20">\/</span><span style="color:#808">
+ ________________________________________________________________
+|             Cross Compilation for Target System                |
+|  _____      _____      _____      ____      ______      _____  |
+| | CC  | -&gt; |AR   | -&gt; |CC   | -&gt; |CC  | -&gt; |AR    | -&gt; |CC   | |
+| | *.c |    |lib.a|    |mruby|    |mirb|    |core.a|    |mrbc | |
+|  -----      -----      -----      ----      ------      -----  |
+ ----------------------------------------------------------------
+</span></span></code></pre>
+
+<h2>Build Configuration Examples</h2>
+
+<h3>Minimal Library</h3>
+
+<p>To build a minimal mruby library you need to use the Cross Compiling
+feature due to the reason that there are functions (i.e. stdio) which
+can&#39;t be disabled for the main build.</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">MRuby</span>::<span style="color:#036;font-weight:bold">CrossBuild</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Minimal</span><span style="color:#710">'</span></span>) <span style="color:#080;font-weight:bold">do</span> |conf|
+  toolchain <span style="color:#A60">:gcc</span>
+
+  conf.cc.defines = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">%w(</span><span style="color:#D20">DISABLE_STDIO</span><span style="color:#710">)</span></span>
+  conf.bins = []
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<p>This configuration defines a cross compile build called &#39;Minimal&#39; which
+is using the GCC and compiles for the host machine. It also disables
+all usages of stdio and doesn&#39;t compile any binaries (i.e. mrbc).</p>
+
+<h2>Test Environment</h2>
+
+<p>mruby&#39;s build process includes a test environment. In case you start the testing
+of mruby, a native binary called <code>mrbtest</code> will be generated and executed.
+This binary contains all test cases which are defined under <em>test/t</em>. In case
+of a cross-compilation an additional cross-compiled <em>mrbtest</em> binary is
+generated. You can copy this binary and run on your target system.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:17 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

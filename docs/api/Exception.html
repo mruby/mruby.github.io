@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Exception: Exception
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!Exception.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (E)</a> &raquo;
+    
+    
+    <span class="title">Exception</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Exception: Exception
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Exception</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">src/error.c</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>15.2.22</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="ScriptError.html" title="ScriptError (class)">ScriptError</a></span>, <span class='object_link'><a href="StandardError.html" title="StandardError (class)">StandardError</a></span></p>
+</div>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#backtrace-instance_method" title="#backtrace (instance method)">- (Object) <strong>backtrace</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exception-instance_method" title="#exception (instance method)">- (Object) <strong>exception</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq:    exc.exception(string)  -&gt;  an_exception or exc.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#new (instance method)">- (Exception) <strong>new</strong>(msg = nil) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Construct a new Exception object, optionally passing in  a message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (String) <strong>inspect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns this exception&#39;s file name, line number, message and class
+name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#message-instance_method" title="#message (instance method)">- (String) <strong>message</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the result of invoking exception.to_s.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (String) <strong>to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns exception&#39;s message (or the name of the exception if no message
+is set).</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Exception (class)">Exception</a></span></tt>) <strong>new</strong>(msg = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Construct a new Exception object, optionally passing in</p>
+
+<pre class="code"><code class="">a message.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 43</span>
+
+static mrb_value
+exc_initialize(mrb_state *mrb, mrb_value exc)
+{
+  mrb_value mesg;
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|o</span><span style="color:#710">&quot;</span></span>, &amp;mesg) == <span style="color:#00D">1</span>) {
+    mrb_iv_set(mrb, exc, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">mesg</span><span style="color:#710">&quot;</span></span>), mesg);
+  }
+  <span style="color:#080;font-weight:bold">return</span> exc;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="backtrace-instance_method">
+  
+    - (<tt>Object</tt>) <strong>backtrace</strong> 
+  
+
+  
+
+  
+</h3>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exception-instance_method">
+  
+    - (<tt>Object</tt>) <strong>exception</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>call-seq:</p>
+
+<pre class="code"><code class="">exc.exception(string)  -&gt;  an_exception <span style="color:#080;font-weight:bold">or</span> exc</code></pre>
+
+<p>With no argument, or if the argument is the same as the receiver, return
+the receiver. Otherwise, create a new exception object of the same class as
+the receiver, but with a message equal to <code>string.to_str</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 67</span>
+
+static mrb_value
+exc_exception(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value exc;
+  mrb_value a;
+  int argc;
+
+  argc = mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|o</span><span style="color:#710">&quot;</span></span>, &amp;a);
+  <span style="color:#080;font-weight:bold">if</span> (argc == <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+  <span style="color:#080;font-weight:bold">if</span> (mrb_obj_equal(mrb, <span style="color:#069">self</span>, a)) <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+  exc = mrb_obj_clone(mrb, <span style="color:#069">self</span>);
+  mrb_iv_set(mrb, exc, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">mesg</span><span style="color:#710">&quot;</span></span>), a);
+
+  <span style="color:#080;font-weight:bold">return</span> exc;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>inspect</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns this exception&#39;s file name, line number, message and class
+name. If file name or line number is not set, returns message and class
+name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 133</span>
+
+static mrb_value
+exc_inspect(mrb_state *mrb, mrb_value exc)
+{
+  mrb_value str, mesg, file, line;
+  mrb_bool append_mesg;
+
+  mesg = mrb_attr_get(mrb, exc, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">mesg</span><span style="color:#710">&quot;</span></span>));
+  file = mrb_attr_get(mrb, exc, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">file</span><span style="color:#710">&quot;</span></span>));
+  line = mrb_attr_get(mrb, exc, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">line</span><span style="color:#710">&quot;</span></span>));
+
+  append_mesg = !mrb_nil_p(mesg);
+  <span style="color:#080;font-weight:bold">if</span> (append_mesg) {
+    mesg = mrb_obj_as_string(mrb, mesg);
+    append_mesg = RSTRING_LEN(mesg) &gt; <span style="color:#00D">0</span>;
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_nil_p(file) &amp;&amp; !mrb_nil_p(line)) {
+    str = mrb_str_dup(mrb, file);
+    mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">:</span><span style="color:#710">&quot;</span></span>);
+    mrb_str_append(mrb, str, line);
+    mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">: </span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#080;font-weight:bold">if</span> (append_mesg) {
+      mrb_str_cat_str(mrb, str, mesg);
+      mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> (</span><span style="color:#710">&quot;</span></span>);
+    }
+    mrb_str_cat_cstr(mrb, str, mrb_obj_classname(mrb, exc));
+    <span style="color:#080;font-weight:bold">if</span> (append_mesg) {
+      mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">)</span><span style="color:#710">&quot;</span></span>);
+    }
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    const char *cname = mrb_obj_classname(mrb, exc);
+    str = mrb_str_new_cstr(mrb, cname);
+    mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">: </span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#080;font-weight:bold">if</span> (append_mesg) {
+      mrb_str_cat_str(mrb, str, mesg);
+    }
+    <span style="color:#080;font-weight:bold">else</span> {
+      mrb_str_cat_cstr(mrb, str, cname);
+    }
+  }
+  <span style="color:#080;font-weight:bold">return</span> str;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="message-instance_method">
+  
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>message</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the result of invoking <code>exception.to_s</code>. Normally this
+returns the exception&#39;s message or name. By supplying a to_str method,
+exceptions are agreeing to be used where Strings are expected.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 117</span>
+
+static mrb_value
+exc_message(mrb_state *mrb, mrb_value exc)
+{
+  <span style="color:#080;font-weight:bold">return</span> mrb_funcall(mrb, exc, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>to_s</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns exception&#39;s message (or the name of the exception if no message
+is set).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 91</span>
+
+static mrb_value
+exc_to_s(mrb_state *mrb, mrb_value exc)
+{
+  mrb_value mesg = mrb_attr_get(mrb, exc, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">mesg</span><span style="color:#710">&quot;</span></span>));
+  struct <span style="color:#036;font-weight:bold">RObject</span> *p;
+
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_string_p(mesg)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_str_new_cstr(mrb, mrb_obj_classname(mrb, exc));
+  }
+  p = mrb_obj_ptr(mesg);
+  <span style="color:#080;font-weight:bold">if</span> (!p-&gt;c) {
+    p-&gt;c = mrb-&gt;string_class;
+  }
+  <span style="color:#080;font-weight:bold">return</span> mesg;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:19 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

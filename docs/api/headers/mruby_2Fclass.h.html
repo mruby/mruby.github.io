@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Header: mruby/class.h
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!headers/mruby_2Fclass.h.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (m)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../headers.html" title="headers (headersroot)">headers</a></span></span>
+     &raquo; 
+    <span class="title">mruby/class.h</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="../header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="../function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Header: mruby/class.h</h1>
+<h2>Overview</h2>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Class class</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>Included heaers
+
+  <h2>
+    Function Summary
+    <small><a href="#" class="summary_toggle">collapse</a></small>
+  </h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_class_id-function" title="mrb_define_class_id">struct RClass* <strong>mrb_define_class_id</strong>(mrb_state*, mrb_sym, struct RClass*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_module_id-function" title="mrb_define_module_id">struct RClass* <strong>mrb_define_module_id</strong>(mrb_state*, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_vm_define_class-function" title="mrb_vm_define_class">struct RClass * <strong>mrb_vm_define_class</strong>(mrb_state*, mrb_value, mrb_value, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_vm_define_module-function" title="mrb_vm_define_module">struct RClass * <strong>mrb_vm_define_module</strong>(mrb_state*, mrb_value, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_method_raw-function" title="mrb_define_method_raw">void <strong>mrb_define_method_raw</strong>(mrb_state*, struct RClass*, mrb_sym, struct RProc *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_method_id-function" title="mrb_define_method_id">void <strong>mrb_define_method_id</strong>(mrb_state *, struct RClass *, mrb_sym, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_alias_method-function" title="mrb_alias_method">void <strong>mrb_alias_method</strong>(mrb_state *, struct RClass *, mrb_sym, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_outer_module-function" title="mrb_class_outer_module">struct RClass * <strong>mrb_class_outer_module</strong>(mrb_state*, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_method_search_vm-function" title="mrb_method_search_vm">struct RProc * <strong>mrb_method_search_vm</strong>(mrb_state*, struct RClass*, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_method_search-function" title="mrb_method_search">struct RProc * <strong>mrb_method_search</strong>(mrb_state*, struct RClass*, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_real-function" title="mrb_class_real">struct RClass* <strong>mrb_class_real</strong>(struct RClass*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <h2>Define Summary</h2>
+  <dl class="constants">
+    
+      <dt id="MRUBY_CLASS_H-define" class=""><small>#define</small> MRUBY_CLASS_H
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_class_ptr-define" class=""><small>#define</small> mrb_class_ptr
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RCLASS_SUPER-define" class=""><small>#define</small> RCLASS_SUPER
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RCLASS_IV_TBL-define" class=""><small>#define</small> RCLASS_IV_TBL
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RCLASS_M_TBL-define" class=""><small>#define</small> RCLASS_M_TBL
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_FLAG_IS_PREPENDED-define" class=""><small>#define</small> MRB_FLAG_IS_PREPENDED
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>TODO: figure out where to put user flags</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_FLAG_IS_ORIGIN-define" class=""><small>#define</small> MRB_FLAG_IS_ORIGIN
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_CLASS_ORIGIN-define" class=""><small>#define</small> MRB_CLASS_ORIGIN
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_INSTANCE_TT_MASK-define" class=""><small>#define</small> MRB_INSTANCE_TT_MASK
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_SET_INSTANCE_TT-define" class=""><small>#define</small> MRB_SET_INSTANCE_TT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_INSTANCE_TT-define" class=""><small>#define</small> MRB_INSTANCE_TT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+  </dl>
+
+<div id="functions_details" class="method_details_list">
+  <h2>Function Details</h2>
+
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="mrb_define_class_id-function">
+  struct RClass* <strong>mrb_define_class_id</strong>(mrb_state* , mrb_sym , struct RClass* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_module_id-function">
+  struct RClass* <strong>mrb_define_module_id</strong>(mrb_state* , mrb_sym )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_vm_define_class-function">
+  struct RClass * <strong>mrb_vm_define_class</strong>(mrb_state* , mrb_value , mrb_value , mrb_sym )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_vm_define_module-function">
+  struct RClass * <strong>mrb_vm_define_module</strong>(mrb_state* , mrb_value , mrb_sym )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_method_raw-function">
+  void <strong>mrb_define_method_raw</strong>(mrb_state* , struct RClass* , mrb_sym , struct RProc * )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_method_id-function">
+  void <strong>mrb_define_method_id</strong>(mrb_state * mrb, struct RClass * c, mrb_sym mid, mrb_func_t func, mrb_aspec aspec)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_alias_method-function">
+  void <strong>mrb_alias_method</strong>(mrb_state * mrb, struct RClass * c, mrb_sym a, mrb_sym b)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_outer_module-function">
+  struct RClass * <strong>mrb_class_outer_module</strong>(mrb_state* , struct RClass * )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_method_search_vm-function">
+  struct RProc * <strong>mrb_method_search_vm</strong>(mrb_state* , struct RClass* , mrb_sym )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_method_search-function">
+  struct RProc * <strong>mrb_method_search</strong>(mrb_state* , struct RClass* , mrb_sym )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_real-function">
+  struct RClass* <strong>mrb_class_real</strong>(struct RClass* cl)
+
+  
+</h3>
+
+</div>
+
+  
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:20 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Header: mruby/compile.h
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!headers/mruby_2Fcompile.h.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (m)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../headers.html" title="headers (headersroot)">headers</a></span></span>
+     &raquo; 
+    <span class="title">mruby/compile.h</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="../header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="../function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Header: mruby/compile.h</h1>
+Included heaers
+
+  <h2>
+    Function Summary
+    <small><a href="#" class="summary_toggle">collapse</a></small>
+  </h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrbc_context_new-function" title="mrbc_context_new">mrbc_context* <strong>mrbc_context_new</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrbc_context_free-function" title="mrbc_context_free">void <strong>mrbc_context_free</strong>(mrb_state *, mrbc_context *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_toplevel_run_keep-function" title="mrb_toplevel_run_keep">mrb_value <strong>mrb_toplevel_run_keep</strong>(mrb_state*, struct RProc*, unsigned)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_parser_new-function" title="mrb_parser_new">struct mrb_parser_state* <strong>mrb_parser_new</strong>(mrb_state*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_parser_free-function" title="mrb_parser_free">void <strong>mrb_parser_free</strong>(struct mrb_parser_state*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_parser_parse-function" title="mrb_parser_parse">void <strong>mrb_parser_parse</strong>(struct mrb_parser_state*, mrbc_context*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_parser_set_filename-function" title="mrb_parser_set_filename">void <strong>mrb_parser_set_filename</strong>(struct mrb_parser_state*, char)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_parse_file-function" title="mrb_parse_file">struct mrb_parser_state* <strong>mrb_parse_file</strong>(mrb_state*, FILE*, mrbc_context*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_parse_string-function" title="mrb_parse_string">struct mrb_parser_state* <strong>mrb_parse_string</strong>(mrb_state*, const char*, mrbc_context*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_parse_nstring-function" title="mrb_parse_nstring">struct mrb_parser_state* <strong>mrb_parse_nstring</strong>(mrb_state*, const char*, int, mrbc_context*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_generate_code-function" title="mrb_generate_code">struct RProc* <strong>mrb_generate_code</strong>(mrb_state*, struct mrb_parser_state*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_file-function" title="mrb_load_file">mrb_value <strong>mrb_load_file</strong>(mrb_state*, FILE*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_string-function" title="mrb_load_string">mrb_value <strong>mrb_load_string</strong>(mrb_state *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_nstring-function" title="mrb_load_nstring">mrb_value <strong>mrb_load_nstring</strong>(mrb_state *, const char *, int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_file_cxt-function" title="mrb_load_file_cxt">mrb_value <strong>mrb_load_file_cxt</strong>(mrb_state*, FILE*, mrbc_context *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_string_cxt-function" title="mrb_load_string_cxt">mrb_value <strong>mrb_load_string_cxt</strong>(mrb_state *, const char *, mrbc_context *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_nstring_cxt-function" title="mrb_load_nstring_cxt">mrb_value <strong>mrb_load_nstring_cxt</strong>(mrb_state *, const char *, int, mrbc_context *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <h2>Define Summary</h2>
+  <dl class="constants">
+    
+      <dt id="MRUBY_COMPILE_H-define" class=""><small>#define</small> MRUBY_COMPILE_H
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="STR_FUNC_PARSING-define" class=""><small>#define</small> STR_FUNC_PARSING
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="STR_FUNC_EXPAND-define" class=""><small>#define</small> STR_FUNC_EXPAND
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="STR_FUNC_REGEXP-define" class=""><small>#define</small> STR_FUNC_REGEXP
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="STR_FUNC_WORD-define" class=""><small>#define</small> STR_FUNC_WORD
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="STR_FUNC_SYMBOL-define" class=""><small>#define</small> STR_FUNC_SYMBOL
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="STR_FUNC_ARRAY-define" class=""><small>#define</small> STR_FUNC_ARRAY
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="STR_FUNC_HEREDOC-define" class=""><small>#define</small> STR_FUNC_HEREDOC
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="STR_FUNC_XQUOTE-define" class=""><small>#define</small> STR_FUNC_XQUOTE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_PARSER_BUF_SIZE-define" class=""><small>#define</small> MRB_PARSER_BUF_SIZE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+  </dl>
+
+<div id="functions_details" class="method_details_list">
+  <h2>Function Details</h2>
+
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="mrbc_context_new-function">
+  mrbc_context* <strong>mrbc_context_new</strong>(mrb_state * mrb)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrbc_context_free-function">
+  void <strong>mrbc_context_free</strong>(mrb_state * mrb, mrbc_context * cxt)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_toplevel_run_keep-function">
+  mrb_value <strong>mrb_toplevel_run_keep</strong>(mrb_state* , struct RProc* , unsigned int)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_parser_new-function">
+  struct mrb_parser_state* <strong>mrb_parser_new</strong>(mrb_state* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_parser_free-function">
+  void <strong>mrb_parser_free</strong>(struct mrb_parser_state* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_parser_parse-function">
+  void <strong>mrb_parser_parse</strong>(struct mrb_parser_state* , mrbc_context* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_parser_set_filename-function">
+  void <strong>mrb_parser_set_filename</strong>(struct mrb_parser_state* , char const)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_parse_file-function">
+  struct mrb_parser_state* <strong>mrb_parse_file</strong>(mrb_state* , FILE* , mrbc_context* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_parse_string-function">
+  struct mrb_parser_state* <strong>mrb_parse_string</strong>(mrb_state* , const char* , mrbc_context* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_parse_nstring-function">
+  struct mrb_parser_state* <strong>mrb_parse_nstring</strong>(mrb_state* , const char* , int , mrbc_context* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_generate_code-function">
+  struct RProc* <strong>mrb_generate_code</strong>(mrb_state* , struct mrb_parser_state* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_load_file-function">
+  mrb_value <strong>mrb_load_file</strong>(mrb_state* , FILE* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_load_string-function">
+  mrb_value <strong>mrb_load_string</strong>(mrb_state * mrb, const char * s)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_load_nstring-function">
+  mrb_value <strong>mrb_load_nstring</strong>(mrb_state * mrb, const char * s, int len)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_load_file_cxt-function">
+  mrb_value <strong>mrb_load_file_cxt</strong>(mrb_state* , FILE* , mrbc_context * cxt)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_load_string_cxt-function">
+  mrb_value <strong>mrb_load_string_cxt</strong>(mrb_state * mrb, const char * s, mrbc_context * cxt)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_load_nstring_cxt-function">
+  mrb_value <strong>mrb_load_nstring_cxt</strong>(mrb_state * mrb, const char * s, int len, mrbc_context * cxt)
+
+  
+</h3>
+
+</div>
+
+  
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:21 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>
