@@ -1,0 +1,4628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Header: mruby.h
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!headers/mruby.h.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (m)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../headers.html" title="headers (headersroot)">headers</a></span></span>
+     &raquo; 
+    <span class="title">mruby.h</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="../header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="../function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Header: mruby.h</h1>
+<h2>Overview</h2>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>MRuby C API entry point</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>Included heaers
+
+  <h2>
+    Function Summary
+    <small><a href="#" class="summary_toggle">collapse</a></small>
+  </h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_class-function" title="mrb_define_class">struct RClass * <strong>mrb_define_class</strong>(mrb_state *, const char *, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a new class.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_module-function" title="mrb_define_module">struct RClass * <strong>mrb_define_module</strong>(mrb_state *, const char*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_singleton_class-function" title="mrb_singleton_class">mrb_value <strong>mrb_singleton_class</strong>(mrb_state*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_include_module-function" title="mrb_include_module">void <strong>mrb_include_module</strong>(mrb_state*, struct RClass*, struct RClass*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_prepend_module-function" title="mrb_prepend_module">void <strong>mrb_prepend_module</strong>(mrb_state*, struct RClass*, struct RClass*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_method-function" title="mrb_define_method">void <strong>mrb_define_method</strong>(mrb_state *, struct RClass *, const char *, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a global function in ruby.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_class_method-function" title="mrb_define_class_method">void <strong>mrb_define_class_method</strong>(mrb_state *, struct RClass *, const char *, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_singleton_method-function" title="mrb_define_singleton_method">void <strong>mrb_define_singleton_method</strong>(mrb_state*, struct RObject*, const char*, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_module_function-function" title="mrb_define_module_function">void <strong>mrb_define_module_function</strong>(mrb_state*, struct RClass*, const char*, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_const-function" title="mrb_define_const">void <strong>mrb_define_const</strong>(mrb_state*, struct RClass*, const char *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_undef_method-function" title="mrb_undef_method">void <strong>mrb_undef_method</strong>(mrb_state*, struct RClass*, const char*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_undef_class_method-function" title="mrb_undef_class_method">void <strong>mrb_undef_class_method</strong>(mrb_state*, struct RClass*, const char*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_new-function" title="mrb_obj_new">mrb_value <strong>mrb_obj_new</strong>(mrb_state *, struct RClass *, mrb_int, const mrb_value *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize a new object instace of c class.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_new_instance-function" title="mrb_class_new_instance">mrb_value <strong>mrb_class_new_instance</strong>(mrb_state *, mrb_int, const mrb_value *, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_instance_new-function" title="mrb_instance_new">mrb_value <strong>mrb_instance_new</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_new-function" title="mrb_class_new">struct RClass * <strong>mrb_class_new</strong>(mrb_state *, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_module_new-function" title="mrb_module_new">struct RClass * <strong>mrb_module_new</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_defined-function" title="mrb_class_defined">mrb_bool <strong>mrb_class_defined</strong>(mrb_state *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_get-function" title="mrb_class_get">struct RClass * <strong>mrb_class_get</strong>(mrb_state *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_get_under-function" title="mrb_class_get_under">struct RClass * <strong>mrb_class_get_under</strong>(mrb_state *, struct RClass *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_module_get-function" title="mrb_module_get">struct RClass * <strong>mrb_module_get</strong>(mrb_state *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_module_get_under-function" title="mrb_module_get_under">struct RClass * <strong>mrb_module_get_under</strong>(mrb_state *, struct RClass *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_notimplement_m-function" title="mrb_notimplement_m">mrb_value <strong>mrb_notimplement_m</strong>(mrb_state*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_dup-function" title="mrb_obj_dup">mrb_value <strong>mrb_obj_dup</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_to_integer-function" title="mrb_check_to_integer">mrb_value <strong>mrb_check_to_integer</strong>(mrb_state *, mrb_value, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_respond_to-function" title="mrb_obj_respond_to">mrb_bool <strong>mrb_obj_respond_to</strong>(mrb_state *, struct RClass*, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_class_under-function" title="mrb_define_class_under">struct RClass * <strong>mrb_define_class_under</strong>(mrb_state *, struct RClass *, const char *, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a new class under a given module.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_module_under-function" title="mrb_define_module_under">struct RClass * <strong>mrb_define_module_under</strong>(mrb_state *, struct RClass *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_get_args-function" title="mrb_get_args">mrb_int <strong>mrb_get_args</strong>(mrb_state *, mrb_args_format, ...)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve arguments from mrb_state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_funcall-function" title="mrb_funcall">mrb_value <strong>mrb_funcall</strong>(mrb_state*, mrb_value, const char*, mrb_int, ...)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Call existing ruby functions.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_funcall_argv-function" title="mrb_funcall_argv">mrb_value <strong>mrb_funcall_argv</strong>(mrb_state*, mrb_value, mrb_sym, mrb_int, const mrb_value*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_funcall_with_block-function" title="mrb_funcall_with_block">mrb_value <strong>mrb_funcall_with_block</strong>(mrb_state*, mrb_value, mrb_sym, mrb_int, const mrb_value*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_intern_cstr-function" title="mrb_intern_cstr">mrb_sym <strong>mrb_intern_cstr</strong>(mrb_state*, const char*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_intern-function" title="mrb_intern">mrb_sym <strong>mrb_intern</strong>(mrb_state*, const char*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_intern_static-function" title="mrb_intern_static">mrb_sym <strong>mrb_intern_static</strong>(mrb_state*, const char*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_intern_str-function" title="mrb_intern_str">mrb_sym <strong>mrb_intern_str</strong>(mrb_state*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_intern_cstr-function" title="mrb_check_intern_cstr">mrb_value <strong>mrb_check_intern_cstr</strong>(mrb_state*, const char*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_intern-function" title="mrb_check_intern">mrb_value <strong>mrb_check_intern</strong>(mrb_state*, const char*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_intern_str-function" title="mrb_check_intern_str">mrb_value <strong>mrb_check_intern_str</strong>(mrb_state*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_sym2str-function" title="mrb_sym2str">mrb_value <strong>mrb_sym2str</strong>(mrb_state*, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_malloc-function" title="mrb_malloc">void * <strong>mrb_malloc</strong>(mrb_state*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>raise RuntimeError if no mem.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_calloc-function" title="mrb_calloc">void * <strong>mrb_calloc</strong>(mrb_state*, size_t, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ditto.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_realloc-function" title="mrb_realloc">void * <strong>mrb_realloc</strong>(mrb_state*, void*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ditto.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_realloc_simple-function" title="mrb_realloc_simple">void * <strong>mrb_realloc_simple</strong>(mrb_state*, void*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>return NULL if no memory available.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_malloc_simple-function" title="mrb_malloc_simple">void * <strong>mrb_malloc_simple</strong>(mrb_state*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>return NULL if no memory available.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_alloc-function" title="mrb_obj_alloc">struct RBasic * <strong>mrb_obj_alloc</strong>(mrb_state*, enum, struct RClass*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>return NULL if no memory available.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_free-function" title="mrb_free">void <strong>mrb_free</strong>(mrb_state*, void*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_str_new-function" title="mrb_str_new">mrb_value <strong>mrb_str_new</strong>(mrb_state *, const char *, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_str_new_cstr-function" title="mrb_str_new_cstr">mrb_value <strong>mrb_str_new_cstr</strong>(mrb_state*, const char*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Turns a C string into a Ruby string value.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_str_new_static-function" title="mrb_str_new_static">mrb_value <strong>mrb_str_new_static</strong>(mrb_state *, const char *, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_open-function" title="mrb_open">mrb_state* <strong>mrb_open</strong>(void)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates new mrb_state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_open_allocf-function" title="mrb_open_allocf">mrb_state* <strong>mrb_open_allocf</strong>(mrb_allocf, void *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create new mrb_state with custom allocators.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_open_core-function" title="mrb_open_core">mrb_state* <strong>mrb_open_core</strong>(mrb_allocf, void *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create new mrb_state with just the MRuby core.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_close-function" title="mrb_close">void <strong>mrb_close</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Closes and frees a mrb_state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_default_allocf-function" title="mrb_default_allocf">void* <strong>mrb_default_allocf</strong>(mrb_state*, void*, size_t, void*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The default allocation function.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_top_self-function" title="mrb_top_self">mrb_value <strong>mrb_top_self</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_run-function" title="mrb_run">mrb_value <strong>mrb_run</strong>(mrb_state*, struct RProc*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_toplevel_run-function" title="mrb_toplevel_run">mrb_value <strong>mrb_toplevel_run</strong>(mrb_state*, struct RProc*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_context_run-function" title="mrb_context_run">mrb_value <strong>mrb_context_run</strong>(mrb_state*, struct RProc*, mrb_value, unsigned)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_p-function" title="mrb_p">void <strong>mrb_p</strong>(mrb_state*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_id-function" title="mrb_obj_id">mrb_int <strong>mrb_obj_id</strong>(mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_to_sym-function" title="mrb_obj_to_sym">mrb_sym <strong>mrb_obj_to_sym</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_eq-function" title="mrb_obj_eq">mrb_bool <strong>mrb_obj_eq</strong>(mrb_state*, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_equal-function" title="mrb_obj_equal">mrb_bool <strong>mrb_obj_equal</strong>(mrb_state*, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_equal-function" title="mrb_equal">mrb_bool <strong>mrb_equal</strong>(mrb_state *, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_convert_to_integer-function" title="mrb_convert_to_integer">mrb_value <strong>mrb_convert_to_integer</strong>(mrb_state *, mrb_value, int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_Integer-function" title="mrb_Integer">mrb_value <strong>mrb_Integer</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_Float-function" title="mrb_Float">mrb_value <strong>mrb_Float</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_inspect-function" title="mrb_inspect">mrb_value <strong>mrb_inspect</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_eql-function" title="mrb_eql">mrb_bool <strong>mrb_eql</strong>(mrb_state *, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_garbage_collect-function" title="mrb_garbage_collect">void <strong>mrb_garbage_collect</strong>(mrb_state*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_full_gc-function" title="mrb_full_gc">void <strong>mrb_full_gc</strong>(mrb_state*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_incremental_gc-function" title="mrb_incremental_gc">void <strong>mrb_incremental_gc</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_gc_arena_save-function" title="mrb_gc_arena_save">int <strong>mrb_gc_arena_save</strong>(mrb_state*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_gc_arena_restore-function" title="mrb_gc_arena_restore">void <strong>mrb_gc_arena_restore</strong>(mrb_state*, int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_gc_mark-function" title="mrb_gc_mark">void <strong>mrb_gc_mark</strong>(mrb_state*, struct RBasic*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_field_write_barrier-function" title="mrb_field_write_barrier">void <strong>mrb_field_write_barrier</strong>(mrb_state *, struct RBasic*, struct RBasic*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_write_barrier-function" title="mrb_write_barrier">void <strong>mrb_write_barrier</strong>(mrb_state *, struct RBasic*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_convert_type-function" title="mrb_check_convert_type">mrb_value <strong>mrb_check_convert_type</strong>(mrb_state *, mrb_value, enum, type, const char *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_any_to_s-function" title="mrb_any_to_s">mrb_value <strong>mrb_any_to_s</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_class-function" title="mrb_obj_class">struct RClass* <strong>mrb_obj_class</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_path-function" title="mrb_class_path">mrb_value <strong>mrb_class_path</strong>(mrb_state *, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_convert_type-function" title="mrb_convert_type">mrb_value <strong>mrb_convert_type</strong>(mrb_state *, mrb_value, enum, type, const char *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_is_kind_of-function" title="mrb_obj_is_kind_of">mrb_bool <strong>mrb_obj_is_kind_of</strong>(mrb_state *, mrb_value, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_inspect-function" title="mrb_obj_inspect">mrb_value <strong>mrb_obj_inspect</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_clone-function" title="mrb_obj_clone">mrb_value <strong>mrb_obj_clone</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_exc_new-function" title="mrb_exc_new">mrb_value <strong>mrb_exc_new</strong>(mrb_state *, struct RClass *, const char *, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_exc_raise-function" title="mrb_exc_raise">mrb_noreturn <strong>mrb_exc_raise</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_raise-function" title="mrb_raise">mrb_noreturn <strong>mrb_raise</strong>(mrb_state *, struct RClass *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_raisef-function" title="mrb_raisef">mrb_noreturn <strong>mrb_raisef</strong>(mrb_state *, struct RClass *, const char *, ...)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_name_error-function" title="mrb_name_error">mrb_noreturn <strong>mrb_name_error</strong>(mrb_state *, mrb_sym, const char *, ...)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_warn-function" title="mrb_warn">void <strong>mrb_warn</strong>(mrb_state *, const char *, ...)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_bug-function" title="mrb_bug">mrb_noreturn <strong>mrb_bug</strong>(mrb_state *, const char *, ...)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_print_backtrace-function" title="mrb_print_backtrace">void <strong>mrb_print_backtrace</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_print_error-function" title="mrb_print_error">void <strong>mrb_print_error</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_yield-function" title="mrb_yield">mrb_value <strong>mrb_yield</strong>(mrb_state *, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_yield_argv-function" title="mrb_yield_argv">mrb_value <strong>mrb_yield_argv</strong>(mrb_state *, mrb_value, mrb_int, const mrb_value *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_yield_with_class-function" title="mrb_yield_with_class">mrb_value <strong>mrb_yield_with_class</strong>(mrb_state *, mrb_value, mrb_int, const mrb_value *, mrb_value, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_gc_protect-function" title="mrb_gc_protect">void <strong>mrb_gc_protect</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>mrb_gc_protect() leaves the object in the arena.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_gc_register-function" title="mrb_gc_register">void <strong>mrb_gc_register</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>mrb_gc_register() keeps the object from GC.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_gc_unregister-function" title="mrb_gc_unregister">void <strong>mrb_gc_unregister</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>mrb_gc_unregister() removes the object from GC root.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_to_int-function" title="mrb_to_int">mrb_value <strong>mrb_to_int</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_type-function" title="mrb_check_type">void <strong>mrb_check_type</strong>(mrb_state *, mrb_value, enum, t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_alias-function" title="mrb_define_alias">void <strong>mrb_define_alias</strong>(mrb_state *, struct RClass *, const char *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_global_const-function" title="mrb_define_global_const">void <strong>mrb_define_global_const</strong>(mrb_state *, const char *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_attr_get-function" title="mrb_attr_get">mrb_value <strong>mrb_attr_get</strong>(mrb_state *, mrb_value, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_respond_to-function" title="mrb_respond_to">mrb_bool <strong>mrb_respond_to</strong>(mrb_state *, mrb_value, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_is_instance_of-function" title="mrb_obj_is_instance_of">mrb_bool <strong>mrb_obj_is_instance_of</strong>(mrb_state *, mrb_value, struct RClass*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_fiber_resume-function" title="mrb_fiber_resume">mrb_value <strong>mrb_fiber_resume</strong>(mrb_state *, mrb_value, mrb_int, const mrb_value *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>fiber functions (you need to link mruby-fiber mrbgem to use).</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_fiber_yield-function" title="mrb_fiber_yield">mrb_value <strong>mrb_fiber_yield</strong>(mrb_state *, mrb_int, const mrb_value *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_pool_open-function" title="mrb_pool_open">struct mrb_pool* <strong>mrb_pool_open</strong>(mrb_state*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_pool_close-function" title="mrb_pool_close">void <strong>mrb_pool_close</strong>(struct mrb_pool*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_pool_alloc-function" title="mrb_pool_alloc">void* <strong>mrb_pool_alloc</strong>(struct mrb_pool*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_pool_realloc-function" title="mrb_pool_realloc">void* <strong>mrb_pool_realloc</strong>(struct mrb_pool*, void*, size_t, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_pool_can_realloc-function" title="mrb_pool_can_realloc">mrb_bool <strong>mrb_pool_can_realloc</strong>(struct mrb_pool*, void*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_alloca-function" title="mrb_alloca">void* <strong>mrb_alloca</strong>(mrb_state *, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_state_atexit-function" title="mrb_state_atexit">void <strong>mrb_state_atexit</strong>(mrb_state *, mrb_atexit_func)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_show_version-function" title="mrb_show_version">void <strong>mrb_show_version</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_show_copyright-function" title="mrb_show_copyright">void <strong>mrb_show_copyright</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_format-function" title="mrb_format">mrb_value <strong>mrb_format</strong>(mrb_state *, const char *, ...)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <h2>Define Summary</h2>
+  <dl class="constants">
+    
+      <dt id="MRUBY_H-define" class=""><small>#define</small> MRUBY_H
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_GC_ARENA_SIZE-define" class=""><small>#define</small> MRB_GC_ARENA_SIZE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_FIXED_STATE_ATEXIT_STACK_SIZE-define" class=""><small>#define</small> MRB_FIXED_STATE_ATEXIT_STACK_SIZE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARGS_REQ-define" class=""><small>#define</small> MRB_ARGS_REQ
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Function requires n arguments.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARGS_OPT-define" class=""><small>#define</small> MRB_ARGS_OPT
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Funtion takes n optional arguments</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARGS_ARG-define" class=""><small>#define</small> MRB_ARGS_ARG
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Funtion takes n1 mandatory arguments and n2 optional arguments</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARGS_REST-define" class=""><small>#define</small> MRB_ARGS_REST
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>rest argument</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARGS_POST-define" class=""><small>#define</small> MRB_ARGS_POST
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>required arguments after rest</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARGS_KEY-define" class=""><small>#define</small> MRB_ARGS_KEY
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>keyword arguments (n of keys, kdict)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARGS_BLOCK-define" class=""><small>#define</small> MRB_ARGS_BLOCK
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Function takes a block argument</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARGS_ANY-define" class=""><small>#define</small> MRB_ARGS_ANY
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Function accepts any number of arguments</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARGS_NONE-define" class=""><small>#define</small> MRB_ARGS_NONE
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Function accepts no arguments</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_strlen_lit-define" class=""><small>#define</small> mrb_strlen_lit
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>`strlen` for character string literals (use with caution or `strlen`
+instead)</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">Adjacent</span> string literals are concatenated <span style="color:#080;font-weight:bold">in</span> <span style="color:#036;font-weight:bold">C</span>/<span style="color:#036;font-weight:bold">C</span>++ <span style="color:#080;font-weight:bold">in</span> translation phase <span style="color:#00D">6</span>.
+If <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#161">`</span><span style="color:#2B2">lit</span><span style="color:#161">`</span></span> is <span style="color:#080;font-weight:bold">not</span> one, the compiler will report a syntax <span style="color:#606">error</span>:
+ <span style="color:#606">MSVC</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">error C2143: syntax error : missing ')' before 'string'</span><span style="color:#710">&quot;</span></span>
+ <span style="color:#606">GCC</span>:  <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">error: expected ')' before string constant</span><span style="color:#710">&quot;</span></span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_intern_lit-define" class=""><small>#define</small> mrb_intern_lit
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_str_new_lit-define" class=""><small>#define</small> mrb_str_new_lit
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_locale_free-define" class=""><small>#define</small> mrb_locale_free
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_utf8_free-define" class=""><small>#define</small> mrb_utf8_free
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_utf8_from_locale-define" class=""><small>#define</small> mrb_utf8_from_locale
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_locale_from_utf8-define" class=""><small>#define</small> mrb_locale_from_utf8
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_gc_mark_value-define" class=""><small>#define</small> mrb_gc_mark_value
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_field_write_barrier_value-define" class=""><small>#define</small> mrb_field_write_barrier_value
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ISASCII-define" class=""><small>#define</small> ISASCII
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ISPRINT-define" class=""><small>#define</small> ISPRINT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ISSPACE-define" class=""><small>#define</small> ISSPACE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ISLOWER-define" class=""><small>#define</small> ISLOWER
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ISALPHA-define" class=""><small>#define</small> ISALPHA
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ISDIGIT-define" class=""><small>#define</small> ISDIGIT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ISXDIGIT-define" class=""><small>#define</small> ISXDIGIT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ISALNUM-define" class=""><small>#define</small> ISALNUM
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ISBLANK-define" class=""><small>#define</small> ISBLANK
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="TOUPPER-define" class=""><small>#define</small> TOUPPER
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="TOLOWER-define" class=""><small>#define</small> TOLOWER
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_RUNTIME_ERROR-define" class=""><small>#define</small> E_RUNTIME_ERROR
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>macros to get typical exception objects</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#606">note</span>:
++ those <span style="color:#036;font-weight:bold">E_</span>* macros requires mrb_state* variable named mrb.
++ exception objects obtained from those macros are local to mrb</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_TYPE_ERROR-define" class=""><small>#define</small> E_TYPE_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_ARGUMENT_ERROR-define" class=""><small>#define</small> E_ARGUMENT_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_INDEX_ERROR-define" class=""><small>#define</small> E_INDEX_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_RANGE_ERROR-define" class=""><small>#define</small> E_RANGE_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_NAME_ERROR-define" class=""><small>#define</small> E_NAME_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_NOMETHOD_ERROR-define" class=""><small>#define</small> E_NOMETHOD_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_SCRIPT_ERROR-define" class=""><small>#define</small> E_SCRIPT_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_SYNTAX_ERROR-define" class=""><small>#define</small> E_SYNTAX_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_LOCALJUMP_ERROR-define" class=""><small>#define</small> E_LOCALJUMP_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_REGEXP_ERROR-define" class=""><small>#define</small> E_REGEXP_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_SYSSTACK_ERROR-define" class=""><small>#define</small> E_SYSSTACK_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_NOTIMP_ERROR-define" class=""><small>#define</small> E_NOTIMP_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_FLOATDOMAIN_ERROR-define" class=""><small>#define</small> E_FLOATDOMAIN_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_KEY_ERROR-define" class=""><small>#define</small> E_KEY_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_int-define" class=""><small>#define</small> mrb_int
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_FIBER_ERROR-define" class=""><small>#define</small> E_FIBER_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_assert-define" class=""><small>#define</small> mrb_assert
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_assert_int_fit-define" class=""><small>#define</small> mrb_assert_int_fit
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_static_assert-define" class=""><small>#define</small> mrb_static_assert
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+  </dl>
+
+<div id="functions_details" class="method_details_list">
+  <h2>Function Details</h2>
+
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="mrb_define_class-function">
+  struct RClass * <strong>mrb_define_class</strong>(mrb_state * mrb, const char * name, struct RClass * super)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Defines a new class.</p>
+
+<p>If you&#39;re creating a gem it may look something like this:</p>
+
+<pre class="code c"><code class="c"><span style="color:#088;font-weight:bold">void</span> mrb_example_gem_init(mrb_state* mrb) {
+        <span style="color:#080;font-weight:bold">struct</span> RClass *example_class;
+        example_class = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Example_Class</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
+}
+
+<span style="color:#088;font-weight:bold">void</span> mrb_example_gem_final(mrb_state* mrb) {
+        <span style="color:#777">//free(TheAnimals);</span>
+}</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the defined class</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>super</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The new class parent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Reference to the newly defined class</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#mrb_define_class_under-function" title="mrb_define_class_under (function)">mrb_define_class_under</a></span></li>
+    
+  </ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_module-function">
+  struct RClass * <strong>mrb_define_module</strong>(mrb_state * , const char* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_singleton_class-function">
+  mrb_value <strong>mrb_singleton_class</strong>(mrb_state* , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_include_module-function">
+  void <strong>mrb_include_module</strong>(mrb_state* , struct RClass* , struct RClass* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_prepend_module-function">
+  void <strong>mrb_prepend_module</strong>(mrb_state* , struct RClass* , struct RClass* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_method-function">
+  void <strong>mrb_define_method</strong>(mrb_state * mrb, struct RClass * cla, const char * name, mrb_func_t func, mrb_aspec aspec)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Defines a global function in ruby.</p>
+
+<p>If you&#39;re creating a gem it may look something like this:</p>
+
+<pre class="code c"><code class="c">mrb_value example_method(mrb_state* mrb, mrb_value self)
+{
+     puts(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Executing example command!</span><span style="color:#710">&quot;</span></span>);
+     <span style="color:#080;font-weight:bold">return</span> self;
+}
+
+<span style="color:#088;font-weight:bold">void</span> mrb_example_gem_init(mrb_state* mrb)
+{
+      mrb_define_method(mrb, mrb-&gt;kernel_module, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span>, example_method, MRB_ARGS_NONE());
+}</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The MRuby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>cla</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The class pointer where the method will be defined.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>func</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The function pointer to the method definition.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>aspec</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The method parameters declaration.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_class_method-function">
+  void <strong>mrb_define_class_method</strong>(mrb_state * , struct RClass * , const char * , mrb_func_t , mrb_aspec )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_singleton_method-function">
+  void <strong>mrb_define_singleton_method</strong>(mrb_state* , struct RObject* , const char* , mrb_func_t , mrb_aspec )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_module_function-function">
+  void <strong>mrb_define_module_function</strong>(mrb_state* , struct RClass* , const char* , mrb_func_t , mrb_aspec )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_const-function">
+  void <strong>mrb_define_const</strong>(mrb_state* , struct RClass* , const char * name, mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_undef_method-function">
+  void <strong>mrb_undef_method</strong>(mrb_state* , struct RClass* , const char* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_undef_class_method-function">
+  void <strong>mrb_undef_class_method</strong>(mrb_state* , struct RClass* , const char* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_new-function">
+  mrb_value <strong>mrb_obj_new</strong>(mrb_state * mrb, struct RClass * c, mrb_int argc, const mrb_value * argv)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Initialize a new object instace of c class.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>c</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Reference to the class of the new object.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>argc</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Number of arguments in argv</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>argv</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of mrb_value to initialize the object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>The newly initialized object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_new_instance-function">
+  mrb_value <strong>mrb_class_new_instance</strong>(mrb_state * mrb, mrb_int argc, const mrb_value * argv, struct RClass * c)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#mrb_obj_new-function" title="mrb_obj_new (function)">mrb_obj_new</a></span></li>
+    
+  </ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_instance_new-function">
+  mrb_value <strong>mrb_instance_new</strong>(mrb_state * mrb, mrb_value cv)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_new-function">
+  struct RClass * <strong>mrb_class_new</strong>(mrb_state * mrb, struct RClass * super)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_module_new-function">
+  struct RClass * <strong>mrb_module_new</strong>(mrb_state * mrb)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_defined-function">
+  mrb_bool <strong>mrb_class_defined</strong>(mrb_state * mrb, const char * name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_get-function">
+  struct RClass * <strong>mrb_class_get</strong>(mrb_state * mrb, const char * name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_get_under-function">
+  struct RClass * <strong>mrb_class_get_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_module_get-function">
+  struct RClass * <strong>mrb_module_get</strong>(mrb_state * mrb, const char * name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_module_get_under-function">
+  struct RClass * <strong>mrb_module_get_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_notimplement_m-function">
+  mrb_value <strong>mrb_notimplement_m</strong>(mrb_state* , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_dup-function">
+  mrb_value <strong>mrb_obj_dup</strong>(mrb_state * mrb, mrb_value obj)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_to_integer-function">
+  mrb_value <strong>mrb_check_to_integer</strong>(mrb_state * mrb, mrb_value val, const char * method)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_respond_to-function">
+  mrb_bool <strong>mrb_obj_respond_to</strong>(mrb_state * mrb, struct RClass* c, mrb_sym mid)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_class_under-function">
+  struct RClass * <strong>mrb_define_class_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name, struct RClass * super)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Defines a new class under a given module</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>outer</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Reference to the module under which the new class will be defined</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the defined class</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>super</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The new class parent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Reference to the newly defined class</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#mrb_define_class-function" title="mrb_define_class (function)">mrb_define_class</a></span></li>
+    
+  </ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_module_under-function">
+  struct RClass * <strong>mrb_define_module_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_get_args-function">
+  mrb_int <strong>mrb_get_args</strong>(mrb_state * mrb, mrb_args_format format, ... )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve arguments from mrb_state.</p>
+
+<p>When applicable, implicit conversions (such as to_str, to_ary, to_hash) are
+applied to received arguments. Use it inside a function pointed by
+mrb_func_t.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current MRuby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>format</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>is a list of format specifiers see @ref mrb_args_format</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>...</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The passing variadic arguments must be a pointer of retrieving type.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>the number of arguments retrieved.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_funcall-function">
+  mrb_value <strong>mrb_funcall</strong>(mrb_state* , mrb_value , const char* , mrb_int , ... )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Call existing ruby functions.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_funcall_argv-function">
+  mrb_value <strong>mrb_funcall_argv</strong>(mrb_state* , mrb_value , mrb_sym , mrb_int , const mrb_value* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_funcall_with_block-function">
+  mrb_value <strong>mrb_funcall_with_block</strong>(mrb_state* , mrb_value , mrb_sym , mrb_int , const mrb_value* , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_intern_cstr-function">
+  mrb_sym <strong>mrb_intern_cstr</strong>(mrb_state* , const char* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_intern-function">
+  mrb_sym <strong>mrb_intern</strong>(mrb_state* , const char* , size_t )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_intern_static-function">
+  mrb_sym <strong>mrb_intern_static</strong>(mrb_state* , const char* , size_t )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_intern_str-function">
+  mrb_sym <strong>mrb_intern_str</strong>(mrb_state* , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_intern_cstr-function">
+  mrb_value <strong>mrb_check_intern_cstr</strong>(mrb_state* , const char* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_intern-function">
+  mrb_value <strong>mrb_check_intern</strong>(mrb_state* , const char* , size_t )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_intern_str-function">
+  mrb_value <strong>mrb_check_intern_str</strong>(mrb_state* , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_sym2str-function">
+  mrb_value <strong>mrb_sym2str</strong>(mrb_state* , mrb_sym )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_malloc-function">
+  void * <strong>mrb_malloc</strong>(mrb_state* , size_t )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>raise RuntimeError if no mem</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_calloc-function">
+  void * <strong>mrb_calloc</strong>(mrb_state* , size_t , size_t )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>ditto</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_realloc-function">
+  void * <strong>mrb_realloc</strong>(mrb_state* , void* , size_t )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>ditto</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_realloc_simple-function">
+  void * <strong>mrb_realloc_simple</strong>(mrb_state* , void* , size_t )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>return NULL if no memory available</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_malloc_simple-function">
+  void * <strong>mrb_malloc_simple</strong>(mrb_state* , size_t )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>return NULL if no memory available</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_alloc-function">
+  struct RBasic * <strong>mrb_obj_alloc</strong>(mrb_state* , enum mrb_vtype, struct RClass* )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>return NULL if no memory available</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_free-function">
+  void <strong>mrb_free</strong>(mrb_state* , void* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_str_new-function">
+  mrb_value <strong>mrb_str_new</strong>(mrb_state * mrb, const char * p, size_t len)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_str_new_cstr-function">
+  mrb_value <strong>mrb_str_new_cstr</strong>(mrb_state* , const char* )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Turns a C string into a Ruby string value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_str_new_static-function">
+  mrb_value <strong>mrb_str_new_static</strong>(mrb_state * mrb, const char * p, size_t len)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_open-function">
+  mrb_state* <strong>mrb_open</strong>(void)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Creates new mrb_state.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Pointer to the newly created mrb_state.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_open_allocf-function">
+  mrb_state* <strong>mrb_open_allocf</strong>(mrb_allocf f, void * ud)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Create new mrb_state with custom allocators.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>f</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Reference to the allocation function.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ud</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>User data will be passed to custom allocator f. If user data isn&#39;t
+required just pass NULL.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Pointer to the newly created mrb_state.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_open_core-function">
+  mrb_state* <strong>mrb_open_core</strong>(mrb_allocf f, void * ud)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Create new mrb_state with just the MRuby core</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>f</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Reference to the allocation function. Use mrb_default_allocf for the
+default</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ud</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>User data will be passed to custom allocator f. If user data isn&#39;t
+required just pass NULL.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Pointer to the newly created mrb_state.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_close-function">
+  void <strong>mrb_close</strong>(mrb_state * mrb)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Closes and frees a mrb_state.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Pointer to the mrb_state to be closed.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_default_allocf-function">
+  void* <strong>mrb_default_allocf</strong>(mrb_state* , void* , size_t , void* )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>The default allocation function.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_top_self-function">
+  mrb_value <strong>mrb_top_self</strong>(mrb_state * )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_run-function">
+  mrb_value <strong>mrb_run</strong>(mrb_state* , struct RProc* , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_toplevel_run-function">
+  mrb_value <strong>mrb_toplevel_run</strong>(mrb_state* , struct RProc* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_context_run-function">
+  mrb_value <strong>mrb_context_run</strong>(mrb_state* , struct RProc* , mrb_value , unsigned int)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_p-function">
+  void <strong>mrb_p</strong>(mrb_state* , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_id-function">
+  mrb_int <strong>mrb_obj_id</strong>(mrb_value obj)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_to_sym-function">
+  mrb_sym <strong>mrb_obj_to_sym</strong>(mrb_state * mrb, mrb_value name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_eq-function">
+  mrb_bool <strong>mrb_obj_eq</strong>(mrb_state* , mrb_value , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_equal-function">
+  mrb_bool <strong>mrb_obj_equal</strong>(mrb_state* , mrb_value , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_equal-function">
+  mrb_bool <strong>mrb_equal</strong>(mrb_state * mrb, mrb_value obj1, mrb_value obj2)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_convert_to_integer-function">
+  mrb_value <strong>mrb_convert_to_integer</strong>(mrb_state * mrb, mrb_value val, int base)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_Integer-function">
+  mrb_value <strong>mrb_Integer</strong>(mrb_state * mrb, mrb_value val)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_Float-function">
+  mrb_value <strong>mrb_Float</strong>(mrb_state * mrb, mrb_value val)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_inspect-function">
+  mrb_value <strong>mrb_inspect</strong>(mrb_state * mrb, mrb_value obj)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_eql-function">
+  mrb_bool <strong>mrb_eql</strong>(mrb_state * mrb, mrb_value obj1, mrb_value obj2)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_garbage_collect-function">
+  void <strong>mrb_garbage_collect</strong>(mrb_state* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_full_gc-function">
+  void <strong>mrb_full_gc</strong>(mrb_state* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_incremental_gc-function">
+  void <strong>mrb_incremental_gc</strong>(mrb_state * )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_gc_arena_save-function">
+  int <strong>mrb_gc_arena_save</strong>(mrb_state* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_gc_arena_restore-function">
+  void <strong>mrb_gc_arena_restore</strong>(mrb_state* , int )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_gc_mark-function">
+  void <strong>mrb_gc_mark</strong>(mrb_state* , struct RBasic* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_field_write_barrier-function">
+  void <strong>mrb_field_write_barrier</strong>(mrb_state * , struct RBasic* , struct RBasic* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_write_barrier-function">
+  void <strong>mrb_write_barrier</strong>(mrb_state * , struct RBasic* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_convert_type-function">
+  mrb_value <strong>mrb_check_convert_type</strong>(mrb_state * mrb, mrb_value val, enum mrb_vtype, type , const char * tname, const char * method)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_any_to_s-function">
+  mrb_value <strong>mrb_any_to_s</strong>(mrb_state * mrb, mrb_value obj)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_class-function">
+  struct RClass* <strong>mrb_obj_class</strong>(mrb_state * mrb, mrb_value obj)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_path-function">
+  mrb_value <strong>mrb_class_path</strong>(mrb_state * mrb, struct RClass * c)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_convert_type-function">
+  mrb_value <strong>mrb_convert_type</strong>(mrb_state * mrb, mrb_value val, enum mrb_vtype, type , const char * tname, const char * method)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_is_kind_of-function">
+  mrb_bool <strong>mrb_obj_is_kind_of</strong>(mrb_state * mrb, mrb_value obj, struct RClass * c)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_inspect-function">
+  mrb_value <strong>mrb_obj_inspect</strong>(mrb_state * mrb, mrb_value self)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_clone-function">
+  mrb_value <strong>mrb_obj_clone</strong>(mrb_state * mrb, mrb_value self)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_exc_new-function">
+  mrb_value <strong>mrb_exc_new</strong>(mrb_state * mrb, struct RClass * c, const char * ptr, size_t len)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_exc_raise-function">
+  mrb_noreturn <strong>mrb_exc_raise</strong>(mrb_state * mrb, mrb_value exc)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_raise-function">
+  mrb_noreturn <strong>mrb_raise</strong>(mrb_state * mrb, struct RClass * c, const char * msg)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_raisef-function">
+  mrb_noreturn <strong>mrb_raisef</strong>(mrb_state * mrb, struct RClass * c, const char * fmt, ... )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_name_error-function">
+  mrb_noreturn <strong>mrb_name_error</strong>(mrb_state * mrb, mrb_sym id, const char * fmt, ... )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_warn-function">
+  void <strong>mrb_warn</strong>(mrb_state * mrb, const char * fmt, ... )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_bug-function">
+  mrb_noreturn <strong>mrb_bug</strong>(mrb_state * mrb, const char * fmt, ... )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_print_backtrace-function">
+  void <strong>mrb_print_backtrace</strong>(mrb_state * mrb)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_print_error-function">
+  void <strong>mrb_print_error</strong>(mrb_state * mrb)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_yield-function">
+  mrb_value <strong>mrb_yield</strong>(mrb_state * mrb, mrb_value b, mrb_value arg)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_yield_argv-function">
+  mrb_value <strong>mrb_yield_argv</strong>(mrb_state * mrb, mrb_value b, mrb_int argc, const mrb_value * argv)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_yield_with_class-function">
+  mrb_value <strong>mrb_yield_with_class</strong>(mrb_state * mrb, mrb_value b, mrb_int argc, const mrb_value * argv, mrb_value self, struct RClass * c)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_gc_protect-function">
+  void <strong>mrb_gc_protect</strong>(mrb_state * mrb, mrb_value obj)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>mrb_gc_protect() leaves the object in the arena</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_gc_register-function">
+  void <strong>mrb_gc_register</strong>(mrb_state * mrb, mrb_value obj)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>mrb_gc_register() keeps the object from GC.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_gc_unregister-function">
+  void <strong>mrb_gc_unregister</strong>(mrb_state * mrb, mrb_value obj)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>mrb_gc_unregister() removes the object from GC root.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_to_int-function">
+  mrb_value <strong>mrb_to_int</strong>(mrb_state * mrb, mrb_value val)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_type-function">
+  void <strong>mrb_check_type</strong>(mrb_state * mrb, mrb_value x, enum mrb_vtype, t )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_alias-function">
+  void <strong>mrb_define_alias</strong>(mrb_state * mrb, struct RClass * klass, const char * name1, const char * name2)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_global_const-function">
+  void <strong>mrb_define_global_const</strong>(mrb_state * mrb, const char * name, mrb_value val)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_attr_get-function">
+  mrb_value <strong>mrb_attr_get</strong>(mrb_state * mrb, mrb_value obj, mrb_sym id)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_respond_to-function">
+  mrb_bool <strong>mrb_respond_to</strong>(mrb_state * mrb, mrb_value obj, mrb_sym mid)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_is_instance_of-function">
+  mrb_bool <strong>mrb_obj_is_instance_of</strong>(mrb_state * mrb, mrb_value obj, struct RClass* c)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_fiber_resume-function">
+  mrb_value <strong>mrb_fiber_resume</strong>(mrb_state * mrb, mrb_value fib, mrb_int argc, const mrb_value * argv)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>fiber functions (you need to link mruby-fiber mrbgem to use)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_fiber_yield-function">
+  mrb_value <strong>mrb_fiber_yield</strong>(mrb_state * mrb, mrb_int argc, const mrb_value * argv)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_pool_open-function">
+  struct mrb_pool* <strong>mrb_pool_open</strong>(mrb_state* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_pool_close-function">
+  void <strong>mrb_pool_close</strong>(struct mrb_pool* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_pool_alloc-function">
+  void* <strong>mrb_pool_alloc</strong>(struct mrb_pool* , size_t )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_pool_realloc-function">
+  void* <strong>mrb_pool_realloc</strong>(struct mrb_pool* , void* , size_t oldlen, size_t newlen)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_pool_can_realloc-function">
+  mrb_bool <strong>mrb_pool_can_realloc</strong>(struct mrb_pool* , void* , size_t )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_alloca-function">
+  void* <strong>mrb_alloca</strong>(mrb_state * mrb, size_t )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_state_atexit-function">
+  void <strong>mrb_state_atexit</strong>(mrb_state * mrb, mrb_atexit_func func)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_show_version-function">
+  void <strong>mrb_show_version</strong>(mrb_state * mrb)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_show_copyright-function">
+  void <strong>mrb_show_copyright</strong>(mrb_state * mrb)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_format-function">
+  mrb_value <strong>mrb_format</strong>(mrb_state * mrb, const char * format, ... )
+
+  
+</h3>
+
+</div>
+
+  
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:20 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

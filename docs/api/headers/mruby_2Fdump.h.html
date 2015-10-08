@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Header: mruby/dump.h
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!headers/mruby_2Fdump.h.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (m)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../headers.html" title="headers (headersroot)">headers</a></span></span>
+     &raquo; 
+    <span class="title">mruby/dump.h</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="../header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="../function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Header: mruby/dump.h</h1>
+Included heaers
+
+  <h2>
+    Function Summary
+    <small><a href="#" class="summary_toggle">collapse</a></small>
+  </h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_irep_file-function" title="mrb_load_irep_file">mrb_value <strong>mrb_load_irep_file</strong>(mrb_state*, FILE*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_irep_file_cxt-function" title="mrb_load_irep_file_cxt">mrb_value <strong>mrb_load_irep_file_cxt</strong>(mrb_state*, FILE*, mrbc_context*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_read_irep-function" title="mrb_read_irep">mrb_irep * <strong>mrb_read_irep</strong>(mrb_state*, const uint8_t*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <h2>Define Summary</h2>
+  <dl class="constants">
+    
+      <dt id="MRUBY_DUMP_H-define" class=""><small>#define</small> MRUBY_DUMP_H
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="DUMP_DEBUG_INFO-define" class=""><small>#define</small> DUMP_DEBUG_INFO
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Dumping compiled mruby script.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="DUMP_ENDIAN_BIG-define" class=""><small>#define</small> DUMP_ENDIAN_BIG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="DUMP_ENDIAN_LIL-define" class=""><small>#define</small> DUMP_ENDIAN_LIL
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="DUMP_ENDIAN_NAT-define" class=""><small>#define</small> DUMP_ENDIAN_NAT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="DUMP_ENDIAN_MASK-define" class=""><small>#define</small> DUMP_ENDIAN_MASK
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_OK-define" class=""><small>#define</small> MRB_DUMP_OK
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>dump/load error code</p>
+
+<p>NOTE: MRB_DUMP_GENERAL_FAILURE is caused by unspecified issues like malloc
+failed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_GENERAL_FAILURE-define" class=""><small>#define</small> MRB_DUMP_GENERAL_FAILURE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_WRITE_FAULT-define" class=""><small>#define</small> MRB_DUMP_WRITE_FAULT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_READ_FAULT-define" class=""><small>#define</small> MRB_DUMP_READ_FAULT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_CRC_ERROR-define" class=""><small>#define</small> MRB_DUMP_CRC_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_INVALID_FILE_HEADER-define" class=""><small>#define</small> MRB_DUMP_INVALID_FILE_HEADER
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_INVALID_IREP-define" class=""><small>#define</small> MRB_DUMP_INVALID_IREP
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_INVALID_ARGUMENT-define" class=""><small>#define</small> MRB_DUMP_INVALID_ARGUMENT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_NULL_SYM_LEN-define" class=""><small>#define</small> MRB_DUMP_NULL_SYM_LEN
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>null symbol length</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_BINARY_IDENT-define" class=""><small>#define</small> RITE_BINARY_IDENT
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Rite Binary File header</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_BINARY_IDENT_LIL-define" class=""><small>#define</small> RITE_BINARY_IDENT_LIL
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_BINARY_FORMAT_VER-define" class=""><small>#define</small> RITE_BINARY_FORMAT_VER
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_COMPILER_NAME-define" class=""><small>#define</small> RITE_COMPILER_NAME
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_COMPILER_VERSION-define" class=""><small>#define</small> RITE_COMPILER_VERSION
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_VM_VER-define" class=""><small>#define</small> RITE_VM_VER
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_BINARY_EOF-define" class=""><small>#define</small> RITE_BINARY_EOF
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_SECTION_LINENO_IDENT-define" class=""><small>#define</small> RITE_SECTION_LINENO_IDENT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_SECTION_DEBUG_IDENT-define" class=""><small>#define</small> RITE_SECTION_DEBUG_IDENT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_DEFAULT_STR_LEN-define" class=""><small>#define</small> MRB_DUMP_DEFAULT_STR_LEN
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_DUMP_ALIGNMENT-define" class=""><small>#define</small> MRB_DUMP_ALIGNMENT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_SECTION_HEADER-define" class=""><small>#define</small> RITE_SECTION_HEADER
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>section header</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_LV_NULL_MARK-define" class=""><small>#define</small> RITE_LV_NULL_MARK
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+  </dl>
+
+<div id="functions_details" class="method_details_list">
+  <h2>Function Details</h2>
+
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="mrb_load_irep_file-function">
+  mrb_value <strong>mrb_load_irep_file</strong>(mrb_state* , FILE* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_load_irep_file_cxt-function">
+  mrb_value <strong>mrb_load_irep_file_cxt</strong>(mrb_state* , FILE* , mrbc_context* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_read_irep-function">
+  mrb_irep * <strong>mrb_read_irep</strong>(mrb_state* , const uint8_t* )
+
+  
+</h3>
+
+</div>
+
+  
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:20 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

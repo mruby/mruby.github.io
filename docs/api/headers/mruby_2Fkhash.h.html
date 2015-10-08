@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Header: mruby/khash.h
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!headers/mruby_2Fkhash.h.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (m)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../headers.html" title="headers (headersroot)">headers</a></span></span>
+     &raquo; 
+    <span class="title">mruby/khash.h</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="../header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="../function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Header: mruby/khash.h</h1>
+<h2>Overview</h2>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>khash definitions used in mruby&#39;s hash table.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>Included heaers
+
+
+  <h2>Define Summary</h2>
+  <dl class="constants">
+    
+      <dt id="MRUBY_KHASH_H-define" class=""><small>#define</small> MRUBY_KHASH_H
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="KHASH_DEFAULT_SIZE-define" class=""><small>#define</small> KHASH_DEFAULT_SIZE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="KHASH_MIN_SIZE-define" class=""><small>#define</small> KHASH_MIN_SIZE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="UPPER_BOUND-define" class=""><small>#define</small> UPPER_BOUND
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="__ac_isempty-define" class=""><small>#define</small> __ac_isempty
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="__ac_isdel-define" class=""><small>#define</small> __ac_isdel
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="__ac_iseither-define" class=""><small>#define</small> __ac_iseither
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="khash_power2-define" class=""><small>#define</small> khash_power2
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="khash_mask-define" class=""><small>#define</small> khash_mask
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="khash_upper_bound-define" class=""><small>#define</small> khash_upper_bound
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="KHASH_DECLARE-define" class=""><small>#define</small> KHASH_DECLARE
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>declare struct kh_xxx and kh_xxx_funcs</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#606">name</span>: hash name
+<span style="color:#606">khkey_t</span>: key data type
+<span style="color:#606">khval_t</span>: value data type
+<span style="color:#606">kh_is_map</span>: (<span style="color:#00D">0</span>: hash set / <span style="color:#00D">1</span>: hash map)</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="KHASH_DEFINE-define" class=""><small>#define</small> KHASH_DEFINE
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>define kh_xxx_funcs</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#606">name</span>: hash name
+<span style="color:#606">khkey_t</span>: key data type
+<span style="color:#606">khval_t</span>: value data type
+<span style="color:#606">kh_is_map</span>: (<span style="color:#00D">0</span>: hash set / <span style="color:#00D">1</span>: hash map)
+<span style="color:#606">__hash_func</span>: hash function
+<span style="color:#606">__hash_equal</span>: hash comparation function</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="khash_t-define" class=""><small>#define</small> khash_t
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_init_size-define" class=""><small>#define</small> kh_init_size
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_init-define" class=""><small>#define</small> kh_init
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_destroy-define" class=""><small>#define</small> kh_destroy
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_clear-define" class=""><small>#define</small> kh_clear
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_resize-define" class=""><small>#define</small> kh_resize
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_put-define" class=""><small>#define</small> kh_put
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_put2-define" class=""><small>#define</small> kh_put2
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_get-define" class=""><small>#define</small> kh_get
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_del-define" class=""><small>#define</small> kh_del
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_copy-define" class=""><small>#define</small> kh_copy
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_exist-define" class=""><small>#define</small> kh_exist
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_key-define" class=""><small>#define</small> kh_key
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_val-define" class=""><small>#define</small> kh_val
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_value-define" class=""><small>#define</small> kh_value
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_begin-define" class=""><small>#define</small> kh_begin
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_end-define" class=""><small>#define</small> kh_end
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_size-define" class=""><small>#define</small> kh_size
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_n_buckets-define" class=""><small>#define</small> kh_n_buckets
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_int_hash_func-define" class=""><small>#define</small> kh_int_hash_func
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_int_hash_equal-define" class=""><small>#define</small> kh_int_hash_equal
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_int64_hash_func-define" class=""><small>#define</small> kh_int64_hash_func
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_int64_hash_equal-define" class=""><small>#define</small> kh_int64_hash_equal
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_str_hash_func-define" class=""><small>#define</small> kh_str_hash_func
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_str_hash_equal-define" class=""><small>#define</small> kh_str_hash_equal
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+  </dl>
+
+<div id="functions_details" class="method_details_list">
+  <h2>Function Details</h2>
+
+  
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:20 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,1059 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Header: mruby/array.h
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!headers/mruby_2Farray.h.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (m)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../headers.html" title="headers (headersroot)">headers</a></span></span>
+     &raquo; 
+    <span class="title">mruby/array.h</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="../header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="../function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Header: mruby/array.h</h1>
+<h2>Overview</h2>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Array class</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>Included heaers
+
+  <h2>
+    Function Summary
+    <small><a href="#" class="summary_toggle">collapse</a></small>
+  </h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_modify-function" title="mrb_ary_modify">void <strong>mrb_ary_modify</strong>(mrb_state*, struct RArray*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_new_capa-function" title="mrb_ary_new_capa">mrb_value <strong>mrb_ary_new_capa</strong>(mrb_state*, mrb_int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_new-function" title="mrb_ary_new">mrb_value <strong>mrb_ary_new</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes a new array.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_new_from_values-function" title="mrb_ary_new_from_values">mrb_value <strong>mrb_ary_new_from_values</strong>(mrb_state *, mrb_int, const mrb_value *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_assoc_new-function" title="mrb_assoc_new">mrb_value <strong>mrb_assoc_new</strong>(mrb_state *, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_concat-function" title="mrb_ary_concat">void <strong>mrb_ary_concat</strong>(mrb_state*, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_splat-function" title="mrb_ary_splat">mrb_value <strong>mrb_ary_splat</strong>(mrb_state*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_push-function" title="mrb_ary_push">void <strong>mrb_ary_push</strong>(mrb_state *, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Pushes value into array.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_pop-function" title="mrb_ary_pop">mrb_value <strong>mrb_ary_pop</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Pops the last element from the array.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_ref-function" title="mrb_ary_ref">mrb_value <strong>mrb_ary_ref</strong>(mrb_state *, mrb_value, mrb_int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a reference to an element of the array on the given index.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_set-function" title="mrb_ary_set">void <strong>mrb_ary_set</strong>(mrb_state *, mrb_value, mrb_int, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets a value on an array at the given index.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_replace-function" title="mrb_ary_replace">void <strong>mrb_ary_replace</strong>(mrb_state *, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_array_type-function" title="mrb_check_array_type">mrb_value <strong>mrb_check_array_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_unshift-function" title="mrb_ary_unshift">mrb_value <strong>mrb_ary_unshift</strong>(mrb_state *, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_entry-function" title="mrb_ary_entry">mrb_value <strong>mrb_ary_entry</strong>(mrb_value, mrb_int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_shift-function" title="mrb_ary_shift">mrb_value <strong>mrb_ary_shift</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_clear-function" title="mrb_ary_clear">mrb_value <strong>mrb_ary_clear</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_join-function" title="mrb_ary_join">mrb_value <strong>mrb_ary_join</strong>(mrb_state *, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_resize-function" title="mrb_ary_resize">mrb_value <strong>mrb_ary_resize</strong>(mrb_state *, mrb_value, mrb_int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <h2>Define Summary</h2>
+  <dl class="constants">
+    
+      <dt id="MRUBY_ARRAY_H-define" class=""><small>#define</small> MRUBY_ARRAY_H
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_ary_ptr-define" class=""><small>#define</small> mrb_ary_ptr
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_ary_value-define" class=""><small>#define</small> mrb_ary_value
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RARRAY-define" class=""><small>#define</small> RARRAY
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RARRAY_LEN-define" class=""><small>#define</small> RARRAY_LEN
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RARRAY_PTR-define" class=""><small>#define</small> RARRAY_PTR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_ARY_SHARED-define" class=""><small>#define</small> MRB_ARY_SHARED
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ARY_SHARED_P-define" class=""><small>#define</small> ARY_SHARED_P
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ARY_SET_SHARED_FLAG-define" class=""><small>#define</small> ARY_SET_SHARED_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="ARY_UNSET_SHARED_FLAG-define" class=""><small>#define</small> ARY_UNSET_SHARED_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+  </dl>
+
+<div id="functions_details" class="method_details_list">
+  <h2>Function Details</h2>
+
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="mrb_ary_modify-function">
+  void <strong>mrb_ary_modify</strong>(mrb_state* , struct RArray* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_new_capa-function">
+  mrb_value <strong>mrb_ary_new_capa</strong>(mrb_state* , mrb_int )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_new-function">
+  mrb_value <strong>mrb_ary_new</strong>(mrb_state * mrb)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Initializes a new array.</p>
+
+<p>Equivalent to:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">Array</span>.new
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>The initialized array</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_new_from_values-function">
+  mrb_value <strong>mrb_ary_new_from_values</strong>(mrb_state * mrb, mrb_int size, const mrb_value * vals)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_assoc_new-function">
+  mrb_value <strong>mrb_assoc_new</strong>(mrb_state * mrb, mrb_value car, mrb_value cdr)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_concat-function">
+  void <strong>mrb_ary_concat</strong>(mrb_state* , mrb_value , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_splat-function">
+  mrb_value <strong>mrb_ary_splat</strong>(mrb_state* , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_push-function">
+  void <strong>mrb_ary_push</strong>(mrb_state * mrb, mrb_value array, mrb_value value)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Pushes value into array.</p>
+
+<p>Equivalent to:</p>
+
+<pre class="code ruby"><code class="ruby">ary &lt;&lt; value
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ary</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The array in which the value will be pushed</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value to be pushed into array</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_pop-function">
+  mrb_value <strong>mrb_ary_pop</strong>(mrb_state * mrb, mrb_value ary)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Pops the last element from the array.</p>
+
+<p>Equivalent to:</p>
+
+<pre class="code ruby"><code class="ruby">ary.pop
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ary</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The array from which the value will be poped.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>The poped value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_ref-function">
+  mrb_value <strong>mrb_ary_ref</strong>(mrb_state * mrb, mrb_value ary, mrb_int n)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a reference to an element of the array on the given index.</p>
+
+<p>Equivalent to:</p>
+
+<pre class="code ruby"><code class="ruby">ary[n]
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ary</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The target array.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>n</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The array index being referenced</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>The referenced value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_set-function">
+  void <strong>mrb_ary_set</strong>(mrb_state * mrb, mrb_value ary, mrb_int n, mrb_value val)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Sets a value on an array at the given index</p>
+
+<p>Equivalent to:</p>
+
+<pre class="code ruby"><code class="ruby">ary[n] = val
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ary</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The target array.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>n</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The array index being referenced.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>val</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value being setted.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_replace-function">
+  void <strong>mrb_ary_replace</strong>(mrb_state * mrb, mrb_value a, mrb_value b)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_array_type-function">
+  mrb_value <strong>mrb_check_array_type</strong>(mrb_state * mrb, mrb_value self)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_unshift-function">
+  mrb_value <strong>mrb_ary_unshift</strong>(mrb_state * mrb, mrb_value self, mrb_value item)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_entry-function">
+  mrb_value <strong>mrb_ary_entry</strong>(mrb_value ary, mrb_int offset)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_shift-function">
+  mrb_value <strong>mrb_ary_shift</strong>(mrb_state * mrb, mrb_value self)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_clear-function">
+  mrb_value <strong>mrb_ary_clear</strong>(mrb_state * mrb, mrb_value self)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_join-function">
+  mrb_value <strong>mrb_ary_join</strong>(mrb_state * mrb, mrb_value ary, mrb_value sep)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_resize-function">
+  mrb_value <strong>mrb_ary_resize</strong>(mrb_state * mrb, mrb_value ary, mrb_int len)
+
+  
+</h3>
+
+</div>
+
+  
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:20 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

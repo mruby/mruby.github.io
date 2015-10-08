@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: debugger
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.debugger.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: debugger</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>How to Use the mruby Debugger</h1>
+
+<p>copyright (c) 2014 Specified Non-Profit Corporation mruby Forum</p>
+
+<h2>1. Summary</h2>
+
+<p>This file documents the mruby debugger (&#39;mrdb&#39;) methods.</p>
+
+<h2>2 Debugging with mrdb</h2>
+
+<h2>2.1 Building mrdb</h2>
+
+<p>The trunk of the mruby source tree, with the most recent mrdb, can be checked out with the following command:</p>
+
+<pre class="code bash"><code class="bash">$ git clone https://github.com/mruby/mruby.git
+</code></pre>
+
+<p>To run the <code>make</code> command:</p>
+
+<pre class="code bash"><code class="bash">$ cd mruby
+$ make
+</code></pre>
+
+<p>By default, the <code>make</code> command will install the debugger files into mruby/bin.</p>
+
+<p>You can add the path for mrdb on your host environment with the following command:</p>
+
+<pre class="code bash"><code class="bash">$ echo &quot;export PATH=\$PATH:MRUBY_ROOT/bin&quot; &gt;&gt; ~/.bashrc
+$ source ~/.bashrc
+</code></pre>
+
+<p><code>*MRUBY_ROOT</code> is the directory in which mruby source code will be installed.</p>
+
+<p>To confirm mrdb was installed properly, run mrdb with the <code>--version</code> option:</p>
+
+<pre class="code bash"><code class="bash">$ mrdb --version
+mruby 1.1.0 (2014-11-19)
+</code></pre>
+
+<h2>2.2 Basic Operation</h2>
+
+<h3>2.2.1 Debugging mruby Script Files (rb file) with mrdb</h3>
+
+<p>To invoke the mruby debugger, just type <code>mrdb</code>.</p>
+
+<p>To specify the script file:</p>
+
+<pre class="code bash"><code class="bash">$ mrdb [option] file name
+</code></pre>
+
+<p>For example: Debugging sample.rb</p>
+
+<pre class="code bash"><code class="bash">$ mrdb sample.rb
+</code></pre>
+
+<p>You can execute the shell commands listed below:</p>
+
+<table><thead>
+<tr>
+<th align="center">command</th>
+<th align="left">description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="center">run</td>
+<td align="left">execute programs</td>
+</tr>
+<tr>
+<td align="center">step</td>
+<td align="left">execute stepping</td>
+</tr>
+<tr>
+<td align="center">continue</td>
+<td align="left">execute continuing program</td>
+</tr>
+<tr>
+<td align="center">break</td>
+<td align="left">configure the breaking point</td>
+</tr>
+<tr>
+<td align="center">delete</td>
+<td align="left">deleting the breaking points</td>
+</tr>
+<tr>
+<td align="center">disable</td>
+<td align="left">disabling the breaking points</td>
+</tr>
+<tr>
+<td align="center">enable</td>
+<td align="left">enabling the breaking points</td>
+</tr>
+<tr>
+<td align="center">info breakpoints</td>
+<td align="left">showing list of the breaking points</td>
+</tr>
+<tr>
+<td align="center">print</td>
+<td align="left">evaluating and printing the values of the mruby expressions in the script</td>
+</tr>
+<tr>
+<td align="center">list</td>
+<td align="left">displaying the source cords</td>
+</tr>
+<tr>
+<td align="center">help</td>
+<td align="left">showing help</td>
+</tr>
+<tr>
+<td align="center">quit</td>
+<td align="left">terminating the mruby debugger</td>
+</tr>
+</tbody></table>
+
+<h3>2.2.2 Debugging mruby Binary Files (mrb file) with mrdb</h3>
+
+<p>You can debug the mruby binary files.</p>
+
+<h4>2.2.2.1 Debugging the binary files</h4>
+
+<ul>
+<li>notice
+To debug mruby binary files, you need to compile mruby files with option <code>-g</code>.</li>
+</ul>
+
+<pre class="code bash"><code class="bash">$ mrbc -g sample.rb
+</code></pre>
+
+<p>You can debug the mruby binary files with following command and the option <code>-b</code>.</p>
+
+<pre class="code bash"><code class="bash">$ mrdb -b sample.mrb
+</code></pre>
+
+<p>Then you can execute all debugger shell commands.</p>
+
+<h4>Break Command</h4>
+
+<p>You can use any breakpoint to stop the program by specifying the line number and method name.
+The breakpoint list will be displayed after you have set the breakpoint successfully.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">break</span> [<span style="color:#606">file</span>:]linenum
+b [<span style="color:#606">file</span>:]linenum
+<span style="color:#080;font-weight:bold">break</span> [<span style="color:#606">class</span>:]method
+b [<span style="color:#606">class</span>:]method
+</code></pre>
+
+<p>The breakpoint will be ordered in serial from 1.
+The number, which was given to the deleted breakpoint, will never be given to another breakpoint again.</p>
+
+<p>You can give multiple breakpoints to specified the line number and method.
+Be ware that breakpoint command will not check the validity of the class name and method name.</p>
+
+<p>You can get the current breakpoint information by the following options.</p>
+
+<p>breakpoint breakpoint number : file name. line number</p>
+
+<p>breakpoint breakpoint number : [class name,] method name</p>
+
+<h4>Continue Command</h4>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">continue [<span style="color:#036;font-weight:bold">N</span>]
+c [<span style="color:#036;font-weight:bold">N</span>]
+</code></pre>
+
+<p>N: the next breakpoint number</p>
+
+<p>When resuming the program, it will stop at breakpoint N (N-1 breakpoint will be ignored).</p>
+
+<p>When you run the <code>continue</code> command without specifying N, the program will be stopped at the next breakpoint.</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">(foo.rb:<span style="color:#00D">1</span>) continue <span style="color:#00D">3</span>
+</code></pre>
+
+<p>This will resume the program and stop it at the third breakpoint.</p>
+
+<h4>Delete Command</h4>
+
+<p>This will delete the specified breakpoint.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">delete [breakpoint-no]
+d [breakpoint-no]
+</code></pre>
+
+<p>breakpoint-no: breakpoint number</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">(foo.rb:<span style="color:#00D">1</span>) delete
+</code></pre>
+
+<p>This will delete all of the breakpoints.</p>
+
+<pre class="code ruby"><code class="ruby">(foo.rb:<span style="color:#00D">1</span>) delete <span style="color:#00D">1</span> <span style="color:#00D">3</span>
+</code></pre>
+
+<p>This will delete the breakpoint at 1 and 3.</p>
+
+<h4>Disable Command</h4>
+
+<p>This will disable the specified breakpoint.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">disable [breakpoint-no]
+dis [breakpoint-no]
+</code></pre>
+
+<p>reappointing: breakpoint number</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">(foo.rb:<span style="color:#00D">1</span>) disable
+</code></pre>
+
+<p>Use <code>disable</code> if you would like to disable all of the breakpoints.</p>
+
+<pre class="code ruby"><code class="ruby">(foo.rb:<span style="color:#00D">1</span>) disable <span style="color:#00D">1</span> <span style="color:#00D">3</span>
+</code></pre>
+
+<p>This will disable the breakpoints at 1 and 3.</p>
+
+<h4>Enable Command</h4>
+
+<p>This will enable the specified breakpoints.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">enable [breakpoint-no]
+e [breakpoint-no]
+</code></pre>
+
+<p>breakpoint-no: breakpoint number</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">(foo.rb:<span style="color:#00D">1</span>) enable
+</code></pre>
+
+<p>Enabling all breakpoints</p>
+
+<pre class="code ruby"><code class="ruby">(foo.rb:<span style="color:#00D">1</span>) enable <span style="color:#00D">1</span> <span style="color:#00D">3</span>
+</code></pre>
+
+<p>Enabling the breakpoint 1 and 3</p>
+
+<h4>eval command</h4>
+
+<p>Evaluating the string as source code and printing the value.</p>
+
+<p>Same as print command, please see print command.</p>
+
+<h4>help command</h4>
+
+<p>Displaying the help message.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">help [command]
+h [command]
+</code></pre>
+
+<p>Typing <code>help</code> without any options will display the command list.</p>
+
+<h4>Info Breakpoints Command</h4>
+
+<p>Displaying the specified breakpoint information.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">info breakpoints [breakpoint-no]
+i b [breakpoint-no]
+</code></pre>
+
+<p>breakpoint-no: breakpoint number</p>
+
+<p>Typing &quot;info breakpoints&quot; without ant option will display all breakpoint information.
+Example:</p>
+
+<pre class="code ruby"><code class="ruby">(sample.rb:<span style="color:#00D">1</span>) info breakpoints
+<span style="color:#036;font-weight:bold">Num</span>     <span style="color:#036;font-weight:bold">Type</span>           <span style="color:#036;font-weight:bold">Enb</span> <span style="color:#036;font-weight:bold">What</span>  
+<span style="color:#00D">1</span>       breakpoint     y   at sample.rb:<span style="color:#00D">3</span>                      -&gt; file name,line number
+<span style="color:#00D">2</span>       breakpoint     n   <span style="color:#080;font-weight:bold">in</span> <span style="color:#606">Sample_class</span>:sample_class_method -&gt; [<span style="color:#606">class</span>:]method name
+<span style="color:#00D">3</span>       breakpoint     y   <span style="color:#080;font-weight:bold">in</span> sample_global_method
+</code></pre>
+
+<p>Displaying the specified breakpoint number:</p>
+
+<pre class="code ruby"><code class="ruby">(foo.rb:<span style="color:#00D">1</span>) info breakpoints <span style="color:#00D">1</span> <span style="color:#00D">3</span>
+<span style="color:#036;font-weight:bold">Num</span>     <span style="color:#036;font-weight:bold">Type</span>           <span style="color:#036;font-weight:bold">Enb</span> <span style="color:#036;font-weight:bold">What</span>  
+<span style="color:#00D">1</span>       breakpoint     y   at sample.rb:<span style="color:#00D">3</span>  
+<span style="color:#00D">3</span>       breakpoint     y   <span style="color:#080;font-weight:bold">in</span> sample_global_method
+</code></pre>
+
+<h4>List Command</h4>
+
+<p>To display the code of the source file.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">list [<span style="color:#606">filename</span>:]first[,last]
+l [filename]<span style="color:#A60">:first</span>[,last]
+</code></pre>
+
+<p>first: the opening row number
+last : the closing row number</p>
+
+<p>When you specify the <code>first</code>, but not the <code>last</code> option, you will receive 10 rows.
+When you do not specify both the <code>first</code> and <code>last</code> options, you will receive the next 10 rows.</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">Specifying</span> file name <span style="color:#080;font-weight:bold">and</span> first row number
+sample.rb:<span style="color:#00D">1</span>) list sample2.rb:<span style="color:#00D">5</span>
+</code></pre>
+
+<p>Specifying the file name and the first and last row number:</p>
+
+<pre class="code ruby"><code class="ruby">(sample.rb:<span style="color:#00D">1</span>) list sample2.rb:<span style="color:#00D">6</span>,<span style="color:#00D">7</span>
+</code></pre>
+
+<h4>Print Command</h4>
+
+<p>Evaluating the string as source code and printing the value.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">print [expr]
+p [expr]
+</code></pre>
+
+<p>expr: expression</p>
+
+<p>The expression is mandatory.
+The displayed expressions will be serially ordered from 1.
+If an exception occurs, the exception information will be displayed and the debugging will be continued.</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">(sample.rb:<span style="color:#00D">1</span>) print <span style="color:#00D">1</span>+<span style="color:#00D">2</span>
+<span style="color:#d70">$1</span> = <span style="color:#00D">3</span>
+(sample.rb:<span style="color:#00D">1</span>) print <span style="color:#069">self</span>
+<span style="color:#d70">$2</span> = main
+</code></pre>
+
+<p>Below is the case of the exception:</p>
+
+<pre class="code ruby"><code class="ruby">(sample.rb:<span style="color:#00D">1</span>) print (<span style="color:#00D">1</span>+<span style="color:#00D">2</span>
+<span style="color:#d70">$1</span> =  <span style="color:#606">SyntaxError</span>: line <span style="color:#00D">1</span>: syntax error, unexpected <span style="color:#d70">$end</span>, expecting <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">)</span><span style="color:#710">'</span></span>
+</code></pre>
+
+<h4>Quit Command</h4>
+
+<p>Quitting the debugger.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">quit
+q
+</code></pre>
+
+<h4>Run Command</h4>
+
+<p>Running the program and stopping at the first breakpoint.</p>
+
+<p>Usage:</p>
+
+<pre class="code ruby"><code class="ruby">run
+r
+</code></pre>
+
+<h4>Step Command</h4>
+
+<p>This will run the program step by step.
+When the method and the block are invoked, the program will be stop at the first row.
+The program, which is developed in C, will be ignored.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:17 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

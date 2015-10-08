@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.README.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><p><a href="https://travis-ci.org/mruby/mruby"><img src="https://travis-ci.org/mruby/mruby.svg?branch=master" alt="Build Status"></a></p>
+
+<h2>What is mruby</h2>
+
+<p>mruby is the lightweight implementation of the Ruby language complying to (part
+of) the <a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=59579">ISO standard</a>. Its syntax is Ruby 1.9 compatible.</p>
+
+<p>mruby can be linked and embedded within your application.  We provide the
+interpreter program &quot;mruby&quot; and the interactive mruby shell &quot;mirb&quot; as examples.
+You can also compile Ruby programs into compiled byte code using the mruby
+compiler &quot;mrbc&quot;.  All those tools reside in the &quot;bin&quot; directory.  &quot;mrbc&quot; is
+also able to generate compiled byte code in a C source file, see the &quot;mrbtest&quot;
+program under the &quot;test&quot; directory for an example.</p>
+
+<p>This achievement was sponsored by the Regional Innovation Creation R&amp;D Programs
+of the Ministry of Economy, Trade and Industry of Japan.</p>
+
+<h2>How to get mruby</h2>
+
+<p>The stable version 1.1.0 of mruby can be downloaded via the following URL: <a href="https://github.com/mruby/mruby/archive/1.1.0.zip">https://github.com/mruby/mruby/archive/1.1.0.zip</a></p>
+
+<p>The latest development version of mruby can be downloaded via the following URL: <a href="https://github.com/mruby/mruby/zipball/master">https://github.com/mruby/mruby/zipball/master</a></p>
+
+<p>The trunk of the mruby source tree can be checked out with the
+following command:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> git clone <span style="color:#606">https</span>:<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span>github.com/mruby/mruby.git
+</code></pre>
+
+<h2>mruby home-page</h2>
+
+<p>The URL of the mruby home-page is: <a href="http://www.mruby.org">http://www.mruby.org</a>.</p>
+
+<h2>Mailing list</h2>
+
+<p>We don&#39;t have mailing list, but you can use <a href="https://github.com/mruby/mruby">GitHub issues</a>.</p>
+
+<h2>How to compile and install (mruby and gems)</h2>
+
+<p>See the <a href="doc/compile/README.md">doc/compile/README.md</a> file.</p>
+
+<h2>Running Tests</h2>
+
+<p>To run the tests, execute the following from the project&#39;s root directory.</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> make test
+</code></pre>
+
+<p>Or</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> ruby ./minirake test
+</code></pre>
+
+<h2>How to customize mruby (mrbgems)</h2>
+
+<p>mruby contains a package manager called <em>mrbgems</em>. To create extensions
+in C and/or Ruby you should create a <em>GEM</em>. For a documentation of how to
+use mrbgems consult the file <a href="doc/mrbgems/README.md">doc/mrbgems/README.md</a>. For example code of
+how to use mrbgems look into the folder <em>examples/mrbgems/</em>.</p>
+
+<h2>License</h2>
+
+<p>mruby is released under the <a href="MITL">MIT License</a>.</p>
+
+<h2>Note for License</h2>
+
+<p>mruby has chosen a MIT License due to its permissive license allowing
+developers to target various environments such as embedded systems.
+However, the license requires the display of the copyright notice and license
+information in manuals for instance. Doing so for big projects can be
+complicated or troublesome.  This is why mruby has decided to display &quot;mruby
+developers&quot; as the copyright name to make it simple conventionally.
+In the future, mruby might ask you to distribute your new code
+(that you will commit,) under the MIT License as a member of
+&quot;mruby developers&quot; but contributors will keep their copyright.
+(We did not intend for contributors to transfer or waive their copyrights,
+Actual copyright holder name (contributors) will be listed in the AUTHORS
+file.)</p>
+
+<p>Please ask us if you want to distribute your code under another license.</p>
+
+<h2>How to Contribute</h2>
+
+<p>See the <a href="CONTRIBUTING.md">contribution guidelines</a>, and then send a pull
+request to <a href="http://github.com/mruby/mruby">http://github.com/mruby/mruby</a>.  We consider you have granted
+non-exclusive right to your contributed code under MIT license.  If you want to
+be named as one of mruby developers, please include an update to the AUTHORS
+file in your pull request.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:17 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

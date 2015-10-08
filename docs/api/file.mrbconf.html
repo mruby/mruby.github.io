@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: mrbconf
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.mrbconf.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: mrbconf</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>mruby configuration macros.</h1>
+
+<h2>How to use these macros.</h2>
+
+<p>You can use mrbconfs with following ways:</p>
+
+<ul>
+<li>Write them in <code>mrbconf.h</code>.
+
+<ul>
+<li>Using compiler flags is preferred  when building a cross binaries or multiple mruby binaries
+since it&#39;s easier to use different mrbconf per each <code>MRuby::Build</code>.</li>
+<li>Most flags can be enabled by just commenting in.</li>
+</ul></li>
+<li>Pass them as compiler flags.
+
+<ul>
+<li>Make sure you pass the same flags to all compilers since some mrbconf(e.g., <code>MRB_GC_FIXED_ARENA</code>)
+changes <code>struct</code> layout and cause memory access error when C and other language(e.g., C++) is mixed.</li>
+</ul></li>
+</ul>
+
+<h2>stdio setting.</h2>
+
+<p><code>ENABLE_STDIO</code></p>
+
+<ul>
+<li>Will be defined automatically if <code>DISABLE_STDIO</code> isn&#39;t defined.</li>
+<li>Uses <code>&lt;stdio.h&gt;</code> functions.</li>
+</ul>
+
+<p><code>DISABLE_STDIO</code></p>
+
+<ul>
+<li>When defined <code>&lt;stdio.h&gt;</code> functions won&#39;t be used.</li>
+<li>Some features will be disabled when this is enabled:
+
+<ul>
+<li><code>mrb_irep</code> load/dump from/to file.</li>
+<li>Compiling mruby script from file.</li>
+<li>Printing features in <strong>src/print.c</strong>.</li>
+</ul></li>
+</ul>
+
+<h2>Debug macros.</h2>
+
+<p><code>ENABLE_DEBUG</code></p>
+
+<ul>
+<li>When defined code fetch hook and debug OP hook will be enabled.</li>
+<li>When using any of the hook set function pointer <code>code_fetch_hook</code> and/or <code>debug_op_hook</code> of <code>mrb_state</code>.</li>
+<li>Fetch hook will be called before any OP.</li>
+<li>Debug OP hook will be called when dispatching <code>OP_DEBUG</code>.</li>
+</ul>
+
+<p><code>DISABLE_DEBUG</code></p>
+
+<ul>
+<li>Will be define automatically if <code>ENABLE_DEBUG</code> isn&#39;t defined.</li>
+</ul>
+
+<p><code>MRB_DEBUG</code></p>
+
+<ul>
+<li>When defined <code>mrb_assert*</code> macro will be defined with macros from <code>&lt;assert.h&gt;</code>.</li>
+<li>Could be enabled via <code>enable_debug</code> method of <code>MRuby::Build</code>.</li>
+</ul>
+
+<h2>Stack configuration</h2>
+
+<p><code>MRB_STACK_EXTEND_DOUBLING</code></p>
+
+<ul>
+<li>If defined doubles the stack size when extending it.</li>
+<li>Else extends stack with <code>MRB_STACK_GROWTH</code>.</li>
+</ul>
+
+<p><code>MRB_STACK_GROWTH</code></p>
+
+<ul>
+<li>Default value is <code>128</code>.</li>
+<li>Used in stack extending.</li>
+<li>Ignored when <code>MRB_STACK_EXTEND_DOUBLING</code> is defined.</li>
+</ul>
+
+<p><code>MRB_STACK_MAX</code></p>
+
+<ul>
+<li>Default value is <code>0x40000 - MRB_STACK_GROWTH</code>.</li>
+<li>Raises <code>RuntimeError</code> when stack size exceeds this value.</li>
+</ul>
+
+<h2>Primitive type configuration.</h2>
+
+<p><code>MRB_USE_FLOAT</code></p>
+
+<ul>
+<li>When defined single precision floating point type(C type <code>float</code>) is used as <code>mrb_float</code>.</li>
+<li>Else double precision floating point type(C type <code>double</code>) is used as <code>mrb_float</code>.</li>
+</ul>
+
+<p><code>MRB_INT16</code></p>
+
+<ul>
+<li>When defined <code>int16_t</code> will be defined as <code>mrb_int</code>.</li>
+<li>Conflicts with <code>MRB_INT64</code>.</li>
+</ul>
+
+<p><code>MRB_INT64</code></p>
+
+<ul>
+<li>When defined <code>int64_t</code> will be defined as <code>mrb_int</code>.</li>
+<li>Conflicts with <code>MRB_INT16</code>.</li>
+<li>When <code>MRB_INT16</code> or <code>MRB_INT64</code> isn&#39;t defined <code>int</code>(most of the times 32-bit integer)
+will be defined as <code>mrb_int</code>.</li>
+</ul>
+
+<h2>Garbage collector configuration.</h2>
+
+<p><code>MRB_GC_STRESS</code></p>
+
+<ul>
+<li>When defined full GC is emitted per each <code>RBasic</code> allocation.</li>
+<li>Mainly used in memory manager debugging.</li>
+</ul>
+
+<p><code>MRB_GC_TURN_OFF_GENERATIONAL</code></p>
+
+<ul>
+<li>When defined turns generational GC by default.</li>
+</ul>
+
+<p><code>MRB_GC_FIXED_ARENA</code></p>
+
+<ul>
+<li>When defined used fixed size GC arena.</li>
+<li>Raises <code>RuntimeError</code> when this is defined and GC arena size exceeds <code>MRB_GC_ARENA_SIZE</code>.</li>
+<li>Useful tracking unnecessary mruby object allocation.</li>
+</ul>
+
+<p><code>MRB_GC_ARENA_SIZE</code></p>
+
+<ul>
+<li>Default value is <code>100</code>.</li>
+<li>Ignored when <code>MRB_GC_FIXED_ARENA</code> isn&#39;t defined.</li>
+<li>Defines fixed GC arena size.</li>
+</ul>
+
+<p><code>MRB_HEAP_PAGE_SIZE</code></p>
+
+<ul>
+<li>Defines value is <code>1024</code>.</li>
+<li>Specifies number of <code>RBasic</code> per each heap page.</li>
+</ul>
+
+<h2>Memory pool configuration.</h2>
+
+<p><code>POOL_ALIGNMENT</code></p>
+
+<ul>
+<li>Default value is <code>4</code>.</li>
+<li>If you&#39;re allocating data types that requires alignment more than default value define the
+largest value of required alignment.</li>
+</ul>
+
+<p><code>POOL_PAGE_SIZE</code></p>
+
+<ul>
+<li>Default value is <code>16000</code>.</li>
+<li>Specifies page size of pool page.</li>
+<li>Smaller the value is increases memory overhead.</li>
+</ul>
+
+<h2>State atexit configuration.</h2>
+
+<p><code>MRB_FIXED_STATE_ATEXIT_STACK</code></p>
+
+<ul>
+<li>If defined enables fixed size <code>mrb_state</code> atexit stack.</li>
+<li>Raises <code>RuntimeError</code> when <code>mrb_state_atexit</code> call count to same <code>mrb_state</code> exceeds
+<code>MRB_FIXED_STATE_ATEXIT_STACK_SIZE</code>&#39;s value.</li>
+</ul>
+
+<p><code>MRB_FIXED_STATE_ATEXIT_STACK_SIZE</code></p>
+
+<ul>
+<li>Default value is <code>5</code>.</li>
+<li>If <code>MRB_FIXED_STATE_ATEXIT_STACK</code> isn&#39;t defined this macro is ignored.</li>
+</ul>
+
+<h2><code>mrb_value</code> configuration.</h2>
+
+<p><code>MRB_ENDIAN_BIG</code></p>
+
+<ul>
+<li>If defined compiles mruby for big endian machines.</li>
+<li>Used in <code>MRB_NAN_BOXING</code>.</li>
+<li>Some mrbgem use this mrbconf.</li>
+</ul>
+
+<p><code>MRB_NAN_BOXING</code></p>
+
+<ul>
+<li>If defined represent <code>mrb_value</code> in boxed <code>double</code>.</li>
+<li>Conflicts with <code>MRB_USE_FLOAT</code>.</li>
+</ul>
+
+<p><code>MRB_WORD_BOXING</code></p>
+
+<ul>
+<li>If defined represent <code>mrb_value</code> as a word.</li>
+<li>If defined <code>Float</code> will be a mruby object with <code>RBasic</code>.</li>
+</ul>
+
+<h2>Instance variable configuration.</h2>
+
+<p><code>MRB_USE_IV_SEGLIST</code></p>
+
+<ul>
+<li>If defined enable segmented list in instance variable table instead of khash.</li>
+<li>Segmented list is a linked list of key and value segments.</li>
+<li>It will linear search instead of hash search.</li>
+</ul>
+
+<p><code>MRB_SEGMENT_SIZE</code></p>
+
+<ul>
+<li>Default value is <code>4</code>.</li>
+<li>Specifies size of each segment in segment list.</li>
+<li>Ignored when <code>MRB_USE_IV_SEGLIST</code> isn&#39;t defined.</li>
+</ul>
+
+<p><code>MRB_IVHASH_INIT_SIZE</code></p>
+
+<ul>
+<li>Default value is <code>8</code>.</li>
+<li>Specifies initial size for instance variable table.</li>
+<li>Ignored when <code>MRB_USE_IV_SEGLIST</code> is defined.</li>
+</ul>
+
+<h2>Other configuration.</h2>
+
+<p><code>MRB_FUNCALL_ARGC_MAX</code></p>
+
+<ul>
+<li>Default value is <code>16</code>.</li>
+<li>Specifies 4th argument(<code>argc</code>) max value of <code>mrb_funcall</code>.</li>
+<li>Raises <code>ArgumentError</code> when the <code>argc</code> argument is bigger then this value <code>mrb_funcall</code>.</li>
+</ul>
+
+<p><code>KHASH_DEFAULT_SIZE</code></p>
+
+<ul>
+<li>Default value is <code>32</code>.</li>
+<li>Specifies default size of khash table bucket.</li>
+<li>Used in <code>kh_init_ ## name</code> function.</li>
+</ul>
+
+<p><code>MRB_STR_BUF_MIN_SIZE</code></p>
+
+<ul>
+<li>Default value is <code>128</code>.</li>
+<li>Specifies initial capacity of <code>RString</code> created by <code>mrb_str_buf_new</code> function..</li>
+</ul>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 15:42:17 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>
