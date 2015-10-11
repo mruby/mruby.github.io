@@ -90,7 +90,7 @@
 <div class="tags">
   
 
-</div>Included heaers
+</div>Included headers
 
   <h2>
     Function Summary
@@ -130,7 +130,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a new module.</p>
+</div></span>
   
 </li>
 
@@ -164,7 +166,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Include a module in another class or module.</p>
+</div></span>
   
 </li>
 
@@ -181,7 +185,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepends a module in another class or module.</p>
+</div></span>
   
 </li>
 
@@ -217,7 +223,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a class method.</p>
+</div></span>
   
 </li>
 
@@ -251,7 +259,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a module fuction.</p>
+</div></span>
   
 </li>
 
@@ -268,7 +278,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a constant.</p>
+</div></span>
   
 </li>
 
@@ -2701,7 +2713,72 @@ If <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#16
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Defines a new module.</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb_state*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>char*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the module.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Reference to the newly defined module.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
 
   
@@ -2721,7 +2798,74 @@ If <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#16
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Include a module in another class or module. Equivalent to:</p>
 
+<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">B</span>                                                                                                         *
+  include <span style="color:#036;font-weight:bold">A</span>                                                                                                      *
+<span style="color:#080;font-weight:bold">end</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb_state*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>RClass*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A reference to module or a class.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>RClass*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A reference to the module to be included.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
 </div>
 
   
@@ -2731,7 +2875,75 @@ If <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#16
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Prepends a module in another class or module. Equivalent to:</p>
 
+<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">B</span>
+  prepend <span style="color:#036;font-weight:bold">A</span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb_state*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>RClass*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A reference to module or a class.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>RClass*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A reference to the module to be prepended.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
 </div>
 
   
@@ -2843,7 +3055,117 @@ If <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#16
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Defines a class method.</p>
 
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
+<span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Foo</span>
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#036;font-weight:bold">Foo</span>.<span style="color:#06B;font-weight:bold">bar</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span>
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
+mrb_value bar_method(mrb_state* mrb, mrb_value <span style="color:#069">self</span>){
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+}
+void mrb_example_gem_init(mrb_state* mrb){
+  struct <span style="color:#036;font-weight:bold">RClass</span> *foo;
+  foo = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Foo</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
+  mrb_define_class_method(mrb, foo, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">bar</span><span style="color:#710">&quot;</span></span>, bar_method, MRB_ARGS_NONE());
+}</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb_state*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The MRuby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>RClass*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The class where the class method will be defined.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>char*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the class method.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mrb_func_t</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The function pointer to the class method definition.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mrb_aspec</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The method parameters declaration.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
 </div>
 
   
@@ -2863,7 +3185,116 @@ If <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#16
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Defines a module fuction.</p>
 
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
+<span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">Foo</span>
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#036;font-weight:bold">Foo</span>.<span style="color:#06B;font-weight:bold">bar</span>                                                                                                    *     <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span>
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
+mrb_value bar_method(mrb_state* mrb, mrb_value <span style="color:#069">self</span>){
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+}
+void mrb_example_gem_init(mrb_state* mrb){
+  struct <span style="color:#036;font-weight:bold">RClass</span> *foo;
+  foo = mrb_define_module(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Foo</span><span style="color:#710">&quot;</span></span>);
+  mrb_define_module_function(mrb, foo, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">bar</span><span style="color:#710">&quot;</span></span>, bar_method, MRB_ARGS_NONE());
+}</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb_state*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The MRuby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>RClass*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The module where the module function will be defined.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>char*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the module function.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mrb_func_t</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The function pointer to the module function definition.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mrb_aspec</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The method parameters declaration.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
 </div>
 
   
@@ -2873,7 +3304,91 @@ If <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#16
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Defines a constant.</p>
 
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
+<span style="color:#036;font-weight:bold">AGE</span> = <span style="color:#00D">22</span>
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
+mrb_define_const(mrb, mrb-&gt;kernel_module, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">AGE</span><span style="color:#710">&quot;</span></span>, mrb_fixnum_value(<span style="color:#00D">22</span>));</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb_state*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The MRuby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>RClass*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A class or module the constant is defined in.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the constant.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mrb_value</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value for the constant.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
 </div>
 
   
@@ -4619,7 +5134,7 @@ required just pass NULL.</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:20 2015 by
+  Generated on Sun Oct 11 09:02:33 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
 </div>
