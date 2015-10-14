@@ -90,7 +90,7 @@
 <div class="tags">
   
 
-</div>Included headers
+</div>Included heaers
 
   <h2>
     Function Summary
@@ -297,7 +297,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Undefines a method.</p>
+</div></span>
   
 </li>
 
@@ -314,7 +316,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Undefine a class method.</p>
+</div></span>
   
 </li>
 
@@ -2803,9 +2807,10 @@ If <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#16
     
 <p>Include a module in another class or module. Equivalent to:</p>
 
-<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">B</span>                                                                                                         *
-  include <span style="color:#036;font-weight:bold">A</span>                                                                                                      *
-<span style="color:#080;font-weight:bold">end</span></code></pre>
+<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">B</span>
+  include <span style="color:#036;font-weight:bold">A</span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
 
 
   </div>
@@ -3062,17 +3067,25 @@ If <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#16
 
 <pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
 <span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Foo</span>
+
   <span style="color:#080;font-weight:bold">def</span> <span style="color:#036;font-weight:bold">Foo</span>.<span style="color:#06B;font-weight:bold">bar</span>
   <span style="color:#080;font-weight:bold">end</span>
+
 <span style="color:#080;font-weight:bold">end</span>
 <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
 mrb_value bar_method(mrb_state* mrb, mrb_value <span style="color:#069">self</span>){
+
   <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+
 }
 void mrb_example_gem_init(mrb_state* mrb){
+
   struct <span style="color:#036;font-weight:bold">RClass</span> *foo;
+
   foo = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Foo</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
+
   mrb_define_class_method(mrb, foo, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">bar</span><span style="color:#710">&quot;</span></span>, bar_method, MRB_ARGS_NONE());
+
 }</code></pre>
 
 
@@ -3192,16 +3205,23 @@ void mrb_example_gem_init(mrb_state* mrb){
 
 <pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
 <span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">Foo</span>
+
   <span style="color:#080;font-weight:bold">def</span> <span style="color:#036;font-weight:bold">Foo</span>.<span style="color:#06B;font-weight:bold">bar</span>                                                                                                    *     <span style="color:#080;font-weight:bold">end</span>
+
 <span style="color:#080;font-weight:bold">end</span>
 <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
 mrb_value bar_method(mrb_state* mrb, mrb_value <span style="color:#069">self</span>){
-  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();                                                                                        *
 }
 void mrb_example_gem_init(mrb_state* mrb){
+
   struct <span style="color:#036;font-weight:bold">RClass</span> *foo;
+
   foo = mrb_define_module(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Foo</span><span style="color:#710">&quot;</span></span>);
+
   mrb_define_module_function(mrb, foo, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">bar</span><span style="color:#710">&quot;</span></span>, bar_method, MRB_ARGS_NONE());
+
 }</code></pre>
 
 
@@ -3310,9 +3330,28 @@ void mrb_example_gem_init(mrb_state* mrb){
 <p>Defines a constant.</p>
 
 <pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
+
+<span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClass</span>
+
 <span style="color:#036;font-weight:bold">AGE</span> = <span style="color:#00D">22</span>
+
+<span style="color:#080;font-weight:bold">end</span>
+
 <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
-mrb_define_const(mrb, mrb-&gt;kernel_module, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">AGE</span><span style="color:#710">&quot;</span></span>, mrb_fixnum_value(<span style="color:#00D">22</span>));</code></pre>
+<span style="color:#777">#include &lt;stdio.h&gt;</span>
+<span style="color:#777">#include &lt;mruby.h&gt;</span>
+
+void
+mrb_example_gem_init(mrb_state* mrb){
+
+  mrb_define_const(mrb, mrb-&gt;kernel_module, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">AGE</span><span style="color:#710">&quot;</span></span>, mrb_fixnum_value(<span style="color:#00D">22</span>));
+
+}
+
+mrb_value
+mrb_example_gem_final(mrb_state* mrb){
+
+}</code></pre>
 
 
   </div>
@@ -3398,7 +3437,123 @@ mrb_define_const(mrb, mrb-&gt;kernel_module, <span style="background-color:hsla(
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Undefines a method.</p>
 
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
+
+<span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClassA</span>
+
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">example_method</span>
+    <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#036;font-weight:bold">ExampleClassA</span>.new.example_method <span style="color:#777"># =&gt; example</span>
+
+<span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClassB</span> &lt; <span style="color:#036;font-weight:bold">ExampleClassA</span>
+
+  undef_method <span style="color:#A60">:example_method</span>
+
+<span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#036;font-weight:bold">ExampleClassB</span>.new.example_method <span style="color:#777"># =&gt; undefined method 'example_method' for ExampleClassB (NoMethodError)</span>
+
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
+<span style="color:#777">#include &lt;stdio.h&gt;</span>
+<span style="color:#777">#include &lt;mruby.h&gt;</span>
+
+mrb_value
+mrb_example_method(mrb_state *mrb){
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example</span><span style="color:#710">&quot;</span></span>);
+
+}
+
+void
+mrb_example_gem_init(mrb_state* mrb){
+  struct <span style="color:#036;font-weight:bold">RClass</span> *example_class_a;
+  struct <span style="color:#036;font-weight:bold">RClass</span> *example_class_b;
+  struct <span style="color:#036;font-weight:bold">RClass</span> *example_class_c;
+
+  example_class_a = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClassA</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
+
+  mrb_define_method(mrb, example_class_a, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span>, mrb_example_method, MRB_ARGS_NONE());
+
+  example_class_b = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClassB</span><span style="color:#710">&quot;</span></span>, example_class_a);
+
+  example_class_c = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClassC</span><span style="color:#710">&quot;</span></span>, example_class_b);
+
+  mrb_undef_method(mrb, example_class_c, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span>);
+
+}
+
+mrb_example_gem_final(mrb_state* mrb){
+
+}</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb_state*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>RClass*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A class the method will be undefined from.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>constchar*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the method to be undefined.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
 </div>
 
   
@@ -3408,7 +3563,111 @@ mrb_define_const(mrb, mrb-&gt;kernel_module, <span style="background-color:hsla(
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Undefine a class method.</p>
 
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
+
+<span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClass</span>
+
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">example_method</span>
+    <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#036;font-weight:bold">ExampleClass</span>.example_method
+
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
+<span style="color:#777">#include &lt;stdio.h&gt;</span>
+<span style="color:#777">#include &lt;mruby.h&gt;</span>
+
+mrb_value
+mrb_example_method(mrb_state *mrb){
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example</span><span style="color:#710">&quot;</span></span>);
+
+}
+
+void
+mrb_example_gem_init(mrb_state* mrb){
+
+  struct <span style="color:#036;font-weight:bold">RClass</span> *example_class;
+
+  example_class = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClass</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
+
+  mrb_define_class_method(mrb, example_class, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span>, mrb_example_method, MRB_ARGS_NONE());
+
+  mrb_undef_class_method(mrb, example_class, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span>);
+
+}
+
+void
+mrb_example_gem_final(mrb_state* mrb){
+
+}</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb_state*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>RClass*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A class the class method will be undefined from.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>constchar*</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the class method to be undefined.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
 </div>
 
   
@@ -5134,7 +5393,7 @@ required just pass NULL.</p>
 </div>
 
     <div id="footer">
-  Generated on Sun Oct 11 09:02:33 2015 by
+  Generated on Wed Oct 14 16:46:11 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
 </div>
