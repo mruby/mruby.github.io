@@ -354,9 +354,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Initialize a new object instace of c class.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -3684,20 +3682,23 @@ mrb_example_gem_final(mrb_state* mrb){
     
 <p>Initialize a new object instace of c class.</p>
 
-<pre class="code ruby"><code class="ruby"><span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#606">Example</span>:
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
+<span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClass</span>
+<span style="color:#080;font-weight:bold">end</span>
+
+p <span style="color:#036;font-weight:bold">ExampleClass</span> <span style="color:#777"># =&gt; #&lt;ExampleClass:0x9958588&gt;</span>
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
 <span style="color:#777">#include &lt;stdio.h&gt;</span>
 <span style="color:#777">#include &lt;mruby.h&gt;</span>
 
 void
 mrb_example_gem_init(mrb_state* mrb) {
   struct <span style="color:#036;font-weight:bold">RClass</span> *example_class;
-
-  mrb_value *argv[<span style="color:#00D">1</span>];
   mrb_value obj;
 
-  example_class = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClass</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);*     argv[<span style="color:#00D">0</span>] = example_class;
-  obj = mrb_obj_new(mrb, mrb-&gt;object_class, <span style="color:#00D">1</span>, argv); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> =&gt; <span style="color:#036;font-weight:bold">ExampleClass</span>
-  mrb_funcall(mrb, obj, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">puts</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span>, example_class);
+  example_class = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClass</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class); <span style="color:#777"># =&gt; class ExampleClass; end</span>
+  obj = mrb_obj_new(mrb, example_class, <span style="color:#00D">0</span>, <span style="color:#036;font-weight:bold">NULL</span>); <span style="color:#777"># =&gt; ExampleClass.new</span>
+  mrb_p(mrb, obj); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> =&gt; <span style="color:#036;font-weight:bold">Kernel</span><span style="color:#777">#p</span>
 }</code></pre>
 
 
@@ -3805,84 +3806,18 @@ mrb_example_gem_init(mrb_state* mrb) {
 <div class="docstring">
   <div class="discussion">
     
-<p>Initialize a new object instace of c class.</p>
-
-<pre class="code ruby"><code class="ruby"><span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#606">Example</span>:
-<span style="color:#777">#include &lt;stdio.h&gt;</span>
-<span style="color:#777">#include &lt;mruby.h&gt;</span>
-
-void
-mrb_example_gem_init(mrb_state* mrb) {
-  struct <span style="color:#036;font-weight:bold">RClass</span> *example_class;
-
-  mrb_value *argv[<span style="color:#00D">1</span>];
-  mrb_value obj;
-  mrb_value obj_inst;
-
-  example_class = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClass</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);*
-  argv[<span style="color:#00D">0</span>] = example_class;
-  obj = mrb_obj_new(mrb, mrb-&gt;object_class, <span style="color:#00D">1</span>, argv);
-  obj_inst = mrb_class_new_instance(mrb, <span style="color:#00D">0</span>, argv, example_class); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> =&gt; <span style="color:#777">#&lt;ExampleClass:0x89734f8&gt;</span>
-  mrb_funcall(mrb, obj, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">puts</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span>, obj_inst);
-}</code></pre>
-
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>mrb</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>argc</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Number of arguments in argv</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>c</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Reference to the class of the new object.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#mrb_obj_new-function" title="mrb_obj_new (function)">mrb_obj_new</a></span></li>
+    
+  </ul>
 
 </div>
 </div>
@@ -5477,7 +5412,7 @@ required just pass NULL.</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 15 19:31:44 2015 by
+  Generated on Sat Oct 17 02:56:22 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
 </div>
