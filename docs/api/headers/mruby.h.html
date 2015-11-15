@@ -427,7 +427,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Creates a new module, Module.</p>
+<p>Returns an mrb_bool.</p>
 </div></span>
   
 </li>
@@ -538,7 +538,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Duplicate an object.</p>
+</div></span>
   
 </li>
 
@@ -572,7 +574,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if obj responds to the given method.</p>
+</div></span>
   
 </li>
 
@@ -4027,7 +4031,8 @@ mrb_example_gem_init(mrb_state* mrb) {
 <div class="docstring">
   <div class="discussion">
     
-<p>Creates a new module, Module.</p>
+<p>Returns an mrb_bool. True if class was defined, and false if the class was
+not defined.</p>
 
 <p>Example:</p>
 
@@ -4461,7 +4466,77 @@ mrb_example_gem_init(mrb_state* mrb) {
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Duplicate an object.</p>
 
+<p>Equivalent to:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">Object</span><span style="color:#777">#dup</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>obj</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Object to be duplicate.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>The newly duplicated object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
 
   
@@ -4481,7 +4556,121 @@ mrb_example_gem_init(mrb_state* mrb) {
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if obj responds to the given method. If the method was defined
+for that class it returns true, it returns false otherwise.</p>
 
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
+<span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClass</span>
+   <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">example_method</span>
+   <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#036;font-weight:bold">ExampleClass</span>.new.respond_to?(<span style="color:#A60">:example_method</span>) <span style="color:#777"># =&gt; true</span>
+
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
+void
+mrb_example_gem_init(mrb_state* mrb) {
+   struct <span style="color:#036;font-weight:bold">RClass</span> *example_class;
+   mrb_sym mid;
+   mrb_bool obj_resp;
+
+   example_class = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClass</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
+   mrb_define_method(mrb, example_class, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span>, exampleMethod, MRB_ARGS_NONE());
+   mid = mrb_intern_str(mrb, mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span> ));
+   obj_resp = mrb_obj_respond_to(mrb, example_class, mid); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> =&gt; <span style="color:#00D">1</span>(<span style="color:#069">true</span> <span style="color:#080;font-weight:bold">in</span> <span style="color:#036;font-weight:bold">Ruby</span> world)
+
+   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_obj_respond_to returns <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>
+   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_obj_respond_to returns <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>
+   <span style="color:#080;font-weight:bold">if</span> (obj_resp == <span style="color:#00D">1</span>) {
+     puts(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>);
+   }
+   <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (obj_resp == <span style="color:#00D">0</span>) {
+     puts(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>);
+   }
+}</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>c</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A reference to a class.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>mid</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A symbol referencing a method id.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>mrb_bool A boolean value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
 
   
@@ -5954,7 +6143,7 @@ required just pass NULL.</p>
 </div>
 
     <div id="footer">
-  Generated on Mon Nov  9 12:13:06 2015 by
+  Generated on Sat Nov 14 23:38:25 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
 </div>
