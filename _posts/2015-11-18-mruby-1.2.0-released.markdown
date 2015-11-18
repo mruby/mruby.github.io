@@ -133,4 +133,5 @@ more information.
 [archSeer]: https://github.com/archSeer
 [take-cheeze]: https://github.com/take-cheeze
 [suzukaze]: https://github.com/suzukaze
+[tatsuhiro-t]: https://github.com/tatsuhiro-t
 [contributors]: https://github.com/mruby/mruby/graphs/contributors
