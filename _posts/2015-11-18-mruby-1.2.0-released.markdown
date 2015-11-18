@@ -1,0 +1,138 @@
+---
+layout: post
+title:  "mruby 1.2.0 released"
+date:   2015-11-18 12:13:55
+categories: releases
+---
+
+mruby 1.2.0 released
+====================
+
+mruby 1.2.0 is released. Download [mruby 1.2.0][mruby-1.2.0-dl] now.
+
+[mruby-1.2.0-dl]: https://github.com/mruby/mruby/archive/1.2.0.zip
+
+## mruby 1.2.0 by the numbers
+
+* 24 [contributors](contributors)
+* 202 changed files
+* 3,947 additions(+)
+* 3,903 deletions(-)
+
+[See the full diff](https://github.com/mruby/mruby/compare/1.1.0...1.2.0).
+
+## What's new in MRuby 1.2.0
+
+From here, you can see the outstanding changes that made this release.
+
+Each entry is kept brief with a link to reference the associated ticket for
+more information.
+
+
+### Language changes
+
+* Module#prepend added
+  * [#2885](https://github.com/mruby/mruby/pull/2885) by [@archSeer](archSeer)
+
+* String#freeze added
+  * [1a45447b](https://github.com/mruby/mruby/commit/1a45447b) by [@matz](matz)
+
+* Array#index now with block form
+  * [fafe86d](https://github.com/mruby/mruby/commit/fafe86d) by [@matz](matz)
+
+
+### Core classes changes
+
+* UTF-8 String support
+  * [798ec3a](https://github.com/mruby/mruby/commit/798ec3a) by [@matz](matz)
+  * Windows support in [#1822](https://github.com/mruby/mruby/pull/1822) by [@mattn](mattn)
+
+
+### Stdlib updates
+
+* Add `mruby-error` mrbgem for exception handling library
+  * [#2845](https://github.com/mruby/mruby/pull/2845) by [@take-cheeze](take-cheeze)
+
+* `mrbtest` binary extracted to `mruby-test` mrbgem
+  * [#2924](https://github.com/mruby/mruby/pull/2924) by [@zzak](zzak)
+  * Use `conf.enable_test` in `build_config.rb` to run tests
+
+* `Fiber.yield` is now public under `mruby-fiber` mrbgem
+  * [28e735e](https://github.com/mruby/mruby/commit/28e735e) by [@matz](matz)
+
+* `mrbc` extracted as `mruby-bin-mrbc` mrbgem
+  * [#2760](https://github.com/mruby/mruby/pull/2760) by [@take-cheeze](take-cheeze)
+  * Includes `mruby-compiler` mrbgem extraction
+
+* Add Hash comparison methods
+  * [#3010](https://github.com/mruby/mruby/pull/3010) by [@nobu](nobu)
+  * Moved to `mruby-hash-ext` mrbgem in [fa86026](https://github.com/mruby/mruby/commit/fa86026) by [@matz](matz)
+
+* Add String#prepend to `mruby-string-ext` mrbgem
+  * [#2674](https://github.com/mruby/mruby/pull/2674) by [@suzukaze](suzukaze)
+
+* Add String#insert to `mruby-string-ext` mrbgem
+  * [#2669](https://github.com/mruby/mruby/pull/2669) by [@suzukaze](suzukaze)
+
+* Add String#ljust to `mruby-string-ext` mrbgem
+  * [#2700](https://github.com/mruby/mruby/pull/2700) by [@takahashim](takahashim)
+
+* Add String#upto to `mruby-string-ext` mrbgem
+  * [#2701](https://github.com/mruby/mruby/pull/2701) by [@suzukaze](suzukaze)
+
+* Add String#setbyte and String#byteslice to `mruby-string-ext` mrbgem
+  * [4fdf492](https://github.com/mruby/mruby/commit/4fdf492) by [@matz](matz)
+
+
+### C API updates
+
+* Rename `DISABLE_STDIO` -> `MRB_DISABLE_STDIO`
+  * Also renamed `ENABLE_DEBUG` -> `MRB_ENABLE_DEBUG_HOOK`
+  * [#3014](https://github.com/mruby/mruby/pull/3014) by [@cremno](cremno)
+
+* Allow specify endian in big/little and native when dumping and loading mrbc
+  * [bc9c47d](https://github.com/mruby/mruby/commit/bc9c47d) by [@matz](matz)
+
+
+### Build system updates
+
+* Add `:mgem` option for loading gems from `mgem-list`
+  * [#2846](https://github.com/mruby/mruby/pull/2846) by [@take-cheeze](take-cheeze)
+
+* Allow `mrblib` and `test` directories to have subdirs.
+  * [#2943](https://github.com/mruby/mruby/pull/2943) by [@zzak](zzak)
+
+* Allow `bintest` to have subdirs
+  * [#2927](https://github.com/mruby/mruby/pull/2927) by [@hone](hone)
+
+* Able to source mrbgems using `:path` option
+  * [#2907](https://github.com/mruby/mruby/pull/2907) by [@hone](hone)
+
+* Add `host_target` and `build_target` param to `MRuby::CrossBuild` instance
+  * Useful for cross-compiling native extension
+  * [#2857](https://github.com/mruby/mruby/pull/2857) by [@hone](hone)
+
+* Allow customize bin install path using `INSTALL_DIR` environment variable
+  * [#2949](https://github.com/mruby/mruby/pull/2949) by [@tatsuhiro-t](tatsuhiro-t)
+
+* Docs changed to yard-mruby and extracted to website
+  * [#2984](https://github.com/mruby/mruby/pull/2984) by [@sagmor](sagmor)
+
+* Distribute MRuby's source as a Ruby gem
+  * [#2937](https://github.com/mruby/mruby/pull/2937) by [@sagmor](sagmor)
+
+
+
+[matz]: https://github.com/matz
+[zzak]: https://github.com/zzak
+[hone]: https://github.com/hone
+[mattn]: https://github.com/mattn
+[cremno]: https://github.com/cremno
+[nobu]: https://github.com/nobu
+[takahashim]: https://github.com/takahashim
+[sagmor]: https://github.com/sagmor
+[archSeer]: https://github.com/archSeer
+[take-cheeze]: https://github.com/take-cheeze
+[suzukaze]: https://github.com/suzukaze
+
+[contributors]: https://github.com/mruby/mruby/graphs/contributors
