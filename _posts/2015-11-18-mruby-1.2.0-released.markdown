@@ -14,6 +14,7 @@ mruby 1.2.0 is released. Download [mruby 1.2.0][mruby-1.2.0-dl] now.
 
 ## mruby 1.2.0 by the numbers
 
+* 778 commits
 * 24 [contributors][contributors]
 * 202 changed files
 * 3,947 additions(+)
