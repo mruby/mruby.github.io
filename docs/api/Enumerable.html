@@ -92,31 +92,21 @@
   
   
     <dt class="r1">Included in:</dt>
-    <dd class="r1"><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>, <span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>, <span class='object_link'><a href="Range.html" title="Range (class)">Range</a></span></dd>
+    <dd class="r1"><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>, <span class='object_link'><a href="Enumerator.html" title="Enumerator (class)">Enumerator</a></span>, <span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>, <span class='object_link'><a href="Range.html" title="Range (class)">Range</a></span></dd>
     
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">mrblib/enum.rb</dd>
+    <dd class="r2 last">mrblib/enum.rb<span class="defines">,<br />
+  mrbgems/mruby-enum-ext/mrblib/enum.rb,<br /> mrbgems/mruby-enum-lazy/mrblib/lazy.rb,<br /> mrbgems/mruby-enumerator/mrblib/enumerator.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>Enumerable</p>
-
-<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">ISO</span> <span style="color:#60E">15.3</span>.<span style="color:#F00;background-color:#FAA">2</span>
-
-<span style="color:#036;font-weight:bold">The</span> &lt;code&gt;<span style="color:#036;font-weight:bold">Enumerable</span>&lt;<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">code&gt; mixin provides collection classes with
-several traversal and searching methods, and with the ability to
-sort. The class must provide a method &lt;code&gt;each&lt;</span><span style="color:#404">/</span></span>code&gt;, which
-yields successive members of the collection. If
-&lt;code&gt;<span style="color:#036;font-weight:bold">Enumerable</span><span style="color:#777">#max&lt;/code&gt;, &lt;code&gt;#min&lt;/code&gt;, or</span>
-&lt;code&gt;<span style="color:#777">#sort&lt;/code&gt; is used, the objects in the collection must also</span>
-implement a meaningful &lt;code&gt;&lt;=&gt;&lt;<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">code&gt; operator, as these methods
-rely on an ordering between members of the collection.</span></span></code></pre>
+    <p>Enumerable</p>
 
 
   </div>
@@ -126,11 +116,66 @@ rely on an ordering between members of the collection.</span></span></code></pre
 
 </div>
 
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Enumerable/Lazy.html" title="Enumerable::Lazy (class)">Lazy</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="NONE-constant" class="">NONE =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#036;font-weight:bold">Object</span>.new</pre></dd>
+      
+    </dl>
+  
 
 
 
 
 
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_h-class_method" title="to_h (class method)">+ (Object) <strong>to_h</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
   
     <h2>
       Instance Method Summary
@@ -156,8 +201,7 @@ rely on an ordering between members of the collection.</span></span></code></pre
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>TODO Does this OK? Please test it.</p>
+    <span class="summary_desc"><div class='inline'><p>TODO Does this OK? Please test it.</p>
 </div></span>
   
 </li>
@@ -180,8 +224,7 @@ rely on an ordering between members of the collection.</span></span></code></pre
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
 </div></span>
   
 </li>
@@ -204,8 +247,7 @@ rely on an ordering between members of the collection.</span></span></code></pre
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
 </div></span>
   
 </li>
@@ -230,8 +272,53 @@ rely on an ordering between members of the collection.</span></span></code></pre
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#count-instance_method" title="#count (instance method)">- (Object) <strong>count</strong>(v = NONE, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.count                 -&gt; int    enum.count(item)           -&gt; int    enum.count { |obj| block } -&gt; int.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cycle-instance_method" title="#cycle (instance method)">- (Object) <strong>cycle</strong>(n = nil, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     enum.cycle(n=nil) { |obj| block }  -&gt;  nil     enum.cycle(n=nil)                  -&gt;  an_enumerator.</p>
 </div></span>
   
 </li>
@@ -256,8 +343,99 @@ rely on an ordering between members of the collection.</span></span></code></pre
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#drop-instance_method" title="#drop (instance method)">- (Object) <strong>drop</strong>(n) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.drop(n)               -&gt; array.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#drop_while-instance_method" title="#drop_while (instance method)">- (Object) <strong>drop_while</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.drop_while {|arr| block }   -&gt; array    enum.drop_while                  -&gt; an_enumerator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_cons-instance_method" title="#each_cons (instance method)">- (nil) <strong>each_cons</strong>(n, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Iterates the given block for each array of consecutive  elements.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_slice-instance_method" title="#each_slice (instance method)">- (nil) <strong>each_slice</strong>(n, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Iterates the given block for each slice of  elements.</p>
 </div></span>
   
 </li>
@@ -280,8 +458,30 @@ rely on an ordering between members of the collection.</span></span></code></pre
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each_with_object-instance_method" title="#each_with_object (instance method)">- (Object) <strong>each_with_object</strong>(obj = nil, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.each_with_object(obj) { |(*args), memo_obj| ... }  -&gt;  obj    enum.each_with_object(obj)                              -&gt;  an_enumerator.</p>
 </div></span>
   
 </li>
@@ -306,8 +506,7 @@ rely on an ordering between members of the collection.</span></span></code></pre
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return an array of all elements which are yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return an array of all elements which are yield by +each+.</p>
 </div></span>
   
 </li>
@@ -332,8 +531,78 @@ rely on an ordering between members of the collection.</span></span></code></pre
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_index-instance_method" title="#find_index (instance method)">- (Object) <strong>find_index</strong>(val = NONE, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     enum.find_index(value)          -&gt; int or nil     enum.find_index { |obj| block } -&gt; int or nil     enum.find_index                 -&gt; an_enumerator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#first-instance_method" title="#first (instance method)">- (Object) <strong>first</strong>(n = NONE) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.first       -&gt;  obj or nil    enum.first(n)    -&gt;  an_array.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flat_map-instance_method" title="#flat_map (instance method)">- (Object) <strong>flat_map</strong>(&amp;block) </a>
+    
+
+    
+      (also: #collect_concat)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.flat_map       { |obj| block } -&gt; array    enum.collect_concat { |obj| block } -&gt; array    enum.flat_map                       -&gt; an_enumerator    enum.collect_concat                 -&gt; an_enumerator.</p>
 </div></span>
   
 </li>
@@ -356,10 +625,30 @@ rely on an ordering between members of the collection.</span></span></code></pre
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>
-and which return value was true when invoking === with
-<code>pattern</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+ and which return value was true when invoking === with +pattern+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#group_by-instance_method" title="#group_by (instance method)">- (Object) <strong>group_by</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.group_by {| obj | block }  -&gt; a_hash    enum.group_by                   -&gt; an_enumerator.</p>
 </div></span>
   
 </li>
@@ -382,8 +671,7 @@ and which return value was true when invoking === with
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>redefine #hash 15.3.1.3.15.</p>
+    <span class="summary_desc"><div class='inline'><p>redefine #hash 15.3.1.3.15.</p>
 </div></span>
   
 </li>
@@ -408,9 +696,7 @@ and which return value was true when invoking === with
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return true if at least one element which is yield by <code>each</code>
-returns a true value by invoking == with <code>obj</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return true if at least one element which is yield by +each+ returns a true value by invoking == with +obj+.</p>
 </div></span>
   
 </li>
@@ -435,8 +721,30 @@ returns a true value by invoking == with <code>obj</code>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lazy-instance_method" title="#lazy (instance method)">- (Object) <strong>lazy</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>= Enumerable#lazy implementation.</p>
 </div></span>
   
 </li>
@@ -459,8 +767,30 @@ returns a true value by invoking == with <code>obj</code>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return the maximum value of all elements yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return the maximum value of all elements yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_by-instance_method" title="#max_by (instance method)">- (Object) <strong>max_by</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.max_by {|obj| block }      -&gt; obj    enum.max_by                     -&gt; an_enumerator.</p>
 </div></span>
   
 </li>
@@ -483,8 +813,122 @@ returns a true value by invoking == with <code>obj</code>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return the minimum value of all elements yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return the minimum value of all elements yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#min_by-instance_method" title="#min_by (instance method)">- (Object) <strong>min_by</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.min_by {|obj| block }      -&gt; obj    enum.min_by                     -&gt; an_enumerator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#minmax-instance_method" title="#minmax (instance method)">- (Object) <strong>minmax</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     enum.minmax                  -&gt; [min, max]     enum.minmax { |a, b| block } -&gt; [min, max].</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#minmax_by-instance_method" title="#minmax_by (instance method)">- (Object) <strong>minmax_by</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     enum.minmax_by { |obj| block } -&gt; [min, max]     enum.minmax_by                 -&gt; an_enumerator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#none%3F-instance_method" title="#none? (instance method)">- (Boolean) <strong>none?</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     enum.none? [{ |obj| block }]   -&gt; true or false.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#one%3F-instance_method" title="#one? (instance method)">- (Boolean) <strong>one?</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.one? [{ |obj| block }]   -&gt; true or false.</p>
 </div></span>
   
 </li>
@@ -507,8 +951,7 @@ returns a true value by invoking == with <code>obj</code>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
 </div></span>
   
 </li>
@@ -531,8 +974,30 @@ returns a true value by invoking == with <code>obj</code>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Call the given block for each element which is yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reverse_each-instance_method" title="#reverse_each (instance method)">- (Object) <strong>reverse_each</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     enum.reverse_each { |item| block } -&gt;  enum     enum.reverse_each                  -&gt;  an_enumerator.</p>
 </div></span>
   
 </li>
@@ -555,8 +1020,122 @@ returns a true value by invoking == with <code>obj</code>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return a sorted array of all elements which are yield by <code>each</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return a sorted array of all elements which are yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sort_by-instance_method" title="#sort_by (instance method)">- (Object) <strong>sort_by</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.sort_by { |obj| block }   -&gt; array    enum.sort_by                   -&gt; an_enumerator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#take-instance_method" title="#take (instance method)">- (Object) <strong>take</strong>(n) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.take(n)               -&gt; array.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#take_while-instance_method" title="#take_while (instance method)">- (Object) <strong>take_while</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    enum.take_while {|arr| block }   -&gt; array    enum.take_while                  -&gt; an_enumerator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_h-instance_method" title="#to_h (instance method)">- (Object) <strong>to_h</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     enum.to_h  -&gt; hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#zip-instance_method" title="#zip (instance method)">- (Object) <strong>zip</strong>(*arg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>use Enumerator to use infinite sequence.</p>
 </div></span>
   
 </li>
@@ -567,6 +1146,42 @@ returns a true value by invoking == with <code>obj</code>.</p>
 
 
 
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="to_h-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_h</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+695
+696
+697</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 695</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">nil</span>.<span style="color:#06B;font-weight:bold">to_h</span>
+  {}
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
@@ -574,7 +1189,7 @@ returns a true value by invoking == with <code>obj</code>.</p>
       <div class="method_details first">
   <h3 class="signature first" id="__sort_sub__-instance_method">
   
-    - (<tt>Object</tt>) <strong>__sort_sub__</strong>(sorted, work, src_ary, head, tail, &amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__sort_sub__</strong>(sorted, work, src_ary, head, tail, &amp;block) 
   
 
   
@@ -582,8 +1197,8 @@ returns a true value by invoking == with <code>obj</code>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>TODO Does this OK? Please test it.</p>
+    <p>TODO
+Does this OK? Please test it.</p>
 
 
   </div>
@@ -591,12 +1206,15 @@ returns a true value by invoking == with <code>obj</code>.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+321
 322
 323
 324
@@ -629,11 +1247,10 @@ returns a true value by invoking == with <code>obj</code>.</p>
 351
 352
 353
-354
-355</pre>
+354</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 322</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 321</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">__sort_sub__</span>(sorted, work, src_ary, head, tail, &amp;block)
   <span style="color:#080;font-weight:bold">if</span> head == tail
@@ -685,10 +1302,11 @@ returns a true value by invoking == with <code>obj</code>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Call the given block for each element which is yield by <code>each</code>.
-Return false if one block value is false. Otherwise return true. If no
-block is given and <code>self</code> is false return false.</p>
+    <p>Call the given block for each element
+which is yield by +each+. Return false
+if one block value is false. Otherwise
+return true. If no block is given and
++self+ is false return false.</p>
 
 <p>ISO 15.3.2.2.1</p>
 
@@ -711,23 +1329,25 @@ block is given and <code>self</code> is false return false.</p>
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+24
 25
 26
 27
 28
 29
 30
-31
-32</pre>
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 24</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">all?</span>(&amp;block)
   <span style="color:#080;font-weight:bold">if</span> block
@@ -753,10 +1373,11 @@ block is given and <code>self</code> is false return false.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Call the given block for each element which is yield by <code>each</code>.
-Return true if one block value is true. Otherwise return false. If no block
-is given and <code>self</code> is true object return true.</p>
+    <p>Call the given block for each element
+which is yield by +each+. Return true
+if one block value is true. Otherwise
+return false. If no block is given and
++self+ is true object return true.</p>
 
 <p>ISO 15.3.2.2.2</p>
 
@@ -779,23 +1400,25 @@ is given and <code>self</code> is true object return true.</p>
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+41
 42
 43
 44
 45
 46
 47
-48
-49</pre>
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 41</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">any?</span>(&amp;block)
   <span style="color:#080;font-weight:bold">if</span> block
@@ -813,7 +1436,7 @@ is given and <code>self</code> is true object return true.</p>
       <div class="method_details ">
   <h3 class="signature " id="collect-instance_method">
   
-    - (<tt>Object</tt>) <strong>collect</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>collect</strong>(&amp;block) 
   
 
   
@@ -825,9 +1448,10 @@ is given and <code>self</code> is true object return true.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Call the given block for each element which is yield by <code>each</code>.
-Append all values of each block together and return this value.</p>
+    <p>Call the given block for each element
+which is yield by +each+. Append all
+values of each block together and
+return this value.</p>
 
 <p>ISO 15.3.2.2.3</p>
 
@@ -837,22 +1461,24 @@ Append all values of each block together and return this value.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+57
 58
 59
 60
 61
 62
-63
-64</pre>
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 57</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">collect</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:collect</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -867,9 +1493,200 @@ Append all values of each block together and return this value.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="count-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>count</strong>(v = NONE, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   enum.count                 -&gt; int
+   enum.count(item)           -&gt; int
+   enum.count { |obj| block } -&gt; int</p>
+
+<p>Returns the number of items in +enum+ through enumeration.
+If an argument is given, the number of items in +enum+ that
+are equal to +item+ are counted.  If a block is given, it
+counts the number of elements yielding a true value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 245</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">count</span>(v=<span style="color:#036;font-weight:bold">NONE</span>, &amp;block)
+  count = <span style="color:#00D">0</span>
+  <span style="color:#080;font-weight:bold">if</span> block
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+      count += <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">if</span> block.call(*val)
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#080;font-weight:bold">if</span> v == <span style="color:#036;font-weight:bold">NONE</span>
+      <span style="color:#069">self</span>.each { count += <span style="color:#00D">1</span> }
+    <span style="color:#080;font-weight:bold">else</span>
+      <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+        count += <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">if</span> val.__svalue == v
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  count
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="cycle-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>cycle</strong>(n = nil, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    enum.cycle(n=nil) { |obj| block }  -&gt;  nil
+    enum.cycle(n=nil)                  -&gt;  an_enumerator</p>
+
+<p>Calls <i>block</i> for each element of <i>enum</i> repeatedly <em>n</em>
+ times or forever if none or +nil+ is given.  If a non-positive
+ number is given or the collection is empty, does nothing.  Returns
+ +nil+ if the loop has finished without getting interrupted.</p>
+
+<p>Enumerable#cycle saves elements in an internal array so changes
+ to <i>enum</i> after the first pass have no effect.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<pre class="code ruby"><code class="ruby">a = [<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">b</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">c</span><span style="color:#710">&quot;</span></span>]
+a.cycle { |x| puts x }  <span style="color:#777"># print, a, b, c, a, b, c,.. forever.</span>
+a.cycle(<span style="color:#00D">2</span>) { |x| puts x }  <span style="color:#777"># print, a, b, c, a, b, c.</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 576</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">cycle</span>(n=<span style="color:#069">nil</span>, &amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:cycle</span>, n) <span style="color:#080;font-weight:bold">if</span> !block &amp;&amp; n.nil?
+
+  ary = []
+  <span style="color:#080;font-weight:bold">if</span> n.nil?
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span>|*val|
+      ary.push val
+      block.call(*val)
+    <span style="color:#080;font-weight:bold">end</span>
+    loop <span style="color:#080;font-weight:bold">do</span>
+      ary.each <span style="color:#080;font-weight:bold">do</span>|e|
+        block.call(*e)
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
+
+    n = n.to_int
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span>|*val|
+      ary.push val
+    <span style="color:#080;font-weight:bold">end</span>
+    count = <span style="color:#00D">0</span>
+    <span style="color:#080;font-weight:bold">while</span> count &lt; n
+      ary.each <span style="color:#080;font-weight:bold">do</span>|e|
+        block.call(*e)
+      <span style="color:#080;font-weight:bold">end</span>
+      count += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="detect-instance_method">
   
-    - (<tt>Object</tt>) <strong>detect</strong>(ifnone = nil, &amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>detect</strong>(ifnone = nil, &amp;block) 
   
 
   
@@ -881,10 +1698,11 @@ Append all values of each block together and return this value.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Call the given block for each element which is yield by <code>each</code>.
-Return <code>ifnone</code> if no block value was true. Otherwise return the
-first block value which had was true.</p>
+    <p>Call the given block for each element
+which is yield by +each+. Return
++ifnone+ if no block value was true.
+Otherwise return the first block value
+which had was true.</p>
 
 <p>ISO 15.3.2.2.4</p>
 
@@ -894,12 +1712,15 @@ first block value which had was true.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+73
 74
 75
 76
@@ -908,11 +1729,10 @@ first block value which had was true.</p>
 79
 80
 81
-82
-83</pre>
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 73</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">detect</span>(ifnone=<span style="color:#069">nil</span>, &amp;block)
   ret = ifnone
@@ -930,9 +1750,9 @@ first block value which had was true.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="each_with_index-instance_method">
+  <h3 class="signature " id="drop-instance_method">
   
-    - (<tt>Object</tt>) <strong>each_with_index</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>drop</strong>(n) 
   
 
   
@@ -940,10 +1760,364 @@ first block value which had was true.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>call-seq:
+   enum.drop(n)               -&gt; array</p>
+
+<p>Drops first n elements from <i>enum</i>, and returns rest elements
+in an array.</p>
+
+<p>a = [1, 2, 3, 4, 5, 0]
+   a.drop(3)             #=&gt; [4, 5, 0]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 15</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">drop</span>(n)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
+  raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">attempt to drop negative size</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> n &lt; <span style="color:#00D">0</span>
+
+  n = n.to_int
+  ary = []
+  <span style="color:#069">self</span>.each {|*val| n == <span style="color:#00D">0</span> ? ary &lt;&lt; val.__svalue : n -= <span style="color:#00D">1</span> }
+  ary
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-<p>Call the given block for each element which is yield by <code>each</code>.
-Pass an index to the block which starts at 0 and increase by 1 for each
-element.</p>
+      <div class="method_details ">
+  <h3 class="signature " id="drop_while-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>drop_while</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   enum.drop_while {|arr| block }   -&gt; array
+   enum.drop_while                  -&gt; an_enumerator</p>
+
+<p>Drops elements up to, but not including, the first element for
+which the block returns +nil+ or +false+ and returns an array
+containing the remaining elements.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<p>a = [1, 2, 3, 4, 5, 0]
+   a.drop_while {|i| i &lt; 3 }   #=&gt; [3, 4, 5, 0]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 39</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">drop_while</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:drop_while</span> <span style="color:#080;font-weight:bold">unless</span> block
+
+  ary, state = [], <span style="color:#069">false</span>
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    state = <span style="color:#069">true</span> <span style="color:#080;font-weight:bold">if</span> !state <span style="color:#080;font-weight:bold">and</span> !block.call(*val)
+    ary &lt;&lt; val.__svalue <span style="color:#080;font-weight:bold">if</span> state
+  <span style="color:#080;font-weight:bold">end</span>
+  ary
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_cons-instance_method">
+  
+    - (<tt>nil</tt>) <strong>each_cons</strong>(n, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Iterates the given block for each array of consecutive <n>
+elements.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>(<span style="color:#00D">1</span>..<span style="color:#00D">10</span>).each_cons(<span style="color:#00D">3</span>) {|a| p a}
+<span style="color:#777"># outputs below</span>
+[<span style="color:#00D">1</span>, <span style="color:#00D">2</span>, <span style="color:#00D">3</span>]
+[<span style="color:#00D">2</span>, <span style="color:#00D">3</span>, <span style="color:#00D">4</span>]
+[<span style="color:#00D">3</span>, <span style="color:#00D">4</span>, <span style="color:#00D">5</span>]
+[<span style="color:#00D">4</span>, <span style="color:#00D">5</span>, <span style="color:#00D">6</span>]
+[<span style="color:#00D">5</span>, <span style="color:#00D">6</span>, <span style="color:#00D">7</span>]
+[<span style="color:#00D">6</span>, <span style="color:#00D">7</span>, <span style="color:#00D">8</span>]
+[<span style="color:#00D">7</span>, <span style="color:#00D">8</span>, <span style="color:#00D">9</span>]
+[<span style="color:#00D">8</span>, <span style="color:#00D">9</span>, <span style="color:#00D">10</span>]</code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 114</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_cons</span>(n, &amp;block)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
+  raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">invalid size</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> n &lt;= <span style="color:#00D">0</span>
+
+  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_cons</span>,n) <span style="color:#080;font-weight:bold">unless</span> block
+  ary = []
+  n = n.to_int
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    ary.shift <span style="color:#080;font-weight:bold">if</span> ary.size == n
+    ary &lt;&lt; val.__svalue
+    block.call(ary.dup) <span style="color:#080;font-weight:bold">if</span> ary.size == n
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_slice-instance_method">
+  
+    - (<tt>nil</tt>) <strong>each_slice</strong>(n, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Iterates the given block for each slice of <n> elements.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>(<span style="color:#00D">1</span>..<span style="color:#00D">10</span>).each_slice(<span style="color:#00D">3</span>) {|a| p a}
+<span style="color:#777"># outputs below</span>
+[<span style="color:#00D">1</span>, <span style="color:#00D">2</span>, <span style="color:#00D">3</span>]
+[<span style="color:#00D">4</span>, <span style="color:#00D">5</span>, <span style="color:#00D">6</span>]
+[<span style="color:#00D">7</span>, <span style="color:#00D">8</span>, <span style="color:#00D">9</span>]
+[<span style="color:#00D">10</span>]</code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 141</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_slice</span>(n, &amp;block)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
+  raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">invalid slice size</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> n &lt;= <span style="color:#00D">0</span>
+
+  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_slice</span>,n) <span style="color:#080;font-weight:bold">unless</span> block
+  ary = []
+  n = n.to_int
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    ary &lt;&lt; val.__svalue
+    <span style="color:#080;font-weight:bold">if</span> ary.size == n
+      block.call(ary)
+      ary = []
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  block.call(ary) <span style="color:#080;font-weight:bold">unless</span> ary.empty?
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each_with_index-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>each_with_index</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Call the given block for each element
+which is yield by +each+. Pass an
+index to the block which starts at 0
+and increase by 1 for each element.</p>
 
 <p>ISO 15.3.2.2.5</p>
 
@@ -953,12 +2127,15 @@ element.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+91
 92
 93
 94
@@ -967,11 +2144,10 @@ element.</p>
 97
 98
 99
-100
-101</pre>
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 91</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_with_index</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each_with_index</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -989,9 +2165,85 @@ element.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="each_with_object-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>each_with_object</strong>(obj = nil, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   enum.each_with_object(obj) { |(*args), memo_obj| ... }  -&gt;  obj
+   enum.each_with_object(obj)                              -&gt;  an_enumerator</p>
+
+<p>Iterates the given block for each element with an arbitrary
+ object given, and returns the initially given object.</p>
+
+<p>If no block is given, returns an enumerator.</p>
+
+<pre class="code ruby"><code class="ruby">(<span style="color:#00D">1</span>..<span style="color:#00D">10</span>).each_with_object([]) { |i, a| a &lt;&lt; i*<span style="color:#00D">2</span> }
+<span style="color:#777">#=&gt; [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+517
+518
+519
+520
+521
+522
+523
+524</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 517</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_with_object</span>(obj=<span style="color:#069">nil</span>, &amp;block)
+  raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong number of arguments (0 for 1)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> obj.nil?
+
+  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_with_object</span>, obj) <span style="color:#080;font-weight:bold">unless</span> block
+
+  <span style="color:#069">self</span>.each {|*val| block.call(val.__svalue, obj) }
+  obj
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="entries-instance_method">
   
-    - (<tt>Object</tt>) <strong>entries</strong> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>entries</strong> 
   
 
   
@@ -1003,8 +2255,8 @@ element.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Return an array of all elements which are yield by <code>each</code>.</p>
+    <p>Return an array of all elements which
+are yield by +each+.</p>
 
 <p>ISO 15.3.2.2.6</p>
 
@@ -1014,23 +2266,25 @@ element.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+107
 108
 109
 110
 111
 112
 113
-114
-115</pre>
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 107</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">entries</span>
   ary = []
@@ -1048,7 +2302,7 @@ element.</p>
       <div class="method_details ">
   <h3 class="signature " id="find_all-instance_method">
   
-    - (<tt>Object</tt>) <strong>find_all</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>find_all</strong>(&amp;block) 
   
 
   
@@ -1060,9 +2314,10 @@ element.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Call the given block for each element which is yield by <code>each</code>.
-Return an array which contains all elements whose block value was true.</p>
+    <p>Call the given block for each element
+which is yield by +each+. Return an array
+which contains all elements whose block
+value was true.</p>
 
 <p>ISO 15.3.2.2.8</p>
 
@@ -1072,12 +2327,15 @@ Return an array which contains all elements whose block value was true.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+129
 130
 131
 132
@@ -1085,11 +2343,10 @@ Return an array which contains all elements whose block value was true.</p>
 134
 135
 136
-137
-138</pre>
+137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 129</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">find_all</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:find_all</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -1106,9 +2363,9 @@ Return an array which contains all elements whose block value was true.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="grep-instance_method">
+  <h3 class="signature " id="find_index-instance_method">
   
-    - (<tt>Object</tt>) <strong>grep</strong>(pattern, &amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>find_index</strong>(val = NONE, &amp;block) 
   
 
   
@@ -1116,11 +2373,252 @@ Return an array which contains all elements whose block value was true.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>call-seq:
+    enum.find_index(value)          -&gt; int or nil
+    enum.find_index { |obj| block } -&gt; int or nil
+    enum.find_index                 -&gt; an_enumerator</p>
+
+<p>Compares each entry in <i>enum</i> with <em>value</em> or passes
+ to <em>block</em>.  Returns the index for the first for which the
+ evaluated value is non-false.  If no object matches, returns
+ <code>nil</code></p>
+
+<p>If neither block nor argument is given, an enumerator is returned instead.</p>
+
+<pre class="code ruby"><code class="ruby">(<span style="color:#00D">1</span>..<span style="color:#00D">10</span>).find_index  { |i| i % <span style="color:#00D">5</span> == <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">and</span> i % <span style="color:#00D">7</span> == <span style="color:#00D">0</span> }  <span style="color:#777">#=&gt; nil</span>
+(<span style="color:#00D">1</span>..<span style="color:#00D">100</span>).find_index { |i| i % <span style="color:#00D">5</span> == <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">and</span> i % <span style="color:#00D">7</span> == <span style="color:#00D">0</span> }  <span style="color:#777">#=&gt; 34</span>
+(<span style="color:#00D">1</span>..<span style="color:#00D">100</span>).find_index(<span style="color:#00D">50</span>)                                <span style="color:#777">#=&gt; 49</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 625</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">find_index</span>(val=<span style="color:#036;font-weight:bold">NONE</span>, &amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:find_index</span>, val) <span style="color:#080;font-weight:bold">if</span> !block &amp;&amp; val == <span style="color:#036;font-weight:bold">NONE</span>
+
+  idx = <span style="color:#00D">0</span>
+  <span style="color:#080;font-weight:bold">if</span> block
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*e|
+      <span style="color:#080;font-weight:bold">return</span> idx <span style="color:#080;font-weight:bold">if</span> block.call(*e)
+      idx += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*e|
+      <span style="color:#080;font-weight:bold">return</span> idx <span style="color:#080;font-weight:bold">if</span> e.__svalue == val
+      idx += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">nil</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-<p>Call the given block for each element which is yield by <code>each</code>
-and which return value was true when invoking === with
-<code>pattern</code>. Return an array with all elements or the respective
-block values.</p>
+      <div class="method_details ">
+  <h3 class="signature " id="first-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>first</strong>(n = NONE) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   enum.first       -&gt;  obj or nil
+   enum.first(n)    -&gt;  an_array</p>
+
+<p>Returns the first element, or the first +n+ elements, of the enumerable.
+If the enumerable is empty, the first form returns <code>nil</code>, and the
+second form returns an empty array.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 217</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">first</span>(n=<span style="color:#036;font-weight:bold">NONE</span>)
+  <span style="color:#080;font-weight:bold">if</span> n == <span style="color:#036;font-weight:bold">NONE</span>
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+      <span style="color:#080;font-weight:bold">return</span> val.__svalue
+    <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    a = []
+    i = <span style="color:#00D">0</span>
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+      <span style="color:#080;font-weight:bold">break</span> <span style="color:#080;font-weight:bold">if</span> n&lt;=i
+      a.push val.__svalue
+      i += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+    a
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flat_map-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>flat_map</strong>(&amp;block) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='collect_concat-instance_method'>collect_concat</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   enum.flat_map       { |obj| block } -&gt; array
+   enum.collect_concat { |obj| block } -&gt; array
+   enum.flat_map                       -&gt; an_enumerator
+   enum.collect_concat                 -&gt; an_enumerator</p>
+
+<p>Returns a new array with the concatenated results of running
+<em>block</em> once for every element in <i>enum</i>.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<p>[1, 2, 3, 4].flat_map { |e| [e, -e] } #=&gt; [1, -1, 2, -2, 3, -3, 4, -4]
+   [[1, 2], [3, 4]].flat_map { |e| e + [100] } #=&gt; [1, 2, 100, 3, 4, 100]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 277</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">flat_map</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:flat_map</span> <span style="color:#080;font-weight:bold">unless</span> block
+
+  ary = []
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*e|
+    e2 = block.call(*e)
+    <span style="color:#080;font-weight:bold">if</span> e2.respond_to? <span style="color:#A60">:each</span>
+      e2.each {|e3| ary.push(e3) }
+    <span style="color:#080;font-weight:bold">else</span>
+      ary.push(e2)
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  ary
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="grep-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>grep</strong>(pattern, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Call the given block for each element
+which is yield by +each+ and which return
+value was true when invoking === with
++pattern+. Return an array with all
+elements or the respective block values.</p>
 
 <p>ISO 15.3.2.2.9</p>
 
@@ -1130,12 +2628,15 @@ block values.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+147
 148
 149
 150
@@ -1144,11 +2645,10 @@ block values.</p>
 153
 154
 155
-156
-157</pre>
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 147</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">grep</span>(pattern, &amp;block)
   ary = []
@@ -1166,9 +2666,9 @@ block values.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="hash-instance_method">
+  <h3 class="signature " id="group_by-instance_method">
   
-    - (<tt>Object</tt>) <strong>hash</strong> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>group_by</strong>(&amp;block) 
   
 
   
@@ -1176,8 +2676,16 @@ block values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>redefine #hash 15.3.1.3.15</p>
+    <p>call-seq:
+   enum.group_by {| obj | block }  -&gt; a_hash
+   enum.group_by                   -&gt; an_enumerator</p>
+
+<p>Returns a hash, which keys are evaluated result from the
+block, and values are arrays of elements in <i>enum</i>
+corresponding to the key.</p>
+
+<pre class="code ruby"><code class="ruby">(<span style="color:#00D">1</span>..<span style="color:#00D">6</span>).group_by {|i| i%<span style="color:#00D">3</span>}   <span style="color:#777">#=&gt; {0=&gt;[3, 6], 1=&gt;[1, 4], 2=&gt;[2, 5]}</span>
+</code></pre>
 
 
   </div>
@@ -1185,12 +2693,73 @@ block values.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 169</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">group_by</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:group_by</span> <span style="color:#080;font-weight:bold">unless</span> block
+
+  h = {}
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    key = block.call(*val)
+    sv = val.__svalue
+    h.key?(key) ? (h[key] &lt;&lt; sv) : (h[key] = [sv])
+  <span style="color:#080;font-weight:bold">end</span>
+  h
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hash-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>hash</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>redefine #hash 15.3.1.3.15</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+382
 383
 384
 385
@@ -1199,11 +2768,10 @@ block values.</p>
 388
 389
 390
-391
-392</pre>
+391</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 383</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 382</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">hash</span>
   h = <span style="color:#00D">12347</span>
@@ -1235,9 +2803,9 @@ block values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Return true if at least one element which is yield by <code>each</code>
-returns a true value by invoking == with <code>obj</code>. Otherwise return
+    <p>Return true if at least one element which
+is yield by +each+ returns a true value
+by invoking == with +obj+. Otherwise return
 false.</p>
 
 <p>ISO 15.3.2.2.10</p>
@@ -1261,21 +2829,23 @@ false.</p>
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+165
 166
 167
 168
 169
-170
-171</pre>
+170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 165</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">include?</span>(obj)
   <span style="color:#069">self</span>.each{|*val|
@@ -1291,7 +2861,7 @@ false.</p>
       <div class="method_details ">
   <h3 class="signature " id="inject-instance_method">
   
-    - (<tt>Object</tt>) <strong>inject</strong>(*args, &amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>inject</strong>(*args, &amp;block) 
   
 
   
@@ -1303,10 +2873,11 @@ false.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Call the given block for each element which is yield by <code>each</code>.
-Return value is the sum of all block values. Pass to each block the current
-sum and the current element.</p>
+    <p>Call the given block for each element
+which is yield by +each+. Return value
+is the sum of all block values. Pass
+to each block the current sum and the
+current element.</p>
 
 <p>ISO 15.3.2.2.11</p>
 
@@ -1329,12 +2900,15 @@ sum and the current element.</p>
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+180
 181
 182
 183
@@ -1359,11 +2933,10 @@ sum and the current element.</p>
 202
 203
 204
-205
-206</pre>
+205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 181</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 180</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">inject</span>(*args, &amp;block)
   raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">too many arguments</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> args.size &gt; <span style="color:#00D">2</span>
@@ -1397,9 +2970,9 @@ sum and the current element.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="max-instance_method">
+  <h3 class="signature " id="lazy-instance_method">
   
-    - (<tt>Object</tt>) <strong>max</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>lazy</strong> 
   
 
   
@@ -1407,10 +2980,68 @@ sum and the current element.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>= Enumerable#lazy implementation</p>
+
+<p>Enumerable#lazy returns an instance of Enumerable::Lazy.
+You can use it just like as normal Enumerable object,
+except these methods act as &#39;lazy&#39;:</p>
+
+<ul>
+<li>map       collect</li>
+<li>select    find_all</li>
+<li>reject</li>
+<li>grep</li>
+<li>drop</li>
+<li>drop_while</li>
+<li>take_while</li>
+<li>flat_map  collect_concat</li>
+<li>zip</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-lazy/mrblib/lazy.rb', line 18</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">lazy</span>
+  <span style="color:#036;font-weight:bold">Lazy</span>.new(<span style="color:#069">self</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-<p>Return the maximum value of all elements yield by <code>each</code>. If no
-block is given &lt;=&gt; will be invoked to define this value. If a block
-is given it will be used instead.</p>
+      <div class="method_details ">
+  <h3 class="signature " id="max-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>max</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Return the maximum value of all elements
+yield by +each+. If no block is given &lt;=&gt;
+will be invoked to define this value. If
+a block is given it will be used instead.</p>
 
 <p>ISO 15.3.2.2.13</p>
 
@@ -1420,12 +3051,15 @@ is given it will be used instead.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+221
 222
 223
 224
@@ -1443,11 +3077,10 @@ is given it will be used instead.</p>
 236
 237
 238
-239
-240</pre>
+239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 222</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 221</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">max</span>(&amp;block)
   flag = <span style="color:#069">true</span>  <span style="color:#777"># 1st element?</span>
@@ -1474,9 +3107,9 @@ is given it will be used instead.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="min-instance_method">
+  <h3 class="signature " id="max_by-instance_method">
   
-    - (<tt>Object</tt>) <strong>min</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>max_by</strong>(&amp;block) 
   
 
   
@@ -1484,10 +3117,97 @@ is given it will be used instead.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>call-seq:
+   enum.max_by {|obj| block }      -&gt; obj
+   enum.max_by                     -&gt; an_enumerator</p>
+
+<p>Returns the object in <i>enum</i> that gives the maximum
+value from the given block.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<p>%w[albatross dog horse].max_by {|x| x.length }   #=&gt; &quot;albatross&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 305</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">max_by</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:max_by</span> <span style="color:#080;font-weight:bold">unless</span> block
+
+  first = <span style="color:#069">true</span>
+  max = <span style="color:#069">nil</span>
+  max_cmp = <span style="color:#069">nil</span>
+
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    <span style="color:#080;font-weight:bold">if</span> first
+      max = val.__svalue
+      max_cmp = block.call(*val)
+      first = <span style="color:#069">false</span>
+    <span style="color:#080;font-weight:bold">else</span>
+      <span style="color:#080;font-weight:bold">if</span> (cmp = block.call(*val)) &gt; max_cmp
+        max = val.__svalue
+        max_cmp = cmp
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  max
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-<p>Return the minimum value of all elements yield by <code>each</code>. If no
-block is given &lt;=&gt; will be invoked to define this value. If a block
-is given it will be used instead.</p>
+      <div class="method_details ">
+  <h3 class="signature " id="min-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>min</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Return the minimum value of all elements
+yield by +each+. If no block is given &lt;=&gt;
+will be invoked to define this value. If
+a block is given it will be used instead.</p>
 
 <p>ISO 15.3.2.2.14</p>
 
@@ -1497,12 +3217,15 @@ is given it will be used instead.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+248
 249
 250
 251
@@ -1520,11 +3243,10 @@ is given it will be used instead.</p>
 263
 264
 265
-266
-267</pre>
+266</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 249</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 248</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">min</span>(&amp;block)
   flag = <span style="color:#069">true</span>  <span style="color:#777"># 1st element?</span>
@@ -1551,9 +3273,9 @@ is given it will be used instead.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="partition-instance_method">
+  <h3 class="signature " id="min_by-instance_method">
   
-    - (<tt>Object</tt>) <strong>partition</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>min_by</strong>(&amp;block) 
   
 
   
@@ -1561,11 +3283,477 @@ is given it will be used instead.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>call-seq:
+   enum.min_by {|obj| block }      -&gt; obj
+   enum.min_by                     -&gt; an_enumerator</p>
+
+<p>Returns the object in <i>enum</i> that gives the minimum
+value from the given block.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<p>%w[albatross dog horse].min_by {|x| x.length }   #=&gt; &quot;dog&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 339</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">min_by</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:min_by</span> <span style="color:#080;font-weight:bold">unless</span> block
+
+  first = <span style="color:#069">true</span>
+  min = <span style="color:#069">nil</span>
+  min_cmp = <span style="color:#069">nil</span>
+
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    <span style="color:#080;font-weight:bold">if</span> first
+      min = val.__svalue
+      min_cmp = block.call(*val)
+      first = <span style="color:#069">false</span>
+    <span style="color:#080;font-weight:bold">else</span>
+      <span style="color:#080;font-weight:bold">if</span> (cmp = block.call(*val)) &lt; min_cmp
+        min = val.__svalue
+        min_cmp = cmp
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  min
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-<p>Call the given block for each element which is yield by <code>each</code>.
-Return an array which contains two arrays. The first array contains all
-elements whose block value was true. The second array contains all elements
-whose block value was false.</p>
+      <div class="method_details ">
+  <h3 class="signature " id="minmax-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>minmax</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    enum.minmax                  -&gt; [min, max]
+    enum.minmax { |a, b| block } -&gt; [min, max]</p>
+
+<p>Returns two elements array which contains the minimum and the
+ maximum value in the enumerable.  The first form assumes all
+ objects implement <code>Comparable</code>; the second uses the
+ block to return <em>a &lt;=&gt; b</em>.</p>
+
+<pre class="code ruby"><code class="ruby">a = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">%w(</span><span style="color:#D20">albatross dog horse</span><span style="color:#710">)</span></span>
+a.minmax                                  <span style="color:#777">#=&gt; [&quot;albatross&quot;, &quot;horse&quot;]</span>
+a.minmax { |a, b| a.length &lt;=&gt; b.length } <span style="color:#777">#=&gt; [&quot;dog&quot;, &quot;albatross&quot;]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 375</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">minmax</span>(&amp;block)
+  max = <span style="color:#069">nil</span>
+  min = <span style="color:#069">nil</span>
+  first = <span style="color:#069">true</span>
+
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    <span style="color:#080;font-weight:bold">if</span> first
+      val = val.__svalue
+      max = val
+      min = val
+      first = <span style="color:#069">false</span>
+    <span style="color:#080;font-weight:bold">else</span>
+      <span style="color:#080;font-weight:bold">if</span> block
+        max = val.__svalue <span style="color:#080;font-weight:bold">if</span> block.call(*val, max) &gt; <span style="color:#00D">0</span>
+        min = val.__svalue <span style="color:#080;font-weight:bold">if</span> block.call(*val, min) &lt; <span style="color:#00D">0</span>
+      <span style="color:#080;font-weight:bold">else</span>
+        val = val.__svalue
+        max = val <span style="color:#080;font-weight:bold">if</span> (val &lt;=&gt; max) &gt; <span style="color:#00D">0</span>
+        min = val <span style="color:#080;font-weight:bold">if</span> (val &lt;=&gt; min) &lt; <span style="color:#00D">0</span>
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  [min, max]
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="minmax_by-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>minmax_by</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    enum.minmax_by { |obj| block } -&gt; [min, max]
+    enum.minmax_by                 -&gt; an_enumerator</p>
+
+<p>Returns a two element array containing the objects in
+ <i>enum</i> that correspond to the minimum and maximum values respectively
+ from the given block.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<pre class="code ruby"><code class="ruby"><span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">%w(</span><span style="color:#D20">albatross dog horse</span><span style="color:#710">)</span></span>.minmax_by { |x| x.length }   <span style="color:#777">#=&gt; [&quot;dog&quot;, &quot;albatross&quot;]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 413</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">minmax_by</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:minmax_by</span> <span style="color:#080;font-weight:bold">unless</span> block
+
+  max = <span style="color:#069">nil</span>
+  max_cmp = <span style="color:#069">nil</span>
+  min = <span style="color:#069">nil</span>
+  min_cmp = <span style="color:#069">nil</span>
+  first = <span style="color:#069">true</span>
+
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    <span style="color:#080;font-weight:bold">if</span> first
+      max = min = val.__svalue
+      max_cmp = min_cmp = block.call(*val)
+      first = <span style="color:#069">false</span>
+   <span style="color:#080;font-weight:bold">else</span>
+      <span style="color:#080;font-weight:bold">if</span> (cmp = block.call(*val)) &gt; max_cmp
+        max = val.__svalue
+        max_cmp = cmp
+      <span style="color:#080;font-weight:bold">end</span>
+      <span style="color:#080;font-weight:bold">if</span> (cmp = block.call(*val)) &lt; min_cmp
+        min = val.__svalue
+        min_cmp = cmp
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  [min, max]
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="none?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>none?</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    enum.none? [{ |obj| block }]   -&gt; true or false</p>
+
+<p>Passes each element of the collection to the given block. The method
+ returns <code>true</code> if the block never returns <code>true</code>
+ for all elements. If the block is not given, <code>none?</code> will return
+ <code>true</code> only if none of the collection members is true.</p>
+
+<pre class="code ruby"><code class="ruby"><span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">%w(</span><span style="color:#D20">ant bear cat</span><span style="color:#710">)</span></span>.none? { |word| word.length == <span style="color:#00D">5</span> } <span style="color:#777">#=&gt; true</span>
+<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">%w(</span><span style="color:#D20">ant bear cat</span><span style="color:#710">)</span></span>.none? { |word| word.length &gt;= <span style="color:#00D">4</span> } <span style="color:#777">#=&gt; false</span>
+[].none?                                           <span style="color:#777">#=&gt; true</span>
+[<span style="color:#069">nil</span>, <span style="color:#069">false</span>].none?                                 <span style="color:#777">#=&gt; true</span>
+[<span style="color:#069">nil</span>, <span style="color:#069">true</span>].none?                                  <span style="color:#777">#=&gt; false</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 456</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">none?</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">if</span> block
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+      <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">false</span> <span style="color:#080;font-weight:bold">if</span> block.call(*val)
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+      <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">false</span> <span style="color:#080;font-weight:bold">if</span> val.__svalue
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">true</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="one?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>one?</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   enum.one? [{ |obj| block }]   -&gt; true or false</p>
+
+<p>Passes each element of the collection to the given block. The method
+returns <code>true</code> if the block returns <code>true</code>
+exactly once. If the block is not given, <code>one?</code> will return
+<code>true</code> only if exactly one of the collection members is
+true.</p>
+
+<p>%w(ant bear cat).one? { |word| word.length == 4 }  #=&gt; true
+   %w(ant bear cat).one? { |word| word.length &gt; 4 }   #=&gt; false
+   %w(ant bear cat).one? { |word| word.length &lt; 4 }   #=&gt; false
+   [nil, true, 99].one?                               #=&gt; false
+   [nil, true, false].one?                            #=&gt; true</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 486</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">one?</span>(&amp;block)
+  count = <span style="color:#00D">0</span>
+  <span style="color:#080;font-weight:bold">if</span> block
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+      count += <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">if</span> block.call(*val)
+      <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">false</span> <span style="color:#080;font-weight:bold">if</span> count &gt; <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+      count += <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">if</span> val.__svalue
+      <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">false</span> <span style="color:#080;font-weight:bold">if</span> count &gt; <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+  count == <span style="color:#00D">1</span> ? <span style="color:#069">true</span> : <span style="color:#069">false</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="partition-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>partition</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Call the given block for each element
+which is yield by +each+. Return an
+array which contains two arrays. The
+first array contains all elements
+whose block value was true. The second
+array contains all elements whose
+block value was false.</p>
 
 <p>ISO 15.3.2.2.16</p>
 
@@ -1575,12 +3763,15 @@ whose block value was false.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+284
 285
 286
 287
@@ -1591,11 +3782,10 @@ whose block value was false.</p>
 292
 293
 294
-295
-296</pre>
+295</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 285</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 284</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">partition</span>(&amp;block)
   ary_T = []
@@ -1617,7 +3807,7 @@ whose block value was false.</p>
       <div class="method_details ">
   <h3 class="signature " id="reject-instance_method">
   
-    - (<tt>Object</tt>) <strong>reject</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>reject</strong>(&amp;block) 
   
 
   
@@ -1625,10 +3815,10 @@ whose block value was false.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Call the given block for each element which is yield by <code>each</code>.
-Return an array which contains only the elements whose block value was
-false.</p>
+    <p>Call the given block for each element
+which is yield by +each+. Return an
+array which contains only the elements
+whose block value was false.</p>
 
 <p>ISO 15.3.2.2.17</p>
 
@@ -1638,22 +3828,24 @@ false.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+304
 305
 306
 307
 308
 309
-310
-311</pre>
+310</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 305</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 304</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reject</span>(&amp;block)
   ary = []
@@ -1668,9 +3860,9 @@ false.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="sort-instance_method">
+  <h3 class="signature " id="reverse_each-instance_method">
   
-    - (<tt>Object</tt>) <strong>sort</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>reverse_each</strong>(&amp;block) 
   
 
   
@@ -1678,10 +3870,86 @@ false.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>call-seq:
+    enum.reverse_each { |item| block } -&gt;  enum
+    enum.reverse_each                  -&gt;  an_enumerator</p>
+
+<p>Builds a temporary array and traverses that array in reverse order.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<pre class="code ruby"><code class="ruby"> (<span style="color:#00D">1</span>..<span style="color:#00D">3</span>).reverse_each { |v| p v }
+</code></pre>
+
+<p>produces:</p>
+
+<pre class="code ruby"><code class="ruby"> <span style="color:#00D">3</span>
+ <span style="color:#00D">2</span>
+ <span style="color:#00D">1</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 544</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reverse_each</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:reverse_each</span> <span style="color:#080;font-weight:bold">unless</span> block
+
+  ary = <span style="color:#069">self</span>.to_a
+  i = ary.size - <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">while</span> i&gt;=<span style="color:#00D">0</span>
+    block.call(ary[i])
+    i -= <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-<p>Return a sorted array of all elements which are yield by <code>each</code>.
-If no block is given &lt;=&gt; will be invoked on each element to define
-the order. Otherwise the given block will be used for sorting.</p>
+      <div class="method_details ">
+  <h3 class="signature " id="sort-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>sort</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Return a sorted array of all elements
+which are yield by +each+. If no block
+is given &lt;=&gt; will be invoked on each
+element to define the order. Otherwise
+the given block will be used for
+sorting.</p>
 
 <p>ISO 15.3.2.2.19</p>
 
@@ -1691,23 +3959,25 @@ the order. Otherwise the given block will be used for sorting.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+366
 367
 368
 369
 370
 371
 372
-373
-374</pre>
+373</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 367</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 366</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">sort</span>(&amp;block)
   ary = []
@@ -1722,14 +3992,369 @@ the order. Otherwise the given block will be used for sorting.</p>
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="sort_by-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>sort_by</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   enum.sort_by { |obj| block }   -&gt; array
+   enum.sort_by                   -&gt; an_enumerator</p>
+
+<p>Sorts <i>enum</i> using a set of keys generated by mapping the
+values in <i>enum</i> through the given block.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 191</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">sort_by</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:sort_by</span> <span style="color:#080;font-weight:bold">unless</span> block
+
+  ary = []
+  orig = []
+  <span style="color:#069">self</span>.each_with_index{|e, i|
+    orig.push(e)
+    ary.push([block.call(e), i])
+  }
+  <span style="color:#080;font-weight:bold">if</span> ary.size &gt; <span style="color:#00D">1</span>
+    __sort_sub__(ary, ::<span style="color:#036;font-weight:bold">Array</span>.new(ary.size), <span style="color:#00D">0</span>, <span style="color:#00D">0</span>, ary.size - <span style="color:#00D">1</span>) <span style="color:#080;font-weight:bold">do</span> |a,b|
+      a &lt;=&gt; b
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  ary.collect{|e,i| orig[i]}
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="take-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>take</strong>(n) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   enum.take(n)               -&gt; array</p>
+
+<p>Returns first n elements from <i>enum</i>.</p>
+
+<p>a = [1, 2, 3, 4, 5, 0]
+   a.take(3)             #=&gt; [1, 2, 3]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 59</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">take</span>(n)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
+  raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">attempt to take negative size</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> n &lt; <span style="color:#00D">0</span>
+
+  n = n.to_int
+  ary = []
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    <span style="color:#080;font-weight:bold">break</span> <span style="color:#080;font-weight:bold">if</span> ary.size &gt;= n
+    ary &lt;&lt; val.__svalue
+  <span style="color:#080;font-weight:bold">end</span>
+  ary
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="take_while-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>take_while</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   enum.take_while {|arr| block }   -&gt; array
+   enum.take_while                  -&gt; an_enumerator</p>
+
+<p>Passes elements to the block until the block returns +nil+ or +false+,
+then stops iterating and returns an array of all prior elements.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+<pre class="code ruby"><code class="ruby">a = [<span style="color:#00D">1</span>, <span style="color:#00D">2</span>, <span style="color:#00D">3</span>, <span style="color:#00D">4</span>, <span style="color:#00D">5</span>, <span style="color:#00D">0</span>]
+a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="color:#777">#=&gt; [1, 2]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 85</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">take_while</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:take_while</span> <span style="color:#080;font-weight:bold">unless</span> block
+
+  ary = []
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    <span style="color:#080;font-weight:bold">return</span> ary <span style="color:#080;font-weight:bold">unless</span> block.call(*val)
+    ary &lt;&lt; val.__svalue
+  <span style="color:#080;font-weight:bold">end</span>
+  ary
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_h-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_h</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    enum.to_h  -&gt; hash</p>
+
+<p>Returns the result of interpreting <i>enum</i> as a list of
+ <tt>[key, value]</tt> pairs.</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#A60"><span style="color:#740">%i[</span><span style="color:#A60">hello world</span><span style="color:#740">]</span></span>.each_with_index.to_h
+  <span style="color:#777"># =&gt; {:hello =&gt; 0, :world =&gt; 1}</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 684</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_h</span>
+  h = {}
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*v|
+    v = v.__svalue
+    raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong element type </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>v.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> (expected Array)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> v.is_a? <span style="color:#036;font-weight:bold">Array</span>
+    raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">element has wrong array length (expected 2, was </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>v.size<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> v.size != <span style="color:#00D">2</span>
+    h[v[<span style="color:#00D">0</span>]] = v[<span style="color:#00D">1</span>]
+  <span style="color:#080;font-weight:bold">end</span>
+  h
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="zip-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>zip</strong>(*arg) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>use Enumerator to use infinite sequence</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 655</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">zip</span>(*arg)
+  ary = []
+  arg = arg.map{|a|a.to_a}
+  i = <span style="color:#00D">0</span>
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
+    a = []
+    a.push(val.__svalue)
+    idx = <span style="color:#00D">0</span>
+    <span style="color:#080;font-weight:bold">while</span> idx &lt; arg.size
+      a.push(arg[idx][i])
+      idx += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+    ary.push(a)
+    i += <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  ary
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:18 2015 by
+  Generated on Sun Jan 17 01:22:59 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

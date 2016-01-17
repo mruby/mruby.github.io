@@ -81,8 +81,7 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    
-<p>MRuby Value definition functions and macros.</p>
+    <p>MRuby Value definition functions and macros.</p>
 
 
   </div>
@@ -90,7 +89,9 @@
 <div class="tags">
   
 
-</div>Included heaers
+</div>
+
+<!-- TODO: Included headers -->
 
   <h2>
     Function Summary
@@ -162,8 +163,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a float in Ruby.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a float in Ruby.</p>
 </div></span>
   
 </li>
@@ -181,8 +181,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a fixnum in Ruby.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a fixnum in Ruby.</p>
 </div></span>
   
 </li>
@@ -200,8 +199,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Get a nil mrb_value object.</p>
+    <span class="summary_desc"><div class='inline'><p>Get a nil mrb_value object.</p>
 </div></span>
   
 </li>
@@ -219,8 +217,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns false in Ruby.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns false in Ruby.</p>
 </div></span>
   
 </li>
@@ -238,8 +235,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns true in Ruby.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns true in Ruby.</p>
 </div></span>
   
 </li>
@@ -267,6 +263,21 @@
       <dd><pre class="code"></pre></dd>
     
       <dt id="MRB_INT_MAX-define" class=""><small>#define</small> MRB_INT_MAX
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_PRIo-define" class=""><small>#define</small> MRB_PRIo
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_PRId-define" class=""><small>#define</small> MRB_PRId
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_PRIx-define" class=""><small>#define</small> MRB_PRIx
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -341,11 +352,6 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_bool-define" class=""><small>#define</small> mrb_bool
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
       <dt id="mrb_float_p-define" class=""><small>#define</small> mrb_float_p
         
       </dt>
@@ -393,6 +399,78 @@
     
   </dl>
 
+
+  <h2>Typedef Summary</h2>
+  <dl class="constants">
+    
+      <dt id="mrb_sym-typedef" class=""><small>typedef</small> mrb_sym
+        <div class="docstring">
+  <div class="discussion">
+    <p>MRuby Value definition functions and macros.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_bool-typedef" class=""><small>typedef</small> mrb_bool
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_int-typedef" class=""><small>typedef</small> mrb_int
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_float-typedef" class=""><small>typedef</small> mrb_float
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_value-typedef" class=""><small>typedef</small> mrb_value
+        <div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This typedef is abstract.</strong>
+  <div class='inline'></div>
+</div>
+<p>MRuby value boxing.</p>
+
+<p>Actual implementation depends on configured boxing type.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="mruby_2Fboxing_no.h.html" title="mruby/boxing_no.h (header)">Default boxing representation</a></span></li>
+    
+      <li><span class='object_link'><a href="mruby_2Fboxing_word.h.html" title="mruby/boxing_word.h (header)">Word representation</a></span></li>
+    
+      <li><span class='object_link'><a href="mruby_2Fboxing_nan.h.html" title="mruby/boxing_nan.h (header)">Boxed double representation</a></span></li>
+    
+  </ul>
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+  </dl>
+
 <div id="functions_details" class="method_details_list">
   <h2>Function Details</h2>
 
@@ -435,8 +513,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a float in Ruby.</p>
+    <p>Returns a float in Ruby.</p>
 
 
   </div>
@@ -445,6 +522,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -456,8 +535,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a fixnum in Ruby.</p>
+    <p>Returns a fixnum in Ruby.</p>
 
 
   </div>
@@ -466,6 +544,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -477,8 +557,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Get a nil mrb_value object.</p>
+    <p>Get a nil mrb_value object.</p>
 
 
   </div>
@@ -496,8 +575,7 @@
       
       
         
-        <div class='inline'>
-<p>nil mrb_value object reference.</p>
+        <div class='inline'><p>nil mrb_value object reference.</p>
 </div>
       
     </li>
@@ -505,6 +583,8 @@
 </ul>
 
 </div>
+
+
 </div>
 
   
@@ -516,8 +596,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns false in Ruby.</p>
+    <p>Returns false in Ruby.</p>
 
 
   </div>
@@ -526,6 +605,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -537,8 +618,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns true in Ruby.</p>
+    <p>Returns true in Ruby.</p>
 
 
   </div>
@@ -547,6 +627,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -554,9 +636,9 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:20 2015 by
+  Generated on Sun Jan 17 01:23:07 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>
