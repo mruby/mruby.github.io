@@ -81,8 +81,7 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    
-<p>String class</p>
+    <p>String class</p>
 
 
   </div>
@@ -90,7 +89,9 @@
 <div class="tags">
   
 
-</div>Included heaers
+</div>
+
+<!-- TODO: Included headers -->
 
   <h2>
     Function Summary
@@ -145,8 +146,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Adds two strings together.</p>
+    <span class="summary_desc"><div class='inline'><p>Adds two strings together.</p>
 </div></span>
   
 </li>
@@ -164,8 +164,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Converts pointer into a Ruby string.</p>
+    <span class="summary_desc"><div class='inline'><p>Converts pointer into a Ruby string.</p>
 </div></span>
   
 </li>
@@ -183,8 +182,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns an object as a Ruby string.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns an object as a Ruby string.</p>
 </div></span>
   
 </li>
@@ -202,8 +200,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Resizes the string&#39;s length.</p>
+    <span class="summary_desc"><div class='inline'><p>Resizes the string&#39;s length.</p>
 </div></span>
   
 </li>
@@ -221,8 +218,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a sub string.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a sub string.</p>
 </div></span>
   
 </li>
@@ -240,8 +236,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a Ruby string type.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a Ruby string type.</p>
 </div></span>
   
 </li>
@@ -283,6 +278,23 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_string_value_len-function" title="mrb_string_value_len">mrb_int <strong>mrb_string_value_len</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_str_dup-function" title="mrb_str_dup">mrb_value <strong>mrb_str_dup</strong>(mrb_state *, mrb_value)</a>
 
     
@@ -293,8 +305,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Duplicates a string object.</p>
+    <span class="summary_desc"><div class='inline'><p>Duplicates a string object.</p>
 </div></span>
   
 </li>
@@ -312,8 +323,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a symbol from a passed in string.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a symbol from a passed in string.</p>
 </div></span>
   
 </li>
@@ -365,8 +375,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a converted string type.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a converted string type.</p>
 </div></span>
   
 </li>
@@ -384,8 +393,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns true if the strings match and false if the strings don&#39;t match.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns true if the strings match and false if the strings don&#39;t match.</p>
 </div></span>
   
 </li>
@@ -403,8 +411,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a concated string comprised of a Ruby string and a C string.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a concated string comprised of a Ruby string and a C string.</p>
 </div></span>
   
 </li>
@@ -422,8 +429,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a concated string comprised of a Ruby string and a C string.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a concated string comprised of a Ruby string and a C string.</p>
 </div></span>
   
 </li>
@@ -458,8 +464,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Adds str2 to the end of str1.</p>
+    <span class="summary_desc"><div class='inline'><p>Adds str2 to the end of str1.</p>
 </div></span>
   
 </li>
@@ -477,8 +482,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns 0 if both Ruby strings are equal.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns 0 if both Ruby strings are equal.</p>
 </div></span>
   
 </li>
@@ -496,8 +500,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a C string from a Ruby string.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a newly allocated C string from a Ruby string.</p>
 </div></span>
   
 </li>
@@ -612,8 +615,7 @@
       <dt id="mrb_str_ptr-define" class=""><small>#define</small> mrb_str_ptr
         <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a pointer from a Ruby string</p>
+    <p>Returns a pointer from a Ruby string</p>
 
 
   </div>
@@ -622,6 +624,8 @@
   
 
 </div>
+
+
       </dt>
       <dd><pre class="code"></pre></dd>
     
@@ -693,8 +697,7 @@
       <dt id="mrb_str_cat2-define" class=""><small>#define</small> mrb_str_cat2
         <div class="docstring">
   <div class="discussion">
-    
-<p>For backward compatibility</p>
+    <p>For backward compatibility</p>
 
 
   </div>
@@ -703,6 +706,8 @@
   
 
 </div>
+
+
       </dt>
       <dd><pre class="code"></pre></dd>
     
@@ -717,6 +722,7 @@
       <dd><pre class="code"></pre></dd>
     
   </dl>
+
 
 <div id="functions_details" class="method_details_list">
   <h2>Function Details</h2>
@@ -750,8 +756,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Adds two strings together.</p>
+    <p>Adds two strings together.</p>
 
 
   </div>
@@ -760,6 +765,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -771,8 +778,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Converts pointer into a Ruby string.</p>
+    <p>Converts pointer into a Ruby string.</p>
 
 
   </div>
@@ -781,6 +787,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -792,8 +800,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns an object as a Ruby string.</p>
+    <p>Returns an object as a Ruby string.</p>
 
 
   </div>
@@ -802,6 +809,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -813,8 +822,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Resizes the string&#39;s length.</p>
+    <p>Resizes the string&#39;s length.</p>
 
 
   </div>
@@ -823,6 +831,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -834,8 +844,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a sub string.</p>
+    <p>Returns a sub string.</p>
 
 
   </div>
@@ -844,6 +853,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -855,8 +866,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a Ruby string type.</p>
+    <p>Returns a Ruby string type.</p>
 
 
   </div>
@@ -865,6 +875,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -889,6 +901,16 @@
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_string_value_len-function">
+  mrb_int <strong>mrb_string_value_len</strong>(mrb_state * mrb, mrb_value str)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_str_dup-function">
   mrb_value <strong>mrb_str_dup</strong>(mrb_state * mrb, mrb_value str)
 
@@ -896,8 +918,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Duplicates a string object.</p>
+    <p>Duplicates a string object.</p>
 
 
   </div>
@@ -906,6 +927,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -917,8 +940,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a symbol from a passed in string.</p>
+    <p>Returns a symbol from a passed in string.</p>
 
 
   </div>
@@ -927,6 +949,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -958,8 +982,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a converted string type.</p>
+    <p>Returns a converted string type.</p>
 
 
   </div>
@@ -968,6 +991,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -979,8 +1004,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns true if the strings match and false if the strings don&#39;t match.</p>
+    <p>Returns true if the strings match and false if the strings don&#39;t match.</p>
 
 
   </div>
@@ -989,6 +1013,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -1000,8 +1026,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a concated string comprised of a Ruby string and a C string.</p>
+    <p>Returns a concated string comprised of a Ruby string and a C string.</p>
 
 
   </div>
@@ -1017,6 +1042,8 @@
   </ul>
 
 </div>
+
+
 </div>
 
   
@@ -1028,8 +1055,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a concated string comprised of a Ruby string and a C string.</p>
+    <p>Returns a concated string comprised of a Ruby string and a C string.</p>
 
 
   </div>
@@ -1045,6 +1071,8 @@
   </ul>
 
 </div>
+
+
 </div>
 
   
@@ -1066,8 +1094,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Adds str2 to the end of str1.</p>
+    <p>Adds str2 to the end of str1.</p>
 
 
   </div>
@@ -1076,6 +1103,8 @@
   
 
 </div>
+
+
 </div>
 
   
@@ -1087,10 +1116,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns 0 if both Ruby strings are equal. Returns a value &lt; 0 if Ruby
-str1 is less than Ruby str2. Returns a value &gt; 0 if Ruby str2 is greater
-than Ruby str1.</p>
+    <p>Returns 0 if both Ruby strings are equal. Returns a value &lt; 0 if Ruby str1 is less than Ruby str2. Returns a value &gt; 0 if Ruby str2 is greater than Ruby str1.</p>
 
 
   </div>
@@ -1099,6 +1125,8 @@ than Ruby str1.</p>
   
 
 </div>
+
+
 </div>
 
   
@@ -1110,16 +1138,78 @@ than Ruby str1.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a C string from a Ruby string.</p>
+    <p>Returns a newly allocated C string from a Ruby string.
+This is an utility function to pass a Ruby string to C library functions.</p>
+
+<ul>
+<li>Returned string does not contain any NUL characters (but terminator).</li>
+<li>It raises an ArgumentError exception if Ruby string contains
+NUL characters.</li>
+<li>Retured string will be freed automatically on next GC.</li>
+<li>Caller can modify returned string without affecting Ruby string
+(e.g. it can be used for mkstemp(3)).</li>
+</ul>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state *</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string. Must be an instance of String.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>char *</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A newly allocated C string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
+
+
 </div>
 
   
@@ -1127,9 +1217,9 @@ than Ruby str1.</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:21 2015 by
+  Generated on Sun Jan 17 01:23:08 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

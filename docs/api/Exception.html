@@ -87,10 +87,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li>Object</li>
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Exception</li>
           
@@ -115,8 +115,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>15.2.22</p>
+    <p>15.2.22</p>
 
 
   </div>
@@ -124,7 +123,9 @@
 <div class="tags">
   
 
-</div><div id="subclasses">
+</div>
+
+<div id="subclasses">
   <h2>Direct Known Subclasses</h2>
   <p class="children"><span class='object_link'><a href="ScriptError.html" title="ScriptError (class)">ScriptError</a></span>, <span class='object_link'><a href="StandardError.html" title="StandardError (class)">StandardError</a></span></p>
 </div>
@@ -182,8 +183,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>call-seq:    exc.exception(string)  -&gt;  an_exception or exc.</p>
+    <span class="summary_desc"><div class='inline'><p>call-seq:    exc.exception(string)  -&gt;  an_exception or exc.</p>
 </div></span>
   
 </li>
@@ -208,8 +208,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Construct a new Exception object, optionally passing in  a message.</p>
+    <span class="summary_desc"><div class='inline'><p>Construct a new Exception object, optionally passing in  a message.</p>
 </div></span>
   
 </li>
@@ -232,9 +231,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns this exception&#39;s file name, line number, message and class
-name.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns this exception&#39;s file name, line number, message and class name.</p>
 </div></span>
   
 </li>
@@ -257,9 +254,30 @@ name.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the result of invoking exception.to_s.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the result of invoking exception.to_s.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_backtrace-instance_method" title="#set_backtrace (instance method)">- (Object) <strong>set_backtrace</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -281,9 +299,7 @@ name.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns exception&#39;s message (or the name of the exception if no message
-is set).</p>
+    <span class="summary_desc"><div class='inline'><p>Returns exception&#39;s message (or the name of the exception if no message is set).</p>
 </div></span>
   
 </li>
@@ -306,10 +322,8 @@ is set).</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Construct a new Exception object, optionally passing in</p>
-
-<pre class="code"><code class="">a message.</code></pre>
+    <p>Construct a new Exception object, optionally passing in
+ a message.</p>
 
 
   </div>
@@ -328,7 +342,11 @@ is set).</p>
 </div>
 
 
-</div><table class="source_code">
+
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -373,19 +391,75 @@ exc_initialize(mrb_state *mrb, mrb_value exc)
       <div class="method_details first">
   <h3 class="signature first" id="backtrace-instance_method">
   
-    - (<tt>Object</tt>) <strong>backtrace</strong> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>backtrace</strong> 
   
 
   
 
   
-</h3>
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 180</span>
+
+static mrb_value
+exc_get_backtrace(mrb_state *mrb, mrb_value exc)
+{
+  mrb_sym attr_name;
+  mrb_value backtrace;
+
+  attr_name = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">backtrace</span><span style="color:#710">&quot;</span></span>);
+  backtrace = mrb_iv_get(mrb, exc, attr_name);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(backtrace)) {
+    <span style="color:#080;font-weight:bold">if</span> (mrb_obj_ptr(exc) == mrb-&gt;backtrace.exc &amp;&amp; mrb-&gt;backtrace.n &gt; <span style="color:#00D">0</span>) {
+      backtrace = mrb_restore_backtrace(mrb);
+      mrb-&gt;backtrace.n = <span style="color:#00D">0</span>;
+      mrb-&gt;backtrace.exc = <span style="color:#00D">0</span>;
+    }
+    <span style="color:#080;font-weight:bold">else</span> {
+      backtrace = mrb_exc_backtrace(mrb, exc);
+    }
+    mrb_iv_set(mrb, exc, attr_name, backtrace);
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> backtrace;
+}</pre>
+    </td>
+  </tr>
+</table>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="exception-instance_method">
   
-    - (<tt>Object</tt>) <strong>exception</strong> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>exception</strong> 
   
 
   
@@ -393,14 +467,13 @@ exc_initialize(mrb_state *mrb, mrb_value exc)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>call-seq:</p>
+    <p>call-seq:
+   exc.exception(string)  -&gt;  an_exception or exc</p>
 
-<pre class="code"><code class="">exc.exception(string)  -&gt;  an_exception <span style="color:#080;font-weight:bold">or</span> exc</code></pre>
-
-<p>With no argument, or if the argument is the same as the receiver, return
-the receiver. Otherwise, create a new exception object of the same class as
-the receiver, but with a message equal to <code>string.to_str</code>.</p>
+<p>With no argument, or if the argument is the same as the receiver,
+return the receiver. Otherwise, create a new
+exception object of the same class as the receiver, but with a
+message equal to <code>string.to_str</code>.</p>
 
 
   </div>
@@ -408,7 +481,9 @@ the receiver, but with a message equal to <code>string.to_str</code>.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -464,10 +539,10 @@ exc_exception(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns this exception&#39;s file name, line number, message and class
-name. If file name or line number is not set, returns message and class
-name.</p>
+    <p>Returns this exception&#39;s file name, line number,
+message and class name.
+If file name or line number is not set,
+returns message and class name.</p>
 
 
   </div>
@@ -499,7 +574,11 @@ name.</p>
 </div>
 
 
-</div><table class="source_code">
+
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -611,10 +690,10 @@ exc_inspect(mrb_state *mrb, mrb_value exc)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the result of invoking <code>exception.to_s</code>. Normally this
-returns the exception&#39;s message or name. By supplying a to_str method,
-exceptions are agreeing to be used where Strings are expected.</p>
+    <p>Returns the result of invoking <code>exception.to_s</code>.
+Normally this returns the exception&#39;s message or name. By
+supplying a to_str method, exceptions are agreeing to
+be used where Strings are expected.</p>
 
 
   </div>
@@ -646,7 +725,11 @@ exceptions are agreeing to be used where Strings are expected.</p>
 </div>
 
 
-</div><table class="source_code">
+
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -672,6 +755,50 @@ exc_message(mrb_state *mrb, mrb_value exc)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="set_backtrace-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>set_backtrace</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 203</span>
+
+static mrb_value
+exc_set_backtrace(mrb_state *mrb, mrb_value exc)
+{
+  mrb_value backtrace;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;backtrace);
+  mrb_iv_set(mrb, exc, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">backtrace</span><span style="color:#710">&quot;</span></span>), backtrace);
+
+  <span style="color:#080;font-weight:bold">return</span> backtrace;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
     - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>to_s</strong> 
@@ -682,9 +809,8 @@ exc_message(mrb_state *mrb, mrb_value exc)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns exception&#39;s message (or the name of the exception if no message
-is set).</p>
+    <p>Returns exception&#39;s message (or the name of the exception if
+no message is set).</p>
 
 
   </div>
@@ -716,7 +842,11 @@ is set).</p>
 </div>
 
 
-</div><table class="source_code">
+
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -766,9 +896,9 @@ exc_to_s(mrb_state *mrb, mrb_value exc)
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:19 2015 by
+  Generated on Sun Jan 17 01:23:01 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

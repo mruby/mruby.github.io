@@ -99,14 +99,7 @@ changes <code>struct</code> layout and cause memory access error when C and othe
 
 <h2>stdio setting.</h2>
 
-<p><code>ENABLE_STDIO</code></p>
-
-<ul>
-<li>Will be defined automatically if <code>DISABLE_STDIO</code> isn&#39;t defined.</li>
-<li>Uses <code>&lt;stdio.h&gt;</code> functions.</li>
-</ul>
-
-<p><code>DISABLE_STDIO</code></p>
+<p><code>MRB_DISABLE_STDIO</code></p>
 
 <ul>
 <li>When defined <code>&lt;stdio.h&gt;</code> functions won&#39;t be used.</li>
@@ -121,19 +114,13 @@ changes <code>struct</code> layout and cause memory access error when C and othe
 
 <h2>Debug macros.</h2>
 
-<p><code>ENABLE_DEBUG</code></p>
+<p><code>MRB_ENABLE_DEBUG_HOOK</code></p>
 
 <ul>
 <li>When defined code fetch hook and debug OP hook will be enabled.</li>
 <li>When using any of the hook set function pointer <code>code_fetch_hook</code> and/or <code>debug_op_hook</code> of <code>mrb_state</code>.</li>
 <li>Fetch hook will be called before any OP.</li>
 <li>Debug OP hook will be called when dispatching <code>OP_DEBUG</code>.</li>
-</ul>
-
-<p><code>DISABLE_DEBUG</code></p>
-
-<ul>
-<li>Will be define automatically if <code>ENABLE_DEBUG</code> isn&#39;t defined.</li>
 </ul>
 
 <p><code>MRB_DEBUG</code></p>
@@ -317,6 +304,13 @@ largest value of required alignment.</li>
 
 <h2>Other configuration.</h2>
 
+<p><code>MRB_UTF8_STRING</code></p>
+
+<ul>
+<li>Adds UTF-8 encoding support to character-oriented String instance methods.</li>
+<li>If it isn&#39;t defined, they only support the US-ASCII encoding.</li>
+</ul>
+
 <p><code>MRB_FUNCALL_ARGC_MAX</code></p>
 
 <ul>
@@ -342,9 +336,9 @@ largest value of required alignment.</li>
 </div></div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:17 2015 by
+  Generated on Sun Jan 17 01:22:57 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

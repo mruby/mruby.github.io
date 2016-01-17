@@ -81,8 +81,7 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Uncommon memory management stuffs.</p>
+    <p>Uncommon memory management stuffs.</p>
 
 
   </div>
@@ -90,7 +89,9 @@
 <div class="tags">
   
 
-</div>Included heaers
+</div>
+
+<!-- TODO: Included headers -->
 
   <h2>
     Function Summary
@@ -101,7 +102,24 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_free_context-function" title="mrb_free_context">void <strong>mrb_free_context</strong>(mrb_state *, struct mrb_context *)</a>
+    <a href="#mrb_free_context-function" title="mrb_free_context">void <strong>mrb_free_context</strong>(struct mrb_state *, struct mrb_context *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_object_dead_p-function" title="mrb_object_dead_p">mrb_bool <strong>mrb_object_dead_p</strong>(struct mrb_state *, struct RBasic *)</a>
 
     
   </span>
@@ -127,7 +145,13 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="MRB_GC_ARENA_SIZE-define" class=""><small>#define</small> MRB_GC_ARENA_SIZE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
   </dl>
+
 
 <div id="functions_details" class="method_details_list">
   <h2>Function Details</h2>
@@ -135,7 +159,17 @@
   
     <div class="method_details first">
   <h3 class="signature first" id="mrb_free_context-function">
-  void <strong>mrb_free_context</strong>(mrb_state * mrb, struct mrb_context * c)
+  void <strong>mrb_free_context</strong>(struct mrb_state * mrb, struct mrb_context * c)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_object_dead_p-function">
+  mrb_bool <strong>mrb_object_dead_p</strong>(struct mrb_state * mrb, struct RBasic * object)
 
   
 </h3>
@@ -147,9 +181,9 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:20 2015 by
+  Generated on Sun Jan 17 01:23:07 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

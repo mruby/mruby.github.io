@@ -81,8 +81,7 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    
-<p>khash definitions used in mruby&#39;s hash table.</p>
+    <p>khash definitions used in mruby&#39;s hash table.</p>
 
 
   </div>
@@ -90,7 +89,9 @@
 <div class="tags">
   
 
-</div>Included heaers
+</div>
+
+<!-- TODO: Included headers -->
 
 
   <h2>Define Summary</h2>
@@ -149,13 +150,12 @@
       <dt id="KHASH_DECLARE-define" class=""><small>#define</small> KHASH_DECLARE
         <div class="docstring">
   <div class="discussion">
-    
-<p>declare struct kh_xxx and kh_xxx_funcs</p>
+    <p>declare struct kh_xxx and kh_xxx_funcs</p>
 
-<pre class="code ruby"><code class="ruby"><span style="color:#606">name</span>: hash name
-<span style="color:#606">khkey_t</span>: key data type
-<span style="color:#606">khval_t</span>: value data type
-<span style="color:#606">kh_is_map</span>: (<span style="color:#00D">0</span>: hash set / <span style="color:#00D">1</span>: hash map)</code></pre>
+<p>name: hash name
+  khkey_t: key data type
+  khval_t: value data type
+  kh_is_map: (0: hash set / 1: hash map)</p>
 
 
   </div>
@@ -164,21 +164,22 @@
   
 
 </div>
+
+
       </dt>
       <dd><pre class="code"></pre></dd>
     
       <dt id="KHASH_DEFINE-define" class=""><small>#define</small> KHASH_DEFINE
         <div class="docstring">
   <div class="discussion">
-    
-<p>define kh_xxx_funcs</p>
+    <p>define kh_xxx_funcs</p>
 
-<pre class="code ruby"><code class="ruby"><span style="color:#606">name</span>: hash name
-<span style="color:#606">khkey_t</span>: key data type
-<span style="color:#606">khval_t</span>: value data type
-<span style="color:#606">kh_is_map</span>: (<span style="color:#00D">0</span>: hash set / <span style="color:#00D">1</span>: hash map)
-<span style="color:#606">__hash_func</span>: hash function
-<span style="color:#606">__hash_equal</span>: hash comparation function</code></pre>
+<p>name: hash name
+  khkey_t: key data type
+  khval_t: value data type
+  kh_is_map: (0: hash set / 1: hash map)
+  _<em>hash_func: hash function
+  __hash</em>equal: hash comparation function</p>
 
 
   </div>
@@ -187,6 +188,8 @@
   
 
 </div>
+
+
       </dt>
       <dd><pre class="code"></pre></dd>
     
@@ -317,6 +320,39 @@
     
   </dl>
 
+
+  <h2>Typedef Summary</h2>
+  <dl class="constants">
+    
+      <dt id="khint_t-typedef" class=""><small>typedef</small> khint_t
+        <div class="docstring">
+  <div class="discussion">
+    <p>khash definitions used in mruby&#39;s hash table.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="khiter_t-typedef" class=""><small>typedef</small> khiter_t
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="kh_cstr_t-typedef" class=""><small>typedef</small> kh_cstr_t
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+  </dl>
+
 <div id="functions_details" class="method_details_list">
   <h2>Function Details</h2>
 
@@ -325,9 +361,9 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:20 2015 by
+  Generated on Sun Jan 17 01:23:08 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

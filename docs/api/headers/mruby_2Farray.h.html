@@ -81,8 +81,7 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Array class</p>
+    <p>Array class</p>
 
 
   </div>
@@ -90,7 +89,9 @@
 <div class="tags">
   
 
-</div>Included heaers
+</div>
+
+<!-- TODO: Included headers -->
 
   <h2>
     Function Summary
@@ -145,8 +146,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Initializes a new array.</p>
+    <span class="summary_desc"><div class='inline'><p>Initializes a new array.</p>
 </div></span>
   
 </li>
@@ -232,8 +232,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Pushes value into array.</p>
+    <span class="summary_desc"><div class='inline'><p>Pushes value into array.</p>
 </div></span>
   
 </li>
@@ -251,8 +250,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Pops the last element from the array.</p>
+    <span class="summary_desc"><div class='inline'><p>Pops the last element from the array.</p>
 </div></span>
   
 </li>
@@ -270,8 +268,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a reference to an element of the array on the given index.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a reference to an element of the array on the given index.</p>
 </div></span>
   
 </li>
@@ -289,8 +286,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Sets a value on an array at the given index.</p>
+    <span class="summary_desc"><div class='inline'><p>Sets a value on an array at the given index.</p>
 </div></span>
   
 </li>
@@ -490,6 +486,7 @@
     
   </dl>
 
+
 <div id="functions_details" class="method_details_list">
   <h2>Function Details</h2>
 
@@ -522,12 +519,11 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Initializes a new array.</p>
+    <p>Initializes a new array.</p>
 
 <p>Equivalent to:</p>
 
-<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">Array</span>.new
+<pre class="code ruby"><code class="ruby"> <span style="color:#036;font-weight:bold">Array</span>.new
 </code></pre>
 
 
@@ -547,8 +543,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The mruby state reference.</p>
+        <div class='inline'><p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -566,8 +561,7 @@
       
       
         
-        <div class='inline'>
-<p>The initialized array</p>
+        <div class='inline'><p>The initialized array</p>
 </div>
       
     </li>
@@ -575,6 +569,8 @@
 </ul>
 
 </div>
+
+
 </div>
 
   
@@ -626,12 +622,11 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Pushes value into array.</p>
+    <p>Pushes value into array.</p>
 
 <p>Equivalent to:</p>
 
-<pre class="code ruby"><code class="ruby">ary &lt;&lt; value
+<pre class="code ruby"><code class="ruby"> ary &lt;&lt; value
 </code></pre>
 
 
@@ -651,8 +646,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The mruby state reference.</p>
+        <div class='inline'><p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -667,8 +661,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The array in which the value will be pushed</p>
+        <div class='inline'><p>The array in which the value will be pushed</p>
 </div>
       
     </li>
@@ -683,8 +676,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The value to be pushed into array</p>
+        <div class='inline'><p>The value to be pushed into array</p>
 </div>
       
     </li>
@@ -693,6 +685,8 @@
 
 
 </div>
+
+
 </div>
 
   
@@ -704,12 +698,11 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Pops the last element from the array.</p>
+    <p>Pops the last element from the array.</p>
 
 <p>Equivalent to:</p>
 
-<pre class="code ruby"><code class="ruby">ary.pop
+<pre class="code ruby"><code class="ruby"> ary.pop
 </code></pre>
 
 
@@ -729,8 +722,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The mruby state reference.</p>
+        <div class='inline'><p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -745,8 +737,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The array from which the value will be poped.</p>
+        <div class='inline'><p>The array from which the value will be poped.</p>
 </div>
       
     </li>
@@ -764,8 +755,7 @@
       
       
         
-        <div class='inline'>
-<p>The poped value.</p>
+        <div class='inline'><p>The poped value.</p>
 </div>
       
     </li>
@@ -773,6 +763,8 @@
 </ul>
 
 </div>
+
+
 </div>
 
   
@@ -784,12 +776,11 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Returns a reference to an element of the array on the given index.</p>
+    <p>Returns a reference to an element of the array on the given index.</p>
 
 <p>Equivalent to:</p>
 
-<pre class="code ruby"><code class="ruby">ary[n]
+<pre class="code ruby"><code class="ruby"> ary[n]
 </code></pre>
 
 
@@ -809,8 +800,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The mruby state reference.</p>
+        <div class='inline'><p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -825,8 +815,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The target array.</p>
+        <div class='inline'><p>The target array.</p>
 </div>
       
     </li>
@@ -841,8 +830,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The array index being referenced</p>
+        <div class='inline'><p>The array index being referenced</p>
 </div>
       
     </li>
@@ -860,8 +848,7 @@
       
       
         
-        <div class='inline'>
-<p>The referenced value.</p>
+        <div class='inline'><p>The referenced value.</p>
 </div>
       
     </li>
@@ -869,6 +856,8 @@
 </ul>
 
 </div>
+
+
 </div>
 
   
@@ -880,12 +869,11 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Sets a value on an array at the given index</p>
+    <p>Sets a value on an array at the given index</p>
 
 <p>Equivalent to:</p>
 
-<pre class="code ruby"><code class="ruby">ary[n] = val
+<pre class="code ruby"><code class="ruby"> ary[n] = val
 </code></pre>
 
 
@@ -905,8 +893,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The mruby state reference.</p>
+        <div class='inline'><p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -921,8 +908,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The target array.</p>
+        <div class='inline'><p>The target array.</p>
 </div>
       
     </li>
@@ -937,8 +923,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The array index being referenced.</p>
+        <div class='inline'><p>The array index being referenced.</p>
 </div>
       
     </li>
@@ -953,8 +938,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The value being setted.</p>
+        <div class='inline'><p>The value being setted.</p>
 </div>
       
     </li>
@@ -963,6 +947,8 @@
 
 
 </div>
+
+
 </div>
 
   
@@ -1050,9 +1036,9 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:20 2015 by
+  Generated on Sun Jan 17 01:23:08 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

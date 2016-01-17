@@ -94,7 +94,7 @@
   
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">mrblib/kernel.rb<span class="defines">,<br />
-  src/kernel.c</span>
+  src/kernel.c,<br /> mrbgems/mruby-sprintf/src/kernel.c,<br /> mrbgems/mruby-print/mrblib/print.rb,<br /> mrbgems/mruby-enumerator/mrblib/enumerator.rb</span>
 </dd>
   
 </dl>
@@ -102,8 +102,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>15.3.1</p>
+    <p>Kernel</p>
+
+<p>ISO 15.3.1</p>
 
 
   </div>
@@ -118,6 +119,155 @@
 
 
 
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#Array-class_method" title="Array (class method)">+ (Array) <strong>Array</strong>(arg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns +arg+ as an Array.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fail-class_method" title="fail (class method)">+ (Object) <strong>fail</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>With no arguments, raises a RuntimeError With a single +String+ argument, raises a +RuntimeError+ with the string as a message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#Float-class_method" title="Float (class method)">+ (Float) <strong>Float</strong>(arg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns arg converted to a float.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#Hash-class_method" title="Hash (class method)">+ (Hash) <strong>Hash</strong>(arg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Converts arg to a Hash by calling arg.to_hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#Integer-class_method" title="Integer (class method)">+ (Integer) <strong>Integer</strong>(arg, base = 0) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Converts arg to a Fixnum.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#String-class_method" title="String (class method)">+ (String) <strong>String</strong>(arg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns arg as an String.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
   
     <h2>
       Instance Method Summary
@@ -125,6 +275,29 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%21%3D-instance_method" title="#!= (instance method)">- (Object) <strong>!=</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.3.1.3.1.</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -143,8 +316,168 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>11.4.4 Step c).</p>
+    <span class="summary_desc"><div class='inline'><p>11.4.4 Step c).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Object) <strong>==</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Equality---At the Object level, == returns true only if obj and other are the same object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3D%3D%3D-instance_method" title="#=== (instance method)">- (Boolean) <strong>===</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Case Equality---For class Object, effectively the same as calling  #==, but typically overridden by descendants to provide meaningful semantics in case statements.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__case_eqq-instance_method" title="#__case_eqq (instance method)">- (Object) <strong>__case_eqq</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>internal.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__id__-instance_method" title="#__id__ (instance method)">- (Object) <strong>__id__</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    obj.<strong>id</strong>       -&gt; fixnum    obj.object_id    -&gt; fixnum.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__method__-instance_method" title="#__method__ (instance method)">- (Object) <strong>__method__</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the name at the definition of the current method as a Symbol.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__printstr__-instance_method" title="#__printstr__ (instance method)">- (Object) <strong>__printstr__</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.3.1.3.34.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__send__-instance_method" title="#__send__ (instance method)">- (Object) <strong>__send__</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Invokes the method identified by <em>symbol</em>, passing it any arguments specified.</p>
 </div></span>
   
 </li>
@@ -167,8 +500,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>internal method for inspect.</p>
+    <span class="summary_desc"><div class='inline'><p>internal method for inspect.</p>
 </div></span>
   
 </li>
@@ -191,8 +523,536 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>15.3.1.2.1 Kernel.` provided by Kernel#` 15.3.1.3.5.</p>
+    <span class="summary_desc"><div class='inline'><p>15.3.1.2.1 Kernel.<code>provided by Kernel#</code> 15.3.1.3.5.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#block_given%3F-instance_method" title="#block_given? (instance method)">- (Boolean) <strong>block_given?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if yield would execute a block in the current context.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#class-instance_method" title="#class (instance method)">- (Class) <strong>class</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the class of obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clone-instance_method" title="#clone (instance method)">- (Object) <strong>clone</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Produces a shallow copy of obj---the instance variables of obj are copied, but not the objects they reference.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#define_singleton_method-instance_method" title="#define_singleton_method (instance method)">- (Object) <strong>define_singleton_method</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.3.1.3.45.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dup-instance_method" title="#dup (instance method)">- (Object) <strong>dup</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Produces a shallow copy of obj---the instance variables of obj are copied, but not the objects they reference.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eql%3F-instance_method" title="#eql? (instance method)">- (Boolean) <strong>eql?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Equality---At the Object level, == returns true only if obj and other are the same object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#equal%3F-instance_method" title="#equal? (instance method)">- (Boolean) <strong>equal?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Equality---At the Object level, == returns true only if obj and other are the same object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extend-instance_method" title="#extend (instance method)">- (Object) <strong>extend</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Adds to <em>obj</em> the instance methods from each module given as a parameter.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#format-instance_method" title="#format (instance method)">- (Object) <strong>format</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>in sprintf.c.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#global_variables-instance_method" title="#global_variables (instance method)">- (Object) <strong>global_variables</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.3.1.3.14.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hash-instance_method" title="#hash (instance method)">- (Fixnum) <strong>hash</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Generates a Fixnum hash value for this object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize_copy-instance_method" title="#initialize_copy (instance method)">- (Object) <strong>initialize_copy</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.3.1.3.16.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (String) <strong>inspect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a string containing a human-readable representation of obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instance_eval-instance_method" title="#instance_eval (instance method)">- (Object) <strong>instance_eval</strong> {|| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Evaluates the given block,within  the context of the receiver (<em>obj</em>).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instance_of%3F-instance_method" title="#instance_of? (instance method)">- (Boolean) <strong>instance_of?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if obj is an instance of the given class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instance_variable_defined%3F-instance_method" title="#instance_variable_defined? (instance method)">- (Boolean) <strong>instance_variable_defined?</strong>(symbol) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if the given instance variable is defined in obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instance_variable_get-instance_method" title="#instance_variable_get (instance method)">- (Object) <strong>instance_variable_get</strong>(symbol) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of the given instance variable, or nil if the instance variable is not set.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instance_variable_set-instance_method" title="#instance_variable_set (instance method)">- (Object) <strong>instance_variable_set</strong>(symbol, obj) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the instance variable names by symbol to object, thereby frustrating the efforts of the class&#39;s author to attempt to provide proper encapsulation.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instance_variables-instance_method" title="#instance_variables (instance method)">- (Object) <strong>instance_variables</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.3.1.3.23.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#is_a%3F-instance_method" title="#is_a? (instance method)">- (Boolean) <strong>is_a?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if class is the class of obj, or if class is one of the superclasses of obj or modules included in obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#iterator%3F-instance_method" title="#iterator? (instance method)">- (Boolean) <strong>iterator?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if yield would execute a block in the current context.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#kind_of%3F-instance_method" title="#kind_of? (instance method)">- (Boolean) <strong>kind_of?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if class is the class of obj, or if class is one of the superclasses of obj or modules included in obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#local_variables-instance_method" title="#local_variables (instance method)">- (Object) <strong>local_variables</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.3.1.3.28.</p>
 </div></span>
   
 </li>
@@ -215,8 +1075,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Calls the given block repetitively.</p>
+    <span class="summary_desc"><div class='inline'><p>Calls the given block repetitively.</p>
 </div></span>
   
 </li>
@@ -225,7 +1084,122 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_enum-instance_method" title="#to_enum (instance method)">- (Object) <strong>to_enum</strong>(*a) </a>
+      <a href="#methods-instance_method" title="#methods (instance method)">- (Array) <strong>methods</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a list of the names of methods publicly accessible in obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nil%3F-instance_method" title="#nil? (instance method)">- (Boolean) <strong>nil?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call_seq:   nil.nil?               -&gt; true   .nil?   -&gt; false.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#object_id-instance_method" title="#object_id (instance method)">- (Object) <strong>object_id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    obj.<strong>id</strong>       -&gt; fixnum    obj.object_id    -&gt; fixnum.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#p-instance_method" title="#p (instance method)">- (Object) <strong>p</strong>(*args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Print human readable object description.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print-instance_method" title="#print (instance method)">- (Object) <strong>print</strong>(*args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Invoke method +print+ on STDOUT and passing +*args+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#printf-instance_method" title="#printf (instance method)">- (Object) <strong>printf</strong>(*args) </a>
     
 
     
@@ -244,19 +1218,320 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#private_methods-instance_method" title="#private_methods (instance method)">- (Array) <strong>private_methods</strong>(all = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the list of private methods accessible to obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#protected_methods-instance_method" title="#protected_methods (instance method)">- (Array) <strong>protected_methods</strong>(all = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the list of protected methods accessible to obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#public_methods-instance_method" title="#public_methods (instance method)">- (Array) <strong>public_methods</strong>(all = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the list of public methods accessible to obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#puts-instance_method" title="#puts (instance method)">- (Object) <strong>puts</strong>(*args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Invoke method +puts+ on STDOUT and passing +<em>args</em>+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#raise-instance_method" title="#raise (instance method)">- (Object) <strong>raise</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>With no arguments, raises a RuntimeError With a single +String+ argument, raises a +RuntimeError+ with the string as a message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_instance_variable-instance_method" title="#remove_instance_variable (instance method)">- (Object) <strong>remove_instance_variable</strong>(symbol) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Removes the named instance variable from obj, returning that variable&#39;s value.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#respond_to%3F-instance_method" title="#respond_to? (instance method)">- (Boolean) <strong>respond_to?</strong>(symbol, include_private = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns +true+ if <em>obj</em> responds to the given method.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send-instance_method" title="#send (instance method)">- (Object) <strong>send</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Invokes the method identified by <em>symbol</em>, passing it any arguments specified.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#singleton_class-instance_method" title="#singleton_class (instance method)">- (Object) <strong>singleton_class</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.3.1.2.12.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#singleton_methods-instance_method" title="#singleton_methods (instance method)">- (Array) <strong>singleton_methods</strong>(all = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns an array of the names of singleton methods for obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sprintf-instance_method" title="#sprintf (instance method)">- (Object) <strong>sprintf</strong>(*args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>in sprintf.c.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_enum-instance_method" title="#to_enum (instance method)">- (Object) <strong>to_enum</strong>(meth = :each, *args) </a>
+    
+
+    
+      (also: #enum_for)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:   obj.to_enum(method = :each, <em>args)                 -&gt; enum   obj.enum_for(method = :each, *args)                -&gt; enum   obj.to_enum(method = :each, *args) {|</em>args| block} -&gt; enum   obj.enum_for(method = :each, *args){|*args| block} -&gt; enum.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (String) <strong>to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a string representing obj.</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
 
 
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="!~-instance_method">
+  <h3 class="signature first" id="Array-class_method">
   
-    - (<tt>Object</tt>) <strong>!~</strong>(y) 
+    + (<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>) <strong>Array</strong>(arg) 
   
 
   
@@ -264,8 +1539,122 @@
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>Returns +arg+ as an Array.</p>
+
+<p>First tries to call Array#to_ary on +arg+, then Array#to_a.</p>
+
+<p>Array(1..5)   #=&gt; [1, 2, 3, 4, 5]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
     
-<p>11.4.4 Step c)</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 116</span>
+
+static mrb_value
+mrb_f_array(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg, tmp;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+  tmp = mrb_check_convert_type(mrb, arg, <span style="color:#036;font-weight:bold">MRB_TT_ARRAY</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Array</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_ary</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(tmp)) {
+    tmp = mrb_check_convert_type(mrb, arg, <span style="color:#036;font-weight:bold">MRB_TT_ARRAY</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Array</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_a</span><span style="color:#710">&quot;</span></span>);
+  }
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(tmp)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_ary_new_from_values(mrb, <span style="color:#00D">1</span>, &amp;arg);
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> tmp;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fail-class_method">
+  
+    
+      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>raise</strong> </span>
+    
+      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>raise</strong>(string) </span>
+    
+      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>raise</strong>(exception[, string]) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>With no arguments, raises a <code>RuntimeError</code>
+With a single +String+ argument, raises a
++RuntimeError+ with the string as a message. Otherwise,
+the first parameter should be the name of an +Exception+
+class (or an object that returns an +Exception+ object when sent
+an +exception+ message). The optional second parameter sets the
+message associated with the exception, and the third parameter is an
+array of callback information. Exceptions are caught by the
++rescue+ clause of <code>begin...end</code> blocks.</p>
+
+<p>raise &quot;Failed to create socket&quot;
+   raise ArgumentError, &quot;No parameters&quot;, caller</p>
 
 
   </div>
@@ -273,7 +1662,538 @@
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 842</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_f_raise(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value a[<span style="color:#00D">2</span>], exc;
+  int argc;
+
+
+  argc = mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|oo</span><span style="color:#710">&quot;</span></span>, &amp;a[<span style="color:#00D">0</span>], &amp;a[<span style="color:#00D">1</span>]);
+  switch (argc) {
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">0</span>:
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_RUNTIME_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#080;font-weight:bold">break</span>;
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">1</span>:
+    a[<span style="color:#00D">1</span>] = mrb_check_string_type(mrb, a[<span style="color:#00D">0</span>]);
+    <span style="color:#080;font-weight:bold">if</span> (!mrb_nil_p(a[<span style="color:#00D">1</span>])) {
+      argc = <span style="color:#00D">2</span>;
+      a[<span style="color:#00D">0</span>] = mrb_obj_value(<span style="color:#036;font-weight:bold">E_RUNTIME_ERROR</span>);
+    }
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* fall through *</span><span style="color:#404">/</span></span>
+  <span style="color:#606">default</span>:
+    exc = mrb_make_exception(mrb, argc, a);
+    mrb_obj_iv_set(mrb, mrb_obj_ptr(exc), mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">lastpc</span><span style="color:#710">&quot;</span></span>), mrb_cptr_value(mrb, mrb-&gt;c-&gt;ci-&gt;pc));
+    mrb_exc_raise(mrb, exc);
+    <span style="color:#080;font-weight:bold">break</span>;
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();            <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* not reached *</span><span style="color:#404">/</span></span>
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="Float-class_method">
+  
+    + (<tt><span class='object_link'><a href="#Float-class_method" title="Kernel.Float (method)">Float</a></span></tt>) <strong>Float</strong>(arg) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <i>arg</i> converted to a float. Numeric types are converted
+directly, the rest are converted using <i>arg</i>.to_f.</p>
+
+<p>Float(1)           #=&gt; 1.0
+   Float(123.456)     #=&gt; 123.456
+   Float(&quot;123.456&quot;)   #=&gt; 123.456
+   Float(nil)         #=&gt; TypeError</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#Float-class_method" title="Kernel.Float (method)">Float</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 71</span>
+
+static mrb_value
+mrb_f_float(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+  <span style="color:#080;font-weight:bold">return</span> mrb_Float(mrb, arg);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="Hash-class_method">
+  
+    + (<tt><span class='object_link'><a href="#Hash-class_method" title="Kernel.Hash (method)">Hash</a></span></tt>) <strong>Hash</strong>(arg) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Converts <i>arg</i> to a <code>Hash</code> by calling
+<i>arg</i><code>.to_hash</code>. Returns an empty <code>Hash</code> when
+<i>arg</i> is <tt>nil</tt> or <tt>[]</tt>.</p>
+
+<pre class="code"><code class="">Hash([])          <span style="color:#777">#=&gt; {}</span>
+Hash(<span style="color:#069">nil</span>)         <span style="color:#777">#=&gt; {}</span>
+Hash(<span style="color:#606">key</span>: <span style="color:#A60">:value</span>) <span style="color:#777">#=&gt; {:key =&gt; :value}</span>
+Hash([<span style="color:#00D">1</span>, <span style="color:#00D">2</span>, <span style="color:#00D">3</span>])   <span style="color:#777">#=&gt; TypeError</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#Hash-class_method" title="Kernel.Hash (method)">Hash</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 147</span>
+
+static mrb_value
+mrb_f_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg, tmp;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(arg)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_hash_new(mrb);
+  }
+  tmp = mrb_check_convert_type(mrb, arg, <span style="color:#036;font-weight:bold">MRB_TT_HASH</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hash</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_hash</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(tmp)) {
+    <span style="color:#080;font-weight:bold">if</span> (mrb_array_p(arg) &amp;&amp; RARRAY_LEN(arg) == <span style="color:#00D">0</span>) {
+      <span style="color:#080;font-weight:bold">return</span> mrb_hash_new(mrb);
+    }
+    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't convert %S into Hash</span><span style="color:#710">&quot;</span></span>,
+      mrb_str_new_cstr(mrb, mrb_obj_classname(mrb, arg)));
+  }
+  <span style="color:#080;font-weight:bold">return</span> tmp;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="Integer-class_method">
+  
+    + (<tt><span class='object_link'><a href="#Integer-class_method" title="Kernel.Integer (method)">Integer</a></span></tt>) <strong>Integer</strong>(arg, base = 0) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Converts <i>arg</i> to a <code>Fixnum</code>.
+Numeric types are converted directly (with floating point numbers
+being truncated).    <i>base</i> (0, or between 2 and 36) is a base for
+integer string representation.  If <i>arg</i> is a <code>String</code>,
+when <i>base</i> is omitted or equals to zero, radix indicators
+(<code>0</code>, <code>0b</code>, and <code>0x</code>) are honored.
+In any case, strings should be strictly conformed to numeric
+representation. This behavior is different from that of
+<code>String#to_i</code>.  Non string values will be converted using
+<code>to_int</code>, and <code>to_i</code>. Passing <code>nil</code>
+raises a TypeError.</p>
+
+<p>Integer(123.999)    #=&gt; 123
+   Integer(&quot;0x1a&quot;)     #=&gt; 26
+   Integer(Time.new)   #=&gt; 1204973019
+   Integer(&quot;0930&quot;, 10) #=&gt; 930
+   Integer(&quot;111&quot;, 2)   #=&gt; 7
+   Integer(nil)        #=&gt; TypeError</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#Integer-class_method" title="Kernel.Integer (method)">Integer</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 49</span>
+
+static mrb_value
+mrb_f_integer(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+  mrb_int base = <span style="color:#00D">0</span>;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|i</span><span style="color:#710">&quot;</span></span>, &amp;arg, &amp;base);
+  <span style="color:#080;font-weight:bold">return</span> mrb_convert_to_integer(mrb, arg, base);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="String-class_method">
+  
+    + (<tt><span class='object_link'><a href="#String-class_method" title="Kernel.String (method)">String</a></span></tt>) <strong>String</strong>(arg) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <i>arg</i> as an <code>String</code>.</p>
+
+<p>First tries to call its <code>to_str</code> method, then its to_s method.</p>
+
+<p>String(self)        #=&gt; &quot;main&quot;
+   String(self.class)  #=&gt; &quot;Object&quot;
+   String(123456)      #=&gt; &quot;123456&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#String-class_method" title="Kernel.String (method)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 92</span>
+
+static mrb_value
+mrb_f_string(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg, tmp;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+  tmp = mrb_check_convert_type(mrb, arg, <span style="color:#036;font-weight:bold">MRB_TT_STRING</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">String</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_str</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(tmp)) {
+    tmp = mrb_check_convert_type(mrb, arg, <span style="color:#036;font-weight:bold">MRB_TT_STRING</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">String</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>);
+  }
+  <span style="color:#080;font-weight:bold">return</span> tmp;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="!=-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>!=</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.3.1.3.1</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102
+103
+104
+105
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 101</span>
+
+static mrb_value
+mrb_obj_not_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(!mrb_equal(mrb, <span style="color:#069">self</span>, arg));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="!~-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>!~</strong>(y) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>11.4.4 Step c)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -295,9 +2215,15 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="_inspect-instance_method">
+  <h3 class="signature " id="==-instance_method">
   
-    - (<tt>Object</tt>) <strong>_inspect</strong> 
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>==</strong>(other) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>equal?</strong>(other) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>eql?</strong>(other) </span>
+    
   
 
   
@@ -305,8 +2231,254 @@
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>Equality---At the <code>Object</code> level, <code>==</code> returns
+<code>true</code> only if <i>obj</i> and <i>other</i> are the
+same object. Typically, this method is overridden in descendant
+classes to provide class-specific meaning.</p>
+
+<p>Unlike <code>==</code>, the <code>equal?</code> method should never be
+overridden by subclasses: it is used to determine object identity
+(that is, <code>a.equal?(b)</code> iff <code>a</code> is the same
+object as <code>b</code>).</p>
+
+<p>The <code>eql?</code> method returns <code>true</code> if
+<i>obj</i> and <i>anObject</i> have the same value. Used by
+<code>Hash</code> to test members for equality.  For objects of
+class <code>Object</code>, <code>eql?</code> is synonymous with
+<code>==</code>. Subclasses normally continue this tradition, but
+there are exceptions. <code>Numeric</code> types, for example,
+perform type conversion across <code>==</code>, but not across
+<code>eql?</code>, so:</p>
+
+<p>1 == 1.0     #=&gt; true
+   1.eql? 1.0   #=&gt; false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
     
-<p>internal method for inspect</p>
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>==</strong>(other) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>equal?</strong>(other) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>eql?</strong>(other) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 92</span>
+
+static mrb_value
+mrb_obj_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_obj_equal(mrb, <span style="color:#069">self</span>, arg));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="===-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>===</strong>(other) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Case Equality---For class <code>Object</code>, effectively the same
+as calling  <code>#==</code>, but typically overridden by descendants
+to provide meaningful semantics in <code>case</code> statements.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121
+122
+123
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 119</span>
+
+static mrb_value
+mrb_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_equal(mrb, <span style="color:#069">self</span>, arg));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="__case_eqq-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__case_eqq</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>internal</p>
 
 
   </div>
@@ -314,7 +2486,475 @@
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1033
+1034
+1035
+1036
+1037
+1038
+1039
+1040
+1041
+1042
+1043
+1044
+1045
+1046
+1047
+1048</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 1033</span>
+
+static mrb_value
+mrb_obj_ceqq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value v;
+  mrb_int i, len;
+  mrb_sym eqq = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">===</span><span style="color:#710">&quot;</span></span>);
+  mrb_value ary = mrb_ary_splat(mrb, <span style="color:#069">self</span>);
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;v);
+  len = RARRAY_LEN(ary);
+  <span style="color:#080;font-weight:bold">for</span> (i=<span style="color:#00D">0</span>; i&lt;len; i++) {
+    mrb_value c = mrb_funcall_argv(mrb, mrb_ary_entry(ary, i), eqq, <span style="color:#00D">1</span>, &amp;v);
+    <span style="color:#080;font-weight:bold">if</span> (mrb_test(c)) <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="__id__-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__id__</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   obj.<strong>id</strong>       -&gt; fixnum
+   obj.object_id    -&gt; fixnum</p>
+
+<p>Returns an integer identifier for <i>obj</i>. The same number will
+be returned on all calls to <code>id</code> for a given object, and
+no two active objects will share an id.
+<code>Object#object_id</code> is a different concept from the
+<code>:name</code> notation, which returns the symbol id of
+<code>name</code>. Replaces the deprecated <code>Object#id</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 145</span>
+
+static mrb_value
+mrb_obj_id_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(mrb_obj_id(<span style="color:#069">self</span>));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="__method__-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__method__</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the name at the definition of the current method as a
+Symbol.
+If called outside of a method, it returns <code>nil</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 15</span>
+
+static mrb_value
+mrb_f_method(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_callinfo *ci = mrb-&gt;c-&gt;ci;
+  ci--;
+  <span style="color:#080;font-weight:bold">if</span> (ci-&gt;mid)
+    <span style="color:#080;font-weight:bold">return</span> mrb_symbol_value(ci-&gt;mid);
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="__printstr__-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__printstr__</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.3.1.3.34</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-print/src/print.c', line 37</span>
+
+mrb_value
+mrb_printstr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value argv;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;argv);
+  printstr(mrb, argv);
+
+  <span style="color:#080;font-weight:bold">return</span> argv;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="__send__-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>send</strong>(symbol[, args...]) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__send__</strong>(symbol[, args...]) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Invokes the method identified by <em>symbol</em>, passing it any
+arguments specified. You can use <code><strong>send</strong></code> if the name
++send+ clashes with an existing method in <em>obj</em>.</p>
+
+<p>class Klass
+     def hello(*args)
+       &quot;Hello &quot; + args.join(&#39; &#39;)
+     end
+   end
+   k = Klass.new
+   k.send :hello, &quot;gentle&quot;, &quot;readers&quot;   #=&gt; &quot;Hello gentle readers&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>send</strong>(symbol[, args...]) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__send__</strong>(symbol[, args...]) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/vm.c', line 445</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_f_send(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_sym name;
+  mrb_value block, *argv, *regs;
+  mrb_int argc, i, len;
+  struct <span style="color:#036;font-weight:bold">RProc</span> *p;
+  struct <span style="color:#036;font-weight:bold">RClass</span> *c;
+  mrb_callinfo *ci;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">n*&amp;</span><span style="color:#710">&quot;</span></span>, &amp;name, &amp;argv, &amp;argc, &amp;block);
+
+  c = mrb_class(mrb, <span style="color:#069">self</span>);
+  p = mrb_method_search_vm(mrb, &amp;c, name);
+
+  <span style="color:#080;font-weight:bold">if</span> (!p) {                     <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* call method_mising *</span><span style="color:#404">/</span></span>
+    <span style="color:#080;font-weight:bold">return</span> mrb_funcall_with_block(mrb, <span style="color:#069">self</span>, name, argc, argv, block);
+  }
+
+  ci = mrb-&gt;c-&gt;ci;
+  ci-&gt;mid = name;
+  ci-&gt;target_class = c;
+  ci-&gt;proc = p;
+  regs = mrb-&gt;c-&gt;stack+<span style="color:#00D">1</span>;
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* remove first symbol from arguments *</span><span style="color:#404">/</span></span>
+  <span style="color:#080;font-weight:bold">if</span> (ci-&gt;argc &gt;= <span style="color:#00D">0</span>) {
+    <span style="color:#080;font-weight:bold">for</span> (i=<span style="color:#00D">0</span>,len=ci-&gt;argc; i&lt;len; i++) {
+      regs[i] = regs[i+<span style="color:#00D">1</span>];
+    }
+    ci-&gt;argc--;
+  }
+  <span style="color:#080;font-weight:bold">else</span> {                     <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* variable length arguments *</span><span style="color:#404">/</span></span>
+    mrb_ary_shift(mrb, regs[<span style="color:#00D">0</span>]);
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (MRB_PROC_CFUNC_P(p)) {
+    <span style="color:#080;font-weight:bold">return</span> p-&gt;body.func(mrb, <span style="color:#069">self</span>);
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (ci-&gt;argc &lt; <span style="color:#00D">0</span>) {
+    stack_extend(mrb, (p-&gt;body.irep-&gt;nregs &lt; <span style="color:#00D">3</span>) ? <span style="color:#00D">3</span> : p-&gt;body.irep-&gt;nregs, <span style="color:#00D">3</span>);
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    stack_extend(mrb, p-&gt;body.irep-&gt;nregs, ci-&gt;argc+<span style="color:#00D">2</span>);
+  }
+
+  ci-&gt;nregs = p-&gt;body.irep-&gt;nregs;
+  ci = cipush(mrb);
+  ci-&gt;nregs = <span style="color:#00D">0</span>;
+  ci-&gt;target_class = <span style="color:#00D">0</span>;
+  ci-&gt;pc = p-&gt;body.irep-&gt;iseq;
+  ci-&gt;stackent = mrb-&gt;c-&gt;stack;
+  ci-&gt;acc = <span style="color:#00D">0</span>;
+
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="_inspect-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>_inspect</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>internal method for inspect</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -338,7 +2978,7 @@
       <div class="method_details ">
   <h3 class="signature " id="`-instance_method">
   
-    - (<tt>Object</tt>) <strong>`</strong>(s) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>`</strong>(s) 
   
 
   
@@ -346,8 +2986,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>15.3.1.2.1 Kernel.` provided by Kernel#` 15.3.1.3.5</p>
+    <p>15.3.1.2.1 Kernel.<code>
+provided by Kernel#</code>
+15.3.1.3.5</p>
 
 
   </div>
@@ -368,7 +3009,9 @@
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -390,9 +3033,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="loop-instance_method">
+  <h3 class="signature " id="block_given?-instance_method">
   
-    - (<tt>Object</tt>) <strong>loop</strong>(&amp;block) 
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>block_given?</strong> </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>iterator?</strong> </span>
+    
   
 
   
@@ -400,8 +3047,2524 @@
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>Returns <code>true</code> if <code>yield</code> would execute a
+block in the current context. The <code>iterator?</code> form
+is mildly deprecated.</p>
+
+<p>def try
+     if block_given?
+       yield
+     else
+       &quot;no block&quot;
+     end
+   end
+   try                  #=&gt; &quot;no block&quot;
+   try { &quot;hello&quot; }      #=&gt; &quot;hello&quot;
+   try do &quot;hello&quot; end   #=&gt; &quot;hello&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
     
-<p>Calls the given block repetitively.</p>
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>block_given?</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>iterator?</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 175</span>
+
+static mrb_value
+mrb_f_block_given_p_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_callinfo *ci = mrb-&gt;c-&gt;ci;
+  mrb_value *bp;
+  mrb_bool given_p;
+
+  bp = ci-&gt;stackent + <span style="color:#00D">1</span>;
+  ci--;
+  <span style="color:#080;font-weight:bold">if</span> (ci &lt;= mrb-&gt;c-&gt;cibase) {
+    given_p = <span style="color:#069">FALSE</span>;
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* block_given? called within block; check upper scope *</span><span style="color:#404">/</span></span>
+    <span style="color:#080;font-weight:bold">if</span> (ci-&gt;proc-&gt;env) {
+      struct <span style="color:#036;font-weight:bold">REnv</span> *e = ci-&gt;proc-&gt;env;
+      mrb_value *sp;
+
+      <span style="color:#080;font-weight:bold">while</span> (e-&gt;c) {
+        e = (struct <span style="color:#036;font-weight:bold">REnv</span>*)e-&gt;c;
+      }
+      sp = e-&gt;stack;
+      <span style="color:#080;font-weight:bold">if</span> (sp) {
+        <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* top-level does not have block slot (alway false) *</span><span style="color:#404">/</span></span>
+        <span style="color:#080;font-weight:bold">if</span> (sp == mrb-&gt;c-&gt;stbase)
+          <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+        ci = mrb-&gt;c-&gt;cibase + e-&gt;cioff;
+        bp = ci[<span style="color:#00D">1</span>].stackent + <span style="color:#00D">1</span>;
+      }
+    }
+    <span style="color:#080;font-weight:bold">if</span> (ci-&gt;argc &gt; <span style="color:#00D">0</span>) {
+      bp += ci-&gt;argc;
+    }
+    given_p = !mrb_nil_p(*bp);
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(given_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="class-instance_method">
+  
+    - (<tt>Class</tt>) <strong>class</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the class of <i>obj</i>. This method must always be
+called with an explicit receiver, as <code>class</code> is also a
+reserved word in Ruby.</p>
+
+<p>1.class      #=&gt; Fixnum
+   self.class   #=&gt; Object</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Class</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+226
+227
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 226</span>
+
+static mrb_value
+mrb_obj_class_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(mrb_obj_class(mrb, <span style="color:#069">self</span>));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clone-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>clone</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Produces a shallow copy of <i>obj</i>---the instance variables of
+<i>obj</i> are copied, but not the objects they reference. Copies
+the frozen state of <i>obj</i>. See also the discussion
+under <code>Object#dup</code>.</p>
+
+<p>class Klass
+      attr_accessor :str
+   end
+   s1 = Klass.new      #=&gt; #<a href="Klass:0x401b3a38">Klass:0x401b3a38</a>
+   s1.str = &quot;Hello&quot;    #=&gt; &quot;Hello&quot;
+   s2 = s1.clone       #=&gt; #<Klass:0x401b3998 @str="Hello">
+   s2.str[1,4] = &quot;i&quot;   #=&gt; &quot;i&quot;
+   s1.inspect          #=&gt; &quot;#<Klass:0x401b3a38 @str=\"Hi\">&quot;
+   s2.inspect          #=&gt; &quot;#<Klass:0x401b3998 @str=\"Hi\">&quot;</p>
+
+<p>This method may have class-specific behavior.  If so, that
+behavior will be documented under the #+initialize_copy+ method of
+the class.</p>
+
+<p>Some Class(True False Nil Symbol Fixnum Float) Object  cannot clone.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 337</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_obj_clone(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RObject</span> *p;
+  mrb_value clone;
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_immediate_p(<span style="color:#069">self</span>)) {
+    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't clone %S</span><span style="color:#710">&quot;</span></span>, <span style="color:#069">self</span>);
+  }
+  <span style="color:#080;font-weight:bold">if</span> (mrb_type(<span style="color:#069">self</span>) == <span style="color:#036;font-weight:bold">MRB_TT_SCLASS</span>) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't clone singleton class</span><span style="color:#710">&quot;</span></span>);
+  }
+  p = (struct <span style="color:#036;font-weight:bold">RObject</span>*)mrb_obj_alloc(mrb, mrb_type(<span style="color:#069">self</span>), mrb_obj_class(mrb, <span style="color:#069">self</span>));
+  p-&gt;c = mrb_singleton_class_clone(mrb, <span style="color:#069">self</span>);
+  clone = mrb_obj_value(p);
+  init_copy(mrb, clone, <span style="color:#069">self</span>);
+
+  <span style="color:#080;font-weight:bold">return</span> clone;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="define_singleton_method-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>define_singleton_method</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.3.1.3.45</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1015
+1016
+1017
+1018
+1019
+1020
+1021
+1022
+1023
+1024
+1025
+1026
+1027
+1028
+1029
+1030
+1031</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 1015</span>
+
+static mrb_value
+mod_define_singleton_method(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RProc</span> *p;
+  mrb_sym mid;
+  mrb_value blk = mrb_nil_value();
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">n&amp;</span><span style="color:#710">&quot;</span></span>, &amp;mid, &amp;blk);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(blk)) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no block given</span><span style="color:#710">&quot;</span></span>);
+  }
+  p = (struct <span style="color:#036;font-weight:bold">RProc</span>*)mrb_obj_alloc(mrb, <span style="color:#036;font-weight:bold">MRB_TT_PROC</span>, mrb-&gt;proc_class);
+  mrb_proc_copy(p, mrb_proc_ptr(blk));
+  p-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_PROC_STRICT</span>;
+  mrb_define_method_raw(mrb, mrb_class_ptr(mrb_singleton_class(mrb, <span style="color:#069">self</span>)), mid, p);
+  <span style="color:#080;font-weight:bold">return</span> mrb_symbol_value(mid);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dup-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>dup</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Produces a shallow copy of <i>obj</i>---the instance variables of
+<i>obj</i> are copied, but not the objects they reference.
+<code>dup</code> copies the frozen state of <i>obj</i>. See also
+the discussion under <code>Object#clone</code>. In general,
+<code>clone</code> and <code>dup</code> may have different semantics
+in descendant classes. While <code>clone</code> is used to duplicate
+an object, including its internal state, <code>dup</code> typically
+uses the class of the descendant object to create the new instance.</p>
+
+<p>This method may have class-specific behavior.  If so, that
+behavior will be documented under the #+initialize_copy+ method of
+the class.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 376</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_obj_dup(mrb_state *mrb, mrb_value obj)
+{
+  struct <span style="color:#036;font-weight:bold">RBasic</span> *p;
+  mrb_value dup;
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_immediate_p(obj)) {
+    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't dup %S</span><span style="color:#710">&quot;</span></span>, obj);
+  }
+  <span style="color:#080;font-weight:bold">if</span> (mrb_type(obj) == <span style="color:#036;font-weight:bold">MRB_TT_SCLASS</span>) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't dup singleton class</span><span style="color:#710">&quot;</span></span>);
+  }
+  p = mrb_obj_alloc(mrb, mrb_type(obj), mrb_obj_class(mrb, obj));
+  dup = mrb_obj_value(p);
+  init_copy(mrb, dup, obj);
+
+  <span style="color:#080;font-weight:bold">return</span> dup;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eql?-instance_method">
+  
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>==</strong>(other) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>equal?</strong>(other) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>eql?</strong>(other) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Equality---At the <code>Object</code> level, <code>==</code> returns
+<code>true</code> only if <i>obj</i> and <i>other</i> are the
+same object. Typically, this method is overridden in descendant
+classes to provide class-specific meaning.</p>
+
+<p>Unlike <code>==</code>, the <code>equal?</code> method should never be
+overridden by subclasses: it is used to determine object identity
+(that is, <code>a.equal?(b)</code> iff <code>a</code> is the same
+object as <code>b</code>).</p>
+
+<p>The <code>eql?</code> method returns <code>true</code> if
+<i>obj</i> and <i>anObject</i> have the same value. Used by
+<code>Hash</code> to test members for equality.  For objects of
+class <code>Object</code>, <code>eql?</code> is synonymous with
+<code>==</code>. Subclasses normally continue this tradition, but
+there are exceptions. <code>Numeric</code> types, for example,
+perform type conversion across <code>==</code>, but not across
+<code>eql?</code>, so:</p>
+
+<p>1 == 1.0     #=&gt; true
+   1.eql? 1.0   #=&gt; false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>==</strong>(other) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>equal?</strong>(other) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>eql?</strong>(other) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 92</span>
+
+static mrb_value
+mrb_obj_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_obj_equal(mrb, <span style="color:#069">self</span>, arg));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="equal?-instance_method">
+  
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>==</strong>(other) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>equal?</strong>(other) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>eql?</strong>(other) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Equality---At the <code>Object</code> level, <code>==</code> returns
+<code>true</code> only if <i>obj</i> and <i>other</i> are the
+same object. Typically, this method is overridden in descendant
+classes to provide class-specific meaning.</p>
+
+<p>Unlike <code>==</code>, the <code>equal?</code> method should never be
+overridden by subclasses: it is used to determine object identity
+(that is, <code>a.equal?(b)</code> iff <code>a</code> is the same
+object as <code>b</code>).</p>
+
+<p>The <code>eql?</code> method returns <code>true</code> if
+<i>obj</i> and <i>anObject</i> have the same value. Used by
+<code>Hash</code> to test members for equality.  For objects of
+class <code>Object</code>, <code>eql?</code> is synonymous with
+<code>==</code>. Subclasses normally continue this tradition, but
+there are exceptions. <code>Numeric</code> types, for example,
+perform type conversion across <code>==</code>, but not across
+<code>eql?</code>, so:</p>
+
+<p>1 == 1.0     #=&gt; true
+   1.eql? 1.0   #=&gt; false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>==</strong>(other) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>equal?</strong>(other) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>eql?</strong>(other) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 92</span>
+
+static mrb_value
+mrb_obj_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_obj_equal(mrb, <span style="color:#069">self</span>, arg));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extend-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>extend</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Adds to <em>obj</em> the instance methods from each module given as a
+parameter.</p>
+
+<p>module Mod
+     def hello
+       &quot;Hello from Mod.\n&quot;
+     end
+   end</p>
+
+<p>class Klass
+     def hello
+       &quot;Hello from Klass.\n&quot;
+     end
+   end</p>
+
+<p>k = Klass.new
+   k.hello         #=&gt; &quot;Hello from Klass.\n&quot;
+   k.extend(Mod)   #=&gt; #<a href="Klass:0x401b3bc8">Klass:0x401b3bc8</a>
+   k.hello         #=&gt; &quot;Hello from Mod.\n&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+438
+439
+440
+441
+442
+443
+444
+445
+446</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 438</span>
+
+static mrb_value
+mrb_obj_extend_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value *argv;
+  mrb_int argc;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*</span><span style="color:#710">&quot;</span></span>, &amp;argv, &amp;argc);
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_extend(mrb, argc, argv, <span style="color:#069">self</span>);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="format-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>format</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>in sprintf.c</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-sprintf/src/kernel.c', line 9</span>
+
+mrb_value mrb_f_sprintf(mrb_state *mrb, mrb_value obj);</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="global_variables-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>global_variables</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.3.1.3.14</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hash-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>) <strong>hash</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Generates a <code>Fixnum</code> hash value for this object. This
+function must have the property that <code>a.eql?(b)</code> implies
+<code>a.hash == b.hash</code>. The hash value is used by class
+<code>Hash</code>. Any hash value that exceeds the capacity of a
+<code>Fixnum</code> will be truncated before being used.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+459
+460
+461
+462
+463</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 459</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_obj_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(mrb_obj_id(<span style="color:#069">self</span>));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initialize_copy-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>initialize_copy</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.3.1.3.16</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 466</span>
+
+static mrb_value
+mrb_obj_init_copy(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value orig;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;orig);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_obj_equal(mrb, <span style="color:#069">self</span>, orig)) <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+  <span style="color:#080;font-weight:bold">if</span> ((mrb_type(<span style="color:#069">self</span>) != mrb_type(orig)) || (mrb_obj_class(mrb, <span style="color:#069">self</span>) != mrb_obj_class(mrb, orig))) {
+      mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">initialize_copy should take same class object</span><span style="color:#710">&quot;</span></span>);
+  }
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    - (<tt><span class='object_link'><a href="#String-class_method" title="Kernel.String (method)">String</a></span></tt>) <strong>inspect</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a string containing a human-readable representation of
+<i>obj</i>. If not overridden and no instance variables, uses the
+<code>to_s</code> method to generate the string.
+<i>obj</i>.  If not overridden, uses the <code>to_s</code> method to
+generate the string.</p>
+
+<p>[ 1, 2, 3..4, &#39;five&#39; ].inspect   #=&gt; &quot;[1, 2, 3..4, \&quot;five\&quot;]&quot;
+   Time.new.inspect                 #=&gt; &quot;2008-03-08 19:43:39 +0900&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#String-class_method" title="Kernel.String (method)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 52</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_obj_inspect(mrb_state *mrb, mrb_value obj)
+{
+  <span style="color:#080;font-weight:bold">if</span> ((mrb_type(obj) == <span style="color:#036;font-weight:bold">MRB_TT_OBJECT</span>) &amp;&amp; mrb_obj_basic_to_s_p(mrb, obj)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_obj_iv_inspect(mrb, mrb_obj_ptr(obj));
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_any_to_s(mrb, obj);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instance_eval-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>instance_eval</strong> {|| ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Evaluates the given block,within  the context of the receiver (<em>obj</em>).
+In order to set the context, the variable +self+ is set to <em>obj</em> while
+the code is executing, giving the code access to <em>obj</em>&#39;s
+instance variables. In the version of <code>instance_eval</code>
+that takes a +String+, the optional second and third
+parameters supply a filename and starting line number that are used
+when reporting compilation errors.</p>
+
+<p>class KlassWithSecret
+     def initialize
+       @secret = 99
+     end
+   end
+   k = KlassWithSecret.new
+   k.instance_eval { @secret }   #=&gt; 99</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/vm.c', line 585</span>
+
+mrb_value
+mrb_obj_instance_eval(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value a, b;
+  mrb_value cv;
+  struct <span style="color:#036;font-weight:bold">RClass</span> *c;
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|S&amp;</span><span style="color:#710">&quot;</span></span>, &amp;a, &amp;b) == <span style="color:#00D">1</span>) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_NOTIMP_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">instance_eval with string not implemented</span><span style="color:#710">&quot;</span></span>);
+  }
+  switch (mrb_type(<span style="color:#069">self</span>)) {
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_SYMBOL</span>:
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FIXNUM</span>:
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FLOAT</span>:
+    c = <span style="color:#00D">0</span>;
+    <span style="color:#080;font-weight:bold">break</span>;
+  <span style="color:#606">default</span>:
+    cv = mrb_singleton_class(mrb, <span style="color:#069">self</span>);
+    c = mrb_class_ptr(cv);
+    <span style="color:#080;font-weight:bold">break</span>;
+  }
+  <span style="color:#080;font-weight:bold">return</span> eval_under(mrb, <span style="color:#069">self</span>, b, c);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instance_of?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>instance_of?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if <i>obj</i> is an instance of the given
+class. See also <code>Object#kind_of?</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+498
+499
+500
+501
+502
+503
+504
+505
+506</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 498</span>
+
+static mrb_value
+obj_is_instance_of(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">C</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_obj_is_instance_of(mrb, <span style="color:#069">self</span>, mrb_class_ptr(arg)));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instance_variable_defined?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>instance_variable_defined?</strong>(symbol) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the given instance variable is
+defined in <i>obj</i>.</p>
+
+<p>class Fred
+     def initialize(p1, p2)
+       @a, @b = p1, p2
+     end
+   end
+   fred = Fred.new(&#39;cat&#39;, 99)
+   fred.instance_variable_defined?(:@a)    #=&gt; true
+   fred.instance_variable_defined?(&quot;@b&quot;)   #=&gt; true
+   fred.instance_variable_defined?(&quot;@c&quot;)   #=&gt; false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+526
+527
+528
+529
+530
+531
+532
+533
+534</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 526</span>
+
+static mrb_value
+mrb_obj_ivar_defined(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_sym sym;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">n</span><span style="color:#710">&quot;</span></span>, &amp;sym);
+  mrb_iv_check(mrb, sym);
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_iv_defined(mrb, <span style="color:#069">self</span>, sym));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instance_variable_get-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>instance_variable_get</strong>(symbol) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of the given instance variable, or nil if the
+instance variable is not set. The <code>@</code> part of the
+variable name should be included for regular instance
+variables. Throws a <code>NameError</code> exception if the
+supplied symbol is not valid as an instance variable name.</p>
+
+<p>class Fred
+     def initialize(p1, p2)
+       @a, @b = p1, p2
+     end
+   end
+   fred = Fred.new(&#39;cat&#39;, 99)
+   fred.instance_variable_get(:@a)    #=&gt; &quot;cat&quot;
+   fred.instance_variable_get(&quot;@b&quot;)   #=&gt; 99</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+556
+557
+558
+559
+560
+561
+562
+563
+564</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 556</span>
+
+static mrb_value
+mrb_obj_ivar_get(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_sym iv_name;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">n</span><span style="color:#710">&quot;</span></span>, &amp;iv_name);
+  mrb_iv_check(mrb, iv_name);
+  <span style="color:#080;font-weight:bold">return</span> mrb_iv_get(mrb, <span style="color:#069">self</span>, iv_name);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instance_variable_set-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>instance_variable_set</strong>(symbol, obj) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets the instance variable names by <i>symbol</i> to
+<i>object</i>, thereby frustrating the efforts of the class&#39;s
+author to attempt to provide proper encapsulation. The variable
+did not have to exist prior to this call.</p>
+
+<p>class Fred
+     def initialize(p1, p2)
+       @a, @b = p1, p2
+     end
+   end
+   fred = Fred.new(&#39;cat&#39;, 99)
+   fred.instance_variable_set(:@a, &#39;dog&#39;)   #=&gt; &quot;dog&quot;
+   fred.instance_variable_set(:@c, &#39;cat&#39;)   #=&gt; &quot;cat&quot;
+   fred.inspect                             #=&gt; &quot;#<Fred:0x401b3da8 @a=\"dog\", @b=99, @c=\"cat\">&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 586</span>
+
+static mrb_value
+mrb_obj_ivar_set(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_sym iv_name;
+  mrb_value val;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no</span><span style="color:#710">&quot;</span></span>, &amp;iv_name, &amp;val);
+  mrb_iv_check(mrb, iv_name);
+  mrb_iv_set(mrb, <span style="color:#069">self</span>, iv_name, val);
+  <span style="color:#080;font-weight:bold">return</span> val;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instance_variables-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>instance_variables</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.3.1.3.23</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="is_a?-instance_method">
+  
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>is_a?</strong> </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>kind_of?</strong> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if <i>class</i> is the class of
+<i>obj</i>, or if <i>class</i> is one of the superclasses of
+<i>obj</i> or modules included in <i>obj</i>.</p>
+
+<p>module M;    end
+   class A
+     include M
+   end
+   class B &lt; A; end
+   class C &lt; B; end
+   b = B.new
+   b.instance_of? A   #=&gt; false
+   b.instance_of? B   #=&gt; true
+   b.instance_of? C   #=&gt; false
+   b.instance_of? M   #=&gt; false
+   b.kind_of? A       #=&gt; true
+   b.kind_of? B       #=&gt; true
+   b.kind_of? C       #=&gt; false
+   b.kind_of? M       #=&gt; true</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>is_a?</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>kind_of?</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+625
+626
+627
+628
+629
+630
+631
+632
+633</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 625</span>
+
+static mrb_value
+mrb_obj_is_kind_of_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">C</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_obj_is_kind_of(mrb, <span style="color:#069">self</span>, mrb_class_ptr(arg)));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="iterator?-instance_method">
+  
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>block_given?</strong> </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>iterator?</strong> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if <code>yield</code> would execute a
+block in the current context. The <code>iterator?</code> form
+is mildly deprecated.</p>
+
+<p>def try
+     if block_given?
+       yield
+     else
+       &quot;no block&quot;
+     end
+   end
+   try                  #=&gt; &quot;no block&quot;
+   try { &quot;hello&quot; }      #=&gt; &quot;hello&quot;
+   try do &quot;hello&quot; end   #=&gt; &quot;hello&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>block_given?</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>iterator?</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 175</span>
+
+static mrb_value
+mrb_f_block_given_p_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_callinfo *ci = mrb-&gt;c-&gt;ci;
+  mrb_value *bp;
+  mrb_bool given_p;
+
+  bp = ci-&gt;stackent + <span style="color:#00D">1</span>;
+  ci--;
+  <span style="color:#080;font-weight:bold">if</span> (ci &lt;= mrb-&gt;c-&gt;cibase) {
+    given_p = <span style="color:#069">FALSE</span>;
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* block_given? called within block; check upper scope *</span><span style="color:#404">/</span></span>
+    <span style="color:#080;font-weight:bold">if</span> (ci-&gt;proc-&gt;env) {
+      struct <span style="color:#036;font-weight:bold">REnv</span> *e = ci-&gt;proc-&gt;env;
+      mrb_value *sp;
+
+      <span style="color:#080;font-weight:bold">while</span> (e-&gt;c) {
+        e = (struct <span style="color:#036;font-weight:bold">REnv</span>*)e-&gt;c;
+      }
+      sp = e-&gt;stack;
+      <span style="color:#080;font-weight:bold">if</span> (sp) {
+        <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* top-level does not have block slot (alway false) *</span><span style="color:#404">/</span></span>
+        <span style="color:#080;font-weight:bold">if</span> (sp == mrb-&gt;c-&gt;stbase)
+          <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+        ci = mrb-&gt;c-&gt;cibase + e-&gt;cioff;
+        bp = ci[<span style="color:#00D">1</span>].stackent + <span style="color:#00D">1</span>;
+      }
+    }
+    <span style="color:#080;font-weight:bold">if</span> (ci-&gt;argc &gt; <span style="color:#00D">0</span>) {
+      bp += ci-&gt;argc;
+    }
+    given_p = !mrb_nil_p(*bp);
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(given_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="kind_of?-instance_method">
+  
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>is_a?</strong> </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>kind_of?</strong> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if <i>class</i> is the class of
+<i>obj</i>, or if <i>class</i> is one of the superclasses of
+<i>obj</i> or modules included in <i>obj</i>.</p>
+
+<p>module M;    end
+   class A
+     include M
+   end
+   class B &lt; A; end
+   class C &lt; B; end
+   b = B.new
+   b.instance_of? A   #=&gt; false
+   b.instance_of? B   #=&gt; true
+   b.instance_of? C   #=&gt; false
+   b.instance_of? M   #=&gt; false
+   b.kind_of? A       #=&gt; true
+   b.kind_of? B       #=&gt; true
+   b.kind_of? C       #=&gt; false
+   b.kind_of? M       #=&gt; true</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>is_a?</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>kind_of?</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+625
+626
+627
+628
+629
+630
+631
+632
+633</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 625</span>
+
+static mrb_value
+mrb_obj_is_kind_of_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value arg;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">C</span><span style="color:#710">&quot;</span></span>, &amp;arg);
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_obj_is_kind_of(mrb, <span style="color:#069">self</span>, mrb_class_ptr(arg)));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="local_variables-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>local_variables</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.3.1.3.28</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1050
+1051
+1052
+1053
+1054
+1055
+1056
+1057
+1058
+1059
+1060
+1061
+1062
+1063
+1064
+1065
+1066
+1067
+1068
+1069
+1070
+1071
+1072
+1073
+1074
+1075
+1076
+1077
+1078
+1079
+1080
+1081
+1082
+1083
+1084
+1085
+1086
+1087
+1088
+1089
+1090
+1091
+1092
+1093</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 1050</span>
+
+static mrb_value
+mrb_local_variables(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value ret;
+  struct <span style="color:#036;font-weight:bold">RProc</span> *proc;
+  struct mrb_irep *irep;
+  size_t i;
+
+  proc = mrb-&gt;c-&gt;ci[<span style="color:#00D">-1</span>].proc;
+
+  <span style="color:#080;font-weight:bold">if</span> (MRB_PROC_CFUNC_P(proc)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_ary_new(mrb);
+  }
+
+  irep = proc-&gt;body.irep;
+  <span style="color:#080;font-weight:bold">if</span> (!irep-&gt;lv) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_ary_new(mrb);
+  }
+  ret = mrb_ary_new_capa(mrb, irep-&gt;nlocals - <span style="color:#00D">1</span>);
+  <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i + <span style="color:#00D">1</span> &lt; irep-&gt;nlocals; ++i) {
+    <span style="color:#080;font-weight:bold">if</span> (irep-&gt;lv[i].name) {
+      mrb_ary_push(mrb, ret, mrb_symbol_value(irep-&gt;lv[i].name));
+    }
+  }
+  <span style="color:#080;font-weight:bold">if</span> (proc-&gt;env) {
+    struct <span style="color:#036;font-weight:bold">REnv</span> *e = proc-&gt;env;
+
+    <span style="color:#080;font-weight:bold">while</span> (e) {
+      <span style="color:#080;font-weight:bold">if</span> (!MRB_PROC_CFUNC_P(mrb-&gt;c-&gt;cibase[e-&gt;cioff].proc)) {
+        irep = mrb-&gt;c-&gt;cibase[e-&gt;cioff].proc-&gt;body.irep;
+        <span style="color:#080;font-weight:bold">if</span> (irep-&gt;lv) {
+          <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i + <span style="color:#00D">1</span> &lt; irep-&gt;nlocals; ++i) {
+            <span style="color:#080;font-weight:bold">if</span> (irep-&gt;lv[i].name) {
+              mrb_ary_push(mrb, ret, mrb_symbol_value(irep-&gt;lv[i].name));
+            }
+          }
+        }
+      }
+      e = (struct <span style="color:#036;font-weight:bold">REnv</span>*)e-&gt;c;
+    }
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> ret;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loop-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>loop</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Calls the given block repetitively.</p>
 
 <p>ISO 15.3.1.3.29</p>
 
@@ -411,7 +5574,9 @@
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -436,8 +5601,8 @@
   <span style="color:#080;font-weight:bold">while</span> <span style="color:#069">true</span>
     <span style="color:#080;font-weight:bold">yield</span>
   <span style="color:#080;font-weight:bold">end</span>
-<span style="color:#080;font-weight:bold">rescue</span> <span style="color:#036;font-weight:bold">StopIteration</span>
-  <span style="color:#069">nil</span>
+<span style="color:#080;font-weight:bold">rescue</span> <span style="color:#036;font-weight:bold">StopIteration</span> =&gt; e
+  e.result
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -445,9 +5610,327 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="to_enum-instance_method">
+  <h3 class="signature " id="methods-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_enum</strong>(*a) 
+    - (<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>) <strong>methods</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a list of the names of methods publicly accessible in
+<i>obj</i>. This will include all the methods accessible in
+<i>obj</i>&#39;s ancestors.</p>
+
+<p>class Klass
+     def kMethod()
+     end
+   end
+   k = Klass.new
+   k.methods[0..9]    #=&gt; [:kMethod, :respond_to?, :nil?, :is_a?,
+                      #    :class, :instance_variable_set,
+                      #    :methods, :extend, :<strong>send</strong>, :instance_eval]
+   k.methods.length   #=&gt; 42</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+748
+749
+750
+751
+752
+753
+754</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 748</span>
+
+static mrb_value
+mrb_obj_methods_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_bool recur = <span style="color:#069">TRUE</span>;
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|b</span><span style="color:#710">&quot;</span></span>, &amp;recur);
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_methods(mrb, recur, <span style="color:#069">self</span>, (mrb_method_flag_t)<span style="color:#00D">0</span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* everything but private *</span><span style="color:#404">/</span></span>
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nil?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>nil?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call_seq:
+  nil.nil?               -&gt; true
+  <anything_else>.nil?   -&gt; false</p>
+
+<p>Only the object <i>nil</i> responds <code>true</code> to <code>nil?</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+764
+765
+766
+767
+768</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 764</span>
+
+static mrb_value
+mrb_false(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="object_id-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>object_id</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   obj.<strong>id</strong>       -&gt; fixnum
+   obj.object_id    -&gt; fixnum</p>
+
+<p>Returns an integer identifier for <i>obj</i>. The same number will
+be returned on all calls to <code>id</code> for a given object, and
+no two active objects will share an id.
+<code>Object#object_id</code> is a different concept from the
+<code>:name</code> notation, which returns the symbol id of
+<code>name</code>. Replaces the deprecated <code>Object#id</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 145</span>
+
+static mrb_value
+mrb_obj_id_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(mrb_obj_id(<span style="color:#069">self</span>));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="p-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>p</strong>(*args) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Print human readable object description</p>
+
+<p>ISO 15.3.1.3.34</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-print/mrblib/print.rb', line 40</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">p</span>(*args)
+  i = <span style="color:#00D">0</span>
+  len = args.size
+  <span style="color:#080;font-weight:bold">while</span> i &lt; len
+    __printstr__ args[i].inspect
+    __printstr__ <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>
+    i += <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  args[<span style="color:#00D">0</span>]
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="print-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>print</strong>(*args) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Invoke method +print+ on STDOUT and passing +*args+</p>
+
+<p>ISO 15.3.1.2.10</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-print/mrblib/print.rb', line 10</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">print</span>(*args)
+  i = <span style="color:#00D">0</span>
+  len = args.size
+  <span style="color:#080;font-weight:bold">while</span> i &lt; len
+    __printstr__ args[i].to_s
+    i += <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="printf-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>printf</strong>(*args) 
   
 
   
@@ -475,22 +5958,1373 @@
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-47
-48
-49</pre>
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/kernel.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-print/mrblib/print.rb', line 52</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">printf</span>(*args)
+  raise <span style="color:#036;font-weight:bold">NotImplementedError</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">printf not available</span><span style="color:#710">'</span></span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="private_methods-instance_method">
+  
+    - (<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>) <strong>private_methods</strong>(all = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the list of private methods accessible to <i>obj</i>. If
+the <i>all</i> parameter is set to <code>false</code>, only those methods
+in the receiver will be listed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+779
+780
+781
+782
+783
+784
+785</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 779</span>
+
+static mrb_value
+mrb_obj_private_methods(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_bool recur = <span style="color:#069">TRUE</span>;
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|b</span><span style="color:#710">&quot;</span></span>, &amp;recur);
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_methods(mrb, recur, <span style="color:#069">self</span>, <span style="color:#036;font-weight:bold">NOEX_PRIVATE</span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* private attribute not define *</span><span style="color:#404">/</span></span>
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="protected_methods-instance_method">
+  
+    - (<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>) <strong>protected_methods</strong>(all = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the list of protected methods accessible to <i>obj</i>. If
+the <i>all</i> parameter is set to <code>false</code>, only those methods
+in the receiver will be listed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+796
+797
+798
+799
+800
+801
+802</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 796</span>
+
+static mrb_value
+mrb_obj_protected_methods(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_bool recur = <span style="color:#069">TRUE</span>;
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|b</span><span style="color:#710">&quot;</span></span>, &amp;recur);
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_methods(mrb, recur, <span style="color:#069">self</span>, <span style="color:#036;font-weight:bold">NOEX_PROTECTED</span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* protected attribute not define *</span><span style="color:#404">/</span></span>
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="public_methods-instance_method">
+  
+    - (<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>) <strong>public_methods</strong>(all = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the list of public methods accessible to <i>obj</i>. If
+the <i>all</i> parameter is set to <code>false</code>, only those methods
+in the receiver will be listed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+813
+814
+815
+816
+817
+818
+819</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 813</span>
+
+static mrb_value
+mrb_obj_public_methods(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_bool recur = <span style="color:#069">TRUE</span>;
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|b</span><span style="color:#710">&quot;</span></span>, &amp;recur);
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_methods(mrb, recur, <span style="color:#069">self</span>, <span style="color:#036;font-weight:bold">NOEX_PUBLIC</span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* public attribute not define *</span><span style="color:#404">/</span></span>
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="puts-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>puts</strong>(*args) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Invoke method +puts+ on STDOUT and passing +<em>args</em>+</p>
+
+<p>ISO 15.3.1.2.11</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-print/mrblib/print.rb', line 23</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">puts</span>(*args)
+  i = <span style="color:#00D">0</span>
+  len = args.size
+  <span style="color:#080;font-weight:bold">while</span> i &lt; len
+    s = args[i].to_s
+    __printstr__ s
+    __printstr__ <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> (s[<span style="color:#00D">-1</span>] != <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>)
+    i += <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  __printstr__ <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> len == <span style="color:#00D">0</span>
+  <span style="color:#069">nil</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="raise-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>raise</strong> </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>raise</strong>(string) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>raise</strong>(exception[, string]) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>With no arguments, raises a <code>RuntimeError</code>
+With a single +String+ argument, raises a
++RuntimeError+ with the string as a message. Otherwise,
+the first parameter should be the name of an +Exception+
+class (or an object that returns an +Exception+ object when sent
+an +exception+ message). The optional second parameter sets the
+message associated with the exception, and the third parameter is an
+array of callback information. Exceptions are caught by the
++rescue+ clause of <code>begin...end</code> blocks.</p>
+
+<p>raise &quot;Failed to create socket&quot;
+   raise ArgumentError, &quot;No parameters&quot;, caller</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 842</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_f_raise(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value a[<span style="color:#00D">2</span>], exc;
+  int argc;
+
+
+  argc = mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|oo</span><span style="color:#710">&quot;</span></span>, &amp;a[<span style="color:#00D">0</span>], &amp;a[<span style="color:#00D">1</span>]);
+  switch (argc) {
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">0</span>:
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_RUNTIME_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#080;font-weight:bold">break</span>;
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">1</span>:
+    a[<span style="color:#00D">1</span>] = mrb_check_string_type(mrb, a[<span style="color:#00D">0</span>]);
+    <span style="color:#080;font-weight:bold">if</span> (!mrb_nil_p(a[<span style="color:#00D">1</span>])) {
+      argc = <span style="color:#00D">2</span>;
+      a[<span style="color:#00D">0</span>] = mrb_obj_value(<span style="color:#036;font-weight:bold">E_RUNTIME_ERROR</span>);
+    }
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* fall through *</span><span style="color:#404">/</span></span>
+  <span style="color:#606">default</span>:
+    exc = mrb_make_exception(mrb, argc, a);
+    mrb_obj_iv_set(mrb, mrb_obj_ptr(exc), mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">lastpc</span><span style="color:#710">&quot;</span></span>), mrb_cptr_value(mrb, mrb-&gt;c-&gt;ci-&gt;pc));
+    mrb_exc_raise(mrb, exc);
+    <span style="color:#080;font-weight:bold">break</span>;
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();            <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* not reached *</span><span style="color:#404">/</span></span>
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_instance_variable-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>remove_instance_variable</strong>(symbol) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Removes the named instance variable from <i>obj</i>, returning that
+variable&#39;s value.</p>
+
+<p>class Dummy
+     attr_reader :var
+     def initialize
+       @var = 99
+     end
+     def remove
+       remove_instance_variable(:@var)
+     end
+   end
+   d = Dummy.new
+   d.var      #=&gt; 99
+   d.remove   #=&gt; 99
+   d.var      #=&gt; nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+892
+893
+894
+895
+896
+897
+898
+899
+900
+901
+902
+903
+904
+905</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 892</span>
+
+static mrb_value
+mrb_obj_remove_instance_variable(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_sym sym;
+  mrb_value val;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">n</span><span style="color:#710">&quot;</span></span>, &amp;sym);
+  mrb_iv_check(mrb, sym);
+  val = mrb_iv_remove(mrb, <span style="color:#069">self</span>, sym);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_undef_p(val)) {
+    mrb_name_error(mrb, sym, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">instance variable %S not defined</span><span style="color:#710">&quot;</span></span>, mrb_sym2str(mrb, sym));
+  }
+  <span style="color:#080;font-weight:bold">return</span> val;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="respond_to?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>respond_to?</strong>(symbol, include_private = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns +true+ if <em>obj</em> responds to the given
+method. Private methods are included in the search only if the
+optional second parameter evaluates to +true+.</p>
+
+<p>If the method is not implemented,
+as Process.fork on Windows, File.lchmod on GNU/Linux, etc.,
+false is returned.</p>
+
+<p>If the method is not defined, <code>respond_to_missing?</code>
+method is called and the result is returned.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+928
+929
+930
+931
+932
+933
+934
+935
+936
+937
+938
+939
+940
+941
+942
+943
+944
+945
+946
+947
+948
+949
+950
+951
+952
+953
+954
+955
+956
+957
+958
+959
+960
+961
+962
+963
+964
+965
+966
+967
+968
+969
+970
+971
+972</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 928</span>
+
+static mrb_value
+obj_respond_to(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value mid;
+  mrb_sym id, rtm_id;
+  mrb_bool priv = <span style="color:#069">FALSE</span>, respond_to_p = <span style="color:#069">TRUE</span>;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|b</span><span style="color:#710">&quot;</span></span>, &amp;mid, &amp;priv);
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_symbol_p(mid)) {
+    id = mrb_symbol(mid);
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    mrb_value tmp;
+    <span style="color:#080;font-weight:bold">if</span> (!mrb_string_p(mid)) {
+      tmp = mrb_check_string_type(mrb, mid);
+      <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(tmp)) {
+        tmp = mrb_inspect(mrb, mid);
+        mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%S is not a symbol</span><span style="color:#710">&quot;</span></span>, tmp);
+      }
+    }
+    tmp = mrb_check_intern_str(mrb, mid);
+    <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(tmp)) {
+      respond_to_p = <span style="color:#069">FALSE</span>;
+    }
+    <span style="color:#080;font-weight:bold">else</span> {
+      id = mrb_symbol(tmp);
+    }
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (respond_to_p) {
+    respond_to_p = basic_obj_respond_to(mrb, <span style="color:#069">self</span>, id, !priv);
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (!respond_to_p) {
+    rtm_id = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">respond_to_missing?</span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#080;font-weight:bold">if</span> (basic_obj_respond_to(mrb, <span style="color:#069">self</span>, rtm_id, !priv)) {
+      mrb_value args[<span style="color:#00D">2</span>];
+      args[<span style="color:#00D">0</span>] = mid;
+      args[<span style="color:#00D">1</span>] = mrb_bool_value(priv);
+      <span style="color:#080;font-weight:bold">return</span> mrb_funcall_argv(mrb, <span style="color:#069">self</span>, rtm_id, <span style="color:#00D">2</span>, args);
+    }
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(respond_to_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>send</strong>(symbol[, args...]) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__send__</strong>(symbol[, args...]) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Invokes the method identified by <em>symbol</em>, passing it any
+arguments specified. You can use <code><strong>send</strong></code> if the name
++send+ clashes with an existing method in <em>obj</em>.</p>
+
+<p>class Klass
+     def hello(*args)
+       &quot;Hello &quot; + args.join(&#39; &#39;)
+     end
+   end
+   k = Klass.new
+   k.send :hello, &quot;gentle&quot;, &quot;readers&quot;   #=&gt; &quot;Hello gentle readers&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>send</strong>(symbol[, args...]) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__send__</strong>(symbol[, args...]) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/vm.c', line 445</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_f_send(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_sym name;
+  mrb_value block, *argv, *regs;
+  mrb_int argc, i, len;
+  struct <span style="color:#036;font-weight:bold">RProc</span> *p;
+  struct <span style="color:#036;font-weight:bold">RClass</span> *c;
+  mrb_callinfo *ci;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">n*&amp;</span><span style="color:#710">&quot;</span></span>, &amp;name, &amp;argv, &amp;argc, &amp;block);
+
+  c = mrb_class(mrb, <span style="color:#069">self</span>);
+  p = mrb_method_search_vm(mrb, &amp;c, name);
+
+  <span style="color:#080;font-weight:bold">if</span> (!p) {                     <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* call method_mising *</span><span style="color:#404">/</span></span>
+    <span style="color:#080;font-weight:bold">return</span> mrb_funcall_with_block(mrb, <span style="color:#069">self</span>, name, argc, argv, block);
+  }
+
+  ci = mrb-&gt;c-&gt;ci;
+  ci-&gt;mid = name;
+  ci-&gt;target_class = c;
+  ci-&gt;proc = p;
+  regs = mrb-&gt;c-&gt;stack+<span style="color:#00D">1</span>;
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* remove first symbol from arguments *</span><span style="color:#404">/</span></span>
+  <span style="color:#080;font-weight:bold">if</span> (ci-&gt;argc &gt;= <span style="color:#00D">0</span>) {
+    <span style="color:#080;font-weight:bold">for</span> (i=<span style="color:#00D">0</span>,len=ci-&gt;argc; i&lt;len; i++) {
+      regs[i] = regs[i+<span style="color:#00D">1</span>];
+    }
+    ci-&gt;argc--;
+  }
+  <span style="color:#080;font-weight:bold">else</span> {                     <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* variable length arguments *</span><span style="color:#404">/</span></span>
+    mrb_ary_shift(mrb, regs[<span style="color:#00D">0</span>]);
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (MRB_PROC_CFUNC_P(p)) {
+    <span style="color:#080;font-weight:bold">return</span> p-&gt;body.func(mrb, <span style="color:#069">self</span>);
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (ci-&gt;argc &lt; <span style="color:#00D">0</span>) {
+    stack_extend(mrb, (p-&gt;body.irep-&gt;nregs &lt; <span style="color:#00D">3</span>) ? <span style="color:#00D">3</span> : p-&gt;body.irep-&gt;nregs, <span style="color:#00D">3</span>);
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    stack_extend(mrb, p-&gt;body.irep-&gt;nregs, ci-&gt;argc+<span style="color:#00D">2</span>);
+  }
+
+  ci-&gt;nregs = p-&gt;body.irep-&gt;nregs;
+  ci = cipush(mrb);
+  ci-&gt;nregs = <span style="color:#00D">0</span>;
+  ci-&gt;target_class = <span style="color:#00D">0</span>;
+  ci-&gt;pc = p-&gt;body.irep-&gt;iseq;
+  ci-&gt;stackent = mrb-&gt;c-&gt;stack;
+  ci-&gt;acc = <span style="color:#00D">0</span>;
+
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="singleton_class-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>singleton_class</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.3.1.2.12</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1134
+1135
+1136
+1137
+1138
+1139
+1140
+1141
+1142
+1143
+1144
+1145
+1146
+1147
+1148
+1149
+1150
+1151
+1152
+1153
+1154
+1155
+1156
+1157
+1158
+1159
+1160
+1161
+1162
+1163</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/class.c', line 1134</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_singleton_class(mrb_state *mrb, mrb_value v)
+{
+  struct <span style="color:#036;font-weight:bold">RBasic</span> *obj;
+
+  switch (mrb_type(v)) {
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FALSE</span>:
+    <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(v))
+      <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(mrb-&gt;nil_class);
+    <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(mrb-&gt;false_class);
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_TRUE</span>:
+    <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(mrb-&gt;true_class);
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_CPTR</span>:
+    <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(mrb-&gt;object_class);
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_SYMBOL</span>:
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FIXNUM</span>:
+  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FLOAT</span>:
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't define singleton</span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* not reached *</span><span style="color:#404">/</span></span>
+  <span style="color:#606">default</span>:
+    <span style="color:#080;font-weight:bold">break</span>;
+  }
+  obj = mrb_basic_ptr(v);
+  prepare_singleton_class(mrb, obj);
+  <span style="color:#080;font-weight:bold">if</span> (mrb-&gt;c &amp;&amp; mrb-&gt;c-&gt;ci &amp;&amp; mrb-&gt;c-&gt;ci-&gt;target_class) {
+    mrb_obj_iv_set(mrb, (struct <span style="color:#036;font-weight:bold">RObject</span>*)obj-&gt;c, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">__outer__</span><span style="color:#710">&quot;</span></span>),
+                   mrb_obj_value(mrb-&gt;c-&gt;ci-&gt;target_class));
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(obj-&gt;c);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="singleton_methods-instance_method">
+  
+    - (<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>) <strong>singleton_methods</strong>(all = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns an array of the names of singleton methods for <i>obj</i>.
+If the optional <i>all</i> parameter is true, the list will include
+methods in modules included in <i>obj</i>.
+Only public and protected singleton methods are returned.</p>
+
+<p>module Other
+     def three() end
+   end</p>
+
+<p>class Single
+     def Single.four() end
+   end</p>
+
+<p>a = Single.new</p>
+
+<p>def a.one()
+   end</p>
+
+<p>class &lt;&lt; a
+     include Other
+     def two()
+     end
+   end</p>
+
+<p>Single.singleton_methods    #=&gt; [:four]
+   a.singleton_methods(false)  #=&gt; [:two, :one]
+   a.singleton_methods         #=&gt; [:two, :one, :three]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#Array-class_method" title="Kernel.Array (method)">Array</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1007
+1008
+1009
+1010
+1011
+1012
+1013</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 1007</span>
+
+static mrb_value
+mrb_obj_singleton_methods_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_bool recur = <span style="color:#069">TRUE</span>;
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|b</span><span style="color:#710">&quot;</span></span>, &amp;recur);
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_singleton_methods(mrb, recur, <span style="color:#069">self</span>);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sprintf-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>sprintf</strong>(*args) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>in sprintf.c</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-sprintf/src/kernel.c', line 9</span>
+
+mrb_value mrb_f_sprintf(mrb_state *mrb, mrb_value obj);</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_enum-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_enum</strong>(meth = :each, *args) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='enum_for-instance_method'>enum_for</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  obj.to_enum(method = :each, <em>args)                 -&gt; enum
+  obj.enum_for(method = :each, *args)                -&gt; enum
+  obj.to_enum(method = :each, *args) {|</em>args| block} -&gt; enum
+  obj.enum_for(method = :each, *args){|*args| block} -&gt; enum</p>
+
+<p>Creates a new Enumerator which will enumerate by calling +method+ on
++obj+, passing +args+ if any.</p>
+
+<p>If a block is given, it will be used to calculate the size of
+the enumerator without the need to iterate it (see Enumerator#size).</p>
+
+<p>=== Examples</p>
+
+<p>str = &quot;xyz&quot;</p>
+
+<p>enum = str.enum_for(:each_byte)
+  enum.each { |b| puts b }
+  # =&gt; 120
+  # =&gt; 121
+  # =&gt; 122</p>
+
+<p># protect an array from being modified by some_method
+  a = [1, 2, 3]
+  some_method(a.to_enum)</p>
+
+<p>It is typical to call to_enum when defining methods for
+a generic Enumerable, in case no block is passed.</p>
+
+<p>Here is such an example, with parameter passing and a sizing block:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">Enumerable</span>
+  <span style="color:#777"># a generic method to repeat the values of any enumerable</span>
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">repeat</span>(n)
+    raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> is negative!</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> n &lt; <span style="color:#00D">0</span>
+    <span style="color:#080;font-weight:bold">unless</span> block_given?
+      <span style="color:#080;font-weight:bold">return</span> to_enum(__method__, n) <span style="color:#080;font-weight:bold">do</span> <span style="color:#777"># __method__ is :repeat here</span>
+        sz = size     <span style="color:#777"># Call size and multiply by n...</span>
+        sz * n <span style="color:#080;font-weight:bold">if</span> sz  <span style="color:#777"># but return nil if size itself is nil</span>
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+    each <span style="color:#080;font-weight:bold">do</span> |*val|
+      n.times { <span style="color:#080;font-weight:bold">yield</span> *val }
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#A60"><span style="color:#740">%i[</span><span style="color:#A60">hello world</span><span style="color:#740">]</span></span>.repeat(<span style="color:#00D">2</span>) { |w| puts w }
+  <span style="color:#777"># =&gt; Prints 'hello', 'hello', 'world', 'world'</span>
+enum = (<span style="color:#00D">1</span>..<span style="color:#00D">14</span>).repeat(<span style="color:#00D">3</span>)
+  <span style="color:#777"># =&gt; returns an Enumerator when called without a block</span>
+enum.first(<span style="color:#00D">4</span>) <span style="color:#777"># =&gt; [1, 1, 1, 2]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+605
+606
+607</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 605</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_enum</span>(*a)
   raise <span style="color:#036;font-weight:bold">NotImplementedError</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">fiber required for enumerator</span><span style="color:#710">&quot;</span></span>)
 <span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    - (<tt><span class='object_link'><a href="#String-class_method" title="Kernel.String (method)">String</a></span></tt>) <strong>to_s</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a string representing <i>obj</i>. The default
+<code>to_s</code> prints the object&#39;s class and an encoding of the
+object id. As a special case, the top-level object that is the
+initial execution context of Ruby programs returns &quot;main.&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#String-class_method" title="Kernel.String (method)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/object.c', line 434</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_any_to_s(mrb_state *mrb, mrb_value obj)
+{
+  mrb_value str = mrb_str_buf_new(mrb, <span style="color:#00D">20</span>);
+  const char *cname = mrb_obj_classname(mrb, obj);
+
+  mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#&lt;</span><span style="color:#710">&quot;</span></span>);
+  mrb_str_cat_cstr(mrb, str, cname);
+  mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">:</span><span style="color:#710">&quot;</span></span>);
+  mrb_str_concat(mrb, str, mrb_ptr_to_str(mrb, mrb_cptr(obj)));
+  mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&gt;</span><span style="color:#710">&quot;</span></span>);
+
+  <span style="color:#080;font-weight:bold">return</span> str;
+}</pre>
     </td>
   </tr>
 </table>
@@ -501,9 +7335,9 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:18 2015 by
+  Generated on Sun Jan 17 01:22:58 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

@@ -87,10 +87,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li>Object</li>
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Array</li>
           
@@ -113,7 +113,7 @@
   
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">mrblib/array.rb<span class="defines">,<br />
-  mrblib/array.rb,<br /> src/array.c</span>
+  src/array.c,<br /> mrblib/array.rb,<br /> mrbgems/mruby-array-ext/mrblib/array.rb</span>
 </dd>
   
 </dl>
@@ -121,8 +121,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>15.2.12</p>
+    <p>Array is enumerable</p>
 
 
   </div>
@@ -133,10 +132,56 @@
 </div>
 
 
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="NONE-constant" class="">NONE =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#036;font-weight:bold">Object</span>.new</pre></dd>
+      
+    </dl>
+  
 
 
 
 
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#try_convert-class_method" title="try_convert (class method)">+ (Object) <strong>try_convert</strong>(obj) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    Array.try_convert(obj) -&gt; array or nil.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
   
     <h2>
       Instance Method Summary
@@ -144,6 +189,121 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%26-instance_method" title="#&amp; (instance method)">- (Object) <strong>&amp;</strong>(elem) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    ary &amp; other_ary      -&gt; new_ary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%2A-instance_method" title="#* (instance method)">- (Object) <strong>*</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.2.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%2B-instance_method" title="#+ (instance method)">- (Object) <strong>+</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.1.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#--instance_method" title="#- (instance method)">- (Object) <strong>-</strong>(elem) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    ary - other_ary    -&gt; new_ary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3C%3C-instance_method" title="#&lt;&lt; (instance method)">- (Object) <strong>&lt;&lt;</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.3.</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -162,9 +322,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Comparison—Returns an integer (-1, 0, or +1)  if this array is less than,
-equal to, or greater than other_ary.</p>
+    <span class="summary_desc"><div class='inline'><p>Comparison---Returns an integer (-1, 0, or +1)  if this array is less than, equal to, or greater than other_ary.</p>
 </div></span>
   
 </li>
@@ -187,10 +345,121 @@ equal to, or greater than other_ary.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Equality—Two arrays are equal if they contain the same number  of elements
-and if each element is equal to (according to  Object.==) the corresponding
-element in the other array.</p>
+    <span class="summary_desc"><div class='inline'><p>Equality---Two arrays are equal if they contain the same number  of elements and if each element is equal to (according to  Object.==) the corresponding element in the other array.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Object) <strong>[]</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Element Reference --- Returns the element at +index+, or returns a subarray starting at the +start+ index and continuing for +length+ elements, or returns a subarray specified by +range+ of indices.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Element Assignment --- Sets the element at +index+, or replaces a subarray from the +start+ index for +length+ elements, or replaces a subarray specified by the +range+ of indices.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__ary_cmp-instance_method" title="#__ary_cmp (instance method)">- (Object) <strong>__ary_cmp</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__ary_eq-instance_method" title="#__ary_eq (instance method)">- (Object) <strong>__ary_eq</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.30.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__ary_index-instance_method" title="#__ary_index (instance method)">- (Object) <strong>__ary_index</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>kept for mruby-array-ext.</p>
 </div></span>
   
 </li>
@@ -213,8 +482,7 @@ element in the other array.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>internal method to convert multi-value to single value.</p>
+    <span class="summary_desc"><div class='inline'><p>internal method to convert multi-value to single value.</p>
 </div></span>
   
 </li>
@@ -245,6 +513,98 @@ element in the other array.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#assoc-instance_method" title="#assoc (instance method)">- (nil) <strong>assoc</strong>(obj) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Searches through an array whose elements are also arrays comparing <em>obj</em> with the first element of each contained array using obj.==.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#at-instance_method" title="#at (instance method)">- (Object<sup>?</sup>) <strong>at</strong>(index) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the element at <em>index</em>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bsearch-instance_method" title="#bsearch (instance method)">- (Object) <strong>bsearch</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.bsearch {|x| block }  -&gt; elem.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear-instance_method" title="#clear (instance method)">- (Object) <strong>clear</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.6.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#collect%21-instance_method" title="#collect! (instance method)">- (Object) <strong>collect!</strong>(&amp;block) </a>
     
 
@@ -261,9 +621,76 @@ element in the other array.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Calls the given block for each element of <code>self</code> and pass the
-respective element.</p>
+    <span class="summary_desc"><div class='inline'><p>Calls the given block for each element of +self+ and pass the respective element.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compact-instance_method" title="#compact (instance method)">- (Object) <strong>compact</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    ary.compact     -&gt; new_ary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compact%21-instance_method" title="#compact! (instance method)">- (Object) <strong>compact!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    ary.compact!    -&gt; ary  or  nil.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#concat-instance_method" title="#concat (instance method)">- (Object) <strong>concat</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.8.</p>
 </div></span>
   
 </li>
@@ -286,8 +713,53 @@ respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Delete element with index <code>key</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Delete element with index +key+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_at-instance_method" title="#delete_at (instance method)">- (Object) <strong>delete_at</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.9.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_if-instance_method" title="#delete_if (instance method)">- (Object) <strong>delete_if</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.delete_if { |item| block }  -&gt; ary     ary.delete_if                   -&gt; Enumerator.</p>
 </div></span>
   
 </li>
@@ -310,9 +782,7 @@ respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Calls the given block for each element of <code>self</code> and pass the
-respective element.</p>
+    <span class="summary_desc"><div class='inline'><p>Calls the given block for each element of +self+ and pass the respective element.</p>
 </div></span>
   
 </li>
@@ -335,9 +805,30 @@ respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Calls the given block for each element of <code>self</code> and pass the
-index of the respective element.</p>
+    <span class="summary_desc"><div class='inline'><p>Calls the given block for each element of +self+ and pass the index of the respective element.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#empty%3F-instance_method" title="#empty? (instance method)">- (Boolean) <strong>empty?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.12.</p>
 </div></span>
   
 </li>
@@ -360,9 +851,145 @@ index of the respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns true if <code>self</code> and <em>other</em> are the same object, 
-or are both arrays with the same content.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns true if +self+ and <em>other</em> are the same object,  or are both arrays with the same content.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fetch-instance_method" title="#fetch (instance method)">- (Object) <strong>fetch</strong>(n = nil, ifnone = NONE, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.fetch(index)                    -&gt; obj     ary.fetch(index, default)           -&gt; obj     ary.fetch(index) { |index| block }  -&gt; obj.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fill-instance_method" title="#fill (instance method)">- (Object) <strong>fill</strong>(arg0 = nil, arg1 = nil, arg2 = nil, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.fill(obj)                                 -&gt; ary     ary.fill(obj, start [, length])               -&gt; ary     ary.fill(obj, range )                         -&gt; ary     ary.fill { |index| block }                    -&gt; ary     ary.fill(start [, length] ) { |index| block } -&gt; ary     ary.fill(range) { |index| block }             -&gt; ary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#first-instance_method" title="#first (instance method)">- (Object) <strong>first</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.13.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flatten-instance_method" title="#flatten (instance method)">- (Object) <strong>flatten</strong>(depth = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    ary.flatten -&gt; new_ary    ary.flatten(level) -&gt; new_ary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flatten%21-instance_method" title="#flatten! (instance method)">- (Object) <strong>flatten!</strong>(depth = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    ary.flatten!        -&gt; ary or nil    ary.flatten!(level) -&gt; array or nil.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index-instance_method" title="#index (instance method)">- (Object) <strong>index</strong>(val = NONE, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.index(val)            -&gt; int or nil     ary.index {|item| block } -&gt;  int or nil.</p>
 </div></span>
   
 </li>
@@ -387,8 +1014,53 @@ or are both arrays with the same content.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Private method for Array creation.</p>
+    <span class="summary_desc"><div class='inline'><p>Private method for Array creation.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize_copy-instance_method" title="#initialize_copy (instance method)">- (Object) <strong>initialize_copy</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.16.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#insert-instance_method" title="#insert (instance method)">- (Object) <strong>insert</strong>(idx, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.insert(index, obj...)  -&gt; ary.</p>
 </div></span>
   
 </li>
@@ -413,8 +1085,444 @@ or are both arrays with the same content.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return the contents of this array as a string.</p>
+    <span class="summary_desc"><div class='inline'><p>Return the contents of this array as a string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#join-instance_method" title="#join (instance method)">- (String) <strong>join</strong>(sep = &quot;&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a string created by converting each element of the array to a string, separated by sep.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#keep_if-instance_method" title="#keep_if (instance method)">- (Object) <strong>keep_if</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.keep_if { |item| block } -&gt; ary     ary.keep_if                  -&gt; Enumerator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last-instance_method" title="#last (instance method)">- (Object) <strong>last</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.18.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#length-instance_method" title="#length (instance method)">- (Object) <strong>length</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.19.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pop-instance_method" title="#pop (instance method)">- (Object) <strong>pop</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.21.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push-instance_method" title="#push (instance method)">- (Object) <strong>push</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.22.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rassoc-instance_method" title="#rassoc (instance method)">- (nil) <strong>rassoc</strong>(obj) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Searches through the array whose elements are also arrays.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reject%21-instance_method" title="#reject! (instance method)">- (Object) <strong>reject!</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.reject! { |item| block }  -&gt; ary or nil     ary.reject!                   -&gt; Enumerator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#replace-instance_method" title="#replace (instance method)">- (Object) <strong>replace</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.23.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reverse-instance_method" title="#reverse (instance method)">- (Object) <strong>reverse</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.24.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reverse%21-instance_method" title="#reverse! (instance method)">- (Object) <strong>reverse!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.25.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reverse_each-instance_method" title="#reverse_each (instance method)">- (Object) <strong>reverse_each</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>for efficiency.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rindex-instance_method" title="#rindex (instance method)">- (Object) <strong>rindex</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.26.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rotate-instance_method" title="#rotate (instance method)">- (Object) <strong>rotate</strong>(count = 1) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.rotate(count=1)    -&gt; new_ary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rotate%21-instance_method" title="#rotate! (instance method)">- (Object) <strong>rotate!</strong>(count = 1) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.rotate!(count=1)   -&gt; ary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select%21-instance_method" title="#select! (instance method)">- (Object) <strong>select!</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.select!  {|item| block } -&gt; ary or nil     ary.select!                  -&gt; Enumerator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shift-instance_method" title="#shift (instance method)">- (Object) <strong>shift</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.27.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#size-instance_method" title="#size (instance method)">- (Object) <strong>size</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.28.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#slice-instance_method" title="#slice (instance method)">- (Object) <strong>slice</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Element Reference --- Returns the element at +index+, or returns a subarray starting at the +start+ index and continuing for +length+ elements, or returns a subarray specified by +range+ of indices.</p>
 </div></span>
   
 </li>
@@ -437,8 +1545,167 @@ or are both arrays with the same content.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Sort all elements and replace <code>self</code> with these elements.</p>
+    <span class="summary_desc"><div class='inline'><p>Sort all elements and replace +self+ with these elements.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_ary-instance_method" title="#to_ary (instance method)">- (Object) <strong>to_ary</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:     ary.to_ary -&gt; ary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_h-instance_method" title="#to_h (instance method)">- (Hash) <strong>to_h</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the result of interpreting aray as an array of [key, value] paris.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#uniq-instance_method" title="#uniq (instance method)">- (Object) <strong>uniq</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    ary.uniq                -&gt; new_ary    ary.uniq { |item| ... } -&gt; new_ary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#uniq%21-instance_method" title="#uniq! (instance method)">- (Object) <strong>uniq!</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    ary.uniq!                -&gt; ary or nil    ary.uniq! { |item| ... } -&gt; ary or nil.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unshift-instance_method" title="#unshift (instance method)">- (Object) <strong>unshift</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>15.2.12.5.30.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#values_at-instance_method" title="#values_at (instance method)">- (Object) <strong>values_at</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%7C-instance_method" title="#| (instance method)">- (Object) <strong>|</strong>(elem) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    ary | other_ary     -&gt; new_ary.</p>
 </div></span>
   
 </li>
@@ -457,7 +1724,7 @@ or are both arrays with the same content.</p>
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Enumerable.html" title="Enumerable (module)">Enumerable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Enumerable.html#__sort_sub__-instance_method" title="Enumerable#__sort_sub__ (method)">#__sort_sub__</a></span>, <span class='object_link'><a href="Enumerable.html#all%3F-instance_method" title="Enumerable#all? (method)">#all?</a></span>, <span class='object_link'><a href="Enumerable.html#any%3F-instance_method" title="Enumerable#any? (method)">#any?</a></span>, <span class='object_link'><a href="Enumerable.html#collect-instance_method" title="Enumerable#collect (method)">#collect</a></span>, <span class='object_link'><a href="Enumerable.html#detect-instance_method" title="Enumerable#detect (method)">#detect</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_index-instance_method" title="Enumerable#each_with_index (method)">#each_with_index</a></span>, <span class='object_link'><a href="Enumerable.html#entries-instance_method" title="Enumerable#entries (method)">#entries</a></span>, <span class='object_link'><a href="Enumerable.html#find_all-instance_method" title="Enumerable#find_all (method)">#find_all</a></span>, <span class='object_link'><a href="Enumerable.html#grep-instance_method" title="Enumerable#grep (method)">#grep</a></span>, <span class='object_link'><a href="Enumerable.html#hash-instance_method" title="Enumerable#hash (method)">#hash</a></span>, <span class='object_link'><a href="Enumerable.html#include%3F-instance_method" title="Enumerable#include? (method)">#include?</a></span>, <span class='object_link'><a href="Enumerable.html#inject-instance_method" title="Enumerable#inject (method)">#inject</a></span>, <span class='object_link'><a href="Enumerable.html#max-instance_method" title="Enumerable#max (method)">#max</a></span>, <span class='object_link'><a href="Enumerable.html#min-instance_method" title="Enumerable#min (method)">#min</a></span>, <span class='object_link'><a href="Enumerable.html#partition-instance_method" title="Enumerable#partition (method)">#partition</a></span>, <span class='object_link'><a href="Enumerable.html#reject-instance_method" title="Enumerable#reject (method)">#reject</a></span>, <span class='object_link'><a href="Enumerable.html#sort-instance_method" title="Enumerable#sort (method)">#sort</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Enumerable.html#__sort_sub__-instance_method" title="Enumerable#__sort_sub__ (method)">#__sort_sub__</a></span>, <span class='object_link'><a href="Enumerable.html#all%3F-instance_method" title="Enumerable#all? (method)">#all?</a></span>, <span class='object_link'><a href="Enumerable.html#any%3F-instance_method" title="Enumerable#any? (method)">#any?</a></span>, <span class='object_link'><a href="Enumerable.html#collect-instance_method" title="Enumerable#collect (method)">#collect</a></span>, <span class='object_link'><a href="Enumerable.html#count-instance_method" title="Enumerable#count (method)">#count</a></span>, <span class='object_link'><a href="Enumerable.html#cycle-instance_method" title="Enumerable#cycle (method)">#cycle</a></span>, <span class='object_link'><a href="Enumerable.html#detect-instance_method" title="Enumerable#detect (method)">#detect</a></span>, <span class='object_link'><a href="Enumerable.html#drop-instance_method" title="Enumerable#drop (method)">#drop</a></span>, <span class='object_link'><a href="Enumerable.html#drop_while-instance_method" title="Enumerable#drop_while (method)">#drop_while</a></span>, <span class='object_link'><a href="Enumerable.html#each_cons-instance_method" title="Enumerable#each_cons (method)">#each_cons</a></span>, <span class='object_link'><a href="Enumerable.html#each_slice-instance_method" title="Enumerable#each_slice (method)">#each_slice</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_index-instance_method" title="Enumerable#each_with_index (method)">#each_with_index</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_object-instance_method" title="Enumerable#each_with_object (method)">#each_with_object</a></span>, <span class='object_link'><a href="Enumerable.html#entries-instance_method" title="Enumerable#entries (method)">#entries</a></span>, <span class='object_link'><a href="Enumerable.html#find_all-instance_method" title="Enumerable#find_all (method)">#find_all</a></span>, <span class='object_link'><a href="Enumerable.html#find_index-instance_method" title="Enumerable#find_index (method)">#find_index</a></span>, <span class='object_link'><a href="Enumerable.html#flat_map-instance_method" title="Enumerable#flat_map (method)">#flat_map</a></span>, <span class='object_link'><a href="Enumerable.html#grep-instance_method" title="Enumerable#grep (method)">#grep</a></span>, <span class='object_link'><a href="Enumerable.html#group_by-instance_method" title="Enumerable#group_by (method)">#group_by</a></span>, <span class='object_link'><a href="Enumerable.html#hash-instance_method" title="Enumerable#hash (method)">#hash</a></span>, <span class='object_link'><a href="Enumerable.html#include%3F-instance_method" title="Enumerable#include? (method)">#include?</a></span>, <span class='object_link'><a href="Enumerable.html#inject-instance_method" title="Enumerable#inject (method)">#inject</a></span>, <span class='object_link'><a href="Enumerable.html#lazy-instance_method" title="Enumerable#lazy (method)">#lazy</a></span>, <span class='object_link'><a href="Enumerable.html#max-instance_method" title="Enumerable#max (method)">#max</a></span>, <span class='object_link'><a href="Enumerable.html#max_by-instance_method" title="Enumerable#max_by (method)">#max_by</a></span>, <span class='object_link'><a href="Enumerable.html#min-instance_method" title="Enumerable#min (method)">#min</a></span>, <span class='object_link'><a href="Enumerable.html#min_by-instance_method" title="Enumerable#min_by (method)">#min_by</a></span>, <span class='object_link'><a href="Enumerable.html#minmax-instance_method" title="Enumerable#minmax (method)">#minmax</a></span>, <span class='object_link'><a href="Enumerable.html#minmax_by-instance_method" title="Enumerable#minmax_by (method)">#minmax_by</a></span>, <span class='object_link'><a href="Enumerable.html#none%3F-instance_method" title="Enumerable#none? (method)">#none?</a></span>, <span class='object_link'><a href="Enumerable.html#one%3F-instance_method" title="Enumerable#one? (method)">#one?</a></span>, <span class='object_link'><a href="Enumerable.html#partition-instance_method" title="Enumerable#partition (method)">#partition</a></span>, <span class='object_link'><a href="Enumerable.html#reject-instance_method" title="Enumerable#reject (method)">#reject</a></span>, <span class='object_link'><a href="Enumerable.html#sort-instance_method" title="Enumerable#sort (method)">#sort</a></span>, <span class='object_link'><a href="Enumerable.html#sort_by-instance_method" title="Enumerable#sort_by (method)">#sort_by</a></span>, <span class='object_link'><a href="Enumerable.html#take-instance_method" title="Enumerable#take (method)">#take</a></span>, <span class='object_link'><a href="Enumerable.html#take_while-instance_method" title="Enumerable#take_while (method)">#take_while</a></span>, <span class='object_link'><a href="Enumerable.html#to_h-class_method" title="Enumerable.to_h (method)">to_h</a></span>, <span class='object_link'><a href="Enumerable.html#zip-instance_method" title="Enumerable#zip (method)">#zip</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -472,8 +1739,7 @@ or are both arrays with the same content.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Private method for Array creation.</p>
+    <p>Private method for Array creation.</p>
 
 <p>ISO 15.2.12.5.15</p>
 
@@ -496,12 +1762,19 @@ or are both arrays with the same content.</p>
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+62
+63
+64
+65
+66
 67
 68
 69
@@ -513,15 +1786,10 @@ or are both arrays with the same content.</p>
 75
 76
 77
-78
-79
-80
-81
-82
-83</pre>
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 62</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize</span>(size=<span style="color:#00D">0</span>, obj=<span style="color:#069">nil</span>, &amp;block)
   raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">expected Integer for 1st argument</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> size.kind_of? <span style="color:#036;font-weight:bold">Integer</span>
@@ -548,14 +1816,14 @@ or are both arrays with the same content.</p>
 </div>
 
 
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="<=>-instance_method">
+  <h3 class="signature first" id="try_convert-class_method">
   
-    - (<tt>Object</tt>) <strong>&lt;=&gt;</strong>(other) 
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>try_convert</strong>(obj) 
   
 
   
@@ -563,17 +1831,467 @@ or are both arrays with the same content.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Comparison—Returns an integer (-1, 0, or +1)</p>
+    <p>call-seq:
+   Array.try_convert(obj) -&gt; array or nil</p>
 
-<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">if</span> this array is less than, equal to, <span style="color:#080;font-weight:bold">or</span> greater than &lt;i&gt;other_ary&lt;<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">i&gt;.
-Each object in each array is compared (using &lt;=&gt;). If any value isn't
-equal, then that inequality is the return value. If all the
-values found are equal, then the return is based on a
-comparison of the array lengths.  Thus, two arrays are
-&quot;equal&quot; according to &lt;code&gt;Array#&lt;=&gt;&lt;</span><span style="color:#404">/</span></span>code&gt; <span style="color:#080;font-weight:bold">if</span> <span style="color:#080;font-weight:bold">and</span> only <span style="color:#080;font-weight:bold">if</span> they have
-the same length <span style="color:#080;font-weight:bold">and</span> the value of each element is equal to the
-value of the corresponding element <span style="color:#080;font-weight:bold">in</span> the other array.</code></pre>
+<p>Tries to convert +obj+ into an array, using +to_ary+ method.
+converted array or +nil+ if +obj+ cannot be converted for any reason.
+This method can be used to check if an argument is an array.</p>
+
+<p>Array.try_convert([1])   #=&gt; [1]
+   Array.try_convert(&quot;1&quot;)   #=&gt; nil</p>
+
+<p>if tmp = Array.try_convert(arg)
+     # the argument is an array
+   elsif tmp = String.try_convert(arg)
+     # the argument is a string
+   end</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 19</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">try_convert</span>(obj)
+  <span style="color:#080;font-weight:bold">if</span> obj.respond_to?(<span style="color:#A60">:to_ary</span>)
+    obj.to_ary
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">nil</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="&-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&amp;</strong>(elem) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   ary &amp; other_ary      -&gt; new_ary</p>
+
+<p>Set Intersection---Returns a new array
+containing elements common to the two arrays, with no duplicates.</p>
+
+<p>[ 1, 1, 3, 5 ] &amp; [ 1, 2, 3 ]   #=&gt; [ 1, 3 ]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 139</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&amp;</span>(elem)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't convert </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>elem.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Array</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> elem.class == <span style="color:#036;font-weight:bold">Array</span>
+
+  hash = {}
+  array = []
+  elem.each{|v| hash[v] = <span style="color:#069">true</span> }
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |v|
+    <span style="color:#080;font-weight:bold">if</span> hash[v]
+      array &lt;&lt; v
+      hash.delete v
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  array
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="*-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>*</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.2</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 337</span>
+
+static mrb_value
+mrb_ary_times(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a1 = mrb_ary_ptr(<span style="color:#069">self</span>);
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a2;
+  mrb_value *ptr;
+  mrb_int times;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">i</span><span style="color:#710">&quot;</span></span>, &amp;times);
+  <span style="color:#080;font-weight:bold">if</span> (times &lt; <span style="color:#00D">0</span>) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative argument</span><span style="color:#710">&quot;</span></span>);
+  }
+  <span style="color:#080;font-weight:bold">if</span> (times == <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_ary_new(mrb);
+  <span style="color:#080;font-weight:bold">if</span> (<span style="color:#036;font-weight:bold">ARY_MAX_SIZE</span> / times &lt; a1-&gt;len) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">array size too big</span><span style="color:#710">&quot;</span></span>);
+  }
+  a2 = ary_new_capa(mrb, a1-&gt;len * times);
+  ptr = a2-&gt;ptr;
+  <span style="color:#080;font-weight:bold">while</span> (times--) {
+    array_copy(ptr, a1-&gt;ptr, a1-&gt;len);
+    ptr += a1-&gt;len;
+    a2-&gt;len += a1-&gt;len;
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(a2);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="+-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>+</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.1</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 287</span>
+
+static mrb_value
+mrb_ary_plus(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a1 = mrb_ary_ptr(<span style="color:#069">self</span>);
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a2;
+  mrb_value *ptr;
+  mrb_int blen;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>, &amp;ptr, &amp;blen);
+  <span style="color:#080;font-weight:bold">if</span> (<span style="color:#036;font-weight:bold">ARY_MAX_SIZE</span> - blen &lt; a1-&gt;len) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">array size too big</span><span style="color:#710">&quot;</span></span>);
+  }
+  a2 = ary_new_capa(mrb, a1-&gt;len + blen);
+  array_copy(a2-&gt;ptr, a1-&gt;ptr, a1-&gt;len);
+  array_copy(a2-&gt;ptr + a1-&gt;len, ptr, blen);
+  a2-&gt;len = a1-&gt;len + blen;
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(a2);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="--instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>-</strong>(elem) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   ary - other_ary    -&gt; new_ary</p>
+
+<p>Array Difference---Returns a new array that is a copy of
+the original array, removing any items that also appear in
+<i>other_ary</i>. (If you need set-like behavior, see the
+library class Set.)</p>
+
+<p>[ 1, 1, 2, 2, 3, 3, 4, 5 ] - [ 1, 2, 4 ]  #=&gt;  [ 3, 3, 5 ]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107
+108
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 103</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">-</span>(elem)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't convert </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>elem.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Array</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> elem.class == <span style="color:#036;font-weight:bold">Array</span>
+
+  hash = {}
+  array = []
+  elem.each { |x| hash[x] = <span style="color:#069">true</span> }
+  <span style="color:#069">self</span>.each { |x| array &lt;&lt; x <span style="color:#080;font-weight:bold">unless</span> hash[x] }
+  array
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="<<-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&lt;&lt;</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.3</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 416</span>
+
+static mrb_value
+mrb_ary_push_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value *argv;
+  mrb_int len;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*</span><span style="color:#710">&quot;</span></span>, &amp;argv, &amp;len);
+  <span style="color:#080;font-weight:bold">while</span> (len--) {
+    mrb_ary_push(mrb, <span style="color:#069">self</span>, *argv++);
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="<=>-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&lt;=&gt;</strong>(other) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Comparison---Returns an integer (-1, 0, or +1)
+ if this array is less than, equal to, or greater than <i>other_ary</i>.
+ Each object in each array is compared (using &lt;=&gt;). If any value isn&#39;t
+ equal, then that inequality is the return value. If all the
+ values found are equal, then the return is based on a
+ comparison of the array lengths.  Thus, two arrays are
+ &quot;equal&quot; according to <code>Array#&lt;=&gt;</code> if and only if they have
+ the same length and the value of each element is equal to the
+ value of the corresponding element in the other array.</p>
 
 <p>ISO 15.2.12.5.36 (x)</p>
 
@@ -583,12 +2301,19 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+147
+148
+149
+150
+151
 152
 153
 154
@@ -606,15 +2331,10 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
 166
 167
 168
-169
-170
-171
-172
-173
-174</pre>
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 147</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&lt;=&gt;</span>(other)
   other = <span style="color:#069">self</span>.__ary_cmp(other)
@@ -647,7 +2367,7 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    - (<tt>Object</tt>) <strong>==</strong>(other) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>==</strong>(other) 
   
 
   
@@ -655,11 +2375,9 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Equality—Two arrays are equal if they contain the same number</p>
-
-<pre class="code ruby"><code class="ruby">of elements <span style="color:#080;font-weight:bold">and</span> <span style="color:#080;font-weight:bold">if</span> each element is equal to (according to
-<span style="color:#036;font-weight:bold">Object</span>.==) the corresponding element <span style="color:#080;font-weight:bold">in</span> the other array.</code></pre>
+    <p>Equality---Two arrays are equal if they contain the same number
+ of elements and if each element is equal to (according to
+ Object.==) the corresponding element in the other array.</p>
 
 <p>ISO 15.2.12.5.33 (x)</p>
 
@@ -669,27 +2387,29 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+104
+105
+106
+107
+108
 109
 110
 111
 112
 113
 114
-115
-116
-117
-118
-119
-120</pre>
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 104</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">==</span>(other)
   other = <span style="color:#069">self</span>.__ary_eq(other)
@@ -709,9 +2429,21 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="__svalue-instance_method">
+  <h3 class="signature " id="[]-instance_method">
   
-    - (<tt>Object</tt>) <strong>__svalue</strong> 
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(index) </span>
+    
+      <span class="overload">- (<tt>nil</tt>) <strong>[]</strong>(start, length) </span>
+    
+      <span class="overload">- (<tt>nil</tt>) <strong>[]</strong>(range) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>slice</strong>(index) </span>
+    
+      <span class="overload">- (<tt>nil</tt>) <strong>slice</strong>(start, length) </span>
+    
+      <span class="overload">- (<tt>nil</tt>) <strong>slice</strong>(range) </span>
+    
   
 
   
@@ -719,8 +2451,579 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>Element Reference --- Returns the element at +index+, or returns a
+subarray starting at the +start+ index and continuing for +length+
+elements, or returns a subarray specified by +range+ of indices.</p>
+
+<p>Negative indices count backward from the end of the array (-1 is the last
+element).  For +start+ and +range+ cases the starting index is just before
+an element.  Additionally, an empty array is returned when the starting
+index for an element range is at the end of the array.</p>
+
+<p>Returns +nil+ if the index (or starting index) are out of range.</p>
+
+<p>a = [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot; ]
+a[1]     =&gt; &quot;b&quot;
+a[1,2]   =&gt; [&quot;b&quot;, &quot;c&quot;]
+a[1..-2] =&gt; [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
     
-<p>internal method to convert multi-value to single value</p>
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(index) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>nil</tt>) <strong>[]</strong>(start, length) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>nil</tt>) <strong>[]</strong>(range) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>slice</strong>(index) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>nil</tt>) <strong>slice</strong>(start, length) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>nil</tt>) <strong>slice</strong>(range) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 694</span>
+
+static mrb_value
+mrb_ary_aget(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+  mrb_int i, len;
+  mrb_value index;
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|i</span><span style="color:#710">&quot;</span></span>, &amp;index, &amp;len) == <span style="color:#00D">1</span>) {
+    switch (mrb_type(index)) {
+      <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* a[n..m] *</span><span style="color:#404">/</span></span>
+    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_RANGE</span>:
+      <span style="color:#080;font-weight:bold">if</span> (mrb_range_beg_len(mrb, index, &amp;i, &amp;len, a-&gt;len)) {
+        <span style="color:#080;font-weight:bold">return</span> ary_subseq(mrb, a, i, len);
+      }
+      <span style="color:#080;font-weight:bold">else</span> {
+        <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+      }
+    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FIXNUM</span>:
+      <span style="color:#080;font-weight:bold">return</span> mrb_ary_ref(mrb, <span style="color:#069">self</span>, mrb_fixnum(index));
+    <span style="color:#606">default</span>:
+      <span style="color:#080;font-weight:bold">return</span> mrb_ary_ref(mrb, <span style="color:#069">self</span>, aget_index(mrb, index));
+    }
+  }
+
+  i = aget_index(mrb, index);
+  <span style="color:#080;font-weight:bold">if</span> (i &lt; <span style="color:#00D">0</span>) i += a-&gt;len;
+  <span style="color:#080;font-weight:bold">if</span> (i &lt; <span style="color:#00D">0</span> || a-&gt;len &lt; i) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">if</span> (len &lt; <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">if</span> (a-&gt;len == i) <span style="color:#080;font-weight:bold">return</span> mrb_ary_new(mrb);
+  <span style="color:#080;font-weight:bold">if</span> (len &gt; a-&gt;len - i) len = a-&gt;len - i;
+
+  <span style="color:#080;font-weight:bold">return</span> ary_subseq(mrb, a, i, len);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="[]=-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>[]=</strong>(index) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>[]=</strong>(start, length) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>[]=</strong>(range) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Element Assignment --- Sets the element at +index+, or replaces a subarray
+from the +start+ index for +length+ elements, or replaces a subarray
+specified by the +range+ of indices.</p>
+
+<p>If indices are greater than the current capacity of the array, the array
+grows automatically.  Elements are inserted into the array at +start+ if
++length+ is zero.</p>
+
+<p>Negative indices will count backward from the end of the array.  For
++start+ and +range+ cases the starting index is just before an element.</p>
+
+<p>An IndexError is raised if a negative index points past the beginning of
+the array.</p>
+
+<p>See also Array#push, and Array#unshift.</p>
+
+<p>a = Array.new
+   a[4] = &quot;4&quot;;                 #=&gt; [nil, nil, nil, nil, &quot;4&quot;]
+   a[0, 3] = [ &#39;a&#39;, &#39;b&#39;, &#39;c&#39; ] #=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, nil, &quot;4&quot;]
+   a[1..2] = [ 1, 2 ]          #=&gt; [&quot;a&quot;, 1, 2, nil, &quot;4&quot;]
+   a[0, 2] = &quot;?&quot;               #=&gt; [&quot;?&quot;, 2, nil, &quot;4&quot;]
+   a[0..2] = &quot;A&quot;               #=&gt; [&quot;A&quot;, &quot;4&quot;]
+   a[-1]   = &quot;Z&quot;               #=&gt; [&quot;A&quot;, &quot;Z&quot;]
+   a[1..-1] = nil              #=&gt; [&quot;A&quot;, nil]
+   a[1..-1] = []               #=&gt; [&quot;A&quot;]
+   a[0, 0] = [ 1, 2 ]          #=&gt; [1, 2, &quot;A&quot;]
+   a[3, 0] = &quot;B&quot;               #=&gt; [1, 2, &quot;A&quot;, &quot;B&quot;]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>[]=</strong>(index) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>[]=</strong>(start, length) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>[]=</strong>(range) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 763</span>
+
+static mrb_value
+mrb_ary_aset(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value v1, v2, v3;
+  mrb_int i, len;
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">oo|o</span><span style="color:#710">&quot;</span></span>, &amp;v1, &amp;v2, &amp;v3) == <span style="color:#00D">2</span>) {
+    switch (mrb_type(v1)) {
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* a[n..m] = v *</span><span style="color:#404">/</span></span>
+    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_RANGE</span>:
+      <span style="color:#080;font-weight:bold">if</span> (mrb_range_beg_len(mrb, v1, &amp;i, &amp;len, RARRAY_LEN(<span style="color:#069">self</span>))) {
+        mrb_ary_splice(mrb, <span style="color:#069">self</span>, i, len, v2);
+      }
+      <span style="color:#080;font-weight:bold">break</span>;
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* a[n] = v *</span><span style="color:#404">/</span></span>
+    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FIXNUM</span>:
+      mrb_ary_set(mrb, <span style="color:#069">self</span>, mrb_fixnum(v1), v2);
+      <span style="color:#080;font-weight:bold">break</span>;
+    <span style="color:#606">default</span>:
+      mrb_ary_set(mrb, <span style="color:#069">self</span>, aget_index(mrb, v1), v2);
+      <span style="color:#080;font-weight:bold">break</span>;
+    }
+    <span style="color:#080;font-weight:bold">return</span> v2;
+  }
+
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* a[n,m] = v *</span><span style="color:#404">/</span></span>
+  mrb_ary_splice(mrb, <span style="color:#069">self</span>, aget_index(mrb, v1), aget_index(mrb, v2), v3);
+  <span style="color:#080;font-weight:bold">return</span> v3;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="__ary_cmp-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__ary_cmp</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1052
+1053
+1054
+1055
+1056
+1057
+1058
+1059
+1060
+1061
+1062
+1063
+1064</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 1052</span>
+
+static mrb_value
+mrb_ary_cmp(mrb_state *mrb, mrb_value ary1)
+{
+  mrb_value ary2;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;ary2);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_obj_equal(mrb, ary1, ary2)) <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(<span style="color:#00D">0</span>);
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_array_p(ary2)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> ary2;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="__ary_eq-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__ary_eq</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.30</p>
 
 
   </div>
@@ -728,19 +3031,149 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-188
-189
-190
-191</pre>
+1037
+1038
+1039
+1040
+1041
+1042
+1043
+1044
+1045
+1046
+1047
+1048
+1049
+1050</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 1037</span>
+
+static mrb_value
+mrb_ary_eq(mrb_state *mrb, mrb_value ary1)
+{
+  mrb_value ary2;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;ary2);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_obj_equal(mrb, ary1, ary2)) <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_array_p(ary2)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+  }
+  <span style="color:#080;font-weight:bold">if</span> (RARRAY_LEN(ary1) != RARRAY_LEN(ary2)) <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+
+  <span style="color:#080;font-weight:bold">return</span> ary2;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="__ary_index-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__ary_index</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>kept for mruby-array-ext</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 861</span>
+
+static mrb_value
+mrb_ary_index_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value obj;
+  mrb_int i;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;obj);
+  <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i &lt; RARRAY_LEN(<span style="color:#069">self</span>); i++) {
+    <span style="color:#080;font-weight:bold">if</span> (mrb_equal(mrb, RARRAY_PTR(<span style="color:#069">self</span>)[i], obj)) {
+      <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(i);
+    }
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="__svalue-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__svalue</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>internal method to convert multi-value to single value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 183</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">__svalue</span>
   <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>.first <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.size &lt; <span style="color:#00D">2</span>
@@ -754,7 +3187,7 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
       <div class="method_details ">
   <h3 class="signature " id="_inspect-instance_method">
   
-    - (<tt>Object</tt>) <strong>_inspect</strong> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>_inspect</strong> 
   
 
   
@@ -766,13 +3199,13 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
       <pre class="lines">
 
 
-85
-86
-87
-88</pre>
+80
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 80</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">_inspect</span>
   <span style="color:#080;font-weight:bold">return</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">[]</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.size == <span style="color:#00D">0</span>
@@ -784,9 +3217,421 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="assoc-instance_method">
+  
+    - (<tt>nil</tt>) <strong>assoc</strong>(obj) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Searches through an array whose elements are also arrays
+comparing <em>obj</em> with the first element of each contained array
+using obj.==.
+Returns the first contained array that matches (that
+is, the first associated array),
+or +nil+ if no match is found.
+See also <code>Array#rassoc</code>.</p>
+
+<p>s1 = [ &quot;colors&quot;, &quot;red&quot;, &quot;blue&quot;, &quot;green&quot; ]
+   s2 = [ &quot;letters&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ]
+   s3 = &quot;foo&quot;
+   a  = [ s1, s2, s3 ]
+   a.assoc(&quot;letters&quot;)  #=&gt; [ &quot;letters&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ]
+   a.assoc(&quot;foo&quot;)      #=&gt; nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/src/array.c', line 27</span>
+
+static mrb_value
+mrb_ary_assoc(mrb_state *mrb, mrb_value ary)
+{
+  mrb_int i;
+  mrb_value v, k;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;k);
+
+  <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i &lt; RARRAY_LEN(ary); ++i) {
+    v = mrb_check_array_type(mrb, RARRAY_PTR(ary)[i]);
+    <span style="color:#080;font-weight:bold">if</span> (!mrb_nil_p(v) &amp;&amp; RARRAY_LEN(v) &gt; <span style="color:#00D">0</span> &amp;&amp;
+        mrb_equal(mrb, RARRAY_PTR(v)[<span style="color:#00D">0</span>], k))
+      <span style="color:#080;font-weight:bold">return</span> v;
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="at-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>at</strong>(index) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the element at <em>index</em>. A
+negative index counts from the end of +self+.  Returns +nil+
+if the index is out of range. See also <code>Array#[]</code>.</p>
+
+<p>a = [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot; ]
+   a.at(0)     #=&gt; &quot;a&quot;
+   a.at(-1)    #=&gt; &quot;e&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/src/array.c', line 89</span>
+
+static mrb_value
+mrb_ary_at(mrb_state *mrb, mrb_value ary)
+{
+  mrb_int pos;
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">i</span><span style="color:#710">&quot;</span></span>, &amp;pos);
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_ary_entry(ary, pos);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bsearch-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bsearch</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.bsearch {|x| block }  -&gt; elem</p>
+
+<p>By using binary search, finds a value from this array which meets
+ the given condition in O(log n) where n is the size of the array.</p>
+
+<p>You can use this method in two use cases: a find-minimum mode and
+ a find-any mode.  In either case, the elements of the array must be
+ monotone (or sorted) with respect to the block.</p>
+
+<p>In find-minimum mode (this is a good choice for typical use case),
+ the block must return true or false, and there must be an index i
+ (0 &lt;= i &lt;= ary.size) so that:</p>
+
+<ul>
+<li>the block returns false for any element whose index is less than
+i, and</li>
+<li>the block returns true for any element whose index is greater
+than or equal to i.</li>
+</ul>
+
+<p>This method returns the i-th element.  If i is equal to ary.size,
+ it returns nil.</p>
+
+<pre class="code ruby"><code class="ruby">ary = [<span style="color:#00D">0</span>, <span style="color:#00D">4</span>, <span style="color:#00D">7</span>, <span style="color:#00D">10</span>, <span style="color:#00D">12</span>]
+ary.bsearch {|x| x &gt;=   <span style="color:#00D">4</span> } <span style="color:#777">#=&gt; 4</span>
+ary.bsearch {|x| x &gt;=   <span style="color:#00D">6</span> } <span style="color:#777">#=&gt; 7</span>
+ary.bsearch {|x| x &gt;=  <span style="color:#00D">-1</span> } <span style="color:#777">#=&gt; 0</span>
+ary.bsearch {|x| x &gt;= <span style="color:#00D">100</span> } <span style="color:#777">#=&gt; nil</span>
+</code></pre>
+
+<p>In find-any mode (this behaves like libc&#39;s bsearch(3)), the block
+ must return a number, and there must be two indices i and j
+ (0 &lt;= i &lt;= j &lt;= ary.size) so that:</p>
+
+<ul>
+<li>the block returns a positive number for ary[k] if 0 &lt;= k &lt; i,</li>
+<li>the block returns zero for ary[k] if i &lt;= k &lt; j, and</li>
+<li>the block returns a negative number for ary[k] if
+j &lt;= k &lt; ary.size.</li>
+</ul>
+
+<p>Under this condition, this method returns any element whose index
+ is within i...j.  If i is equal to j (i.e., there is no element
+ that satisfies the block), this method returns nil.</p>
+
+<pre class="code ruby"><code class="ruby">ary = [<span style="color:#00D">0</span>, <span style="color:#00D">4</span>, <span style="color:#00D">7</span>, <span style="color:#00D">10</span>, <span style="color:#00D">12</span>]
+<span style="color:#777"># try to find v such that 4 &lt;= v &lt; 8</span>
+ary.bsearch {|x| <span style="color:#00D">1</span> - (x / <span style="color:#00D">4</span>).truncate } <span style="color:#777">#=&gt; 4 or 7</span>
+<span style="color:#777"># try to find v such that 8 &lt;= v &lt; 10</span>
+ary.bsearch {|x| <span style="color:#00D">4</span> - (x / <span style="color:#00D">2</span>).truncate } <span style="color:#777">#=&gt; nil</span>
+</code></pre>
+
+<p>You must not mix the two modes at a time; the block must always
+ return either true/false, or always return a number.  It is
+ undefined which value is actually picked up at each iteration.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 594</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">bsearch</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:bsearch</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+
+  low = <span style="color:#00D">0</span>
+  high = <span style="color:#069">self</span>.size
+  satisfied = <span style="color:#069">false</span>
+  <span style="color:#080;font-weight:bold">while</span> low &lt; high
+    mid = low + ((high - low) / <span style="color:#00D">2</span>).truncate
+    val = <span style="color:#069">self</span>[mid]
+    v = block.call(val)
+    <span style="color:#080;font-weight:bold">if</span> v.is_a?(<span style="color:#036;font-weight:bold">Integer</span>)
+      <span style="color:#080;font-weight:bold">return</span> val <span style="color:#080;font-weight:bold">if</span> v == <span style="color:#00D">0</span>
+      smaller = v &lt; <span style="color:#00D">0</span>
+    <span style="color:#080;font-weight:bold">elsif</span> v == <span style="color:#069">true</span>
+      satisfied = <span style="color:#069">true</span>
+      smaller = <span style="color:#069">true</span>
+    <span style="color:#080;font-weight:bold">elsif</span> v == <span style="color:#069">false</span> || v.nil?
+      smaller = <span style="color:#069">false</span>
+    <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">if</span> smaller
+      high = mid
+    <span style="color:#080;font-weight:bold">else</span>
+      low = mid + <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> low == <span style="color:#069">self</span>.size
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">unless</span> satisfied
+  <span style="color:#069">self</span>[low]
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>clear</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.6</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+913
+914
+915
+916
+917
+918
+919
+920
+921
+922
+923
+924
+925
+926
+927
+928
+929
+930</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 913</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_ary_clear(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+
+  <span style="color:#080;font-weight:bold">if</span> (ARY_SHARED_P(a)) {
+    mrb_ary_decref(mrb, a-&gt;aux.shared);
+    ARY_UNSET_SHARED_FLAG(a);
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    mrb_free(mrb, a-&gt;ptr);
+  }
+  a-&gt;len = <span style="color:#00D">0</span>;
+  a-&gt;aux.capa = <span style="color:#00D">0</span>;
+  a-&gt;ptr = <span style="color:#00D">0</span>;
+
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="collect!-instance_method">
   
-    - (<tt>Object</tt>) <strong>collect!</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>collect!</strong>(&amp;block) 
   
 
   
@@ -798,9 +3643,9 @@ value of the corresponding element <span style="color:#080;font-weight:bold">in<
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Calls the given block for each element of <code>self</code> and pass the
-respective element. Each element will be replaced by the resulting values.</p>
+    <p>Calls the given block for each element of +self+
+and pass the respective element. Each element will
+be replaced by the resulting values.</p>
 
 <p>ISO 15.2.12.5.7</p>
 
@@ -810,21 +3655,23 @@ respective element. Each element will be replaced by the resulting values.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-50
-51
-52
-53
-54
-55</pre>
+45
+46
+47
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 45</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">collect!</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:collect!</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
@@ -838,9 +3685,9 @@ respective element. Each element will be replaced by the resulting values.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="delete-instance_method">
+  <h3 class="signature " id="compact-instance_method">
   
-    - (<tt>Object</tt>) <strong>delete</strong>(key, &amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>compact</strong> 
   
 
   
@@ -848,8 +3695,13 @@ respective element. Each element will be replaced by the resulting values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Delete element with index <code>key</code></p>
+    <p>call-seq:
+   ary.compact     -&gt; new_ary</p>
+
+<p>Returns a copy of +self+ with all +nil+ elements removed.</p>
+
+<p>[ &quot;a&quot;, nil, &quot;b&quot;, nil, &quot;c&quot;, nil ].compact
+                     #=&gt; [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ]</p>
 
 
   </div>
@@ -857,23 +3709,187 @@ respective element. Each element will be replaced by the resulting values.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-178
-179
-180
-181
-182
-183
-184
-185</pre>
+227
+228
+229
+230
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 227</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">compact</span>
+  result = <span style="color:#069">self</span>.dup
+  result.compact!
+  result
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="compact!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>compact!</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   ary.compact!    -&gt; ary  or  nil</p>
+
+<p>Removes +nil+ elements from the array.
+Returns +nil+ if no changes were made, otherwise returns
+<i>ary</i>.</p>
+
+<p>[ &quot;a&quot;, nil, &quot;b&quot;, nil, &quot;c&quot; ].compact! #=&gt; [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ]
+   [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ].compact!           #=&gt; nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+244
+245
+246
+247
+248
+249
+250
+251</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 244</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">compact!</span>
+  result = <span style="color:#069">self</span>.select { |e| !e.nil? }
+  <span style="color:#080;font-weight:bold">if</span> result.size == <span style="color:#069">self</span>.size
+    <span style="color:#069">nil</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span>.replace(result)
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="concat-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>concat</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.8</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 276</span>
+
+static mrb_value
+mrb_ary_concat_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value *ptr;
+  mrb_int blen;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>, &amp;ptr, &amp;blen);
+  ary_concat(mrb, mrb_ary_ptr(<span style="color:#069">self</span>), ptr, blen);
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete</strong>(key, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Delete element with index +key+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 173</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">delete</span>(key, &amp;block)
   <span style="color:#080;font-weight:bold">while</span> i = <span style="color:#069">self</span>.index(key)
@@ -889,9 +3905,9 @@ respective element. Each element will be replaced by the resulting values.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="each-instance_method">
+  <h3 class="signature " id="delete_at-instance_method">
   
-    - (<tt>Object</tt>) <strong>each</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete_at</strong> 
   
 
   
@@ -899,9 +3915,177 @@ respective element. Each element will be replaced by the resulting values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>15.2.12.5.9</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
+806
+807
+808
+809
+810
+811
+812
+813
+814
+815
+816
+817
+818
+819
+820</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 793</span>
+
+static mrb_value
+mrb_ary_delete_at(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+  mrb_int   index;
+  mrb_value val;
+  mrb_value *ptr;
+  mrb_int len;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">i</span><span style="color:#710">&quot;</span></span>, &amp;index);
+  <span style="color:#080;font-weight:bold">if</span> (index &lt; <span style="color:#00D">0</span>) index += a-&gt;len;
+  <span style="color:#080;font-weight:bold">if</span> (index &lt; <span style="color:#00D">0</span> || a-&gt;len &lt;= index) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+
+  ary_modify(mrb, a);
+  val = a-&gt;ptr[index];
+
+  ptr = a-&gt;ptr + index;
+  len = a-&gt;len - index;
+  <span style="color:#080;font-weight:bold">while</span> (--len) {
+    *ptr = *(ptr+<span style="color:#00D">1</span>);
+    ++ptr;
+  }
+  --a-&gt;len;
+
+  ary_shrink_capa(mrb, a);
+
+  <span style="color:#080;font-weight:bold">return</span> val;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
     
-<p>Calls the given block for each element of <code>self</code> and pass the
-respective element.</p>
+      <div class="method_details ">
+  <h3 class="signature " id="delete_if-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete_if</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.delete_if { |item| block }  -&gt; ary
+    ary.delete_if                   -&gt; Enumerator</p>
+
+<p>Deletes every element of +self+ for which block evaluates to +true+.</p>
+
+<p>The array is changed instantly every time the block is called, not after
+ the iteration is over.</p>
+
+<p>See also Array#reject!</p>
+
+<p>If no block is given, an Enumerator is returned instead.</p>
+
+<pre class="code ruby"><code class="ruby">scores = [ <span style="color:#00D">97</span>, <span style="color:#00D">42</span>, <span style="color:#00D">75</span> ]
+scores.delete_if {|score| score &lt; <span style="color:#00D">80</span> }   <span style="color:#777">#=&gt; [97]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 475</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">delete_if</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:delete_if</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+
+  idx = <span style="color:#00D">0</span>
+  <span style="color:#080;font-weight:bold">while</span> idx &lt; <span style="color:#069">self</span>.size <span style="color:#080;font-weight:bold">do</span>
+    <span style="color:#080;font-weight:bold">if</span> block.call(<span style="color:#069">self</span>[idx])
+      <span style="color:#069">self</span>.delete_at(idx)
+    <span style="color:#080;font-weight:bold">else</span>
+      idx += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>each</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Calls the given block for each element of +self+
+and pass the respective element.</p>
 
 <p>ISO 15.2.12.5.10</p>
 
@@ -911,7 +4095,9 @@ respective element.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -926,12 +4112,7 @@ respective element.</p>
 18
 19
 20
-21
-22
-23
-24
-25
-26</pre>
+21</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 12</span>
@@ -939,15 +4120,10 @@ respective element.</p>
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
 
-  idx, length = <span style="color:#00D">-1</span>, <span style="color:#069">self</span>.length-<span style="color:#00D">1</span>
-  <span style="color:#080;font-weight:bold">while</span> idx &lt; length <span style="color:#080;font-weight:bold">and</span> length &lt;= <span style="color:#069">self</span>.length <span style="color:#080;font-weight:bold">and</span> length = <span style="color:#069">self</span>.length-<span style="color:#00D">1</span>
-    elm = <span style="color:#069">self</span>[idx += <span style="color:#00D">1</span>]
-    <span style="color:#080;font-weight:bold">unless</span> elm
-      <span style="color:#080;font-weight:bold">if</span> elm.nil? <span style="color:#080;font-weight:bold">and</span> length &gt;= <span style="color:#069">self</span>.length
-        <span style="color:#080;font-weight:bold">break</span>
-      <span style="color:#080;font-weight:bold">end</span>
-    <span style="color:#080;font-weight:bold">end</span>
-    block.call(elm)
+  idx = <span style="color:#00D">0</span>
+  <span style="color:#080;font-weight:bold">while</span> idx &lt; length
+    block.call(<span style="color:#069">self</span>[idx])
+    idx += <span style="color:#00D">1</span>
   <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#069">self</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -959,7 +4135,7 @@ respective element.</p>
       <div class="method_details ">
   <h3 class="signature " id="each_index-instance_method">
   
-    - (<tt>Object</tt>) <strong>each_index</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>each_index</strong>(&amp;block) 
   
 
   
@@ -967,9 +4143,8 @@ respective element.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Calls the given block for each element of <code>self</code> and pass the
-index of the respective element.</p>
+    <p>Calls the given block for each element of +self+
+and pass the index of the respective element.</p>
 
 <p>ISO 15.2.12.5.11</p>
 
@@ -979,25 +4154,27 @@ index of the respective element.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+28
+29
+30
+31
+32
 33
 34
 35
 36
-37
-38
-39
-40
-41
-42</pre>
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 28</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_index</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each_index</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
@@ -1015,6 +4192,69 @@ index of the respective element.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="empty?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>empty?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.12</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+932
+933
+934
+935
+936
+937
+938</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 932</span>
+
+static mrb_value
+mrb_ary_empty_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(a-&gt;len == <span style="color:#00D">0</span>);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="eql?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>eql?</strong>(other) 
@@ -1025,11 +4265,8 @@ index of the respective element.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns <code>true</code> if <code>self</code> and <em>other</em> are the
-same object,</p>
-
-<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">or</span> are both arrays with the same content.</code></pre>
+    <p>Returns <code>true</code> if +self+ and <em>other</em> are the same object,
+ or are both arrays with the same content.</p>
 
 <p>ISO 15.2.12.5.34 (x)</p>
 
@@ -1052,27 +4289,29 @@ same object,</p>
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+122
+123
+124
+125
+126
 127
 128
 129
 130
 131
 132
-133
-134
-135
-136
-137
-138</pre>
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 122</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">eql?</span>(other)
   other = <span style="color:#069">self</span>.__ary_eq(other)
@@ -1092,9 +4331,715 @@ same object,</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="fetch-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>fetch</strong>(n = nil, ifnone = NONE, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.fetch(index)                    -&gt; obj
+    ary.fetch(index, default)           -&gt; obj
+    ary.fetch(index) { |index| block }  -&gt; obj</p>
+
+<p>Tries to return the element at position +index+, but throws an IndexError
+ exception if the referenced +index+ lies outside of the array bounds.  This
+ error can be prevented by supplying a second argument, which will act as a
+ +default+ value.</p>
+
+<p>Alternatively, if a block is given it will only be executed when an
+ invalid +index+ is referenced.  Negative values of +index+ count from the
+ end of the array.</p>
+
+<pre class="code ruby"><code class="ruby">a = [ <span style="color:#00D">11</span>, <span style="color:#00D">22</span>, <span style="color:#00D">33</span>, <span style="color:#00D">44</span> ]
+a.fetch(<span style="color:#00D">1</span>)               <span style="color:#777">#=&gt; 22</span>
+a.fetch(<span style="color:#00D">-1</span>)              <span style="color:#777">#=&gt; 44</span>
+a.fetch(<span style="color:#00D">4</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">cat</span><span style="color:#710">'</span></span>)        <span style="color:#777">#=&gt; &quot;cat&quot;</span>
+a.fetch(<span style="color:#00D">100</span>) { |i| puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>i<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> is out of bounds</span><span style="color:#710">&quot;</span></span> }
+                         <span style="color:#777">#=&gt; &quot;100 is out of bounds&quot;</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 289</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">fetch</span>(n=<span style="color:#069">nil</span>, ifnone=<span style="color:#036;font-weight:bold">NONE</span>, &amp;block)
+  warn <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">block supersedes default value argument</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> !n.nil? &amp;&amp; ifnone != <span style="color:#036;font-weight:bold">NONE</span> &amp;&amp; block
+
+  idx = n
+  <span style="color:#080;font-weight:bold">if</span> idx &lt; <span style="color:#00D">0</span>
+    idx += size
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">if</span> idx &lt; <span style="color:#00D">0</span> || size &lt;= idx
+    <span style="color:#080;font-weight:bold">return</span> block.call(n) <span style="color:#080;font-weight:bold">if</span> block
+    <span style="color:#080;font-weight:bold">if</span> ifnone == <span style="color:#036;font-weight:bold">NONE</span>
+      raise <span style="color:#036;font-weight:bold">IndexError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">index </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> outside of array bounds: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>-size<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">...</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>size<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+    <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">return</span> ifnone
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">self</span>[idx]
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fill-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>fill</strong>(arg0 = nil, arg1 = nil, arg2 = nil, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.fill(obj)                                 -&gt; ary
+    ary.fill(obj, start [, length])               -&gt; ary
+    ary.fill(obj, range )                         -&gt; ary
+    ary.fill { |index| block }                    -&gt; ary
+    ary.fill(start [, length] ) { |index| block } -&gt; ary
+    ary.fill(range) { |index| block }             -&gt; ary</p>
+
+<p>The first three forms set the selected elements of +self+ (which
+ may be the entire array) to +obj+.</p>
+
+<p>A +start+ of +nil+ is equivalent to zero.</p>
+
+<p>A +length+ of +nil+ is equivalent to the length of the array.</p>
+
+<p>The last three forms fill the array with the value of the given block,
+ which is passed the absolute index of each element to be filled.</p>
+
+<p>Negative values of +start+ count from the end of the array, where +-1+ is
+ the last element.</p>
+
+<pre class="code ruby"><code class="ruby">a = [ <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">b</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">c</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">d</span><span style="color:#710">&quot;</span></span> ]
+a.fill(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">x</span><span style="color:#710">&quot;</span></span>)              <span style="color:#777">#=&gt; [&quot;x&quot;, &quot;x&quot;, &quot;x&quot;, &quot;x&quot;]</span>
+a.fill(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">w</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">-1</span>)          <span style="color:#777">#=&gt; [&quot;x&quot;, &quot;x&quot;, &quot;x&quot;, &quot;w&quot;]</span>
+a.fill(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">z</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">2</span>, <span style="color:#00D">2</span>)        <span style="color:#777">#=&gt; [&quot;x&quot;, &quot;x&quot;, &quot;z&quot;, &quot;z&quot;]</span>
+a.fill(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">y</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>..<span style="color:#00D">1</span>)        <span style="color:#777">#=&gt; [&quot;y&quot;, &quot;y&quot;, &quot;z&quot;, &quot;z&quot;]</span>
+a.fill { |i| i*i }       <span style="color:#777">#=&gt; [0, 1, 4, 9]</span>
+a.fill(<span style="color:#00D">-2</span>) { |i| i*i*i } <span style="color:#777">#=&gt; [0, 1, 8, 27]</span>
+a.fill(<span style="color:#00D">1</span>, <span style="color:#00D">2</span>) { |i| i+<span style="color:#00D">1</span> } <span style="color:#777">#=&gt; [0, 2, 3, 27]</span>
+a.fill(<span style="color:#00D">0</span>..<span style="color:#00D">1</span>) { |i| i+<span style="color:#00D">1</span> } <span style="color:#777">#=&gt; [1, 2, 3, 27]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 339</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">fill</span>(arg0=<span style="color:#069">nil</span>, arg1=<span style="color:#069">nil</span>, arg2=<span style="color:#069">nil</span>, &amp;block)
+  <span style="color:#080;font-weight:bold">if</span> arg0.nil? &amp;&amp; arg1.nil? &amp;&amp; arg2.nil? &amp;&amp; !block
+    raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong number of arguments (0 for 1..3)</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+  beg = len = <span style="color:#00D">0</span>
+  ary = []
+  <span style="color:#080;font-weight:bold">if</span> block
+    <span style="color:#080;font-weight:bold">if</span> arg0.nil? &amp;&amp; arg1.nil? &amp;&amp; arg2.nil?
+      <span style="color:#777"># ary.fill { |index| block }                    -&gt; ary</span>
+      beg = <span style="color:#00D">0</span>
+      len = <span style="color:#069">self</span>.size
+    <span style="color:#080;font-weight:bold">elsif</span> !arg0.nil? &amp;&amp; arg0.kind_of?(<span style="color:#036;font-weight:bold">Range</span>)
+      <span style="color:#777"># ary.fill(range) { |index| block }             -&gt; ary</span>
+      beg = arg0.begin
+      beg += <span style="color:#069">self</span>.size <span style="color:#080;font-weight:bold">if</span> beg &lt; <span style="color:#00D">0</span>
+      len = arg0.end
+      len += <span style="color:#069">self</span>.size <span style="color:#080;font-weight:bold">if</span> len &lt; <span style="color:#00D">0</span>
+      len += <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">unless</span> arg0.exclude_end?
+    <span style="color:#080;font-weight:bold">elsif</span> !arg0.nil?
+      <span style="color:#777"># ary.fill(start [, length] ) { |index| block } -&gt; ary</span>
+      beg = arg0
+      beg += <span style="color:#069">self</span>.size <span style="color:#080;font-weight:bold">if</span> beg &lt; <span style="color:#00D">0</span>
+      <span style="color:#080;font-weight:bold">if</span> arg1.nil?
+        len = <span style="color:#069">self</span>.size
+      <span style="color:#080;font-weight:bold">else</span>
+        len = arg0 + arg1
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#080;font-weight:bold">if</span> !arg0.nil? &amp;&amp; arg1.nil? &amp;&amp; arg2.nil?
+      <span style="color:#777"># ary.fill(obj)                                 -&gt; ary</span>
+      beg = <span style="color:#00D">0</span>
+      len = <span style="color:#069">self</span>.size
+    <span style="color:#080;font-weight:bold">elsif</span> !arg0.nil? &amp;&amp; !arg1.nil? &amp;&amp; arg1.kind_of?(<span style="color:#036;font-weight:bold">Range</span>)
+      <span style="color:#777"># ary.fill(obj, range )                         -&gt; ary</span>
+      beg = arg1.begin
+      beg += <span style="color:#069">self</span>.size <span style="color:#080;font-weight:bold">if</span> beg &lt; <span style="color:#00D">0</span>
+      len = arg1.end
+      len += <span style="color:#069">self</span>.size <span style="color:#080;font-weight:bold">if</span> len &lt; <span style="color:#00D">0</span>
+      len += <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">unless</span> arg1.exclude_end?
+    <span style="color:#080;font-weight:bold">elsif</span> !arg0.nil? &amp;&amp; !arg1.nil?
+      <span style="color:#777"># ary.fill(obj, start [, length])               -&gt; ary</span>
+      beg = arg1
+      beg += <span style="color:#069">self</span>.size <span style="color:#080;font-weight:bold">if</span> beg &lt; <span style="color:#00D">0</span>
+      <span style="color:#080;font-weight:bold">if</span> arg2.nil?
+        len = <span style="color:#069">self</span>.size
+      <span style="color:#080;font-weight:bold">else</span>
+        len = beg + arg2
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+  i = beg
+  <span style="color:#080;font-weight:bold">if</span> block
+    <span style="color:#080;font-weight:bold">while</span> i &lt; len
+      <span style="color:#069">self</span>[i] = block.call(i)
+      i += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#080;font-weight:bold">while</span> i &lt; len
+      <span style="color:#069">self</span>[i] = arg0
+      i += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="first-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>first</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.13</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 822</span>
+
+static mrb_value
+mrb_ary_first(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+  mrb_int size;
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|i</span><span style="color:#710">&quot;</span></span>, &amp;size) == <span style="color:#00D">0</span>) {
+    <span style="color:#080;font-weight:bold">return</span> (a-&gt;len &gt; <span style="color:#00D">0</span>)? a-&gt;ptr[<span style="color:#00D">0</span>]: mrb_nil_value();
+  }
+  <span style="color:#080;font-weight:bold">if</span> (size &lt; <span style="color:#00D">0</span>) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative array size</span><span style="color:#710">&quot;</span></span>);
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (size &gt; a-&gt;len) size = a-&gt;len;
+  <span style="color:#080;font-weight:bold">if</span> (ARY_SHARED_P(a)) {
+    <span style="color:#080;font-weight:bold">return</span> ary_subseq(mrb, a, <span style="color:#00D">0</span>, size);
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_ary_new_from_values(mrb, size, a-&gt;ptr);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flatten-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>flatten</strong>(depth = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   ary.flatten -&gt; new_ary
+   ary.flatten(level) -&gt; new_ary</p>
+
+<p>Returns a new array that is a one-dimensional flattening of this
+array (recursively). That is, for every element that is an array,
+extract its elements into the new array.  If the optional
+<i>level</i> argument determines the level of recursion to flatten.</p>
+
+<p>s = [ 1, 2, 3 ]           #=&gt; [1, 2, 3]
+   t = [ 4, 5, 6, [7, 8] ]   #=&gt; [4, 5, 6, [7, 8]]
+   a = [ s, t, 9, 10 ]       #=&gt; [[1, 2, 3], [4, 5, 6, [7, 8]], 9, 10]
+   a.flatten                 #=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   a = [ 1, 2, [3, [4, 5] ] ]
+   a.flatten(1)              #=&gt; [1, 2, 3, [4, 5]]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 171</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">flatten</span>(depth=<span style="color:#069">nil</span>)
+  ar = []
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |e|
+    <span style="color:#080;font-weight:bold">if</span> e.is_a?(<span style="color:#036;font-weight:bold">Array</span>) &amp;&amp; (depth.nil? || depth &gt; <span style="color:#00D">0</span>)
+      ar += e.flatten(depth.nil? ? <span style="color:#069">nil</span> : depth - <span style="color:#00D">1</span>)
+    <span style="color:#080;font-weight:bold">else</span>
+      ar &lt;&lt; e
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  ar
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flatten!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>flatten!</strong>(depth = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   ary.flatten!        -&gt; ary or nil
+   ary.flatten!(level) -&gt; array or nil</p>
+
+<p>Flattens +self+ in place.
+Returns <code>nil</code> if no modifications were made (i.e.,
+<i>ary</i> contains no subarrays.)  If the optional <i>level</i>
+argument determines the level of recursion to flatten.</p>
+
+<p>a = [ 1, 2, [3, [4, 5] ] ]
+   a.flatten!   #=&gt; [1, 2, 3, 4, 5]
+   a.flatten!   #=&gt; nil
+   a            #=&gt; [1, 2, 3, 4, 5]
+   a = [ 1, 2, [3, [4, 5] ] ]
+   a.flatten!(1) #=&gt; [1, 2, 3, [4, 5]]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 200</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">flatten!</span>(depth=<span style="color:#069">nil</span>)
+  modified = <span style="color:#069">false</span>
+  ar = []
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |e|
+    <span style="color:#080;font-weight:bold">if</span> e.is_a?(<span style="color:#036;font-weight:bold">Array</span>) &amp;&amp; (depth.nil? || depth &gt; <span style="color:#00D">0</span>)
+      ar += e.flatten(depth.nil? ? <span style="color:#069">nil</span> : depth - <span style="color:#00D">1</span>)
+      modified = <span style="color:#069">true</span>
+    <span style="color:#080;font-weight:bold">else</span>
+      ar &lt;&lt; e
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">if</span> modified
+    <span style="color:#069">self</span>.replace(ar)
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">nil</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="index-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>index</strong>(val = NONE, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.index(val)            -&gt; int or nil
+    ary.index {|item| block } -&gt;  int or nil</p>
+
+<p>Returns the <em>index</em> of the first object in +ary+ such that the object is
+ <code>==</code> to +obj+.</p>
+
+<p>If a block is given instead of an argument, returns the <em>index</em> of the
+ first object for which the block returns +true+.  Returns +nil+ if no
+ match is found.</p>
+
+<p>ISO 15.2.12.5.14</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 861</span>
+
+static mrb_value
+mrb_ary_index_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value obj;
+  mrb_int i;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;obj);
+  <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i &lt; RARRAY_LEN(<span style="color:#069">self</span>); i++) {
+    <span style="color:#080;font-weight:bold">if</span> (mrb_equal(mrb, RARRAY_PTR(<span style="color:#069">self</span>)[i], obj)) {
+      <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(i);
+    }
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initialize_copy-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>initialize_copy</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.16</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 326</span>
+
+static mrb_value
+mrb_ary_replace_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value other;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">A</span><span style="color:#710">&quot;</span></span>, &amp;other);
+  mrb_ary_replace(mrb, <span style="color:#069">self</span>, other);
+
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="insert-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>insert</strong>(idx, *args) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.insert(index, obj...)  -&gt; ary</p>
+
+<p>Inserts the given values before the element with the given +index+.</p>
+
+<p>Negative indices count backwards from the end of the array, where +-1+ is
+ the last element.</p>
+
+<pre class="code ruby"><code class="ruby">a = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">%w{</span><span style="color:#D20"> a b c d </span><span style="color:#710">}</span></span>
+a.insert(<span style="color:#00D">2</span>, <span style="color:#00D">99</span>)         <span style="color:#777">#=&gt; [&quot;a&quot;, &quot;b&quot;, 99, &quot;c&quot;, &quot;d&quot;]</span>
+a.insert(<span style="color:#00D">-2</span>, <span style="color:#00D">1</span>, <span style="color:#00D">2</span>, <span style="color:#00D">3</span>)   <span style="color:#777">#=&gt; [&quot;a&quot;, &quot;b&quot;, 99, &quot;c&quot;, 1, 2, 3, &quot;d&quot;]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+536
+537
+538
+539
+540</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 536</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">insert</span>(idx, *args)
+  idx += <span style="color:#069">self</span>.size + <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">if</span> idx &lt; <span style="color:#00D">0</span>
+  <span style="color:#069">self</span>[idx, <span style="color:#00D">0</span>] = args
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    - (<tt>Object</tt>) <strong>inspect</strong> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>inspect</strong> 
   
 
   
@@ -1106,8 +5051,7 @@ same object,</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Return the contents of this array as a string.</p>
+    <p>Return the contents of this array as a string.</p>
 
 <p>ISO 15.2.12.5.31 (x)</p>
 
@@ -1117,22 +5061,24 @@ same object,</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+88
+89
+90
+91
+92
 93
-94
-95
-96
-97
-98
-99</pre>
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 88</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">inspect</span>
   <span style="color:#080;font-weight:bold">begin</span>
@@ -1147,9 +5093,9 @@ same object,</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="sort!-instance_method">
+  <h3 class="signature " id="join-instance_method">
   
-    - (<tt>Object</tt>) <strong>sort!</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>join</strong>(sep = &quot;&quot;) 
   
 
   
@@ -1157,8 +5103,102 @@ same object,</p>
   
 </h3><div class="docstring">
   <div class="discussion">
+    <p>Returns a string created by converting each element of the array to
+a string, separated by <i>sep</i>.</p>
+
+<p>[ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ].join        #=&gt; &quot;abc&quot;
+   [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ].join(&quot;-&quot;)   #=&gt; &quot;a-b-c&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
     
-<p>Sort all elements and replace <code>self</code> with these elements.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1028
+1029
+1030
+1031
+1032
+1033
+1034
+1035</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 1028</span>
+
+static mrb_value
+mrb_ary_join_m(mrb_state *mrb, mrb_value ary)
+{
+  mrb_value sep = mrb_nil_value();
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|S!</span><span style="color:#710">&quot;</span></span>, &amp;sep);
+  <span style="color:#080;font-weight:bold">return</span> mrb_ary_join(mrb, ary, sep);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="keep_if-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>keep_if</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.keep_if { |item| block } -&gt; ary
+    ary.keep_if                  -&gt; Enumerator</p>
+
+<p>Deletes every element of +self+ for which the given block evaluates to
+ +false+.</p>
+
+<p>See also Array#select!</p>
+
+<p>If no block is given, an Enumerator is returned instead.</p>
+
+<pre class="code ruby"><code class="ruby">a = [<span style="color:#00D">1</span>, <span style="color:#00D">2</span>, <span style="color:#00D">3</span>, <span style="color:#00D">4</span>, <span style="color:#00D">5</span>]
+a.keep_if { |val| val &gt; <span style="color:#00D">3</span> } <span style="color:#777">#=&gt; [4, 5]</span>
+</code></pre>
 
 
   </div>
@@ -1166,21 +5206,2036 @@ same object,</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-203
-204
-205</pre>
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 203</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 670</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">keep_if</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:keep_if</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+
+  idx = <span style="color:#00D">0</span>
+  len = <span style="color:#069">self</span>.size
+  <span style="color:#080;font-weight:bold">while</span> idx &lt; <span style="color:#069">self</span>.size <span style="color:#080;font-weight:bold">do</span>
+    <span style="color:#080;font-weight:bold">if</span> block.call(<span style="color:#069">self</span>[idx])
+      idx += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">else</span>
+      <span style="color:#069">self</span>.delete_at(idx)
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="last-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>last</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.18</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 842</span>
+
+static mrb_value
+mrb_ary_last(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+  mrb_int size;
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|i</span><span style="color:#710">&quot;</span></span>, &amp;size) == <span style="color:#00D">0</span>)
+    <span style="color:#080;font-weight:bold">return</span> (a-&gt;len &gt; <span style="color:#00D">0</span>)? a-&gt;ptr[a-&gt;len - <span style="color:#00D">1</span>]: mrb_nil_value();
+
+  <span style="color:#080;font-weight:bold">if</span> (size &lt; <span style="color:#00D">0</span>) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative array size</span><span style="color:#710">&quot;</span></span>);
+  }
+  <span style="color:#080;font-weight:bold">if</span> (size &gt; a-&gt;len) size = a-&gt;len;
+  <span style="color:#080;font-weight:bold">if</span> (ARY_SHARED_P(a) || size &gt; <span style="color:#036;font-weight:bold">ARY_DEFAULT_LEN</span>) {
+    <span style="color:#080;font-weight:bold">return</span> ary_subseq(mrb, a, a-&gt;len - size, size);
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_ary_new_from_values(mrb, size, a-&gt;ptr + a-&gt;len - size);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="length-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>length</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.19</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+905
+906
+907
+908
+909
+910
+911</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 905</span>
+
+static mrb_value
+mrb_ary_size(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(a-&gt;len);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pop-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>pop</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.21</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+430
+431
+432
+433
+434
+435
+436
+437</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 430</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_ary_pop(mrb_state *mrb, mrb_value ary)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(ary);
+
+  <span style="color:#080;font-weight:bold">if</span> (a-&gt;len == <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">return</span> a-&gt;ptr[--a-&gt;len];
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="push-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>push</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.22</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 416</span>
+
+static mrb_value
+mrb_ary_push_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value *argv;
+  mrb_int len;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*</span><span style="color:#710">&quot;</span></span>, &amp;argv, &amp;len);
+  <span style="color:#080;font-weight:bold">while</span> (len--) {
+    mrb_ary_push(mrb, <span style="color:#069">self</span>, *argv++);
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rassoc-instance_method">
+  
+    - (<tt>nil</tt>) <strong>rassoc</strong>(obj) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Searches through the array whose elements are also arrays. Compares
+<em>obj</em> with the second element of each contained array using
+<code>==</code>. Returns the first contained array that matches. See
+also <code>Array#assoc</code>.</p>
+
+<p>a = [ [ 1, &quot;one&quot;], [2, &quot;two&quot;], [3, &quot;three&quot;], [&quot;ii&quot;, &quot;two&quot;] ]
+   a.rassoc(&quot;two&quot;)    #=&gt; [2, &quot;two&quot;]
+   a.rassoc(&quot;four&quot;)   #=&gt; nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/src/array.c', line 58</span>
+
+static mrb_value
+mrb_ary_rassoc(mrb_state *mrb, mrb_value ary)
+{
+  mrb_int i;
+  mrb_value v, value;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;value);
+
+  <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i &lt; RARRAY_LEN(ary); ++i) {
+    v = RARRAY_PTR(ary)[i];
+    <span style="color:#080;font-weight:bold">if</span> (mrb_type(v) == <span style="color:#036;font-weight:bold">MRB_TT_ARRAY</span> &amp;&amp;
+        RARRAY_LEN(v) &gt; <span style="color:#00D">1</span> &amp;&amp;
+        mrb_equal(mrb, RARRAY_PTR(v)[<span style="color:#00D">1</span>], value))
+      <span style="color:#080;font-weight:bold">return</span> v;
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reject!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>reject!</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.reject! { |item| block }  -&gt; ary or nil
+    ary.reject!                   -&gt; Enumerator</p>
+
+<p>Equivalent to Array#delete_if, deleting elements from +self+ for which the
+ block evaluates to +true+, but returns +nil+ if no changes were made.</p>
+
+<p>The array is changed instantly every time the block is called, not after
+ the iteration is over.</p>
+
+<p>See also Enumerable#reject and Array#delete_if.</p>
+
+<p>If no block is given, an Enumerator is returned instead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 504</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reject!</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:reject!</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+
+  len = <span style="color:#069">self</span>.size
+  idx = <span style="color:#00D">0</span>
+  <span style="color:#080;font-weight:bold">while</span> idx &lt; <span style="color:#069">self</span>.size <span style="color:#080;font-weight:bold">do</span>
+    <span style="color:#080;font-weight:bold">if</span> block.call(<span style="color:#069">self</span>[idx])
+      <span style="color:#069">self</span>.delete_at(idx)
+    <span style="color:#080;font-weight:bold">else</span>
+      idx += <span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.size == len
+    <span style="color:#069">nil</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="replace-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>replace</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.23</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 326</span>
+
+static mrb_value
+mrb_ary_replace_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value other;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">A</span><span style="color:#710">&quot;</span></span>, &amp;other);
+  mrb_ary_replace(mrb, <span style="color:#069">self</span>, other);
+
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reverse-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>reverse</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.24</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 385</span>
+
+static mrb_value
+mrb_ary_reverse(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>), *b = ary_new_capa(mrb, a-&gt;len);
+
+  <span style="color:#080;font-weight:bold">if</span> (a-&gt;len &gt; <span style="color:#00D">0</span>) {
+    mrb_value *p1, *p2, *e;
+
+    p1 = a-&gt;ptr;
+    e  = p1 + a-&gt;len;
+    p2 = b-&gt;ptr + a-&gt;len - <span style="color:#00D">1</span>;
+    <span style="color:#080;font-weight:bold">while</span> (p1 &lt; e) {
+      *p2-- = *p1++;
+    }
+    b-&gt;len = a-&gt;len;
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(b);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reverse!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>reverse!</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.25</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 364</span>
+
+static mrb_value
+mrb_ary_reverse_bang(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+
+  <span style="color:#080;font-weight:bold">if</span> (a-&gt;len &gt; <span style="color:#00D">1</span>) {
+    mrb_value *p1, *p2;
+
+    ary_modify(mrb, a);
+    p1 = a-&gt;ptr;
+    p2 = a-&gt;ptr + a-&gt;len - <span style="color:#00D">1</span>;
+
+    <span style="color:#080;font-weight:bold">while</span> (p1 &lt; p2) {
+      mrb_value tmp = *p1;
+      *p1++ = *p2;
+      *p2-- = tmp;
+    }
+  }
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reverse_each-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>reverse_each</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>for efficiency</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 254</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reverse_each</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:reverse_each</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+
+  i = <span style="color:#069">self</span>.size - <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">while</span> i&gt;=<span style="color:#00D">0</span>
+    block.call(<span style="color:#069">self</span>[i])
+    i -= <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rindex-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>rindex</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.26</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+876
+877
+878
+879
+880
+881
+882
+883
+884
+885
+886
+887
+888
+889</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 876</span>
+
+static mrb_value
+mrb_ary_rindex_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value obj;
+  mrb_int i;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;obj);
+  <span style="color:#080;font-weight:bold">for</span> (i = RARRAY_LEN(<span style="color:#069">self</span>) - <span style="color:#00D">1</span>; i &gt;= <span style="color:#00D">0</span>; i--) {
+    <span style="color:#080;font-weight:bold">if</span> (mrb_equal(mrb, RARRAY_PTR(<span style="color:#069">self</span>)[i], obj)) {
+      <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(i);
+    }
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rotate-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>rotate</strong>(count = 1) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.rotate(count=1)    -&gt; new_ary</p>
+
+<p>Returns a new array by rotating +self+ so that the element at +count+ is
+ the first element of the new array.</p>
+
+<p>If +count+ is negative then it rotates in the opposite direction, starting
+ from the end of +self+ where +-1+ is the last element.</p>
+
+<pre class="code ruby"><code class="ruby">a = [ <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">b</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">c</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">d</span><span style="color:#710">&quot;</span></span> ]
+a.rotate         <span style="color:#777">#=&gt; [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;a&quot;]</span>
+a                <span style="color:#777">#=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+a.rotate(<span style="color:#00D">2</span>)      <span style="color:#777">#=&gt; [&quot;c&quot;, &quot;d&quot;, &quot;a&quot;, &quot;b&quot;]</span>
+a.rotate(<span style="color:#00D">-3</span>)     <span style="color:#777">#=&gt; [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;a&quot;]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 423</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">rotate</span>(count=<span style="color:#00D">1</span>)
+  ary = []
+  len = <span style="color:#069">self</span>.length
+
+  <span style="color:#080;font-weight:bold">if</span> len &gt; <span style="color:#00D">0</span>
+    idx = (count &lt; <span style="color:#00D">0</span>) ? (len - (~count % len) - <span style="color:#00D">1</span>) : (count % len) <span style="color:#777"># rotate count</span>
+    len.times <span style="color:#080;font-weight:bold">do</span>
+      ary &lt;&lt; <span style="color:#069">self</span>[idx]
+      idx += <span style="color:#00D">1</span>
+      idx = <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">if</span> idx &gt; len-<span style="color:#00D">1</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  ary
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rotate!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>rotate!</strong>(count = 1) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.rotate!(count=1)   -&gt; ary</p>
+
+<p>Rotates +self+ in place so that the element at +count+ comes first, and
+ returns +self+.</p>
+
+<p>If +count+ is negative then it rotates in the opposite direction, starting
+ from the end of the array where +-1+ is the last element.</p>
+
+<pre class="code ruby"><code class="ruby">a = [ <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">b</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">c</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">d</span><span style="color:#710">&quot;</span></span> ]
+a.rotate!        <span style="color:#777">#=&gt; [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;a&quot;]</span>
+a                <span style="color:#777">#=&gt; [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;a&quot;]</span>
+a.rotate!(<span style="color:#00D">2</span>)     <span style="color:#777">#=&gt; [&quot;d&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span>
+a.rotate!(<span style="color:#00D">-3</span>)    <span style="color:#777">#=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+454
+455
+456</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 454</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">rotate!</span>(count=<span style="color:#00D">1</span>)
+  <span style="color:#069">self</span>.replace(<span style="color:#069">self</span>.rotate(count))
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="select!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>select!</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.select!  {|item| block } -&gt; ary or nil
+    ary.select!                  -&gt; Enumerator</p>
+
+<p>Invokes the given block passing in successive elements from +self+,
+ deleting elements for which the block returns a +false+ value.</p>
+
+<p>If changes were made, it will return +self+, otherwise it returns +nil+.</p>
+
+<p>See also Array#keep_if</p>
+
+<p>If no block is given, an Enumerator is returned instead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 699</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">select!</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:select!</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+
+  result = []
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |x|
+    result &lt;&lt; x <span style="color:#080;font-weight:bold">if</span> block.call(x)
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.size == result.size
+  <span style="color:#069">self</span>.replace(result)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="shift-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>shift</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.27</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 441</span>
+
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
+mrb_ary_shift(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+  mrb_value val;
+
+  <span style="color:#080;font-weight:bold">if</span> (a-&gt;len == <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">if</span> (ARY_SHARED_P(a)) {
+  <span style="color:#606">L_SHIFT</span>:
+    val = a-&gt;ptr[<span style="color:#00D">0</span>];
+    a-&gt;ptr++;
+    a-&gt;len--;
+    <span style="color:#080;font-weight:bold">return</span> val;
+  }
+  <span style="color:#080;font-weight:bold">if</span> (a-&gt;len &gt; <span style="color:#036;font-weight:bold">ARY_SHIFT_SHARED_MIN</span>) {
+    ary_make_shared(mrb, a);
+    goto <span style="color:#036;font-weight:bold">L_SHIFT</span>;
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    mrb_value *ptr = a-&gt;ptr;
+    mrb_int size = a-&gt;len;
+
+    val = *ptr;
+    <span style="color:#080;font-weight:bold">while</span> (--size) {
+      *ptr = *(ptr+<span style="color:#00D">1</span>);
+      ++ptr;
+    }
+    --a-&gt;len;
+  }
+  <span style="color:#080;font-weight:bold">return</span> val;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="size-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>size</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.28</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+905
+906
+907
+908
+909
+910
+911</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 905</span>
+
+static mrb_value
+mrb_ary_size(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(a-&gt;len);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="slice-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(index) </span>
+    
+      <span class="overload">- (<tt>nil</tt>) <strong>[]</strong>(start, length) </span>
+    
+      <span class="overload">- (<tt>nil</tt>) <strong>[]</strong>(range) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>slice</strong>(index) </span>
+    
+      <span class="overload">- (<tt>nil</tt>) <strong>slice</strong>(start, length) </span>
+    
+      <span class="overload">- (<tt>nil</tt>) <strong>slice</strong>(range) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Element Reference --- Returns the element at +index+, or returns a
+subarray starting at the +start+ index and continuing for +length+
+elements, or returns a subarray specified by +range+ of indices.</p>
+
+<p>Negative indices count backward from the end of the array (-1 is the last
+element).  For +start+ and +range+ cases the starting index is just before
+an element.  Additionally, an empty array is returned when the starting
+index for an element range is at the end of the array.</p>
+
+<p>Returns +nil+ if the index (or starting index) are out of range.</p>
+
+<p>a = [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot; ]
+a[1]     =&gt; &quot;b&quot;
+a[1,2]   =&gt; [&quot;b&quot;, &quot;c&quot;]
+a[1..-2] =&gt; [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(index) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>nil</tt>) <strong>[]</strong>(start, length) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>nil</tt>) <strong>[]</strong>(range) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt><sup>?</sup>) <strong>slice</strong>(index) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>nil</tt>) <strong>slice</strong>(start, length) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>nil</tt>) <strong>slice</strong>(range) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 694</span>
+
+static mrb_value
+mrb_ary_aget(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+  mrb_int i, len;
+  mrb_value index;
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|i</span><span style="color:#710">&quot;</span></span>, &amp;index, &amp;len) == <span style="color:#00D">1</span>) {
+    switch (mrb_type(index)) {
+      <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* a[n..m] *</span><span style="color:#404">/</span></span>
+    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_RANGE</span>:
+      <span style="color:#080;font-weight:bold">if</span> (mrb_range_beg_len(mrb, index, &amp;i, &amp;len, a-&gt;len)) {
+        <span style="color:#080;font-weight:bold">return</span> ary_subseq(mrb, a, i, len);
+      }
+      <span style="color:#080;font-weight:bold">else</span> {
+        <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+      }
+    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FIXNUM</span>:
+      <span style="color:#080;font-weight:bold">return</span> mrb_ary_ref(mrb, <span style="color:#069">self</span>, mrb_fixnum(index));
+    <span style="color:#606">default</span>:
+      <span style="color:#080;font-weight:bold">return</span> mrb_ary_ref(mrb, <span style="color:#069">self</span>, aget_index(mrb, index));
+    }
+  }
+
+  i = aget_index(mrb, index);
+  <span style="color:#080;font-weight:bold">if</span> (i &lt; <span style="color:#00D">0</span>) i += a-&gt;len;
+  <span style="color:#080;font-weight:bold">if</span> (i &lt; <span style="color:#00D">0</span> || a-&gt;len &lt; i) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">if</span> (len &lt; <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">if</span> (a-&gt;len == i) <span style="color:#080;font-weight:bold">return</span> mrb_ary_new(mrb);
+  <span style="color:#080;font-weight:bold">if</span> (len &gt; a-&gt;len - i) len = a-&gt;len - i;
+
+  <span style="color:#080;font-weight:bold">return</span> ary_subseq(mrb, a, i, len);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sort!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>sort!</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sort all elements and replace +self+ with these
+elements.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+198
+199
+200</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrblib/array.rb', line 198</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">sort!</span>(&amp;block)
   <span style="color:#069">self</span>.replace(<span style="color:#069">self</span>.sort(&amp;block))
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_ary-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_ary</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    ary.to_ary -&gt; ary</p>
+
+<p>Returns +self+.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+744
+745
+746</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 744</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_ary</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_h-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></tt>) <strong>to_h</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the result of interpreting <i>aray</i> as an array of
+<tt>[key, value]</tt> paris.</p>
+
+<pre class="code"><code class="">[[<span style="color:#A60">:foo</span>, <span style="color:#A60">:bar</span>], [<span style="color:#00D">1</span>, <span style="color:#00D">2</span>]].to_h
+  <span style="color:#777"># =&gt; {:foo =&gt; :bar, 1 =&gt; 2}</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/src/array.c', line 121</span>
+
+static mrb_value
+mrb_ary_to_h(mrb_state *mrb, mrb_value ary)
+{
+  mrb_int i;
+  mrb_value v, hash;
+
+  hash = mrb_hash_new_capa(mrb, <span style="color:#00D">0</span>);
+
+  <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i &lt; RARRAY_LEN(ary); ++i) {
+    v = mrb_check_array_type(mrb, RARRAY_PTR(ary)[i]);
+
+    <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(v)) {
+      mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong element type %S at %S (expected array)</span><span style="color:#710">&quot;</span></span>,
+        mrb_str_new_cstr(mrb,  mrb_obj_classname(mrb, RARRAY_PTR(ary)[i])),
+        mrb_fixnum_value(i)
+      );
+    }
+
+    <span style="color:#080;font-weight:bold">if</span> (RARRAY_LEN(v) != <span style="color:#00D">2</span>) {
+      mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong array length at %S (expected 2, was %S)</span><span style="color:#710">&quot;</span></span>,
+        mrb_fixnum_value(i),
+        mrb_fixnum_value(RARRAY_LEN(v))
+      );
+    }
+
+    mrb_hash_set(mrb, hash, RARRAY_PTR(v)[<span style="color:#00D">0</span>], RARRAY_PTR(v)[<span style="color:#00D">1</span>]);
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> hash;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="uniq-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>uniq</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   ary.uniq                -&gt; new_ary
+   ary.uniq { |item| ... } -&gt; new_ary</p>
+
+<p>Returns a new array by removing duplicate values in +self+.</p>
+
+<p>a = [ &quot;a&quot;, &quot;a&quot;, &quot;b&quot;, &quot;b&quot;, &quot;c&quot; ]
+   a.uniq   #=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</p>
+
+<p>b = [[&quot;student&quot;,&quot;sam&quot;], [&quot;student&quot;,&quot;george&quot;], [&quot;teacher&quot;,&quot;matz&quot;]]
+   b.uniq { |s| s.first } # =&gt; [[&quot;student&quot;, &quot;sam&quot;], [&quot;teacher&quot;, &quot;matz&quot;]]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84
+85
+86
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 82</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">uniq</span>(&amp;block)
+  ary = <span style="color:#069">self</span>.dup
+  <span style="color:#080;font-weight:bold">if</span> block
+    ary.uniq!(&amp;block)
+  <span style="color:#080;font-weight:bold">else</span>
+    ary.uniq!
+  <span style="color:#080;font-weight:bold">end</span>
+  ary
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="uniq!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>uniq!</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   ary.uniq!                -&gt; ary or nil
+   ary.uniq! { |item| ... } -&gt; ary or nil</p>
+
+<p>Removes duplicate elements from +self+.
+Returns <code>nil</code> if no changes are made (that is, no
+duplicates are found).</p>
+
+<p>a = [ &quot;a&quot;, &quot;a&quot;, &quot;b&quot;, &quot;b&quot;, &quot;c&quot; ]
+   a.uniq!   #=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+   b = [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ]
+   b.uniq!   #=&gt; nil
+   c = [[&quot;student&quot;,&quot;sam&quot;], [&quot;student&quot;,&quot;george&quot;], [&quot;teacher&quot;,&quot;matz&quot;]]
+   c.uniq! { |s| s.first } # =&gt; [[&quot;student&quot;, &quot;sam&quot;], [&quot;teacher&quot;, &quot;matz&quot;]]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 43</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">uniq!</span>(&amp;block)
+  ary = <span style="color:#069">self</span>.dup
+  result = []
+  <span style="color:#080;font-weight:bold">if</span> block
+    hash = {}
+    <span style="color:#080;font-weight:bold">while</span> ary.size &gt; <span style="color:#00D">0</span>
+      val = ary.shift
+      key = block.call(val)
+      hash[key] = val <span style="color:#080;font-weight:bold">unless</span> hash.has_key?(key)
+    <span style="color:#080;font-weight:bold">end</span>
+    hash.each_value <span style="color:#080;font-weight:bold">do</span> |value|
+      result &lt;&lt; value
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#080;font-weight:bold">while</span> ary.size &gt; <span style="color:#00D">0</span>
+      result &lt;&lt; ary.shift
+      ary.delete(result.last)
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">if</span> result.size == <span style="color:#069">self</span>.size
+    <span style="color:#069">nil</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span>.replace(result)
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unshift-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>unshift</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.12.5.30</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/array.c', line 501</span>
+
+static mrb_value
+mrb_ary_unshift_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct <span style="color:#036;font-weight:bold">RArray</span> *a = mrb_ary_ptr(<span style="color:#069">self</span>);
+  mrb_value *vals;
+  mrb_int len;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*</span><span style="color:#710">&quot;</span></span>, &amp;vals, &amp;len);
+  <span style="color:#080;font-weight:bold">if</span> (ARY_SHARED_P(a)
+      &amp;&amp; a-&gt;aux.shared-&gt;refcnt == <span style="color:#00D">1</span> /* shared only referenced from this array *<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">
+      &amp;&amp; a-&gt;ptr - a-&gt;aux.shared-&gt;ptr &gt;= len) </span><span style="color:#404">/</span></span>* there<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">s room for unshifted item */ {
+    a-&gt;ptr -= len;
+  }
+  else {
+    ary_modify(mrb, a);
+    if (len == 0) return self;
+    if (a-&gt;aux.capa &lt; a-&gt;len + len)
+      ary_expand_capa(mrb, a, a-&gt;len + len);
+    value_move(a-&gt;ptr + len, a-&gt;ptr, a-&gt;len);
+  }
+  array_copy(a-&gt;ptr, vals, len);
+  a-&gt;len += len;
+  while (len--) {
+    mrb_field_write_barrier_value(mrb, (struct RBasic*)a, vals[len]);
+  }
+
+  return self;
+}</span></span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="values_at-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>values_at</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/src/array.c', line 98</span>
+
+static mrb_value
+mrb_ary_values_at(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_int argc;
+  mrb_value *argv;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*</span><span style="color:#710">&quot;</span></span>, &amp;argv, &amp;argc);
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_get_values_at(mrb, <span style="color:#069">self</span>, RARRAY_LEN(<span style="color:#069">self</span>), argc, argv, mrb_ary_ref);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="|-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>|</strong>(elem) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   ary | other_ary     -&gt; new_ary</p>
+
+<p>Set Union---Returns a new array by joining this array with
+<i>other_ary</i>, removing duplicates.</p>
+
+<p>[ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ] | [ &quot;c&quot;, &quot;d&quot;, &quot;a&quot; ]
+          #=&gt; [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; ]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-array-ext/mrblib/array.rb', line 123</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">|</span>(elem)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't convert </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>elem.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Array</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> elem.class == <span style="color:#036;font-weight:bold">Array</span>
+
+  ary = <span style="color:#069">self</span> + elem
+  ary.uniq! <span style="color:#080;font-weight:bold">or</span> ary
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -1192,9 +7247,9 @@ same object,</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:18 2015 by
+  Generated on Sun Jan 17 01:23:01 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

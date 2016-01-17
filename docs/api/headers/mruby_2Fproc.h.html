@@ -81,8 +81,7 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Proc class</p>
+    <p>Proc class</p>
 
 
   </div>
@@ -90,7 +89,9 @@
 <div class="tags">
   
 
-</div>Included heaers
+</div>
+
+<!-- TODO: Included headers -->
 
   <h2>
     Function Summary
@@ -98,6 +99,23 @@
   </h2>
 
   <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_env_unshare-function" title="mrb_env_unshare">void <strong>mrb_env_unshare</strong>(mrb_state*, struct REnv*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
     
       <li class="public ">
   <span class="summary_signature">
@@ -145,8 +163,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>implementation of #send method.</p>
+    <span class="summary_desc"><div class='inline'><p>implementation of #send method.</p>
 </div></span>
   
 </li>
@@ -164,9 +181,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>following functions are defined in mruby-proc-ext so please include it when
-using.</p>
+    <span class="summary_desc"><div class='inline'><p>following functions are defined in mruby-proc-ext so please include it when using.</p>
 </div></span>
   
 </li>
@@ -223,8 +238,7 @@ using.</p>
       <dt id="MRB_ASPEC_REQ-define" class=""><small>#define</small> MRB_ASPEC_REQ
         <div class="docstring">
   <div class="discussion">
-    
-<p>aspec access</p>
+    <p>aspec access</p>
 
 
   </div>
@@ -233,6 +247,8 @@ using.</p>
   
 
 </div>
+
+
       </dt>
       <dd><pre class="code"></pre></dd>
     
@@ -294,8 +310,7 @@ using.</p>
       <dt id="mrb_cfunc_env_get-define" class=""><small>#define</small> mrb_cfunc_env_get
         <div class="docstring">
   <div class="discussion">
-    
-<p>old name</p>
+    <p>old name</p>
 
 
   </div>
@@ -304,17 +319,30 @@ using.</p>
   
 
 </div>
+
+
       </dt>
       <dd><pre class="code"></pre></dd>
     
   </dl>
+
 
 <div id="functions_details" class="method_details_list">
   <h2>Function Details</h2>
 
   
     <div class="method_details first">
-  <h3 class="signature first" id="mrb_proc_new_cfunc-function">
+  <h3 class="signature first" id="mrb_env_unshare-function">
+  void <strong>mrb_env_unshare</strong>(mrb_state* , struct REnv* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_proc_new_cfunc-function">
   struct RProc * <strong>mrb_proc_new_cfunc</strong>(mrb_state* , mrb_func_t )
 
   
@@ -341,8 +369,7 @@ using.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>implementation of #send method</p>
+    <p>implementation of #send method</p>
 
 
   </div>
@@ -351,6 +378,8 @@ using.</p>
   
 
 </div>
+
+
 </div>
 
   
@@ -362,9 +391,7 @@ using.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    
-<p>following functions are defined in mruby-proc-ext so please include it when
-using</p>
+    <p>following functions are defined in mruby-proc-ext so please include it when using</p>
 
 
   </div>
@@ -373,6 +400,8 @@ using</p>
   
 
 </div>
+
+
 </div>
 
   
@@ -390,9 +419,9 @@ using</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:20 2015 by
+  Generated on Sun Jan 17 01:23:07 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

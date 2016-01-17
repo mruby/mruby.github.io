@@ -87,10 +87,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li>Object</li>
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Range</li>
           
@@ -113,7 +113,7 @@
   
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">mrblib/range.rb<span class="defines">,<br />
-  mrblib/range.rb,<br /> src/range.c</span>
+  src/range.c,<br /> mrblib/range.rb</span>
 </dd>
   
 </dl>
@@ -121,8 +121,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>15.2.14</p>
+    <p>Range is enumerable</p>
+
+<p>ISO 15.2.14.3</p>
 
 
   </div>
@@ -132,6 +133,17 @@
 
 </div>
 
+
+  <h2>Constant Summary</h2>
+  
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="Enumerable.html" title="Enumerable (module)">Enumerable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Enumerable.html#NONE-constant" title="Enumerable::NONE (constant)">Enumerable::NONE</a></span></p>
 
 
 
@@ -144,6 +156,52 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Boolean) <strong>==</strong>(obj) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true only if 1) obj is a Range, 2) obj has equivalent beginning and end items (by comparing them with ==), 3) obj has the same #exclude_end? setting as rng.
+   (0..2) == (0..2)            #=&gt; true   (0..2) == Range.new(0,2)    #=&gt; true   (0..2) == (0...2)           #=&gt; false.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3D%3D%3D-instance_method" title="#=== (instance method)">- (Object) <strong>===</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -162,8 +220,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the first object in rng.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the first object in rng.</p>
 </div></span>
   
 </li>
@@ -186,9 +243,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Calls the given block for each element of <code>self</code> and pass the
-respective element.</p>
+    <span class="summary_desc"><div class='inline'><p>Calls the given block for each element of +self+ and pass the respective element.</p>
 </div></span>
   
 </li>
@@ -211,8 +266,53 @@ respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the object that defines the end of rng.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the object that defines the end of rng.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eql%3F-instance_method" title="#eql? (instance method)">- (Boolean) <strong>eql?</strong>(obj) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true only if obj is a Range, has equivalent beginning and end items (by comparing them with #eql?), and has the same #exclude_end? setting as rng.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exclude_end%3F-instance_method" title="#exclude_end? (instance method)">- (Boolean) <strong>exclude_end?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if range excludes its end value.</p>
 </div></span>
   
 </li>
@@ -235,8 +335,7 @@ respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the first object in rng.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the first object in rng.</p>
 </div></span>
   
 </li>
@@ -259,9 +358,30 @@ respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>redefine #hash 15.3.1.3.15.</p>
+    <span class="summary_desc"><div class='inline'><p>redefine #hash 15.3.1.3.15.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#include%3F-instance_method" title="#include? (instance method)">- (Boolean) <strong>include?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -285,8 +405,7 @@ respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Constructs a range using the given start and end.</p>
+    <span class="summary_desc"><div class='inline'><p>Constructs a range using the given start and end.</p>
 </div></span>
   
 </li>
@@ -309,8 +428,7 @@ respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>15.2.14.4.15(x).</p>
+    <span class="summary_desc"><div class='inline'><p>15.2.14.4.15(x).</p>
 </div></span>
   
 </li>
@@ -333,9 +451,7 @@ respective element.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Convert this range object to a printable form (using inspect to convert the
-start and end objects).</p>
+    <span class="summary_desc"><div class='inline'><p>Convert this range object to a printable form (using inspect to convert the start and end objects).</p>
 </div></span>
   
 </li>
@@ -358,9 +474,30 @@ start and end objects).</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the object that defines the end of rng.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the object that defines the end of rng.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#member%3F-instance_method" title="#member? (instance method)">- (Boolean) <strong>member?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -382,8 +519,7 @@ start and end objects).</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Convert this range object to a printable form.</p>
+    <span class="summary_desc"><div class='inline'><p>Convert this range object to a printable form.</p>
 </div></span>
   
 </li>
@@ -402,14 +538,14 @@ start and end objects).</p>
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Enumerable.html" title="Enumerable (module)">Enumerable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Enumerable.html#__sort_sub__-instance_method" title="Enumerable#__sort_sub__ (method)">#__sort_sub__</a></span>, <span class='object_link'><a href="Enumerable.html#all%3F-instance_method" title="Enumerable#all? (method)">#all?</a></span>, <span class='object_link'><a href="Enumerable.html#any%3F-instance_method" title="Enumerable#any? (method)">#any?</a></span>, <span class='object_link'><a href="Enumerable.html#collect-instance_method" title="Enumerable#collect (method)">#collect</a></span>, <span class='object_link'><a href="Enumerable.html#detect-instance_method" title="Enumerable#detect (method)">#detect</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_index-instance_method" title="Enumerable#each_with_index (method)">#each_with_index</a></span>, <span class='object_link'><a href="Enumerable.html#entries-instance_method" title="Enumerable#entries (method)">#entries</a></span>, <span class='object_link'><a href="Enumerable.html#find_all-instance_method" title="Enumerable#find_all (method)">#find_all</a></span>, <span class='object_link'><a href="Enumerable.html#grep-instance_method" title="Enumerable#grep (method)">#grep</a></span>, <span class='object_link'><a href="Enumerable.html#include%3F-instance_method" title="Enumerable#include? (method)">#include?</a></span>, <span class='object_link'><a href="Enumerable.html#inject-instance_method" title="Enumerable#inject (method)">#inject</a></span>, <span class='object_link'><a href="Enumerable.html#max-instance_method" title="Enumerable#max (method)">#max</a></span>, <span class='object_link'><a href="Enumerable.html#min-instance_method" title="Enumerable#min (method)">#min</a></span>, <span class='object_link'><a href="Enumerable.html#partition-instance_method" title="Enumerable#partition (method)">#partition</a></span>, <span class='object_link'><a href="Enumerable.html#reject-instance_method" title="Enumerable#reject (method)">#reject</a></span>, <span class='object_link'><a href="Enumerable.html#sort-instance_method" title="Enumerable#sort (method)">#sort</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Enumerable.html#__sort_sub__-instance_method" title="Enumerable#__sort_sub__ (method)">#__sort_sub__</a></span>, <span class='object_link'><a href="Enumerable.html#all%3F-instance_method" title="Enumerable#all? (method)">#all?</a></span>, <span class='object_link'><a href="Enumerable.html#any%3F-instance_method" title="Enumerable#any? (method)">#any?</a></span>, <span class='object_link'><a href="Enumerable.html#collect-instance_method" title="Enumerable#collect (method)">#collect</a></span>, <span class='object_link'><a href="Enumerable.html#count-instance_method" title="Enumerable#count (method)">#count</a></span>, <span class='object_link'><a href="Enumerable.html#cycle-instance_method" title="Enumerable#cycle (method)">#cycle</a></span>, <span class='object_link'><a href="Enumerable.html#detect-instance_method" title="Enumerable#detect (method)">#detect</a></span>, <span class='object_link'><a href="Enumerable.html#drop-instance_method" title="Enumerable#drop (method)">#drop</a></span>, <span class='object_link'><a href="Enumerable.html#drop_while-instance_method" title="Enumerable#drop_while (method)">#drop_while</a></span>, <span class='object_link'><a href="Enumerable.html#each_cons-instance_method" title="Enumerable#each_cons (method)">#each_cons</a></span>, <span class='object_link'><a href="Enumerable.html#each_slice-instance_method" title="Enumerable#each_slice (method)">#each_slice</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_index-instance_method" title="Enumerable#each_with_index (method)">#each_with_index</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_object-instance_method" title="Enumerable#each_with_object (method)">#each_with_object</a></span>, <span class='object_link'><a href="Enumerable.html#entries-instance_method" title="Enumerable#entries (method)">#entries</a></span>, <span class='object_link'><a href="Enumerable.html#find_all-instance_method" title="Enumerable#find_all (method)">#find_all</a></span>, <span class='object_link'><a href="Enumerable.html#find_index-instance_method" title="Enumerable#find_index (method)">#find_index</a></span>, <span class='object_link'><a href="Enumerable.html#flat_map-instance_method" title="Enumerable#flat_map (method)">#flat_map</a></span>, <span class='object_link'><a href="Enumerable.html#grep-instance_method" title="Enumerable#grep (method)">#grep</a></span>, <span class='object_link'><a href="Enumerable.html#group_by-instance_method" title="Enumerable#group_by (method)">#group_by</a></span>, <span class='object_link'><a href="Enumerable.html#inject-instance_method" title="Enumerable#inject (method)">#inject</a></span>, <span class='object_link'><a href="Enumerable.html#lazy-instance_method" title="Enumerable#lazy (method)">#lazy</a></span>, <span class='object_link'><a href="Enumerable.html#max-instance_method" title="Enumerable#max (method)">#max</a></span>, <span class='object_link'><a href="Enumerable.html#max_by-instance_method" title="Enumerable#max_by (method)">#max_by</a></span>, <span class='object_link'><a href="Enumerable.html#min-instance_method" title="Enumerable#min (method)">#min</a></span>, <span class='object_link'><a href="Enumerable.html#min_by-instance_method" title="Enumerable#min_by (method)">#min_by</a></span>, <span class='object_link'><a href="Enumerable.html#minmax-instance_method" title="Enumerable#minmax (method)">#minmax</a></span>, <span class='object_link'><a href="Enumerable.html#minmax_by-instance_method" title="Enumerable#minmax_by (method)">#minmax_by</a></span>, <span class='object_link'><a href="Enumerable.html#none%3F-instance_method" title="Enumerable#none? (method)">#none?</a></span>, <span class='object_link'><a href="Enumerable.html#one%3F-instance_method" title="Enumerable#one? (method)">#one?</a></span>, <span class='object_link'><a href="Enumerable.html#partition-instance_method" title="Enumerable#partition (method)">#partition</a></span>, <span class='object_link'><a href="Enumerable.html#reject-instance_method" title="Enumerable#reject (method)">#reject</a></span>, <span class='object_link'><a href="Enumerable.html#reverse_each-instance_method" title="Enumerable#reverse_each (method)">#reverse_each</a></span>, <span class='object_link'><a href="Enumerable.html#sort-instance_method" title="Enumerable#sort (method)">#sort</a></span>, <span class='object_link'><a href="Enumerable.html#sort_by-instance_method" title="Enumerable#sort_by (method)">#sort_by</a></span>, <span class='object_link'><a href="Enumerable.html#take-instance_method" title="Enumerable#take (method)">#take</a></span>, <span class='object_link'><a href="Enumerable.html#take_while-instance_method" title="Enumerable#take_while (method)">#take_while</a></span>, <span class='object_link'><a href="Enumerable.html#to_h-instance_method" title="Enumerable#to_h (method)">#to_h</a></span>, <span class='object_link'><a href="Enumerable.html#to_h-class_method" title="Enumerable.to_h (method)">to_h</a></span>, <span class='object_link'><a href="Enumerable.html#zip-instance_method" title="Enumerable#zip (method)">#zip</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt>Object</tt>) <strong>new</strong>(start, end) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>new</strong>(start, end) 
   
 
   
@@ -417,10 +553,9 @@ start and end objects).</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Constructs a range using the given <em>start</em> and <em>end</em>. If the
-third parameter is omitted or is <code>false</code>, the <em>range</em>
-will include the end object; otherwise, it will be excluded.</p>
+    <p>Constructs a range using the given <i>start</i> and <i>end</i>. If the third
+parameter is omitted or is <code>false</code>, the <i>range</i> will include
+the end object; otherwise, it will be excluded.</p>
 
 
   </div>
@@ -430,7 +565,9 @@ will include the end object; otherwise, it will be excluded.</p>
   
 
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -483,12 +620,129 @@ mrb_range_initialize(mrb_state *mrb, mrb_value range)
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="begin-instance_method">
+  <h3 class="signature first" id="==-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>==</strong>(obj) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> only if
+1) <i>obj</i> is a Range,
+2) <i>obj</i> has equivalent beginning and end items (by comparing them with <code>==</code>),
+3) <i>obj</i> has the same #exclude_end? setting as <i>rng</t>.</p>
+
+<p>(0..2) == (0..2)            #=&gt; true
+  (0..2) == Range.new(0,2)    #=&gt; true
+  (0..2) == (0...2)           #=&gt; false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/range.c', line 150</span>
+
+mrb_value
+mrb_range_eq(mrb_state *mrb, mrb_value range)
+{
+  struct <span style="color:#036;font-weight:bold">RRange</span> *rr;
+  struct <span style="color:#036;font-weight:bold">RRange</span> *ro;
+  mrb_value obj;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;obj);
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_obj_equal(mrb, range, obj)) <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_obj_is_instance_of(mrb, obj, mrb_obj_class(mrb, range))) { <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* same class? *</span><span style="color:#404">/</span></span>
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+  }
+
+  rr = mrb_range_ptr(range);
+  ro = mrb_range_ptr(obj);
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_bool(mrb_funcall(mrb, rr-&gt;edges-&gt;beg, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">==</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span>, ro-&gt;edges-&gt;beg)) ||
+      !mrb_bool(mrb_funcall(mrb, rr-&gt;edges-&gt;<span style="color:#080;font-weight:bold">end</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">==</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span>, ro-&gt;edges-&gt;<span style="color:#080;font-weight:bold">end</span>)) ||
+      rr-&gt;excl != ro-&gt;excl) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="===-instance_method">
   
     
-      <span class="overload">- (<tt>Object</tt>) <strong>first</strong> </span>
+      <span class="overload">- (<tt>Boolean</tt>) <strong>===</strong>(obj) </span>
     
-      <span class="overload">- (<tt>Object</tt>) <strong>begin</strong> </span>
+      <span class="overload">- (<tt>Boolean</tt>) <strong>member?</strong>(val) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>include?</strong>(val) </span>
     
   
 
@@ -498,7 +752,176 @@ mrb_range_initialize(mrb_state *mrb, mrb_value range)
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the first object in <em>rng</em>.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>===</strong>(obj) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>member?</strong>(val) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>include?</strong>(val) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/range.c', line 218</span>
+
+mrb_value
+mrb_range_include(mrb_state *mrb, mrb_value range)
+{
+  mrb_value val;
+  struct <span style="color:#036;font-weight:bold">RRange</span> *r = mrb_range_ptr(range);
+  mrb_value beg, <span style="color:#080;font-weight:bold">end</span>;
+  mrb_bool include_p;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;val);
+
+  beg = r-&gt;edges-&gt;beg;
+  <span style="color:#080;font-weight:bold">end</span> = r-&gt;edges-&gt;<span style="color:#080;font-weight:bold">end</span>;
+  include_p = r_le(mrb, beg, val) &amp;&amp; <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* beg &lt;= val *</span><span style="color:#404">/</span></span>
+              ((r-&gt;excl &amp;&amp; r_gt(mrb, <span style="color:#080;font-weight:bold">end</span>, val)) || <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* end &gt;  val *</span><span style="color:#404">/</span></span>
+              (r_ge(mrb, <span style="color:#080;font-weight:bold">end</span>, val))); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* end &gt;= val *</span><span style="color:#404">/</span></span>
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(include_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="begin-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>first</strong> </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>begin</strong> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the first object in <i>rng</i>.</p>
 
 
   </div>
@@ -510,7 +933,7 @@ mrb_range_initialize(mrb_state *mrb, mrb_value range)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Object</tt>) <strong>first</strong> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>first</strong> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -525,7 +948,7 @@ mrb_range_initialize(mrb_state *mrb, mrb_value range)
     <li>
       
       
-        <span class='type'>(<tt>Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
       
       
       
@@ -534,11 +957,13 @@ mrb_range_initialize(mrb_state *mrb, mrb_value range)
 </ul>
 
 </div>
+
+
       </li>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Object</tt>) <strong>begin</strong> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>begin</strong> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -553,7 +978,7 @@ mrb_range_initialize(mrb_state *mrb, mrb_value range)
     <li>
       
       
-        <span class='type'>(<tt>Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
       
       
       
@@ -562,12 +987,16 @@ mrb_range_initialize(mrb_state *mrb, mrb_value range)
 </ul>
 
 </div>
+
+
       </li>
     
   </ul>
 
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -599,7 +1028,7 @@ mrb_range_beg(mrb_state *mrb, mrb_value range)
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    - (<tt>Object</tt>) <strong>each</strong>(&amp;block) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>each</strong>(&amp;block) 
   
 
   
@@ -607,9 +1036,8 @@ mrb_range_beg(mrb_state *mrb, mrb_value range)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Calls the given block for each element of <code>self</code> and pass the
-respective element.</p>
+    <p>Calls the given block for each element of +self+
+and pass the respective element.</p>
 
 <p>ISO 15.2.14.4.4</p>
 
@@ -632,7 +1060,9 @@ respective element.</p>
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -709,9 +1139,9 @@ respective element.</p>
   <h3 class="signature " id="end-instance_method">
   
     
-      <span class="overload">- (<tt>Object</tt>) <strong>end</strong> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>end</strong> </span>
     
-      <span class="overload">- (<tt>Object</tt>) <strong>last</strong> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>last</strong> </span>
     
   
 
@@ -720,12 +1150,10 @@ respective element.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the object that defines the end of <em>rng</em>.</p>
+    <p>Returns the object that defines the end of <i>rng</i>.</p>
 
-<pre class="code"><code class="">(<span style="color:#00D">1</span>..<span style="color:#00D">10</span>).end    <span style="color:#777">#=&gt; 10</span>
-(<span style="color:#00D">1</span>...<span style="color:#00D">10</span>).end   <span style="color:#777">#=&gt; 10</span>
-</code></pre>
+<p>(1..10).end    #=&gt; 10
+   (1...10).end   #=&gt; 10</p>
 
 
   </div>
@@ -737,7 +1165,7 @@ respective element.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Object</tt>) <strong>end</strong> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>end</strong> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -752,7 +1180,7 @@ respective element.</p>
     <li>
       
       
-        <span class='type'>(<tt>Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
       
       
       
@@ -761,11 +1189,13 @@ respective element.</p>
 </ul>
 
 </div>
+
+
       </li>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Object</tt>) <strong>last</strong> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>last</strong> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -780,7 +1210,7 @@ respective element.</p>
     <li>
       
       
-        <span class='type'>(<tt>Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
       
       
       
@@ -789,12 +1219,16 @@ respective element.</p>
 </ul>
 
 </div>
+
+
       </li>
     
   </ul>
 
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -824,12 +1258,229 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="eql?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>eql?</strong>(obj) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> only if <i>obj</i> is a Range, has equivalent
+beginning and end items (by comparing them with #eql?), and has the same</p>
+
+<h1>exclude_end? setting as <i>rng</i>.</h1>
+
+<p>(0..2).eql?(0..2)            #=&gt; true
+  (0..2).eql?(Range.new(0,2))  #=&gt; true
+  (0..2).eql?(0...2)           #=&gt; false</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/range.c', line 338</span>
+
+static mrb_value
+range_eql(mrb_state *mrb, mrb_value range)
+{
+  mrb_value obj;
+  struct <span style="color:#036;font-weight:bold">RRange</span> *r, *o;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;obj);
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_obj_equal(mrb, range, obj)) <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_obj_is_kind_of(mrb, obj, <span style="color:#036;font-weight:bold">RANGE_CLASS</span>)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+  }
+  <span style="color:#080;font-weight:bold">if</span> (mrb_type(obj) != <span style="color:#036;font-weight:bold">MRB_TT_RANGE</span>) <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+
+  r = mrb_range_ptr(range);
+  o = mrb_range_ptr(obj);
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_eql(mrb, r-&gt;edges-&gt;beg, o-&gt;edges-&gt;beg) ||
+      !mrb_eql(mrb, r-&gt;edges-&gt;<span style="color:#080;font-weight:bold">end</span>, o-&gt;edges-&gt;<span style="color:#080;font-weight:bold">end</span>) ||
+      (r-&gt;excl != o-&gt;excl)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exclude_end?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>exclude_end?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if <i>range</i> excludes its end value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/range.c', line 90</span>
+
+mrb_value
+mrb_range_excl(mrb_state *mrb, mrb_value range)
+{
+  struct <span style="color:#036;font-weight:bold">RRange</span> *r = mrb_range_ptr(range);
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(r-&gt;excl);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="first-instance_method">
   
     
-      <span class="overload">- (<tt>Object</tt>) <strong>first</strong> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>first</strong> </span>
     
-      <span class="overload">- (<tt>Object</tt>) <strong>begin</strong> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>begin</strong> </span>
     
   
 
@@ -838,8 +1489,7 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the first object in <em>rng</em>.</p>
+    <p>Returns the first object in <i>rng</i>.</p>
 
 
   </div>
@@ -851,7 +1501,7 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Object</tt>) <strong>first</strong> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>first</strong> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -866,7 +1516,7 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
     <li>
       
       
-        <span class='type'>(<tt>Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
       
       
       
@@ -875,11 +1525,13 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
 </ul>
 
 </div>
+
+
       </li>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Object</tt>) <strong>begin</strong> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>begin</strong> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -894,7 +1546,7 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
     <li>
       
       
-        <span class='type'>(<tt>Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
       
       
       
@@ -903,12 +1555,16 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
 </ul>
 
 </div>
+
+
       </li>
     
   </ul>
 
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -940,7 +1596,7 @@ mrb_range_beg(mrb_state *mrb, mrb_value range)
       <div class="method_details ">
   <h3 class="signature " id="hash-instance_method">
   
-    - (<tt>Object</tt>) <strong>hash</strong> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>hash</strong> 
   
 
   
@@ -948,8 +1604,7 @@ mrb_range_beg(mrb_state *mrb, mrb_value range)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>redefine #hash 15.3.1.3.15</p>
+    <p>redefine #hash 15.3.1.3.15</p>
 
 
   </div>
@@ -957,7 +1612,9 @@ mrb_range_beg(mrb_state *mrb, mrb_value range)
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -983,9 +1640,15 @@ mrb_range_beg(mrb_state *mrb, mrb_value range)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="initialize_copy-instance_method">
+  <h3 class="signature " id="include?-instance_method">
   
-    - (<tt>Object</tt>) <strong>initialize_copy</strong> 
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>===</strong>(obj) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>member?</strong>(val) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>include?</strong>(val) </span>
+    
   
 
   
@@ -994,7 +1657,185 @@ mrb_range_beg(mrb_state *mrb, mrb_value range)
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>15.2.14.4.15(x)</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>===</strong>(obj) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>member?</strong>(val) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>include?</strong>(val) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/range.c', line 218</span>
+
+mrb_value
+mrb_range_include(mrb_state *mrb, mrb_value range)
+{
+  mrb_value val;
+  struct <span style="color:#036;font-weight:bold">RRange</span> *r = mrb_range_ptr(range);
+  mrb_value beg, <span style="color:#080;font-weight:bold">end</span>;
+  mrb_bool include_p;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;val);
+
+  beg = r-&gt;edges-&gt;beg;
+  <span style="color:#080;font-weight:bold">end</span> = r-&gt;edges-&gt;<span style="color:#080;font-weight:bold">end</span>;
+  include_p = r_le(mrb, beg, val) &amp;&amp; <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* beg &lt;= val *</span><span style="color:#404">/</span></span>
+              ((r-&gt;excl &amp;&amp; r_gt(mrb, <span style="color:#080;font-weight:bold">end</span>, val)) || <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* end &gt;  val *</span><span style="color:#404">/</span></span>
+              (r_ge(mrb, <span style="color:#080;font-weight:bold">end</span>, val))); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* end &gt;= val *</span><span style="color:#404">/</span></span>
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(include_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initialize_copy-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>initialize_copy</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>15.2.14.4.15(x)</p>
 
 
   </div>
@@ -1002,7 +1843,9 @@ mrb_range_beg(mrb_state *mrb, mrb_value range)
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1064,9 +1907,9 @@ range_initialize_copy(mrb_state *mrb, mrb_value copy)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Convert this range object to a printable form (using <code>inspect</code>
-to convert the start and end objects).</p>
+    <p>Convert this range object to a printable form (using
+<code>inspect</code> to convert the start and end
+objects).</p>
 
 
   </div>
@@ -1098,7 +1941,11 @@ to convert the start and end objects).</p>
 </div>
 
 
-</div><table class="source_code">
+
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1145,9 +1992,9 @@ range_inspect(mrb_state *mrb, mrb_value range)
   <h3 class="signature " id="last-instance_method">
   
     
-      <span class="overload">- (<tt>Object</tt>) <strong>end</strong> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>end</strong> </span>
     
-      <span class="overload">- (<tt>Object</tt>) <strong>last</strong> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>last</strong> </span>
     
   
 
@@ -1156,12 +2003,10 @@ range_inspect(mrb_state *mrb, mrb_value range)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the object that defines the end of <em>rng</em>.</p>
+    <p>Returns the object that defines the end of <i>rng</i>.</p>
 
-<pre class="code"><code class="">(<span style="color:#00D">1</span>..<span style="color:#00D">10</span>).end    <span style="color:#777">#=&gt; 10</span>
-(<span style="color:#00D">1</span>...<span style="color:#00D">10</span>).end   <span style="color:#777">#=&gt; 10</span>
-</code></pre>
+<p>(1..10).end    #=&gt; 10
+   (1...10).end   #=&gt; 10</p>
 
 
   </div>
@@ -1173,7 +2018,7 @@ range_inspect(mrb_state *mrb, mrb_value range)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Object</tt>) <strong>end</strong> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>end</strong> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1188,7 +2033,7 @@ range_inspect(mrb_state *mrb, mrb_value range)
     <li>
       
       
-        <span class='type'>(<tt>Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
       
       
       
@@ -1197,11 +2042,13 @@ range_inspect(mrb_state *mrb, mrb_value range)
 </ul>
 
 </div>
+
+
       </li>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Object</tt>) <strong>last</strong> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>last</strong> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1216,7 +2063,7 @@ range_inspect(mrb_state *mrb, mrb_value range)
     <li>
       
       
-        <span class='type'>(<tt>Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
       
       
       
@@ -1225,12 +2072,16 @@ range_inspect(mrb_state *mrb, mrb_value range)
 </ul>
 
 </div>
+
+
       </li>
     
   </ul>
 
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1260,6 +2111,191 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="member?-instance_method">
+  
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>===</strong>(obj) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>member?</strong>(val) </span>
+    
+      <span class="overload">- (<tt>Boolean</tt>) <strong>include?</strong>(val) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>===</strong>(obj) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>member?</strong>(val) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Boolean</tt>) <strong>include?</strong>(val) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/range.c', line 218</span>
+
+mrb_value
+mrb_range_include(mrb_state *mrb, mrb_value range)
+{
+  mrb_value val;
+  struct <span style="color:#036;font-weight:bold">RRange</span> *r = mrb_range_ptr(range);
+  mrb_value beg, <span style="color:#080;font-weight:bold">end</span>;
+  mrb_bool include_p;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;val);
+
+  beg = r-&gt;edges-&gt;beg;
+  <span style="color:#080;font-weight:bold">end</span> = r-&gt;edges-&gt;<span style="color:#080;font-weight:bold">end</span>;
+  include_p = r_le(mrb, beg, val) &amp;&amp; <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* beg &lt;= val *</span><span style="color:#404">/</span></span>
+              ((r-&gt;excl &amp;&amp; r_gt(mrb, <span style="color:#080;font-weight:bold">end</span>, val)) || <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* end &gt;  val *</span><span style="color:#404">/</span></span>
+              (r_ge(mrb, <span style="color:#080;font-weight:bold">end</span>, val))); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* end &gt;= val *</span><span style="color:#404">/</span></span>
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(include_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
     - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>to_s</strong> 
@@ -1270,8 +2306,7 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Convert this range object to a printable form.</p>
+    <p>Convert this range object to a printable form.</p>
 
 
   </div>
@@ -1303,7 +2338,11 @@ mrb_range_end(mrb_state *mrb, mrb_value range)
 </div>
 
 
-</div><table class="source_code">
+
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -1351,9 +2390,9 @@ range_to_s(mrb_state *mrb, mrb_value range)
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:19 2015 by
+  Generated on Sun Jan 17 01:23:00 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>

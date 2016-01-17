@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Fiber
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!Fiber.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (F)</a> &raquo;
+    
+    
+    <span class="title">Fiber</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="header_list_link"
+        href="header_list.html">
+      Header List
+    </a>
+  
+    <a class="full_list_link" id="function_list_link"
+        href="function_list.html">
+      Function List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Fiber
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Fiber</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">mrbgems/mruby-fiber/src/fiber.c</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Object) <strong>==</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#alive%3F-instance_method" title="#alive? (instance method)">- (Boolean) <strong>alive?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if the fiber can still be resumed.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#new (instance method)">- (Object) <strong>new</strong> { ... }</a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Creates a fiber, whose execution is suspend until it is explicitly resumed using Fiber#resume method.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resume-instance_method" title="#resume (instance method)">- (Object) <strong>resume</strong>(args, ...) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Resumes the fiber from the point at which the last Fiber.yield was called, or starts running it if it is the first call to resume.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transfer-instance_method" title="#transfer (instance method)">- (Object) <strong>transfer</strong>(args, ...) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Transfers control to receiver fiber of the method call.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>new</strong> { ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Creates a fiber, whose execution is suspend until it is explicitly
+resumed using <code>Fiber#resume</code> method.
+The code running inside the fiber can give up control by calling
+<code>Fiber.yield</code> in which case it yields control back to caller
+(the caller of the <code>Fiber#resume</code>).</p>
+
+<p>Upon yielding or termination the Fiber returns the value of the last
+executed expression</p>
+
+<p>For instance:</p>
+
+<p>fiber = Fiber.new do
+    Fiber.yield 1
+    2
+  end</p>
+
+<p>puts fiber.resume
+  puts fiber.resume
+  puts fiber.resume</p>
+
+<p><em>produces</em></p>
+
+<p>1
+  2
+  resuming dead fiber (FiberError)</p>
+
+<p>The <code>Fiber#resume</code> method accepts an arbitrary number of
+parameters, if it is the first call to <code>resume</code> then they
+will be passed as block arguments. Otherwise they will be the return
+value of the call to <code>Fiber.yield</code></p>
+
+<p>Example:</p>
+
+<p>fiber = Fiber.new do |first|
+    second = Fiber.yield first + 2
+  end</p>
+
+<p>puts fiber.resume 10
+  puts fiber.resume 14
+  puts fiber.resume 18</p>
+
+<p><em>produces</em></p>
+
+<p>12
+  14
+  resuming dead fiber (FiberError)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>[]</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 64</span>
+
+static mrb_value
+fiber_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  static const struct mrb_context mrb_context_zero = { <span style="color:#00D">0</span> };
+  struct <span style="color:#036;font-weight:bold">RFiber</span> *f = fiber_ptr(<span style="color:#069">self</span>);
+  struct mrb_context *c;
+  struct <span style="color:#036;font-weight:bold">RProc</span> *p;
+  mrb_callinfo *ci;
+  mrb_value blk;
+  size_t slen;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&amp;</span><span style="color:#710">&quot;</span></span>, &amp;blk);
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(blk)) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tried to create Fiber object without a block</span><span style="color:#710">&quot;</span></span>);
+  }
+  p = mrb_proc_ptr(blk);
+  <span style="color:#080;font-weight:bold">if</span> (MRB_PROC_CFUNC_P(p)) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_FIBER_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tried to create Fiber from C defined method</span><span style="color:#710">&quot;</span></span>);
+  }
+
+  f-&gt;cxt = (struct mrb_context*)mrb_malloc(mrb, sizeof(struct mrb_context));
+  *f-&gt;cxt = mrb_context_zero;
+  c = f-&gt;cxt;
+
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* initialize VM stack *</span><span style="color:#404">/</span></span>
+  slen = <span style="color:#036;font-weight:bold">FIBER_STACK_INIT_SIZE</span>;
+  <span style="color:#080;font-weight:bold">if</span> (p-&gt;body.irep-&gt;nregs &gt; slen) {
+    slen += p-&gt;body.irep-&gt;nregs;
+  }
+  c-&gt;stbase = (mrb_value *)mrb_malloc(mrb, slen*sizeof(mrb_value));
+  c-&gt;stend = c-&gt;stbase + slen;
+  c-&gt;stack = c-&gt;stbase;
+
+<span style="color:#777">#ifdef MRB_NAN_BOXING</span>
+  {
+    mrb_value *p = c-&gt;stbase;
+    mrb_value *pend = c-&gt;stend;
+
+    <span style="color:#080;font-weight:bold">while</span> (p &lt; pend) {
+      SET_NIL_VALUE(*p);
+      p++;
+    }
+  }
+<span style="color:#777">#else</span>
+  memset(c-&gt;stbase, <span style="color:#00D">0</span>, slen * sizeof(mrb_value));
+<span style="color:#777">#endif</span>
+
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* copy receiver from a block *</span><span style="color:#404">/</span></span>
+  c-&gt;stack[<span style="color:#00D">0</span>] = mrb-&gt;c-&gt;stack[<span style="color:#00D">0</span>];
+
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* initialize callinfo stack *</span><span style="color:#404">/</span></span>
+  c-&gt;cibase = (mrb_callinfo *)mrb_calloc(mrb, <span style="color:#036;font-weight:bold">FIBER_CI_INIT_SIZE</span>, sizeof(mrb_callinfo));
+  c-&gt;ciend = c-&gt;cibase + <span style="color:#036;font-weight:bold">FIBER_CI_INIT_SIZE</span>;
+  c-&gt;ci = c-&gt;cibase;
+  c-&gt;ci-&gt;stackent = c-&gt;stack;
+
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* adjust return callinfo *</span><span style="color:#404">/</span></span>
+  ci = c-&gt;ci;
+  ci-&gt;target_class = p-&gt;target_class;
+  ci-&gt;proc = p;
+  ci-&gt;pc = p-&gt;body.irep-&gt;iseq;
+  ci-&gt;nregs = p-&gt;body.irep-&gt;nregs;
+  ci[<span style="color:#00D">1</span>] = ci[<span style="color:#00D">0</span>];
+  c-&gt;ci++;                      <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* push dummy callinfo *</span><span style="color:#404">/</span></span>
+
+  c-&gt;fib = f;
+  c-&gt;status = <span style="color:#036;font-weight:bold">MRB_FIBER_CREATED</span>;
+
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="==-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>==</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 268</span>
+
+static mrb_value
+fiber_eq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value other;
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;other);
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_type(other) != <span style="color:#036;font-weight:bold">MRB_TT_FIBER</span>) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(fiber_ptr(<span style="color:#069">self</span>) == fiber_ptr(other));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="alive?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>alive?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns true if the fiber can still be resumed. After finishing
+execution of the fiber block this method will always return false.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+261
+262
+263
+264
+265
+266</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 261</span>
+
+static mrb_value
+fiber_alive_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct mrb_context *c = fiber_check(mrb, <span style="color:#069">self</span>);
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(c-&gt;status != <span style="color:#036;font-weight:bold">MRB_FIBER_TERMINATED</span>);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resume-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>resume</strong>(args, ...) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Resumes the fiber from the point at which the last <code>Fiber.yield</code>
+was called, or starts running it if it is the first call to
+<code>resume</code>. Arguments passed to resume will be the value of
+the <code>Fiber.yield</code> expression or will be passed as block
+parameters to the fiber&#39;s block if this is the first <code>resume</code>.</p>
+
+<p>Alternatively, when resume is called it evaluates to the arguments passed
+to the next <code>Fiber.yield</code> statement inside the fiber&#39;s block
+or to the block value if it runs to completion without any
+<code>Fiber.yield</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 233</span>
+
+static mrb_value
+fiber_resume(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value *a;
+  mrb_int len;
+  mrb_bool vmexec = <span style="color:#069">FALSE</span>;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*</span><span style="color:#710">&quot;</span></span>, &amp;a, &amp;len);
+  <span style="color:#080;font-weight:bold">if</span> (mrb-&gt;c-&gt;ci-&gt;acc &lt; <span style="color:#00D">0</span>) {
+    vmexec = <span style="color:#069">TRUE</span>;
+  }
+  <span style="color:#080;font-weight:bold">return</span> fiber_switch(mrb, <span style="color:#069">self</span>, len, a, <span style="color:#069">TRUE</span>, vmexec);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transfer-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>transfer</strong>(args, ...) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Transfers control to receiver fiber of the method call.
+Unlike <code>resume</code> the receiver wouldn&#39;t be pushed to call
+stack of fibers. Instead it will switch to the call stack of
+transferring fiber.
+When resuming a fiber that was transferred to another fiber it would
+cause double resume error. Though when the fiber is re-transferred
+and <code>Fiber.yield</code> is called, the fiber would be resumable.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 292</span>
+
+static mrb_value
+fiber_transfer(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  struct mrb_context *c = fiber_check(mrb, <span style="color:#069">self</span>);
+  mrb_value* a;
+  mrb_int len;
+
+  fiber_check_cfunc(mrb, mrb-&gt;c);
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*</span><span style="color:#710">&quot;</span></span>, &amp;a, &amp;len);
+
+  <span style="color:#080;font-weight:bold">if</span> (c == mrb-&gt;root_c) {
+    mrb-&gt;c-&gt;status = <span style="color:#036;font-weight:bold">MRB_FIBER_TRANSFERRED</span>;
+    mrb-&gt;c = c;
+    c-&gt;status = <span style="color:#036;font-weight:bold">MRB_FIBER_RUNNING</span>;
+    MARK_CONTEXT_MODIFY(c);
+    mrb_write_barrier(mrb, (struct <span style="color:#036;font-weight:bold">RBasic</span>*)c-&gt;fib);
+    <span style="color:#080;font-weight:bold">return</span> fiber_result(mrb, a, len);
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (c == mrb-&gt;c) {
+    <span style="color:#080;font-weight:bold">return</span> fiber_result(mrb, a, len);
+  }
+
+  <span style="color:#080;font-weight:bold">return</span> fiber_switch(mrb, <span style="color:#069">self</span>, len, a, <span style="color:#069">FALSE</span>, <span style="color:#069">FALSE</span>);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Sun Jan 17 01:23:06 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>

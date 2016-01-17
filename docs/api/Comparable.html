@@ -92,13 +92,13 @@
   
   
     <dt class="r1">Included in:</dt>
-    <dd class="r1"><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span>, <span class='object_link'><a href="String.html" title="String (class)">String</a></span></dd>
+    <dd class="r1"><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span>, <span class='object_link'><a href="String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="Symbol.html" title="Symbol (class)">Symbol</a></span></dd>
     
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">mrblib/string.rb<span class="defines">,<br />
-  mrblib/compar.rb</span>
+    <dd class="r2 last">mrblib/compar.rb<span class="defines">,<br />
+  mrblib/string.rb</span>
 </dd>
   
 </dl>
@@ -106,10 +106,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>Comparable</p>
+    <p>String is comparable</p>
 
-<p>ISO 15.3.3</p>
+<p>ISO 15.2.10.3</p>
 
 
   </div>
@@ -118,6 +117,8 @@
   
 
 </div>
+
+
 
 
 
@@ -149,8 +150,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return true if <code>self</code> is less than <code>other</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return true if +self+ is less than +other+.</p>
 </div></span>
   
 </li>
@@ -173,9 +173,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return true if <code>self</code> is less than or equal to
-<code>other</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return true if +self+ is less than or equal to +other+.</p>
 </div></span>
   
 </li>
@@ -198,8 +196,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return true if <code>self</code> is equal to <code>other</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return true if +self+ is equal to +other+.</p>
 </div></span>
   
 </li>
@@ -222,8 +219,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return true if <code>self</code> is greater than <code>other</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return true if +self+ is greater than +other+.</p>
 </div></span>
   
 </li>
@@ -246,9 +242,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return true if <code>self</code> is greater than or equal to
-<code>other</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return true if +self+ is greater than or equal to +other+.</p>
 </div></span>
   
 </li>
@@ -271,9 +265,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Return true if <code>self</code> is greater than or equal to
-<code>min</code> and less than or equal to <code>max</code>.</p>
+    <span class="summary_desc"><div class='inline'><p>Return true if +self+ is greater than or equal to +min+ and less than or equal to +max+.</p>
 </div></span>
   
 </li>
@@ -291,7 +283,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="<-instance_method">
   
-    - (<tt>Object</tt>) <strong>&lt;</strong>(other) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&lt;</strong>(other) 
   
 
   
@@ -299,9 +291,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Return true if <code>self</code> is less than <code>other</code>. Otherwise
-return false.</p>
+    <p>Return true if +self+ is less
+than +other+. Otherwise return
+false.</p>
 
 <p>ISO 15.3.3.2.1</p>
 
@@ -311,7 +303,9 @@ return false.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -343,7 +337,7 @@ return false.</p>
       <div class="method_details ">
   <h3 class="signature " id="<=-instance_method">
   
-    - (<tt>Object</tt>) <strong>&lt;=</strong>(other) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&lt;=</strong>(other) 
   
 
   
@@ -351,9 +345,9 @@ return false.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Return true if <code>self</code> is less than or equal to
-<code>other</code>. Otherwise return false.</p>
+    <p>Return true if +self+ is less
+than or equal to +other+.
+Otherwise return false.</p>
 
 <p>ISO 15.3.3.2.2</p>
 
@@ -363,7 +357,9 @@ return false.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -395,7 +391,7 @@ return false.</p>
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    - (<tt>Object</tt>) <strong>==</strong>(other) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>==</strong>(other) 
   
 
   
@@ -403,9 +399,9 @@ return false.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Return true if <code>self</code> is equal to <code>other</code>. Otherwise
-return false.</p>
+    <p>Return true if +self+ is equal
+to +other+. Otherwise return
+false.</p>
 
 <p>ISO 15.3.3.2.3</p>
 
@@ -415,7 +411,9 @@ return false.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -441,7 +439,7 @@ return false.</p>
       <div class="method_details ">
   <h3 class="signature " id=">-instance_method">
   
-    - (<tt>Object</tt>) <strong>&gt;</strong>(other) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&gt;</strong>(other) 
   
 
   
@@ -449,9 +447,9 @@ return false.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Return true if <code>self</code> is greater than <code>other</code>.
-Otherwise return false.</p>
+    <p>Return true if +self+ is greater
+than +other+. Otherwise return
+false.</p>
 
 <p>ISO 15.3.3.2.4</p>
 
@@ -461,7 +459,9 @@ Otherwise return false.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -493,7 +493,7 @@ Otherwise return false.</p>
       <div class="method_details ">
   <h3 class="signature " id=">=-instance_method">
   
-    - (<tt>Object</tt>) <strong>&gt;=</strong>(other) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&gt;=</strong>(other) 
   
 
   
@@ -501,9 +501,9 @@ Otherwise return false.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Return true if <code>self</code> is greater than or equal to
-<code>other</code>. Otherwise return false.</p>
+    <p>Return true if +self+ is greater
+than or equal to +other+.
+Otherwise return false.</p>
 
 <p>ISO 15.3.3.2.5</p>
 
@@ -513,7 +513,9 @@ Otherwise return false.</p>
 <div class="tags">
   
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -553,10 +555,10 @@ Otherwise return false.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Return true if <code>self</code> is greater than or equal to
-<code>min</code> and less than or equal to <code>max</code>. Otherwise
-return false.</p>
+    <p>Return true if +self+ is greater
+than or equal to +min+ and
+less than or equal to +max+.
+Otherwise return false.</p>
 
 <p>ISO 15.3.3.2.6</p>
 
@@ -579,7 +581,9 @@ return false.</p>
   
 </ul>
 
-</div><table class="source_code">
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -605,9 +609,9 @@ return false.</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  8 15:42:18 2015 by
+  Generated on Sun Jan 17 01:22:59 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.0 (ruby-2.2.3).
+  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
 </div>
 
   </body>
