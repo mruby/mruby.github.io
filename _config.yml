@@ -1,6 +1,6 @@
 name: mruby
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 exclude:
 - Gemfile
 - Gemfile.lock
