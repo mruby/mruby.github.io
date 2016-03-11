@@ -196,11 +196,13 @@ test_symbol[] = {
 };
 ~~~
 
-To execute this bytecode the following boilerplate has to be written:
+To execute this bytecode the following boilerplate has to be written (name this
+file `test_stub.c`):
 
 ~~~c
 #include "mruby.h"
 #include "mruby/irep.h"
+#include "test_program.c"
 
 int
 main(void)
@@ -217,8 +219,7 @@ This will read the bytecode from the array and executes it immediately:
 To compile and link:
 
 ~~~
-$ gcc -std=c99 -Imruby/include test_program.c -o test_program
-test_program.o mruby/build/host/lib/libmruby.a
+$ gcc -std=c99 -Imruby/include test_stub.c -o test_program mruby/build/host/lib/libmruby.a
 ~~~
 
 To execute:
