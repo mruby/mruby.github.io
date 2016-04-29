@@ -1,11 +1,4 @@
 ---
-- name: host-stats
-  description: library to gather stats on running system (cpu, memory, ...).
-  author: Julien Ammous
-  website: https://github.com/schmurfy/host-stats
-  protocol: git
-  repository: https://github.com/schmurfy/host-stats.git
-  repooptions: 
 - name: mruby-alarm
   description: Alarm Module
   author: k0u5uk3
@@ -153,6 +146,13 @@
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-cgroup.git
   repooptions: 
+- name: mruby-changefinder
+  description: Detect change point via continuous outlier and smoothing
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumoto-r/mruby-changefinder
+  protocol: git
+  repository: https://github.com/matsumoto-r/mruby-changefinder.git
+  repooptions: 
 - name: mruby-chipmunk2d
   description: chipmunk2d bindings
   author: Corey Powell
@@ -293,6 +293,13 @@
   website: https://github.com/iij/mruby-env
   protocol: git
   repository: https://github.com/iij/mruby-env.git
+  repooptions: 
+- name: mruby-env
+  description: filemagic class implementation
+  author: k0u5uk3
+  website: https://github.com/k0u5uk3/mruby-filemagic.git
+  protocol: git
+  repository: https://github.com/k0u5uk3/mruby-filemagic.git
   repooptions: 
 - name: mruby-erb
   description: Port of CRuby's ERB
@@ -492,6 +499,20 @@
   protocol: git
   repository: https://github.com/Asmod4n/mruby-hiredis.git
   repooptions: 
+- name: mruby-hogun
+  description: convenient library to build the command line interface.
+  author: qtakamitsu
+  website: https://github.com/qtkmz/mruby-hogun
+  protocol: git
+  repository: https://github.com/qtkmz/mruby-hogun.git
+  repooptions: 
+- name: mruby-host-stats
+  description: library to gather stats on running system (cpu, memory, ...).
+  author: Julien Ammous
+  website: https://github.com/schmurfy/host-stats
+  protocol: git
+  repository: https://github.com/schmurfy/host-stats.git
+  repooptions: 
 - name: mruby-hs-regexp
   description: Light-weight Henry Spencer's Regular Expression
   author: Masamitsu MURASE
@@ -568,7 +589,7 @@
   website: https://github.com/rrreeeyyy/mruby-ipvs
   protocol: git
   repository: https://github.com/rrreeeyyy/mruby-ipvs
-  repooptions: 
+  repooptions: --recursive
 - name: mruby-irb-mirb-hostbased
   description: Hostbased mirb for serial connection
   author: kyab
@@ -920,6 +941,13 @@
   protocol: git
   repository: https://github.com/mattn/mruby-pjson.git
   repooptions: 
+- name: mruby-plplot
+  description: PLPlot mruby interface
+  author: Paolo Bosetti
+  website: https://github.com/pbosetti/mruby-plplot
+  protocol: git
+  repository: https://github.com/pbosetti/mruby-plplot.git
+  repooptions: 
 - name: mruby-polarssl
   description: SSL and cryptography functionality from PolarSSL in your mruby programs
   author: luisbebop
@@ -1242,6 +1270,13 @@
   website: https://github.com/matsumoto-r/mruby-uname
   protocol: git
   repository: https://github.com/matsumoto-r/mruby-uname.git
+  repooptions: 
+- name: mruby-unbound
+  description: mruby client for Unbound (libunbound)
+  author: Kouichi Nakanishi
+  website: https://github.com/KeizoBookman/mruby-unbound
+  protocol: git
+  repository: https://github.com/KeizoBookman/mruby-unbound.git
   repooptions: 
 - name: mruby-updategems
   description: Rake task to update GEMs
