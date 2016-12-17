@@ -70,8 +70,8 @@ Ruby code can also be written as a C string. This is similar to
 the `-e` switch of the `mruby` program.
 
 ~~~c
-#include "mruby.h"
-#include "mruby/compile.h"
+#include <mruby.h>
+#include <mruby/compile.h>
 
 int
 main(void)
@@ -81,14 +81,14 @@ main(void)
   // mrb_load_nstring() for strings without null terminator or with known length
   mrb_load_string(mrb, "puts 'hello world'");
   mrb_close(mrb);
+  return 0;
 }
 ~~~
 
 To compile and link:
 
 ~~~
-$ gcc -std=c99 -Imruby/include test_program.c -o test_program
-test_program.o mruby/build/host/lib/libmruby.a
+$ gcc -std=c99 -Imruby/include test_program.c -o test_program mruby/build/host/lib/libmruby.a -lm
 ~~~
 
 To execute:
@@ -200,9 +200,9 @@ To execute this bytecode the following boilerplate has to be written (name this
 file `test_stub.c`):
 
 ~~~c
-#include "mruby.h"
-#include "mruby/irep.h"
-#include "test_program.c"
+#include <mruby.h>
+#include <mruby/irep.h>
+#include <test_program.c>
 
 int
 main(void)
@@ -211,6 +211,7 @@ main(void)
   if (!mrb) { /* handle error */ }
   mrb_load_irep(mrb, test_symbol);
   mrb_close(mrb);
+  return 0;
 }
 ~~~
 
@@ -219,7 +220,7 @@ This will read the bytecode from the array and executes it immediately:
 To compile and link:
 
 ~~~
-$ gcc -std=c99 -Imruby/include test_stub.c -o test_program mruby/build/host/lib/libmruby.a
+$ gcc -std=c99 -Imruby/include test_stub.c -o test_program mruby/build/host/lib/libmruby.a -lm
 ~~~
 
 To execute:
