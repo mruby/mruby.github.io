@@ -6,3 +6,4 @@ exclude:
 - Gemfile.lock
 - README.md
 - gen_mgemdata.rb
+- vendor
