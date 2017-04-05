@@ -20,6 +20,13 @@
   protocol: git
   repository: https://github.com/ppibburr/mruby-allocate.git
   repooptions: 
+- name: mruby-ansi-colors
+  description: Extends String class to use ANSI color escape codes.
+  author: Mav7
+  website: https://github.com/Mav7/mruby-ansi-colors
+  protocol: git
+  repository: https://github.com/Mav7/mruby-ansi-colors.git
+  repooptions: 
 - name: mruby-apr
   description: Cross platform standard library components à la MRI
   author: Jared Breeden
@@ -34,12 +41,35 @@
   protocol: git
   repository: https://github.com/kyab/mruby-arduino.git
   repooptions: 
+- name: mruby-argtable
+  description: Argtable class
+  author:
+  - Uchio Kondo
+  - Stewart Heitmann
+  website: https://github.com/udzura/mruby-argtable
+  protocol: git
+  repository: https://github.com/udzura/mruby-argtable.git
+  repooptions: 
+- name: mruby-at_exit
+  description: Kernel.at_exit method
+  author: ksss
+  website: https://github.com/ksss/mruby-at_exit
+  protocol: git
+  repository: https://github.com/ksss/mruby-at_exit.git
+  repooptions: 
 - name: mruby-audite
   description: Portable MP3 Player based on libmp123 and portaudio
   author: Matthias Georgi
   website: https://github.com/georgi/mruby-audite
   protocol: git
   repository: https://github.com/georgi/mruby-audite.git
+  repooptions: 
+- name: mruby-augeas
+  description: Bindings to augeas
+  author: lutter
+  website: https://github.com/hercules-team/mruby-augeas
+  protocol: git
+  repository: https://github.com/hercules-team/mruby-augeas
   repooptions: 
 - name: mruby-avl
   description: Avl Tree implementation
@@ -54,6 +84,13 @@
   website: https://github.com/iij/mruby-aws-s3
   protocol: git
   repository: https://github.com/iij/mruby-aws-s3.git
+  repooptions: 
+- name: mruby-b64
+  description: Base64 for mruby with streaming interface
+  author: Hendrik Beskow
+  website: https://github.com/Asmod4n/mruby-b64
+  protocol: git
+  repository: https://github.com/Asmod4n/mruby-b64.git
   repooptions: 
 - name: mruby-backtrace
   description: Display backtrace
@@ -121,9 +158,9 @@
 - name: mruby-capability
   description: Linux Capability Binding
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-capability
+  website: https://github.com/matsumotory/mruby-capability
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-capability.git
+  repository: https://github.com/matsumotory/mruby-capability.git
   repooptions: 
 - name: mruby-catch-throw
   description: catch and throw for mruby.
@@ -142,16 +179,23 @@
 - name: mruby-cgroup
   description: cgroup binding
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-cgroup
+  website: https://github.com/matsumotory/mruby-cgroup
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-cgroup.git
+  repository: https://github.com/matsumotory/mruby-cgroup.git
   repooptions: 
 - name: mruby-changefinder
   description: Detect change point via continuous outlier and smoothing
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-changefinder
+  website: https://github.com/matsumotory/mruby-changefinder
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-changefinder.git
+  repository: https://github.com/matsumotory/mruby-changefinder.git
+  repooptions: 
+- name: mruby-channel
+  description: named FIFO queue with multithreading
+  author: bggd
+  website: https://github.com/bggd/mruby-channel
+  protocol: git
+  repository: https://github.com/bggd/mruby-channel.git
   repooptions: 
 - name: mruby-chipmunk2d
   description: chipmunk2d bindings
@@ -159,6 +203,27 @@
   website: https://github.com/IceDragon200/mruby-chipmunk2d
   protocol: git
   repository: https://github.com/IceDragon200/mruby-chipmunk2d
+  repooptions: 
+- name: mruby-chrony
+  description: Steady and System clocks for mruby
+  author: Hendrik Beskow
+  website: https://github.com/Asmod4n/mruby-chrono
+  protocol: git
+  repository: https://github.com/Asmod4n/mruby-chrono.git
+  repooptions: 
+- name: mruby-cidr
+  description: CIDR class
+  author: kaihar4
+  website: https://github.com/kaihar4/mruby-cidr
+  protocol: git
+  repository: https://github.com/kaihar4/mruby-cidr.git
+  repooptions: 
+- name: mruby-cipher
+  description: OpenSSL Cipher wrapper
+  author: Seiei Miyagi
+  website: https://github.com/hanachin/mruby-cipher
+  protocol: git
+  repository: https://github.com/hanachin/mruby-cipher.git
   repooptions: 
 - name: mruby-clang-plugin
   description: clang plugin to check mruby API call mistakes.
@@ -185,9 +250,9 @@
   description: With mruby we continuously switching between Ruby and C code. mruby-config
     gives you an easy way to maintain configuration values on both sides.
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-config
+  website: https://github.com/matsumotory/mruby-config
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-config.git
+  repository: https://github.com/matsumotory/mruby-config.git
   repooptions: 
 - name: mruby-consul
   description: Consul HTTP API Client.
@@ -196,19 +261,26 @@
   protocol: git
   repository: https://github.com/inokappa/mruby-consul.git
   repooptions: 
+- name: mruby-correlation
+  description: Array extended for correlation coefficient
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumotory/mruby-correlation
+  protocol: git
+  repository: https://github.com/matsumotory/mruby-correlation.git
+  repooptions: 
 - name: mruby-criu
   description: CRIU, Checkpoint Restart In Userspace for Linux, class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-criu
+  website: https://github.com/matsumotory/mruby-criu
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-criu.git
+  repository: https://github.com/matsumotory/mruby-criu.git
   repooptions: 
 - name: mruby-cross-compile-on-mac-osx
   description: Cross compile osx, linux or win32 binary of mruby on Mac OSX
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-cross-compile-on-mac-osx
+  website: https://github.com/matsumotory/mruby-cross-compile-on-mac-osx
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-cross-compile-on-mac-osx.git
+  repository: https://github.com/matsumotory/mruby-cross-compile-on-mac-osx.git
   repooptions: 
 - name: mruby-curl
   description: CURL HTTP Client
@@ -262,16 +334,16 @@
 - name: mruby-discount
   description: html generater from markdown using discount
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-discount
+  website: https://github.com/matsumotory/mruby-discount
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-discount.git
+  repository: https://github.com/matsumotory/mruby-discount.git
   repooptions: 
 - name: mruby-disque
   description: Disque client class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-disque
+  website: https://github.com/matsumotory/mruby-disque
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-disque.git
+  repository: https://github.com/matsumotory/mruby-disque.git
   repooptions: 
 - name: mruby-dll
   description: DLL Windows Support
@@ -294,13 +366,6 @@
   protocol: git
   repository: https://github.com/iij/mruby-env.git
   repooptions: 
-- name: mruby-env
-  description: filemagic class implementation
-  author: k0u5uk3
-  website: https://github.com/k0u5uk3/mruby-filemagic.git
-  protocol: git
-  repository: https://github.com/k0u5uk3/mruby-filemagic.git
-  repooptions: 
 - name: mruby-erb
   description: Port of CRuby's ERB
   author: Jared Breeden
@@ -315,12 +380,27 @@
   protocol: git
   repository: https://github.com/iij/mruby-errno.git
   repooptions: 
+- name: mruby-etcd
+  description: Simple etcd API wrapper
+  author: Uchio Kondo
+  website: https://github.com/udzura/mruby-etcd
+  protocol: git
+  repository: https://github.com/udzura/mruby-etcd.git
+  repooptions: 
 - name: mruby-eventfd
   description: Eventfd class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-eventfd
+  website: https://github.com/matsumotory/mruby-eventfd
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-eventfd.git
+  repository: https://github.com/matsumotory/mruby-eventfd.git
+  repooptions: 
+- name: mruby-fast-remote-check
+  description: FastRemoteCheck can perform port listening check at high speed using
+    raw socket
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumotory/mruby-fast-remote-check
+  protocol: git
+  repository: https://github.com/matsumotory/mruby-fast-remote-check.git
   repooptions: 
 - name: mruby-file-stat
   description: File::Stat class implementation
@@ -328,6 +408,20 @@
   website: https://github.com/ksss/mruby-file-stat
   protocol: git
   repository: https://github.com/ksss/mruby-file-stat.git
+  repooptions: 
+- name: mruby-filemagic
+  description: filemagic class implementation
+  author: k0u5uk3
+  website: https://github.com/k0u5uk3/mruby-filemagic.git
+  protocol: git
+  repository: https://github.com/k0u5uk3/mruby-filemagic.git
+  repooptions: 
+- name: mruby-float4
+  description: small vector classes for mruby
+  author: Tomasz Dabrowski
+  website: https://github.com/dabroz/mruby-float4
+  protocol: git
+  repository: https://github.com/dabroz/mruby-float4.git
   repooptions: 
 - name: mruby-fltk3
   description: FLTK3 GUI binding.
@@ -367,9 +461,9 @@
 - name: mruby-geoip
   description: GeoIP(City) class using GeoIPCity.dat for mruby
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-geoip
+  website: https://github.com/matsumotory/mruby-geoip
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-geoip.git
+  repository: https://github.com/matsumotory/mruby-geoip.git
   repooptions: 
 - name: mruby-getoptlong
   description: An almost straight mruby port of Ruby's GetoptLong
@@ -384,6 +478,13 @@
   website: https://github.com/mttech/mruby-getopts
   protocol: git
   repository: https://github.com/mttech/mruby-getopts
+  repooptions: 
+- name: mruby-getpass
+  description: Read passwords from the command prompt
+  author: Hendrik Beskow
+  website: https://github.com/Asmod4n/mruby-getpass
+  protocol: git
+  repository: https://github.com/Asmod4n/mruby-getpass.git
   repooptions: 
 - name: mruby-girffi
   description: GObjectIntrospection bindings that dynamically bind GLib based libraries.
@@ -459,9 +560,9 @@
 - name: mruby-growthforecast
   description: GrowthForecast client class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-growthforecast
+  website: https://github.com/matsumotory/mruby-growthforecast
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-growthforecast.git
+  repository: https://github.com/matsumotory/mruby-growthforecast.git
   repooptions: 
 - name: mruby-gsl
   description: Wrapper to GNU Scientific Library (GSL).
@@ -483,6 +584,16 @@
   website: https://github.com/ppibburr/mruby-gtk3
   protocol: git
   repository: https://github.com/ppibburr/mruby-gtk3.git
+  repooptions: 
+- name: mruby-hashie
+  description: Collection of classes and mixins that makes hashes more powerful
+  author:
+  - Michael Bleigh
+  - Jerry Cheung
+  - Takashi Kokubun
+  website: https://github.com/k0kubun/mruby-hashie
+  protocol: git
+  repository: https://github.com/k0kubun/mruby-hashie.git
   repooptions: 
 - name: mruby-hibari
   description: A Web application framework for Web servers that support mruby and
@@ -530,16 +641,16 @@
 - name: mruby-http2
   description: HTTP2 module for mruby
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-http2
+  website: https://github.com/matsumotory/mruby-http2
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-http2.git
+  repository: https://github.com/matsumotory/mruby-http2.git
   repooptions: 
 - name: mruby-httprequest
   description: create http request class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-httprequest
+  website: https://github.com/matsumotory/mruby-httprequest
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-httprequest.git
+  repository: https://github.com/matsumotory/mruby-httprequest.git
   repooptions: 
 - name: mruby-httpsclient
   description: A simple https only Client
@@ -576,6 +687,13 @@
   protocol: git
   repository: https://github.com/iij/mruby-io.git
   repooptions: 
+- name: mruby-io-console
+  description: The implementation of io/console as CRuby.
+  author: ksss
+  website: https://github.com/ksss/mruby-io-console
+  protocol: git
+  repository: https://github.com/ksss/mruby-io-console.git
+  repooptions: 
 - name: mruby-ipaddr
   description: IPAddr class
   author: iij
@@ -589,7 +707,7 @@
   website: https://github.com/rrreeeyyy/mruby-ipvs
   protocol: git
   repository: https://github.com/rrreeeyyy/mruby-ipvs
-  repooptions: --recursive
+  repooptions: "--recursive"
 - name: mruby-irb-mirb-hostbased
   description: Hostbased mirb for serial connection
   author: kyab
@@ -631,6 +749,13 @@
   website: https://github.com/prevs-io/mruby-jwt
   protocol: git
   repository: https://github.com/prevs-io/mruby-jwt.git
+  repooptions: 
+- name: mruby-k2hash
+  description: mruby binding of yahoojapan/k2hash
+  author: Ryo Okubo
+  website: https://github.com/syucream/mruby-k2hash
+  protocol: git
+  repository: https://github.com/syucream/mruby-k2hash.git
   repooptions: 
 - name: mruby-kmp
   description: KMP searching algorithm in mruby
@@ -674,12 +799,40 @@
   protocol: git
   repository: https://github.com/ksss/mruby-limits.git
   repooptions: 
+- name: mruby-linenoise
+  description: linenoise for mruby, a line editing library akin to readline
+  author: Hendrik Beskow
+  website: https://github.com/Asmod4n/mruby-linenoise
+  protocol: git
+  repository: https://github.com/Asmod4n/mruby-linenoise.git
+  repooptions: 
+- name: mruby-linux-namespace
+  description: A mgem to utilize linux namespaces
+  author: Russel Hunter Yukawa / Uchio Kondo
+  website: https://github.com/haconiwa/mruby-linux-namespace
+  protocol: git
+  repository: https://github.com/haconiwa/mruby-linux-namespace.git
+  repooptions: 
 - name: mruby-lmdb
   description: mruby wrapper for Lightning Memory-Mapped Database from Symas.
   author: Hendrik Beskow
   website: https://github.com/Asmod4n/mruby-lmdb
   protocol: git
   repository: https://github.com/Asmod4n/mruby-lmdb.git
+  repooptions: 
+- name: mruby-localmemcache
+  description: localmemcache binding
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumotory/mruby-localmemcache
+  protocol: git
+  repository: https://github.com/matsumotory/mruby-localmemcache.git
+  repooptions: 
+- name: mruby-lruc
+  description: Least Recently Used(LRU) cache using lruc
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumotory/mruby-lruc
+  protocol: git
+  repository: https://github.com/matsumotory/mruby-lruc.git
   repooptions: 
 - name: mruby-lua
   description: Lua script engine
@@ -701,7 +854,7 @@
   website: https://github.com/carsonmcdonald/mruby-markdown
   protocol: git
   repository: https://github.com/carsonmcdonald/mruby-markdown.git
-  repooptions: --recursive
+  repooptions: "--recursive"
 - name: mruby-marshal
   description: Marshal module for mruby
   author: Takeshi Watanabe
@@ -715,6 +868,13 @@
   website: https://github.com/listrophy/mruby-matrix
   protocol: git
   repository: https://github.com/listrophy/mruby-matrix.git
+  repooptions: 
+- name: mruby-maxminddb
+  description: mruby [GeoIP2 MaxMind DB](http://maxmind.github.io/MaxMind-DB/) reader
+  author: Kenichi Mitsugi
+  website: https://github.com/happysiro/mruby-maxminddb
+  protocol: git
+  repository: https://github.com/happysiro/mruby-maxminddb
   repooptions: 
 - name: mruby-md5
   description: MD5 Hash Alghorithm
@@ -733,9 +893,9 @@
 - name: mruby-memcached
   description: libmemcached bindings by mruby
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-memcached
+  website: https://github.com/matsumotory/mruby-memcached
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-memcached.git
+  repository: https://github.com/matsumotory/mruby-memcached.git
   repooptions: 
 - name: mruby-merb
   description: ERB-like mruby gem
@@ -761,16 +921,16 @@
 - name: mruby-mod-mruby-ext
   description: Extended Apache class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-mod-mruby-ext
+  website: https://github.com/matsumotory/mruby-mod-mruby-ext
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-mod-mruby-ext.git
+  repository: https://github.com/matsumotory/mruby-mod-mruby-ext.git
   repooptions: 
 - name: mruby-mrbgem-template
   description: Generate mrbgem template
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-mrbgem-template
+  website: https://github.com/matsumotory/mruby-mrbgem-template
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-mrbgem-template.git
+  repository: https://github.com/matsumotory/mruby-mrbgem-template.git
   repooptions: 
 - name: mruby-mrmagick
   description: ImageMagick binding for mruby.
@@ -817,9 +977,9 @@
 - name: mruby-mutex
   description: Mutex class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-mutex
+  website: https://github.com/matsumotory/mruby-mutex
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-mutex.git
+  repository: https://github.com/matsumotory/mruby-mutex.git
   repooptions: 
 - name: mruby-mysql
   description: MySQL Database
@@ -846,23 +1006,23 @@
 - name: mruby-netlink
   description: libnetlink binding
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-netlink
+  website: https://github.com/matsumotory/mruby-netlink
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-netlink.git
+  repository: https://github.com/matsumotory/mruby-netlink.git
   repooptions: 
 - name: mruby-ngx-mruby-ext
   description: Nginx ext class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-ngx-mruby-ext
+  website: https://github.com/matsumotory/mruby-ngx-mruby-ext
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-ngx-mruby-ext.git
+  repository: https://github.com/matsumotory/mruby-ngx-mruby-ext.git
   repooptions: 
 - name: mruby-oauth
   description: OAuth class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-oauth
+  website: https://github.com/matsumotory/mruby-oauth
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-oauth.git
+  repository: https://github.com/matsumotory/mruby-oauth.git
   repooptions: 
 - name: mruby-odbc
   description: unixODBC bindings
@@ -877,6 +1037,34 @@
   website: https://github.com/mattn/mruby-onig-regexp
   protocol: git
   repository: https://github.com/mattn/mruby-onig-regexp.git
+  repooptions: 
+- name: mruby-open3
+  description: Popen, but with stderr, too
+  author: Takashi Kokubun
+  website: https://github.com/k0kubun/mruby-open3
+  protocol: git
+  repository: https://github.com/k0kubun/mruby-open3.git
+  repooptions: 
+- name: mruby-optparse
+  description: OptionParser ported to mruby
+  author: fastly
+  website: https://github.com/fastly/mruby-optparse
+  protocol: git
+  repository: https://github.com/fastly/mruby-optparse.git
+  repooptions: 
+- name: mruby-opvault
+  description: decrypt OPVault
+  author: Seiei Miyagi
+  website: https://github.com/hanachin/mruby-opvault
+  protocol: git
+  repository: https://github.com/hanachin/mruby-opvault.git
+  repooptions: 
+- name: mruby-os
+  description: Determine system and binary capabilities
+  author: katzer
+  website: https://github.com/appPlant/mruby-os
+  protocol: git
+  repository: https://github.com/appPlant/mruby-os.git
   repooptions: 
 - name: mruby-ostruct
   description: OpenStruct binding in mruby
@@ -906,12 +1094,29 @@
   protocol: git
   repository: https://github.com/iij/mruby-pack.git
   repooptions: 
+- name: mruby-passwdqc
+  description: A Password quality checker
+  author: Hendrik Beskow
+  website: https://github.com/Asmod4n/mruby-passwdqc
+  protocol: git
+  repository: https://github.com/Asmod4n/mruby-passwdqc
+  repooptions: 
 - name: mruby-pcre-regexp
   description: PCRE - Perl Compatible Regular Expressions
   author: mattn
   website: https://github.com/mattn/mruby-pcre-regexp
   protocol: git
   repository: https://github.com/mattn/mruby-pcre-regexp.git
+  repooptions: 
+- name: mruby-perlin-noise
+  description: Perlin noise generator for mruby
+  author:
+  - Junegunn Choi
+  - Matthew Johnston
+  - Tomasz Dabrowski
+  website: https://github.com/dabroz/mruby-perlin-noise
+  protocol: git
+  repository: https://github.com/dabroz/mruby-perlin-noise.git
   repooptions: 
 - name: mruby-phr
   description: mruby bindings for picohttpparser
@@ -941,6 +1146,13 @@
   protocol: git
   repository: https://github.com/mattn/mruby-pjson.git
   repooptions: 
+- name: mruby-pkcs5
+  description: Provide PKCS5 functionality with mruby-digest
+  author: Seiei Miyagi
+  website: https://github.com/hanachin/mruby-pkcs5
+  protocol: git
+  repository: https://github.com/hanachin/mruby-pkcs5.git
+  repooptions: 
 - name: mruby-plplot
   description: PLPlot mruby interface
   author: Paolo Bosetti
@@ -954,6 +1166,13 @@
   website: https://github.com/luisbebop/mruby-polarssl
   protocol: git
   repository: https://github.com/luisbebop/mruby-polarssl.git
+  repooptions: 
+- name: mruby-posix_ipc
+  description: A mgem for access to POSIX IPC API
+  author: Uchio Kondo
+  website: https://github.com/udzura/mruby-posix_ipc
+  protocol: git
+  repository: https://github.com/udzura/mruby-posix_ipc.git
   repooptions: 
 - name: mruby-process
   description: Process interface (waitpid, pid, kill, fork, ppid)
@@ -979,9 +1198,9 @@
 - name: mruby-random
   description: random class with Mersenne Twister
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-random
+  website: https://github.com/matsumotory/mruby-random
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-random.git
+  repository: https://github.com/matsumotory/mruby-random.git
   repooptions: 
 - name: mruby-raspberry
   description: Wrapper for WiringPi library for accessing Raspberry Pi hardware.
@@ -1000,16 +1219,16 @@
 - name: mruby-rcon
   description: resource management mrbgem using cgroup
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-rcon
+  website: https://github.com/matsumotory/mruby-rcon
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-rcon.git
+  repository: https://github.com/matsumotory/mruby-rcon.git
   repooptions: 
 - name: mruby-redis
   description: redis client using hiredis
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-redis
+  website: https://github.com/matsumotory/mruby-redis
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-redis.git
+  repository: https://github.com/matsumotory/mruby-redis.git
   repooptions: 
 - name: mruby-redis-ae
   description: mruby wrapper for the Redis Ae event loop.
@@ -1039,12 +1258,26 @@
   protocol: git
   repository: https://github.com/ksss/mruby-research.git
   repooptions: 
+- name: mruby-romajify
+  description: Japanese romanization library for mruby
+  author: emsk
+  website: https://github.com/emsk/mruby-romajify
+  protocol: git
+  repository: https://github.com/emsk/mruby-romajify.git
+  repooptions: 
 - name: mruby-rubyffi-compat
   description: rubyffi compatibility layer on top of mruby-cfunc.
   author: Julien Ammous, ppibburr
   website: https://github.com/schmurfy/mruby-rubyffi-compat
   protocol: git
   repository: https://github.com/schmurfy/mruby-rubyffi-compat.git
+  repooptions: 
+- name: mruby-secure-compare
+  description: Secure String comparisons for mruby
+  author: Hendrik Beskow
+  website: https://github.com/Asmod4n/mruby-secure-compare
+  protocol: git
+  repository: https://github.com/Asmod4n/mruby-secure-compare.git
   repooptions: 
 - name: mruby-secure-random
   description: SecureRandom class
@@ -1081,6 +1314,16 @@
   protocol: git
   repository: https://github.com/h2so5/mruby-sha2.git
   repooptions: 
+- name: mruby-shellwords
+  description: Manipulates strings like the UNIX Bourne shell
+  author:
+  - Wakou Aoyama
+  - Akinori MUSHA
+  - Takashi Kokubun
+  website: https://github.com/k0kubun/mruby-shellwords
+  protocol: git
+  repository: https://github.com/k0kubun/mruby-shellwords.git
+  repooptions: 
 - name: mruby-sidekiq-client
   description: SidekiqClient class
   author: monochromegane
@@ -1095,6 +1338,13 @@
   protocol: git
   repository: https://github.com/ksss/mruby-signal.git
   repooptions: 
+- name: mruby-signal-thread
+  description: Multi thread Signal trap and callback in mruby
+  author: pyama86
+  website: https://github.com/pyama86/mruby-signal-thread
+  protocol: git
+  repository: https://github.com/pyama86/mruby-signal-thread.git
+  repooptions: 
 - name: mruby-simple-random
   description: Kernel#rand and Kernel#srand
   author: Internet Initiative Japan., Inc.
@@ -1105,9 +1355,9 @@
 - name: mruby-simplehttp
   description: Simple http client
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-simplehttp
+  website: https://github.com/matsumotory/mruby-simplehttp
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-simplehttp.git
+  repository: https://github.com/matsumotory/mruby-simplehttp.git
   repooptions: 
 - name: mruby-simplehttp-socket
   description: Simple http client using mruby-socket
@@ -1119,9 +1369,9 @@
 - name: mruby-simplehttpserver
   description: SimpleHttpServer class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-simplehttpserver
+  website: https://github.com/matsumotory/mruby-simplehttpserver
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-simplehttpserver.git
+  repository: https://github.com/matsumotory/mruby-simplehttpserver.git
   repooptions: 
 - name: mruby-simplemsgpack
   description: A simple mruby wrapper for msgpack
@@ -1133,9 +1383,9 @@
 - name: mruby-simpletest
   description: SimpleTest class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-simpletest
+  website: https://github.com/matsumotory/mruby-simpletest
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-simpletest.git
+  repository: https://github.com/matsumotory/mruby-simpletest.git
   repooptions: 
 - name: mruby-sinatic
   description: Sinatra like Web Framework
@@ -1161,9 +1411,16 @@
 - name: mruby-sleep
   description: Sleep Module
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-sleep
+  website: https://github.com/matsumotory/mruby-sleep
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-sleep.git
+  repository: https://github.com/matsumotory/mruby-sleep.git
+  repooptions: 
+- name: mruby-smallhttp
+  description: Small http-client gem for mruby
+  author: Nazarii Sheremet
+  website: https://github.com/nsheremet/mruby-smallhttp
+  protocol: git
+  repository: https://github.com/nsheremet/mruby-smallhttp.git
   repooptions: 
 - name: mruby-socket
   description: Socket library for mruby
@@ -1175,13 +1432,22 @@
 - name: mruby-spdy
   description: SPDY module for mruby
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-spdy
+  website: https://github.com/matsumotory/mruby-spdy
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-spdy.git
+  repository: https://github.com/matsumotory/mruby-spdy.git
+  repooptions: 
+- name: mruby-specinfra
+  description: Common layer for serverspec and itamae
+  author:
+  - Gosuke Miyashita
+  - Takashi Kokubun
+  website: https://github.com/k0kubun/mruby-specinfra
+  protocol: git
+  repository: https://github.com/k0kubun/mruby-specinfra.git
   repooptions: 
 - name: mruby-sqlite
-  description: (Another) SQLite3 mrbgem, aiming for compatability with MRI's sqlite3
-    gem.
+  description: "(Another) SQLite3 mrbgem, aiming for compatability with MRI's sqlite3
+    gem."
   author: Jared Breeden
   website: https://github.com/jbreeden/mruby-sqlite
   protocol: git
@@ -1208,6 +1474,20 @@
   protocol: git
   repository: https://github.com/mattn/mruby-string-crypt.git
   repooptions: 
+- name: mruby-string-is-utf8
+  description: checks if a string is valid utf8
+  author: Hendrik Beskow
+  website: https://github.com/Asmod4n/mruby-string-is-utf8
+  protocol: git
+  repository: https://github.com/Asmod4n/mruby-string-is-utf8.git
+  repooptions: 
+- name: mruby-string-xor
+  description: XOR two strings
+  author: Seiei Miyagi
+  website: https://github.com/hanachin/mruby-string-xor
+  protocol: git
+  repository: https://github.com/hanachin/mruby-string-xor.git
+  repooptions: 
 - name: mruby-stringio
   description: StringIO class
   author: ksss
@@ -1222,12 +1502,26 @@
   protocol: git
   repository: https://github.com/iij/mruby-syslog.git
   repooptions: 
+- name: mruby-sysrandom
+  description: Secure random number generation for mruby
+  author: Hendrik Beskow
+  website: https://github.com/Asmod4n/mruby-sysrandom
+  protocol: git
+  repository: https://github.com/Asmod4n/mruby-sysrandom.git
+  repooptions: 
 - name: mruby-tempfile
   description: Tempfile class
   author: iij
   website: https://github.com/iij/mruby-tempfile
   protocol: git
   repository: https://github.com/iij/mruby-tempfile.git
+  repooptions: 
+- name: mruby-terminal-table
+  description: A fast and simple, yet feature rich ASCII table generator
+  author: katzer
+  website: https://github.com/appPlant/mruby-terminal-table
+  protocol: git
+  repository: https://github.com/appPlant/mruby-terminal-table.git
   repooptions: 
 - name: mruby-thread
   description: Thread Library
@@ -1236,12 +1530,26 @@
   protocol: git
   repository: https://github.com/mattn/mruby-thread.git
   repooptions: 
+- name: mruby-time-strftime
+  description: Time#strftime for mruby
+  author: monochromegane
+  website: https://github.com/monochromegane/mruby-time-strftime
+  protocol: git
+  repository: https://github.com/monochromegane/mruby-time-strftime.git
+  repooptions: 
+- name: mruby-timer-thread
+  description: Timer Thread class
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumotory/mruby-timer-thread
+  protocol: git
+  repository: https://github.com/matsumotory/mruby-timer-thread.git
+  repooptions: 
 - name: mruby-tinymt
   description: random module using TinyMT
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-tinymt
+  website: https://github.com/matsumotory/mruby-tinymt
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-tinymt.git
+  repository: https://github.com/matsumotory/mruby-tinymt.git
   repooptions: 
 - name: mruby-tinyxml2
   description: mruby bindings for TinyXML-2
@@ -1267,16 +1575,23 @@
 - name: mruby-uname
   description: Uname class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-uname
+  website: https://github.com/matsumotory/mruby-uname
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-uname.git
+  repository: https://github.com/matsumotory/mruby-uname.git
   repooptions: 
 - name: mruby-unbound
   description: mruby client for Unbound (libunbound)
   author: Kouichi Nakanishi
-  website: https://github.com/KeizoBookman/mruby-unbound
+  website: https://github.com/keizo042/mruby-unbound
   protocol: git
-  repository: https://github.com/KeizoBookman/mruby-unbound.git
+  repository: https://github.com/keizo042/mruby-unbound.git
+  repooptions: 
+- name: mruby-unicode-display_width
+  description: Monospace Unicode character width
+  author: katzer
+  website: https://github.com/appPlant/mruby-unicode-display_width
+  protocol: git
+  repository: https://github.com/appPlant/mruby-unicode-display_width.git
   repooptions: 
 - name: mruby-updategems
   description: Rake task to update GEMs
@@ -1296,9 +1611,9 @@
   description: When shared mrb_state, you can share userdata objects between one Ruby
     code and the other.
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-userdata
+  website: https://github.com/matsumotory/mruby-userdata
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-userdata.git
+  repository: https://github.com/matsumotory/mruby-userdata.git
   repooptions: 
 - name: mruby-uv
   description: libuv interface
@@ -1317,16 +1632,16 @@
 - name: mruby-vedis
   description: vedis binding
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-vedis
+  website: https://github.com/matsumotory/mruby-vedis
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-vedis.git
+  repository: https://github.com/matsumotory/mruby-vedis.git
   repooptions: 
 - name: mruby-virtualing
   description: creating jail environment, limitting resource and separating filesystem
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-virtualing
+  website: https://github.com/matsumotory/mruby-virtualing
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-virtualing.git
+  repository: https://github.com/matsumotory/mruby-virtualing.git
   repooptions: 
 - name: mruby-webkit-1
   description: Bindings to WebKitGTK-1.x. uses mruby-girffi
@@ -1373,16 +1688,16 @@
 - name: mruby-yaml
   description: YAML parser and emitter
   author: Andrew Belt
-  website: https://github.com/AndrewBelt/mruby-yaml
+  website: https://github.com/hone/mruby-yaml
   protocol: git
-  repository: https://github.com/AndrewBelt/mruby-yaml.git
+  repository: https://github.com/hone/mruby-yaml.git
   repooptions: 
 - name: mruby-zabbix
   description: zabbix 2.0 API client class
   author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumoto-r/mruby-zabbix
+  website: https://github.com/matsumotory/mruby-zabbix
   protocol: git
-  repository: https://github.com/matsumoto-r/mruby-zabbix.git
+  repository: https://github.com/matsumotory/mruby-zabbix.git
   repooptions: 
 - name: mruby-zlib
   description: ZLib bindings for MRuby
@@ -1390,4 +1705,11 @@
   website: https://github.com/jbreeden/mruby-zlib
   protocol: git
   repository: https://github.com/jbreeden/mruby-zlib.git
+  repooptions: 
+- name: mruby-zmq
+  description: mruby bindings for libzmq4
+  author: Hendrik Beskow
+  website: https://github.com/Asmod4n/mruby-zmq
+  protocol: git
+  repository: https://github.com/Asmod4n/mruby-zmq.git
   repooptions: 
