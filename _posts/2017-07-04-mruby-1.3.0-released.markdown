@@ -25,3 +25,82 @@ mruby 1.3.0 is released. Download [mruby 1.3.0][mruby-1.3.0-dl] now.
 [See the full diff](https://github.com/mruby/mruby/compare/1.2.0...1.3.0).
 
 [contributors]: https://github.com/mruby/mruby/graphs/contributors
+
+## What's new in mruby 1.3.0
+
+### The safe navigation operator (`&.`)
+
+mruby 1.3 now supports the safe navigation operator (`&.`) to help handle nil
+value returned from methods. This feature comes from Ruby 2.3.
+
+By using the safe navigation operator, you can simply write
+
+```
+account&.owner&.address
+```
+
+Instead of writing
+
+```
+account && account.owner && account.owner.address
+```
+
+Or (with ActiveSupport)
+
+```
+account.try(:owner).try(:address)
+```
+
+### `Array#dig`, `Hash#dig`
+
+`#dig` is a method to retrieve a value from JSON-like nested Array/Hash structures.
+
+This feature also comes from Ruby 2.3.
+
+For example:
+
+```
+params.dig(:account, :owner, :address)
+```
+
+Instead of
+
+```
+account = params[:account]
+owner = account[:owner]
+owner[:address]
+```
+
+### `Object#freeze`
+
+You can now "freeze" an object by using Object#freeze.
+
+Frozen objects cannot be modified.
+
+### `Kernel#caller`
+
+You can retrieve call frame information by using `Kernel#caller`.
+
+## Remaining Bugs
+
+After the code-freeze of 1.3 release, following issues are filed and fixed in the master branch.
+
+  * [#3711](https://github.com/mruby/mruby/issues/3711)
+  * [#3712](https://github.com/mruby/mruby/issues/3712)
+  * [#3714](https://github.com/mruby/mruby/issues/3714)
+  * [#3715](https://github.com/mruby/mruby/issues/3715)
+  * [#3716](https://github.com/mruby/mruby/issues/3716)
+  * [#3717](https://github.com/mruby/mruby/issues/3717)
+  * [#3719](https://github.com/mruby/mruby/issues/3719)
+  * [#3720](https://github.com/mruby/mruby/issues/3720)
+  * [#3721](https://github.com/mruby/mruby/issues/3721)
+  * [#3722](https://github.com/mruby/mruby/issues/3722)
+  * [#3723](https://github.com/mruby/mruby/issues/3723)
+  * [#3724](https://github.com/mruby/mruby/issues/3724)
+
+The following issues are not yet fixed as of 2017-07-04.
+
+  * [#2720](https://github.com/mruby/mruby/issues/2720)
+  * [#3629](https://github.com/mruby/mruby/issues/3629)
+  * [#3710](https://github.com/mruby/mruby/issues/3710)
+
