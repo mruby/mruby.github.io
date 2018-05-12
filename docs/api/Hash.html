@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: Hash
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.12
   
 </title>
 
@@ -17,9 +17,8 @@
   <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Hash";
   relpath = '';
-  framesUrl = "frames.html#!Hash.html";
 </script>
 
 
@@ -32,61 +31,48 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index (H)</a> &raquo;
     
     
     <span class="title">Hash</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="header_list_link"
-        href="header_list.html">
-      Header List
-    </a>
-  
-    <a class="full_list_link" id="function_list_link"
-        href="function_list.html">
-      Function List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
-
-    <div id="content"><h1>Class: Hash
+      <div id="content"><h1>Class: Hash
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
@@ -97,27 +83,32 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
-      <dt class="r2">Includes:</dt>
-      <dd class="r2"><span class='object_link'><a href="Enumerable.html" title="Enumerable (module)">Enumerable</a></span></dd>
-      
-    
+
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">mrblib/hash.rb<span class="defines">,<br />
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Enumerable.html" title="Enumerable (module)">Enumerable</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>mrblib/hash.rb<span class="defines">,<br />
   src/hash.c,<br /> mrblib/hash.rb,<br /> mrbgems/mruby-hash-ext/mrblib/hash.rb</span>
 </dd>
+  </dl>
   
-</dl>
-<div class="clear"></div>
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -134,9 +125,6 @@
 </div>
 
 
-  <h2>Constant Summary</h2>
-  
-
 
 
   <h2>Constant Summary</h2>
@@ -152,7 +140,7 @@
   
     <h2>
       Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -160,7 +148,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-class_method" title="[] (class method)">+ (Object) <strong>[]</strong>(*object) </a>
+      <a href="#[]-class_method" title="[] (class method)">.<strong>[]</strong>(*object)  &#x21d2; Object </a>
     
 
     
@@ -174,7 +162,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:     Hash[ key, value, ... ] -&gt; new_hash     Hash[ [ [key, value], ... ] ] -&gt; new_hash     Hash[ object ] -&gt; new_hash.</p>
+    <span class="summary_desc"><div class='inline'><p>call-seq:     Hash[ key, value, … ] -&gt; new_hash     Hash[ [ [key, value], … ] ] -&gt; new_hash     Hash[ object ] -&gt; new_hash.</p>
 </div></span>
   
 </li>
@@ -183,7 +171,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#try_convert-class_method" title="try_convert (class method)">+ (Object) <strong>try_convert</strong>(obj) </a>
+      <a href="#try_convert-class_method" title="try_convert (class method)">.<strong>try_convert</strong>(obj)  &#x21d2; Object </a>
     
 
     
@@ -207,7 +195,7 @@
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -215,7 +203,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C-instance_method" title="#&lt; (instance method)">- (Object) <strong>&lt;</strong>(hash) </a>
+      <a href="#<-instance_method" title="#&lt; (instance method)">#<strong>&lt;</strong>(hash)  &#x21d2; Object </a>
     
 
     
@@ -229,7 +217,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:    hash  true or false.</p>
+    <span class="summary_desc"><div class='inline'><p>call-seq:    hash &lt; other -&gt; true or false.</p>
 </div></span>
   
 </li>
@@ -238,7 +226,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3D-instance_method" title="#&lt;= (instance method)">- (Object) <strong>&lt;=</strong>(hash) </a>
+      <a href="#<=-instance_method" title="#&lt;= (instance method)">#<strong>&lt;=</strong>(hash)  &#x21d2; Object </a>
     
 
     
@@ -252,7 +240,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:    hash  true or false.</p>
+    <span class="summary_desc"><div class='inline'><p>call-seq:    hash &lt;= other -&gt; true or false.</p>
 </div></span>
   
 </li>
@@ -261,7 +249,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Object) <strong>==</strong>(hash) </a>
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(hash)  &#x21d2; Object </a>
     
 
     
@@ -275,7 +263,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Equality---Two hashes are equal if they each contain the same number  of keys and if each key-value pair is equal to (according to  Object#==) the corresponding elements in the other  hash.</p>
+    <span class="summary_desc"><div class='inline'><p>Equality—Two hashes are equal if they each contain the same number  of keys and if each key-value pair is equal to (according to  <code>Object#==</code>) the corresponding elements in the other  hash.</p>
 </div></span>
   
 </li>
@@ -284,7 +272,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3E-instance_method" title="#&gt; (instance method)">- (Object) <strong>&gt;</strong>(hash) </a>
+      <a href="#>-instance_method" title="#&gt; (instance method)">#<strong>&gt;</strong>(hash)  &#x21d2; Object </a>
     
 
     
@@ -307,7 +295,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3E%3D-instance_method" title="#&gt;= (instance method)">- (Object) <strong>&gt;=</strong>(hash) </a>
+      <a href="#>=-instance_method" title="#&gt;= (instance method)">#<strong>&gt;=</strong>(hash)  &#x21d2; Object </a>
     
 
     
@@ -330,7 +318,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Object) <strong>[]</strong>(key) </a>
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
     
 
     
@@ -344,7 +332,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Element Reference---Retrieves the value object corresponding to the key object.</p>
+    <span class="summary_desc"><div class='inline'><p>Element Reference—Retrieves the <i>value</i> object corresponding to the <i>key</i> object.</p>
 </div></span>
   
 </li>
@@ -353,7 +341,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong> </a>
+      <a href="#[]=-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>  &#x21d2; Object </a>
     
 
     
@@ -367,7 +355,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Element Assignment---Associates the value given by value with the key given by key.</p>
+    <span class="summary_desc"><div class='inline'><p>Element Assignment—Associates the value given by <i>value</i> with the key given by <i>key</i>.</p>
 </div></span>
   
 </li>
@@ -376,7 +364,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#__delete-instance_method" title="#__delete (instance method)">- (Object) <strong>__delete</strong> </a>
+      <a href="#__delete-instance_method" title="#__delete (instance method)">#<strong>__delete</strong>  &#x21d2; Object </a>
     
 
     
@@ -390,7 +378,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Deletes and returns a key-value pair from hsh whose key is equal to key.</p>
+    <span class="summary_desc"><div class='inline'><p>Deletes and returns a key-value pair from <i>hsh</i> whose key is equal to <i>key</i>.</p>
 </div></span>
   
 </li>
@@ -399,7 +387,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#__update-instance_method" title="#__update (instance method)">- (Object) <strong>__update</strong>(h) </a>
+      <a href="#__update-instance_method" title="#__update (instance method)">#<strong>__update</strong>(h)  &#x21d2; Object </a>
     
 
     
@@ -413,7 +401,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -421,7 +410,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#_inspect-instance_method" title="#_inspect (instance method)">- (Object) <strong>_inspect</strong> </a>
+      <a href="#_inspect-instance_method" title="#_inspect (instance method)">#<strong>_inspect</strong>  &#x21d2; Object </a>
     
 
     
@@ -444,7 +433,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#clear-instance_method" title="#clear (instance method)">- (Hash) <strong>clear</strong> </a>
+      <a href="#clear-instance_method" title="#clear (instance method)">#<strong>clear</strong>  &#x21d2; Hash </a>
     
 
     
@@ -467,7 +456,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default-instance_method" title="#default (instance method)">- (Object) <strong>default</strong>(key = nil) </a>
+      <a href="#compact-instance_method" title="#compact (instance method)">#<strong>compact</strong>  &#x21d2; Object </a>
     
 
     
@@ -481,7 +470,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the default value, the value that would be returned by hsh[key] if key did not exist in hsh.</p>
+    <span class="summary_desc"><div class='inline'><p>call-seq:    hsh.compact     -&gt; new_hsh.</p>
 </div></span>
   
 </li>
@@ -490,7 +479,53 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default%3D-instance_method" title="#default= (instance method)">- (Object) <strong>default=</strong>(obj) </a>
+      <a href="#compact!-instance_method" title="#compact! (instance method)">#<strong>compact!</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Removes all nil values from the hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default-instance_method" title="#default (instance method)">#<strong>default</strong>(key = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the default value, the value that would be returned by <i>hsh</i>[<i>key</i>] if <i>key</i> did not exist in <i>hsh</i>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default=-instance_method" title="#default= (instance method)">#<strong>default=</strong>(obj)  &#x21d2; Object </a>
     
 
     
@@ -513,7 +548,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_proc-instance_method" title="#default_proc (instance method)">- (Object) <strong>default_proc</strong> </a>
+      <a href="#default_proc-instance_method" title="#default_proc (instance method)">#<strong>default_proc</strong>  &#x21d2; Object </a>
     
 
     
@@ -527,7 +562,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>If Hash::new was invoked with a block, return that block, otherwise return nil.</p>
+    <span class="summary_desc"><div class='inline'><p>If <code>Hash::new</code> was invoked with a block, return that block, otherwise return <code>nil</code>.</p>
 </div></span>
   
 </li>
@@ -536,7 +571,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_proc%3D-instance_method" title="#default_proc= (instance method)">- (Proc) <strong>default_proc=</strong>(proc_obj) </a>
+      <a href="#default_proc=-instance_method" title="#default_proc= (instance method)">#<strong>default_proc=</strong>(proc_obj)  &#x21d2; Proc </a>
     
 
     
@@ -559,7 +594,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete-instance_method" title="#delete (instance method)">- (Object) <strong>delete</strong>(key, &amp;block) </a>
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(key, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -582,7 +617,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete_if-instance_method" title="#delete_if (instance method)">- (Object) <strong>delete_if</strong>(&amp;block) </a>
+      <a href="#delete_if-instance_method" title="#delete_if (instance method)">#<strong>delete_if</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -596,7 +631,15 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:     hsh.delete_if {| key, value | block }  -&gt; hsh     hsh.delete_if                          -&gt; an_enumerator.</p>
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:     hsh.delete_if {</td>
+      <td>key, value</td>
+      <td>block }  -&gt; hsh     hsh.delete_if                          -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
 </div></span>
   
 </li>
@@ -605,7 +648,30 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#dup-instance_method" title="#dup (instance method)">- (Object) <strong>dup</strong> </a>
+      <a href="#dig-instance_method" title="#dig (instance method)">#<strong>dig</strong>(idx, *args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:   hsh.dig(key,…)                 -&gt; object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dup-instance_method" title="#dup (instance method)">#<strong>dup</strong>  &#x21d2; Object </a>
     
 
     
@@ -628,7 +694,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong>(&amp;block) </a>
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -653,7 +719,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_key-instance_method" title="#each_key (instance method)">- (Object) <strong>each_key</strong>(&amp;block) </a>
+      <a href="#each_key-instance_method" title="#each_key (instance method)">#<strong>each_key</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -676,7 +742,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_value-instance_method" title="#each_value (instance method)">- (Object) <strong>each_value</strong>(&amp;block) </a>
+      <a href="#each_value-instance_method" title="#each_value (instance method)">#<strong>each_value</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -699,7 +765,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#empty%3F-instance_method" title="#empty? (instance method)">- (Boolean) <strong>empty?</strong> </a>
+      <a href="#empty%3F-instance_method" title="#empty? (instance method)">#<strong>empty?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -713,7 +779,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if hsh contains no key-value pairs.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns <code>true</code> if <i>hsh</i> contains no key-value pairs.</p>
 </div></span>
   
 </li>
@@ -722,7 +788,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#eql%3F-instance_method" title="#eql? (instance method)">- (Boolean) <strong>eql?</strong>(hash) </a>
+      <a href="#eql%3F-instance_method" title="#eql? (instance method)">#<strong>eql?</strong>(hash)  &#x21d2; Boolean </a>
     
 
     
@@ -736,7 +802,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if hash and other are both hashes with the same content compared by eql?.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns <code>true</code> if <i>hash</i> and <i>other</i> are both hashes with the same content compared by eql?.</p>
 </div></span>
   
 </li>
@@ -745,7 +811,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch-instance_method" title="#fetch (instance method)">- (Object) <strong>fetch</strong>(key, none = NONE, &amp;block) </a>
+      <a href="#fetch-instance_method" title="#fetch (instance method)">#<strong>fetch</strong>(key, none = NONE, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -759,7 +825,15 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:     hsh.fetch(key [, default] )       -&gt; obj     hsh.fetch(key) {| key | block }   -&gt; obj.</p>
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:     hsh.fetch(key [, default] )       -&gt; obj     hsh.fetch(key) {</td>
+      <td>key</td>
+      <td>block }   -&gt; obj.</td>
+    </tr>
+  </tbody>
+</table>
 </div></span>
   
 </li>
@@ -768,7 +842,38 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#flatten-instance_method" title="#flatten (instance method)">- (Object) <strong>flatten</strong>(level = 1) </a>
+      <a href="#fetch_values-instance_method" title="#fetch_values (instance method)">#<strong>fetch_values</strong>(*keys, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:   hsh.fetch_values(key, …)                 -&gt; array   hsh.fetch_values(key, …) {</td>
+      <td>key</td>
+      <td>block } -&gt; array.</td>
+    </tr>
+  </tbody>
+</table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flatten-instance_method" title="#flatten (instance method)">#<strong>flatten</strong>(level = 1)  &#x21d2; Object </a>
     
 
     
@@ -791,7 +896,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#has_key%3F-instance_method" title="#has_key? (instance method)">- (Boolean) <strong>has_key?</strong> </a>
+      <a href="#has_key%3F-instance_method" title="#has_key? (instance method)">#<strong>has_key?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -805,7 +910,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if the given key is present in hsh.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns <code>true</code> if the given key is present in <i>hsh</i>.</p>
 </div></span>
   
 </li>
@@ -814,7 +919,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#has_value%3F-instance_method" title="#has_value? (instance method)">- (Boolean) <strong>has_value?</strong> </a>
+      <a href="#has_value%3F-instance_method" title="#has_value? (instance method)">#<strong>has_value?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -828,7 +933,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if the given value is present for some key in hsh.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns <code>true</code> if the given value is present for some key in <i>hsh</i>.</p>
 </div></span>
   
 </li>
@@ -837,7 +942,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#include%3F-instance_method" title="#include? (instance method)">- (Boolean) <strong>include?</strong> </a>
+      <a href="#include%3F-instance_method" title="#include? (instance method)">#<strong>include?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -851,7 +956,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if the given key is present in hsh.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns <code>true</code> if the given key is present in <i>hsh</i>.</p>
 </div></span>
   
 </li>
@@ -860,7 +965,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Object) <strong>initialize</strong> </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; Object </a>
     
 
     
@@ -885,7 +990,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#inspect-instance_method" title="#inspect (instance method)">- (Object) <strong>inspect</strong> </a>
+      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong>  &#x21d2; Object </a>
     
 
     
@@ -910,7 +1015,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#invert-instance_method" title="#invert (instance method)">- (Object) <strong>invert</strong> </a>
+      <a href="#invert-instance_method" title="#invert (instance method)">#<strong>invert</strong>  &#x21d2; Object </a>
     
 
     
@@ -933,7 +1038,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#keep_if-instance_method" title="#keep_if (instance method)">- (Object) <strong>keep_if</strong>(&amp;block) </a>
+      <a href="#keep_if-instance_method" title="#keep_if (instance method)">#<strong>keep_if</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -947,7 +1052,15 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:     hsh.keep_if {| key, value | block }  -&gt; hsh     hsh.keep_if                          -&gt; an_enumerator.</p>
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:     hsh.keep_if {</td>
+      <td>key, value</td>
+      <td>block }  -&gt; hsh     hsh.keep_if                          -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
 </div></span>
   
 </li>
@@ -956,7 +1069,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#key-instance_method" title="#key (instance method)">- (Object) <strong>key</strong>(val) </a>
+      <a href="#key-instance_method" title="#key (instance method)">#<strong>key</strong>(val)  &#x21d2; Object </a>
     
 
     
@@ -979,7 +1092,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#key%3F-instance_method" title="#key? (instance method)">- (Boolean) <strong>key?</strong> </a>
+      <a href="#key%3F-instance_method" title="#key? (instance method)">#<strong>key?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -993,7 +1106,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if the given key is present in hsh.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns <code>true</code> if the given key is present in <i>hsh</i>.</p>
 </div></span>
   
 </li>
@@ -1002,7 +1115,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#keys-instance_method" title="#keys (instance method)">- (Array) <strong>keys</strong> </a>
+      <a href="#keys-instance_method" title="#keys (instance method)">#<strong>keys</strong>  &#x21d2; Array </a>
     
 
     
@@ -1025,7 +1138,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#length-instance_method" title="#length (instance method)">- (Object) <strong>length</strong> </a>
+      <a href="#length-instance_method" title="#length (instance method)">#<strong>length</strong>  &#x21d2; Object </a>
     
 
     
@@ -1048,7 +1161,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#member%3F-instance_method" title="#member? (instance method)">- (Boolean) <strong>member?</strong> </a>
+      <a href="#member%3F-instance_method" title="#member? (instance method)">#<strong>member?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -1062,7 +1175,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if the given key is present in hsh.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns <code>true</code> if the given key is present in <i>hsh</i>.</p>
 </div></span>
   
 </li>
@@ -1071,7 +1184,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#merge-instance_method" title="#merge (instance method)">- (Object) <strong>merge</strong>(other, &amp;block) </a>
+      <a href="#merge-instance_method" title="#merge (instance method)">#<strong>merge</strong>(other, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -1094,7 +1207,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#merge%21-instance_method" title="#merge! (instance method)">- (Object) <strong>merge!</strong>(other, &amp;block) </a>
+      <a href="#merge!-instance_method" title="#merge! (instance method)">#<strong>merge!</strong>(other, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -1110,7 +1223,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:     hsh.merge!(other_hash)                                 -&gt; hsh     hsh.merge!(other_hash){|key, oldval, newval| block}    -&gt; hsh.</p>
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:     hsh.merge!(other_hash)                                 -&gt; hsh     hsh.merge!(other_hash)      <td>key, oldval, newval</td>
+      <td>block    -&gt; hsh.</td>
+    </tr>
+  </tbody>
+</table>
 </div></span>
   
 </li>
@@ -1119,7 +1239,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rehash-instance_method" title="#rehash (instance method)">- (Object) <strong>rehash</strong> </a>
+      <a href="#rehash-instance_method" title="#rehash (instance method)">#<strong>rehash</strong>  &#x21d2; Object </a>
     
 
     
@@ -1142,7 +1262,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reject-instance_method" title="#reject (instance method)">- (Object) <strong>reject</strong>(&amp;b) </a>
+      <a href="#reject-instance_method" title="#reject (instance method)">#<strong>reject</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -1156,7 +1276,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:     hsh.reject {|key, value| block}   -&gt; a_hash     hsh.reject                        -&gt; an_enumerator.</p>
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:     hsh.reject       <td>key, value</td>
+      <td>block   -&gt; a_hash     hsh.reject                        -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
 </div></span>
   
 </li>
@@ -1165,7 +1292,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reject%21-instance_method" title="#reject! (instance method)">- (Object) <strong>reject!</strong>(&amp;b) </a>
+      <a href="#reject!-instance_method" title="#reject! (instance method)">#<strong>reject!</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -1179,7 +1306,15 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:     hsh.reject! {| key, value | block }  -&gt; hsh or nil     hsh.reject!                          -&gt; an_enumerator.</p>
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:     hsh.reject! {</td>
+      <td>key, value</td>
+      <td>block }  -&gt; hsh or nil     hsh.reject!                          -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
 </div></span>
   
 </li>
@@ -1188,7 +1323,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#replace-instance_method" title="#replace (instance method)">- (Object) <strong>replace</strong>(hash) </a>
+      <a href="#replace-instance_method" title="#replace (instance method)">#<strong>replace</strong>(hash)  &#x21d2; Object </a>
     
 
     
@@ -1204,7 +1339,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Replaces the contents of hsh with the contents of other hash.</p>
+    <span class="summary_desc"><div class='inline'><p>Replaces the contents of <i>hsh</i> with the contents of other hash.</p>
 </div></span>
   
 </li>
@@ -1213,7 +1348,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#select-instance_method" title="#select (instance method)">- (Object) <strong>select</strong>(&amp;b) </a>
+      <a href="#select-instance_method" title="#select (instance method)">#<strong>select</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -1227,7 +1362,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:     hsh.select {|key, value| block}   -&gt; a_hash     hsh.select                        -&gt; an_enumerator.</p>
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:     hsh.select       <td>key, value</td>
+      <td>block   -&gt; a_hash     hsh.select                        -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
 </div></span>
   
 </li>
@@ -1236,7 +1378,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#select%21-instance_method" title="#select! (instance method)">- (Object) <strong>select!</strong>(&amp;b) </a>
+      <a href="#select!-instance_method" title="#select! (instance method)">#<strong>select!</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -1250,7 +1392,15 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:     hsh.select! {| key, value | block }  -&gt; hsh or nil     hsh.select!                          -&gt; an_enumerator.</p>
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:     hsh.select! {</td>
+      <td>key, value</td>
+      <td>block }  -&gt; hsh or nil     hsh.select!                          -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
 </div></span>
   
 </li>
@@ -1259,7 +1409,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#shift-instance_method" title="#shift (instance method)">- (Array, Object) <strong>shift</strong> </a>
+      <a href="#shift-instance_method" title="#shift (instance method)">#<strong>shift</strong>  &#x21d2; Array, Object </a>
     
 
     
@@ -1273,7 +1423,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Removes a key-value pair from hsh and returns it as the two-item array [ key, value ], or the hash&#39;s default value if the hash is empty.</p>
+    <span class="summary_desc"><div class='inline'><p>Removes a key-value pair from <i>hsh</i> and returns it as the two-item array <code>[</code> <i>key, value</i> <code>]</code>, or the hash’s default value if the hash is empty.</p>
 </div></span>
   
 </li>
@@ -1282,7 +1432,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#size-instance_method" title="#size (instance method)">- (Object) <strong>size</strong> </a>
+      <a href="#size-instance_method" title="#size (instance method)">#<strong>size</strong>  &#x21d2; Object </a>
     
 
     
@@ -1305,7 +1455,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#store-instance_method" title="#store (instance method)">- (Object) <strong>store</strong> </a>
+      <a href="#slice-instance_method" title="#slice (instance method)">#<strong>slice</strong>(*keys)  &#x21d2; Hash </a>
     
 
     
@@ -1319,7 +1469,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Element Assignment---Associates the value given by value with the key given by key.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a hash containing only the given keys and their values.</p>
 </div></span>
   
 </li>
@@ -1328,7 +1478,30 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_h-instance_method" title="#to_h (instance method)">- (Object) <strong>to_h</strong> </a>
+      <a href="#store-instance_method" title="#store (instance method)">#<strong>store</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Element Assignment—Associates the value given by <i>value</i> with the key given by <i>key</i>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_h-instance_method" title="#to_h (instance method)">#<strong>to_h</strong>  &#x21d2; Object </a>
     
 
     
@@ -1351,7 +1524,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_hash-instance_method" title="#to_hash (instance method)">- (Hash) <strong>to_hash</strong> </a>
+      <a href="#to_hash-instance_method" title="#to_hash (instance method)">#<strong>to_hash</strong>  &#x21d2; Hash </a>
     
 
     
@@ -1374,7 +1547,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#value%3F-instance_method" title="#value? (instance method)">- (Boolean) <strong>value?</strong> </a>
+      <a href="#to_proc-instance_method" title="#to_proc (instance method)">#<strong>to_proc</strong>  &#x21d2; Object </a>
     
 
     
@@ -1388,7 +1561,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if the given value is present for some key in hsh.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -1397,7 +1570,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#values-instance_method" title="#values (instance method)">- (Array) <strong>values</strong> </a>
+      <a href="#transform_keys-instance_method" title="#transform_keys (instance method)">#<strong>transform_keys</strong>(&amp;block)  &#x21d2; Object </a>
     
 
     
@@ -1411,7 +1584,15 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a new array populated with the values from hsh.</p>
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:    hsh.transform_keys {</td>
+      <td>key</td>
+      <td>block } -&gt; new_hash    hsh.transform_keys                -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
 </div></span>
   
 </li>
@@ -1420,7 +1601,146 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#values_at-instance_method" title="#values_at (instance method)">- (Array) <strong>values_at</strong>(key, ...) </a>
+      <a href="#transform_keys!-instance_method" title="#transform_keys! (instance method)">#<strong>transform_keys!</strong>(&amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:    hsh.transform_keys! {</td>
+      <td>key</td>
+      <td>block } -&gt; hsh    hsh.transform_keys!                -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transform_values-instance_method" title="#transform_values (instance method)">#<strong>transform_values</strong>(&amp;b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:    hsh.transform_values {</td>
+      <td>value</td>
+      <td>block } -&gt; new_hash    hsh.transform_values                  -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transform_values!-instance_method" title="#transform_values! (instance method)">#<strong>transform_values!</strong>(&amp;b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:    hsh.transform_values! {</td>
+      <td>key</td>
+      <td>block } -&gt; hsh    hsh.transform_values!                -&gt; an_enumerator.</td>
+    </tr>
+  </tbody>
+</table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#value%3F-instance_method" title="#value? (instance method)">#<strong>value?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns <code>true</code> if the given value is present for some key in <i>hsh</i>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#values-instance_method" title="#values (instance method)">#<strong>values</strong>  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a new array populated with the values from <i>hsh</i>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#values_at-instance_method" title="#values_at (instance method)">#<strong>values_at</strong>(key, ...)  &#x21d2; Array </a>
     
 
     
@@ -1453,7 +1773,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Enumerable.html" title="Enumerable (module)">Enumerable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Enumerable.html#__sort_sub__-instance_method" title="Enumerable#__sort_sub__ (method)">#__sort_sub__</a></span>, <span class='object_link'><a href="Enumerable.html#all%3F-instance_method" title="Enumerable#all? (method)">#all?</a></span>, <span class='object_link'><a href="Enumerable.html#any%3F-instance_method" title="Enumerable#any? (method)">#any?</a></span>, <span class='object_link'><a href="Enumerable.html#collect-instance_method" title="Enumerable#collect (method)">#collect</a></span>, <span class='object_link'><a href="Enumerable.html#count-instance_method" title="Enumerable#count (method)">#count</a></span>, <span class='object_link'><a href="Enumerable.html#cycle-instance_method" title="Enumerable#cycle (method)">#cycle</a></span>, <span class='object_link'><a href="Enumerable.html#detect-instance_method" title="Enumerable#detect (method)">#detect</a></span>, <span class='object_link'><a href="Enumerable.html#drop-instance_method" title="Enumerable#drop (method)">#drop</a></span>, <span class='object_link'><a href="Enumerable.html#drop_while-instance_method" title="Enumerable#drop_while (method)">#drop_while</a></span>, <span class='object_link'><a href="Enumerable.html#each_cons-instance_method" title="Enumerable#each_cons (method)">#each_cons</a></span>, <span class='object_link'><a href="Enumerable.html#each_slice-instance_method" title="Enumerable#each_slice (method)">#each_slice</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_index-instance_method" title="Enumerable#each_with_index (method)">#each_with_index</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_object-instance_method" title="Enumerable#each_with_object (method)">#each_with_object</a></span>, <span class='object_link'><a href="Enumerable.html#entries-instance_method" title="Enumerable#entries (method)">#entries</a></span>, <span class='object_link'><a href="Enumerable.html#find_all-instance_method" title="Enumerable#find_all (method)">#find_all</a></span>, <span class='object_link'><a href="Enumerable.html#find_index-instance_method" title="Enumerable#find_index (method)">#find_index</a></span>, <span class='object_link'><a href="Enumerable.html#first-instance_method" title="Enumerable#first (method)">#first</a></span>, <span class='object_link'><a href="Enumerable.html#flat_map-instance_method" title="Enumerable#flat_map (method)">#flat_map</a></span>, <span class='object_link'><a href="Enumerable.html#grep-instance_method" title="Enumerable#grep (method)">#grep</a></span>, <span class='object_link'><a href="Enumerable.html#group_by-instance_method" title="Enumerable#group_by (method)">#group_by</a></span>, <span class='object_link'><a href="Enumerable.html#hash-instance_method" title="Enumerable#hash (method)">#hash</a></span>, <span class='object_link'><a href="Enumerable.html#inject-instance_method" title="Enumerable#inject (method)">#inject</a></span>, <span class='object_link'><a href="Enumerable.html#lazy-instance_method" title="Enumerable#lazy (method)">#lazy</a></span>, <span class='object_link'><a href="Enumerable.html#max-instance_method" title="Enumerable#max (method)">#max</a></span>, <span class='object_link'><a href="Enumerable.html#max_by-instance_method" title="Enumerable#max_by (method)">#max_by</a></span>, <span class='object_link'><a href="Enumerable.html#min-instance_method" title="Enumerable#min (method)">#min</a></span>, <span class='object_link'><a href="Enumerable.html#min_by-instance_method" title="Enumerable#min_by (method)">#min_by</a></span>, <span class='object_link'><a href="Enumerable.html#minmax-instance_method" title="Enumerable#minmax (method)">#minmax</a></span>, <span class='object_link'><a href="Enumerable.html#minmax_by-instance_method" title="Enumerable#minmax_by (method)">#minmax_by</a></span>, <span class='object_link'><a href="Enumerable.html#none%3F-instance_method" title="Enumerable#none? (method)">#none?</a></span>, <span class='object_link'><a href="Enumerable.html#one%3F-instance_method" title="Enumerable#one? (method)">#one?</a></span>, <span class='object_link'><a href="Enumerable.html#partition-instance_method" title="Enumerable#partition (method)">#partition</a></span>, <span class='object_link'><a href="Enumerable.html#reverse_each-instance_method" title="Enumerable#reverse_each (method)">#reverse_each</a></span>, <span class='object_link'><a href="Enumerable.html#sort-instance_method" title="Enumerable#sort (method)">#sort</a></span>, <span class='object_link'><a href="Enumerable.html#sort_by-instance_method" title="Enumerable#sort_by (method)">#sort_by</a></span>, <span class='object_link'><a href="Enumerable.html#take-instance_method" title="Enumerable#take (method)">#take</a></span>, <span class='object_link'><a href="Enumerable.html#take_while-instance_method" title="Enumerable#take_while (method)">#take_while</a></span>, <span class='object_link'><a href="Enumerable.html#to_h-class_method" title="Enumerable.to_h (method)">to_h</a></span>, <span class='object_link'><a href="Enumerable.html#zip-instance_method" title="Enumerable#zip (method)">#zip</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Enumerable.html#all%3F-instance_method" title="Enumerable#all? (method)">#all?</a></span>, <span class='object_link'><a href="Enumerable.html#any%3F-instance_method" title="Enumerable#any? (method)">#any?</a></span>, <span class='object_link'><a href="Enumerable.html#collect-instance_method" title="Enumerable#collect (method)">#collect</a></span>, <span class='object_link'><a href="Enumerable.html#count-instance_method" title="Enumerable#count (method)">#count</a></span>, <span class='object_link'><a href="Enumerable.html#cycle-instance_method" title="Enumerable#cycle (method)">#cycle</a></span>, <span class='object_link'><a href="Enumerable.html#detect-instance_method" title="Enumerable#detect (method)">#detect</a></span>, <span class='object_link'><a href="Enumerable.html#drop-instance_method" title="Enumerable#drop (method)">#drop</a></span>, <span class='object_link'><a href="Enumerable.html#drop_while-instance_method" title="Enumerable#drop_while (method)">#drop_while</a></span>, <span class='object_link'><a href="Enumerable.html#each_cons-instance_method" title="Enumerable#each_cons (method)">#each_cons</a></span>, <span class='object_link'><a href="Enumerable.html#each_slice-instance_method" title="Enumerable#each_slice (method)">#each_slice</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_index-instance_method" title="Enumerable#each_with_index (method)">#each_with_index</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_object-instance_method" title="Enumerable#each_with_object (method)">#each_with_object</a></span>, <span class='object_link'><a href="Enumerable.html#entries-instance_method" title="Enumerable#entries (method)">#entries</a></span>, <span class='object_link'><a href="Enumerable.html#find_all-instance_method" title="Enumerable#find_all (method)">#find_all</a></span>, <span class='object_link'><a href="Enumerable.html#find_index-instance_method" title="Enumerable#find_index (method)">#find_index</a></span>, <span class='object_link'><a href="Enumerable.html#first-instance_method" title="Enumerable#first (method)">#first</a></span>, <span class='object_link'><a href="Enumerable.html#flat_map-instance_method" title="Enumerable#flat_map (method)">#flat_map</a></span>, <span class='object_link'><a href="Enumerable.html#grep-instance_method" title="Enumerable#grep (method)">#grep</a></span>, <span class='object_link'><a href="Enumerable.html#group_by-instance_method" title="Enumerable#group_by (method)">#group_by</a></span>, <span class='object_link'><a href="Enumerable.html#hash-instance_method" title="Enumerable#hash (method)">#hash</a></span>, <span class='object_link'><a href="Enumerable.html#inject-instance_method" title="Enumerable#inject (method)">#inject</a></span>, <span class='object_link'><a href="Enumerable.html#lazy-instance_method" title="Enumerable#lazy (method)">#lazy</a></span>, <span class='object_link'><a href="Enumerable.html#max-instance_method" title="Enumerable#max (method)">#max</a></span>, <span class='object_link'><a href="Enumerable.html#max_by-instance_method" title="Enumerable#max_by (method)">#max_by</a></span>, <span class='object_link'><a href="Enumerable.html#min-instance_method" title="Enumerable#min (method)">#min</a></span>, <span class='object_link'><a href="Enumerable.html#min_by-instance_method" title="Enumerable#min_by (method)">#min_by</a></span>, <span class='object_link'><a href="Enumerable.html#minmax-instance_method" title="Enumerable#minmax (method)">#minmax</a></span>, <span class='object_link'><a href="Enumerable.html#minmax_by-instance_method" title="Enumerable#minmax_by (method)">#minmax_by</a></span>, <span class='object_link'><a href="Enumerable.html#none%3F-instance_method" title="Enumerable#none? (method)">#none?</a></span>, <span class='object_link'><a href="Enumerable.html#one%3F-instance_method" title="Enumerable#one? (method)">#one?</a></span>, <span class='object_link'><a href="Enumerable.html#partition-instance_method" title="Enumerable#partition (method)">#partition</a></span>, <span class='object_link'><a href="Enumerable.html#reverse_each-instance_method" title="Enumerable#reverse_each (method)">#reverse_each</a></span>, <span class='object_link'><a href="Enumerable.html#sort-instance_method" title="Enumerable#sort (method)">#sort</a></span>, <span class='object_link'><a href="Enumerable.html#sort_by-instance_method" title="Enumerable#sort_by (method)">#sort_by</a></span>, <span class='object_link'><a href="Enumerable.html#take-instance_method" title="Enumerable#take (method)">#take</a></span>, <span class='object_link'><a href="Enumerable.html#take_while-instance_method" title="Enumerable#take_while (method)">#take_while</a></span>, <span class='object_link'><a href="Enumerable.html#to_h-class_method" title="Enumerable.to_h (method)">to_h</a></span>, <span class='object_link'><a href="Enumerable.html#uniq-instance_method" title="Enumerable#uniq (method)">#uniq</a></span>, <span class='object_link'><a href="Enumerable.html#zip-instance_method" title="Enumerable#zip (method)">#zip</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -1461,11 +1781,11 @@
   <h3 class="signature first" id="initialize-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>new</strong> </span>
+      <span class="overload">#<strong>new</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>new</strong>(obj) </span>
+      <span class="overload">#<strong>new</strong>(obj)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>new</strong> {|hash, key| ... }</span>
+      <span class="overload">#<strong>new</strong> {|hash, key| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
     
   
 
@@ -1475,13 +1795,13 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns a new, empty hash. If this hash is subsequently accessed by
-a key that doesn&#39;t correspond to a hash entry, the value returned
+a key that doesn’t correspond to a hash entry, the value returned
 depends on the style of <code>new</code> used to create the hash. In
 the first form, the access returns <code>nil</code>. If
 <i>obj</i> is specified, this single object will be used for
 all <em>default values</em>. If a block is specified, it will be
 called with the hash object and the key, and should return the
-default value. It is the block&#39;s responsibility to store the value
+default value. It is the block’s responsibility to store the value
 in the hash if required.</p>
 
 <pre class="code"><code class="">h = <span style="color:#036;font-weight:bold">Hash</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Go Fish</span><span style="color:#710">&quot;</span></span>)
@@ -1514,10 +1834,11 @@ h.keys           <span style="color:#777">#=&gt; [&quot;c&quot;, &quot;d&quot;]<
       
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>new</strong> {|hash, key| ... }</span>
+        <span class="signature">#<strong>new</strong> {|hash, key| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -1529,7 +1850,7 @@ h.keys           <span style="color:#777">#=&gt; [&quot;c&quot;, &quot;d&quot;]<
     <li>
       
       
-        <span class='type'>(<tt>hash</tt>, <tt>key</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Enumerable.html#hash-instance_method" title="Enumerable#hash (method)">hash</a></span></tt>, <tt><span class='object_link'><a href="#key-instance_method" title="Hash#key (method)">key</a></span></tt>)</span>
       
       
       
@@ -1553,28 +1874,31 @@ h.keys           <span style="color:#777">#=&gt; [&quot;c&quot;, &quot;d&quot;]<
       <pre class="lines">
 
 
-310
-311
-312
-313
-314
-315
-316
-317
-318
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328</pre>
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 310</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 330</span>
 
 static mrb_value
 mrb_hash_init(mrb_state *mrb, mrb_value hash)
@@ -1592,7 +1916,10 @@ mrb_hash_init(mrb_state *mrb, mrb_value hash)
     RHASH(hash)-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_HASH_PROC_DEFAULT</span>;
     ifnone = block;
   }
-  mrb_iv_set(mrb, hash, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ifnone</span><span style="color:#710">&quot;</span></span>), ifnone);
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_nil_p(ifnone)) {
+    RHASH(hash)-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_HASH_DEFAULT</span>;
+    mrb_iv_set(mrb, hash, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ifnone</span><span style="color:#710">&quot;</span></span>), ifnone);
+  }
   <span style="color:#080;font-weight:bold">return</span> hash;
 }</pre>
     </td>
@@ -1610,7 +1937,7 @@ mrb_hash_init(mrb_state *mrb, mrb_value hash)
       <div class="method_details first">
   <h3 class="signature first" id="[]-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>[]</strong>(*object) 
+    .<strong>[]</strong>(*object)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -1619,8 +1946,8 @@ mrb_hash_init(mrb_state *mrb, mrb_value hash)
 </h3><div class="docstring">
   <div class="discussion">
     <p>call-seq:
-    Hash[ key, value, ... ] -&gt; new_hash
-    Hash[ [ [key, value], ... ] ] -&gt; new_hash
+    Hash[ key, value, … ] -&gt; new_hash
+    Hash[ [ [key, value], … ] ] -&gt; new_hash
     Hash[ object ] -&gt; new_hash</p>
 
 <p>Creates a new hash populated with the given objects.</p>
@@ -1696,11 +2023,11 @@ of key-value pairs or an object convertible to a hash.</p>
   <span style="color:#080;font-weight:bold">if</span> length == <span style="color:#00D">1</span>
     o = object[<span style="color:#00D">0</span>]
     <span style="color:#080;font-weight:bold">if</span> o.respond_to?(<span style="color:#A60">:to_hash</span>)
-      h = <span style="color:#036;font-weight:bold">Hash</span>.new
+      h = <span style="color:#069">self</span>.new
       object[<span style="color:#00D">0</span>].to_hash.each { |k, v| h[k] = v }
       <span style="color:#080;font-weight:bold">return</span> h
     <span style="color:#080;font-weight:bold">elsif</span> o.respond_to?(<span style="color:#A60">:to_a</span>)
-      h = <span style="color:#036;font-weight:bold">Hash</span>.new
+      h = <span style="color:#069">self</span>.new
       o.to_a.each <span style="color:#080;font-weight:bold">do</span> |i|
         raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong element type </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>i.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> (expected array)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> i.respond_to?(<span style="color:#A60">:to_a</span>)
         k, v = <span style="color:#069">nil</span>
@@ -1721,7 +2048,7 @@ of key-value pairs or an object convertible to a hash.</p>
   <span style="color:#080;font-weight:bold">unless</span> length % <span style="color:#00D">2</span> == <span style="color:#00D">0</span>
     raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">odd number of arguments for Hash</span><span style="color:#710">'</span></span>
   <span style="color:#080;font-weight:bold">end</span>
-  h = <span style="color:#036;font-weight:bold">Hash</span>.new
+  h = <span style="color:#069">self</span>.new
   <span style="color:#00D">0</span>.step(length - <span style="color:#00D">2</span>, <span style="color:#00D">2</span>) <span style="color:#080;font-weight:bold">do</span> |i|
     h[object[i]] = object[i + <span style="color:#00D">1</span>]
   <span style="color:#080;font-weight:bold">end</span>
@@ -1735,7 +2062,7 @@ of key-value pairs or an object convertible to a hash.</p>
       <div class="method_details ">
   <h3 class="signature " id="try_convert-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>try_convert</strong>(obj) 
+    .<strong>try_convert</strong>(obj)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -1800,7 +2127,7 @@ for any reason.</p>
       <div class="method_details first">
   <h3 class="signature first" id="<-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&lt;</strong>(hash) 
+    #<strong>&lt;</strong>(hash)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -1835,19 +2162,19 @@ h1 &lt; h1    <span style="color:#777">#=&gt; false</span>
       <pre class="lines">
 
 
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295</pre>
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 302</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&lt;</span>(hash)
   <span style="color:#080;font-weight:bold">begin</span>
@@ -1867,7 +2194,7 @@ h1 &lt; h1    <span style="color:#777">#=&gt; false</span>
       <div class="method_details ">
   <h3 class="signature " id="<=-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&lt;=</strong>(hash) 
+    #<strong>&lt;=</strong>(hash)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -1902,19 +2229,19 @@ h1 &lt;= h1   <span style="color:#777">#=&gt; true</span>
       <pre class="lines">
 
 
-310
-311
-312
-313
-314
-315
-316
-317
-318
-319</pre>
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 310</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 326</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&lt;=</span>(hash)
   <span style="color:#080;font-weight:bold">begin</span>
@@ -1934,7 +2261,7 @@ h1 &lt;= h1   <span style="color:#777">#=&gt; true</span>
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>==</strong>(hash) 
+    #<strong>==</strong>(hash)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -1942,7 +2269,7 @@ h1 &lt;= h1   <span style="color:#777">#=&gt; true</span>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Equality---Two hashes are equal if they each contain the same number
+    <p>Equality—Two hashes are equal if they each contain the same number
  of keys and if each key-value pair is equal to (according to
  <code>Object#==</code>) the corresponding elements in the other
  hash.</p>
@@ -2003,7 +2330,7 @@ h1 &lt;= h1   <span style="color:#777">#=&gt; true</span>
       <div class="method_details ">
   <h3 class="signature " id=">-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&gt;</strong>(hash) 
+    #<strong>&gt;</strong>(hash)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -2038,19 +2365,19 @@ h1 &gt; h1    <span style="color:#777">#=&gt; false</span>
       <pre class="lines">
 
 
-334
-335
-336
-337
-338
-339
-340
-341
-342
-343</pre>
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 334</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 350</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&gt;</span>(hash)
   <span style="color:#080;font-weight:bold">begin</span>
@@ -2070,7 +2397,7 @@ h1 &gt; h1    <span style="color:#777">#=&gt; false</span>
       <div class="method_details ">
   <h3 class="signature " id=">=-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>&gt;=</strong>(hash) 
+    #<strong>&gt;=</strong>(hash)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -2105,19 +2432,19 @@ h1 &gt;= h1   <span style="color:#777">#=&gt; true</span>
       <pre class="lines">
 
 
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367</pre>
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 358</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 374</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&gt;=</span>(hash)
   <span style="color:#080;font-weight:bold">begin</span>
@@ -2137,7 +2464,7 @@ h1 &gt;= h1   <span style="color:#777">#=&gt; true</span>
       <div class="method_details ">
   <h3 class="signature " id="[]-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>[]</strong>(key) 
+    #<strong>[]</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -2145,13 +2472,13 @@ h1 &gt;= h1   <span style="color:#777">#=&gt; true</span>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Element Reference---Retrieves the <i>value</i> object corresponding
+    <p>Element Reference—Retrieves the <i>value</i> object corresponding
 to the <i>key</i> object. If not found, returns the default value (see
 <code>Hash::new</code> for details).</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
-   h[&quot;a&quot;]   #=&gt; 100
-   h[&quot;c&quot;]   #=&gt; nil</p>
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
+   h[“a”]   #=&gt; 100
+   h[“c”]   #=&gt; nil</p>
 
 
   </div>
@@ -2169,17 +2496,17 @@ to the <i>key</i> object. If not found, returns the default value (see
       <pre class="lines">
 
 
-344
-345
-346
-347
-348
-349
-350
-351</pre>
+367
+368
+369
+370
+371
+372
+373
+374</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 344</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 367</span>
 
 static mrb_value
 mrb_hash_aget(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2198,9 +2525,9 @@ mrb_hash_aget(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <h3 class="signature " id="[]=-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>[]=</strong>(key) </span>
+      <span class="overload">#<strong>[]=</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>store</strong>(key, value) </span>
+      <span class="overload">#<strong>store</strong>(key, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
     
   
 
@@ -2209,7 +2536,7 @@ mrb_hash_aget(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Element Assignment---Associates the value given by
+    <p>Element Assignment—Associates the value given by
 <i>value</i> with the key given by <i>key</i>.
 <i>key</i> should not have its value changed while it is in
 use as a key (a <code>String</code> passed as a key will be
@@ -2235,18 +2562,18 @@ h   <span style="color:#777">#=&gt; {&quot;a&quot;=&gt;9, &quot;b&quot;=&gt;200,
       <pre class="lines">
 
 
-612
-613
-614
-615
-616
-617
-618
-619
-620</pre>
+669
+670
+671
+672
+673
+674
+675
+676
+677</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 612</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 669</span>
 
 static mrb_value
 mrb_hash_aset(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2266,9 +2593,9 @@ mrb_hash_aset(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <h3 class="signature " id="__delete-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete</strong>(key) </span>
+      <span class="overload">#<strong>delete</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete</strong>(key) {|key| ... }</span>
+      <span class="overload">#<strong>delete</strong>(key) {|key| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
     
   
 
@@ -2300,10 +2627,11 @@ h.delete(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color
       
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete</strong>(key) {|key| ... }</span>
+        <span class="signature">#<strong>delete</strong>(key) {|key| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2315,7 +2643,7 @@ h.delete(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color
     <li>
       
       
-        <span class='type'>(<tt>key</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="#key-instance_method" title="Hash#key (method)">key</a></span></tt>)</span>
       
       
       
@@ -2339,17 +2667,18 @@ h.delete(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color
       <pre class="lines">
 
 
-520
-521
-522
-523
-524
-525
-526
-527</pre>
+572
+573
+574
+575
+576
+577
+578
+579
+580</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 520</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 572</span>
 
 static mrb_value
 mrb_hash_delete(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2357,6 +2686,7 @@ mrb_hash_delete(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   mrb_value key;
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;key);
+  mrb_hash_modify(mrb, <span style="color:#069">self</span>);
   <span style="color:#080;font-weight:bold">return</span> mrb_hash_delete_key(mrb, <span style="color:#069">self</span>, key);
 }</pre>
     </td>
@@ -2367,7 +2697,7 @@ mrb_hash_delete(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="__update-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>__update</strong>(h) 
+    #<strong>__update</strong>(h)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -2379,13 +2709,13 @@ mrb_hash_delete(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-345
 346
 347
-348</pre>
+348
+349</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 345</span>
+      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 346</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">__update</span>(h)
   h.each_key{|k| <span style="color:#069">self</span>[k] = h[k]}
@@ -2399,7 +2729,7 @@ mrb_hash_delete(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="_inspect-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>_inspect</strong> 
+    #<strong>_inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -2423,15 +2753,15 @@ mrb_hash_delete(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-196
 197
 198
 199
 200
-201</pre>
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 197</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">_inspect</span>
   <span style="color:#080;font-weight:bold">return</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">{}</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.size == <span style="color:#00D">0</span>
@@ -2447,7 +2777,7 @@ mrb_hash_delete(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="clear-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></tt>) <strong>clear</strong> 
+    #<strong>clear</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></tt> 
   
 
   
@@ -2469,6 +2799,7 @@ h.clear                          <span style="color:#777">#=&gt; {}</span>
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2501,23 +2832,25 @@ h.clear                          <span style="color:#777">#=&gt; {}</span>
       <pre class="lines">
 
 
-584
-585
-586
-587
-588
-589
-590
-591</pre>
+640
+641
+642
+643
+644
+645
+646
+647
+648</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 584</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 640</span>
 
 <span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_hash_clear(mrb_state *mrb, mrb_value hash)
 {
   khash_t(ht) *h = RHASH_TBL(hash);
 
+  mrb_hash_modify(mrb, hash);
   <span style="color:#080;font-weight:bold">if</span> (h) kh_clear(ht, mrb, h);
   <span style="color:#080;font-weight:bold">return</span> hash;
 }</pre>
@@ -2527,9 +2860,9 @@ mrb_hash_clear(mrb_state *mrb, mrb_value hash)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="default-instance_method">
+  <h3 class="signature " id="compact-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>default</strong>(key = nil) 
+    #<strong>compact</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -2537,21 +2870,63 @@ mrb_hash_clear(mrb_state *mrb, mrb_value hash)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the default value, the value that would be returned by
-<i>hsh</i>[<i>key</i>] if <i>key</i> did not exist in <i>hsh</i>.
-See also <code>Hash::new</code> and <code>Hash#default=</code>.</p>
+    <p>call-seq:
+   hsh.compact     -&gt; new_hsh</p>
 
-<p>h = Hash.new                            #=&gt; {}
-   h.default                               #=&gt; nil
-   h.default(2)                            #=&gt; nil</p>
+<p>Returns a new hash with the nil values/key pairs removed</p>
 
-<p>h = Hash.new(&quot;cat&quot;)                     #=&gt; {}
-   h.default                               #=&gt; &quot;cat&quot;
-   h.default(2)                            #=&gt; &quot;cat&quot;</p>
+<p>h = { a: 1, b: false, c: nil }
+   h.compact     #=&gt; { a: 1, b: false }
+   h             #=&gt; { a: 1, b: false, c: nil }</p>
 
-<p>h = Hash.new {|h,k| h[k] = k.to_i*10}   #=&gt; {}
-   h.default                               #=&gt; nil
-   h.default(2)                            #=&gt; 20</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 127</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">compact</span>
+  result = <span style="color:#069">self</span>.dup
+  result.compact!
+  result
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="compact!-instance_method">
+  
+    #<strong>compact!</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Removes all nil values from the hash. Returns the hash.</p>
+
+<p>h = { a: 1, b: false, c: nil }
+  h.compact!     #=&gt; { a: 1, b: false }</p>
 
 
   </div>
@@ -2561,6 +2936,7 @@ See also <code>Hash::new</code> and <code>Hash#default=</code>.</p>
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2572,7 +2948,7 @@ See also <code>Hash::new</code> and <code>Hash#default=</code>.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></tt>)</span>
       
       
       
@@ -2593,39 +2969,61 @@ See also <code>Hash::new</code> and <code>Hash#default=</code>.</p>
       <pre class="lines">
 
 
-375
-376
-377
-378
-379
-380
-381
-382
-383
-384
-385
-386
-387
-388
-389</pre>
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 375</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/src/hash-ext.c', line 48</span>
 
 static mrb_value
-mrb_hash_default(mrb_state *mrb, mrb_value hash)
+hash_compact_bang(mrb_state *mrb, mrb_value hash)
 {
-  mrb_value key;
-  mrb_bool given;
+  khiter_t k;
+  khash_t(ht) *h = RHASH_TBL(hash);
+  mrb_int n = <span style="color:#00D">-1</span>;
 
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|o?</span><span style="color:#710">&quot;</span></span>, &amp;key, &amp;given);
-  <span style="color:#080;font-weight:bold">if</span> (MRB_RHASH_PROCDEFAULT_P(hash)) {
-    <span style="color:#080;font-weight:bold">if</span> (!given) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
-    <span style="color:#080;font-weight:bold">return</span> mrb_funcall(mrb, RHASH_PROCDEFAULT(hash), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">call</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">2</span>, hash, key);
+  <span style="color:#080;font-weight:bold">if</span> (!h) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">for</span> (k = kh_begin(h); k != kh_end(h); k++) {
+    <span style="color:#080;font-weight:bold">if</span> (kh_exist(h, k)) {
+      mrb_value val = kh_value(h, k).v;
+      khiter_t k2;
+
+      <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(val)) {
+        kh_del(ht, mrb, h, k);
+        n = kh_value(h, k).n;
+        <span style="color:#080;font-weight:bold">for</span> (k2 = kh_begin(h); k2 != kh_end(h); k2++) {
+          <span style="color:#080;font-weight:bold">if</span> (!kh_exist(h, k2)) continue;
+          <span style="color:#080;font-weight:bold">if</span> (kh_value(h, k2).n &gt; n) kh_value(h, k2).n--;
+        }
+      }
+    }
   }
-  <span style="color:#080;font-weight:bold">else</span> {
-    <span style="color:#080;font-weight:bold">return</span> RHASH_IFNONE(hash);
-  }
+  <span style="color:#080;font-weight:bold">if</span> (n &lt; <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">return</span> hash;
 }</pre>
     </td>
   </tr>
@@ -2633,9 +3031,9 @@ mrb_hash_default(mrb_state *mrb, mrb_value hash)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="default=-instance_method">
+  <h3 class="signature " id="default-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>default=</strong>(obj) 
+    #<strong>default</strong>(key = nil)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -2643,20 +3041,21 @@ mrb_hash_default(mrb_state *mrb, mrb_value hash)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sets the default value, the value returned for a key that does not
-exist in the hash. It is not possible to set the default to a
-<code>Proc</code> that will be executed on each key lookup.</p>
+    <p>Returns the default value, the value that would be returned by
+<i>hsh</i>[<i>key</i>] if <i>key</i> did not exist in <i>hsh</i>.
+See also <code>Hash::new</code> and <code>Hash#default=</code>.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
-   h.default = &quot;Go fish&quot;
-   h[&quot;a&quot;]     #=&gt; 100
-   h[&quot;z&quot;]     #=&gt; &quot;Go fish&quot;
-   # This doesn&#39;t do what you might hope...
-   h.default = proc do |hash, key|
-     hash[key] = key + key
-   end
-   h[2]       #=&gt; #<a href="Proc:0x401b3948@-:6">Proc:0x401b3948@-:6</a>
-   h[&quot;cat&quot;]   #=&gt; #<a href="Proc:0x401b3948@-:6">Proc:0x401b3948@-:6</a></p>
+<p>h = Hash.new                            #=&gt; {}
+   h.default                               #=&gt; nil
+   h.default(2)                            #=&gt; nil</p>
+
+<p>h = Hash.new(“cat”)                     #=&gt; {}
+   h.default                               #=&gt; “cat”
+   h.default(2)                            #=&gt; “cat”</p>
+
+<p>h = Hash.new {|h,k| h[k] = k.to_i*10}   #=&gt; {}
+   h.default                               #=&gt; nil
+   h.default(2)                            #=&gt; 20</p>
 
 
   </div>
@@ -2666,6 +3065,7 @@ exist in the hash. It is not possible to set the default to a
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2709,22 +3109,34 @@ exist in the hash. It is not possible to set the default to a
 420
 421
 422
-423</pre>
+423
+424
+425
+426
+427
+428
+429</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'src/hash.c', line 412</span>
 
 static mrb_value
-mrb_hash_set_default(mrb_state *mrb, mrb_value hash)
+mrb_hash_default(mrb_state *mrb, mrb_value hash)
 {
-  mrb_value ifnone;
+  mrb_value key;
+  mrb_bool given;
 
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;ifnone);
-  mrb_hash_modify(mrb, hash);
-  mrb_iv_set(mrb, hash, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ifnone</span><span style="color:#710">&quot;</span></span>), ifnone);
-  RHASH(hash)-&gt;flags &amp;= ~(<span style="color:#036;font-weight:bold">MRB_HASH_PROC_DEFAULT</span>);
-
-  <span style="color:#080;font-weight:bold">return</span> ifnone;
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|o?</span><span style="color:#710">&quot;</span></span>, &amp;key, &amp;given);
+  <span style="color:#080;font-weight:bold">if</span> (MRB_RHASH_DEFAULT_P(hash)) {
+    <span style="color:#080;font-weight:bold">if</span> (MRB_RHASH_PROCDEFAULT_P(hash)) {
+      <span style="color:#080;font-weight:bold">if</span> (!given) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+      <span style="color:#080;font-weight:bold">return</span> mrb_funcall(mrb, RHASH_PROCDEFAULT(hash), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">call</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">2</span>, hash, key);
+    }
+    <span style="color:#080;font-weight:bold">else</span> {
+      <span style="color:#080;font-weight:bold">return</span> RHASH_IFNONE(hash);
+    }
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
 }</pre>
     </td>
   </tr>
@@ -2732,9 +3144,9 @@ mrb_hash_set_default(mrb_state *mrb, mrb_value hash)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="default_proc-instance_method">
+  <h3 class="signature " id="default=-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>default_proc</strong> 
+    #<strong>default=</strong>(obj)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -2742,14 +3154,20 @@ mrb_hash_set_default(mrb_state *mrb, mrb_value hash)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>If <code>Hash::new</code> was invoked with a block, return that
-block, otherwise return <code>nil</code>.</p>
+    <p>Sets the default value, the value returned for a key that does not
+exist in the hash. It is not possible to set the default to a
+<code>Proc</code> that will be executed on each key lookup.</p>
 
-<p>h = Hash.new {|h,k| h[k] = k*k }   #=&gt; {}
-   p = h.default_proc                 #=&gt; #<a href="Proc:0x401b3d08@-:1">Proc:0x401b3d08@-:1</a>
-   a = []                             #=&gt; []
-   p.call(a, 2)
-   a                                  #=&gt; [nil, nil, 4]</p>
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
+   h.default = “Go fish”
+   h[“a”]     #=&gt; 100
+   h[“z”]     #=&gt; “Go fish”
+   # This doesn’t do what you might hope…
+   h.default = proc do |hash, key|
+     hash[key] = key + key
+   end
+   h[2]       #=&gt; #&lt;Proc:0x401b3948@-:6&gt;
+   h[“cat”]   #=&gt; #&lt;Proc:0x401b3948@-:6&gt;</p>
 
 
   </div>
@@ -2759,6 +3177,7 @@ block, otherwise return <code>nil</code>.</p>
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2791,17 +3210,121 @@ block, otherwise return <code>nil</code>.</p>
       <pre class="lines">
 
 
-441
-442
-443
-444
-445
-446
-447
-448</pre>
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 441</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 452</span>
+
+static mrb_value
+mrb_hash_set_default(mrb_state *mrb, mrb_value hash)
+{
+  mrb_value ifnone;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;ifnone);
+  mrb_hash_modify(mrb, hash);
+  mrb_iv_set(mrb, hash, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ifnone</span><span style="color:#710">&quot;</span></span>), ifnone);
+  RHASH(hash)-&gt;flags &amp;= ~<span style="color:#036;font-weight:bold">MRB_HASH_PROC_DEFAULT</span>;
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_nil_p(ifnone)) {
+    RHASH(hash)-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_HASH_DEFAULT</span>;
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    RHASH(hash)-&gt;flags &amp;= ~<span style="color:#036;font-weight:bold">MRB_HASH_DEFAULT</span>;
+  }
+  <span style="color:#080;font-weight:bold">return</span> ifnone;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_proc-instance_method">
+  
+    #<strong>default_proc</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>If <code>Hash::new</code> was invoked with a block, return that
+block, otherwise return <code>nil</code>.</p>
+
+<p>h = Hash.new {|h,k| h[k] = k*k }   #=&gt; {}
+   p = h.default_proc                 #=&gt; #&lt;Proc:0x401b3d08@-:1&gt;
+   a = []                             #=&gt; []
+   p.call(a, 2)
+   a                                  #=&gt; [nil, nil, 4]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+486
+487
+488
+489
+490
+491
+492
+493</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 486</span>
 
 static mrb_value
 mrb_hash_default_proc(mrb_state *mrb, mrb_value hash)
@@ -2819,7 +3342,7 @@ mrb_hash_default_proc(mrb_state *mrb, mrb_value hash)
       <div class="method_details ">
   <h3 class="signature " id="default_proc=-instance_method">
   
-    - (<tt><span class='object_link'><a href="Proc.html" title="Proc (class)">Proc</a></span></tt>) <strong>default_proc=</strong>(proc_obj) 
+    #<strong>default_proc=</strong>(proc_obj)  &#x21d2; <tt><span class='object_link'><a href="Proc.html" title="Proc (class)">Proc</a></span></tt> 
   
 
   
@@ -2833,7 +3356,7 @@ mrb_hash_default_proc(mrb_state *mrb, mrb_value hash)
      hash[key] = key + key
    end
    h[2]       #=&gt; 4
-   h[&quot;cat&quot;]   #=&gt; &quot;catcat&quot;</p>
+   h[“cat”]   #=&gt; “catcat”</p>
 
 
   </div>
@@ -2843,6 +3366,7 @@ mrb_hash_default_proc(mrb_state *mrb, mrb_value hash)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2875,21 +3399,28 @@ mrb_hash_default_proc(mrb_state *mrb, mrb_value hash)
       <pre class="lines">
 
 
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474</pre>
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 463</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 508</span>
 
 static mrb_value
 mrb_hash_set_default_proc(mrb_state *mrb, mrb_value hash)
@@ -2899,7 +3430,14 @@ mrb_hash_set_default_proc(mrb_state *mrb, mrb_value hash)
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;ifnone);
   mrb_hash_modify(mrb, hash);
   mrb_iv_set(mrb, hash, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ifnone</span><span style="color:#710">&quot;</span></span>), ifnone);
-  RHASH(hash)-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_HASH_PROC_DEFAULT</span>;
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_nil_p(ifnone)) {
+    RHASH(hash)-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_HASH_PROC_DEFAULT</span>;
+    RHASH(hash)-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_HASH_DEFAULT</span>;
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    RHASH(hash)-&gt;flags &amp;= ~<span style="color:#036;font-weight:bold">MRB_HASH_DEFAULT</span>;
+    RHASH(hash)-&gt;flags &amp;= ~<span style="color:#036;font-weight:bold">MRB_HASH_PROC_DEFAULT</span>;
+  }
 
   <span style="color:#080;font-weight:bold">return</span> ifnone;
 }</pre>
@@ -2911,7 +3449,7 @@ mrb_hash_set_default_proc(mrb_state *mrb, mrb_value hash)
       <div class="method_details ">
   <h3 class="signature " id="delete-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete</strong>(key, &amp;block) 
+    #<strong>delete</strong>(key, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -2967,7 +3505,7 @@ block with the value of the element.</p>
       <div class="method_details ">
   <h3 class="signature " id="delete_if-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>delete_if</strong>(&amp;block) 
+    #<strong>delete_if</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -3002,20 +3540,20 @@ h.delete_if {|key, value| key &gt;= <span style="background-color:hsla(0,100%,50
       <pre class="lines">
 
 
-173
-174
-175
-176
-177
-178
-179
-180</pre>
+189
+190
+191
+192
+193
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 189</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">delete_if</span>(&amp;block)
-  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:delete_if</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:delete_if</span> <span style="color:#080;font-weight:bold">unless</span> block
 
   <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |k, v|
     <span style="color:#069">self</span>.delete(k) <span style="color:#080;font-weight:bold">if</span> block.call(k, v)
@@ -3028,9 +3566,66 @@ h.delete_if {|key, value| key &gt;= <span style="background-color:hsla(0,100%,50
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="dig-instance_method">
+  
+    #<strong>dig</strong>(idx, *args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  hsh.dig(key,…)                 -&gt; object</p>
+
+<p>Extracts the nested value specified by the sequence of <i>key</i>
+objects by calling +dig+ at each step, returning +nil+ if any
+intermediate step is +nil+.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+393
+394
+395
+396
+397
+398
+399
+400</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 393</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">dig</span>(idx,*args)
+  n = <span style="color:#069">self</span>[idx]
+  <span style="color:#080;font-weight:bold">if</span> args.size &gt; <span style="color:#00D">0</span>
+    n&amp;.dig(*args)
+  <span style="color:#080;font-weight:bold">else</span>
+    n
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="dup-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>dup</strong> 
+    #<strong>dup</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -3054,10 +3649,6 @@ h.delete_if {|key, value| key &gt;= <span style="background-color:hsla(0,100%,50
       <pre class="lines">
 
 
-224
-225
-226
-227
 228
 229
 230
@@ -3079,10 +3670,27 @@ h.delete_if {|key, value| key &gt;= <span style="background-color:hsla(0,100%,50
 246
 247
 248
-249</pre>
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 224</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 228</span>
 
 static mrb_value
 mrb_hash_dup(mrb_state *mrb, mrb_value hash)
@@ -3090,12 +3698,13 @@ mrb_hash_dup(mrb_state *mrb, mrb_value hash)
   struct <span style="color:#036;font-weight:bold">RHash</span>* ret;
   khash_t(ht) *h, *ret_h;
   khiter_t k, ret_k;
+  mrb_value ifnone, vret;
 
   h = RHASH_TBL(hash);
   ret = (struct <span style="color:#036;font-weight:bold">RHash</span>*)mrb_obj_alloc(mrb, <span style="color:#036;font-weight:bold">MRB_TT_HASH</span>, mrb-&gt;hash_class);
   ret-&gt;ht = kh_init(ht, mrb);
 
-  <span style="color:#080;font-weight:bold">if</span> (kh_size(h) &gt; <span style="color:#00D">0</span>) {
+  <span style="color:#080;font-weight:bold">if</span> (h &amp;&amp; kh_size(h) &gt; <span style="color:#00D">0</span>) {
     ret_h = ret-&gt;ht;
 
     <span style="color:#080;font-weight:bold">for</span> (k = kh_begin(h); k != kh_end(h); k++) {
@@ -3103,12 +3712,24 @@ mrb_hash_dup(mrb_state *mrb, mrb_value hash)
         int ai = mrb_gc_arena_save(mrb);
         ret_k = kh_put(ht, mrb, ret_h, KEY(kh_key(h, k)));
         mrb_gc_arena_restore(mrb, ai);
-        kh_val(ret_h, ret_k) = kh_val(h, k);
+        kh_val(ret_h, ret_k).v = kh_val(h, k).v;
+        kh_val(ret_h, ret_k).n = kh_size(ret_h)-<span style="color:#00D">1</span>;
       }
     }
   }
 
-  <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(ret);
+  <span style="color:#080;font-weight:bold">if</span> (MRB_RHASH_DEFAULT_P(hash)) {
+    ret-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_HASH_DEFAULT</span>;
+  }
+  <span style="color:#080;font-weight:bold">if</span> (MRB_RHASH_PROCDEFAULT_P(hash)) {
+    ret-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_HASH_PROC_DEFAULT</span>;
+  }
+  vret = mrb_obj_value(ret);
+  ifnone = RHASH_IFNONE(hash);
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_nil_p(ifnone)) {
+      mrb_iv_set(mrb, vret, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ifnone</span><span style="color:#710">&quot;</span></span>), ifnone);
+  }
+  <span style="color:#080;font-weight:bold">return</span> vret;
 }</pre>
     </td>
   </tr>
@@ -3118,7 +3739,7 @@ mrb_hash_dup(mrb_state *mrb, mrb_value hash)
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>each</strong>(&amp;block) 
+    #<strong>each</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -3184,7 +3805,7 @@ b is 200</p>
       <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 86</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each</span>(&amp;block)
-  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each</span> <span style="color:#080;font-weight:bold">unless</span> block
 
   keys = <span style="color:#069">self</span>.keys
   vals = <span style="color:#069">self</span>.values
@@ -3204,7 +3825,7 @@ b is 200</p>
       <div class="method_details ">
   <h3 class="signature " id="each_key-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>each_key</strong>(&amp;block) 
+    #<strong>each_key</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -3221,7 +3842,7 @@ and pass the key of each element.</p>
 
 <p>If no block is given, an enumerator is returned instead.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
   h.each_key {|key| puts key }</p>
 
 <p><em>produces:</em></p>
@@ -3256,7 +3877,7 @@ and pass the key of each element.</p>
       <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 119</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_key</span>(&amp;block)
-  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each_key</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each_key</span> <span style="color:#080;font-weight:bold">unless</span> block
 
   <span style="color:#069">self</span>.keys.each{|k| block.call(k)}
   <span style="color:#069">self</span>
@@ -3269,7 +3890,7 @@ and pass the key of each element.</p>
       <div class="method_details ">
   <h3 class="signature " id="each_value-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>each_value</strong>(&amp;block) 
+    #<strong>each_value</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -3286,7 +3907,7 @@ and pass the value of each element.</p>
 
 <p>If no block is given, an enumerator is returned instead.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
  h.each_value {|value| puts value }</p>
 
 <p><em>produces:</em></p>
@@ -3321,7 +3942,7 @@ and pass the value of each element.</p>
       <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 145</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_value</span>(&amp;block)
-  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each_value</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each_value</span> <span style="color:#080;font-weight:bold">unless</span> block
 
   <span style="color:#069">self</span>.keys.each{|k| block.call(<span style="color:#069">self</span>[k])}
   <span style="color:#069">self</span>
@@ -3334,7 +3955,7 @@ and pass the value of each element.</p>
       <div class="method_details ">
   <h3 class="signature " id="empty?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>empty?</strong> 
+    #<strong>empty?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -3354,6 +3975,7 @@ and pass the value of each element.</p>
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -3399,17 +4021,17 @@ and pass the value of each element.</p>
       <pre class="lines">
 
 
-655
-656
-657
-658
-659
-660
-661
-662</pre>
+712
+713
+714
+715
+716
+717
+718
+719</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 655</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 712</span>
 
 <span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_hash_empty_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3427,7 +4049,7 @@ mrb_hash_empty_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="eql?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>eql?</strong>(hash) 
+    #<strong>eql?</strong>(hash)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -3507,7 +4129,7 @@ both hashes with the same content compared by eql?.</p>
       <div class="method_details ">
   <h3 class="signature " id="fetch-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>fetch</strong>(key, none = NONE, &amp;block) 
+    #<strong>fetch</strong>(key, none = NONE, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -3519,7 +4141,7 @@ both hashes with the same content compared by eql?.</p>
     hsh.fetch(key [, default] )       -&gt; obj
     hsh.fetch(key) {| key | block }   -&gt; obj</p>
 
-<p>Returns a value from the hash for the given key. If the key can&#39;t be
+<p>Returns a value from the hash for the given key. If the key can’t be
  found, there are several options: With no other arguments, it will
  raise an <code>KeyError</code> exception; if <i>default</i> is
  given, then that will be returned; if the optional code block is
@@ -3558,22 +4180,22 @@ h.fetch(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:
       <pre class="lines">
 
 
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157</pre>
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 161</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">fetch</span>(key, none=<span style="color:#036;font-weight:bold">NONE</span>, &amp;block)
   <span style="color:#080;font-weight:bold">unless</span> <span style="color:#069">self</span>.key?(key)
@@ -3582,7 +4204,7 @@ h.fetch(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:
     <span style="color:#080;font-weight:bold">elsif</span> none != <span style="color:#036;font-weight:bold">NONE</span>
       none
     <span style="color:#080;font-weight:bold">else</span>
-      raise <span style="color:#036;font-weight:bold">KeyError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Key not found: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>key<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+      raise <span style="color:#036;font-weight:bold">KeyError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Key not found: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>key.inspect<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
     <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#080;font-weight:bold">else</span>
     <span style="color:#069">self</span>[key]
@@ -3594,9 +4216,67 @@ h.fetch(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="fetch_values-instance_method">
+  
+    #<strong>fetch_values</strong>(*keys, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  hsh.fetch_values(key, …)                 -&gt; array
+  hsh.fetch_values(key, …) { |key| block } -&gt; array</p>
+
+<p>Returns an array containing the values associated with the given keys
+but also raises <code>KeyError</code> when one of keys can’t be found.
+Also see <code>Hash#values_at</code> and <code>Hash#fetch</code>.</p>
+
+<p>h = { “cat” =&gt; “feline”, “dog” =&gt; “canine”, “cow” =&gt; “bovine” }</p>
+
+<p>h.fetch_values(“cow”, “cat”)                   #=&gt; [“bovine”, “feline”]
+  h.fetch_values(“cow”, “bird”)                  # raises KeyError
+  h.fetch_values(“cow”, “bird”) { |k| k.upcase } #=&gt; [“bovine”, “BIRD”]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+497
+498
+499
+500
+501</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 497</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">fetch_values</span>(*keys, &amp;block)
+  keys.map <span style="color:#080;font-weight:bold">do</span> |k|
+    <span style="color:#069">self</span>.fetch(k, &amp;block)
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="flatten-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>flatten</strong>(level = 1) 
+    #<strong>flatten</strong>(level = 1)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -3633,12 +4313,12 @@ a.flatten(<span style="color:#00D">2</span>) <span style="color:#777"># =&gt; [1
       <pre class="lines">
 
 
-198
-199
-200</pre>
+214
+215
+216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 214</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">flatten</span>(level=<span style="color:#00D">1</span>)
   <span style="color:#069">self</span>.to_a.flatten(level)
@@ -3652,13 +4332,13 @@ a.flatten(<span style="color:#00D">2</span>) <span style="color:#777"># =&gt; [1
   <h3 class="signature " id="has_key?-instance_method">
   
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>has_key?</strong>(key) </span>
+      <span class="overload">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>include?</strong>(key) </span>
+      <span class="overload">#<strong>include?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>key?</strong>(key) </span>
+      <span class="overload">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>member?</strong>(key) </span>
+      <span class="overload">#<strong>member?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
   
 
@@ -3669,9 +4349,9 @@ a.flatten(<span style="color:#00D">2</span>) <span style="color:#777"># =&gt; [1
   <div class="discussion">
     <p>Returns <code>true</code> if the given key is present in <i>hsh</i>.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
-   h.has_key?(&quot;a&quot;)   #=&gt; true
-   h.has_key?(&quot;z&quot;)   #=&gt; false</p>
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
+   h.has_key?(“a”)   #=&gt; true
+   h.has_key?(“z”)   #=&gt; false</p>
 
 
   </div>
@@ -3683,10 +4363,11 @@ a.flatten(<span style="color:#00D">2</span>) <span style="color:#777"># =&gt; [1
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>has_key?</strong>(key) </span>
+        <span class="signature">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -3713,10 +4394,11 @@ a.flatten(<span style="color:#00D">2</span>) <span style="color:#777"># =&gt; [1
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>include?</strong>(key) </span>
+        <span class="signature">#<strong>include?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -3743,10 +4425,11 @@ a.flatten(<span style="color:#00D">2</span>) <span style="color:#777"># =&gt; [1
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>key?</strong>(key) </span>
+        <span class="signature">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -3773,10 +4456,11 @@ a.flatten(<span style="color:#00D">2</span>) <span style="color:#777"># =&gt; [1
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>member?</strong>(key) </span>
+        <span class="signature">#<strong>member?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -3825,25 +4509,25 @@ a.flatten(<span style="color:#00D">2</span>) <span style="color:#777"># =&gt; [1
       <pre class="lines">
 
 
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775
-776
-777
-778
-779
-780</pre>
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 765</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 829</span>
 
 static mrb_value
 mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
@@ -3870,9 +4554,9 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
   <h3 class="signature " id="has_value?-instance_method">
   
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>has_value?</strong>(value) </span>
+      <span class="overload">#<strong>has_value?</strong>(value)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>value?</strong>(value) </span>
+      <span class="overload">#<strong>value?</strong>(value)  &#x21d2; <tt>Boolean</tt> </span>
     
   
 
@@ -3884,7 +4568,7 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
     <p>Returns <code>true</code> if the given value is present for some key
 in <i>hsh</i>.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
    h.has_value?(100)   #=&gt; true
    h.has_value?(999)   #=&gt; false</p>
 
@@ -3898,10 +4582,11 @@ in <i>hsh</i>.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>has_value?</strong>(value) </span>
+        <span class="signature">#<strong>has_value?</strong>(value)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -3928,10 +4613,11 @@ in <i>hsh</i>.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>value?</strong>(value) </span>
+        <span class="signature">#<strong>value?</strong>(value)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -3980,30 +4666,30 @@ in <i>hsh</i>.</p>
       <pre class="lines">
 
 
-797
-798
-799
-800
-801
-802
-803
-804
-805
-806
-807
-808
-809
-810
-811
-812
-813
-814
-815
-816
-817</pre>
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+875
+876
+877
+878
+879
+880
+881</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 797</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 861</span>
 
 static mrb_value
 mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
@@ -4035,13 +4721,13 @@ mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
   <h3 class="signature " id="include?-instance_method">
   
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>has_key?</strong>(key) </span>
+      <span class="overload">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>include?</strong>(key) </span>
+      <span class="overload">#<strong>include?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>key?</strong>(key) </span>
+      <span class="overload">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>member?</strong>(key) </span>
+      <span class="overload">#<strong>member?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
   
 
@@ -4052,9 +4738,9 @@ mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
   <div class="discussion">
     <p>Returns <code>true</code> if the given key is present in <i>hsh</i>.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
-   h.has_key?(&quot;a&quot;)   #=&gt; true
-   h.has_key?(&quot;z&quot;)   #=&gt; false</p>
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
+   h.has_key?(“a”)   #=&gt; true
+   h.has_key?(“z”)   #=&gt; false</p>
 
 
   </div>
@@ -4066,10 +4752,11 @@ mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>has_key?</strong>(key) </span>
+        <span class="signature">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4096,10 +4783,11 @@ mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>include?</strong>(key) </span>
+        <span class="signature">#<strong>include?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4126,10 +4814,11 @@ mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>key?</strong>(key) </span>
+        <span class="signature">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4156,10 +4845,11 @@ mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>member?</strong>(key) </span>
+        <span class="signature">#<strong>member?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4208,25 +4898,25 @@ mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
       <pre class="lines">
 
 
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775
-776
-777
-778
-779
-780</pre>
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 765</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 829</span>
 
 static mrb_value
 mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
@@ -4252,7 +4942,7 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>inspect</strong> 
+    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -4280,16 +4970,16 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
       <pre class="lines">
 
 
-206
 207
 208
 209
 210
 211
-212</pre>
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 206</span>
+      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 207</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">inspect</span>
   <span style="color:#080;font-weight:bold">begin</span>
@@ -4306,7 +4996,7 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
       <div class="method_details ">
   <h3 class="signature " id="invert-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>invert</strong> 
+    #<strong>invert</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -4317,7 +5007,7 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
     <p>call-seq:
     hsh.invert -&gt; new_hash</p>
 
-<p>Returns a new hash created by using <i>hsh</i>&#39;s values as keys, and
+<p>Returns a new hash created by using <i>hsh</i>’s values as keys, and
  the keys as values.</p>
 
 <pre class="code ruby"><code class="ruby">h = { <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">n</span><span style="color:#710">&quot;</span></span> =&gt; <span style="color:#00D">100</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">m</span><span style="color:#710">&quot;</span></span> =&gt; <span style="color:#00D">100</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">y</span><span style="color:#710">&quot;</span></span> =&gt; <span style="color:#00D">300</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">d</span><span style="color:#710">&quot;</span></span> =&gt; <span style="color:#00D">200</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span> =&gt; <span style="color:#00D">0</span> }
@@ -4338,17 +5028,17 @@ h.invert   <span style="color:#777">#=&gt; {0=&gt;&quot;a&quot;, 100=&gt;&quot;m
       <pre class="lines">
 
 
-213
-214
-215
-216
-217</pre>
+229
+230
+231
+232
+233</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 213</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 229</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">invert</span>
-  h = <span style="color:#036;font-weight:bold">Hash</span>.new
+  h = <span style="color:#069">self</span>.class.new
   <span style="color:#069">self</span>.each {|k, v| h[v] = k }
   h
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -4360,7 +5050,7 @@ h.invert   <span style="color:#777">#=&gt; {0=&gt;&quot;a&quot;, 100=&gt;&quot;m
       <div class="method_details ">
   <h3 class="signature " id="keep_if-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>keep_if</strong>(&amp;block) 
+    #<strong>keep_if</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -4391,23 +5081,23 @@ h.invert   <span style="color:#777">#=&gt; {0=&gt;&quot;a&quot;, 100=&gt;&quot;m
       <pre class="lines">
 
 
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240</pre>
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 230</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 246</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">keep_if</span>(&amp;block)
-  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:keep_if</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:keep_if</span> <span style="color:#080;font-weight:bold">unless</span> block
 
   keys = []
   <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |k, v|
@@ -4425,7 +5115,7 @@ h.invert   <span style="color:#777">#=&gt; {0=&gt;&quot;a&quot;, 100=&gt;&quot;m
       <div class="method_details ">
   <h3 class="signature " id="key-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>key</strong>(val) 
+    #<strong>key</strong>(val)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -4459,15 +5149,15 @@ h.key(<span style="color:#00D">999</span>)   <span style="color:#777">#=&gt; nil
       <pre class="lines">
 
 
-255
-256
-257
-258
-259
-260</pre>
+271
+272
+273
+274
+275
+276</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 271</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">key</span>(val)
   <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |k, v|
@@ -4484,13 +5174,13 @@ h.key(<span style="color:#00D">999</span>)   <span style="color:#777">#=&gt; nil
   <h3 class="signature " id="key?-instance_method">
   
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>has_key?</strong>(key) </span>
+      <span class="overload">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>include?</strong>(key) </span>
+      <span class="overload">#<strong>include?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>key?</strong>(key) </span>
+      <span class="overload">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>member?</strong>(key) </span>
+      <span class="overload">#<strong>member?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
   
 
@@ -4501,9 +5191,9 @@ h.key(<span style="color:#00D">999</span>)   <span style="color:#777">#=&gt; nil
   <div class="discussion">
     <p>Returns <code>true</code> if the given key is present in <i>hsh</i>.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
-   h.has_key?(&quot;a&quot;)   #=&gt; true
-   h.has_key?(&quot;z&quot;)   #=&gt; false</p>
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
+   h.has_key?(“a”)   #=&gt; true
+   h.has_key?(“z”)   #=&gt; false</p>
 
 
   </div>
@@ -4515,10 +5205,11 @@ h.key(<span style="color:#00D">999</span>)   <span style="color:#777">#=&gt; nil
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>has_key?</strong>(key) </span>
+        <span class="signature">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4545,10 +5236,11 @@ h.key(<span style="color:#00D">999</span>)   <span style="color:#777">#=&gt; nil
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>include?</strong>(key) </span>
+        <span class="signature">#<strong>include?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4575,10 +5267,11 @@ h.key(<span style="color:#00D">999</span>)   <span style="color:#777">#=&gt; nil
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>key?</strong>(key) </span>
+        <span class="signature">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4605,10 +5298,11 @@ h.key(<span style="color:#00D">999</span>)   <span style="color:#777">#=&gt; nil
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>member?</strong>(key) </span>
+        <span class="signature">#<strong>member?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4657,25 +5351,25 @@ h.key(<span style="color:#00D">999</span>)   <span style="color:#777">#=&gt; nil
       <pre class="lines">
 
 
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775
-776
-777
-778
-779
-780</pre>
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 765</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 829</span>
 
 static mrb_value
 mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
@@ -4701,7 +5395,7 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
       <div class="method_details ">
   <h3 class="signature " id="keys-instance_method">
   
-    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt>) <strong>keys</strong> 
+    #<strong>keys</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt> 
   
 
   
@@ -4712,8 +5406,8 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
     <p>Returns a new array populated with the keys from this hash. See also
 <code>Hash#values</code>.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200, &quot;c&quot; =&gt; 300, &quot;d&quot; =&gt; 400 }
-   h.keys   #=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</p>
+<p>h = { “a” =&gt; 100, “b” =&gt; 200, “c” =&gt; 300, “d” =&gt; 400 }
+   h.keys   #=&gt; [“a”, “b”, “c”, “d”]</p>
 
 
   </div>
@@ -4723,6 +5417,7 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4755,50 +5450,64 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
       <pre class="lines">
 
 
-691
-692
-693
-694
-695
-696
-697
-698
-699
-700
-701
-702
-703
-704
-705
-706
-707
-708
-709
-710
-711
-712</pre>
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 691</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 748</span>
 
 <span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_hash_keys(mrb_state *mrb, mrb_value hash)
 {
   khash_t(ht) *h = RHASH_TBL(hash);
   khiter_t k;
+  mrb_int <span style="color:#080;font-weight:bold">end</span>;
   mrb_value ary;
   mrb_value *p;
 
   <span style="color:#080;font-weight:bold">if</span> (!h || kh_size(h) == <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_ary_new(mrb);
   ary = mrb_ary_new_capa(mrb, kh_size(h));
-  mrb_ary_set(mrb, ary, kh_size(h)-<span style="color:#00D">1</span>, mrb_nil_value());
-  p = mrb_ary_ptr(ary)-&gt;ptr;
+  <span style="color:#080;font-weight:bold">end</span> = kh_size(h)-<span style="color:#00D">1</span>;
+  mrb_ary_set(mrb, ary, <span style="color:#080;font-weight:bold">end</span>, mrb_nil_value());
+  p = RARRAY_PTR(ary);
   <span style="color:#080;font-weight:bold">for</span> (k = kh_begin(h); k != kh_end(h); k++) {
     <span style="color:#080;font-weight:bold">if</span> (kh_exist(h, k)) {
       mrb_value kv = kh_key(h, k);
       mrb_hash_value hv = kh_value(h, k);
 
-      p[hv.n] = kv;
+      <span style="color:#080;font-weight:bold">if</span> (hv.n &lt;= <span style="color:#080;font-weight:bold">end</span>) {
+        p[hv.n] = kv;
+      }
+      <span style="color:#080;font-weight:bold">else</span> {
+        p[<span style="color:#080;font-weight:bold">end</span>] = kv;
+      }
     }
   }
   <span style="color:#080;font-weight:bold">return</span> ary;
@@ -4812,9 +5521,9 @@ mrb_hash_keys(mrb_state *mrb, mrb_value hash)
   <h3 class="signature " id="length-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>) <strong>length</strong> </span>
+      <span class="overload">#<strong>length</strong>  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>) <strong>size</strong> </span>
+      <span class="overload">#<strong>size</strong>  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt> </span>
     
   
 
@@ -4825,9 +5534,9 @@ mrb_hash_keys(mrb_state *mrb, mrb_value hash)
   <div class="discussion">
     <p>Returns the number of key-value pairs in the hash.</p>
 
-<p>h = { &quot;d&quot; =&gt; 100, &quot;a&quot; =&gt; 200, &quot;v&quot; =&gt; 300, &quot;e&quot; =&gt; 400 }
+<p>h = { “d” =&gt; 100, “a” =&gt; 200, “v” =&gt; 300, “e” =&gt; 400 }
    h.length        #=&gt; 4
-   h.delete(&quot;a&quot;)   #=&gt; 200
+   h.delete(“a”)   #=&gt; 200
    h.length        #=&gt; 3</p>
 
 
@@ -4840,10 +5549,11 @@ mrb_hash_keys(mrb_state *mrb, mrb_value hash)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>) <strong>length</strong> </span>
+        <span class="signature">#<strong>length</strong>  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4870,10 +5580,11 @@ mrb_hash_keys(mrb_state *mrb, mrb_value hash)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>) <strong>size</strong> </span>
+        <span class="signature">#<strong>size</strong>  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4909,17 +5620,17 @@ mrb_hash_keys(mrb_state *mrb, mrb_value hash)
       <pre class="lines">
 
 
-636
-637
-638
-639
-640
-641
-642
-643</pre>
+693
+694
+695
+696
+697
+698
+699
+700</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 636</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 693</span>
 
 static mrb_value
 mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -4938,13 +5649,13 @@ mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <h3 class="signature " id="member?-instance_method">
   
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>has_key?</strong>(key) </span>
+      <span class="overload">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>include?</strong>(key) </span>
+      <span class="overload">#<strong>include?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>key?</strong>(key) </span>
+      <span class="overload">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>member?</strong>(key) </span>
+      <span class="overload">#<strong>member?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
     
   
 
@@ -4955,9 +5666,9 @@ mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <div class="discussion">
     <p>Returns <code>true</code> if the given key is present in <i>hsh</i>.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
-   h.has_key?(&quot;a&quot;)   #=&gt; true
-   h.has_key?(&quot;z&quot;)   #=&gt; false</p>
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
+   h.has_key?(“a”)   #=&gt; true
+   h.has_key?(“z”)   #=&gt; false</p>
 
 
   </div>
@@ -4969,10 +5680,11 @@ mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>has_key?</strong>(key) </span>
+        <span class="signature">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4999,10 +5711,11 @@ mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>include?</strong>(key) </span>
+        <span class="signature">#<strong>include?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -5029,10 +5742,11 @@ mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>key?</strong>(key) </span>
+        <span class="signature">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -5059,10 +5773,11 @@ mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>member?</strong>(key) </span>
+        <span class="signature">#<strong>member?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -5111,25 +5826,25 @@ mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775
-776
-777
-778
-779
-780</pre>
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 765</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 829</span>
 
 static mrb_value
 mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
@@ -5155,7 +5870,7 @@ mrb_hash_has_key(mrb_state *mrb, mrb_value hash)
       <div class="method_details ">
   <h3 class="signature " id="merge-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>merge</strong>(other, &amp;block) 
+    #<strong>merge</strong>(other, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -5198,7 +5913,6 @@ will be the final value of this element.</p>
       <pre class="lines">
 
 
-180
 181
 182
 183
@@ -5211,10 +5925,11 @@ will be the final value of this element.</p>
 190
 191
 192
-193</pre>
+193
+194</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 180</span>
+      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 181</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">merge</span>(other, &amp;block)
   h = {}
@@ -5238,7 +5953,7 @@ will be the final value of this element.</p>
       <div class="method_details ">
   <h3 class="signature " id="merge!-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>merge!</strong>(other, &amp;block) 
+    #<strong>merge!</strong>(other, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -5331,7 +6046,7 @@ h1.merge!(h2) { |key, v1, v2| v1 }
       <div class="method_details ">
   <h3 class="signature " id="rehash-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>rehash</strong> 
+    #<strong>rehash</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -5368,16 +6083,16 @@ h[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">
       <pre class="lines">
 
 
-337
 338
 339
 340
 341
 342
-343</pre>
+343
+344</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 337</span>
+      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 338</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">rehash</span>
   h = {}
@@ -5394,7 +6109,7 @@ h[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">
       <div class="method_details ">
   <h3 class="signature " id="reject-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>reject</strong>(&amp;b) 
+    #<strong>reject</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -5431,7 +6146,6 @@ h.reject {|k,v| v &gt; <span style="color:#00D">100</span>}  <span style="color:
       <pre class="lines">
 
 
-257
 258
 259
 260
@@ -5441,17 +6155,18 @@ h.reject {|k,v| v &gt; <span style="color:#00D">100</span>}  <span style="color:
 264
 265
 266
-267</pre>
+267
+268</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 257</span>
+      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 258</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reject</span>(&amp;b)
-  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:reject</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reject</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:reject</span> <span style="color:#080;font-weight:bold">unless</span> block
 
   h = {}
   <span style="color:#069">self</span>.each{|k,v|
-    <span style="color:#080;font-weight:bold">unless</span> b.call([k, v])
+    <span style="color:#080;font-weight:bold">unless</span> block.call([k, v])
       h[k] = v
     <span style="color:#080;font-weight:bold">end</span>
   }
@@ -5465,7 +6180,7 @@ h.reject {|k,v| v &gt; <span style="color:#00D">100</span>}  <span style="color:
       <div class="method_details ">
   <h3 class="signature " id="reject!-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>reject!</strong>(&amp;b) 
+    #<strong>reject!</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -5496,7 +6211,6 @@ h.reject {|k,v| v &gt; <span style="color:#00D">100</span>}  <span style="color:
       <pre class="lines">
 
 
-226
 227
 228
 229
@@ -5510,17 +6224,18 @@ h.reject {|k,v| v &gt; <span style="color:#00D">100</span>}  <span style="color:
 237
 238
 239
-240</pre>
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 226</span>
+      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 227</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reject!</span>(&amp;b)
-  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:reject!</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reject!</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:reject!</span> <span style="color:#080;font-weight:bold">unless</span> block
 
   keys = []
   <span style="color:#069">self</span>.each{|k,v|
-    <span style="color:#080;font-weight:bold">if</span> b.call([k, v])
+    <span style="color:#080;font-weight:bold">if</span> block.call([k, v])
       keys.push(k)
     <span style="color:#080;font-weight:bold">end</span>
   }
@@ -5538,7 +6253,7 @@ h.reject {|k,v| v &gt; <span style="color:#00D">100</span>}  <span style="color:
       <div class="method_details ">
   <h3 class="signature " id="replace-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>replace</strong>(hash) 
+    #<strong>replace</strong>(hash)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -5559,6 +6274,19 @@ h.reject {|k,v| v &gt; <span style="color:#00D">100</span>}  <span style="color:
 </div>
 <div class="tags">
   
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -5580,12 +6308,14 @@ h.reject {|k,v| v &gt; <span style="color:#00D">100</span>}  <span style="color:
 165
 166
 167
-168</pre>
+168
+169</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 156</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">replace</span>(hash)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't convert argument into Hash</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> hash.respond_to?(<span style="color:#A60">:to_hash</span>)
   <span style="color:#069">self</span>.clear
   hash = hash.to_hash
   hash.each_key{|k|
@@ -5606,7 +6336,7 @@ h.reject {|k,v| v &gt; <span style="color:#00D">100</span>}  <span style="color:
       <div class="method_details ">
   <h3 class="signature " id="select-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>select</strong>(&amp;b) 
+    #<strong>select</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -5643,7 +6373,6 @@ h.select {|k,v| v &lt; <span style="color:#00D">200</span>}  <span style="color:
       <pre class="lines">
 
 
-310
 311
 312
 313
@@ -5653,17 +6382,18 @@ h.select {|k,v| v &lt; <span style="color:#00D">200</span>}  <span style="color:
 317
 318
 319
-320</pre>
+320
+321</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 310</span>
+      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 311</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">select</span>(&amp;b)
-  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:select</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">select</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:select</span> <span style="color:#080;font-weight:bold">unless</span> block
 
   h = {}
   <span style="color:#069">self</span>.each{|k,v|
-    <span style="color:#080;font-weight:bold">if</span> b.call([k, v])
+    <span style="color:#080;font-weight:bold">if</span> block.call([k, v])
       h[k] = v
     <span style="color:#080;font-weight:bold">end</span>
   }
@@ -5677,7 +6407,7 @@ h.select {|k,v| v &lt; <span style="color:#00D">200</span>}  <span style="color:
       <div class="method_details ">
   <h3 class="signature " id="select!-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>select!</strong>(&amp;b) 
+    #<strong>select!</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -5708,7 +6438,6 @@ h.select {|k,v| v &lt; <span style="color:#00D">200</span>}  <span style="color:
       <pre class="lines">
 
 
-279
 280
 281
 282
@@ -5722,17 +6451,18 @@ h.select {|k,v| v &lt; <span style="color:#00D">200</span>}  <span style="color:
 290
 291
 292
-293</pre>
+293
+294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 279</span>
+      <pre class="code"><span class="info file"># File 'mrblib/hash.rb', line 280</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">select!</span>(&amp;b)
-  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:select!</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">select!</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:select!</span> <span style="color:#080;font-weight:bold">unless</span> block
 
   keys = []
   <span style="color:#069">self</span>.each{|k,v|
-    <span style="color:#080;font-weight:bold">unless</span> b.call([k, v])
+    <span style="color:#080;font-weight:bold">unless</span> block.call([k, v])
       keys.push(k)
     <span style="color:#080;font-weight:bold">end</span>
   }
@@ -5750,7 +6480,7 @@ h.select {|k,v| v &lt; <span style="color:#00D">200</span>}  <span style="color:
       <div class="method_details ">
   <h3 class="signature " id="shift-instance_method">
   
-    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt>, <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>shift</strong> 
+    #<strong>shift</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt>, <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -5760,7 +6490,7 @@ h.select {|k,v| v &lt; <span style="color:#00D">200</span>}  <span style="color:
   <div class="discussion">
     <p>Removes a key-value pair from <i>hsh</i> and returns it as the
 two-item array <code>[</code> <i>key, value</i> <code>]</code>, or
-the hash&#39;s default value if the hash is empty.</p>
+the hash’s default value if the hash is empty.</p>
 
 <pre class="code"><code class="">h = { <span style="color:#00D">1</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">2</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">b</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">3</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">c</span><span style="color:#710">&quot;</span></span> }
 h.shift   <span style="color:#777">#=&gt; [1, &quot;a&quot;]</span>
@@ -5775,6 +6505,7 @@ h         <span style="color:#777">#=&gt; {2=&gt;&quot;b&quot;, 3=&gt;&quot;c&qu
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -5807,37 +6538,40 @@ h         <span style="color:#777">#=&gt; {2=&gt;&quot;b&quot;, 3=&gt;&quot;c&qu
       <pre class="lines">
 
 
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556
-557
-558
-559
-560
-561
-562
-563
-564
-565
-566
-567
-568
-569
-570</pre>
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 543</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 596</span>
 
 static mrb_value
 mrb_hash_shift(mrb_state *mrb, mrb_value hash)
@@ -5860,12 +6594,15 @@ mrb_hash_shift(mrb_state *mrb, mrb_value hash)
     }
   }
 
-  <span style="color:#080;font-weight:bold">if</span> (MRB_RHASH_PROCDEFAULT_P(hash)) {
-    <span style="color:#080;font-weight:bold">return</span> mrb_funcall(mrb, RHASH_PROCDEFAULT(hash), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">call</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">2</span>, hash, mrb_nil_value());
+  <span style="color:#080;font-weight:bold">if</span> (MRB_RHASH_DEFAULT_P(hash)) {
+    <span style="color:#080;font-weight:bold">if</span> (MRB_RHASH_PROCDEFAULT_P(hash)) {
+      <span style="color:#080;font-weight:bold">return</span> mrb_funcall(mrb, RHASH_PROCDEFAULT(hash), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">call</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">2</span>, hash, mrb_nil_value());
+    }
+    <span style="color:#080;font-weight:bold">else</span> {
+      <span style="color:#080;font-weight:bold">return</span> RHASH_IFNONE(hash);
+    }
   }
-  <span style="color:#080;font-weight:bold">else</span> {
-    <span style="color:#080;font-weight:bold">return</span> RHASH_IFNONE(hash);
-  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
 }</pre>
     </td>
   </tr>
@@ -5876,9 +6613,9 @@ mrb_hash_shift(mrb_state *mrb, mrb_value hash)
   <h3 class="signature " id="size-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>) <strong>length</strong> </span>
+      <span class="overload">#<strong>length</strong>  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>) <strong>size</strong> </span>
+      <span class="overload">#<strong>size</strong>  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt> </span>
     
   
 
@@ -5889,9 +6626,9 @@ mrb_hash_shift(mrb_state *mrb, mrb_value hash)
   <div class="discussion">
     <p>Returns the number of key-value pairs in the hash.</p>
 
-<p>h = { &quot;d&quot; =&gt; 100, &quot;a&quot; =&gt; 200, &quot;v&quot; =&gt; 300, &quot;e&quot; =&gt; 400 }
+<p>h = { “d” =&gt; 100, “a” =&gt; 200, “v” =&gt; 300, “e” =&gt; 400 }
    h.length        #=&gt; 4
-   h.delete(&quot;a&quot;)   #=&gt; 200
+   h.delete(“a”)   #=&gt; 200
    h.length        #=&gt; 3</p>
 
 
@@ -5904,10 +6641,11 @@ mrb_hash_shift(mrb_state *mrb, mrb_value hash)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>) <strong>length</strong> </span>
+        <span class="signature">#<strong>length</strong>  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -5934,10 +6672,11 @@ mrb_hash_shift(mrb_state *mrb, mrb_value hash)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>) <strong>size</strong> </span>
+        <span class="signature">#<strong>size</strong>  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -5973,17 +6712,17 @@ mrb_hash_shift(mrb_state *mrb, mrb_value hash)
       <pre class="lines">
 
 
-636
-637
-638
-639
-640
-641
-642
-643</pre>
+693
+694
+695
+696
+697
+698
+699
+700</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 636</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 693</span>
 
 static mrb_value
 mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -5999,13 +6738,9 @@ mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="store-instance_method">
+  <h3 class="signature " id="slice-instance_method">
   
-    
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>[]=</strong>(key) </span>
-    
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>store</strong>(key, value) </span>
-    
+    #<strong>slice</strong>(*keys)  &#x21d2; <tt><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></tt> 
   
 
   
@@ -6013,117 +6748,11 @@ mrb_hash_size_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Element Assignment---Associates the value given by
-<i>value</i> with the key given by <i>key</i>.
-<i>key</i> should not have its value changed while it is in
-use as a key (a <code>String</code> passed as a key will be
-duplicated and frozen).</p>
+    <p>Returns a hash containing only the given keys and their values.</p>
 
-<pre class="code"><code class="">h = { <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span> =&gt; <span style="color:#00D">100</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">b</span><span style="color:#710">&quot;</span></span> =&gt; <span style="color:#00D">200</span> }
-h[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>] = <span style="color:#00D">9</span>
-h[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">c</span><span style="color:#710">&quot;</span></span>] = <span style="color:#00D">4</span>
-h   <span style="color:#777">#=&gt; {&quot;a&quot;=&gt;9, &quot;b&quot;=&gt;200, &quot;c&quot;=&gt;4}</span>
-</code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-612
-613
-614
-615
-616
-617
-618
-619
-620</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 612</span>
-
-static mrb_value
-mrb_hash_aset(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  mrb_value key, val;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">oo</span><span style="color:#710">&quot;</span></span>, &amp;key, &amp;val);
-  mrb_hash_set(mrb, <span style="color:#069">self</span>, key, val);
-  <span style="color:#080;font-weight:bold">return</span> val;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="to_h-instance_method">
-  
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_h</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>call-seq:
-    hsh.to_h     -&gt; hsh or new_hash</p>
-
-<p>Returns +self+. If called on a subclass of Hash, converts
- the receiver to a Hash object.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-269
-270
-271</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 269</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_h</span>
-  <span style="color:#069">self</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="to_hash-instance_method">
-  
-    - (<tt><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></tt>) <strong>to_hash</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns +self+.</p>
+<p>h = { a: 100, b: 200, c: 300 }
+   h.slice(:a)           #=&gt; :a=&gt;100
+   h.slice(:b, :c, :d)   #=&gt; :c=&gt;300</p>
 
 
   </div>
@@ -6133,6 +6762,7 @@ mrb_hash_aset(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -6165,14 +6795,247 @@ mrb_hash_aset(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/src/hash-ext.c', line 85</span>
+
+static mrb_value
+hash_slice(mrb_state *mrb, mrb_value hash)
+{
+  khash_t(ht) *h = RHASH_TBL(hash);
+  mrb_value *argv, result;
+  mrb_int argc, i;
+  khiter_t k;
+  int ai;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*</span><span style="color:#710">&quot;</span></span>, &amp;argv, &amp;argc);
+  <span style="color:#080;font-weight:bold">if</span> (argc == <span style="color:#00D">0</span> || h == <span style="color:#036;font-weight:bold">NULL</span>) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_hash_new_capa(mrb, argc);
+  }
+  result = mrb_hash_new_capa(mrb, argc);
+  ai = mrb_gc_arena_save(mrb);
+  <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i &lt; argc; i++) {
+    mrb_value key = argv[i];
+
+    k = kh_get(ht, mrb, h, key);
+    <span style="color:#080;font-weight:bold">if</span> (k != kh_end(h)) {
+      mrb_value val = kh_value(h, k).v;
+
+      mrb_hash_set(mrb, result, key, val);
+    }
+    mrb_gc_arena_restore(mrb, ai);
+  }
+  <span style="color:#080;font-weight:bold">return</span> result;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="store-instance_method">
+  
+    
+      <span class="overload">#<strong>[]=</strong>(key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+    
+      <span class="overload">#<strong>store</strong>(key, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Element Assignment—Associates the value given by
+<i>value</i> with the key given by <i>key</i>.
+<i>key</i> should not have its value changed while it is in
+use as a key (a <code>String</code> passed as a key will be
+duplicated and frozen).</p>
+
+<pre class="code"><code class="">h = { <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span> =&gt; <span style="color:#00D">100</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">b</span><span style="color:#710">&quot;</span></span> =&gt; <span style="color:#00D">200</span> }
+h[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>] = <span style="color:#00D">9</span>
+h[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">c</span><span style="color:#710">&quot;</span></span>] = <span style="color:#00D">4</span>
+h   <span style="color:#777">#=&gt; {&quot;a&quot;=&gt;9, &quot;b&quot;=&gt;200, &quot;c&quot;=&gt;4}</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+669
+670
+671
 672
 673
 674
 675
-676</pre>
+676
+677</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 672</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 669</span>
+
+static mrb_value
+mrb_hash_aset(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value key, val;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">oo</span><span style="color:#710">&quot;</span></span>, &amp;key, &amp;val);
+  mrb_hash_set(mrb, <span style="color:#069">self</span>, key, val);
+  <span style="color:#080;font-weight:bold">return</span> val;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_h-instance_method">
+  
+    #<strong>to_h</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    hsh.to_h     -&gt; hsh or new_hash</p>
+
+<p>Returns +self+. If called on a subclass of Hash, converts
+ the receiver to a Hash object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+285
+286
+287</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 285</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_h</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_hash-instance_method">
+  
+    #<strong>to_hash</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns +self+.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+729
+730
+731
+732
+733</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 729</span>
 
 static mrb_value
 mrb_hash_to_hash(mrb_state *mrb, mrb_value hash)
@@ -6185,12 +7048,283 @@ mrb_hash_to_hash(mrb_state *mrb, mrb_value hash)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="to_proc-instance_method">
+  
+    #<strong>to_proc</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+478
+479
+480</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 478</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_proc</span>
+  -&gt;x{<span style="color:#069">self</span>[x]}
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transform_keys-instance_method">
+  
+    #<strong>transform_keys</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   hsh.transform_keys {|key| block } -&gt; new_hash
+   hsh.transform_keys                -&gt; an_enumerator</p>
+
+<p>Returns a new hash, with the keys computed from running the block
+once for each key in the hash, and the values unchanged.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+412
+413
+414
+415
+416
+417
+418
+419
+420</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 412</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">transform_keys</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:transform_keys</span> <span style="color:#080;font-weight:bold">unless</span> block
+  hash = {}
+  <span style="color:#069">self</span>.keys.each <span style="color:#080;font-weight:bold">do</span> |k|
+    new_key = block.call(k)
+    hash[new_key] = <span style="color:#069">self</span>[k]
+  <span style="color:#080;font-weight:bold">end</span>
+  hash
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transform_keys!-instance_method">
+  
+    #<strong>transform_keys!</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   hsh.transform_keys! {|key| block } -&gt; hsh
+   hsh.transform_keys!                -&gt; an_enumerator</p>
+
+<p>Invokes the given block once for each key in <i>hsh</i>, replacing it
+with the new key returned by the block, and then returns <i>hsh</i>.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 431</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">transform_keys!</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:transform_keys!</span> <span style="color:#080;font-weight:bold">unless</span> block
+  <span style="color:#069">self</span>.keys.each <span style="color:#080;font-weight:bold">do</span> |k|
+    value = <span style="color:#069">self</span>[k]
+    new_key = block.call(k)
+    <span style="color:#069">self</span>.__delete(k)
+    <span style="color:#069">self</span>[new_key] = value
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transform_values-instance_method">
+  
+    #<strong>transform_values</strong>(&amp;b)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   hsh.transform_values {|value| block } -&gt; new_hash
+   hsh.transform_values                  -&gt; an_enumerator</p>
+
+<p>Returns a new hash with the results of running the block once for
+every value.
+This method does not change the keys.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+452
+453
+454
+455
+456
+457
+458
+459</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 452</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">transform_values</span>(&amp;b)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:transform_values</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+  hash = {}
+  <span style="color:#069">self</span>.keys.each <span style="color:#080;font-weight:bold">do</span> |k|
+    hash[k] = <span style="color:#080;font-weight:bold">yield</span>(<span style="color:#069">self</span>[k])
+  <span style="color:#080;font-weight:bold">end</span>
+  hash
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transform_values!-instance_method">
+  
+    #<strong>transform_values!</strong>(&amp;b)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   hsh.transform_values! {|key| block } -&gt; hsh
+   hsh.transform_values!                -&gt; an_enumerator</p>
+
+<p>Invokes the given block once for each value in the hash, replacing
+with the new value returned by the block, and then returns <i>hsh</i>.</p>
+
+<p>If no block is given, an enumerator is returned instead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+470
+471
+472
+473
+474
+475
+476</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-hash-ext/mrblib/hash.rb', line 470</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">transform_values!</span>(&amp;b)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:transform_values!</span> <span style="color:#080;font-weight:bold">unless</span> block_given?
+  <span style="color:#069">self</span>.keys.each <span style="color:#080;font-weight:bold">do</span> |k|
+    <span style="color:#069">self</span>[k] = <span style="color:#080;font-weight:bold">yield</span>(<span style="color:#069">self</span>[k])
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="value?-instance_method">
   
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>has_value?</strong>(value) </span>
+      <span class="overload">#<strong>has_value?</strong>(value)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>value?</strong>(value) </span>
+      <span class="overload">#<strong>value?</strong>(value)  &#x21d2; <tt>Boolean</tt> </span>
     
   
 
@@ -6202,7 +7336,7 @@ mrb_hash_to_hash(mrb_state *mrb, mrb_value hash)
     <p>Returns <code>true</code> if the given value is present for some key
 in <i>hsh</i>.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
+<p>h = { “a” =&gt; 100, “b” =&gt; 200 }
    h.has_value?(100)   #=&gt; true
    h.has_value?(999)   #=&gt; false</p>
 
@@ -6216,10 +7350,11 @@ in <i>hsh</i>.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>has_value?</strong>(value) </span>
+        <span class="signature">#<strong>has_value?</strong>(value)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -6246,10 +7381,11 @@ in <i>hsh</i>.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>value?</strong>(value) </span>
+        <span class="signature">#<strong>value?</strong>(value)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -6298,30 +7434,30 @@ in <i>hsh</i>.</p>
       <pre class="lines">
 
 
-797
-798
-799
-800
-801
-802
-803
-804
-805
-806
-807
-808
-809
-810
-811
-812
-813
-814
-815
-816
-817</pre>
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+875
+876
+877
+878
+879
+880
+881</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 797</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 861</span>
 
 static mrb_value
 mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
@@ -6352,7 +7488,7 @@ mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
       <div class="method_details ">
   <h3 class="signature " id="values-instance_method">
   
-    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt>) <strong>values</strong> 
+    #<strong>values</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt> 
   
 
   
@@ -6363,7 +7499,7 @@ mrb_hash_has_value(mrb_state *mrb, mrb_value hash)
     <p>Returns a new array populated with the values from <i>hsh</i>. See
 also <code>Hash#keys</code>.</p>
 
-<p>h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200, &quot;c&quot; =&gt; 300 }
+<p>h = { “a” =&gt; 100, “b” =&gt; 200, “c” =&gt; 300 }
    h.values   #=&gt; [100, 200, 300]</p>
 
 
@@ -6374,6 +7510,7 @@ also <code>Hash#keys</code>.</p>
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -6406,29 +7543,29 @@ also <code>Hash#keys</code>.</p>
       <pre class="lines">
 
 
-727
-728
-729
-730
-731
-732
-733
-734
-735
-736
-737
-738
-739
-740
-741
-742
-743
-744</pre>
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
+806
+807
+808</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/hash.c', line 727</span>
+      <pre class="code"><span class="info file"># File 'src/hash.c', line 791</span>
 
-static mrb_value
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_hash_values(mrb_state *mrb, mrb_value hash)
 {
   khash_t(ht) *h = RHASH_TBL(hash);
@@ -6454,7 +7591,7 @@ mrb_hash_values(mrb_state *mrb, mrb_value hash)
       <div class="method_details ">
   <h3 class="signature " id="values_at-instance_method">
   
-    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt>) <strong>values_at</strong>(key, ...) 
+    #<strong>values_at</strong>(key, ...)  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt> 
   
 
   
@@ -6465,8 +7602,8 @@ mrb_hash_values(mrb_state *mrb, mrb_value hash)
     <p>Return an array containing the values associated with the given keys.
 Also see <code>Hash.select</code>.</p>
 
-<p>h = { &quot;cat&quot; =&gt; &quot;feline&quot;, &quot;dog&quot; =&gt; &quot;canine&quot;, &quot;cow&quot; =&gt; &quot;bovine&quot; }
-  h.values_at(&quot;cow&quot;, &quot;cat&quot;)  #=&gt; [&quot;bovine&quot;, &quot;feline&quot;]</p>
+<p>h = { “cat” =&gt; “feline”, “dog” =&gt; “canine”, “cow” =&gt; “bovine” }
+  h.values_at(“cow”, “cat”)  #=&gt; [“bovine”, “feline”]</p>
 
 
   </div>
@@ -6476,6 +7613,7 @@ Also see <code>Hash.select</code>.</p>
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -6553,11 +7691,12 @@ hash_values_at(mrb_state *mrb, mrb_value hash)
 
 </div>
 
-    <div id="footer">
-  Generated on Sun Jan 17 01:23:00 2016 by
+      <div id="footer">
+  Generated on Fri May 11 23:53:56 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
+  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
 </div>
 
+    </div>
   </body>
 </html>
