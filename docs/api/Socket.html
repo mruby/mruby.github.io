@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Socket
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Socket";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (S)</a> &raquo;
+    
+    
+    <span class="title">Socket</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Socket
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="BasicSocket.html" title="BasicSocket (class)">BasicSocket</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="IO.html" title="IO (class)">IO</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="BasicSocket.html" title="BasicSocket (class)">BasicSocket</a></span></li>
+          
+            <li class="next">Socket</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Socket/Constants.html" title="Socket::Constants (module)">Constants</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>mrbgems/mruby-socket/src/socket.c<span class="defines">,<br />
+  mrbgems/mruby-socket/mrblib/socket.rb,<br /> mrbgems/mruby-socket/mrblib/socket.rb,<br /> mrbgems/mruby-socket/mrblib/socket.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <h1 id="recvfromnonblock">recvfrom_nonblock</h1>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Socket/Constants.html" title="Socket::Constants (module)">Constants</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Socket/Option.html" title="Socket::Option (class)">Option</a></span>
+    
+  
+</p>
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="IO.html" title="IO (class)">IO</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="IO.html#BUF_SIZE-constant" title="IO::BUF_SIZE (constant)">IO::BUF_SIZE</a></span>, <span class='object_link'><a href="IO.html#SEEK_CUR-constant" title="IO::SEEK_CUR (constant)">IO::SEEK_CUR</a></span>, <span class='object_link'><a href="IO.html#SEEK_END-constant" title="IO::SEEK_END (constant)">IO::SEEK_END</a></span>, <span class='object_link'><a href="IO.html#SEEK_SET-constant" title="IO::SEEK_SET (constant)">IO::SEEK_SET</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="BasicSocket.html" title="BasicSocket (class)">BasicSocket</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="BasicSocket.html#do_not_reverse_lookup-instance_method" title="BasicSocket#do_not_reverse_lookup (method)">#do_not_reverse_lookup</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getaddrinfo-class_method" title="getaddrinfo (class method)">.<strong>getaddrinfo</strong>(nodename, servname, family = nil, socktype = nil, protocol = nil, flags = 0)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>def self.accept_loop.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open-class_method" title="open (class method)">.<strong>open</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>def self.getnameinfo def self.ip_address_list.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sockaddr_in-class_method" title="sockaddr_in (class method)">.<strong>sockaddr_in</strong>(port, host)  &#x21d2; Object </a>
+    
+
+    
+      (also: pack_sockaddr_in)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unpack_sockaddr_in-class_method" title="unpack_sockaddr_in (class method)">.<strong>unpack_sockaddr_in</strong>(sa)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>def self.tcp def self.tcp_server_loop def self.tcp_server_sockets def self.udp_server_loop def self.udp_server_loop_on def self.udp_server_recv def self.udp_server_sockets def self.unix(path) def self.unix_server_loop def self.unix_server_socket.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unpack_sockaddr_un-class_method" title="unpack_sockaddr_un (class method)">.<strong>unpack_sockaddr_un</strong>(sa)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#accept-instance_method" title="#accept (instance method)">#<strong>accept</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#accept_nonblock-instance_method" title="#accept_nonblock (instance method)">#<strong>accept_nonblock</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bind-instance_method" title="#bind (instance method)">#<strong>bind</strong>(sockaddr)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect-instance_method" title="#connect (instance method)">#<strong>connect</strong>(sockaddr)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect_nonblock-instance_method" title="#connect_nonblock (instance method)">#<strong>connect_nonblock</strong>(sockaddr)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(domain, type, protocol = 0)  &#x21d2; Socket </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of Socket.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listen-instance_method" title="#listen (instance method)">#<strong>listen</strong>(backlog)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>def ipv6only!.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recvfrom-instance_method" title="#recvfrom (instance method)">#<strong>recvfrom</strong>(maxlen, flags = 0)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recvfrom_nonblock-instance_method" title="#recvfrom_nonblock (instance method)">#<strong>recvfrom_nonblock</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sysaccept-instance_method" title="#sysaccept (instance method)">#<strong>sysaccept</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="BasicSocket.html" title="BasicSocket (class)">BasicSocket</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="BasicSocket.html#_is_socket=-instance_method" title="BasicSocket#_is_socket= (method)">#_is_socket=</a></span>, <span class='object_link'><a href="BasicSocket.html#_recvfrom-instance_method" title="BasicSocket#_recvfrom (method)">#_recvfrom</a></span>, <span class='object_link'><a href="BasicSocket.html#_setnonblock-instance_method" title="BasicSocket#_setnonblock (method)">#_setnonblock</a></span>, <span class='object_link'><a href="BasicSocket.html#close-instance_method" title="BasicSocket#close (method)">#close</a></span>, <span class='object_link'><a href="BasicSocket.html#do_not_reverse_lookup-class_method" title="BasicSocket.do_not_reverse_lookup (method)">do_not_reverse_lookup</a></span>, <span class='object_link'><a href="BasicSocket.html#do_not_reverse_lookup=-class_method" title="BasicSocket.do_not_reverse_lookup= (method)">do_not_reverse_lookup=</a></span>, <span class='object_link'><a href="BasicSocket.html#for_fd-class_method" title="BasicSocket.for_fd (method)">for_fd</a></span>, <span class='object_link'><a href="BasicSocket.html#getpeereid-instance_method" title="BasicSocket#getpeereid (method)">#getpeereid</a></span>, <span class='object_link'><a href="BasicSocket.html#getpeername-instance_method" title="BasicSocket#getpeername (method)">#getpeername</a></span>, <span class='object_link'><a href="BasicSocket.html#getsockname-instance_method" title="BasicSocket#getsockname (method)">#getsockname</a></span>, <span class='object_link'><a href="BasicSocket.html#getsockopt-instance_method" title="BasicSocket#getsockopt (method)">#getsockopt</a></span>, <span class='object_link'><a href="BasicSocket.html#local_address-instance_method" title="BasicSocket#local_address (method)">#local_address</a></span>, <span class='object_link'><a href="BasicSocket.html#recv-instance_method" title="BasicSocket#recv (method)">#recv</a></span>, <span class='object_link'><a href="BasicSocket.html#recv_nonblock-instance_method" title="BasicSocket#recv_nonblock (method)">#recv_nonblock</a></span>, <span class='object_link'><a href="BasicSocket.html#remote_address-instance_method" title="BasicSocket#remote_address (method)">#remote_address</a></span>, <span class='object_link'><a href="BasicSocket.html#send-instance_method" title="BasicSocket#send (method)">#send</a></span>, <span class='object_link'><a href="BasicSocket.html#setsockopt-instance_method" title="BasicSocket#setsockopt (method)">#setsockopt</a></span>, <span class='object_link'><a href="BasicSocket.html#shutdown-instance_method" title="BasicSocket#shutdown (method)">#shutdown</a></span>, <span class='object_link'><a href="BasicSocket.html#sysread-instance_method" title="BasicSocket#sysread (method)">#sysread</a></span>, <span class='object_link'><a href="BasicSocket.html#sysseek-instance_method" title="BasicSocket#sysseek (method)">#sysseek</a></span>, <span class='object_link'><a href="BasicSocket.html#syswrite-instance_method" title="BasicSocket#syswrite (method)">#syswrite</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="IO.html" title="IO (class)">IO</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="IO.html#<<-instance_method" title="IO#&lt;&lt; (method)">#<<</a></span>, <span class='object_link'><a href="IO.html#_check_readable-instance_method" title="IO#_check_readable (method)">#_check_readable</a></span>, <span class='object_link'><a href="IO.html#_read_buf-instance_method" title="IO#_read_buf (method)">#_read_buf</a></span>, <span class='object_link'><a href="IO.html#close-instance_method" title="IO#close (method)">#close</a></span>, <span class='object_link'><a href="IO.html#close_on_exec=-instance_method" title="IO#close_on_exec= (method)">#close_on_exec=</a></span>, <span class='object_link'><a href="IO.html#close_on_exec%3F-instance_method" title="IO#close_on_exec? (method)">#close_on_exec?</a></span>, <span class='object_link'><a href="IO.html#close_write-instance_method" title="IO#close_write (method)">#close_write</a></span>, <span class='object_link'><a href="IO.html#closed%3F-instance_method" title="IO#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="IO.html#each-instance_method" title="IO#each (method)">#each</a></span>, <span class='object_link'><a href="IO.html#each_byte-instance_method" title="IO#each_byte (method)">#each_byte</a></span>, <span class='object_link'><a href="IO.html#eof%3F-instance_method" title="IO#eof? (method)">#eof?</a></span>, <span class='object_link'><a href="IO.html#fileno-instance_method" title="IO#fileno (method)">#fileno</a></span>, <span class='object_link'><a href="IO.html#flush-instance_method" title="IO#flush (method)">#flush</a></span>, <span class='object_link'><a href="IO.html#getc-instance_method" title="IO#getc (method)">#getc</a></span>, <span class='object_link'><a href="IO.html#gets-instance_method" title="IO#gets (method)">#gets</a></span>, <span class='object_link'><a href="IO.html#hash-instance_method" title="IO#hash (method)">#hash</a></span>, <span class='object_link'><a href="IO.html#initialize_copy-instance_method" title="IO#initialize_copy (method)">#initialize_copy</a></span>, <span class='object_link'><a href="IO.html#isatty-instance_method" title="IO#isatty (method)">#isatty</a></span>, <span class='object_link'><a href="IO.html#pid-instance_method" title="IO#pid (method)">#pid</a></span>, <span class='object_link'><a href="IO.html#pipe-class_method" title="IO.pipe (method)">pipe</a></span>, <span class='object_link'><a href="IO.html#popen-class_method" title="IO.popen (method)">popen</a></span>, <span class='object_link'><a href="IO.html#pos-instance_method" title="IO#pos (method)">#pos</a></span>, <span class='object_link'><a href="IO.html#pos=-instance_method" title="IO#pos= (method)">#pos=</a></span>, <span class='object_link'><a href="IO.html#print-instance_method" title="IO#print (method)">#print</a></span>, <span class='object_link'><a href="IO.html#printf-instance_method" title="IO#printf (method)">#printf</a></span>, <span class='object_link'><a href="IO.html#puts-instance_method" title="IO#puts (method)">#puts</a></span>, <span class='object_link'><a href="IO.html#read-class_method" title="IO.read (method)">read</a></span>, <span class='object_link'><a href="IO.html#read-instance_method" title="IO#read (method)">#read</a></span>, <span class='object_link'><a href="IO.html#readchar-instance_method" title="IO#readchar (method)">#readchar</a></span>, <span class='object_link'><a href="IO.html#readline-instance_method" title="IO#readline (method)">#readline</a></span>, <span class='object_link'><a href="IO.html#readlines-instance_method" title="IO#readlines (method)">#readlines</a></span>, <span class='object_link'><a href="IO.html#rewind-instance_method" title="IO#rewind (method)">#rewind</a></span>, <span class='object_link'><a href="IO.html#seek-instance_method" title="IO#seek (method)">#seek</a></span>, <span class='object_link'><a href="IO.html#sync-instance_method" title="IO#sync (method)">#sync</a></span>, <span class='object_link'><a href="IO.html#sync=-instance_method" title="IO#sync= (method)">#sync=</a></span>, <span class='object_link'><a href="IO.html#sysread-instance_method" title="IO#sysread (method)">#sysread</a></span>, <span class='object_link'><a href="IO.html#sysseek-instance_method" title="IO#sysseek (method)">#sysseek</a></span>, <span class='object_link'><a href="IO.html#syswrite-instance_method" title="IO#syswrite (method)">#syswrite</a></span>, <span class='object_link'><a href="IO.html#ungetc-instance_method" title="IO#ungetc (method)">#ungetc</a></span>, <span class='object_link'><a href="IO.html#write-instance_method" title="IO#write (method)">#write</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(domain, type, protocol = 0)  &#x21d2; <tt><span class='object_link'><a href="" title="Socket (class)">Socket</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of Socket</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+354
+355
+356</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 354</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize</span>(domain, type, protocol=<span style="color:#00D">0</span>)
+  <span style="color:#080;font-weight:bold">super</span>(<span style="color:#036;font-weight:bold">Socket</span>._socket(domain, type, protocol), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">r+</span><span style="color:#710">&quot;</span></span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="getaddrinfo-class_method">
+  
+    .<strong>getaddrinfo</strong>(nodename, servname, family = nil, socktype = nil, protocol = nil, flags = 0)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>def self.accept_loop</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 360</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">getaddrinfo</span>(nodename, servname, family=<span style="color:#069">nil</span>, socktype=<span style="color:#069">nil</span>, protocol=<span style="color:#069">nil</span>, flags=<span style="color:#00D">0</span>)
+  <span style="color:#036;font-weight:bold">Addrinfo</span>.getaddrinfo(nodename, servname, family, socktype, protocol, flags).map { |ai|
+    ary = ai._to_array
+    ary[<span style="color:#00D">2</span>] = nodename
+    ary[<span style="color:#00D">4</span>] = ai.afamily
+    ary[<span style="color:#00D">5</span>] = ai.socktype
+    ary[<span style="color:#00D">6</span>] = ai.protocol
+    ary
+  }
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open-class_method">
+  
+    .<strong>open</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>def self.getnameinfo
+def self.ip_address_list</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+374
+375
+376</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 374</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">open</span>(*args)
+  new(args)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sockaddr_in-class_method">
+  
+    .<strong>sockaddr_in</strong>(port, host)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='pack_sockaddr_in-class_method'>pack_sockaddr_in</span></span>
+    </span>
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+378
+379
+380
+381</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 378</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">sockaddr_in</span>(port, host)
+  ai = <span style="color:#036;font-weight:bold">Addrinfo</span>.getaddrinfo(host, port, <span style="color:#069">nil</span>, <span style="color:#036;font-weight:bold">Socket</span>::<span style="color:#036;font-weight:bold">SOCK_DGRAM</span>)[<span style="color:#00D">0</span>]
+  ai.to_sockaddr
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unpack_sockaddr_in-class_method">
+  
+    .<strong>unpack_sockaddr_in</strong>(sa)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>def self.tcp
+def self.tcp_server_loop
+def self.tcp_server_sockets
+def self.udp_server_loop
+def self.udp_server_loop_on
+def self.udp_server_recv
+def self.udp_server_sockets
+def self.unix(path)
+def self.unix_server_loop
+def self.unix_server_socket</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+394
+395
+396</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 394</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">unpack_sockaddr_in</span>(sa)
+  <span style="color:#036;font-weight:bold">Addrinfo</span>.new(sa).ip_unpack.reverse
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unpack_sockaddr_un-class_method">
+  
+    .<strong>unpack_sockaddr_un</strong>(sa)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+398
+399
+400</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 398</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">unpack_sockaddr_un</span>(sa)
+  <span style="color:#036;font-weight:bold">Addrinfo</span>.new(sa).unix_path
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="accept-instance_method">
+  
+    #<strong>accept</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+408
+409
+410
+411</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 408</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">accept</span>
+  fd, addr = <span style="color:#069">self</span>.sysaccept
+  [ <span style="color:#036;font-weight:bold">Socket</span>.for_fd(fd), addr ]
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="accept_nonblock-instance_method">
+  
+    #<strong>accept_nonblock</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+413
+414
+415
+416
+417
+418
+419
+420</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 413</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">accept_nonblock</span>
+  <span style="color:#080;font-weight:bold">begin</span>
+    <span style="color:#069">self</span>._setnonblock(<span style="color:#069">true</span>)
+    <span style="color:#069">self</span>.accept
+  <span style="color:#080;font-weight:bold">ensure</span>
+    <span style="color:#069">self</span>._setnonblock(<span style="color:#069">false</span>)
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bind-instance_method">
+  
+    #<strong>bind</strong>(sockaddr)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+422
+423
+424
+425
+426</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 422</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">bind</span>(sockaddr)
+  sockaddr = sockaddr.to_sockaddr <span style="color:#080;font-weight:bold">if</span> sockaddr.is_a? <span style="color:#036;font-weight:bold">Addrinfo</span>
+  <span style="color:#036;font-weight:bold">Socket</span>._bind(<span style="color:#069">self</span>.fileno, sockaddr)
+  <span style="color:#00D">0</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connect-instance_method">
+  
+    #<strong>connect</strong>(sockaddr)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+428
+429
+430
+431
+432</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 428</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">connect</span>(sockaddr)
+  sockaddr = sockaddr.to_sockaddr <span style="color:#080;font-weight:bold">if</span> sockaddr.is_a? <span style="color:#036;font-weight:bold">Addrinfo</span>
+  <span style="color:#036;font-weight:bold">Socket</span>._connect(<span style="color:#069">self</span>.fileno, sockaddr)
+  <span style="color:#00D">0</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connect_nonblock-instance_method">
+  
+    #<strong>connect_nonblock</strong>(sockaddr)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+434
+435
+436
+437
+438
+439
+440
+441</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 434</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">connect_nonblock</span>(sockaddr)
+  <span style="color:#080;font-weight:bold">begin</span>
+    <span style="color:#069">self</span>._setnonblock(<span style="color:#069">true</span>)
+    <span style="color:#069">self</span>.connect(sockaddr)
+  <span style="color:#080;font-weight:bold">ensure</span>
+    <span style="color:#069">self</span>._setnonblock(<span style="color:#069">false</span>)
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="listen-instance_method">
+  
+    #<strong>listen</strong>(backlog)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>def ipv6only!</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+445
+446
+447
+448</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 445</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">listen</span>(backlog)
+  <span style="color:#036;font-weight:bold">Socket</span>._listen(<span style="color:#069">self</span>.fileno, backlog)
+  <span style="color:#00D">0</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="recvfrom-instance_method">
+  
+    #<strong>recvfrom</strong>(maxlen, flags = 0)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+450
+451
+452
+453
+454</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 450</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">recvfrom</span>(maxlen, flags=<span style="color:#00D">0</span>)
+  msg, sa = _recvfrom(maxlen, flags)
+  socktype = <span style="color:#069">self</span>.getsockopt(<span style="color:#036;font-weight:bold">Socket</span>::<span style="color:#036;font-weight:bold">SOL_SOCKET</span>, <span style="color:#036;font-weight:bold">Socket</span>::<span style="color:#036;font-weight:bold">SO_TYPE</span>).int
+  [ msg, <span style="color:#036;font-weight:bold">Addrinfo</span>.new(sa, <span style="color:#036;font-weight:bold">Socket</span>::<span style="color:#036;font-weight:bold">PF_UNSPEC</span>, socktype) ]
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="recvfrom_nonblock-instance_method">
+  
+    #<strong>recvfrom_nonblock</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+456
+457
+458
+459
+460
+461
+462
+463</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 456</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">recvfrom_nonblock</span>(*args)
+  <span style="color:#080;font-weight:bold">begin</span>
+    <span style="color:#069">self</span>._setnonblock(<span style="color:#069">true</span>)
+    <span style="color:#069">self</span>._recvfrom(*args)
+  <span style="color:#080;font-weight:bold">ensure</span>
+    <span style="color:#069">self</span>._setnonblock(<span style="color:#069">false</span>)
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sysaccept-instance_method">
+  
+    #<strong>sysaccept</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+465
+466
+467</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/mrblib/socket.rb', line 465</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">sysaccept</span>
+  <span style="color:#036;font-weight:bold">Socket</span>._accept2(<span style="color:#069">self</span>.fileno)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri May 11 23:53:59 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

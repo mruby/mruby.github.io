@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Header: mruby/string.h
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.12
   
 </title>
 
@@ -17,9 +17,8 @@
   <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "mruby/string.h";
   relpath = '../';
-  framesUrl = "../frames.html#!headers/mruby_2Fstring.h.html";
 </script>
 
 
@@ -32,52 +31,39 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="../_index.html">Index (m)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../headers.html" title="headers (headersroot)">headers</a></span></span>
      &raquo; 
     <span class="title">mruby/string.h</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="header_list_link"
-        href="../header_list.html">
-      Header List
-    </a>
-  
-    <a class="full_list_link" id="function_list_link"
-        href="../function_list.html">
-      Function List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
-
-    <div id="content"><h1>Header: mruby/string.h</h1>
+      <div id="content"><h1>Header: mruby/string.h</h1>
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
@@ -102,6 +88,24 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_str_strlen-function" title="mrb_str_strlen">mrb_int <strong>mrb_str_strlen</strong>(mrb_state*, struct RString*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_str_modify-function" title="mrb_str_modify">void <strong>mrb_str_modify</strong>(mrb_state*, struct RString*)</a>
 
     
@@ -112,7 +116,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_str_index-function" title="mrb_str_index">mrb_int <strong>mrb_str_index</strong>(mrb_state*, mrb_value, const char*, mrb_int, mrb_int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Finds the index of a substring in a string.</p>
+</div></span>
   
 </li>
 
@@ -129,7 +152,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Appends self to other.</p>
+</div></span>
   
 </li>
 
@@ -200,7 +224,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Resizes the string&#39;s length.</p>
+    <span class="summary_desc"><div class='inline'><p>Resizes the string’s length.</p>
 </div></span>
   
 </li>
@@ -254,7 +278,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_str_new_capa-function" title="mrb_str_new_capa">mrb_value <strong>mrb_str_new_capa</strong>(mrb_state *, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -271,7 +314,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -288,7 +332,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the length of the Ruby string.</p>
+</div></span>
   
 </li>
 
@@ -323,7 +368,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a symbol from a passed in string.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a symbol from a passed in Ruby string.</p>
 </div></span>
   
 </li>
@@ -341,7 +386,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -358,7 +404,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -393,7 +440,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if the strings match and false if the strings don&#39;t match.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns true if the strings match and false if the strings don’t match.</p>
 </div></span>
   
 </li>
@@ -447,7 +494,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -582,6 +630,21 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="RSTR_FSHARED_P-define" class=""><small>#define</small> RSTR_FSHARED_P
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RSTR_SET_FSHARED_FLAG-define" class=""><small>#define</small> RSTR_SET_FSHARED_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RSTR_UNSET_FSHARED_FLAG-define" class=""><small>#define</small> RSTR_UNSET_FSHARED_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="RSTR_NOFREE_P-define" class=""><small>#define</small> RSTR_NOFREE_P
         
       </dt>
@@ -597,17 +660,12 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="RSTR_FROZEN_P-define" class=""><small>#define</small> RSTR_FROZEN_P
+      <dt id="RSTR_POOL_P-define" class=""><small>#define</small> RSTR_POOL_P
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="RSTR_SET_FROZEN_FLAG-define" class=""><small>#define</small> RSTR_SET_FROZEN_FLAG
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="RSTR_UNSET_FROZEN_FLAG-define" class=""><small>#define</small> RSTR_UNSET_FROZEN_FLAG
+      <dt id="RSTR_SET_POOL_FLAG-define" class=""><small>#define</small> RSTR_SET_POOL_FLAG
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -664,12 +722,22 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="MRB_STR_FSHARED-define" class=""><small>#define</small> MRB_STR_FSHARED
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="MRB_STR_NOFREE-define" class=""><small>#define</small> MRB_STR_NOFREE
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_STR_FROZEN-define" class=""><small>#define</small> MRB_STR_FROZEN
+      <dt id="MRB_STR_POOL-define" class=""><small>#define</small> MRB_STR_POOL
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_STR_NO_UTF-define" class=""><small>#define</small> MRB_STR_NO_UTF
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -685,6 +753,11 @@
       <dd><pre class="code"></pre></dd>
     
       <dt id="MRB_STR_EMBED_LEN_SHIFT-define" class=""><small>#define</small> MRB_STR_EMBED_LEN_SHIFT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_str_index_lit-define" class=""><small>#define</small> mrb_str_index_lit
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -729,11 +802,43 @@
 
   
     <div class="method_details first">
-  <h3 class="signature first" id="mrb_str_modify-function">
+  <h3 class="signature first" id="mrb_str_strlen-function">
+  mrb_int <strong>mrb_str_strlen</strong>(mrb_state* , struct RString* )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_str_modify-function">
   void <strong>mrb_str_modify</strong>(mrb_state* , struct RString* )
 
   
 </h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_str_index-function">
+  mrb_int <strong>mrb_str_index</strong>(mrb_state* , mrb_value , const char* , mrb_int , mrb_int )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Finds the index of a substring in a string</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
@@ -744,6 +849,119 @@
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Appends self to other. Returns self as a concatnated string.</p>
+
+<p>Example:</p>
+
+<pre class="code c"><code class="c"><span style="color:#0a8;font-weight:bold">int</span>
+main(<span style="color:#0a8;font-weight:bold">int</span> argc,
+     <span style="color:#0a8;font-weight:bold">char</span> **argv)
+{
+  <span style="color:#777">// Variable declarations.</span>
+  mrb_value str1;
+  mrb_value str2;
+
+  mrb_state *mrb = mrb_open();
+  <span style="color:#080;font-weight:bold">if</span> (!mrb)
+  {
+     <span style="color:#777">// handle error</span>
+  }
+
+  <span style="color:#777">// Creates new Ruby strings.</span>
+  str1 = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abc</span><span style="color:#710">&quot;</span></span>);
+  str2 = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">def</span><span style="color:#710">&quot;</span></span>);
+
+  <span style="color:#777">// Concatnates str2 to str1.</span>
+  mrb_str_concat(mrb, str1, str2);
+
+ <span style="color:#777">// Prints new Concatnated Ruby string.</span>
+ mrb_p(mrb, str1);
+
+ mrb_close(mrb);
+ <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;    }
+</code></pre>
+
+<p>Result:</p>
+
+<pre class="code ruby"><code class="ruby">=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abcdef</span><span style="color:#710">&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>self</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>String to concatenate.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>other</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>String to append to self.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns a new String appending other to self.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
 
 </div>
 
@@ -758,11 +976,119 @@
   <div class="discussion">
     <p>Adds two strings together.</p>
 
+<p>Example:</p>
+
+<pre class="code c"><code class="c"><span style="color:#0a8;font-weight:bold">int</span>
+main(<span style="color:#0a8;font-weight:bold">int</span> argc,
+     <span style="color:#0a8;font-weight:bold">char</span> **argv)
+{
+  <span style="color:#777">// Variable declarations.</span>
+  mrb_value a;
+  mrb_value b;
+  mrb_value c;
+
+  mrb_state *mrb = mrb_open();
+  <span style="color:#080;font-weight:bold">if</span> (!mrb)
+  {
+     <span style="color:#777">// handle error</span>
+  }
+
+  <span style="color:#777">// Creates two Ruby strings from the passed in C strings.</span>
+  a = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abc</span><span style="color:#710">&quot;</span></span>);
+  b = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">def</span><span style="color:#710">&quot;</span></span>);
+
+  <span style="color:#777">// Prints both C strings.</span>
+  mrb_p(mrb, a);
+  mrb_p(mrb, b);
+
+  <span style="color:#777">// Concatnates both Ruby strings.</span>
+  c = mrb_str_plus(mrb, a, b);
+
+ <span style="color:#777">// Prints new Concatnated Ruby string.</span>
+ mrb_p(mrb, c);
+
+ mrb_close(mrb);
+ <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;    }
+</code></pre>
+
+<p>Result:</p>
+
+<pre class="code ruby"><code class="ruby">=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abc</span><span style="color:#710">&quot;</span></span>  <span style="color:#777"># First string</span>
+=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">def</span><span style="color:#710">&quot;</span></span>  <span style="color:#777"># Second string</span>
+=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abcdef</span><span style="color:#710">&quot;</span></span> <span style="color:#777"># First &amp; Second concatnated.</span>
+</code></pre>
+
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>a</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>First string to concatenate.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>b</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Second string to concatenate.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns a new String containing a concatenated to b.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -784,7 +1110,58 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>p</span>
+      
+      
+        <span class='type'>(<tt>void*</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The pointer to convert to Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns a new Ruby String.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -806,7 +1183,58 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>obj</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An object to return as a Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An object as a Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -822,13 +1250,110 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Resizes the string&#39;s length.</p>
+    <p>Resizes the string’s length. Returns the amount of characters
+in the specified by len.</p>
+
+<p>Example:</p>
+
+<pre class="code c"><code class="c"><span style="color:#0a8;font-weight:bold">int</span>
+main(<span style="color:#0a8;font-weight:bold">int</span> argc,
+     <span style="color:#0a8;font-weight:bold">char</span> **argv)
+{
+    <span style="color:#777">// Variable declaration.</span>
+    mrb_value str;
+
+    mrb_state *mrb = mrb_open();
+    <span style="color:#080;font-weight:bold">if</span> (!mrb)
+    {
+       <span style="color:#777">// handle error</span>
+    }
+    <span style="color:#777">// Creates a new string.</span>
+    str = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hello, world!</span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#777">// Returns 5 characters of</span>
+    mrb_str_resize(mrb, str, <span style="color:#00D">5</span>);
+    mrb_p(mrb, str);
+
+    mrb_close(mrb);
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+ }
+</code></pre>
+
+<p>Result:</p>
+
+<pre class="code ruby"><code class="ruby">=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hello</span><span style="color:#710">&quot;</span></span>
+</code></pre>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The Ruby string to resize.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>len</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The length.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An object as a Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -846,11 +1371,125 @@
   <div class="discussion">
     <p>Returns a sub string.</p>
 
+<p>Example:</p>
+
+<pre class="code c"><code class="c"><span style="color:#0a8;font-weight:bold">int</span>
+main(<span style="color:#0a8;font-weight:bold">int</span> argc,
+<span style="color:#0a8;font-weight:bold">char</span> <span style="color:#088;font-weight:bold">const</span> **argv)
+{
+  <span style="color:#777">// Variable declarations.</span>
+  mrb_value str1;
+  mrb_value str2;
+
+  mrb_state *mrb = mrb_open();
+  <span style="color:#080;font-weight:bold">if</span> (!mrb)
+  {
+    <span style="color:#777">// handle error</span>
+  }
+  <span style="color:#777">// Creates new string.</span>
+  str1 = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hello, world!</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#777">// Returns a sub-string within the range of 0..2</span>
+  str2 = mrb_str_substr(mrb, str1, <span style="color:#00D">0</span>, <span style="color:#00D">2</span>);
+
+  <span style="color:#777">// Prints sub-string.</span>
+  mrb_p(mrb, str2);
+
+  mrb_close(mrb);
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+}
+</code></pre>
+
+<p>Result:</p>
+
+<pre class="code ruby"><code class="ruby">=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">He</span><span style="color:#710">&quot;</span></span>
+</code></pre>
+
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>beg</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The beginning point of the sub-string.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>len</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The end point of the sub-string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An object as a Ruby sub-string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -872,7 +1511,58 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -883,6 +1573,16 @@
     <div class="method_details ">
   <h3 class="signature " id="mrb_check_string_type-function">
   mrb_value <strong>mrb_check_string_type</strong>(mrb_state * mrb, mrb_value str)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_str_new_capa-function">
+  mrb_value <strong>mrb_str_new_capa</strong>(mrb_state * mrb, size_t capa)
 
   
 </h3>
@@ -906,6 +1606,69 @@
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Returns the length of the Ruby string.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The length of the passed in Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
 
 </div>
 
@@ -924,7 +1687,58 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Duplicated Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -940,13 +1754,64 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns a symbol from a passed in string.</p>
+    <p>Returns a symbol from a passed in Ruby string.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>self</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A symbol.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -1004,13 +1869,79 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns true if the strings match and false if the strings don&#39;t match.</p>
+    <p>Returns true if the strings match and false if the strings don’t match.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str1</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string to compare.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str2</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string to compare.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>boolean value.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -1032,7 +1963,88 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ptr</span>
+      
+      
+        <span class='type'>(<tt>const char *</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A C string.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>len</span>
+      
+      
+        <span class='type'>(<tt>size_t</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>length of C string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
@@ -1061,7 +2073,73 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Ruby string.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ptr</span>
+      
+      
+        <span class='type'>(<tt>const char *</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A C string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A Ruby string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
@@ -1142,11 +2220,11 @@
 This is an utility function to pass a Ruby string to C library functions.</p>
 
 <ul>
-<li>Returned string does not contain any NUL characters (but terminator).</li>
-<li>It raises an ArgumentError exception if Ruby string contains
+  <li>Returned string does not contain any NUL characters (but terminator).</li>
+  <li>It raises an ArgumentError exception if Ruby string contains
 NUL characters.</li>
-<li>Retured string will be freed automatically on next GC.</li>
-<li>Caller can modify returned string without affecting Ruby string
+  <li>Retured string will be freed automatically on next GC.</li>
+  <li>Caller can modify returned string without affecting Ruby string
 (e.g. it can be used for mkstemp(3)).</li>
 </ul>
 
@@ -1216,11 +2294,12 @@ NUL characters.</li>
 </div>
 </div>
 
-    <div id="footer">
-  Generated on Sun Jan 17 01:23:08 2016 by
+      <div id="footer">
+  Generated on Fri May 11 23:54:00 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
+  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
 </div>
 
+    </div>
   </body>
 </html>

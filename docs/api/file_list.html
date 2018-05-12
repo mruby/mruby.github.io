@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     
       <link rel="stylesheet" href="css/full_list.css" type="text/css" media="screen" charset="utf-8" />
     
@@ -19,72 +19,84 @@
     <base id="base_target" target="_parent" />
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      var hasFrames = false;
-      try {
-        hasFrames = window.top.frames.main ? true : false;
-      } catch (e) { }
-      if (hasFrames) {
-        document.getElementById('base_target').target = 'main';
-        document.body.className = 'frames';
-      }
-    </script>
     <div id="content">
-      <h1 id="full_list_header">File List</h1>
-      <div id="nav">
-        
-          <span><a target="_self" href="class_list.html">
-            Classes
-          </a></span>
-        
-          <span><a target="_self" href="method_list.html">
-            Methods
-          </a></span>
-        
-          <span><a target="_self" href="header_list.html">
-            Headers
-          </a></span>
-        
-          <span><a target="_self" href="function_list.html">
-            Functions
-          </a></span>
-        
-          <span><a target="_self" href="file_list.html">
-            Files
-          </a></span>
-        
+      <div class="fixed_header">
+        <h1 id="full_list_header">File List</h1>
+        <div id="full_list_nav">
+          
+            <span><a target="_self" href="class_list.html">
+              Classes
+            </a></span>
+          
+            <span><a target="_self" href="method_list.html">
+              Methods
+            </a></span>
+          
+            <span><a target="_self" href="header_list.html">
+              Headers
+            </a></span>
+          
+            <span><a target="_self" href="function_list.html">
+              Functions
+            </a></span>
+          
+            <span><a target="_self" href="file_list.html">
+              Files
+            </a></span>
+          
+        </div>
+
+        <div id="search">Search: <input type="text" /></div>
       </div>
-      <div id="search">Search: <input type="text" /></div>
 
       <ul id="full_list" class="class">
         
 
-  <li class="r1"><span class="object_link"><a href="index.html" title="README">README</a></a></li>
+  <li id="object_README" class="odd">
+    <div class="item"><span class="object_link"><a href="index.html" title="README">README</a></span></div>
+  </li>
   
 
-  <li class="r2"><span class="object_link"><a href="file.AUTHORS.html" title="AUTHORS">AUTHORS</a></a></li>
+  <li id="object_AUTHORS" class="even">
+    <div class="item"><span class="object_link"><a href="file.AUTHORS.html" title="AUTHORS">AUTHORS</a></span></div>
+  </li>
   
 
-  <li class="r1"><span class="object_link"><a href="file.MITL.html" title="MITL">MITL</a></a></li>
+  <li id="object_MITL" class="odd">
+    <div class="item"><span class="object_link"><a href="file.MITL.html" title="MITL">MITL</a></span></div>
+  </li>
   
 
-  <li class="r2"><span class="object_link"><a href="file.CONTRIBUTING.html" title="CONTRIBUTING">CONTRIBUTING</a></a></li>
+  <li id="object_CONTRIBUTING" class="even">
+    <div class="item"><span class="object_link"><a href="file.CONTRIBUTING.html" title="CONTRIBUTING">CONTRIBUTING</a></span></div>
+  </li>
   
 
-  <li class="r1"><span class="object_link"><a href="file.compile.html" title="compile">compile</a></a></li>
+  <li id="object_mrbgems" class="odd">
+    <div class="item"><span class="object_link"><a href="file.mrbgems.html" title="mrbgems">mrbgems</a></span></div>
+  </li>
   
 
-  <li class="r2"><span class="object_link"><a href="file.gc-arena-howto.html" title="gc-arena-howto">gc-arena-howto</a></a></li>
+  <li id="object_debugger" class="even">
+    <div class="item"><span class="object_link"><a href="file.debugger.html" title="debugger">debugger</a></span></div>
+  </li>
   
 
-  <li class="r1"><span class="object_link"><a href="file.mrbgems.html" title="mrbgems">mrbgems</a></a></li>
+  <li id="object_compile" class="odd">
+    <div class="item"><span class="object_link"><a href="file.compile.html" title="compile">compile</a></span></div>
+  </li>
   
 
-  <li class="r2"><span class="object_link"><a href="file.mrbconf.html" title="mrbconf">mrbconf</a></a></li>
+  <li id="object_mrbconf" class="even">
+    <div class="item"><span class="object_link"><a href="file.mrbconf.html" title="mrbconf">mrbconf</a></span></div>
+  </li>
   
 
-  <li class="r1"><span class="object_link"><a href="file.debugger.html" title="debugger">debugger</a></a></li>
+  <li id="object_gc-arena-howto" class="odd">
+    <div class="item"><span class="object_link"><a href="file.gc-arena-howto.html" title="gc-arena-howto">gc-arena-howto</a></span></div>
+  </li>
   
+
 
       </ul>
     </div>

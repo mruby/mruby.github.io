@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Documentation by YARD 0.8.7.6
+  Documentation by YARD 0.9.12
   
 </title>
 
@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = null;
   relpath = '';
-  framesUrl = "frames.html#!_index.html";
 </script>
 
 
@@ -30,47 +29,34 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
-  
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
 
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="header_list_link"
-        href="header_list.html">
-      Header List
-    </a>
-  
-    <a class="full_list_link" id="function_list_link"
-        href="function_list.html">
-      Function List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
-
-    <div id="content"><h1 class="noborder title">Documentation by YARD 0.8.7.6</h1>
+      <div id="content"><h1 class="noborder title">Documentation by YARD 0.9.12</h1>
 <div id="listing">
   <h1 class="alphaindex">Alphabetic Index</h1>
   
@@ -90,19 +76,19 @@
     <li class="r2"><a href="file.CONTRIBUTING.html" title="CONTRIBUTING">CONTRIBUTING</a></li>
     
   
-    <li class="r1"><a href="file.compile.html" title="compile">compile</a></li>
-    
-  
-    <li class="r2"><a href="file.gc-arena-howto.html" title="gc-arena-howto">gc-arena-howto</a></li>
-    
-  
     <li class="r1"><a href="file.mrbgems.html" title="mrbgems">mrbgems</a></li>
+    
+  
+    <li class="r2"><a href="file.debugger.html" title="debugger">debugger</a></li>
+    
+  
+    <li class="r1"><a href="file.compile.html" title="compile">compile</a></li>
     
   
     <li class="r2"><a href="file.mrbconf.html" title="mrbconf">mrbconf</a></li>
     
   
-    <li class="r1"><a href="file.debugger.html" title="debugger">debugger</a></li>
+    <li class="r1"><a href="file.gc-arena-howto.html" title="gc-arena-howto">gc-arena-howto</a></li>
     
   
   </ul>
@@ -125,12 +111,30 @@
           <ul>
             
               <li>
+                <span class='object_link'><a href="Addrinfo.html" title="Addrinfo (class)">Addrinfo</a></span>
+                
+              </li>
+            
+              <li>
                 <span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span>
                 
               </li>
             
               <li>
                 <span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>
+                
+              </li>
+            
+          </ul>
+        </ul>
+      
+        
+        <ul id="alpha_B" class="alpha">
+          <li class="letter">B</li>
+          <ul>
+            
+              <li>
+                <span class='object_link'><a href="BasicSocket.html" title="BasicSocket (class)">BasicSocket</a></span>
                 
               </li>
             
@@ -147,6 +151,20 @@
                 
               </li>
             
+              <li>
+                <span class='object_link'><a href="File/Constants.html" title="File::Constants (module)">Constants</a></span>
+                
+                  <small>(File)</small>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="Socket/Constants.html" title="Socket::Constants (module)">Constants</a></span>
+                
+                  <small>(Socket)</small>
+                
+              </li>
+            
           </ul>
         </ul>
       
@@ -154,6 +172,11 @@
         <ul id="alpha_E" class="alpha">
           <li class="letter">E</li>
           <ul>
+            
+              <li>
+                <span class='object_link'><a href="EOFError.html" title="EOFError (class)">EOFError</a></span>
+                
+              </li>
             
               <li>
                 <span class='object_link'><a href="Enumerable.html" title="Enumerable (module)">Enumerable</a></span>
@@ -189,6 +212,23 @@
               </li>
             
               <li>
+                <span class='object_link'><a href="File.html" title="File (class)">File</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="File/FileError.html" title="File::FileError (class)">FileError</a></span>
+                
+                  <small>(File)</small>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="FileTest.html" title="FileTest (class)">FileTest</a></span>
+                
+              </li>
+            
+              <li>
                 <span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span>
                 
               </li>
@@ -200,6 +240,11 @@
             
               <li>
                 <span class='object_link'><a href="FloatDomainError.html" title="FloatDomainError (class)">FloatDomainError</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="FrozenError.html" title="FrozenError (class)">FrozenError</a></span>
                 
               </li>
             
@@ -240,9 +285,27 @@
         </ul>
       
         
+          </td><td valign='top' width="33%">
+          
+        
         <ul id="alpha_I" class="alpha">
           <li class="letter">I</li>
           <ul>
+            
+              <li>
+                <span class='object_link'><a href="IO.html" title="IO (class)">IO</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="IOError.html" title="IOError (class)">IOError</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="IPSocket.html" title="IPSocket (class)">IPSocket</a></span>
+                
+              </li>
             
               <li>
                 <span class='object_link'><a href="IndexError.html" title="IndexError (class)">IndexError</a></span>
@@ -262,9 +325,6 @@
           </ul>
         </ul>
       
-        
-          </td><td valign='top' width="33%">
-          
         
         <ul id="alpha_K" class="alpha">
           <li class="letter">K</li>
@@ -289,9 +349,9 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="Enumerable/Lazy.html" title="Enumerable::Lazy (class)">Lazy</a></span>
+                <span class='object_link'><a href="Enumerator/Lazy.html" title="Enumerator::Lazy (class)">Lazy</a></span>
                 
-                  <small>(Enumerable)</small>
+                  <small>(Enumerator)</small>
                 
               </li>
             
@@ -310,6 +370,11 @@
             
               <li>
                 <span class='object_link'><a href="Math.html" title="Math (module)">Math</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="Method.html" title="Method (class)">Method</a></span>
                 
               </li>
             
@@ -333,6 +398,18 @@
             
               <li>
                 <span class='object_link'><a href="NilClass.html" title="NilClass (class)">NilClass</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="File/NoFileError.html" title="File::NoFileError (class)">NoFileError</a></span>
+                
+                  <small>(File)</small>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="NoMemoryError.html" title="NoMemoryError (class)">NoMemoryError</a></span>
                 
               </li>
             
@@ -369,6 +446,13 @@
                 
               </li>
             
+              <li>
+                <span class='object_link'><a href="Socket/Option.html" title="Socket::Option (class)">Option</a></span>
+                
+                  <small>(Socket)</small>
+                
+              </li>
+            
           </ul>
         </ul>
       
@@ -376,6 +460,13 @@
         <ul id="alpha_P" class="alpha">
           <li class="letter">P</li>
           <ul>
+            
+              <li>
+                <span class='object_link'><a href="File/PermissionError.html" title="File::PermissionError (class)">PermissionError</a></span>
+                
+                  <small>(File)</small>
+                
+              </li>
             
               <li>
                 <span class='object_link'><a href="Proc.html" title="Proc (class)">Proc</a></span>
@@ -410,14 +501,12 @@
                 
               </li>
             
-              <li>
-                <span class='object_link'><a href="RuntimeError.html" title="RuntimeError (class)">RuntimeError</a></span>
-                
-              </li>
-            
           </ul>
         </ul>
       
+        
+          </td><td valign='top' width="33%">
+          
         
         <ul id="alpha_S" class="alpha">
           <li class="letter">S</li>
@@ -425,6 +514,16 @@
             
               <li>
                 <span class='object_link'><a href="ScriptError.html" title="ScriptError (class)">ScriptError</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="Socket.html" title="Socket (class)">Socket</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="SocketError.html" title="SocketError (class)">SocketError</a></span>
                 
               </li>
             
@@ -453,16 +552,28 @@
                 
               </li>
             
+              <li>
+                <span class='object_link'><a href="SystemStackError.html" title="SystemStackError (class)">SystemStackError</a></span>
+                
+              </li>
+            
           </ul>
         </ul>
       
         
-          </td><td valign='top' width="33%">
-          
-        
         <ul id="alpha_T" class="alpha">
           <li class="letter">T</li>
           <ul>
+            
+              <li>
+                <span class='object_link'><a href="TCPServer.html" title="TCPServer (class)">TCPServer</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="TCPSocket.html" title="TCPSocket (class)">TCPSocket</a></span>
+                
+              </li>
             
               <li>
                 <span class='object_link'><a href="Time.html" title="Time (class)">Time</a></span>
@@ -476,6 +587,41 @@
             
               <li>
                 <span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span>
+                
+              </li>
+            
+          </ul>
+        </ul>
+      
+        
+        <ul id="alpha_U" class="alpha">
+          <li class="letter">U</li>
+          <ul>
+            
+              <li>
+                <span class='object_link'><a href="UDPSocket.html" title="UDPSocket (class)">UDPSocket</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="UNIXServer.html" title="UNIXServer (class)">UNIXServer</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="UNIXSocket.html" title="UNIXSocket (class)">UNIXSocket</a></span>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="File/UnableToStat.html" title="File::UnableToStat (class)">UnableToStat</a></span>
+                
+                  <small>(File)</small>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="UnboundMethod.html" title="UnboundMethod (class)">UnboundMethod</a></span>
                 
               </li>
             
@@ -505,11 +651,12 @@
 
 </div>
 
-    <div id="footer">
-  Generated on Sun Jan 17 01:22:57 2016 by
+      <div id="footer">
+  Generated on Fri May 11 23:53:55 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
+  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
 </div>
 
+    </div>
   </body>
 </html>

@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: NilClass
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.12
   
 </title>
 
@@ -17,9 +17,8 @@
   <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "NilClass";
   relpath = '';
-  framesUrl = "frames.html#!NilClass.html";
 </script>
 
 
@@ -32,61 +31,48 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index (N)</a> &raquo;
     
     
     <span class="title">NilClass</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="header_list_link"
-        href="header_list.html">
-      Header List
-    </a>
-  
-    <a class="full_list_link" id="function_list_link"
-        href="function_list.html">
-      Function List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
-
-    <div id="content"><h1>Class: NilClass
+      <div id="content"><h1>Class: NilClass
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
@@ -97,21 +83,25 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
+
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">src/object.c</dd>
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>src/object.c</dd>
+  </dl>
+  
+</div>
 
 
 
@@ -123,7 +113,7 @@
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -131,7 +121,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%26-instance_method" title="#&amp; (instance method)">- (Object) <strong>&amp;</strong> </a>
+      <a href="#&-instance_method" title="#&amp; (instance method)">#<strong>&amp;</strong>  &#x21d2; Object </a>
     
 
     
@@ -145,7 +135,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>And---Returns false.</p>
+    <span class="summary_desc"><div class='inline'><p>And—Returns <code>false</code>.</p>
 </div></span>
   
 </li>
@@ -154,7 +144,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5E-instance_method" title="#^ (instance method)">- (Object) <strong>^</strong> </a>
+      <a href="#%5E-instance_method" title="#^ (instance method)">#<strong>^</strong>  &#x21d2; Object </a>
     
 
     
@@ -168,7 +158,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Exclusive Or---If obj is nil or false, returns false; otherwise, returns true.</p>
+    <span class="summary_desc"><div class='inline'><p>Exclusive Or—If <i>obj</i> is <code>nil</code> or <code>false</code>, returns <code>false</code>; otherwise, returns <code>true</code>.</p>
 </div></span>
   
 </li>
@@ -177,7 +167,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#inspect-instance_method" title="#inspect (instance method)">- (Object) <strong>inspect</strong> </a>
+      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong>  &#x21d2; Object </a>
     
 
     
@@ -200,7 +190,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#nil%3F-instance_method" title="#nil? (instance method)">- (Boolean) <strong>nil?</strong> </a>
+      <a href="#nil%3F-instance_method" title="#nil? (instance method)">#<strong>nil?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -223,7 +213,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_a-instance_method" title="#to_a (instance method)">- (Array) <strong>to_a</strong> </a>
+      <a href="#to_a-instance_method" title="#to_a (instance method)">#<strong>to_a</strong>  &#x21d2; Array </a>
     
 
     
@@ -246,7 +236,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_f-instance_method" title="#to_f (instance method)">- (0.0) <strong>to_f</strong> </a>
+      <a href="#to_f-instance_method" title="#to_f (instance method)">#<strong>to_f</strong>  &#x21d2; 0.0 </a>
     
 
     
@@ -269,7 +259,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_i-instance_method" title="#to_i (instance method)">- (0) <strong>to_i</strong> </a>
+      <a href="#to_i-instance_method" title="#to_i (instance method)">#<strong>to_i</strong>  &#x21d2; 0 </a>
     
 
     
@@ -292,7 +282,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; Object </a>
     
 
     
@@ -315,7 +305,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%7C-instance_method" title="#| (instance method)">- (Object) <strong>|</strong> </a>
+      <a href="#%7C-instance_method" title="#| (instance method)">#<strong>|</strong>  &#x21d2; Object </a>
     
 
     
@@ -329,7 +319,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Or---Returns false if obj is nil or false; true otherwise.</p>
+    <span class="summary_desc"><div class='inline'><p>Or—Returns <code>false</code> if <i>obj</i> is <code>nil</code> or <code>false</code>; <code>true</code> otherwise.</p>
 </div></span>
   
 </li>
@@ -348,9 +338,9 @@
   <h3 class="signature first" id="&-instance_method">
   
     
-      <span class="overload">- (<tt>false</tt>) <strong>&amp;</strong>(obj) </span>
+      <span class="overload">#<strong>&amp;</strong>(obj)  &#x21d2; <tt>false</tt> </span>
     
-      <span class="overload">- (<tt>false</tt>) <strong>&amp;</strong>(obj) </span>
+      <span class="overload">#<strong>&amp;</strong>(obj)  &#x21d2; <tt>false</tt> </span>
     
   
 
@@ -359,8 +349,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>And---Returns <code>false</code>. <i>obj</i> is always
-evaluated as it is the argument to a method call---there is no
+    <p>And—Returns <code>false</code>. <i>obj</i> is always
+evaluated as it is the argument to a method call—there is no
 short-circuit evaluation in this case.</p>
 
 
@@ -373,10 +363,11 @@ short-circuit evaluation in this case.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>false</tt>) <strong>&amp;</strong>(obj) </span>
+        <span class="signature">#<strong>&amp;</strong>(obj)  &#x21d2; <tt>false</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -403,10 +394,11 @@ short-circuit evaluation in this case.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>false</tt>) <strong>&amp;</strong>(obj) </span>
+        <span class="signature">#<strong>&amp;</strong>(obj)  &#x21d2; <tt>false</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -442,14 +434,14 @@ short-circuit evaluation in this case.</p>
       <pre class="lines">
 
 
-198
-199
-200
 201
-202</pre>
+202
+203
+204
+205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/object.c', line 198</span>
+      <pre class="code"><span class="info file"># File 'src/object.c', line 201</span>
 
 static mrb_value
 false_and(mrb_state *mrb, mrb_value obj)
@@ -465,9 +457,9 @@ false_and(mrb_state *mrb, mrb_value obj)
   <h3 class="signature " id="^-instance_method">
   
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>^</strong>(obj) </span>
+      <span class="overload">#<strong>^</strong>(obj)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>^</strong>(obj) </span>
+      <span class="overload">#<strong>^</strong>(obj)  &#x21d2; <tt>Boolean</tt> </span>
     
   
 
@@ -476,7 +468,7 @@ false_and(mrb_state *mrb, mrb_value obj)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Exclusive Or---If <i>obj</i> is <code>nil</code> or
+    <p>Exclusive Or—If <i>obj</i> is <code>nil</code> or
 <code>false</code>, returns <code>false</code>; otherwise, returns
 <code>true</code>.</p>
 
@@ -490,10 +482,11 @@ false_and(mrb_state *mrb, mrb_value obj)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>^</strong>(obj) </span>
+        <span class="signature">#<strong>^</strong>(obj)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -520,10 +513,11 @@ false_and(mrb_state *mrb, mrb_value obj)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>^</strong>(obj) </span>
+        <span class="signature">#<strong>^</strong>(obj)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -559,17 +553,17 @@ false_and(mrb_state *mrb, mrb_value obj)
       <pre class="lines">
 
 
-217
-218
-219
 220
 221
 222
 223
-224</pre>
+224
+225
+226
+227</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/object.c', line 217</span>
+      <pre class="code"><span class="info file"># File 'src/object.c', line 220</span>
 
 static mrb_value
 false_xor(mrb_state *mrb, mrb_value obj)
@@ -587,7 +581,7 @@ false_xor(mrb_state *mrb, mrb_value obj)
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>inspect</strong> 
+    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -611,14 +605,14 @@ false_xor(mrb_state *mrb, mrb_value obj)
       <pre class="lines">
 
 
-86
-87
-88
 89
-90</pre>
+90
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/object.c', line 86</span>
+      <pre class="code"><span class="info file"># File 'src/object.c', line 89</span>
 
 static mrb_value
 nil_inspect(mrb_state *mrb, mrb_value obj)
@@ -633,7 +627,7 @@ nil_inspect(mrb_state *mrb, mrb_value obj)
       <div class="method_details ">
   <h3 class="signature " id="nil?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>nil?</strong> 
+    #<strong>nil?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -673,14 +667,14 @@ nil_inspect(mrb_state *mrb, mrb_value obj)
       <pre class="lines">
 
 
-66
-67
-68
 69
-70</pre>
+70
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/object.c', line 66</span>
+      <pre class="code"><span class="info file"># File 'src/object.c', line 69</span>
 
 static mrb_value
 mrb_true(mrb_state *mrb, mrb_value obj)
@@ -695,7 +689,7 @@ mrb_true(mrb_state *mrb, mrb_value obj)
       <div class="method_details ">
   <h3 class="signature " id="to_a-instance_method">
   
-    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt>) <strong>to_a</strong> 
+    #<strong>to_a</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt> 
   
 
   
@@ -713,6 +707,7 @@ mrb_true(mrb_state *mrb, mrb_value obj)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -745,14 +740,14 @@ mrb_true(mrb_state *mrb, mrb_value obj)
       <pre class="lines">
 
 
-12
 13
 14
 15
-16</pre>
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-object-ext/src/object.c', line 12</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-object-ext/src/object.c', line 13</span>
 
 static mrb_value
 nil_to_a(mrb_state *mrb, mrb_value obj)
@@ -767,7 +762,7 @@ nil_to_a(mrb_state *mrb, mrb_value obj)
       <div class="method_details ">
   <h3 class="signature " id="to_f-instance_method">
   
-    - (<tt>0.0</tt>) <strong>to_f</strong> 
+    #<strong>to_f</strong>  &#x21d2; <tt>0.0</tt> 
   
 
   
@@ -785,6 +780,7 @@ nil_to_a(mrb_state *mrb, mrb_value obj)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -817,14 +813,14 @@ nil_to_a(mrb_state *mrb, mrb_value obj)
       <pre class="lines">
 
 
-25
-26
 27
 28
-29</pre>
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-object-ext/src/object.c', line 25</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-object-ext/src/object.c', line 27</span>
 
 static mrb_value
 nil_to_f(mrb_state *mrb, mrb_value obj)
@@ -839,7 +835,7 @@ nil_to_f(mrb_state *mrb, mrb_value obj)
       <div class="method_details ">
   <h3 class="signature " id="to_i-instance_method">
   
-    - (<tt>0</tt>) <strong>to_i</strong> 
+    #<strong>to_i</strong>  &#x21d2; <tt>0</tt> 
   
 
   
@@ -857,6 +853,7 @@ nil_to_f(mrb_state *mrb, mrb_value obj)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -889,14 +886,14 @@ nil_to_f(mrb_state *mrb, mrb_value obj)
       <pre class="lines">
 
 
-38
-39
-40
 41
-42</pre>
+42
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-object-ext/src/object.c', line 38</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-object-ext/src/object.c', line 41</span>
 
 static mrb_value
 nil_to_i(mrb_state *mrb, mrb_value obj)
@@ -911,7 +908,7 @@ nil_to_i(mrb_state *mrb, mrb_value obj)
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_s</strong> 
+    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -937,14 +934,14 @@ nil_to_i(mrb_state *mrb, mrb_value obj)
       <pre class="lines">
 
 
-80
-81
-82
 83
-84</pre>
+84
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/object.c', line 80</span>
+      <pre class="code"><span class="info file"># File 'src/object.c', line 83</span>
 
 static mrb_value
 nil_to_s(mrb_state *mrb, mrb_value obj)
@@ -960,9 +957,9 @@ nil_to_s(mrb_state *mrb, mrb_value obj)
   <h3 class="signature " id="|-instance_method">
   
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>|</strong>(obj) </span>
+      <span class="overload">#<strong>|</strong>(obj)  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>|</strong>(obj) </span>
+      <span class="overload">#<strong>|</strong>(obj)  &#x21d2; <tt>Boolean</tt> </span>
     
   
 
@@ -971,7 +968,7 @@ nil_to_s(mrb_state *mrb, mrb_value obj)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Or---Returns <code>false</code> if <i>obj</i> is
+    <p>Or—Returns <code>false</code> if <i>obj</i> is
 <code>nil</code> or <code>false</code>; <code>true</code> otherwise.</p>
 
 
@@ -984,10 +981,11 @@ nil_to_s(mrb_state *mrb, mrb_value obj)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>|</strong>(obj) </span>
+        <span class="signature">#<strong>|</strong>(obj)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -1014,10 +1012,11 @@ nil_to_s(mrb_state *mrb, mrb_value obj)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>|</strong>(obj) </span>
+        <span class="signature">#<strong>|</strong>(obj)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -1053,17 +1052,17 @@ nil_to_s(mrb_state *mrb, mrb_value obj)
       <pre class="lines">
 
 
-237
-238
-239
 240
 241
 242
 243
-244</pre>
+244
+245
+246
+247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/object.c', line 237</span>
+      <pre class="code"><span class="info file"># File 'src/object.c', line 240</span>
 
 static mrb_value
 false_or(mrb_state *mrb, mrb_value obj)
@@ -1082,11 +1081,12 @@ false_or(mrb_state *mrb, mrb_value obj)
 
 </div>
 
-    <div id="footer">
-  Generated on Sun Jan 17 01:23:03 2016 by
+      <div id="footer">
+  Generated on Fri May 11 23:53:57 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
+  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
 </div>
 
+    </div>
   </body>
 </html>

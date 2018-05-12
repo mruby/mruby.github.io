@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Header: mruby.h
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.12
   
 </title>
 
@@ -17,9 +17,8 @@
   <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "mruby.h";
   relpath = '../';
-  framesUrl = "../frames.html#!headers/mruby.h.html";
 </script>
 
 
@@ -32,52 +31,39 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="../_index.html">Index (m)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../headers.html" title="headers (headersroot)">headers</a></span></span>
      &raquo; 
     <span class="title">mruby.h</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="header_list_link"
-        href="../header_list.html">
-      Header List
-    </a>
-  
-    <a class="full_list_link" id="function_list_link"
-        href="../function_list.html">
-      Function List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
-
-    <div id="content"><h1>Header: mruby.h</h1>
+      <div id="content"><h1>Header: mruby.h</h1>
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
@@ -148,7 +134,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -237,7 +224,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -344,7 +332,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -361,7 +350,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -440,6 +430,42 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_exc_get-function" title="mrb_exc_get">struct RClass * <strong>mrb_exc_get</strong>(mrb_state *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Gets a exception class.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_defined_under-function" title="mrb_class_defined_under">mrb_bool <strong>mrb_class_defined_under</strong>(mrb_state *, struct RClass *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns an mrb_bool.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_class_get_under-function" title="mrb_class_get_under">struct RClass * <strong>mrb_class_get_under</strong>(mrb_state *, struct RClass *, const char *)</a>
 
     
@@ -504,7 +530,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -539,7 +566,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -592,7 +620,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -610,6 +639,42 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Retrieve arguments from mrb_state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_get_argc-function" title="mrb_get_argc">mrb_int <strong>mrb_get_argc</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieve number of arguments from mrb_state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_get_argv-function" title="mrb_get_argv">mrb_value* <strong>mrb_get_argv</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -681,7 +746,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Creates a symbol from a C string.</p>
+    <span class="summary_desc"><div class='inline'><p>Create a symbol.</p>
 </div></span>
   
 </li>
@@ -699,7 +764,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Creates a symbol from a C string.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -717,7 +782,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -734,7 +800,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Creates a symbol from a String.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -752,7 +818,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a Symbol, or nil otherwise.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -770,7 +836,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -787,7 +854,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a Symbol, or nil otherwise.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -805,7 +872,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a String from a Symbol.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -823,7 +890,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Allocates the requested memory and returns a pointer to it.</p>
+    <span class="summary_desc"><div class='inline'><p>raise RuntimeError if no mem.</p>
 </div></span>
   
 </li>
@@ -841,7 +908,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>raise RuntimeError if no mem.</p>
+    <span class="summary_desc"><div class='inline'><p>ditto.</p>
 </div></span>
   
 </li>
@@ -859,7 +926,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Attempts to resize the memory block pointed to by ptr that was previously allocated with a call to mrb_malloc or mrb_calloc.</p>
+    <span class="summary_desc"><div class='inline'><p>ditto.</p>
 </div></span>
   
 </li>
@@ -877,7 +944,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Attempts to resize the memory block pointed to by ptr that was previously allocated with a call to mrb_malloc_simple.</p>
+    <span class="summary_desc"><div class='inline'><p>return NULL if no memory available.</p>
 </div></span>
   
 </li>
@@ -895,7 +962,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Allocates the requested memory and returns a pointer to it.</p>
+    <span class="summary_desc"><div class='inline'><p>return NULL if no memory available.</p>
 </div></span>
   
 </li>
@@ -913,7 +980,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>return NULL if no memory available.</p>
+</div></span>
   
 </li>
 
@@ -930,7 +998,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Deallocates the memory previously allocated by a call to mrb_calloc, mrb_malloc, mrb_realloc, mrb_malloc_simple, or mrb_realloc_simple.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -948,7 +1016,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a String from C String.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -966,7 +1034,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a String from a C string.</p>
+    <span class="summary_desc"><div class='inline'><p>Turns a C string into a Ruby string value.</p>
 </div></span>
   
 </li>
@@ -984,7 +1052,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1091,7 +1160,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1108,7 +1178,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1125,7 +1196,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1142,7 +1214,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1159,7 +1232,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1176,7 +1250,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1193,7 +1268,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1210,7 +1286,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1227,7 +1304,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1244,7 +1322,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1261,14 +1340,15 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_convert_to_integer-function" title="mrb_convert_to_integer">mrb_value <strong>mrb_convert_to_integer</strong>(mrb_state *, mrb_value, int)</a>
+    <a href="#mrb_convert_to_integer-function" title="mrb_convert_to_integer">mrb_value <strong>mrb_convert_to_integer</strong>(mrb_state *, mrb_value, mrb_int)</a>
 
     
   </span>
@@ -1278,7 +1358,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1295,7 +1376,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1312,7 +1394,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1329,7 +1412,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1346,7 +1430,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1363,7 +1448,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1380,7 +1466,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1397,41 +1484,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_gc_arena_save-function" title="mrb_gc_arena_save">int <strong>mrb_gc_arena_save</strong>(mrb_state*)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_gc_arena_restore-function" title="mrb_gc_arena_restore">void <strong>mrb_gc_arena_restore</strong>(mrb_state*, int)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1448,7 +1502,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1465,7 +1520,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1482,7 +1538,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1499,7 +1556,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1516,7 +1574,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1533,7 +1592,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1550,7 +1610,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1567,7 +1628,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1584,7 +1646,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1601,7 +1664,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1618,7 +1682,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1635,7 +1700,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1652,7 +1718,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1669,7 +1736,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1686,7 +1754,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1703,7 +1772,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1720,7 +1790,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1737,7 +1808,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1754,7 +1826,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1771,7 +1844,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1788,7 +1862,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1805,7 +1880,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1822,7 +1898,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1893,7 +1970,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1910,7 +1988,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1927,7 +2006,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1944,7 +2024,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1961,7 +2042,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1978,7 +2060,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1995,7 +2078,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_func_basic_p-function" title="mrb_func_basic_p">mrb_bool <strong>mrb_func_basic_p</strong>(mrb_state *, mrb_value, mrb_sym, mrb_func_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2038,6 +2140,24 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_fiber_alive_p-function" title="mrb_fiber_alive_p">mrb_value <strong>mrb_fiber_alive_p</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check if a Fiber is alive.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_pool_open-function" title="mrb_pool_open">struct mrb_pool* <strong>mrb_pool_open</strong>(mrb_state*)</a>
 
     
@@ -2048,7 +2168,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2065,7 +2186,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2082,7 +2204,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2099,7 +2222,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2116,7 +2240,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2133,7 +2258,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2150,7 +2276,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2167,7 +2294,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2184,7 +2312,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2201,7 +2330,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -2217,7 +2347,94 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="__STDC_LIMIT_MACROS-define" class=""><small>#define</small> __STDC_LIMIT_MACROS
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="__STDC_CONSTANT_MACROS-define" class=""><small>#define</small> __STDC_CONSTANT_MACROS
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="__STDC_FORMAT_MACROS-define" class=""><small>#define</small> __STDC_FORMAT_MACROS
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="SIZE_MAX-define" class=""><small>#define</small> SIZE_MAX
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_assert-define" class=""><small>#define</small> mrb_assert
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_assert_int_fit-define" class=""><small>#define</small> mrb_assert_int_fit
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_static_assert-define" class=""><small>#define</small> mrb_static_assert
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="FLT_EPSILON-define" class=""><small>#define</small> FLT_EPSILON
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="DBL_EPSILON-define" class=""><small>#define</small> DBL_EPSILON
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="LDBL_EPSILON-define" class=""><small>#define</small> LDBL_EPSILON
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_FLOAT_EPSILON-define" class=""><small>#define</small> MRB_FLOAT_EPSILON
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="MRB_FIXED_STATE_ATEXIT_STACK_SIZE-define" class=""><small>#define</small> MRB_FIXED_STATE_ATEXIT_STACK_SIZE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_METHOD_CACHE-define" class=""><small>#define</small> MRB_METHOD_CACHE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_METHOD_CACHE_SIZE-define" class=""><small>#define</small> MRB_METHOD_CACHE_SIZE
+        <div class="docstring">
+  <div class="discussion">
+    <p>cache size needs to be power of 2</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_STATE_NO_REGEXP-define" class=""><small>#define</small> MRB_STATE_NO_REGEXP
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_STATE_REGEXP-define" class=""><small>#define</small> MRB_STATE_REGEXP
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -2381,8 +2598,8 @@
     <p><code>strlen</code> for character string literals (use with caution or <code>strlen</code> instead)
    Adjacent string literals are concatenated in C/C++ in translation phase 6.
    If <code>lit</code> is not one, the compiler will report a syntax error:
-    MSVC: &quot;error C2143: syntax error : missing &#39;)&#39; before &#39;string&#39;&quot;
-    GCC:  &quot;error: expected &#39;)&#39; before string constant&quot;</p>
+    MSVC: “error C2143: syntax error : missing ‘)’ before ‘string’”
+    GCC:  “error: expected ‘)’ before string constant”</p>
 
 
   </div>
@@ -2522,12 +2739,9 @@
         <div class="docstring">
   <div class="discussion">
     <p>macros to get typical exception objects
-  note:</p>
-
-<ul>
-<li>those E_* macros requires mrb_state* variable named mrb.</li>
-<li>exception objects obtained from those macros are local to mrb</li>
-</ul>
+  note:
+  + those E_* macros requires mrb_state* variable named mrb.
+  + exception objects obtained from those macros are local to mrb</p>
 
 
   </div>
@@ -2591,7 +2805,7 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="E_SYSSTACK_ERROR-define" class=""><small>#define</small> E_SYSSTACK_ERROR
+      <dt id="E_FROZEN_ERROR-define" class=""><small>#define</small> E_FROZEN_ERROR
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -2635,17 +2849,12 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_assert-define" class=""><small>#define</small> mrb_assert
+      <dt id="memcpy-define" class=""><small>#define</small> memcpy
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_assert_int_fit-define" class=""><small>#define</small> mrb_assert_int_fit
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="mrb_static_assert-define" class=""><small>#define</small> mrb_static_assert
+      <dt id="memset-define" class=""><small>#define</small> memset
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -2690,6 +2899,11 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="mrb_method_t-typedef" class=""><small>typedef</small> mrb_method_t
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="mrb_args_format-typedef" class=""><small>typedef</small> mrb_args_format
         <div class="docstring">
   <div class="discussion">
@@ -2697,111 +2911,114 @@
 
 <p>Must be a C string composed of the following format specifiers:</p>
 
-<table><thead>
-<tr>
-<th style="text-align: center">char</th>
-<th>Ruby type</th>
-<th>C types</th>
-<th>Notes</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center"><code>o</code></td>
-<td><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-<td>Could be used to retrieve any type of argument</td>
-</tr>
-<tr>
-<td style="text-align: center"><code>C</code></td>
-<td>Class/<span class='object_link'><a href="../Module.html" title="Module (class)">Module</a></span></td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>S</code></td>
-<td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-<td>when <code>!</code> follows, the value may be <code>nil</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>A</code></td>
-<td><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-<td>when <code>!</code> follows, the value may be <code>nil</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>H</code></td>
-<td><span class='object_link'><a href="../Hash.html" title="Hash (class)">Hash</a></span></td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-<td>when <code>!</code> follows, the value may be <code>nil</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>s</code></td>
-<td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
-<td>char *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
-<td>Receive two arguments; <code>s!</code> gives (<code>NULL</code>,<code>0</code>) for <code>nil</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>z</code></td>
-<td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
-<td>char *</td>
-<td><code>NULL</code> terminated string; <code>z!</code> gives <code>NULL</code> for <code>nil</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>a</code></td>
-<td><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span> *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
-<td>Receive two arguments; <code>a!</code> gives (<code>NULL</code>,<code>0</code>) for <code>nil</code></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>f</code></td>
-<td><span class='object_link'><a href="../Float.html" title="Float (class)">Float</a></span></td>
-<td><span class='object_link'><a href="mruby_2Fboxing_no.h.html#mrb_float-define" title="mrb_float (define)">mrb_float</a></span></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>i</code></td>
-<td><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>b</code></td>
-<td>boolean</td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_bool-define" title="mrb_bool (define)">mrb_bool</a></span></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>n</code></td>
-<td><span class='object_link'><a href="../Symbol.html" title="Symbol (class)">Symbol</a></span></td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_sym-typedef" title="mrb_sym (typedef)">mrb_sym</a></span></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>&amp;</code></td>
-<td>block</td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center"><code>*</code></td>
-<td>rest arguments</td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span> *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
-<td>Receive the rest of arguments as an array.</td>
-</tr>
-<tr>
-<td style="text-align: center">&vert;</td>
-<td>optional</td>
-<td></td>
-<td>After this spec following specs would be optional.</td>
-</tr>
-<tr>
-<td style="text-align: center"><code>?</code></td>
-<td>optional given</td>
-<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_bool-define" title="mrb_bool (define)">mrb_bool</a></span></td>
-<td><code>TRUE</code> if preceding argument is given. Used to check optional argument is given.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">char</th>
+      <th>Ruby type</th>
+      <th>C types</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><code>o</code></td>
+      <td><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+      <td>Could be used to retrieve any type of argument</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>C</code></td>
+      <td>Class/<span class='object_link'><a href="../Module.html" title="Module (class)">Module</a></span></td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>S</code></td>
+      <td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+      <td>when <code>!</code> follows, the value may be <code>nil</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>A</code></td>
+      <td><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+      <td>when <code>!</code> follows, the value may be <code>nil</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>H</code></td>
+      <td><span class='object_link'><a href="../Hash.html" title="Hash (class)">Hash</a></span></td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+      <td>when <code>!</code> follows, the value may be <code>nil</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>s</code></td>
+      <td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
+      <td>char *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
+      <td>Receive two arguments; <code>s!</code> gives (<code>NULL</code>,<code>0</code>) for <code>nil</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>z</code></td>
+      <td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
+      <td>char *</td>
+      <td><code>NULL</code> terminated string; <code>z!</code> gives <code>NULL</code> for <code>nil</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>a</code></td>
+      <td><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span> *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
+      <td>Receive two arguments; <code>a!</code> gives (<code>NULL</code>,<code>0</code>) for <code>nil</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>f</code></td>
+      <td><span class='object_link'><a href="../Float.html" title="Float (class)">Float</a></span></td>
+      <td><span class='object_link'><a href="mruby_2Fboxing_no.h.html#mrb_float-define" title="mrb_float (define)">mrb_float</a></span></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>i</code></td>
+      <td><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>b</code></td>
+      <td>boolean</td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_bool-define" title="mrb_bool (define)">mrb_bool</a></span></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>n</code></td>
+      <td><span class='object_link'><a href="../Symbol.html" title="Symbol (class)">Symbol</a></span></td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_sym-typedef" title="mrb_sym (typedef)">mrb_sym</a></span></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>&amp;</code></td>
+      <td>block</td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+      <td>&amp;! raises exception if no block given.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>*</code></td>
+      <td>rest arguments</td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span> *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
+      <td>Receive the rest of arguments as an array; *! avoid copy of the stack.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">&amp;vert;</td>
+      <td>optional</td>
+      <td> </td>
+      <td>After this spec following specs would be optional.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code>?</code></td>
+      <td>optional given</td>
+      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_bool-define" title="mrb_bool (define)">mrb_bool</a></span></td>
+      <td><code>TRUE</code> if preceding argument is given. Used to check optional argument is given.</td>
+    </tr>
+  </tbody>
+</table>
 
 
   </div>
@@ -2855,7 +3072,7 @@
   <div class="discussion">
     <p>Defines a new class.</p>
 
-<p>If you&#39;re creating a gem it may look something like this:</p>
+<p>If you’re creating a gem it may look something like this:</p>
 
 <pre class="code c"><code class="c"> <span style="color:#088;font-weight:bold">void</span> mrb_example_gem_init(mrb_state* mrb) {
      <span style="color:#080;font-weight:bold">struct</span> RClass *example_class;
@@ -3197,7 +3414,7 @@ Equivalent to:</p>
   <div class="discussion">
     <p>Defines a global function in ruby.</p>
 
-<p>If you&#39;re creating a gem it may look something like this</p>
+<p>If you’re creating a gem it may look something like this</p>
 
 <p>Example:</p>
 
@@ -3316,12 +3533,12 @@ Equivalent to:</p>
 
 <p>Example:</p>
 
-<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby way</span>
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
 <span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Foo</span>
   <span style="color:#080;font-weight:bold">def</span> <span style="color:#036;font-weight:bold">Foo</span>.<span style="color:#06B;font-weight:bold">bar</span>
   <span style="color:#080;font-weight:bold">end</span>
 <span style="color:#080;font-weight:bold">end</span>
-<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> way
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
 mrb_value bar_method(mrb_state* mrb, mrb_value <span style="color:#069">self</span>){
   <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
 }
@@ -3445,12 +3662,12 @@ void mrb_example_gem_init(mrb_state* mrb){
 
 <p>Example:</p>
 
-<pre class="code ruby"><code class="ruby">  <span style="color:#777"># Ruby way</span>
+<pre class="code ruby"><code class="ruby">  <span style="color:#777"># Ruby style</span>
   <span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">Foo</span>
     <span style="color:#080;font-weight:bold">def</span> <span style="color:#036;font-weight:bold">Foo</span>.<span style="color:#06B;font-weight:bold">bar</span>
     <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#080;font-weight:bold">end</span>
-  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> way
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
   mrb_value bar_method(mrb_state* mrb, mrb_value <span style="color:#069">self</span>){
     <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
   }
@@ -3564,11 +3781,11 @@ void mrb_example_gem_init(mrb_state* mrb){
 
 <p>Example:</p>
 
-<pre class="code ruby"><code class="ruby">    <span style="color:#777"># Ruby way</span>
+<pre class="code ruby"><code class="ruby">    <span style="color:#777"># Ruby style</span>
     <span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClass</span>
       <span style="color:#036;font-weight:bold">AGE</span> = <span style="color:#00D">22</span>
     <span style="color:#080;font-weight:bold">end</span>
-    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> way
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
     <span style="color:#777">#include &lt;stdio.h&gt;</span>
     <span style="color:#777">#include &lt;mruby.h&gt;</span>
 
@@ -3670,7 +3887,7 @@ void mrb_example_gem_init(mrb_state* mrb){
 
 <p>Example:</p>
 
-<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby way</span>
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
 
 <span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClassA</span>
   <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">example_method</span>
@@ -3685,13 +3902,13 @@ void mrb_example_gem_init(mrb_state* mrb){
 
 <span style="color:#036;font-weight:bold">ExampleClassB</span>.new.example_method <span style="color:#777"># =&gt; undefined method 'example_method' for ExampleClassB (NoMethodError)</span>
 
-<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> way
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
 <span style="color:#777">#include &lt;stdio.h&gt;</span>
 <span style="color:#777">#include &lt;mruby.h&gt;</span>
 
 mrb_value
 mrb_example_method(mrb_state *mrb){
-  <span style="color:#080;font-weight:bold">return</span> mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#080;font-weight:bold">return</span> mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example</span><span style="color:#710">&quot;</span></span>);
 }
 
 void
@@ -3783,7 +4000,7 @@ mrb_example_gem_final(mrb_state* mrb){
     <p>Undefine a class method.
 Example:</p>
 
-<pre class="code ruby"><code class="ruby"> <span style="color:#777"># Ruby way</span>
+<pre class="code ruby"><code class="ruby"> <span style="color:#777"># Ruby style</span>
  <span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClass</span>
    <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">example_method</span>
      <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example</span><span style="color:#710">&quot;</span></span>
@@ -3792,13 +4009,13 @@ Example:</p>
 
 <span style="color:#036;font-weight:bold">ExampleClass</span>.example_method
 
-<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> way
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
 <span style="color:#777">#include &lt;stdio.h&gt;</span>
 <span style="color:#777">#include &lt;mruby.h&gt;</span>
 
 mrb_value
 mrb_example_method(mrb_state *mrb){
-  <span style="color:#080;font-weight:bold">return</span> mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#080;font-weight:bold">return</span> mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example</span><span style="color:#710">&quot;</span></span>);
 }
 
 void
@@ -3887,12 +4104,12 @@ mrb_example_gem_init(mrb_state* mrb){
 
 <p>Example:</p>
 
-<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby way</span>
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style</span>
 <span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClass</span>
 <span style="color:#080;font-weight:bold">end</span>
 
 p <span style="color:#036;font-weight:bold">ExampleClass</span> <span style="color:#777"># =&gt; #&lt;ExampleClass:0x9958588&gt;</span>
-<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> way
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
 <span style="color:#777">#include &lt;stdio.h&gt;</span>
 <span style="color:#777">#include &lt;mruby.h&gt;</span>
 
@@ -4008,6 +4225,7 @@ mrb_example_gem_init(mrb_state* mrb) {
 <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -4344,6 +4562,189 @@ mrb_example_gem_init(mrb_state* mrb) {
       
         &mdash;
         <div class='inline'><p>A reference to the class.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_exc_get-function">
+  struct RClass * <strong>mrb_exc_get</strong>(mrb_state * mrb, const char * name)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Gets a exception class.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state*</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>const char *</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the class.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>struct RClass *</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A reference to the class.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_defined_under-function">
+  mrb_bool <strong>mrb_class_defined_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Returns an mrb_bool. True if inner class was defined, and false if the inner class was not defined.</p>
+
+<p>Example:
+    void
+    mrb_example_gem_init(mrb_state* mrb) {
+      struct RClass *example_outer, *example_inner;
+      mrb_bool cd;</p>
+
+<pre class="code ruby"><code class="ruby">  example_outer = mrb_define_module(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleOuter</span><span style="color:#710">&quot;</span></span>);
+
+  example_inner = mrb_define_class_under(mrb, example_outer, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleInner</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
+  cd = mrb_class_defined_under(mrb, example_outer, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleInner</span><span style="color:#710">&quot;</span></span>);
+
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined_under returns <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined_under returns <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">if</span> (cd == <span style="color:#00D">1</span>){
+    puts(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>);
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    puts(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>);
+  }
+ }
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'>(<tt>mrb_state*</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>outer</span>
+      
+      
+        <span class='type'>(<tt>struct RClass *</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the outer class.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>const char *</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A string representing the name of the inner class.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_bool-define" title="mrb_bool (define)">mrb_bool</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A boolean value.</p>
 </div>
       
     </li>
@@ -4713,7 +5114,7 @@ mrb_example_gem_init(mrb_state* mrb) {
 class it returns true, it returns false otherwise.</p>
 
 <pre class="code ruby"><code class="ruby"> <span style="color:#606">Example</span>:
- <span style="color:#777"># Ruby way</span>
+ <span style="color:#777"># Ruby style</span>
  <span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClass</span>
    <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">example_method</span>
    <span style="color:#080;font-weight:bold">end</span>
@@ -4721,7 +5122,7 @@ class it returns true, it returns false otherwise.</p>
 
  <span style="color:#036;font-weight:bold">ExampleClass</span>.new.respond_to?(<span style="color:#A60">:example_method</span>) <span style="color:#777"># =&gt; true</span>
 
- <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> way
+ <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> style
  void
  mrb_example_gem_init(mrb_state* mrb) {
    struct <span style="color:#036;font-weight:bold">RClass</span> *example_class;
@@ -4730,7 +5131,7 @@ class it returns true, it returns false otherwise.</p>
 
    example_class = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClass</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
    mrb_define_method(mrb, example_class, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span>, exampleMethod, MRB_ARGS_NONE());
-   mid = mrb_intern_str(mrb, mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span> ));
+   mid = mrb_intern_str(mrb, mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span> ));
    obj_resp = mrb_obj_respond_to(mrb, example_class, mid); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> =&gt; <span style="color:#00D">1</span>(<span style="color:#069">true</span> <span style="color:#080;font-weight:bold">in</span> <span style="color:#036;font-weight:bold">Ruby</span> world)
 
    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_obj_respond_to returns <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>
@@ -5042,6 +5443,40 @@ Used inside a function of mrb_func_t type.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_get_argc-function">
+  mrb_int <strong>mrb_get_argc</strong>(mrb_state * mrb)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Retrieve number of arguments from mrb_state.</p>
+
+<p>Correctly handles *splat arguments.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_get_argv-function">
+  mrb_value* <strong>mrb_get_argv</strong>(mrb_state * mrb)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_funcall-function">
   mrb_value <strong>mrb_funcall</strong>(mrb_state* , mrb_value , const char* , mrb_int , ... )
 
@@ -5198,7 +5633,7 @@ Used inside a function of mrb_func_t type.</p>
    mrb_state *mrb = mrb_open();
 
    <span style="color:#080;font-weight:bold">if</span> (!mrb) { }
-   mrb_sym m_sym = mrb_intern_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">method_name</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Symbol</span> <span style="color:#080;font-weight:bold">for</span> method.
+   mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">method_name</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Symbol</span> <span style="color:#080;font-weight:bold">for</span> method.
 
    FILE *fp = fopen(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">test.rb</span><span style="color:#710">&quot;</span></span>,<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">r</span><span style="color:#710">&quot;</span></span>);
    mrb_value obj = mrb_load_file(mrb,fp);
@@ -5353,13 +5788,13 @@ Used inside a function of mrb_func_t type.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Creates a symbol from a C string.</p>
+    <p>Create a symbol</p>
 
-<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby way:</span>
-<span style="color:#A60">:symbol</span> <span style="color:#777"># =&gt; :symbol</span>
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby style:</span>
+<span style="color:#A60">:pizza</span> <span style="color:#777"># =&gt; :pizza</span>
 
-<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> <span style="color:#606">way</span>:
-mrb_sym mrb_symbol = mrb_intern_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">symbol</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span>  =&gt; <span style="color:#A60">:symbol</span>
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> <span style="color:#606">style</span>:
+mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">pizza</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span>  =&gt; <span style="color:#A60">:pizza</span>
 </code></pre>
 
 
@@ -5419,13 +5854,6 @@ mrb_sym mrb_symbol = mrb_intern_cstr(mrb, <span style="background-color:hsla(0,1
   
 </ul>
 
-  <p class="tag_title">See Also:</p>
-  <ul class="see">
-    
-      <li><span class='object_link'><a href="#mrb_intern-function" title="mrb_intern (function)">mrb_intern</a></span></li>
-    
-  </ul>
-
 </div>
 
 
@@ -5438,97 +5866,6 @@ mrb_sym mrb_symbol = mrb_intern_cstr(mrb, <span style="background-color:hsla(0,1
 
   
 </h3>
-<div class="docstring">
-  <div class="discussion">
-    <p>Creates a symbol from a C string.</p>
-
-<pre class="code ruby"><code class="ruby"><span style="color:#777"># Ruby way</span>
-<span style="color:#A60">:symbol</span>
-
-<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> way
-void
-mrb_mruby_example_gem_init(mrb_state* mrb) {
-  mrb_sym mrb_symbol;
-  char c_str[<span style="color:#00D">6</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">symbol</span><span style="color:#710">&quot;</span></span>;
-
-  mrb_symbol = mrb_intern(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">symbol</span><span style="color:#710">&quot;</span></span>, sizeof(c_str));
-}
-</code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>const</span>
-      
-      
-        <span class='type'>(<tt>const char*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>char* A C string.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>size_t</span>
-      
-      
-        <span class='type'>(<tt>size_t</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>An integer representing the size of the string.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_sym-typedef" title="mrb_sym (typedef)">mrb_sym</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>mrb_sym A symbol.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div>
-
 
 </div>
 
@@ -5549,79 +5886,6 @@ mrb_mruby_example_gem_init(mrb_state* mrb) {
 
   
 </h3>
-<div class="docstring">
-  <div class="discussion">
-    <p>Creates a symbol from a String.</p>
-
-<pre class="code ruby"><code class="ruby">void
-mrb_mruby_example_gem_init(mrb_state* mrb) {
-  mrb_sym mrb_symbol;
-  mrb_value mrb_string;
-
-  mrb_string = mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">symbol</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Returns</span> a <span style="color:#036;font-weight:bold">Ruby</span> string from <span style="color:#036;font-weight:bold">C</span> string.
-  mrb_intern_str(mrb, mrb_string); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Returns</span> <span style="color:#036;font-weight:bold">Symbol</span> from <span style="color:#036;font-weight:bold">Ruby</span> string.
-}
-</code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>mrb_value</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>A Ruby value.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_sym-typedef" title="mrb_sym (typedef)">mrb_sym</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>mrb_sym A symbol.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div>
-
 
 </div>
 
@@ -5632,78 +5896,6 @@ mrb_mruby_example_gem_init(mrb_state* mrb) {
 
   
 </h3>
-<div class="docstring">
-  <div class="discussion">
-    <p>Returns a Symbol, or nil otherwise.</p>
-
-<pre class="code ruby"><code class="ruby">void
-mrb_mruby_example_gem_init(mrb_state* mrb) {
-  mrb_value mrb_symbol;
-
-  mrb_symbol = mrb_check_intern_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Symbol</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Returns</span> <span style="color:#A60">:Symbol</span>
-  mrb_p(mrb, mrb_symbol); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">This</span> is equivalent to p <span style="color:#A60">:Symbol</span>
-}
-</code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>char*</span>
-      
-      
-        <span class='type'>(<tt>const char*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>A C string.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>mrb_value A Ruby value.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div>
-
 
 </div>
 
@@ -5724,80 +5916,6 @@ mrb_mruby_example_gem_init(mrb_state* mrb) {
 
   
 </h3>
-<div class="docstring">
-  <div class="discussion">
-    <p>Returns a Symbol, or nil otherwise.</p>
-
-<pre class="code ruby"><code class="ruby">void
-mrb_mruby_example_gem_init(mrb_state* mrb) {
-  mrb_value mrb_string;
-  mrb_value mrb_symbol;
-
-  mrb_string = mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Symbol</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Returns</span> a <span style="color:#036;font-weight:bold">Ruby</span> string from <span style="color:#036;font-weight:bold">C</span> string.
-  mrb_symbol = mrb_check_intern_str(mrb, mrb_string); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Returns</span> <span style="color:#A60">:Symbol</span>
-  mrb_p(mrb, mrb_symbol); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">This</span> is equivalent to p <span style="color:#A60">:Symbol</span>
-}
-</code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>mrb_value</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>A Ruby value.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>mrb_value A Ruby value.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div>
-
 
 </div>
 
@@ -5808,81 +5926,6 @@ mrb_mruby_example_gem_init(mrb_state* mrb) {
 
   
 </h3>
-<div class="docstring">
-  <div class="discussion">
-    <p>Returns a String from a Symbol.</p>
-
-<pre class="code ruby"><code class="ruby">void
-mrb_mruby_example_gem_init(mrb_state* mrb) {
-  mrb_sym mrb_symbol;
-  mrb_value mrb_string;
-  const char* symbol_name = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">symbol</span><span style="color:#710">&quot;</span></span>;
-
-  mrb_symbol = mrb_intern(mrb, symbol_name, strlen(symbol_name)); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Returns</span> <span style="color:#036;font-weight:bold">Symbol</span>.
-  mrb_string = mrb_sym2str(mrb, mrb_symbol); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Returns</span> symbol name as a <span style="color:#036;font-weight:bold">Ruby</span> string.
-  mrb_p(mrb, mrb_string);
-}
-</code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>mrb_sym</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_sym-typedef" title="mrb_sym (typedef)">mrb_sym</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>A Symbol.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>mrb_value A Ruby string value.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div>
-
 
 </div>
 
@@ -5895,64 +5938,13 @@ mrb_mruby_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Allocates the requested memory and returns a pointer to it. It raises RuntimeError if no memory.</p>
+    <p>raise RuntimeError if no mem</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>size_t</span>
-      
-      
-        <span class='type'>(<tt>size_t</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The size of memory block, in bytes.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>void* Pointer to requested block of memory.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div>
 
@@ -5968,7 +5960,7 @@ mrb_mruby_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>raise RuntimeError if no mem</p>
+    <p>ditto</p>
 
 
   </div>
@@ -5990,80 +5982,13 @@ mrb_mruby_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Attempts to resize the memory block pointed to by ptr that was previously allocated with a call to mrb_malloc or mrb_calloc.
-It raises RuntimeError if no memory.</p>
+    <p>ditto</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>void*</span>
-      
-      
-        <span class='type'>(<tt>void*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>This is the pointer to a memory block previously allocated with mrb_malloc or mrb_calloc.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>size_t</span>
-      
-      
-        <span class='type'>(<tt>size_t</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The size of memory block, in bytes.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>void* Pointer to requested block of memory.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div>
 
@@ -6079,80 +6004,13 @@ It raises RuntimeError if no memory.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Attempts to resize the memory block pointed to by ptr that was previously allocated with a call to mrb_malloc_simple.
-It returns NULL if there&#39;s no memory available.</p>
+    <p>return NULL if no memory available</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>void*</span>
-      
-      
-        <span class='type'>(<tt>void*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>This is the pointer to a memory block previously allocated with mrb_malloc_simple.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>size_t</span>
-      
-      
-        <span class='type'>(<tt>size_t</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The size of memory block, in bytes.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>void* Pointer to requested block of memory.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div>
 
@@ -6168,64 +6026,13 @@ It returns NULL if there&#39;s no memory available.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Allocates the requested memory and returns a pointer to it. It return NULL if no memory available.</p>
+    <p>return NULL if no memory available</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>size_t</span>
-      
-      
-        <span class='type'>(<tt>size_t</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The size of memory block, in bytes.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>void* Pointer to requested block of memory.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div>
 
@@ -6239,6 +6046,18 @@ It returns NULL if there&#39;s no memory available.</p>
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>return NULL if no memory available</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
@@ -6249,52 +6068,6 @@ It returns NULL if there&#39;s no memory available.</p>
 
   
 </h3>
-<div class="docstring">
-  <div class="discussion">
-    <p>Deallocates the memory previously allocated by a call to mrb_calloc, mrb_malloc, mrb_realloc, mrb_malloc_simple, or mrb_realloc_simple</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>mrb_state*</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>void*</span>
-      
-      
-        <span class='type'>(<tt>void*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The pointer to a memory block previously allocated.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div>
-
 
 </div>
 
@@ -6305,94 +6078,6 @@ It returns NULL if there&#39;s no memory available.</p>
 
   
 </h3>
-<div class="docstring">
-  <div class="discussion">
-    <p>Returns a String from C String.</p>
-
-<pre class="code ruby"><code class="ruby">void
-mrb_mruby_example_gem_init(mrb_state* mrb) {
-  mrb_value mrb_string;
-  char c_str[<span style="color:#00D">6</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">String</span><span style="color:#710">&quot;</span></span>;
-
-  mrb_string = mrb_str_new(mrb, c_str, strlen(c_str)); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Return</span> <span style="color:#036;font-weight:bold">Ruby</span> string value.
-  mrb_p(mrb, mrb_string);
-}
-</code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>mrb</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>*p</span>
-      
-      
-        <span class='type'>(<tt>const char</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>A C string.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>len</span>
-      
-      
-        <span class='type'>(<tt>size_t</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The length of string.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>mrb_value A Ruby value.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div>
-
 
 </div>
 
@@ -6405,74 +6090,13 @@ mrb_mruby_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns a String from a C string.</p>
-
-<pre class="code ruby"><code class="ruby">void
-mrb_mruby_example_gem_init(mrb_state* mrb) {
-  mrb_value mrb_string;
-  char c_str[<span style="color:#00D">6</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">String</span><span style="color:#710">&quot;</span></span>;
-
-  mrb_string = mrb_str_new_cstr(mrb, c_str); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Return</span> <span style="color:#036;font-weight:bold">Ruby</span> string value.
-  mrb_p(mrb, mrb_string);
-}
-</code></pre>
+    <p>Turns a C string into a Ruby string value.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>mrb</span>
-      
-      
-        <span class='type'>(<tt>mrb_state*</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>*p</span>
-      
-      
-        <span class='type'>(<tt>const char</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>A C string.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>mrb_value A Ruby value.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div>
 
@@ -6572,7 +6196,7 @@ mrb_mruby_example_gem_init(mrb_state* mrb) {
       
         &mdash;
         <div class='inline'><p>User data will be passed to custom allocator f.
-If user data isn&#39;t required just pass NULL.</p>
+If user data isn’t required just pass NULL.</p>
 </div>
       
     </li>
@@ -6647,7 +6271,7 @@ Use mrb_default_allocf for the default</p>
       
         &mdash;
         <div class='inline'><p>User data will be passed to custom allocator f.
-If user data isn&#39;t required just pass NULL.</p>
+If user data isn’t required just pass NULL.</p>
 </div>
       
     </li>
@@ -6860,7 +6484,7 @@ If user data isn&#39;t required just pass NULL.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_convert_to_integer-function">
-  mrb_value <strong>mrb_convert_to_integer</strong>(mrb_state * mrb, mrb_value val, int base)
+  mrb_value <strong>mrb_convert_to_integer</strong>(mrb_state * mrb, mrb_value val, mrb_int base)
 
   
 </h3>
@@ -6931,26 +6555,6 @@ If user data isn&#39;t required just pass NULL.</p>
     <div class="method_details ">
   <h3 class="signature " id="mrb_incremental_gc-function">
   void <strong>mrb_incremental_gc</strong>(mrb_state * )
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_gc_arena_save-function">
-  int <strong>mrb_gc_arena_save</strong>(mrb_state* )
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_gc_arena_restore-function">
-  void <strong>mrb_gc_arena_restore</strong>(mrb_state* , int )
 
   
 </h3>
@@ -7325,6 +6929,16 @@ If user data isn&#39;t required just pass NULL.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_func_basic_p-function">
+  mrb_bool <strong>mrb_func_basic_p</strong>(mrb_state * mrb, mrb_value obj, mrb_sym mid, mrb_func_t func)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_fiber_resume-function">
   mrb_value <strong>mrb_fiber_resume</strong>(mrb_state * mrb, mrb_value fib, mrb_int argc, const mrb_value * argv)
 
@@ -7357,6 +6971,30 @@ If user data isn&#39;t required just pass NULL.</p>
 <div class="docstring">
   <div class="discussion">
     <p>Yield a Fiber</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+	<p class="tag_title"><strong>Required mrbgem</strong>: mruby-fiber</p>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_fiber_alive_p-function">
+  mrb_value <strong>mrb_fiber_alive_p</strong>(mrb_state * mrb, mrb_value fib)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Check if a Fiber is alive</p>
 
 
   </div>
@@ -7475,11 +7113,12 @@ If user data isn&#39;t required just pass NULL.</p>
 </div>
 </div>
 
-    <div id="footer">
-  Generated on Sun Jan 17 01:23:07 2016 by
+      <div id="footer">
+  Generated on Fri May 11 23:54:00 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.2.2 (ruby-2.2.3).
+  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
 </div>
 
+    </div>
   </body>
 </html>
