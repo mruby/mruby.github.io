@@ -1,0 +1,84 @@
+---
+layout: post
+title:  "mruby 1.4.1 released"
+date:   2018-04-27 09:15:00
+categories: releases
+---
+
+mruby 1.4.1 released
+====================
+
+mruby 1.4.1 is released. Download [mruby 1.4.1][mruby-1.4.1-dl] now.
+
+[mruby-1.4.1-dl]: https://github.com/mruby/mruby/archive/1.4.1.zip
+
+## mruby 1.4.1 by the numbers
+
+* 1,106 commits
+* 289 issues fixed
+* 104 pull requests merged
+* 18 [contributors][contributors]
+* 215 changed files
+* 15,199 additions(+)
+* 3,029 deletions(-)
+
+[See the full diff](https://github.com/mruby/mruby/compare/1.3.0...1.4.1).
+
+[contributors]: https://github.com/mruby/mruby/graphs/contributors
+
+## What's new in mruby 1.4.1
+
+### * Debbuger bug and lot of small bug fixes
+### * New mrbgems (merge from https://github.com/iij)
+
+- mruby-io
+- mruby-socket
+- mruby-pack
+
+### * Supports several Ruby 2.x methods
+
+- Comparable#clamp (Ruby 2.4)
+- Comparable#uniq (Ruby 2.4)
+- Hash#fetch_values (Ruby 2.3)
+- Hash#slice (Ruby 2.5)
+- Hash#to_proc (Ruby 2.3)
+- Kernel#itself (Ruby 2.2)
+- Kernel#yield_self (Ruby 2.5)
+- Numeric#finite? (Ruby 2.4)
+- Numeric#infinite? (Ruby 2.4)
+- Numeric#negative? (Ruby 2.3)
+- Numeric#positive? (Ruby 2.3)
+- String#delete_prefix (Ruby 2.5)
+- String#delete_prefix! (Ruby 2.5)
+- String#delete_suffix (Ruby 2.5)
+- String#delete_suffix! (Ruby 2.5)
+- String#casecmp? (Ruby 2.4)
+- Symbol#casecmp? (Ruby 2.4)
+
+
+### * Supports other methods
+
+- Array#combination
+- Array#permutation
+- Hash#compact
+- Hash#transform_keys
+- Hash#transform_keys!
+- Hash#trans_values
+- Hash#trans_values!
+- Method.nesting
+- main.define_method
+- #module_exec
+- #class_exec
+
+
+### * New Compile options
+
+- MRB_WITHOUT_FLOAT
+- MRB_METHOD_CACHE
+- MRB_METHOD_TABLE_INLINE
+
+## Evaluated mrbgems list (NPO mruby forum)
+
+[See the list](http://forum.mruby.org/download/index141EN.html).
+
+
