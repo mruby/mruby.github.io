@@ -1,0 +1,111 @@
+---
+layout: post
+title:  "mruby 2.0.0 released"
+date:   2018-12-11 00:00:00
+categories: releases
+---
+
+# mruby 2.0.0
+
+We are proudly announcing the first stable release of mruby 2.0 series -- mruby 2.0.0.
+
+This release includes the improvement of Ruby2.x compatibility and memory consumption.
+
+---
+## New Features
+
+### Core Language Features
+
+- Keyword Arguments Implemented (Ruby 2.0 Compatible)
+- Argument Deconstructing Implemented
+
+### Core Libraries
+
+#### mruby-kernel-ext
+- `Kernel#then` was added as `Kernel#yield_self` (Ruby 2.6 Compatible)
+
+#### mruby-array-ext
+- `Array#to_h`  can be called with a block (Ruby 2.6 Compatible)
+- `Array#union` was added (Ruby 2.6 Compatible)
+
+#### mruby-string-ext
+- `String#lines`  can be called with a block
+- The following methods are added
+  `String#tr`, `String#tr!`, `String#tr_s`, `String#tr_s!`, `String#squeeze`, `String#squeeze!`, `String#count`, `String#delete`, `String#delete!`
+
+#### mruby-pack
+- `String#unpack1` was added
+
+#### mruby-metaprog
+Meta-programming features are separated as a mrbgem. You need to link  `mruby-metaprog` to use meta-programming. (See `Breaking Changes` for more detail)
+
+#### mruby-sleep
+[matsumotory/mruby-sleep](https://github.com/matsumotory/mruby-sleep) was bundled as a core library.
+You can use `Kernel#sleep` and `Kernel#usleep` methods.
+
+### Tools
+
+#### mruby compiler (mrbc)
+
+- `--remove-lv` option was added
+  By specifying `--remove-lv`, mrbc suppress the generation of local variable information to be used for debugging in the compiled binary. It reduces the size of compiled mruby binary and memory consumption when loaded.
+
+#### mruby interpreter (mruby)
+
+- `-d` option was added
+  By specifying `-d`, mruby execute the script in the debugging mode ($DEBUG=true).
+- `-r` option was added
+  By specifying `-r library`, mruby loads the specified library before the execution.
+
+#### interactive mruby (mirb)
+
+- `-d` option was added (Behaves as `mruby -d`)
+- `-r` option was added (Behaves as `mruby -r`)
+
+
+---
+## Reducing Memory Consumption
+
+Several improvements were done in mruby 2.0.0 to reduce memory consumption:
+
+- Instance variables are stored in segmented lists
+- Hash implementation replaced from khash
+- `--remove-lv` option was added to mruby compiler(mrbc)
+- And smaller improvements including VM stack and call frames.
+
+---
+## Breaking Changes
+
+There are two major breaking changes from mruby 1.4.1
+
+### 1. Bytecode Overhauled
+
+VM instruction format has been completely changed.
+The fixed width instruction until mruby 1.4.1 was abandoned. We chose variable length bytecode instructions in mruby 2.0. You need to recompile everything for mruby 2.0.
+
+- Binary Format Version: `0005`
+- VM Version: `0002`
+
+### 2. Meta-programming features separated as mrbgem
+
+From the assumption that meta-programming features are not frequently used in embedded system development, we separated meta-programming features as a mebgem (`mruby-metaprog`). The following methods have moved to `mruby-metaprog` gem.
+
+- Kernel module
+  global_variables, local_variables, singleton_class, instance_variables, instance_variables_defined?, instance_variable_get, instance_variable_set, methods, private_methods, public_methods, protected_methods, singleton_methods, define_singleton_methods, send
+
+- Module class
+class_variables, class_variables_defined?, class_variable_get, class_variable_set, remove_class_variable, included_modules, instance_methods, remove_method, method_removed, constants
+
+- Module class (Singleton Methods)  
+constants, nesting
+
+---
+
+We have done 378 commits to 156 files, 7,949 lines were added, 5,430 lines removed since mruby1.4.1.
+For more detail of the updates, see [Commit Log](https://github.com/mruby/mruby/compare/1.4.1...2.0.0).
+
+## Evaluated mrbgems list (NPO mruby forum)
+
+[See the list](http://forum.mruby.org/download/index2EN.html).
+
+
