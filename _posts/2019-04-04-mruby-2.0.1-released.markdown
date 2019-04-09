@@ -1,0 +1,152 @@
+---
+layout: post
+title:  "mruby 2.0.1 released"
+date:   2019-04-04 00:00:00
+categories: releases
+---
+
+# mruby 2.0.1
+
+We are proudly annoucing the stable release of mruby 2.0 series - mruby 2.0.1.
+
+---
+
+## New Features
+
+### Core Language Features
+
+- Support string literal concatenation.
+
+### Core Libraries
+
+#### Ruby 2.6 Features
+
+- Add ```Enumerator::Chain```, ```Enumerable#chain``` and ```Enumerator#+```.
+- Add function composition operators ```<<``` and ```>>``` to ```Proc``` and ```Method```.
+
+#### Compatibility
+
+- Recover methods removed in mruby 2.0.0.
+`String#to_str`, `Integer#to_int`, `Float#to_int`
+- Improve compatibility to CRuby for `Float#to_s` [#4225](https://github.com/mruby/mruby/pull/4225)
+
+#### mruby-class-ext
+
+- Add methods.  
+`Module#<`, `Module<=`, `Module>`, `Module>=`, `Module<=>`
+
+#### mruby-pack
+
+- Support Big-endian platform.
+
+### Tools
+
+#### mruby debugger (mrdb)
+
+- Add `info locals` command.
+
+### New C APIs
+
+#### mruby core
+
+```c
+MRB_API mrb_value mrb_ary_splice(mrb_state *mrb, mrb_value self, mrb_int head, mrb_int len, mrb_value rpl);
+MRB_API void mrb_notimplement(mrb_state*);
+MRB_API mrb_value mrb_vformat(mrb_state *mrb, const char *format, va_list ap);
+```
+
+#### String class
+
+```c
+MRB_API double mrb_cstr_to_dbl(mrb_state *mrb, const char *s, mrb_bool badcheck);
+MRB_API mrb_value mrb_cstr_to_inum(mrb_state *mrb, const char *s, mrb_int base, mrb_bool badcheck);
+```
+
+#### Hash class
+
+```c
+MRB_API void mrb_hash_foreach(mrb_state *mrb, struct RHash *hash, mrb_hash_foreach_func *func, void *p);
+MRB_API mrb_int mrb_hash_size(mrb_state *mrb, mrb_value hash);
+```
+
+#### Object class
+
+```c
+MRB_API void mrb_iv_foreach(mrb_state *mrb, mrb_value obj, mrb_iv_foreach_func *func, void *p);
+```
+
+#### Time class
+
+```c
+MRB_API mrb_time_at(mrb_state *mrb, double sec, double usec, enum mrb_timezone zone);
+```
+
+---
+
+## Reducing Memory Consumption
+
+- Remove symbol hash table from `mrb_state` structure.  
+Use linear search instead. Number of symbols is usually small (<1K), so we don't need performance boost from hash tables. In our benchmark measurement, hash tables consumes 790KB for `build/full-debug/mrbtest`.
+
+- Implement inline packed symbols.  
+Small symbols with all alphanumeric characters (<5) are packed in 32bit symbol integer a la base64.  
+This means those small symbols are not listed in `Symbol.all_symbols`.
+
+---
+
+## Breaking Changes
+
+There are three major breaking changes from mruby 2.0.0
+
+### Binary (MRB) format
+
+- Change compiled binary format version. ("0005" -> "0006")
+
+### Add RRange API
+
+Developers must use following APIs for accessing attributes of RRange because RRange structure depends on boxing setting.
+
+- mrb_range_beg
+- mrb_range_end
+- mrb_range_excl_p
+
+### Remove C API
+
+- Functions to be made `static` (`MRB_API` was not needed):  
+`mrb_mod_module_function()`, `mrb_obj_hash()`, `mrb_str_len_to_inum()`, `sym2name_len()`
+- Functions to remove `MRB_API` from definitions (referenced from within `libmruby`):  
+`mrb_mod_cv_defined()`, `mrb_mod_cv_get()`, `mrb_f_send()`
+
+### Small incompatible changes in function prototypes
+
+- `mrb_parser_get_filename`: return value changed to `mrb_sym`.
+- `mrb_debug_get_filename`: add `mrb_state*` as a first argument.
+- `mrb_debug_get_line`: ditto.
+
+### Remove methods
+
+- Remove `Kernel#class_defined?` which is not available in CRuby; [#3829](https://github.com/mruby/mruby/issues/3829)
+
+---
+
+## Major bug fixes
+
+- Fixed a bug on platforms without `BYTE_ORDER`; fix [#4190](https://github.com/mruby/mruby/issues/4190)
+- Fix 0.0 and -0.0 handling.
+- Fix dump/load float leteral evaluate to infinity.
+- Fix `Symbol#size` for multi-byte characters with `MRB_UTF8_STRING`.
+- Add `OP_ENTER` to blocks without parameters; fix [#4175](https://github.com/mruby/mruby/issues/4175)
+- Should not check non-node value to `void_expr_error`; fix [#4203](https://github.com/mruby/mruby/issues/4175) [#4192](https://github.com/mruby/mruby/issues/4192)
+- Should not copy keys&values when a hash table is empty; fix [#4270](https://github.com/mruby/mruby/issues/4270)
+- Raise error on failed comparison in `sort`; ref [#4307](https://github.com/mruby/mruby/issues/4307)
+- Fix memory leak in `time_update_datetime`; fix [#4308](https://github.com/mruby/mruby/issues/4308)
+
+---
+
+We have done 371 commits to 163 files, 2,397 lines were added, 1,570 lines removed since mruby 2.0.0. For more detail of the updates, [see Commit Log](https://github.com/mruby/mruby/compare/2.0.0...2.0.1).
+
+## Evaluated mrbgems list (NPO mruby forum)
+
+[See the list](http://forum.mruby.org/download/index201EN.html).
+
+Let's try `mruby 2.0.1`.
