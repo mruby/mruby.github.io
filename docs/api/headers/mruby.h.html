@@ -6,7 +6,7 @@
 <title>
   Header: mruby.h
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -242,7 +242,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a module fuction.</p>
+    <span class="summary_desc"><div class='inline'><p>Defines a module function.</p>
 </div></span>
   
 </li>
@@ -286,6 +286,24 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_undef_method_id-function" title="mrb_undef_method_id">void <strong>mrb_undef_method_id</strong>(mrb_state*, struct RClass*, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_undef_class_method-function" title="mrb_undef_class_method">void <strong>mrb_undef_class_method</strong>(mrb_state*, struct RClass*, const char*)</a>
 
     
@@ -314,7 +332,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initialize a new object instace of c class.</p>
+    <span class="summary_desc"><div class='inline'><p>Initialize a new object instance of c class.</p>
 </div></span>
   
 </li>
@@ -520,6 +538,24 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_notimplement-function" title="mrb_notimplement">void <strong>mrb_notimplement</strong>(mrb_state*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>a function to raise NotImplementedError with current method name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_notimplement_m-function" title="mrb_notimplement_m">mrb_value <strong>mrb_notimplement_m</strong>(mrb_state*, mrb_value)</a>
 
     
@@ -530,7 +566,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>a function to be replacement of unimplemented method.</p>
 </div></span>
   
 </li>
@@ -549,24 +585,6 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Duplicate an object.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_check_to_integer-function" title="mrb_check_to_integer">mrb_value <strong>mrb_check_to_integer</strong>(mrb_state *, mrb_value, const char *)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -1852,6 +1870,24 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_vformat-function" title="mrb_vformat">mrb_value <strong>mrb_vformat</strong>(mrb_state *, const char *, va_list)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>function for <code>raisef</code> formatting.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_yield-function" title="mrb_yield">mrb_value <strong>mrb_yield</strong>(mrb_state *, mrb_value, mrb_value)</a>
 
     
@@ -1961,6 +1997,24 @@
       <li class="public ">
   <span class="summary_signature">
     <a href="#mrb_to_int-function" title="mrb_to_int">mrb_value <strong>mrb_to_int</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_to_str-function" title="mrb_to_str">mrb_value <strong>mrb_to_str</strong>(mrb_state *, mrb_value)</a>
 
     
   </span>
@@ -2151,6 +2205,24 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Check if a Fiber is alive.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_stack_extend-function" title="mrb_stack_extend">void <strong>mrb_stack_extend</strong>(mrb_state*, mrb_int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -2459,7 +2531,7 @@
       <dt id="MRB_ARGS_OPT-define" class=""><small>#define</small> MRB_ARGS_OPT
         <div class="docstring">
   <div class="discussion">
-    <p>Funtion takes n optional arguments</p>
+    <p>Function takes n optional arguments</p>
 
 
   </div>
@@ -2476,7 +2548,7 @@
       <dt id="MRB_ARGS_ARG-define" class=""><small>#define</small> MRB_ARGS_ARG
         <div class="docstring">
   <div class="discussion">
-    <p>Funtion takes n1 mandatory arguments and n2 optional arguments</p>
+    <p>Function takes n1 mandatory arguments and n2 optional arguments</p>
 
 
   </div>
@@ -3658,7 +3730,7 @@ void mrb_example_gem_init(mrb_state* mrb){
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Defines a module fuction.</p>
+    <p>Defines a module function.</p>
 
 <p>Example:</p>
 
@@ -3967,7 +4039,7 @@ mrb_example_gem_final(mrb_state* mrb){
   
     <li>
       
-        <span class='name'>constchar*</span>
+        <span class='name'>const</span>
       
       
         <span class='type'>(<tt>const char*</tt>)</span>
@@ -3975,7 +4047,7 @@ mrb_example_gem_final(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The name of the method to be undefined.</p>
+        <div class='inline'><p>char* The name of the method to be undefined.</p>
 </div>
       
     </li>
@@ -3985,6 +4057,16 @@ mrb_example_gem_final(mrb_state* mrb){
 
 </div>
 
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_undef_method_id-function">
+  void <strong>mrb_undef_method_id</strong>(mrb_state* , struct RClass* , mrb_sym )
+
+  
+</h3>
 
 </div>
 
@@ -4070,15 +4152,15 @@ mrb_example_gem_init(mrb_state* mrb){
   
     <li>
       
-        <span class='name'>constchar*</span>
+        <span class='name'>const</span>
       
       
-        <span class='type'>(<tt>constchar*</tt>)</span>
+        <span class='type'>(<tt>const char*</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The name of the class method to be undefined.</p>
+        <div class='inline'><p>char* The name of the class method to be undefined.</p>
 </div>
       
     </li>
@@ -4100,7 +4182,7 @@ mrb_example_gem_init(mrb_state* mrb){
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Initialize a new object instace of c class.</p>
+    <p>Initialize a new object instance of c class.</p>
 
 <p>Example:</p>
 
@@ -5007,11 +5089,45 @@ mrb_example_gem_init(mrb_state* mrb) {
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_notimplement-function">
+  void <strong>mrb_notimplement</strong>(mrb_state* )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>a function to raise NotImplementedError with current method name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_notimplement_m-function">
   mrb_value <strong>mrb_notimplement_m</strong>(mrb_state* , mrb_value )
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>a function to be replacement of unimplemented method</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
@@ -5088,16 +5204,6 @@ mrb_example_gem_init(mrb_state* mrb) {
 
 </div>
 
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_check_to_integer-function">
-  mrb_value <strong>mrb_check_to_integer</strong>(mrb_state * mrb, mrb_value val, const char * method)
-
-  
-</h3>
 
 </div>
 
@@ -5352,10 +5458,6 @@ class it returns true, it returns false otherwise.</p>
 <div class="docstring">
   <div class="discussion">
     <p>Retrieve arguments from mrb_state.</p>
-
-<p>When applicable, implicit conversions (such as <code>to_str</code>, <code>to_ary</code>, <code>to_hash</code>) are
-applied to received arguments.
-Used inside a function of mrb_func_t type.</p>
 
 
   </div>
@@ -6763,6 +6865,28 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_vformat-function">
+  mrb_value <strong>mrb_vformat</strong>(mrb_state * mrb, const char * format, va_list ap)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>function for <code>raisef</code> formatting</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_yield-function">
   mrb_value <strong>mrb_yield</strong>(mrb_state * mrb, mrb_value b, mrb_value arg)
 
@@ -6869,6 +6993,16 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_to_str-function">
+  mrb_value <strong>mrb_to_str</strong>(mrb_state * mrb, mrb_value val)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_check_type-function">
   void <strong>mrb_check_type</strong>(mrb_state * mrb, mrb_value x, enum mrb_vtype, t )
 
@@ -6880,7 +7014,7 @@ If user data isn’t required just pass NULL.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_define_alias-function">
-  void <strong>mrb_define_alias</strong>(mrb_state * mrb, struct RClass * klass, const char * name1, const char * name2)
+  void <strong>mrb_define_alias</strong>(mrb_state * mrb, struct RClass * c, const char * a, const char * b)
 
   
 </h3>
@@ -7011,6 +7145,16 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_stack_extend-function">
+  void <strong>mrb_stack_extend</strong>(mrb_state* , mrb_int )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_pool_open-function">
   struct mrb_pool* <strong>mrb_pool_open</strong>(mrb_state* )
 
@@ -7114,9 +7258,9 @@ If user data isn’t required just pass NULL.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:54:00 2018 by
+  Generated on Thu May 16 08:48:34 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

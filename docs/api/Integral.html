@@ -6,7 +6,7 @@
 <title>
   Module: Integral
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -80,7 +80,7 @@
   
   <dl>
     <dt>Included in:</dt>
-    <dd><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span>, <span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></dd>
+    <dd><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></dd>
   </dl>
   
 
@@ -88,7 +88,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>mrblib/numeric.rb<span class="defines">,<br />
-  mrbgems/mruby-numeric-ext/mrblib/numeric_ext.rb</span>
+  src/numeric.c,<br /> mrbgems/mruby-numeric-ext/mrblib/numeric_ext.rb</span>
 </dd>
   </dl>
   
@@ -749,11 +749,11 @@ incremented by +step+ (default 1).</p>
   raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">step can't be 0</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> step == <span style="color:#00D">0</span>
   <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:step</span>, num, step) <span style="color:#080;font-weight:bold">unless</span> block
 
-  i = <span style="color:#080;font-weight:bold">if</span> class_defined?(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Float</span><span style="color:#710">&quot;</span></span>) &amp;&amp; num.kind_of?(<span style="color:#036;font-weight:bold">Float</span>) <span style="color:#080;font-weight:bold">then</span> <span style="color:#069">self</span>.to_f <span style="color:#080;font-weight:bold">else</span> <span style="color:#069">self</span> <span style="color:#080;font-weight:bold">end</span>
+  i = __coerce_step_counter(num, step)
   <span style="color:#080;font-weight:bold">if</span> num == <span style="color:#069">nil</span>
     <span style="color:#080;font-weight:bold">while</span> <span style="color:#069">true</span>
       block.call(i)
-      i+=step
+      i += step
     <span style="color:#080;font-weight:bold">end</span>
     <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>
   <span style="color:#080;font-weight:bold">end</span>
@@ -952,9 +952,9 @@ from +self+ upto +num+.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:53:56 2018 by
+  Generated on Thu May 16 08:48:30 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

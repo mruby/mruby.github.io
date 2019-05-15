@@ -6,7 +6,7 @@
 <title>
   Header: mruby/variable.h
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -160,7 +160,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_iv_p-function" title="mrb_iv_p">mrb_bool <strong>mrb_iv_p</strong>(mrb_state *, mrb_sym)</a>
+    <a href="#mrb_iv_name_sym_p-function" title="mrb_iv_name_sym_p">mrb_bool <strong>mrb_iv_name_sym_p</strong>(mrb_state *, mrb_sym)</a>
 
     
   </span>
@@ -178,7 +178,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_iv_check-function" title="mrb_iv_check">void <strong>mrb_iv_check</strong>(mrb_state *, mrb_sym)</a>
+    <a href="#mrb_iv_name_sym_check-function" title="mrb_iv_name_sym_check">void <strong>mrb_iv_name_sym_check</strong>(mrb_state *, mrb_sym)</a>
 
     
   </span>
@@ -482,6 +482,24 @@
 </li>
 
     
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_iv_foreach-function" title="mrb_iv_foreach">void <strong>mrb_iv_foreach</strong>(mrb_state *, mrb_value, mrb_iv_foreach_func *, void *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
   </ul>
 
 
@@ -541,8 +559,8 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_iv_p-function">
-  mrb_bool <strong>mrb_iv_p</strong>(mrb_state * mrb, mrb_sym sym)
+  <h3 class="signature " id="mrb_iv_name_sym_p-function">
+  mrb_bool <strong>mrb_iv_name_sym_p</strong>(mrb_state * mrb, mrb_sym sym)
 
   
 </h3>
@@ -551,8 +569,8 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_iv_check-function">
-  void <strong>mrb_iv_check</strong>(mrb_state * mrb, mrb_sym sym)
+  <h3 class="signature " id="mrb_iv_name_sym_check-function">
+  void <strong>mrb_iv_name_sym_check</strong>(mrb_state * mrb, mrb_sym sym)
 
   
 </h3>
@@ -938,13 +956,23 @@ mrb_gv_remove(mrb, sym);
 </div>
 
   
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_iv_foreach-function">
+  void <strong>mrb_iv_foreach</strong>(mrb_state * mrb, mrb_value obj, mrb_iv_foreach_func * func, void * p)
+
+  
+</h3>
+
+</div>
+
+  
 </div>
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:54:01 2018 by
+  Generated on Thu May 16 08:48:35 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

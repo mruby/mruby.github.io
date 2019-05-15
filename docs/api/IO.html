@@ -6,7 +6,7 @@
 <title>
   Class: IO
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -110,30 +110,36 @@
   <p class="children"><span class='object_link'><a href="BasicSocket.html" title="BasicSocket (class)">BasicSocket</a></span>, <span class='object_link'><a href="File.html" title="File (class)">File</a></span></p>
 </div>
 
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="SEEK_SET-constant" class="">SEEK_SET =
-        
-      </dt>
-      <dd><pre class="code"><span style="color:#00D">0</span></pre></dd>
-    
-      <dt id="SEEK_CUR-constant" class="">SEEK_CUR =
-        
-      </dt>
-      <dd><pre class="code"><span style="color:#00D">1</span></pre></dd>
-    
-      <dt id="SEEK_END-constant" class="">SEEK_END =
-        
-      </dt>
-      <dd><pre class="code"><span style="color:#00D">2</span></pre></dd>
-    
-      <dt id="BUF_SIZE-constant" class="">BUF_SIZE =
-        
-      </dt>
-      <dd><pre class="code"><span style="color:#00D">4096</span></pre></dd>
-    
-  </dl>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="SEEK_SET-constant" class="">SEEK_SET =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#00D">0</span></pre></dd>
+      
+        <dt id="SEEK_CUR-constant" class="">SEEK_CUR =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#00D">1</span></pre></dd>
+      
+        <dt id="SEEK_END-constant" class="">SEEK_END =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#00D">2</span></pre></dd>
+      
+        <dt id="BUF_SIZE-constant" class="">BUF_SIZE =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#00D">4096</span></pre></dd>
+      
+    </dl>
+  
 
 
 
@@ -1171,16 +1177,6 @@
       <pre class="lines">
 
 
-603
-604
-605
-606
-607
-608
-609
-610
-611
-612
 613
 614
 615
@@ -1208,10 +1204,20 @@
 637
 638
 639
-640</pre>
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 603</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 613</span>
 
 mrb_value
 mrb_io_initialize(mrb_state *mrb, mrb_value io)
@@ -1600,18 +1606,18 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-705
-706
-707
-708
-709
-710
-711
-712
-713</pre>
+715
+716
+717
+718
+719
+720
+721
+722
+723</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 705</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 715</span>
 
 mrb_value
 mrb_io_check_readable(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1686,17 +1692,17 @@ mrb_io_check_readable(mrb_state *mrb, mrb_value <span style="color:#069">self</s
       <pre class="lines">
 
 
-924
-925
-926
-927
-928
-929
-930
-931</pre>
+934
+935
+936
+937
+938
+939
+940
+941</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 924</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 934</span>
 
 mrb_value
 mrb_io_close(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1726,16 +1732,6 @@ mrb_io_close(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-1236
-1237
-1238
-1239
-1240
-1241
-1242
-1243
-1244
-1245
 1246
 1247
 1248
@@ -1760,10 +1756,20 @@ mrb_io_close(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 1267
 1268
 1269
-1270</pre>
+1270
+1271
+1272
+1273
+1274
+1275
+1276
+1277
+1278
+1279
+1280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1236</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1246</span>
 
 mrb_value
 mrb_io_set_close_on_exec(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1845,16 +1851,6 @@ mrb_io_set_close_on_exec(mrb_state *mrb, mrb_value <span style="color:#069">self
       <pre class="lines">
 
 
-1212
-1213
-1214
-1215
-1216
-1217
-1218
-1219
-1220
-1221
 1222
 1223
 1224
@@ -1867,10 +1863,20 @@ mrb_io_set_close_on_exec(mrb_state *mrb, mrb_value <span style="color:#069">self
 1231
 1232
 1233
-1234</pre>
+1234
+1235
+1236
+1237
+1238
+1239
+1240
+1241
+1242
+1243
+1244</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1212</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1222</span>
 
 mrb_value
 mrb_io_close_on_exec_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1927,19 +1933,19 @@ mrb_io_close_on_exec_p(mrb_state *mrb, mrb_value <span style="color:#069">self</
       <pre class="lines">
 
 
-933
-934
-935
-936
-937
-938
-939
-940
-941
-942</pre>
+943
+944
+945
+946
+947
+948
+949
+950
+951
+952</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 933</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 943</span>
 
 mrb_value
 mrb_io_close_write(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1996,27 +2002,27 @@ mrb_io_close_write(mrb_state *mrb, mrb_value <span style="color:#069">self</span
       <pre class="lines">
 
 
-944
-945
-946
-947
-948
-949
-950
-951
-952
-953
-954</pre>
+954
+955
+956
+957
+958
+959
+960
+961
+962
+963
+964</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 944</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 954</span>
 
 mrb_value
 mrb_io_closed(mrb_state *mrb, mrb_value io)
 {
   struct mrb_io *fptr;
   fptr = (struct mrb_io *)mrb_get_datatype(mrb, io, &amp;mrb_io_type);
-  <span style="color:#080;font-weight:bold">if</span> (fptr-&gt;fd &gt;= <span style="color:#00D">0</span>) {
+  <span style="color:#080;font-weight:bold">if</span> (fptr == <span style="color:#036;font-weight:bold">NULL</span> || fptr-&gt;fd &gt;= <span style="color:#00D">0</span>) {
     <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
   }
 
@@ -2233,22 +2239,22 @@ mrb_io_closed(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-1204
-1205
-1206
-1207
-1208
-1209
-1210</pre>
+1214
+1215
+1216
+1217
+1218
+1219
+1220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1204</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1214</span>
 
 mrb_value
 mrb_io_fileno(mrb_state *mrb, mrb_value io)
 {
   struct mrb_io *fptr;
-  fptr = (struct mrb_io *)mrb_get_datatype(mrb, io, &amp;mrb_io_type);
+  fptr = io_get_open_fptr(mrb, io);
   <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(fptr-&gt;fd);
 }</pre>
     </td>
@@ -2452,16 +2458,6 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-554
-555
-556
-557
-558
-559
-560
-561
-562
-563
 564
 565
 566
@@ -2499,10 +2495,20 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
 598
 599
 600
-601</pre>
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 554</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 564</span>
 
 mrb_value
 mrb_io_initialize_copy(mrb_state *mrb, mrb_value copy)
@@ -2576,19 +2582,19 @@ mrb_io_initialize_copy(mrb_state *mrb, mrb_value copy)
       <pre class="lines">
 
 
-715
-716
-717
-718
-719
-720
-721
-722
-723
-724</pre>
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 715</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 725</span>
 
 mrb_value
 mrb_io_isatty(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2632,27 +2638,27 @@ mrb_io_isatty(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-956
-957
-958
-959
-960
-961
-962
-963
-964
-965
 966
-967</pre>
+967
+968
+969
+970
+971
+972
+973
+974
+975
+976
+977</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 956</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 966</span>
 
 mrb_value
 mrb_io_pid(mrb_state *mrb, mrb_value io)
 {
   struct mrb_io *fptr;
-  fptr = (struct mrb_io *)mrb_get_datatype(mrb, io, &amp;mrb_io_type);
+  fptr = io_get_open_fptr(mrb, io);
 
   <span style="color:#080;font-weight:bold">if</span> (fptr-&gt;pid &gt; <span style="color:#00D">0</span>) {
     <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(fptr-&gt;pid);
@@ -3280,16 +3286,16 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-1284
-1285
-1286
-1287
-1288
-1289
-1290</pre>
+1294
+1295
+1296
+1297
+1298
+1299
+1300</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1284</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1294</span>
 
 mrb_value
 mrb_io_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3318,20 +3324,20 @@ mrb_io_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-1272
-1273
-1274
-1275
-1276
-1277
-1278
-1279
-1280
-1281
-1282</pre>
+1282
+1283
+1284
+1285
+1286
+1287
+1288
+1289
+1290
+1291
+1292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1272</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1282</span>
 
 mrb_value
 mrb_io_set_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3364,16 +3370,6 @@ mrb_io_set_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-812
-813
-814
-815
-816
-817
-818
-819
-820
-821
 822
 823
 824
@@ -3414,10 +3410,20 @@ mrb_io_set_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 859
 860
 861
-862</pre>
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 812</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 822</span>
 
 mrb_value
 mrb_io_sysread(mrb_state *mrb, mrb_value io)
@@ -3490,16 +3496,6 @@ mrb_io_sysread(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-864
-865
-866
-867
-868
-869
-870
-871
-872
-873
 874
 875
 876
@@ -3516,10 +3512,20 @@ mrb_io_sysread(mrb_state *mrb, mrb_value io)
 887
 888
 889
-890</pre>
+890
+891
+892
+893
+894
+895
+896
+897
+898
+899
+900</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 864</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 874</span>
 
 mrb_value
 mrb_io_sysseek(mrb_state *mrb, mrb_value io)
@@ -3533,7 +3539,7 @@ mrb_io_sysseek(mrb_state *mrb, mrb_value io)
     whence = <span style="color:#00D">0</span>;
   }
 
-  fptr = (struct mrb_io *)mrb_get_datatype(mrb, io, &amp;mrb_io_type);
+  fptr = io_get_open_fptr(mrb, io);
   pos = lseek(fptr-&gt;fd, (off_t)offset, (int)whence);
   <span style="color:#080;font-weight:bold">if</span> (pos == <span style="color:#00D">-1</span>) {
     mrb_sys_fail(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">sysseek</span><span style="color:#710">&quot;</span></span>);
@@ -3568,16 +3574,6 @@ mrb_io_sysseek(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-892
-893
-894
-895
-896
-897
-898
-899
-900
-901
 902
 903
 904
@@ -3598,10 +3594,20 @@ mrb_io_sysseek(mrb_state *mrb, mrb_value io)
 919
 920
 921
-922</pre>
+922
+923
+924
+925
+926
+927
+928
+929
+930
+931
+932</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 892</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 902</span>
 
 mrb_value
 mrb_io_syswrite(mrb_state *mrb, mrb_value io)
@@ -3610,7 +3616,7 @@ mrb_io_syswrite(mrb_state *mrb, mrb_value io)
   mrb_value str, buf;
   int fd, length;
 
-  fptr = (struct mrb_io *)mrb_get_datatype(mrb, io, &amp;mrb_io_type);
+  fptr = io_get_open_fptr(mrb, io);
   <span style="color:#080;font-weight:bold">if</span> (! fptr-&gt;writable) {
     mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_IO_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">not opened for writing</span><span style="color:#710">&quot;</span></span>);
   }
@@ -3730,9 +3736,9 @@ mrb_io_syswrite(mrb_state *mrb, mrb_value io)
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:53:58 2018 by
+  Generated on Thu May 16 08:48:32 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   Header: mruby/array.h
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -304,6 +304,24 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_ensure_array_type-function" title="mrb_ensure_array_type">mrb_value <strong>mrb_ensure_array_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_check_array_type-function" title="mrb_check_array_type">mrb_value <strong>mrb_check_array_type</strong>(mrb_state *, mrb_value)</a>
 
     
@@ -351,6 +369,24 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Get nth element in the array.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ary_splice-function" title="mrb_ary_splice">mrb_value <strong>mrb_ary_splice</strong>(mrb_state *, mrb_value, mrb_int, mrb_int, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Replace subsequence of an array.</p>
 </div></span>
   
 </li>
@@ -1379,6 +1415,16 @@ array with just this value.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_ensure_array_type-function">
+  mrb_value <strong>mrb_ensure_array_type</strong>(mrb_state * mrb, mrb_value self)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_check_array_type-function">
   mrb_value <strong>mrb_check_array_type</strong>(mrb_state * mrb, mrb_value self)
 
@@ -1518,6 +1564,129 @@ array with just this value.</p>
   
 </ul>
 
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ary_splice-function">
+  mrb_value <strong>mrb_ary_splice</strong>(mrb_state * mrb, mrb_value self, mrb_int head, mrb_int len, mrb_value rpl)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Replace subsequence of an array.</p>
+
+<p>Equivalent to:</p>
+
+<pre class="code ruby"><code class="ruby"> ary.shift
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>self</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The array from which the value will be shifted.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>head</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Beginning position of a replacement subsequence.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>len</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Length of a replacement subsequence.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>rpl</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The array of replacement elements.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>The receiver array.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -1832,9 +2001,9 @@ array with just this value.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:54:00 2018 by
+  Generated on Thu May 16 08:48:34 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

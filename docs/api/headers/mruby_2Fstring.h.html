@@ -6,7 +6,7 @@
 <title>
   Header: mruby/string.h
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -250,7 +250,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_string_type-function" title="mrb_string_type">mrb_value <strong>mrb_string_type</strong>(mrb_state *, mrb_value)</a>
+    <a href="#mrb_ensure_string_type-function" title="mrb_ensure_string_type">mrb_value <strong>mrb_ensure_string_type</strong>(mrb_state *, mrb_value)</a>
 
     
   </span>
@@ -279,6 +279,24 @@
 
   
     <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_string_type-function" title="mrb_string_type">mrb_value <strong>mrb_string_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>obsolete: use mrb_ensure_string_type() instead.</p>
 </div></span>
   
 </li>
@@ -394,7 +412,43 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_cstr_to_inum-function" title="mrb_cstr_to_inum">mrb_value <strong>mrb_cstr_to_inum</strong>(mrb_state *, const char *, mrb_int, mrb_bool)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_str_to_dbl-function" title="mrb_str_to_dbl">double <strong>mrb_str_to_dbl</strong>(mrb_state *, mrb_value, mrb_bool)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_cstr_to_dbl-function" title="mrb_cstr_to_dbl">double <strong>mrb_cstr_to_dbl</strong>(mrb_state *, const char *, mrb_bool)</a>
 
     
   </span>
@@ -851,7 +905,7 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Appends self to other. Returns self as a concatnated string.</p>
+    <p>Appends self to other. Returns self as a concatenated string.</p>
 
 <p>Example:</p>
 
@@ -873,10 +927,10 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
   str1 = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abc</span><span style="color:#710">&quot;</span></span>);
   str2 = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">def</span><span style="color:#710">&quot;</span></span>);
 
-  <span style="color:#777">// Concatnates str2 to str1.</span>
+  <span style="color:#777">// Concatenates str2 to str1.</span>
   mrb_str_concat(mrb, str1, str2);
 
- <span style="color:#777">// Prints new Concatnated Ruby string.</span>
+ <span style="color:#777">// Prints new Concatenated Ruby string.</span>
  mrb_p(mrb, str1);
 
  mrb_close(mrb);
@@ -1001,10 +1055,10 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
   mrb_p(mrb, a);
   mrb_p(mrb, b);
 
-  <span style="color:#777">// Concatnates both Ruby strings.</span>
+  <span style="color:#777">// Concatenates both Ruby strings.</span>
   c = mrb_str_plus(mrb, a, b);
 
- <span style="color:#777">// Prints new Concatnated Ruby string.</span>
+ <span style="color:#777">// Prints new Concatenated Ruby string.</span>
  mrb_p(mrb, c);
 
  mrb_close(mrb);
@@ -1015,7 +1069,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
 
 <pre class="code ruby"><code class="ruby">=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abc</span><span style="color:#710">&quot;</span></span>  <span style="color:#777"># First string</span>
 =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">def</span><span style="color:#710">&quot;</span></span>  <span style="color:#777"># Second string</span>
-=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abcdef</span><span style="color:#710">&quot;</span></span> <span style="color:#777"># First &amp; Second concatnated.</span>
+=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abcdef</span><span style="color:#710">&quot;</span></span> <span style="color:#777"># First &amp; Second concatenated.</span>
 </code></pre>
 
 
@@ -1498,8 +1552,8 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_string_type-function">
-  mrb_value <strong>mrb_string_type</strong>(mrb_state * mrb, mrb_value str)
+  <h3 class="signature " id="mrb_ensure_string_type-function">
+  mrb_value <strong>mrb_ensure_string_type</strong>(mrb_state * mrb, mrb_value str)
 
   
 </h3>
@@ -1576,6 +1630,28 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
 
   
 </h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_string_type-function">
+  mrb_value <strong>mrb_string_type</strong>(mrb_state * mrb, mrb_value str)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>obsolete: use mrb_ensure_string_type() instead</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
@@ -1830,8 +1906,28 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_cstr_to_inum-function">
+  mrb_value <strong>mrb_cstr_to_inum</strong>(mrb_state * mrb, const char * s, mrb_int base, mrb_bool badcheck)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_str_to_dbl-function">
   double <strong>mrb_str_to_dbl</strong>(mrb_state * mrb, mrb_value str, mrb_bool badcheck)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_cstr_to_dbl-function">
+  double <strong>mrb_cstr_to_dbl</strong>(mrb_state * mrb, const char * s, mrb_bool badcheck)
 
   
 </h3>
@@ -1847,7 +1943,8 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns a converted string type.</p>
+    <p>Returns a converted string type.
+For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
 
 
   </div>
@@ -2295,9 +2392,9 @@ NUL characters.</li>
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:54:00 2018 by
+  Generated on Thu May 16 08:48:35 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   Header: mruby/debug.h
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -88,7 +88,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_debug_get_line-function" title="mrb_debug_get_line">int32_t <strong>mrb_debug_get_line</strong>(mrb_irep *, ptrdiff_t)</a>
+    <a href="#mrb_debug_get_line-function" title="mrb_debug_get_line">int32_t <strong>mrb_debug_get_line</strong>(mrb_state *, mrb_irep *, ptrdiff_t)</a>
 
     
   </span>
@@ -106,7 +106,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_debug_info_append_file-function" title="mrb_debug_info_append_file">mrb_irep_debug_info_file * <strong>mrb_debug_info_append_file</strong>(mrb_state *, mrb_irep *, uint32_t, uint32_t)</a>
+    <a href="#mrb_debug_info_alloc-function" title="mrb_debug_info_alloc">mrb_irep_debug_info * <strong>mrb_debug_info_alloc</strong>(mrb_state *, mrb_irep *)</a>
 
     
   </span>
@@ -124,7 +124,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_debug_info_alloc-function" title="mrb_debug_info_alloc">mrb_irep_debug_info * <strong>mrb_debug_info_alloc</strong>(mrb_state *, mrb_irep *)</a>
+    <a href="#mrb_debug_info_append_file-function" title="mrb_debug_info_append_file">mrb_irep_debug_info_file * <strong>mrb_debug_info_append_file</strong>(mrb_state *, mrb_irep_debug_info *, const char *, uint16_t *, uint32_t, uint32_t)</a>
 
     
   </span>
@@ -178,7 +178,7 @@
   
     <div class="method_details first">
   <h3 class="signature first" id="mrb_debug_get_line-function">
-  int32_t <strong>mrb_debug_get_line</strong>(mrb_irep * irep, ptrdiff_t pc)
+  int32_t <strong>mrb_debug_get_line</strong>(mrb_state * mrb, mrb_irep * irep, ptrdiff_t pc)
 
   
 </h3>
@@ -216,8 +216,8 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_debug_info_append_file-function">
-  mrb_irep_debug_info_file * <strong>mrb_debug_info_append_file</strong>(mrb_state * mrb, mrb_irep * irep, uint32_t start_pos, uint32_t end_pos)
+  <h3 class="signature " id="mrb_debug_info_alloc-function">
+  mrb_irep_debug_info * <strong>mrb_debug_info_alloc</strong>(mrb_state * mrb, mrb_irep * irep)
 
   
 </h3>
@@ -226,8 +226,8 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_debug_info_alloc-function">
-  mrb_irep_debug_info * <strong>mrb_debug_info_alloc</strong>(mrb_state * mrb, mrb_irep * irep)
+  <h3 class="signature " id="mrb_debug_info_append_file-function">
+  mrb_irep_debug_info_file * <strong>mrb_debug_info_append_file</strong>(mrb_state * mrb, mrb_irep_debug_info * info, const char * filename, uint16_t * lines, uint32_t start_pos, uint32_t end_pos)
 
   
 </h3>
@@ -249,9 +249,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:54:00 2018 by
+  Generated on Thu May 16 08:48:34 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

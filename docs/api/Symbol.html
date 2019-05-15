@@ -6,7 +6,7 @@
 <title>
   Class: Symbol
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -104,7 +104,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>src/symbol.c<span class="defines">,<br />
-  mrbgems/mruby-symbol-ext/mrblib/symbol.rb</span>
+  mrblib/symbol.rb,<br /> mrbgems/mruby-symbol-ext/mrblib/symbol.rb</span>
 </dd>
   </dl>
   
@@ -155,29 +155,6 @@
 
   
     <span class="summary_desc"><div class='inline'><p>15.2.11.3.5(x).</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#===-instance_method" title="#== (instance method)">#<strong>==</strong>(obj)  &#x21d2; Boolean </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Equality—If <i>sym</i> and <i>obj</i> are exactly the same symbol, returns <code>true</code>.</p>
 </div></span>
   
 </li>
@@ -485,38 +462,39 @@
       <pre class="lines">
 
 
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477</pre>
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 449</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 537</span>
 
 static mrb_value
 sym_cmp(mrb_state *mrb, mrb_value s1)
@@ -533,9 +511,10 @@ sym_cmp(mrb_state *mrb, mrb_value s1)
     const char *p1, *p2;
     int retval;
     mrb_int len, len1, len2;
+    char buf1[<span style="color:#00D">8</span>], buf2[<span style="color:#00D">8</span>];
 
-    p1 = mrb_sym2name_len(mrb, sym1, &amp;len1);
-    p2 = mrb_sym2name_len(mrb, sym2, &amp;len2);
+    p1 = sym2name_len(mrb, sym1, buf1, &amp;len1);
+    p2 = sym2name_len(mrb, sym2, buf2, &amp;len2);
     len = lesser(len1, len2);
     retval = memcmp(p1, p2, len);
     <span style="color:#080;font-weight:bold">if</span> (retval == <span style="color:#00D">0</span>) {
@@ -546,88 +525,6 @@ sym_cmp(mrb_state *mrb, mrb_value s1)
     <span style="color:#080;font-weight:bold">if</span> (retval &gt; <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(<span style="color:#00D">1</span>);
     <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(<span style="color:#00D">-1</span>);
   }
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="===-instance_method">
-  
-    #<strong>==</strong>(obj)  &#x21d2; <tt>Boolean</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Equality—If <i>sym</i> and <i>obj</i> are exactly the same
-symbol, returns <code>true</code>.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-222
-223
-224
-225
-226
-227
-228
-229
-230</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 222</span>
-
-static mrb_value
-sym_equal(mrb_state *mrb, mrb_value sym1)
-{
-  mrb_value sym2;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;sym2);
-
-  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_obj_equal(mrb, sym1, sym2));
 }</pre>
     </td>
   </tr>
@@ -664,12 +561,12 @@ sym_equal(mrb_state *mrb, mrb_value sym1)
       <pre class="lines">
 
 
-18
-19
-20</pre>
+12
+13
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 12</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">capitalize</span>
   (<span style="color:#069">self</span>.to_s.capitalize! || <span style="color:#069">self</span>).to_sym
@@ -709,15 +606,15 @@ sym_equal(mrb_state *mrb, mrb_value sym1)
       <pre class="lines">
 
 
-48
-49
-50
-51
-52
-53</pre>
+42
+43
+44
+45
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 42</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">casecmp</span>(other)
   <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">unless</span> other.kind_of?(<span style="color:#036;font-weight:bold">Symbol</span>)
@@ -774,14 +671,14 @@ false if they are not equal, and nil if other_sym is not a string.</p>
       <pre class="lines">
 
 
-62
-63
-64
-65
-66</pre>
+56
+57
+58
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 56</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">casecmp?</span>(sym)
   c = <span style="color:#069">self</span>.casecmp(sym)
@@ -823,12 +720,12 @@ false if they are not equal, and nil if other_sym is not a string.</p>
       <pre class="lines">
 
 
-28
-29
-30</pre>
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 22</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">downcase</span>
   (<span style="color:#069">self</span>.to_s.downcase! || <span style="color:#069">self</span>).to_sym
@@ -881,12 +778,12 @@ false if they are not equal, and nil if other_sym is not a string.</p>
       <pre class="lines">
 
 
-74
-75
-76</pre>
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 68</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">empty?</span>
   <span style="color:#069">self</span>.length == <span style="color:#00D">0</span>
@@ -996,29 +893,19 @@ false if they are not equal, and nil if other_sym is not a string.</p>
       <pre class="lines">
 
 
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252</pre>
+326
+327
+328
+329
+330</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 243</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 326</span>
 
 static mrb_value
-mrb_sym_to_s(mrb_state *mrb, mrb_value sym)
+sym_to_s(mrb_state *mrb, mrb_value sym)
 {
-  mrb_sym id = mrb_symbol(sym);
-  const char *p;
-  mrb_int len;
-
-  p = mrb_sym2name_len(mrb, id, &amp;len);
-  <span style="color:#080;font-weight:bold">return</span> mrb_str_new_static(mrb, p, len);
+  <span style="color:#080;font-weight:bold">return</span> mrb_sym2str(mrb, mrb_symbol(sym));
 }</pre>
     </td>
   </tr>
@@ -1052,32 +939,32 @@ mrb_sym_to_s(mrb_state *mrb, mrb_value sym)
       <pre class="lines">
 
 
-397
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419</pre>
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 397</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 475</span>
 
 static mrb_value
 sym_inspect(mrb_state *mrb, mrb_value sym)
@@ -1122,14 +1009,14 @@ sym_inspect(mrb_state *mrb, mrb_value sym)
       <pre class="lines">
 
 
-6
-7
-8
-9
-10</pre>
+2
+3
+4
+5
+6</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'mrblib/symbol.rb', line 2</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_proc</span>
   -&gt;(obj,*args,&amp;block) <span style="color:#080;font-weight:bold">do</span>
@@ -1241,29 +1128,19 @@ sym_inspect(mrb_state *mrb, mrb_value sym)
       <pre class="lines">
 
 
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252</pre>
+326
+327
+328
+329
+330</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 243</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 326</span>
 
 static mrb_value
-mrb_sym_to_s(mrb_state *mrb, mrb_value sym)
+sym_to_s(mrb_state *mrb, mrb_value sym)
 {
-  mrb_sym id = mrb_symbol(sym);
-  const char *p;
-  mrb_int len;
-
-  p = mrb_sym2name_len(mrb, id, &amp;len);
-  <span style="color:#080;font-weight:bold">return</span> mrb_str_new_static(mrb, p, len);
+  <span style="color:#080;font-weight:bold">return</span> mrb_sym2str(mrb, mrb_symbol(sym));
 }</pre>
     </td>
   </tr>
@@ -1307,14 +1184,14 @@ in this case.</p>
       <pre class="lines">
 
 
-265
-266
-267
-268
-269</pre>
+343
+344
+345
+346
+347</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 265</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 343</span>
 
 static mrb_value
 sym_to_sym(mrb_state *mrb, mrb_value sym)
@@ -1356,12 +1233,12 @@ sym_to_sym(mrb_state *mrb, mrb_value sym)
       <pre class="lines">
 
 
-38
-39
-40</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 32</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">upcase</span>
   (<span style="color:#069">self</span>.to_s.upcase! || <span style="color:#069">self</span>).to_sym
@@ -1376,9 +1253,9 @@ sym_to_sym(mrb_state *mrb, mrb_value sym)
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:53:58 2018 by
+  Generated on Thu May 16 08:48:32 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

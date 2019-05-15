@@ -6,7 +6,7 @@
 <title>
   Class: Module
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -98,7 +98,9 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>mrblib/00class.rb</dd>
+    <dd>mrblib/00class.rb<span class="defines">,<br />
+  mrbgems/mruby-class-ext/mrblib/module.rb</span>
+</dd>
   </dl>
   
 </div>
@@ -117,6 +119,121 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#<-instance_method" title="#&lt; (instance method)">#<strong>&lt;</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:   mod &lt; other   -&gt;  true, false, or nil.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#<=-instance_method" title="#&lt;= (instance method)">#<strong>&lt;=</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:   mod &lt;= other   -&gt;  true, false, or nil.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#<=>-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:    module &lt;=&gt; other_module   -&gt; -1, 0, +1, or nil.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#>-instance_method" title="#&gt; (instance method)">#<strong>&gt;</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:  mod &gt; other   -&gt;  true, false, or nil.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#>=-instance_method" title="#&gt;= (instance method)">#<strong>&gt;=</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:   mod &gt;= other   -&gt;  true, false, or nil.</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -197,7 +314,315 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="attr_accessor-instance_method">
+  <h3 class="signature first" id="<-instance_method">
+  
+    #<strong>&lt;</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  mod &lt; other   -&gt;  true, false, or nil</p>
+
+<p>Returns true if <code>mod</code> is a subclass of <code>other</code>. Returns
+<code>nil</code> if there’s no relationship between the two.
+(Think of the relationship in terms of the class definition:
+“class A &lt; B” implies “A &lt; B”.)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-class-ext/mrblib/module.rb', line 12</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&lt;</span>(other)
+  <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.equal?(other)
+    <span style="color:#069">false</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span> &lt;= other
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="<=-instance_method">
+  
+    #<strong>&lt;=</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  mod &lt;= other   -&gt;  true, false, or nil</p>
+
+<p>Returns true if <code>mod</code> is a subclass of <code>other</code> or
+is the same as <code>other</code>. Returns
+<code>nil</code> if there’s no relationship between the two.
+(Think of the relationship in terms of the class definition:
+“class A &lt; B” implies “A &lt; B”.)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-class-ext/mrblib/module.rb', line 29</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&lt;=</span>(other)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">compared with non class/module</span><span style="color:#710">'</span></span> <span style="color:#080;font-weight:bold">unless</span> other.is_a?(<span style="color:#036;font-weight:bold">Module</span>)
+  <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.ancestors.include?(other)
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">true</span>
+  <span style="color:#080;font-weight:bold">elsif</span> other.ancestors.include?(<span style="color:#069">self</span>)
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">false</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="<=>-instance_method">
+  
+    #<strong>&lt;=&gt;</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   module &lt;=&gt; other_module   -&gt; -1, 0, +1, or nil</p>
+
+<p>Comparison—Returns -1, 0, +1 or nil depending on whether <code>module</code>
+includes <code>other_module</code>, they are the same, or if <code>module</code> is included by
+<code>other_module</code>.</p>
+
+<p>Returns <code>nil</code> if <code>module</code> has no relationship with <code>other_module</code>, if
+<code>other_module</code> is not a module, or if the two values are incomparable.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-class-ext/mrblib/module.rb', line 81</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&lt;=&gt;</span>(other)
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.equal?(other)
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">unless</span> other.is_a?(<span style="color:#036;font-weight:bold">Module</span>)
+  cmp = <span style="color:#069">self</span> &lt; other
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">-1</span> <span style="color:#080;font-weight:bold">if</span> cmp
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">unless</span> cmp.nil?
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id=">-instance_method">
+  
+    #<strong>&gt;</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+ mod &gt; other   -&gt;  true, false, or nil</p>
+
+<p>Returns true if <code>mod</code> is an ancestor of <code>other</code>. Returns
+<code>nil</code> if there’s no relationship between the two.
+(Think of the relationship in terms of the class definition:
+“class A &lt; B” implies “B &gt; A”.)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-class-ext/mrblib/module.rb', line 47</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&gt;</span>(other)
+  <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.equal?(other)
+    <span style="color:#069">false</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span> &gt;= other
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id=">=-instance_method">
+  
+    #<strong>&gt;=</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  mod &gt;= other   -&gt;  true, false, or nil</p>
+
+<p>Returns true if <code>mod</code> is an ancestor of <code>other</code>, or the
+two modules are the same. Returns
+<code>nil</code> if there’s no relationship between the two.
+(Think of the relationship in terms of the class definition:
+“class A &lt; B” implies “B &gt; A”.)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-class-ext/mrblib/module.rb', line 65</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&gt;=</span>(other)
+  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">compared with non class/module</span><span style="color:#710">'</span></span> <span style="color:#080;font-weight:bold">unless</span> other.is_a?(<span style="color:#036;font-weight:bold">Module</span>)
+  <span style="color:#080;font-weight:bold">return</span> other &lt; <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="attr_accessor-instance_method">
   
     #<strong>attr_accessor</strong>(*names)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
@@ -333,9 +758,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:53:58 2018 by
+  Generated on Thu May 16 08:48:32 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

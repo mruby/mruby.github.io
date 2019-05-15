@@ -6,7 +6,7 @@
 <title>
   Header: mruby/class.h
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -196,7 +196,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_alias_method-function" title="mrb_alias_method">void <strong>mrb_alias_method</strong>(mrb_state *, struct RClass *, mrb_sym, mrb_sym)</a>
+    <a href="#mrb_alias_method-function" title="mrb_alias_method">void <strong>mrb_alias_method</strong>(mrb_state*, struct RClass *, mrb_sym, mrb_sym)</a>
 
     
   </span>
@@ -282,25 +282,16 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="RCLASS_SUPER-define" class=""><small>#define</small> RCLASS_SUPER
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="RCLASS_IV_TBL-define" class=""><small>#define</small> RCLASS_IV_TBL
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="RCLASS_M_TBL-define" class=""><small>#define</small> RCLASS_M_TBL
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="MRB_FLAG_IS_PREPENDED-define" class=""><small>#define</small> MRB_FLAG_IS_PREPENDED
+      <dt id="MRB_FL_CLASS_IS_PREPENDED-define" class=""><small>#define</small> MRB_FL_CLASS_IS_PREPENDED
         <div class="docstring">
   <div class="discussion">
-    <p>flags bits &gt;= 18 is reserved</p>
+    <p>flags:
+  20: frozen
+  19: is_prepended
+  18: is_origin
+  17: is_inherited (used by method cache)
+  16: unused
+  0-15: instance type</p>
 
 
   </div>
@@ -314,7 +305,7 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_FLAG_IS_ORIGIN-define" class=""><small>#define</small> MRB_FLAG_IS_ORIGIN
+      <dt id="MRB_FL_CLASS_IS_ORIGIN-define" class=""><small>#define</small> MRB_FL_CLASS_IS_ORIGIN
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -324,7 +315,7 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_FLAG_IS_INHERITED-define" class=""><small>#define</small> MRB_FLAG_IS_INHERITED
+      <dt id="MRB_FL_CLASS_IS_INHERITED-define" class=""><small>#define</small> MRB_FL_CLASS_IS_INHERITED
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -413,7 +404,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_alias_method-function">
-  void <strong>mrb_alias_method</strong>(mrb_state * mrb, struct RClass * c, mrb_sym a, mrb_sym b)
+  void <strong>mrb_alias_method</strong>(mrb_state* , struct RClass * c, mrb_sym a, mrb_sym b)
 
   
 </h3>
@@ -455,9 +446,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:54:00 2018 by
+  Generated on Thu May 16 08:48:34 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

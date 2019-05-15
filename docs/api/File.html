@@ -6,7 +6,7 @@
 <title>
   Class: File
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -1817,8 +1817,6 @@
       <pre class="lines">
 
 
-349
-350
 351
 352
 353
@@ -1849,10 +1847,12 @@
 378
 379
 380
-381</pre>
+381
+382
+383</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/file.c', line 349</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/file.c', line 351</span>
 
 mrb_value
 mrb_file_flock(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1907,8 +1907,6 @@ mrb_file_flock(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-335
-336
 337
 338
 339
@@ -1919,10 +1917,12 @@ mrb_file_flock(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 344
 345
 346
-347</pre>
+347
+348
+349</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/file.c', line 335</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/file.c', line 337</span>
 
 static mrb_value
 mrb_file_mtime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1935,7 +1935,7 @@ mrb_file_mtime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   fd = (int)mrb_fixnum(mrb_io_fileno(mrb, <span style="color:#069">self</span>));
   <span style="color:#080;font-weight:bold">if</span> (fstat(fd, &amp;st) == <span style="color:#00D">-1</span>)
     <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
-  <span style="color:#080;font-weight:bold">return</span> mrb_funcall(mrb, obj, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">at</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span>, mrb_float_value(mrb, st.st_mtime));
+  <span style="color:#080;font-weight:bold">return</span> mrb_funcall(mrb, obj, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">at</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span>, mrb_fixnum_value(st.st_mtime));
 }</pre>
     </td>
   </tr>
@@ -1947,9 +1947,9 @@ mrb_file_mtime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:53:58 2018 by
+  Generated on Thu May 16 08:48:33 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

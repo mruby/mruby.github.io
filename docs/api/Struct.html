@@ -6,7 +6,7 @@
 <title>
   Class: Struct
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -207,6 +207,29 @@
 
   
     <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dig-instance_method" title="#dig (instance method)">#<strong>dig</strong>(idx, *args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:   hsh.dig(key,…)                 -&gt; object.</p>
 </div></span>
   
 </li>
@@ -571,7 +594,6 @@
       <pre class="lines">
 
 
-354
 355
 356
 357
@@ -579,10 +601,11 @@
 359
 360
 361
-362</pre>
+362
+363</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 354</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 355</span>
 
 static mrb_value
 mrb_struct_initialize(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -669,7 +692,6 @@ must be equal (according to <code>Object#==</code>).</p>
       <pre class="lines">
 
 
-558
 559
 560
 561
@@ -696,10 +718,11 @@ must be equal (according to <code>Object#==</code>).</p>
 582
 583
 584
-585</pre>
+585
+586</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 558</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 559</span>
 
 static mrb_value
 mrb_struct_equal(mrb_state *mrb, mrb_value s)
@@ -843,7 +866,6 @@ out of range.</p>
       <pre class="lines">
 
 
-439
 440
 441
 442
@@ -861,10 +883,11 @@ out of range.</p>
 454
 455
 456
-457</pre>
+457
+458</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 439</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 440</span>
 
 static mrb_value
 mrb_struct_aref(mrb_state *mrb, mrb_value s)
@@ -1001,7 +1024,6 @@ is out of range.</p>
       <pre class="lines">
 
 
-503
 504
 505
 506
@@ -1036,10 +1058,11 @@ is out of range.</p>
 535
 536
 537
-538</pre>
+538
+539</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 503</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 504</span>
 
 static mrb_value
 mrb_struct_aset(mrb_state *mrb, mrb_value s)
@@ -1126,6 +1149,63 @@ mrb_struct_aset(mrb_state *mrb, mrb_value s)
     buf.push [k.to_s + <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">=</span><span style="color:#710">&quot;</span></span> + v._inspect]
   <span style="color:#080;font-weight:bold">end</span>
   str + buf.join(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">, </span><span style="color:#710">&quot;</span></span>) + <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&gt;</span><span style="color:#710">&quot;</span></span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dig-instance_method">
+  
+    #<strong>dig</strong>(idx, *args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  hsh.dig(key,…)                 -&gt; object</p>
+
+<p>Extracts the nested value specified by the sequence of <i>key</i>
+objects by calling +dig+ at each step, returning +nil+ if any
+intermediate step is +nil+.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/mrblib/struct.rb', line 93</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">dig</span>(idx,*args)
+  n = <span style="color:#069">self</span>[idx]
+  <span style="color:#080;font-weight:bold">if</span> args.size &gt; <span style="color:#00D">0</span>
+    n&amp;.dig(*args)
+  <span style="color:#080;font-weight:bold">else</span>
+    n
+  <span style="color:#080;font-weight:bold">end</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -1279,7 +1359,6 @@ fields are equal (using <code>eql?</code>).</p>
       <pre class="lines">
 
 
-595
 596
 597
 598
@@ -1306,10 +1385,11 @@ fields are equal (using <code>eql?</code>).</p>
 619
 620
 621
-622</pre>
+622
+623</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 595</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 596</span>
 
 static mrb_value
 mrb_struct_eql(mrb_state *mrb, mrb_value s)
@@ -1371,7 +1451,6 @@ mrb_struct_eql(mrb_state *mrb, mrb_value s)
       <pre class="lines">
 
 
-366
 367
 368
 369
@@ -1387,10 +1466,11 @@ mrb_struct_eql(mrb_state *mrb, mrb_value s)
 379
 380
 381
-382</pre>
+382
+383</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 366</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 367</span>
 
 static mrb_value
 mrb_struct_init_copy(mrb_state *mrb, mrb_value copy)
@@ -1572,14 +1652,14 @@ mrb_struct_init_copy(mrb_state *mrb, mrb_value copy)
       <pre class="lines">
 
 
-631
 632
 633
 634
-635</pre>
+635
+636</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 631</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 632</span>
 
 static mrb_value
 mrb_struct_len(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1650,14 +1730,14 @@ variables.</p>
       <pre class="lines">
 
 
+110
 111
 112
 113
-114
-115</pre>
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 111</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 110</span>
 
 static mrb_value
 mrb_struct_members(mrb_state *mrb, mrb_value obj)
@@ -1823,14 +1903,14 @@ block is not false.</p>
       <pre class="lines">
 
 
-631
 632
 633
 634
-635</pre>
+635
+636</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 631</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 632</span>
 
 static mrb_value
 mrb_struct_len(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1940,14 +2020,14 @@ mrb_struct_len(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-644
 645
 646
 647
-648</pre>
+648
+649</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 644</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 645</span>
 
 static mrb_value
 mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2013,7 +2093,6 @@ mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-656
 657
 658
 659
@@ -2027,10 +2106,11 @@ mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 667
 668
 669
-670</pre>
+670
+671</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 656</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 657</span>
 
 static mrb_value
 mrb_struct_to_h(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2150,14 +2230,14 @@ mrb_struct_to_h(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-644
 645
 646
 647
-648</pre>
+648
+649</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 644</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 645</span>
 
 static mrb_value
 mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2184,7 +2264,6 @@ mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-672
 673
 674
 675
@@ -2193,10 +2272,11 @@ mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 678
 679
 680
-681</pre>
+681
+682</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 672</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 673</span>
 
 static mrb_value
 mrb_struct_values_at(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2218,9 +2298,9 @@ mrb_struct_values_at(mrb_state *mrb, mrb_value <span style="color:#069">self</sp
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:53:59 2018 by
+  Generated on Thu May 16 08:48:33 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

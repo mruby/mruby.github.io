@@ -6,7 +6,7 @@
 <title>
   Class: Addrinfo
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -1192,16 +1192,6 @@
       <pre class="lines">
 
 
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
 190
 191
 192
@@ -1218,10 +1208,20 @@
 203
 204
 205
-206</pre>
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/src/socket.c', line 180</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/src/socket.c', line 190</span>
 
 static mrb_value
 mrb_addrinfo_getnameinfo(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1240,8 +1240,8 @@ mrb_addrinfo_getnameinfo(mrb_state *mrb, mrb_value <span style="color:#069">self
     mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_SOCKET_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">invalid sockaddr</span><span style="color:#710">&quot;</span></span>);
   }
   error = getnameinfo((struct sockaddr *)RSTRING_PTR(sastr), (socklen_t)RSTRING_LEN(sastr), RSTRING_PTR(host), <span style="color:#036;font-weight:bold">NI_MAXHOST</span>, RSTRING_PTR(serv), <span style="color:#036;font-weight:bold">NI_MAXSERV</span>, (int)flags);
-  <span style="color:#080;font-weight:bold">if</span> (error != <span style="color:#00D">0</span>) {
-    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_SOCKET_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">getnameinfo: %s</span><span style="color:#710">&quot;</span></span>, gai_strerror(error));
+  <span style="color:#080;font-weight:bold">if</span> (error) {
+    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_SOCKET_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">getnameinfo: %S</span><span style="color:#710">&quot;</span></span>, mrb_str_new_cstr(mrb, gai_strerror(error)));
   }
   ary = mrb_ary_new_capa(mrb, <span style="color:#00D">2</span>);
   mrb_str_resize(mrb, host, strlen(RSTRING_PTR(host)));
@@ -1788,19 +1788,23 @@ def listen(backlog=5)</p>
       <pre class="lines">
 
 
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218</pre>
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/src/socket.c', line 209</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-socket/src/socket.c', line 219</span>
 
 static mrb_value
 mrb_addrinfo_unix_path(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1810,7 +1814,11 @@ mrb_addrinfo_unix_path(mrb_state *mrb, mrb_value <span style="color:#069">self</
   sastr = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@sockaddr</span><span style="color:#710">&quot;</span></span>));
   <span style="color:#080;font-weight:bold">if</span> (((struct sockaddr *)RSTRING_PTR(sastr))-&gt;sa_family != <span style="color:#036;font-weight:bold">AF_UNIX</span>)
     mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_SOCKET_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">need AF_UNIX address</span><span style="color:#710">&quot;</span></span>);
-  <span style="color:#080;font-weight:bold">return</span> mrb_str_new_cstr(mrb, ((struct sockaddr_un *)RSTRING_PTR(sastr))-&gt;sun_path);
+  <span style="color:#080;font-weight:bold">if</span> (RSTRING_LEN(sastr) &lt; (mrb_int)offsetof(struct sockaddr_un, sun_path) + <span style="color:#00D">1</span>) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_str_new(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>);
+  } <span style="color:#080;font-weight:bold">else</span> {
+    <span style="color:#080;font-weight:bold">return</span> mrb_str_new_cstr(mrb, ((struct sockaddr_un *)RSTRING_PTR(sastr))-&gt;sun_path);
+  }
 }</pre>
     </td>
   </tr>
@@ -1822,9 +1830,9 @@ mrb_addrinfo_unix_path(mrb_state *mrb, mrb_value <span style="color:#069">self</
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:53:59 2018 by
+  Generated on Thu May 16 08:48:33 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

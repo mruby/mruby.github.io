@@ -6,7 +6,7 @@
 <title>
   Module: Enumerable
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -80,7 +80,7 @@
   
   <dl>
     <dt>Included in:</dt>
-    <dd><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>, <span class='object_link'><a href="Enumerator.html" title="Enumerator (class)">Enumerator</a></span>, <span class='object_link'><a href="Enumerator/Generator.html" title="Enumerator::Generator (class)">Enumerator::Generator</a></span>, <span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>, <span class='object_link'><a href="Range.html" title="Range (class)">Range</a></span></dd>
+    <dd><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>, <span class='object_link'><a href="Enumerator.html" title="Enumerator (class)">Enumerator</a></span>, <span class='object_link'><a href="Enumerator/Chain.html" title="Enumerator::Chain (class)">Enumerator::Chain</a></span>, <span class='object_link'><a href="Enumerator/Generator.html" title="Enumerator::Generator (class)">Enumerator::Generator</a></span>, <span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>, <span class='object_link'><a href="Range.html" title="Range (class)">Range</a></span></dd>
   </dl>
   
 
@@ -88,7 +88,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>mrblib/enum.rb<span class="defines">,<br />
-  mrbgems/mruby-enum-ext/mrblib/enum.rb,<br /> mrbgems/mruby-enum-lazy/mrblib/lazy.rb,<br /> mrbgems/mruby-enumerator/mrblib/enumerator.rb</span>
+  src/enum.c,<br /> mrbgems/mruby-enum-ext/mrblib/enum.rb,<br /> mrbgems/mruby-enum-lazy/mrblib/lazy.rb,<br /> mrbgems/mruby-enum-chain/mrblib/chain.rb,<br /> mrbgems/mruby-enumerator/mrblib/enumerator.rb</span>
 </dd>
   </dl>
   
@@ -96,7 +96,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Enumerable</p>
+    <p>chain.rb Enumerator::Chain class
+See Copyright Notice in mruby.h</p>
 
 
   </div>
@@ -107,15 +108,21 @@
 </div>
 
 
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="NONE-constant" class="">NONE =
-        
-      </dt>
-      <dd><pre class="code"><span style="color:#036;font-weight:bold">Object</span>.new</pre></dd>
-    
-  </dl>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="NONE-constant" class="">NONE =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#036;font-weight:bold">Object</span>.new</pre></dd>
+      
+    </dl>
+  
 
 
 
@@ -130,6 +137,29 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#__update_hash-class_method" title="__update_hash (class method)">.<strong>__update_hash</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>internal method <code>__update_hash(oldhash, index, itemhash)</code>.</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -162,6 +192,29 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%2B-instance_method" title="#+ (instance method)">#<strong>+</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -220,6 +273,29 @@
     </tr>
   </tbody>
 </table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#chain-instance_method" title="#chain (instance method)">#<strong>chain</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -1200,7 +1276,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_h-instance_method" title="#to_h (instance method)">#<strong>to_h</strong>  &#x21d2; Object </a>
+      <a href="#to_h-instance_method" title="#to_h (instance method)">#<strong>to_h</strong>(&amp;blk)  &#x21d2; Object </a>
     
 
     
@@ -1276,7 +1352,67 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="to_h-class_method">
+  <h3 class="signature first" id="__update_hash-class_method">
+  
+    .<strong>__update_hash</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>internal method <code>__update_hash(oldhash, index, itemhash)</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/enum.c', line 11</span>
+
+static mrb_value
+enum_update_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_int hash;
+  mrb_int index;
+  mrb_int hv;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">iii</span><span style="color:#710">&quot;</span></span>, &amp;hash, &amp;index, &amp;hv);
+  hash ^= ((uint32_t)hv &lt;&lt; (index % <span style="color:#00D">16</span>));
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(hash);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_h-class_method">
   
     .<strong>to_h</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
@@ -1290,12 +1426,12 @@
       <pre class="lines">
 
 
-817
-818
-819</pre>
+814
+815
+816</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 817</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 814</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">nil</span>.<span style="color:#06B;font-weight:bold">to_h</span>
   {}
@@ -1312,7 +1448,37 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="all?-instance_method">
+  <h3 class="signature first" id="+-instance_method">
+  
+    #<strong>+</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-chain/mrblib/chain.rb', line 10</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">+</span>(other)
+  <span style="color:#036;font-weight:bold">Enumerator</span>::<span style="color:#036;font-weight:bold">Chain</span>.new(<span style="color:#069">self</span>, other)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="all?-instance_method">
   
     #<strong>all?</strong>(pat = NONE, &amp;block)  &#x21d2; <tt>Boolean</tt> 
   
@@ -1371,17 +1537,17 @@
       <pre class="lines">
 
 
-24
-25
 26
 27
 28
 29
 30
-31</pre>
+31
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 26</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">all?</span>(&amp;block)
   <span style="color:#080;font-weight:bold">if</span> block
@@ -1457,17 +1623,17 @@
       <pre class="lines">
 
 
-41
-42
 43
 44
 45
 46
 47
-48</pre>
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 43</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">any?</span>(&amp;block)
   <span style="color:#080;font-weight:bold">if</span> block
@@ -1476,6 +1642,36 @@
     <span style="color:#069">self</span>.each{|*val| <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">true</span> <span style="color:#080;font-weight:bold">if</span> val.__svalue}
   <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#069">false</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="chain-instance_method">
+  
+    #<strong>chain</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-chain/mrblib/chain.rb', line 6</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">chain</span>(*args)
+  <span style="color:#036;font-weight:bold">Enumerator</span>::<span style="color:#036;font-weight:bold">Chain</span>.new(<span style="color:#069">self</span>, *args)
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -1518,16 +1714,16 @@ return this value.</p>
       <pre class="lines">
 
 
-57
-58
 59
 60
 61
 62
-63</pre>
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 59</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">collect</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:collect</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -1576,6 +1772,12 @@ counts the number of elements yielding a true value.</p>
       <pre class="lines">
 
 
+249
+250
+251
+252
+253
+254
 255
 256
 257
@@ -1586,16 +1788,10 @@ counts the number of elements yielding a true value.</p>
 262
 263
 264
-265
-266
-267
-268
-269
-270
-271</pre>
+265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 249</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">count</span>(v=<span style="color:#036;font-weight:bold">NONE</span>, &amp;block)
   count = <span style="color:#00D">0</span>
@@ -1663,6 +1859,12 @@ a.cycle(<span style="color:#00D">2</span>) { |x| puts x }  <span style="color:#7
       <pre class="lines">
 
 
+664
+665
+666
+667
+668
+669
 670
 671
 672
@@ -1683,22 +1885,10 @@ a.cycle(<span style="color:#00D">2</span>) { |x| puts x }  <span style="color:#7
 687
 688
 689
-690
-691
-692
-693
-694
-695
-696
-697
-698
-699
-700
-701
-702</pre>
+690</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 670</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 664</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">cycle</span>(nv = <span style="color:#069">nil</span>, &amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:cycle</span>, nv) <span style="color:#080;font-weight:bold">unless</span> block
@@ -1708,13 +1898,7 @@ a.cycle(<span style="color:#00D">2</span>) { |x| puts x }  <span style="color:#7
   <span style="color:#080;font-weight:bold">if</span> nv.nil?
     n = <span style="color:#00D">-1</span>
   <span style="color:#080;font-weight:bold">else</span>
-    <span style="color:#080;font-weight:bold">unless</span> nv.respond_to?(<span style="color:#A60">:to_int</span>)
-      raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>nv.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span>
-    <span style="color:#080;font-weight:bold">end</span>
-    n = nv.to_int
-    <span style="color:#080;font-weight:bold">unless</span> n.kind_of?(<span style="color:#036;font-weight:bold">Integer</span>)
-      raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>nv.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span>
-    <span style="color:#080;font-weight:bold">end</span>
+    n = nv.__to_int
     <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> n &lt;= <span style="color:#00D">0</span>
   <span style="color:#080;font-weight:bold">end</span>
 
@@ -1775,8 +1959,6 @@ which had was true.</p>
       <pre class="lines">
 
 
-73
-74
 75
 76
 77
@@ -1784,10 +1966,12 @@ which had was true.</p>
 79
 80
 81
-82</pre>
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 75</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">detect</span>(ifnone=<span style="color:#069">nil</span>, &amp;block)
   ret = ifnone
@@ -1835,7 +2019,7 @@ in an array.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></tt>)</span>
       
       
       
@@ -1858,17 +2042,15 @@ in an array.</p>
 19
 20
 21
-22
-23</pre>
+22</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 15</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">drop</span>(n)
-  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
+  n = n.__to_int
   raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">attempt to drop negative size</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> n &lt; <span style="color:#00D">0</span>
 
-  n = n.to_int
   ary = []
   <span style="color:#069">self</span>.each {|*val| n == <span style="color:#00D">0</span> ? ary &lt;&lt; val.__svalue : n -= <span style="color:#00D">1</span> }
   ary
@@ -1916,6 +2098,7 @@ containing the remaining elements.</p>
       <pre class="lines">
 
 
+38
 39
 40
 41
@@ -1924,11 +2107,10 @@ containing the remaining elements.</p>
 44
 45
 46
-47
-48</pre>
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 38</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">drop_while</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:drop_while</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -2000,7 +2182,7 @@ elements.</n></p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></tt>)</span>
       
       
       
@@ -2016,6 +2198,7 @@ elements.</n></p>
       <pre class="lines">
 
 
+114
 115
 116
 117
@@ -2028,19 +2211,18 @@ elements.</n></p>
 124
 125
 126
-127
-128</pre>
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 114</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_cons</span>(n, &amp;block)
-  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
+  n = n.__to_int
   raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">invalid size</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> n &lt;= <span style="color:#00D">0</span>
 
   <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_cons</span>,n) <span style="color:#080;font-weight:bold">unless</span> block
   ary = []
-  n = n.to_int
+  n = n.to_i
   <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
     ary.shift <span style="color:#080;font-weight:bold">if</span> ary.size == n
     ary &lt;&lt; val.__svalue
@@ -2103,7 +2285,7 @@ elements.</n></p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></tt>)</span>
       
       
       
@@ -2119,6 +2301,7 @@ elements.</n></p>
       <pre class="lines">
 
 
+142
 143
 144
 145
@@ -2134,19 +2317,18 @@ elements.</n></p>
 155
 156
 157
-158
-159</pre>
+158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 142</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_slice</span>(n, &amp;block)
-  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
+  n = n.__to_int
   raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">invalid slice size</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> n &lt;= <span style="color:#00D">0</span>
 
   <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_slice</span>,n) <span style="color:#080;font-weight:bold">unless</span> block
   ary = []
-  n = n.to_int
+  n = n.to_i
   <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*val|
     ary &lt;&lt; val.__svalue
     <span style="color:#080;font-weight:bold">if</span> ary.size == n
@@ -2194,8 +2376,6 @@ and increase by 1 for each element.</p>
       <pre class="lines">
 
 
-91
-92
 93
 94
 95
@@ -2203,10 +2383,12 @@ and increase by 1 for each element.</p>
 97
 98
 99
-100</pre>
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 93</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_with_index</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each_with_index</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -2261,15 +2443,15 @@ and increase by 1 for each element.</p>
       <pre class="lines">
 
 
-613
-614
-615
-616
-617
-618</pre>
+607
+608
+609
+610
+611
+612</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 613</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 607</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_with_object</span>(obj, &amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_with_object</span>, obj) <span style="color:#080;font-weight:bold">unless</span> block
@@ -2316,17 +2498,17 @@ are yield by +each+.</p>
       <pre class="lines">
 
 
-107
-108
 109
 110
 111
 112
 113
-114</pre>
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 109</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">entries</span>
   ary = []
@@ -2377,18 +2559,18 @@ value was true.</p>
       <pre class="lines">
 
 
-129
-130
 131
 132
 133
 134
 135
 136
-137</pre>
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 129</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 131</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">find_all</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:find_all</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -2446,26 +2628,26 @@ value was true.</p>
       <pre class="lines">
 
 
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
 722
 723
 724
 725
-726
-727
-728
-729
-730
-731
-732
-733
-734
-735
-736
-737
-738</pre>
+726</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 722</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 710</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">find_index</span>(val=<span style="color:#036;font-weight:bold">NONE</span>, &amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:find_index</span>, val) <span style="color:#080;font-weight:bold">if</span> !block &amp;&amp; val == <span style="color:#036;font-weight:bold">NONE</span>
@@ -2522,6 +2704,10 @@ second form returns an empty array.</p>
       <pre class="lines">
 
 
+216
+217
+218
+219
 220
 221
 222
@@ -2539,16 +2725,10 @@ second form returns an empty array.</p>
 234
 235
 236
-237
-238
-239
-240
-241
-242
-243</pre>
+237</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 220</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 216</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">first</span>(*args)
   <span style="color:#080;font-weight:bold">case</span> args.length
@@ -2558,9 +2738,7 @@ second form returns an empty array.</p>
     <span style="color:#080;font-weight:bold">end</span>
     <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span>
   <span style="color:#080;font-weight:bold">when</span> <span style="color:#00D">1</span>
-    n = args[<span style="color:#00D">0</span>]
-    raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
-    i = n.to_int
+    i = args[<span style="color:#00D">0</span>].__to_int
     raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">attempt to take negative size</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> i &lt; <span style="color:#00D">0</span>
     ary = []
     <span style="color:#080;font-weight:bold">return</span> ary <span style="color:#080;font-weight:bold">if</span> i == <span style="color:#00D">0</span>
@@ -2634,6 +2812,12 @@ second form returns an empty array.</p>
       <pre class="lines">
 
 
+281
+282
+283
+284
+285
+286
 287
 288
 289
@@ -2641,16 +2825,10 @@ second form returns an empty array.</p>
 291
 292
 293
-294
-295
-296
-297
-298
-299
-300</pre>
+294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 287</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 281</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">flat_map</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:flat_map</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -2704,8 +2882,6 @@ elements or the respective block values.</p>
       <pre class="lines">
 
 
-147
-148
 149
 150
 151
@@ -2713,10 +2889,12 @@ elements or the respective block values.</p>
 153
 154
 155
-156</pre>
+156
+157
+158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 147</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 149</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">grep</span>(pattern, &amp;block)
   ary = []
@@ -2769,6 +2947,7 @@ corresponding to the key.</p>
       <pre class="lines">
 
 
+171
 172
 173
 174
@@ -2778,11 +2957,10 @@ corresponding to the key.</p>
 178
 179
 180
-181
-182</pre>
+181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 172</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 171</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">group_by</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:group_by</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -2827,8 +3005,6 @@ corresponding to the key.</p>
       <pre class="lines">
 
 
-338
-339
 340
 341
 342
@@ -2836,17 +3012,17 @@ corresponding to the key.</p>
 344
 345
 346
-347</pre>
+347
+348</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 338</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 340</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">hash</span>
   h = <span style="color:#00D">12347</span>
   i = <span style="color:#00D">0</span>
   <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |e|
-    n = (e.hash &amp; (<span style="color:#00D">0x7fffffff</span> &gt;&gt; (i % <span style="color:#00D">16</span>))) &lt;&lt; (i % <span style="color:#00D">16</span>)
-    h ^= n
+    h = __update_hash(h, i, e.hash)
     i += <span style="color:#00D">1</span>
   <span style="color:#080;font-weight:bold">end</span>
   h
@@ -2905,15 +3081,15 @@ false.</p>
       <pre class="lines">
 
 
-165
-166
 167
 168
 169
-170</pre>
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 165</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 167</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">include?</span>(obj)
   <span style="color:#069">self</span>.each{|*val|
@@ -2976,8 +3152,6 @@ current element.</p>
       <pre class="lines">
 
 
-180
-181
 182
 183
 184
@@ -3001,10 +3175,12 @@ current element.</p>
 202
 203
 204
-205</pre>
+205
+206
+207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 180</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 182</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">inject</span>(*args, &amp;block)
   raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">too many arguments</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> args.size &gt; <span style="color:#00D">2</span>
@@ -3127,8 +3303,6 @@ a block is given it will be used instead.</p>
       <pre class="lines">
 
 
-221
-222
 223
 224
 225
@@ -3145,10 +3319,12 @@ a block is given it will be used instead.</p>
 236
 237
 238
-239</pre>
+239
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 221</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 223</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">max</span>(&amp;block)
   flag = <span style="color:#069">true</span>  <span style="color:#777"># 1st element?</span>
@@ -3218,6 +3394,12 @@ value from the given block.</p>
       <pre class="lines">
 
 
+309
+310
+311
+312
+313
+314
 315
 316
 317
@@ -3232,16 +3414,10 @@ value from the given block.</p>
 326
 327
 328
-329
-330
-331
-332
-333
-334
-335</pre>
+329</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 315</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 309</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">max_by</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:max_by</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -3301,8 +3477,6 @@ a block is given it will be used instead.</p>
       <pre class="lines">
 
 
-248
-249
 250
 251
 252
@@ -3319,10 +3493,12 @@ a block is given it will be used instead.</p>
 263
 264
 265
-266</pre>
+266
+267
+268</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 248</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 250</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">min</span>(&amp;block)
   flag = <span style="color:#069">true</span>  <span style="color:#777"># 1st element?</span>
@@ -3392,6 +3568,12 @@ value from the given block.</p>
       <pre class="lines">
 
 
+343
+344
+345
+346
+347
+348
 349
 350
 351
@@ -3406,16 +3588,10 @@ value from the given block.</p>
 360
 361
 362
-363
-364
-365
-366
-367
-368
-369</pre>
+363</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 349</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 343</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">min_by</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:min_by</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -3482,6 +3658,12 @@ a.minmax { |a, b| a.length &lt;=&gt; b.length } <span style="color:#777">#=&gt; 
       <pre class="lines">
 
 
+379
+380
+381
+382
+383
+384
 385
 386
 387
@@ -3499,16 +3681,10 @@ a.minmax { |a, b| a.length &lt;=&gt; b.length } <span style="color:#777">#=&gt; 
 399
 400
 401
-402
-403
-404
-405
-406
-407
-408</pre>
+402</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 385</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 379</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">minmax</span>(&amp;block)
   max = <span style="color:#069">nil</span>
@@ -3577,6 +3753,12 @@ a.minmax { |a, b| a.length &lt;=&gt; b.length } <span style="color:#777">#=&gt; 
       <pre class="lines">
 
 
+417
+418
+419
+420
+421
+422
 423
 424
 425
@@ -3597,16 +3779,10 @@ a.minmax { |a, b| a.length &lt;=&gt; b.length } <span style="color:#777">#=&gt; 
 440
 441
 442
-443
-444
-445
-446
-447
-448
-449</pre>
+443</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 423</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 417</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">minmax_by</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:minmax_by</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -3699,6 +3875,12 @@ a.minmax { |a, b| a.length &lt;=&gt; b.length } <span style="color:#777">#=&gt; 
       <pre class="lines">
 
 
+466
+467
+468
+469
+470
+471
 472
 473
 474
@@ -3708,16 +3890,10 @@ a.minmax { |a, b| a.length &lt;=&gt; b.length } <span style="color:#777">#=&gt; 
 478
 479
 480
-481
-482
-483
-484
-485
-486
-487</pre>
+481</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 472</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 466</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">none?</span>(pat=<span style="color:#036;font-weight:bold">NONE</span>, &amp;block)
   <span style="color:#080;font-weight:bold">if</span> pat != <span style="color:#036;font-weight:bold">NONE</span>
@@ -3800,6 +3976,12 @@ true.</p>
       <pre class="lines">
 
 
+506
+507
+508
+509
+510
+511
 512
 513
 514
@@ -3814,16 +3996,10 @@ true.</p>
 523
 524
 525
-526
-527
-528
-529
-530
-531
-532</pre>
+526</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 512</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 506</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">one?</span>(pat=<span style="color:#036;font-weight:bold">NONE</span>, &amp;block)
   count = <span style="color:#00D">0</span>
@@ -3886,8 +4062,6 @@ block value was false.</p>
       <pre class="lines">
 
 
-284
-285
 286
 287
 288
@@ -3897,10 +4071,12 @@ block value was false.</p>
 292
 293
 294
-295</pre>
+295
+296
+297</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 284</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 286</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">partition</span>(&amp;block)
   ary_T = []
@@ -3951,16 +4127,16 @@ whose block value was false.</p>
       <pre class="lines">
 
 
-304
-305
 306
 307
 308
 309
-310</pre>
+310
+311
+312</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 304</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 306</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reject</span>(&amp;block)
   ary = []
@@ -4017,20 +4193,20 @@ whose block value was false.</p>
       <pre class="lines">
 
 
+632
+633
+634
+635
+636
+637
 638
 639
 640
 641
-642
-643
-644
-645
-646
-647
-648</pre>
+642</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 638</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 632</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reverse_each</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:reverse_each</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -4082,12 +4258,12 @@ sorting.</p>
       <pre class="lines">
 
 
-327
-328
-329</pre>
+329
+330
+331</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 327</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 329</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">sort</span>(&amp;block)
   <span style="color:#069">self</span>.map{|*val| val.__svalue}.sort(&amp;block)
@@ -4131,6 +4307,7 @@ values in <i>enum</i> through the given block.</p>
       <pre class="lines">
 
 
+193
 194
 195
 196
@@ -4143,13 +4320,10 @@ values in <i>enum</i> through the given block.</p>
 203
 204
 205
-206
-207
-208
-209</pre>
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 194</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 193</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">sort_by</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:sort_by</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -4161,9 +4335,7 @@ values in <i>enum</i> through the given block.</p>
     ary.push([block.call(e), i])
   }
   <span style="color:#080;font-weight:bold">if</span> ary.size &gt; <span style="color:#00D">1</span>
-    ary.__sort_sub__(<span style="color:#00D">0</span>, ary.size - <span style="color:#00D">1</span>) <span style="color:#080;font-weight:bold">do</span> |a,b|
-      a &lt;=&gt; b
-    <span style="color:#080;font-weight:bold">end</span>
+    ary.sort!
   <span style="color:#080;font-weight:bold">end</span>
   ary.collect{|e,i| orig[i]}
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -4202,7 +4374,7 @@ values in <i>enum</i> through the given block.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></tt>)</span>
       
       
       
@@ -4218,6 +4390,7 @@ values in <i>enum</i> through the given block.</p>
       <pre class="lines">
 
 
+58
 59
 60
 61
@@ -4229,15 +4402,14 @@ values in <i>enum</i> through the given block.</p>
 67
 68
 69
-70
-71</pre>
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 58</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">take</span>(n)
-  raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no implicit conversion of </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> into Integer</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> n.respond_to?(<span style="color:#A60">:to_int</span>)
-  i = n.to_int
+  n = n.__to_int
+  i = n.to_i
   raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">attempt to take negative size</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> i &lt; <span style="color:#00D">0</span>
   ary = []
   <span style="color:#080;font-weight:bold">return</span> ary <span style="color:#080;font-weight:bold">if</span> i == <span style="color:#00D">0</span>
@@ -4291,6 +4463,7 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
       <pre class="lines">
 
 
+85
 86
 87
 88
@@ -4299,11 +4472,10 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
 91
 92
 93
-94
-95</pre>
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 85</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">take_while</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:take_while</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -4323,7 +4495,7 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
       <div class="method_details ">
   <h3 class="signature " id="to_h-instance_method">
   
-    #<strong>to_h</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_h</strong>(&amp;blk)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
   
 
   
@@ -4355,27 +4527,45 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
       <pre class="lines">
 
 
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
 806
 807
 808
 809
 810
 811
-812
-813
-814
-815</pre>
+812</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 806</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 794</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_h</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_h</span>(&amp;blk)
   h = {}
-  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*v|
-    v = v.__svalue
-    raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong element type </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>v.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> (expected Array)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> v.is_a? <span style="color:#036;font-weight:bold">Array</span>
-    raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">element has wrong array length (expected 2, was </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>v.size<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> v.size != <span style="color:#00D">2</span>
-    h[v[<span style="color:#00D">0</span>]] = v[<span style="color:#00D">1</span>]
+  <span style="color:#080;font-weight:bold">if</span> blk
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |v|
+      v = blk.call(v)
+      raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong element type </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>v.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> (expected Array)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> v.is_a? <span style="color:#036;font-weight:bold">Array</span>
+      raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">element has wrong array length (expected 2, was </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>v.size<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> v.size != <span style="color:#00D">2</span>
+      h[v[<span style="color:#00D">0</span>]] = v[<span style="color:#00D">1</span>]
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |*v|
+      v = v.__svalue
+      raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong element type </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>v.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> (expected Array)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> v.is_a? <span style="color:#036;font-weight:bold">Array</span>
+      raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">element has wrong array length (expected 2, was </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>v.size<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">)</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> v.size != <span style="color:#00D">2</span>
+      h[v[<span style="color:#00D">0</span>]] = v[<span style="color:#00D">1</span>]
+    <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#080;font-weight:bold">end</span>
   h
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -4399,6 +4589,9 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
       <pre class="lines">
 
 
+818
+819
+820
 821
 822
 823
@@ -4410,13 +4603,10 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
 829
 830
 831
-832
-833
-834
-835</pre>
+832</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 821</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 818</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">uniq</span>(&amp;block)
   hash = {}
@@ -4465,6 +4655,18 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
       <pre class="lines">
 
 
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
 767
 768
 769
@@ -4479,22 +4681,10 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
 778
 779
 780
-781
-782
-783
-784
-785
-786
-787
-788
-789
-790
-791
-792
-793</pre>
+781</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 767</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 755</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">zip</span>(*arg, &amp;block)
   result = block ? <span style="color:#069">nil</span> : []
@@ -4533,9 +4723,9 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:53:56 2018 by
+  Generated on Thu May 16 08:48:29 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

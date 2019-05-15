@@ -6,7 +6,7 @@
 <title>
   Top Level Namespace
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -95,25 +95,31 @@
   
 </p>
 
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="STDIN-constant" class="">STDIN =
-        
-      </dt>
-      <dd><pre class="code"><span style="color:#036;font-weight:bold">IO</span>.open(<span style="color:#00D">0</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">r</span><span style="color:#710">&quot;</span></span>)</pre></dd>
-    
-      <dt id="STDOUT-constant" class="">STDOUT =
-        
-      </dt>
-      <dd><pre class="code"><span style="color:#036;font-weight:bold">IO</span>.open(<span style="color:#00D">1</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">w</span><span style="color:#710">&quot;</span></span>)</pre></dd>
-    
-      <dt id="STDERR-constant" class="">STDERR =
-        
-      </dt>
-      <dd><pre class="code"><span style="color:#036;font-weight:bold">IO</span>.open(<span style="color:#00D">2</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">w</span><span style="color:#710">&quot;</span></span>)</pre></dd>
-    
-  </dl>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="STDIN-constant" class="">STDIN =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#036;font-weight:bold">IO</span>.open(<span style="color:#00D">0</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">r</span><span style="color:#710">&quot;</span></span>)</pre></dd>
+      
+        <dt id="STDOUT-constant" class="">STDOUT =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#036;font-weight:bold">IO</span>.open(<span style="color:#00D">1</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">w</span><span style="color:#710">&quot;</span></span>)</pre></dd>
+      
+        <dt id="STDERR-constant" class="">STDERR =
+          
+        </dt>
+        <dd><pre class="code"><span style="color:#036;font-weight:bold">IO</span>.open(<span style="color:#00D">2</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">w</span><span style="color:#710">&quot;</span></span>)</pre></dd>
+      
+    </dl>
+  
 
 
 
@@ -216,38 +222,6 @@
 
   
     <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="top-level-namespace.html#dig-instance_method" title="#dig (instance method)">#<strong>dig</strong>(idx, *args)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>call-seq:   hsh.dig(key,…)                 -&gt; object.</p>
 </div></span>
   
 </li>
@@ -378,75 +352,12 @@
     
   </div>
 
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="dig-instance_method">
-  
-    #<strong>dig</strong>(idx, *args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>call-seq:
-  hsh.dig(key,…)                 -&gt; object</p>
-
-<p>Extracts the nested value specified by the sequence of <i>key</i>
-objects by calling +dig+ at each step, returning +nil+ if any
-intermediate step is +nil+.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-94
-95
-96
-97
-98
-99
-100
-101</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/mrblib/struct.rb', line 94</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">dig</span>(idx,*args)
-  n = <span style="color:#069">self</span>[idx]
-  <span style="color:#080;font-weight:bold">if</span> args.size &gt; <span style="color:#00D">0</span>
-    n&amp;.dig(*args)
-  <span style="color:#080;font-weight:bold">else</span>
-    n
-  <span style="color:#080;font-weight:bold">end</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:53:55 2018 by
+  Generated on Thu May 16 08:48:29 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   Header: mruby/hash.h
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -89,6 +89,42 @@
       <li class="public ">
   <span class="summary_signature">
     <a href="#mrb_hash_new_capa-function" title="mrb_hash_new_capa">mrb_value <strong>mrb_hash_new_capa</strong>(mrb_state*, mrb_int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ensure_hash_type-function" title="mrb_ensure_hash_type">mrb_value <strong>mrb_ensure_hash_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_hash_type-function" title="mrb_check_hash_type">mrb_value <strong>mrb_check_hash_type</strong>(mrb_state *, mrb_value)</a>
 
     
   </span>
@@ -214,7 +250,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_check_hash_type-function" title="mrb_check_hash_type">mrb_value <strong>mrb_check_hash_type</strong>(mrb_state *, mrb_value)</a>
+    <a href="#mrb_hash_key_p-function" title="mrb_hash_key_p">mrb_bool <strong>mrb_hash_key_p</strong>(mrb_state *, mrb_value, mrb_value)</a>
 
     
   </span>
@@ -224,7 +260,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>Check if the hash has the key.</p>
 </div></span>
   
 </li>
@@ -232,7 +268,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_hash_empty_p-function" title="mrb_hash_empty_p">mrb_value <strong>mrb_hash_empty_p</strong>(mrb_state *, mrb_value)</a>
+    <a href="#mrb_hash_empty_p-function" title="mrb_hash_empty_p">mrb_bool <strong>mrb_hash_empty_p</strong>(mrb_state *, mrb_value)</a>
 
     
   </span>
@@ -286,7 +322,61 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_hash_tbl-function" title="mrb_hash_tbl">struct kh_ht * <strong>mrb_hash_tbl</strong>(mrb_state *, mrb_value)</a>
+    <a href="#mrb_hash_size-function" title="mrb_hash_size">mrb_int <strong>mrb_hash_size</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get hash size.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_hash_dup-function" title="mrb_hash_dup">mrb_value <strong>mrb_hash_dup</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Copies the hash.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_hash_merge-function" title="mrb_hash_merge">void <strong>mrb_hash_merge</strong>(mrb_state *, mrb_value, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Merges two hashes.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_hash_foreach-function" title="mrb_hash_foreach">void <strong>mrb_hash_foreach</strong>(mrb_state *, struct RHash *, mrb_hash_foreach_func *, void *)</a>
 
     
   </span>
@@ -385,6 +475,26 @@
     <div class="method_details first">
   <h3 class="signature first" id="mrb_hash_new_capa-function">
   mrb_value <strong>mrb_hash_new_capa</strong>(mrb_state* , mrb_int )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ensure_hash_type-function">
+  mrb_value <strong>mrb_ensure_hash_type</strong>(mrb_state * mrb, mrb_value hash)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_hash_type-function">
+  mrb_value <strong>mrb_check_hash_type</strong>(mrb_state * mrb, mrb_value hash)
 
   
 </h3>
@@ -670,7 +780,7 @@ used.</p>
 
 <p>Equivalent to:</p>
 
-<pre class="code ruby"><code class="ruby">hash.hash_key?(key) ? hash[key] : <span style="color:#080;font-weight:bold">def</span>
+<pre class="code ruby"><code class="ruby">hash.key?(key) ? hash[key] : <span style="color:#080;font-weight:bold">def</span>
 </code></pre>
 
 
@@ -938,18 +1048,101 @@ used.</p>
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_check_hash_type-function">
-  mrb_value <strong>mrb_check_hash_type</strong>(mrb_state * mrb, mrb_value hash)
+  <h3 class="signature " id="mrb_hash_key_p-function">
+  mrb_bool <strong>mrb_hash_key_p</strong>(mrb_state * mrb, mrb_value hash, mrb_value key)
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Check if the hash has the key.</p>
+
+<p>Equivalent to:</p>
+
+<pre class="code ruby"><code class="ruby">hash.key?(key)
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hash</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The target hash.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>key</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The key to check existence.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>True if the hash has the key</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
 
 </div>
 
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_hash_empty_p-function">
-  mrb_value <strong>mrb_hash_empty_p</strong>(mrb_state * mrb, mrb_value self)
+  mrb_bool <strong>mrb_hash_empty_p</strong>(mrb_state * mrb, mrb_value self)
 
   
 </h3>
@@ -1182,8 +1375,231 @@ used.</p>
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_hash_tbl-function">
-  struct kh_ht * <strong>mrb_hash_tbl</strong>(mrb_state * mrb, mrb_value hash)
+  <h3 class="signature " id="mrb_hash_size-function">
+  mrb_int <strong>mrb_hash_size</strong>(mrb_state * mrb, mrb_value hash)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Get hash size.</p>
+
+<p>Equivalent to:</p>
+
+<pre class="code ruby"><code class="ruby"> hash.size
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hash</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The target hash.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>The hash size.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_hash_dup-function">
+  mrb_value <strong>mrb_hash_dup</strong>(mrb_state * mrb, mrb_value hash)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Copies the hash.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hash</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The target hash.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>The copy of the hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_hash_merge-function">
+  void <strong>mrb_hash_merge</strong>(mrb_state * mrb, mrb_value hash1, mrb_value hash2)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>Merges two hashes. The first hash will be modified by the
+second hash.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The mruby state reference.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hash1</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The target hash.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hash2</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Updating hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_hash_foreach-function">
+  void <strong>mrb_hash_foreach</strong>(mrb_state * mrb, struct RHash * hash, mrb_hash_foreach_func * func, void * p)
 
   
 </h3>
@@ -1195,9 +1611,9 @@ used.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 11 23:54:00 2018 by
+  Generated on Thu May 16 08:48:34 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.1).
+  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>
