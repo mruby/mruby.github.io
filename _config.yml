@@ -1,6 +1,7 @@
 name: mruby
 markdown: kramdown
 highlighter: rouge
+include: _index.html
 exclude:
 - Gemfile
 - Gemfile.lock
