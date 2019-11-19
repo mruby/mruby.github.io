@@ -1,0 +1,259 @@
+---
+layout: post
+title:  "mruby 2.1.0 released"
+date:   2019-11-19 00:00:00
+categories: releases
+---
+
+# mruby 2.1.0
+
+We are proudly announcing the stable release of mruby 2.0 series - [mruby 2.1.0](https://github.com/mruby/mruby/releases/tag/2.1.0).  
+The [mruby 2.1.0](https://github.com/mruby/mruby/releases/tag/2.1.0) has been enhanced with compatibility with Ruby 2 series, and some new features of Ruby 2.7 have been added.
+
+---
+
+# New Features
+
+## Core Language Features
+
+- Suffix support (`Rational` and `Complex` literals) (#4125)
+
+## Core Libraries
+
+### Ruby 2.7 features
+
+- Add `Array#intersection` method which returns a new array containing elements common to both arrays. (mrbgems/mruby-array-ext)
+- Add `Enumerable#filter_map` method which is a short hand for `filter` + `map` in a single call. (mrbgems/mruby-enum-ext)
+- Add `Enumerable#tally` method which group and count elements of the collection. (mrbgems/mruby-enum-ext)
+- Add `Enumerator.produce` method which creates an infinite enumerator from any block. (mrbgems/mruby-enumerator)
+- Add `UnboundMethod#bind_call` method which call a method that overridden without allocation of intermediate Method object. (mruby-method)
+- `Module#name`, `true#to_s`, `false#to_s` return a frozen string. The returned string is always the same object.
+
+### Ruby 2.6 features
+
+- Add `Array#difference` method:  
+`Array#difference` returns a new array that is a copy of the original array, removing any items that also appear in other_ary. (mrbgems/mruby-array-ext)
+
+### New Libraries
+
+- Add `mrbgems/mruby-rational`:  
+[dyama/mruby-rational](https://github.com/dyama/mruby-rational) has been included into the core library, and rational numbers like `1/3` can be handled.
+- Add `mrbgems/mruby-complex`:  
+[pbosetti/mruby-complex](https://github.com/pbosetti/mruby-complex) has been included into the core library to handle complex numbers.
+
+### New C APIs
+
+#### Macros for checking object type
+
+```c
+mrb_false_p(o)
+mrb_true_p(o)
+mrb_free_p(o)
+mrb_object_p(o)
+mrb_class_p(o)
+mrb_module_p(o)
+mrb_iclass_p(o)
+mrb_sclass_p(o)
+mrb_proc_p(o)
+mrb_range_p(o)
+mrb_file_p(o)
+mrb_env_p(o)
+mrb_data_p(o)
+mrb_fiber_p(o)
+mrb_istruct_p(o)
+mrb_break_p(o)
+```
+
+#### mruby core (mruby.h)
+
+```c
+MRB_API mrb_int mrb_cmp(mrb_state *mrb, mrb_value obj1, mrb_value obj2);
+```
+
+#### mruby binary (mruby/dump.h, mruby/irep.h)
+
+```c
+MRB_API mrb_irep *mrb_read_irep_buf(mrb_state*, const void*, size_t);   // mruby/dump.h
+MRB_API mrb_value mrb_load_irep_buf(mrb_state*, const void*, size_t);   // mruby/irep.h
+MRB_API mrb_value mrb_load_irep_buf_cxt(mrb_state*, const void*, size_t, mrbc_context*);   // mruby/irep.h
+```
+
+#### Numeric class (mruby/numeric.h)
+
+```c
+MRB_API mrb_value mrb_num_plus(mrb_state *mrb, mrb_value x, mrb_value y);
+MRB_API mrb_value mrb_num_minus(mrb_state *mrb, mrb_value x, mrb_value y);
+MRB_API mrb_value mrb_num_mul(mrb_state *mrb, mrb_value x, mrb_value y);
+MRB_API mrb_value mrb_int_value(mrb_state *mrb, mrb_float f);
+```
+
+#### String class (mruby/string.h)
+
+```c
+MRB_API void mrb_str_modify_keep_ascii(mrb_state *mrb, struct RString *s);
+MRB_API const char *mrb_string_cstr(mrb_state *mrb, mrb_value str);
+```
+
+#### mruby/value.h
+
+- Add customized `mrb_ro_data_p()` (#4408)
+
+#### Enumerable module and Hash class
+
+- Add `filter` aliases for `Enumerable` and `Hash`. (57a0132b)
+
+## Configuration
+
+- (Proof of Concept) mruby tuning profiles (#4446)
+
+## mrbtest
+
+### Test Features
+
+- Warn if assertion is missing inside `assert` (#4320)
+
+### New test method (mrbtest)
+
+```ruby
+assert_match(pattern, str, msg=nil)
+assert_not_match(pattern, str, msg=nil)
+assert_raise_with_message(exc, exp_msg, msg = nil, &block
+assert_raise_with_message_pattern(exc, exp_msg, msg = nil, &block)
+assert_not_nil(target, msg)
+```
+
+## Tools
+
+### Interactive mruby (mirb)
+
+- As with `irb` in Ruby, a local variable `_` is added to store the last result.
+
+---
+# Update Features
+
+## mruby core
+
+- Allow newlines and comments between method calls. (4296c77e)
+- Support `&.` at the beginning of the line (4124047c)
+
+## Build system
+
+- Support lock file  
+It is now possible to fix mruby and mrbgems versions in products that use mruby.
+- Rename MRB_USE_ETEXT_EDATA to MRB_USE_LINK_TIME_RO_DATA_P and support lld linked programs (#4716)
+
+## C APIs
+
+### mruby core
+
+- Keyword arguments can be obtained with `mrb_get_args` using the format string `:`.
+- `mrb_parser_dump` supports displaying `NODE_DSYM`, `NODE_WORDS`, `NODE_SYMBOLS` and `NODE_LITERAL_DELIM`.
+- Raise `ArgumentError` by `aspec` check. (30f37872)
+
+### src/error.c
+
+- Add new specifiers/modifiers to format string of `mrb_vfromat()` (#4608)
+
+## mrbtest
+
+- Nested `assert` for mrbtest (#4540)
+
+---
+# Compatibility
+
+## mruby core
+
+- Pad leading zero to month and day in `MRUBY_RELEASE_DATE` (#4353)
+
+## Core Libraries
+
+- Add `Class#new(*args, &block)` method.
+- Add optional argument to `Module#class_variables`.
+- Add constants for floating point number. (`RADIX`, `MANT_DIG`, `EPSILON`, `DIG`, `MIN_EXP`, `MIN`, `MIN_10_EXP`, `MAX_EXP`, `MAX`, `MAX_10_EXP`)
+- Removed `$1`..`$9` from `Kernel#global_variables`.
+- String#unpack/Array#pack does support base64 directive (`m`).
+- Add encoding argument to `Integral#chr` (#4593)
+- Fixed `length` for IO should be in bytes, not in characters (8c90b5fc)
+
+---
+# Breaking Changes
+
+There are three major breaking changes from mruby 2.0.1.
+
+## Changed methods
+
+- Move `Array#append` and `Array#prepend` from core to `mrbgems/mruby-ary-ext`.
+- Move `Numeric#div` from `mrbgems/mruby-numeric-ext` to the core.
+- Move `Integral#zero?`, `Integral#nonzero?`, `Integral#positive?` and `Integral#negative)?` to `Numeric` class.
+- Move `Numeric#__coerce_step_counter` to `Integral` class.
+- Move `Kernel#instance_exec`, `Kernel#equal?` and `Kernel#instance_eval` to `BasicObject` class.
+- Move `NilClass#to_h` to `mrbgems/mruby-object-ext` from `mrbgems/mruby-enum-ext`
+- Move `String#getbyte`, `String#setbyte` and `String#byteslice` to the core. (#4696)
+- Remove `Kernel#global_variables` from core. This method is defined in `mrbgems/mruby-metaprog`.
+- Integrate `Integral#chr` (`Fixnum#chr`) to `mrbgems/mruby-string-ext`.
+- Remove `String#=~` and `String#match` that requires `Regexp` (fd37bc53)
+- `Symbol#to_s` return a frozen string. The returned string is always the same object. This feature will be reverted next mruby, because which reverted from Ruby 2.7.
+- Explicit `.0` is removed from result of `Float#to_s` and `Float#inspect`. (9d08025b)
+
+## Change C APIs
+
+- Rename symbol-to-string functions. (#4684)  
+  - `mrb_sym2name()` -> `mrb_sym_name()`
+  - `mrb_sym2name_len()` -> `mrb_sym_name_len()`
+  - `mrb_sym2str()` -> `mrb_sym_str()`
+
+## Remove C APIs
+
+- Functions to remove `MRB_API` from definitions (referenced from within `libmruby`):  
+`mrb_instance_new()`, `mrb_vm_define_class()`, `mrb_vm_define_module()`
+- `struct RIstruct` is renamed to `struct RIStruct` (e41f1574)
+* Remove `mrb_fixnum_plus()`, `mrb_fixnum_minus()`, `mrb_fixnum_mul()`, and `mrb_num_div()`. Use `mrb_num_plus()`, `mrb_num_minus()`, `mrb_num_mul()` instead.
+- Remove a member `ary` of `struct RString`. `struct RStringEmbed` is used for String embedding. (#4646)
+
+## mruby core
+
+- Remove global variable `$/`. The current Ruby policy do not encourage Perl-ish global variables.
+- Remove `MRB_TT_HAS_BASIC` macro. (#4728)
+- Remove members `flags` and `mems` of `struct mrb_state`. (0c5f26e0 and #4470)
+
+## Configuration
+
+- Remove `MRB_METHOD_TABLE_INLINE` and `MRB_NO_INIT_ARRAY_START`. (2256bb07 and #4716)
+- `MRB_USE_ETEXT_EDATA` is deprecated (warned and ignored). instead, use `MRB_USE_LINK_TIME_RO_DATA_P`. (#4716)
+
+## mruby binary (MRB)
+
+- Remove "LINE" section reader. (#4455)
+
+---
+# Major bug fixes
+
+- `SystemStackError` is raised from `String#=~`. (#4363)
+- Null pointer dereference in ecall. (#4370)
+- mismatched shift functions. (#4380)
+- Compilation error with "MRB_ARY_EMBED_LEN_MAX" in "array.h". (#4382)
+- Fixed a bug in recursive `mrb_top_run` calls; fix (#4384)
+- Unexpected error: `Can't get cfunc env from non-cfunc proc.` (#4389)
+- build error on master by MRB_WITHOUT_FLOAT. (#4478)
+- Null pointer dereference in mrb_str_cat_str. (#4504)
+- Some comments do not increment lineno on context. (#4513)
+- Null pointer dereference in mrb_check_frozen. (#4519)
+- Invalid read in mrb_class. (#4534)
+- Array#inspect recurses too much for self-referential arrays. (#4552)
+- Infinite loop in Integer#step when both args are INFINITY. (#4555)
+- Float#round hangs for large ndigits. (#4566)
+- Cannot call `Fiber.yield` in method. (#4567)
+- Reference to top-level variable in top-level block is broken. (#4581)
+- Bugs with mutually recursive Array and Hash. (#4582)
+- `mrb_gc_unregister()` may access freed memory. (#4618)
+- memcpy-param-overlap in str_replace_partial. (#4627)
+- Symbol#inspect does not handle Unicode characters. (#4678)
+- mrb_funcall returns odd value. (#4696)
+- behavior of alias is defferent from CRuby. (#4718)
+- compile error at master by clang 9. (#4786)
+
+---
+
+We have done 912 commits to 229 files, 12,006 lines were added, 5,382 lines removed since mruby 2.0.1. For more detail of the updates, [see Commit Log](https://github.com/mruby/mruby/compare/2.0.1...stable).
+
+Let's try `mruby 2.1.0`.
