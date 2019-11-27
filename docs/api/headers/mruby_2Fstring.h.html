@@ -6,7 +6,7 @@
 <title>
   Header: mruby/string.h
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -106,7 +106,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_str_modify-function" title="mrb_str_modify">void <strong>mrb_str_modify</strong>(mrb_state*, struct RString*)</a>
+    <a href="#mrb_str_modify-function" title="mrb_str_modify">void <strong>mrb_str_modify</strong>(mrb_state *, struct RString *)</a>
 
     
   </span>
@@ -124,7 +124,25 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_str_index-function" title="mrb_str_index">mrb_int <strong>mrb_str_index</strong>(mrb_state*, mrb_value, const char*, mrb_int, mrb_int)</a>
+    <a href="#mrb_str_modify_keep_ascii-function" title="mrb_str_modify_keep_ascii">void <strong>mrb_str_modify_keep_ascii</strong>(mrb_state *, struct RString *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>mrb_str_modify() with keeping ASCII flag if set.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_str_index-function" title="mrb_str_index">mrb_int <strong>mrb_str_index</strong>(mrb_state *, mrb_value, const char *, mrb_int, mrb_int)</a>
 
     
   </span>
@@ -142,7 +160,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_str_concat-function" title="mrb_str_concat">void <strong>mrb_str_concat</strong>(mrb_state*, mrb_value, mrb_value)</a>
+    <a href="#mrb_str_concat-function" title="mrb_str_concat">void <strong>mrb_str_concat</strong>(mrb_state *, mrb_value, mrb_value)</a>
 
     
   </span>
@@ -160,7 +178,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_str_plus-function" title="mrb_str_plus">mrb_value <strong>mrb_str_plus</strong>(mrb_state*, mrb_value, mrb_value)</a>
+    <a href="#mrb_str_plus-function" title="mrb_str_plus">mrb_value <strong>mrb_str_plus</strong>(mrb_state *, mrb_value, mrb_value)</a>
 
     
   </span>
@@ -178,7 +196,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_ptr_to_str-function" title="mrb_ptr_to_str">mrb_value <strong>mrb_ptr_to_str</strong>(mrb_state *, void*)</a>
+    <a href="#mrb_ptr_to_str-function" title="mrb_ptr_to_str">mrb_value <strong>mrb_ptr_to_str</strong>(mrb_state *, void *)</a>
 
     
   </span>
@@ -350,7 +368,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the length of the Ruby string.</p>
+    <span class="summary_desc"><div class='inline'><p>obslete: use RSTRING_LEN().</p>
 </div></span>
   
 </li>
@@ -512,7 +530,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a concated string comprised of a Ruby string and a C string.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a concatenated string comprised of a Ruby string and a C string.</p>
 </div></span>
   
 </li>
@@ -530,7 +548,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a concated string comprised of a Ruby string and a C string.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a concatenated string comprised of a Ruby string and a C string.</p>
 </div></span>
   
 </li>
@@ -624,6 +642,16 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="RSTR_SET_TYPE_FLAG-define" class=""><small>#define</small> RSTR_SET_TYPE_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RSTR_UNSET_TYPE_FLAG-define" class=""><small>#define</small> RSTR_UNSET_TYPE_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="RSTR_EMBED_P-define" class=""><small>#define</small> RSTR_EMBED_P
         
       </dt>
@@ -649,7 +677,17 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="RSTR_EMBED_PTR-define" class=""><small>#define</small> RSTR_EMBED_PTR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="RSTR_EMBED_LEN-define" class=""><small>#define</small> RSTR_EMBED_LEN
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RSTR_EMBEDDABLE_P-define" class=""><small>#define</small> RSTR_EMBEDDABLE_P
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -714,6 +752,31 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="RSTR_ASCII_P-define" class=""><small>#define</small> RSTR_ASCII_P
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RSTR_SET_ASCII_FLAG-define" class=""><small>#define</small> RSTR_SET_ASCII_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RSTR_UNSET_ASCII_FLAG-define" class=""><small>#define</small> RSTR_UNSET_ASCII_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RSTR_WRITE_ASCII_FLAG-define" class=""><small>#define</small> RSTR_WRITE_ASCII_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RSTR_COPY_ASCII_FLAG-define" class=""><small>#define</small> RSTR_COPY_ASCII_FLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="RSTR_POOL_P-define" class=""><small>#define</small> RSTR_POOL_P
         
       </dt>
@@ -771,6 +834,11 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="RSTRING_CSTR-define" class=""><small>#define</small> RSTRING_CSTR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="MRB_STR_SHARED-define" class=""><small>#define</small> MRB_STR_SHARED
         
       </dt>
@@ -786,17 +854,27 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="MRB_STR_EMBED-define" class=""><small>#define</small> MRB_STR_EMBED
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="MRB_STR_POOL-define" class=""><small>#define</small> MRB_STR_POOL
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_STR_NO_UTF-define" class=""><small>#define</small> MRB_STR_NO_UTF
+      <dt id="MRB_STR_ASCII-define" class=""><small>#define</small> MRB_STR_ASCII
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_STR_EMBED-define" class=""><small>#define</small> MRB_STR_EMBED
+      <dt id="MRB_STR_EMBED_LEN_SHIFT-define" class=""><small>#define</small> MRB_STR_EMBED_LEN_SHIFT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_STR_EMBED_LEN_BITSIZE-define" class=""><small>#define</small> MRB_STR_EMBED_LEN_BITSIZE
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -806,7 +884,7 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_STR_EMBED_LEN_SHIFT-define" class=""><small>#define</small> MRB_STR_EMBED_LEN_SHIFT
+      <dt id="MRB_STR_TYPE_MASK-define" class=""><small>#define</small> MRB_STR_TYPE_MASK
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -867,7 +945,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_str_modify-function">
-  void <strong>mrb_str_modify</strong>(mrb_state* , struct RString* )
+  void <strong>mrb_str_modify</strong>(mrb_state * mrb, struct RString * s)
 
   
 </h3>
@@ -876,8 +954,30 @@
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_str_modify_keep_ascii-function">
+  void <strong>mrb_str_modify_keep_ascii</strong>(mrb_state * mrb, struct RString * s)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>mrb_str_modify() with keeping ASCII flag if set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_str_index-function">
-  mrb_int <strong>mrb_str_index</strong>(mrb_state* , mrb_value , const char* , mrb_int , mrb_int )
+  mrb_int <strong>mrb_str_index</strong>(mrb_state * mrb, mrb_value str, const char * p, mrb_int len, mrb_int offset)
 
   
 </h3>
@@ -899,7 +999,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_str_concat-function">
-  void <strong>mrb_str_concat</strong>(mrb_state* , mrb_value , mrb_value )
+  void <strong>mrb_str_concat</strong>(mrb_state * mrb, mrb_value self, mrb_value other)
 
   
 </h3>
@@ -909,32 +1009,33 @@
 
 <p>Example:</p>
 
-<pre class="code c"><code class="c"><span style="color:#0a8;font-weight:bold">int</span>
-main(<span style="color:#0a8;font-weight:bold">int</span> argc,
-     <span style="color:#0a8;font-weight:bold">char</span> **argv)
+<pre class="code ruby"><code class="ruby">int
+main(int argc,
+     char **argv)
 {
-  <span style="color:#777">// Variable declarations.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Variable</span> declarations.
   mrb_value str1;
   mrb_value str2;
 
   mrb_state *mrb = mrb_open();
   <span style="color:#080;font-weight:bold">if</span> (!mrb)
   {
-     <span style="color:#777">// handle error</span>
+     <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> handle error
   }
 
-  <span style="color:#777">// Creates new Ruby strings.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Creates</span> new <span style="color:#036;font-weight:bold">Ruby</span> strings.
   str1 = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abc</span><span style="color:#710">&quot;</span></span>);
   str2 = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">def</span><span style="color:#710">&quot;</span></span>);
 
-  <span style="color:#777">// Concatenates str2 to str1.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Concatenates</span> str2 to str1.
   mrb_str_concat(mrb, str1, str2);
 
- <span style="color:#777">// Prints new Concatenated Ruby string.</span>
- mrb_p(mrb, str1);
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Prints</span> new <span style="color:#036;font-weight:bold">Concatenated</span> <span style="color:#036;font-weight:bold">Ruby</span> string.
+  mrb_p(mrb, str1);
 
- mrb_close(mrb);
- <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;    }
+  mrb_close(mrb);
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+}
 </code></pre>
 
 <p>Result:</p>
@@ -954,7 +1055,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -969,7 +1070,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>self</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -984,7 +1085,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>other</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1022,7 +1123,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_str_plus-function">
-  mrb_value <strong>mrb_str_plus</strong>(mrb_state* , mrb_value , mrb_value )
+  mrb_value <strong>mrb_str_plus</strong>(mrb_state * mrb, mrb_value a, mrb_value b)
 
   
 </h3>
@@ -1032,11 +1133,11 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
 
 <p>Example:</p>
 
-<pre class="code c"><code class="c"><span style="color:#0a8;font-weight:bold">int</span>
-main(<span style="color:#0a8;font-weight:bold">int</span> argc,
-     <span style="color:#0a8;font-weight:bold">char</span> **argv)
+<pre class="code ruby"><code class="ruby">int
+main(int argc,
+     char **argv)
 {
-  <span style="color:#777">// Variable declarations.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Variable</span> declarations.
   mrb_value a;
   mrb_value b;
   mrb_value c;
@@ -1044,25 +1145,26 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
   mrb_state *mrb = mrb_open();
   <span style="color:#080;font-weight:bold">if</span> (!mrb)
   {
-     <span style="color:#777">// handle error</span>
+     <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> handle error
   }
 
-  <span style="color:#777">// Creates two Ruby strings from the passed in C strings.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Creates</span> two <span style="color:#036;font-weight:bold">Ruby</span> strings from the passed <span style="color:#080;font-weight:bold">in</span> <span style="color:#036;font-weight:bold">C</span> strings.
   a = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">abc</span><span style="color:#710">&quot;</span></span>);
   b = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">def</span><span style="color:#710">&quot;</span></span>);
 
-  <span style="color:#777">// Prints both C strings.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Prints</span> both <span style="color:#036;font-weight:bold">C</span> strings.
   mrb_p(mrb, a);
   mrb_p(mrb, b);
 
-  <span style="color:#777">// Concatenates both Ruby strings.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Concatenates</span> both <span style="color:#036;font-weight:bold">Ruby</span> strings.
   c = mrb_str_plus(mrb, a, b);
 
- <span style="color:#777">// Prints new Concatenated Ruby string.</span>
- mrb_p(mrb, c);
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Prints</span> new <span style="color:#036;font-weight:bold">Concatenated</span> <span style="color:#036;font-weight:bold">Ruby</span> string.
+  mrb_p(mrb, c);
 
- mrb_close(mrb);
- <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;    }
+  mrb_close(mrb);
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+}
 </code></pre>
 
 <p>Result:</p>
@@ -1084,7 +1186,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1099,7 +1201,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>a</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1114,7 +1216,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>b</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1152,7 +1254,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_ptr_to_str-function">
-  mrb_value <strong>mrb_ptr_to_str</strong>(mrb_state * , void* )
+  mrb_value <strong>mrb_ptr_to_str</strong>(mrb_state * mrb, void * p)
 
   
 </h3>
@@ -1172,7 +1274,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1187,7 +1289,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>p</span>
       
       
-        <span class='type'>(<tt>void*</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1245,7 +1347,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1260,7 +1362,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>obj</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1309,21 +1411,21 @@ in the specified by len.</p>
 
 <p>Example:</p>
 
-<pre class="code c"><code class="c"><span style="color:#0a8;font-weight:bold">int</span>
-main(<span style="color:#0a8;font-weight:bold">int</span> argc,
-     <span style="color:#0a8;font-weight:bold">char</span> **argv)
+<pre class="code ruby"><code class="ruby">int
+main(int argc,
+     char **argv)
 {
-    <span style="color:#777">// Variable declaration.</span>
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Variable</span> declaration.
     mrb_value str;
 
     mrb_state *mrb = mrb_open();
     <span style="color:#080;font-weight:bold">if</span> (!mrb)
     {
-       <span style="color:#777">// handle error</span>
+       <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> handle error
     }
-    <span style="color:#777">// Creates a new string.</span>
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Creates</span> a new string.
     str = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hello, world!</span><span style="color:#710">&quot;</span></span>);
-    <span style="color:#777">// Returns 5 characters of</span>
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Returns</span> <span style="color:#00D">5</span> characters of
     mrb_str_resize(mrb, str, <span style="color:#00D">5</span>);
     mrb_p(mrb, str);
 
@@ -1334,7 +1436,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
 
 <p>Result:</p>
 
-<pre class="code ruby"><code class="ruby">=&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hello</span><span style="color:#710">&quot;</span></span>
+<pre class="code ruby"><code class="ruby"> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hello</span><span style="color:#710">&quot;</span></span>
 </code></pre>
 
 
@@ -1349,7 +1451,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1364,7 +1466,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>str</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1379,7 +1481,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>len</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1427,25 +1529,25 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
 
 <p>Example:</p>
 
-<pre class="code c"><code class="c"><span style="color:#0a8;font-weight:bold">int</span>
-main(<span style="color:#0a8;font-weight:bold">int</span> argc,
-<span style="color:#0a8;font-weight:bold">char</span> <span style="color:#088;font-weight:bold">const</span> **argv)
+<pre class="code ruby"><code class="ruby">int
+main(int argc,
+char const **argv)
 {
-  <span style="color:#777">// Variable declarations.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Variable</span> declarations.
   mrb_value str1;
   mrb_value str2;
 
   mrb_state *mrb = mrb_open();
   <span style="color:#080;font-weight:bold">if</span> (!mrb)
   {
-    <span style="color:#777">// handle error</span>
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> handle error
   }
-  <span style="color:#777">// Creates new string.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Creates</span> new string.
   str1 = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hello, world!</span><span style="color:#710">&quot;</span></span>);
-  <span style="color:#777">// Returns a sub-string within the range of 0..2</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Returns</span> a sub-string within the range of <span style="color:#00D">0</span>..<span style="color:#00D">2</span>
   str2 = mrb_str_substr(mrb, str1, <span style="color:#00D">0</span>, <span style="color:#00D">2</span>);
 
-  <span style="color:#777">// Prints sub-string.</span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Prints</span> sub-string.
   mrb_p(mrb, str2);
 
   mrb_close(mrb);
@@ -1470,7 +1572,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1485,7 +1587,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>str</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1500,7 +1602,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>beg</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1515,7 +1617,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>len</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1573,7 +1675,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1588,7 +1690,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>str</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1684,64 +1786,13 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns the length of the Ruby string.</p>
+    <p>obslete: use RSTRING_LEN()</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>mrb</span>
-      
-      
-        <span class='type'>(<tt>mrb_state</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The current mruby state.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>str</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>Ruby string.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The length of the passed in Ruby string.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div>
 
@@ -1771,7 +1822,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1786,7 +1837,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>str</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1844,7 +1895,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1859,7 +1910,7 @@ main(<span style="color:#0a8;font-weight:bold">int</span> argc,
         <span class='name'>self</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1980,7 +2031,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -1995,7 +2046,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>str1</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2010,7 +2061,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>str2</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2054,7 +2105,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns a concated string comprised of a Ruby string and a C string.</p>
+    <p>Returns a concatenated string comprised of a Ruby string and a C string.</p>
 
 
   </div>
@@ -2068,7 +2119,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2083,7 +2134,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>str</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2098,7 +2149,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>ptr</span>
       
       
-        <span class='type'>(<tt>const char *</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2113,7 +2164,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>len</span>
       
       
-        <span class='type'>(<tt>size_t</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2164,7 +2215,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns a concated string comprised of a Ruby string and a C string.</p>
+    <p>Returns a concatenated string comprised of a Ruby string and a C string.</p>
 
 
   </div>
@@ -2178,7 +2229,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2193,7 +2244,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>str</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2208,7 +2259,7 @@ For type checking, non converting <code>mrb_to_str</code> is recommended.</p>
         <span class='name'>ptr</span>
       
       
-        <span class='type'>(<tt>const char *</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2337,7 +2388,7 @@ NUL characters.</li>
         <span class='name'>mrb</span>
       
       
-        <span class='type'>(<tt>mrb_state *</tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2352,7 +2403,7 @@ NUL characters.</li>
         <span class='name'>str</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></tt>)</span>
+        <span class='type'></span>
       
       
       
@@ -2392,9 +2443,9 @@ NUL characters.</li>
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:35 2019 by
+  Generated on Wed Nov 27 22:35:13 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

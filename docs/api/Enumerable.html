@@ -6,7 +6,7 @@
 <title>
   Module: Enumerable
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -161,29 +161,6 @@ See Copyright Notice in mruby.h</p>
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_h-class_method" title="to_h (class method)">.<strong>to_h</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
     </ul>
   
     <h2>
@@ -192,29 +169,6 @@ See Copyright Notice in mruby.h</p>
     </h2>
 
     <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#%2B-instance_method" title="#+ (instance method)">#<strong>+</strong>(other)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
       
         <li class="public ">
   <span class="summary_signature">
@@ -407,7 +361,7 @@ See Copyright Notice in mruby.h</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Call the given block for each element which is yield by +each+.</p>
+    <span class="summary_desc"><div class='inline'><p>Return the first element for which value from the block is true.</p>
 </div></span>
   
 </li>
@@ -587,6 +541,29 @@ See Copyright Notice in mruby.h</p>
 
   
     <span class="summary_desc"><div class='inline'><p>Return an array of all elements which are yield by +each+.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#filter_map-instance_method" title="#filter_map (instance method)">#<strong>filter_map</strong>(&amp;blk)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -1276,6 +1253,29 @@ See Copyright Notice in mruby.h</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#tally-instance_method" title="#tally (instance method)">#<strong>tally</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:   enum.tally -&gt; a_hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#to_h-instance_method" title="#to_h (instance method)">#<strong>to_h</strong>(&amp;blk)  &#x21d2; Object </a>
     
 
@@ -1354,7 +1354,7 @@ See Copyright Notice in mruby.h</p>
       <div class="method_details first">
   <h3 class="signature first" id="__update_hash-class_method">
   
-    .<strong>__update_hash</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>__update_hash</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1411,36 +1411,6 @@ enum_update_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </table>
 </div>
     
-      <div class="method_details ">
-  <h3 class="signature " id="to_h-class_method">
-  
-    .<strong>to_h</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-814
-815
-816</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 814</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">nil</span>.<span style="color:#06B;font-weight:bold">to_h</span>
-  {}
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
   </div>
 
   <div id="instance_method_details" class="method_details_list">
@@ -1448,37 +1418,7 @@ enum_update_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="+-instance_method">
-  
-    #<strong>+</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-10
-11
-12</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-chain/mrblib/chain.rb', line 10</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">+</span>(other)
-  <span style="color:#036;font-weight:bold">Enumerator</span>::<span style="color:#036;font-weight:bold">Chain</span>.new(<span style="color:#069">self</span>, other)
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="all?-instance_method">
+  <h3 class="signature first" id="all?-instance_method">
   
     #<strong>all?</strong>(pat = NONE, &amp;block)  &#x21d2; <tt>Boolean</tt> 
   
@@ -1651,7 +1591,7 @@ enum_update_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="chain-instance_method">
   
-    #<strong>chain</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>chain</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1681,7 +1621,7 @@ enum_update_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="collect-instance_method">
   
-    #<strong>collect</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>collect</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1740,7 +1680,7 @@ return this value.</p>
       <div class="method_details ">
   <h3 class="signature " id="count-instance_method">
   
-    #<strong>count</strong>(v = NONE, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>count</strong>(v = NONE, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1818,7 +1758,7 @@ counts the number of elements yielding a true value.</p>
       <div class="method_details ">
   <h3 class="signature " id="cycle-instance_method">
   
-    #<strong>cycle</strong>(nv = nil, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>cycle</strong>(nv = nil, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1925,7 +1865,7 @@ a.cycle(<span style="color:#00D">2</span>) { |x| puts x }  <span style="color:#7
       <div class="method_details ">
   <h3 class="signature " id="detect-instance_method">
   
-    #<strong>detect</strong>(ifnone = nil, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>detect</strong>(ifnone = nil, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1937,11 +1877,11 @@ a.cycle(<span style="color:#00D">2</span>) { |x| puts x }  <span style="color:#7
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Call the given block for each element
-which is yield by +each+. Return
-+ifnone+ if no block value was true.
-Otherwise return the first block value
-which had was true.</p>
+    <p>Return the first element for which
+value from the block is true. If no
+object matches, calls +ifnone+ and
+returns its result. Otherwise returns
++nil+.</p>
 
 <p>ISO 15.3.2.2.4</p>
 
@@ -1974,14 +1914,14 @@ which had was true.</p>
       <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 75</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">detect</span>(ifnone=<span style="color:#069">nil</span>, &amp;block)
-  ret = ifnone
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:detect</span>, ifnone <span style="color:#080;font-weight:bold">unless</span> block
+
   <span style="color:#069">self</span>.each{|*val|
     <span style="color:#080;font-weight:bold">if</span> block.call(*val)
-      ret = val.__svalue
-      <span style="color:#080;font-weight:bold">break</span>
+      <span style="color:#080;font-weight:bold">return</span> val.__svalue
     <span style="color:#080;font-weight:bold">end</span>
   }
-  ret
+  ifnone.call <span style="color:#080;font-weight:bold">unless</span> ifnone.nil?
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -1991,7 +1931,7 @@ which had was true.</p>
       <div class="method_details ">
   <h3 class="signature " id="drop-instance_method">
   
-    #<strong>drop</strong>(n)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>drop</strong>(n)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2063,7 +2003,7 @@ in an array.</p>
       <div class="method_details ">
   <h3 class="signature " id="drop_while-instance_method">
   
-    #<strong>drop_while</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>drop_while</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2347,7 +2287,7 @@ elements.</n></p>
       <div class="method_details ">
   <h3 class="signature " id="each_with_index-instance_method">
   
-    #<strong>each_with_index</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each_with_index</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2408,7 +2348,7 @@ and increase by 1 for each element.</p>
       <div class="method_details ">
   <h3 class="signature " id="each_with_object-instance_method">
   
-    #<strong>each_with_object</strong>(obj, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each_with_object</strong>(obj, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2467,7 +2407,7 @@ and increase by 1 for each element.</p>
       <div class="method_details ">
   <h3 class="signature " id="entries-instance_method">
   
-    #<strong>entries</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>entries</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2524,9 +2464,53 @@ are yield by +each+.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="filter_map-instance_method">
+  
+    #<strong>filter_map</strong>(&amp;blk)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 830</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">filter_map</span>(&amp;blk)
+  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:filter_map</span>) <span style="color:#080;font-weight:bold">unless</span> blk
+
+  ary = []
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |x|
+    x = blk.call(x)
+    ary.push x <span style="color:#080;font-weight:bold">if</span> x
+  <span style="color:#080;font-weight:bold">end</span>
+  ary
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="find_all-instance_method">
   
-    #<strong>find_all</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>find_all</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2589,7 +2573,7 @@ value was true.</p>
       <div class="method_details ">
   <h3 class="signature " id="find_index-instance_method">
   
-    #<strong>find_index</strong>(val = NONE, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>find_index</strong>(val = NONE, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2674,7 +2658,7 @@ value was true.</p>
       <div class="method_details ">
   <h3 class="signature " id="first-instance_method">
   
-    #<strong>first</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>first</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2760,7 +2744,7 @@ second form returns an empty array.</p>
       <div class="method_details ">
   <h3 class="signature " id="flat_map-instance_method">
   
-    #<strong>flat_map</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>flat_map</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2852,7 +2836,7 @@ second form returns an empty array.</p>
       <div class="method_details ">
   <h3 class="signature " id="grep-instance_method">
   
-    #<strong>grep</strong>(pattern, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>grep</strong>(pattern, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2914,7 +2898,7 @@ elements or the respective block values.</p>
       <div class="method_details ">
   <h3 class="signature " id="group_by-instance_method">
   
-    #<strong>group_by</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>group_by</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2981,7 +2965,7 @@ corresponding to the key.</p>
       <div class="method_details ">
   <h3 class="signature " id="hash-instance_method">
   
-    #<strong>hash</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>hash</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3005,18 +2989,18 @@ corresponding to the key.</p>
       <pre class="lines">
 
 
-340
-341
-342
-343
 344
 345
 346
 347
-348</pre>
+348
+349
+350
+351
+352</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 340</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 344</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">hash</span>
   h = <span style="color:#00D">12347</span>
@@ -3105,7 +3089,7 @@ false.</p>
       <div class="method_details ">
   <h3 class="signature " id="inject-instance_method">
   
-    #<strong>inject</strong>(*args, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>inject</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3216,7 +3200,7 @@ current element.</p>
       <div class="method_details ">
   <h3 class="signature " id="lazy-instance_method">
   
-    #<strong>lazy</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>lazy</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3274,7 +3258,7 @@ except these methods act as ‘lazy’:</p>
       <div class="method_details ">
   <h3 class="signature " id="max-instance_method">
   
-    #<strong>max</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>max</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3353,7 +3337,7 @@ a block is given it will be used instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="max_by-instance_method">
   
-    #<strong>max_by</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>max_by</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3448,7 +3432,7 @@ value from the given block.</p>
       <div class="method_details ">
   <h3 class="signature " id="min-instance_method">
   
-    #<strong>min</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>min</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3527,7 +3511,7 @@ a block is given it will be used instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="min_by-instance_method">
   
-    #<strong>min_by</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>min_by</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3622,7 +3606,7 @@ value from the given block.</p>
       <div class="method_details ">
   <h3 class="signature " id="minmax-instance_method">
   
-    #<strong>minmax</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>minmax</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3718,7 +3702,7 @@ a.minmax { |a, b| a.length &lt;=&gt; b.length } <span style="color:#777">#=&gt; 
       <div class="method_details ">
   <h3 class="signature " id="minmax_by-instance_method">
   
-    #<strong>minmax_by</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>minmax_by</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4030,7 +4014,7 @@ true.</p>
       <div class="method_details ">
   <h3 class="signature " id="partition-instance_method">
   
-    #<strong>partition</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>partition</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4073,12 +4057,16 @@ block value was false.</p>
 294
 295
 296
-297</pre>
+297
+298
+299</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 286</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">partition</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:partition</span> <span style="color:#080;font-weight:bold">unless</span> block
+
   ary_T = []
   ary_F = []
   <span style="color:#069">self</span>.each{|*val|
@@ -4098,7 +4086,7 @@ block value was false.</p>
       <div class="method_details ">
   <h3 class="signature " id="reject-instance_method">
   
-    #<strong>reject</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>reject</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4127,18 +4115,22 @@ whose block value was false.</p>
       <pre class="lines">
 
 
-306
-307
 308
 309
 310
 311
-312</pre>
+312
+313
+314
+315
+316</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 306</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 308</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reject</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:reject</span> <span style="color:#080;font-weight:bold">unless</span> block
+
   ary = []
   <span style="color:#069">self</span>.each{|*val|
     ary.push(val.__svalue) <span style="color:#080;font-weight:bold">unless</span> block.call(*val)
@@ -4153,7 +4145,7 @@ whose block value was false.</p>
       <div class="method_details ">
   <h3 class="signature " id="reverse_each-instance_method">
   
-    #<strong>reverse_each</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>reverse_each</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4227,7 +4219,7 @@ whose block value was false.</p>
       <div class="method_details ">
   <h3 class="signature " id="sort-instance_method">
   
-    #<strong>sort</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sort</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4258,12 +4250,12 @@ sorting.</p>
       <pre class="lines">
 
 
-329
-330
-331</pre>
+333
+334
+335</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 329</span>
+      <pre class="code"><span class="info file"># File 'mrblib/enum.rb', line 333</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">sort</span>(&amp;block)
   <span style="color:#069">self</span>.map{|*val| val.__svalue}.sort(&amp;block)
@@ -4276,7 +4268,7 @@ sorting.</p>
       <div class="method_details ">
   <h3 class="signature " id="sort_by-instance_method">
   
-    #<strong>sort_by</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sort_by</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4347,7 +4339,7 @@ values in <i>enum</i> through the given block.</p>
       <div class="method_details ">
   <h3 class="signature " id="take-instance_method">
   
-    #<strong>take</strong>(n)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>take</strong>(n)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4428,7 +4420,7 @@ values in <i>enum</i> through the given block.</p>
       <div class="method_details ">
   <h3 class="signature " id="take_while-instance_method">
   
-    #<strong>take_while</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>take_while</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4493,9 +4485,66 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="tally-instance_method">
+  
+    #<strong>tally</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  enum.tally -&gt; a_hash</p>
+
+<p>Tallys the collection.  Returns a hash where the keys are the
+elements and the values are numbers of elements in the collection
+that correspond to the key.</p>
+
+<p>[“a”, “b”, “c”, “b”].tally #=&gt; “b”=&gt;2, “c”=&gt;1</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+852
+853
+854
+855
+856
+857
+858</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 852</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">tally</span>
+  hash = {}
+  <span style="color:#069">self</span>.each <span style="color:#080;font-weight:bold">do</span> |x|
+    hash[x] = (hash[x]||<span style="color:#00D">0</span>)+<span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  hash
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="to_h-instance_method">
   
-    #<strong>to_h</strong>(&amp;blk)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_h</strong>(&amp;blk)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4577,7 +4626,7 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
       <div class="method_details ">
   <h3 class="signature " id="uniq-instance_method">
   
-    #<strong>uniq</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>uniq</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4589,6 +4638,10 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
       <pre class="lines">
 
 
+814
+815
+816
+817
 818
 819
 820
@@ -4599,14 +4652,10 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
 825
 826
 827
-828
-829
-830
-831
-832</pre>
+828</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 818</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-ext/mrblib/enum.rb', line 814</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">uniq</span>(&amp;block)
   hash = {}
@@ -4631,7 +4680,7 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
       <div class="method_details ">
   <h3 class="signature " id="zip-instance_method">
   
-    #<strong>zip</strong>(*args, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>zip</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4723,9 +4772,9 @@ a.take_while {|i| i &lt; <span style="color:#00D">3</span> }   <span style="colo
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:29 2019 by
+  Generated on Wed Nov 27 22:35:07 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

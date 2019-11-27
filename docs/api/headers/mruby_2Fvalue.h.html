@@ -6,7 +6,7 @@
 <title>
   Header: mruby/value.h
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -67,7 +67,8 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    <p>MRuby Value definition functions and macros.</p>
+    <p>mruby Symbol.
+You can create an mrb_sym by simply using mrb_str_intern() or mrb_intern_cstr()</p>
 
 
   </div>
@@ -142,7 +143,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_regexp_p-function" title="mrb_regexp_p">mrb_bool <strong>mrb_regexp_p</strong>(struct mrb_state*, mrb_value)</a>
+    <a href="#mrb_float_value-function" title="mrb_float_value">mrb_value <strong>mrb_float_value</strong>(struct mrb_state *, mrb_float)</a>
 
     
   </span>
@@ -160,7 +161,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_float_value-function" title="mrb_float_value">mrb_value <strong>mrb_float_value</strong>(struct mrb_state *, mrb_float)</a>
+    <a href="#mrb_cptr_value-function" title="mrb_cptr_value">mrb_value <strong>mrb_cptr_value</strong>(struct mrb_state *, void *)</a>
 
     
   </span>
@@ -189,6 +190,42 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Returns a fixnum in Ruby.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_symbol_value-function" title="mrb_symbol_value">mrb_value <strong>mrb_symbol_value</strong>(mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_value-function" title="mrb_obj_value">mrb_value <strong>mrb_obj_value</strong>(void *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -248,6 +285,42 @@
 </li>
 
     
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_bool_value-function" title="mrb_bool_value">mrb_value <strong>mrb_bool_value</strong>(mrb_bool)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_undef_value-function" title="mrb_undef_value">mrb_value <strong>mrb_undef_value</strong>(void)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
   </ul>
 
 
@@ -269,6 +342,11 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="PRIu64-define" class=""><small>#define</small> PRIu64
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="PRIx64-define" class=""><small>#define</small> PRIx64
         
       </dt>
@@ -284,6 +362,11 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="PRIu16-define" class=""><small>#define</small> PRIu16
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="PRIx16-define" class=""><small>#define</small> PRIx16
         
       </dt>
@@ -295,6 +378,11 @@
       <dd><pre class="code"></pre></dd>
     
       <dt id="PRId32-define" class=""><small>#define</small> PRId32
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="PRIu32-define" class=""><small>#define</small> PRIu32
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -334,7 +422,7 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="inline-define" class=""><small>#define</small> inline
+      <dt id="MRB_ENDIAN_LOHI-define" class=""><small>#define</small> MRB_ENDIAN_LOHI
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -379,7 +467,27 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="MRB_SYMBOL_BITSIZE-define" class=""><small>#define</small> MRB_SYMBOL_BITSIZE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_SYMBOL_MAX-define" class=""><small>#define</small> MRB_SYMBOL_MAX
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_immediate_p-define" class=""><small>#define</small> mrb_immediate_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="mrb_fixnum_p-define" class=""><small>#define</small> mrb_fixnum_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_symbol_p-define" class=""><small>#define</small> mrb_symbol_p
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -394,27 +502,17 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_bool-define" class=""><small>#define</small> mrb_bool
+      <dt id="mrb_false_p-define" class=""><small>#define</small> mrb_false_p
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_SYMBOL_BITSIZE-define" class=""><small>#define</small> MRB_SYMBOL_BITSIZE
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="MRB_SYMBOL_MAX-define" class=""><small>#define</small> MRB_SYMBOL_MAX
+      <dt id="mrb_true_p-define" class=""><small>#define</small> mrb_true_p
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
       <dt id="mrb_float_p-define" class=""><small>#define</small> mrb_float_p
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="mrb_symbol_p-define" class=""><small>#define</small> mrb_symbol_p
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -444,7 +542,87 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="mrb_free_p-define" class=""><small>#define</small> mrb_free_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_object_p-define" class=""><small>#define</small> mrb_object_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_class_p-define" class=""><small>#define</small> mrb_class_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_module_p-define" class=""><small>#define</small> mrb_module_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_iclass_p-define" class=""><small>#define</small> mrb_iclass_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_sclass_p-define" class=""><small>#define</small> mrb_sclass_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_proc_p-define" class=""><small>#define</small> mrb_proc_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_range_p-define" class=""><small>#define</small> mrb_range_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_file_p-define" class=""><small>#define</small> mrb_file_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_env_p-define" class=""><small>#define</small> mrb_env_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_data_p-define" class=""><small>#define</small> mrb_data_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_fiber_p-define" class=""><small>#define</small> mrb_fiber_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_istruct_p-define" class=""><small>#define</small> mrb_istruct_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_break_p-define" class=""><small>#define</small> mrb_break_p
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_bool-define" class=""><small>#define</small> mrb_bool
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="mrb_test-define" class=""><small>#define</small> mrb_test
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_USE_LINK_TIME_RO_DATA_P-define" class=""><small>#define</small> MRB_USE_LINK_TIME_RO_DATA_P
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -463,7 +641,8 @@
       <dt id="mrb_sym-typedef" class=""><small>typedef</small> mrb_sym
         <div class="docstring">
   <div class="discussion">
-    <p>MRuby Value definition functions and macros.</p>
+    <p>mruby Symbol.
+You can create an mrb_sym by simply using mrb_str_intern() or mrb_intern_cstr()</p>
 
 
   </div>
@@ -559,8 +738,8 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_regexp_p-function">
-  mrb_bool <strong>mrb_regexp_p</strong>(struct mrb_state* , mrb_value )
+  <h3 class="signature " id="mrb_float_value-function">
+  mrb_value <strong>mrb_float_value</strong>(struct mrb_state * mrb, mrb_float f)
 
   
 </h3>
@@ -569,8 +748,8 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_float_value-function">
-  mrb_value <strong>mrb_float_value</strong>(struct mrb_state * mrb, mrb_float f)
+  <h3 class="signature " id="mrb_cptr_value-function">
+  mrb_value <strong>mrb_cptr_value</strong>(struct mrb_state * mrb, void * p)
 
   
 </h3>
@@ -588,6 +767,8 @@
   <div class="discussion">
     <p>Returns a fixnum in Ruby.</p>
 
+<p>Takes an integer and boxes it into an mrb_value</p>
+
 
   </div>
 </div>
@@ -596,6 +777,26 @@
 
 </div>
 
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_symbol_value-function">
+  mrb_value <strong>mrb_symbol_value</strong>(mrb_sym i)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_value-function">
+  mrb_value <strong>mrb_obj_value</strong>(void * p)
+
+  
+</h3>
 
 </div>
 
@@ -683,13 +884,33 @@
 </div>
 
   
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_bool_value-function">
+  mrb_value <strong>mrb_bool_value</strong>(mrb_bool boolean)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_undef_value-function">
+  mrb_value <strong>mrb_undef_value</strong>(void)
+
+  
+</h3>
+
+</div>
+
+  
 </div>
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:34 2019 by
+  Generated on Wed Nov 27 22:35:13 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   Class: Fiber
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Fiber</li>
           
@@ -244,7 +244,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>new</strong> { ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>new</strong> { ... } &#x21d2; <tt>Object</tt> 
   
 
   
@@ -414,10 +414,7 @@ value of the call to <code>Fiber.yield</code></p>
 131
 132
 133
-134
-135
-136
-137</pre>
+134</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 64</span>
@@ -433,13 +430,10 @@ fiber_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   mrb_value blk;
   size_t slen;
 
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&amp;</span><span style="color:#710">&quot;</span></span>, &amp;blk);
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&amp;!</span><span style="color:#710">&quot;</span></span>, &amp;blk);
 
   <span style="color:#080;font-weight:bold">if</span> (f-&gt;cxt) {
     mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_RUNTIME_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">cannot initialize twice</span><span style="color:#710">&quot;</span></span>);
-  }
-  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(blk)) {
-    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">tried to create Fiber object without a block</span><span style="color:#710">&quot;</span></span>);
   }
   p = mrb_proc_ptr(blk);
   <span style="color:#080;font-weight:bold">if</span> (MRB_PROC_CFUNC_P(p)) {
@@ -511,7 +505,7 @@ fiber_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details first">
   <h3 class="signature first" id="==-instance_method">
   
-    #<strong>==</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>==</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -523,20 +517,20 @@ fiber_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-287
-288
-289
-290
 291
 292
 293
 294
 295
 296
-297</pre>
+297
+298
+299
+300
+301</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 287</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 291</span>
 
 static mrb_value
 fiber_eq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -544,7 +538,7 @@ fiber_eq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   mrb_value other;
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;other);
 
-  <span style="color:#080;font-weight:bold">if</span> (mrb_type(other) != <span style="color:#036;font-weight:bold">MRB_TT_FIBER</span>) {
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_fiber_p(other)) {
     <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
   }
   <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(fiber_ptr(<span style="color:#069">self</span>) == fiber_ptr(other));
@@ -594,7 +588,7 @@ fiber_eq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="resume-instance_method">
   
-    #<strong>resume</strong>(args, ...)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>resume</strong>(args, ...)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -633,7 +627,7 @@ or to the block value if it runs to completion without any
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -654,10 +648,6 @@ or to the block value if it runs to completion without any
       <pre class="lines">
 
 
-251
-252
-253
-254
 255
 256
 257
@@ -666,10 +656,14 @@ or to the block value if it runs to completion without any
 260
 261
 262
-263</pre>
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 251</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 255</span>
 
 static mrb_value
 fiber_resume(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -692,7 +686,7 @@ fiber_resume(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="transfer-instance_method">
   
-    #<strong>transfer</strong>(args, ...)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>transfer</strong>(args, ...)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -728,7 +722,7 @@ and <code>Fiber.yield</code> is called, the fiber would be resumable.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -749,10 +743,6 @@ and <code>Fiber.yield</code> is called, the fiber would be resumable.</p>
       <pre class="lines">
 
 
-311
-312
-313
-314
 315
 316
 317
@@ -771,10 +761,14 @@ and <code>Fiber.yield</code> is called, the fiber would be resumable.</p>
 330
 331
 332
-333</pre>
+333
+334
+335
+336
+337</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 311</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-fiber/src/fiber.c', line 315</span>
 
 static mrb_value
 fiber_transfer(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -809,9 +803,9 @@ fiber_transfer(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:33 2019 by
+  Generated on Wed Nov 27 22:35:11 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

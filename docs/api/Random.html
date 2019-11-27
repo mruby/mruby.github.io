@@ -6,7 +6,7 @@
 <title>
   Class: Random
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Random</li>
           
@@ -198,7 +198,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -210,71 +210,43 @@
       <pre class="lines">
 
 
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152</pre>
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-random/src/random.c', line 121</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-random/src/random.c', line 157</span>
 
 static mrb_value
-mrb_random_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+random_m_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
   mrb_value seed;
-  mt_state *t;
+  rand_state *t;
 
   seed = get_opt(mrb);
-
   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* avoid memory leaks *</span><span style="color:#404">/</span></span>
-  t = (mt_state*)DATA_PTR(<span style="color:#069">self</span>);
-  <span style="color:#080;font-weight:bold">if</span> (t) {
-    mrb_free(mrb, t);
-  }
-  mrb_data_init(<span style="color:#069">self</span>, <span style="color:#036;font-weight:bold">NULL</span>, &amp;mt_state_type);
-
-  t = (mt_state *)mrb_malloc(mrb, sizeof(mt_state));
-  t-&gt;mti = <span style="color:#036;font-weight:bold">N</span> + <span style="color:#00D">1</span>;
-
-  seed = mrb_random_mt_srand(mrb, t, seed);
+  t = random_ptr(<span style="color:#069">self</span>);
   <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(seed)) {
-    t-&gt;has_seed = <span style="color:#069">FALSE</span>;
+    rand_init(t);
   }
   <span style="color:#080;font-weight:bold">else</span> {
-    mrb_assert(mrb_fixnum_p(seed));
-    t-&gt;has_seed = <span style="color:#069">TRUE</span>;
-    t-&gt;seed = mrb_fixnum(seed);
+    rand_seed(t, (uint32_t)mrb_fixnum(seed));
   }
-
-  mrb_data_init(<span style="color:#069">self</span>, t, &amp;mt_state_type);
 
   <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
 }</pre>
@@ -293,7 +265,7 @@ mrb_random_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details first">
   <h3 class="signature first" id="rand-instance_method">
   
-    #<strong>rand</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>rand</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -305,29 +277,27 @@ mrb_random_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171</pre>
+176
+177
+178
+179
+180
+181
+182
+183
+184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-random/src/random.c', line 162</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-random/src/random.c', line 176</span>
 
 static mrb_value
-mrb_random_rand(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+random_m_rand(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
   mrb_value max;
-  mt_state *t = DATA_GET_PTR(mrb, <span style="color:#069">self</span>, &amp;mt_state_type, mt_state);
+  rand_state *t = random_ptr(<span style="color:#069">self</span>);
 
   max = get_opt(mrb);
-  mrb_random_rand_seed(mrb, t);
-  <span style="color:#080;font-weight:bold">return</span> mrb_random_mt_rand(mrb, t, max);
+  <span style="color:#080;font-weight:bold">return</span> random_rand(mrb, t, max);
 }</pre>
     </td>
   </tr>
@@ -337,7 +307,7 @@ mrb_random_rand(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="srand-instance_method">
   
-    #<strong>srand</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>srand</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -349,19 +319,6 @@ mrb_random_rand(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
 186
 187
 188
@@ -369,31 +326,40 @@ mrb_random_rand(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 190
 191
 192
-193</pre>
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-random/src/random.c', line 173</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-random/src/random.c', line 186</span>
 
 static mrb_value
-mrb_random_srand(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+random_m_srand(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_value seed;
-  mrb_value old_seed;
-  mt_state *t = DATA_GET_PTR(mrb, <span style="color:#069">self</span>, &amp;mt_state_type, mt_state);
+  uint32_t seed;
+  uint32_t old_seed;
+  mrb_value sv;
+  rand_state *t = random_ptr(<span style="color:#069">self</span>);
 
-  seed = get_opt(mrb);
-  seed = mrb_random_mt_srand(mrb, t, seed);
-  old_seed = t-&gt;has_seed? mrb_fixnum_value(t-&gt;seed) : mrb_nil_value();
-  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(seed)) {
-    t-&gt;has_seed = <span style="color:#069">FALSE</span>;
+  sv = get_opt(mrb);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(sv)) {
+    seed = (uint32_t)time(<span style="color:#036;font-weight:bold">NULL</span>) + rand_uint32(t);
   }
   <span style="color:#080;font-weight:bold">else</span> {
-    mrb_assert(mrb_fixnum_p(seed));
-    t-&gt;has_seed = <span style="color:#069">TRUE</span>;
-    t-&gt;seed = mrb_fixnum(seed);
+    seed = (uint32_t)mrb_fixnum(sv);
   }
+  old_seed = rand_seed(t, seed);
 
-  <span style="color:#080;font-weight:bold">return</span> old_seed;
+  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value((mrb_int)old_seed);
 }</pre>
     </td>
   </tr>
@@ -405,9 +371,9 @@ mrb_random_srand(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:33 2019 by
+  Generated on Wed Nov 27 22:35:11 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   Class: Symbol
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Symbol</li>
           
@@ -438,7 +438,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="<=>-instance_method">
   
-    #<strong>&lt;=&gt;</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&lt;=&gt;</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -462,39 +462,39 @@
       <pre class="lines">
 
 
-537
-538
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556
-557
-558
-559
-560
-561
-562
-563
-564
-565
-566</pre>
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 537</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 566</span>
 
 static mrb_value
 sym_cmp(mrb_state *mrb, mrb_value s1)
@@ -503,7 +503,7 @@ sym_cmp(mrb_state *mrb, mrb_value s1)
   mrb_sym sym1, sym2;
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;s2);
-  <span style="color:#080;font-weight:bold">if</span> (mrb_type(s2) != <span style="color:#036;font-weight:bold">MRB_TT_SYMBOL</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_symbol_p(s2)) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
   sym1 = mrb_symbol(s1);
   sym2 = mrb_symbol(s2);
   <span style="color:#080;font-weight:bold">if</span> (sym1 == sym2) <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(<span style="color:#00D">0</span>);
@@ -534,7 +534,7 @@ sym_cmp(mrb_state *mrb, mrb_value s1)
       <div class="method_details ">
   <h3 class="signature " id="capitalize-instance_method">
   
-    #<strong>capitalize</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>capitalize</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -569,7 +569,7 @@ sym_cmp(mrb_state *mrb, mrb_value s1)
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 12</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">capitalize</span>
-  (<span style="color:#069">self</span>.to_s.capitalize! || <span style="color:#069">self</span>).to_sym
+  <span style="color:#069">self</span>.to_s.capitalize.to_sym
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -579,7 +579,7 @@ sym_cmp(mrb_state *mrb, mrb_value s1)
       <div class="method_details ">
   <h3 class="signature " id="casecmp-instance_method">
   
-    #<strong>casecmp</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>casecmp</strong>(other)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -618,7 +618,7 @@ sym_cmp(mrb_state *mrb, mrb_value s1)
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">casecmp</span>(other)
   <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">unless</span> other.kind_of?(<span style="color:#036;font-weight:bold">Symbol</span>)
-  lhs =  <span style="color:#069">self</span>.to_s; lhs.upcase!
+  lhs =  <span style="color:#069">self</span>.to_s.upcase
   rhs = other.to_s.upcase
   lhs &lt;=&gt; rhs
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -693,7 +693,7 @@ false if they are not equal, and nil if other_sym is not a string.</p>
       <div class="method_details ">
   <h3 class="signature " id="downcase-instance_method">
   
-    #<strong>downcase</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>downcase</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -728,7 +728,7 @@ false if they are not equal, and nil if other_sym is not a string.</p>
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 22</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">downcase</span>
-  (<span style="color:#069">self</span>.to_s.downcase! || <span style="color:#069">self</span>).to_sym
+  <span style="color:#069">self</span>.to_s.downcase.to_sym
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -893,19 +893,19 @@ false if they are not equal, and nil if other_sym is not a string.</p>
       <pre class="lines">
 
 
-326
-327
-328
-329
-330</pre>
+339
+340
+341
+342
+343</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 326</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 339</span>
 
 static mrb_value
 sym_to_s(mrb_state *mrb, mrb_value sym)
 {
-  <span style="color:#080;font-weight:bold">return</span> mrb_sym2str(mrb, mrb_symbol(sym));
+  <span style="color:#080;font-weight:bold">return</span> mrb_sym_str(mrb, mrb_symbol(sym));
 }</pre>
     </td>
   </tr>
@@ -915,7 +915,7 @@ sym_to_s(mrb_state *mrb, mrb_value sym)
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>inspect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -939,19 +939,6 @@ sym_to_s(mrb_state *mrb, mrb_value sym)
       <pre class="lines">
 
 
-475
-476
-477
-478
-479
-480
-481
-482
-483
-484
-485
-486
-487
 488
 489
 490
@@ -961,10 +948,26 @@ sym_to_s(mrb_state *mrb, mrb_value sym)
 494
 495
 496
-497</pre>
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 475</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 488</span>
 
 static mrb_value
 sym_inspect(mrb_state *mrb, mrb_value sym)
@@ -975,18 +978,21 @@ sym_inspect(mrb_state *mrb, mrb_value sym)
   mrb_sym id = mrb_symbol(sym);
   char *sp;
 
-  name = mrb_sym2name_len(mrb, id, &amp;len);
+  name = mrb_sym_name_len(mrb, id, &amp;len);
   str = mrb_str_new(mrb, <span style="color:#00D">0</span>, len+<span style="color:#00D">1</span>);
   sp = RSTRING_PTR(str);
-  RSTRING_PTR(str)[<span style="color:#00D">0</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">:</span><span style="color:#710">'</span></span>;
+  sp[<span style="color:#00D">0</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">:</span><span style="color:#710">'</span></span>;
   memcpy(sp+<span style="color:#00D">1</span>, name, len);
   mrb_assert_int_fit(mrb_int, len, size_t, <span style="color:#036;font-weight:bold">SIZE_MAX</span>);
   <span style="color:#080;font-weight:bold">if</span> (!symname_p(name) || strlen(name) != (size_t)len) {
-    str = mrb_str_dump(mrb, str);
+    str = mrb_str_inspect(mrb, str);
     sp = RSTRING_PTR(str);
     sp[<span style="color:#00D">0</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">:</span><span style="color:#710">'</span></span>;
     sp[<span style="color:#00D">1</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&quot;</span><span style="color:#710">'</span></span>;
   }
+<span style="color:#777">#ifdef MRB_UTF8_STRING</span>
+  <span style="color:#080;font-weight:bold">if</span> (SYMBOL_INLINE_P(id)) RSTR_SET_ASCII_FLAG(mrb_str_ptr(str));
+<span style="color:#777">#endif</span>
   <span style="color:#080;font-weight:bold">return</span> str;
 }</pre>
     </td>
@@ -997,7 +1003,7 @@ sym_inspect(mrb_state *mrb, mrb_value sym)
       <div class="method_details ">
   <h3 class="signature " id="to_proc-instance_method">
   
-    #<strong>to_proc</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_proc</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1128,19 +1134,19 @@ sym_inspect(mrb_state *mrb, mrb_value sym)
       <pre class="lines">
 
 
-326
-327
-328
-329
-330</pre>
+339
+340
+341
+342
+343</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 326</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 339</span>
 
 static mrb_value
 sym_to_s(mrb_state *mrb, mrb_value sym)
 {
-  <span style="color:#080;font-weight:bold">return</span> mrb_sym2str(mrb, mrb_symbol(sym));
+  <span style="color:#080;font-weight:bold">return</span> mrb_sym_str(mrb, mrb_symbol(sym));
 }</pre>
     </td>
   </tr>
@@ -1151,9 +1157,9 @@ sym_to_s(mrb_state *mrb, mrb_value sym)
   <h3 class="signature " id="to_sym-instance_method">
   
     
-      <span class="overload">#<strong>to_sym</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>to_sym</strong>  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">#<strong>intern</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>intern</strong>  &#x21d2; <tt>Object</tt> </span>
     
   
 
@@ -1184,14 +1190,14 @@ in this case.</p>
       <pre class="lines">
 
 
-343
-344
-345
-346
-347</pre>
+356
+357
+358
+359
+360</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/symbol.c', line 343</span>
+      <pre class="code"><span class="info file"># File 'src/symbol.c', line 356</span>
 
 static mrb_value
 sym_to_sym(mrb_state *mrb, mrb_value sym)
@@ -1206,7 +1212,7 @@ sym_to_sym(mrb_state *mrb, mrb_value sym)
       <div class="method_details ">
   <h3 class="signature " id="upcase-instance_method">
   
-    #<strong>upcase</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>upcase</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1241,7 +1247,7 @@ sym_to_sym(mrb_state *mrb, mrb_value sym)
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-symbol-ext/mrblib/symbol.rb', line 32</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">upcase</span>
-  (<span style="color:#069">self</span>.to_s.upcase! || <span style="color:#069">self</span>).to_sym
+  <span style="color:#069">self</span>.to_s.upcase.to_sym
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -1253,9 +1259,9 @@ sym_to_sym(mrb_state *mrb, mrb_value sym)
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:32 2019 by
+  Generated on Wed Nov 27 22:35:10 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

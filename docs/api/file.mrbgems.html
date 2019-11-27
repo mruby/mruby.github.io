@@ -6,7 +6,7 @@
 <title>
   File: mrbgems
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -98,6 +98,11 @@ conf.gem github: 'mruby/mruby', path: 'mrbgems/mruby-socket'
 <code>ruby
 conf.gem :mgem =&gt; 'mruby-yaml'
 conf.gem :mgem =&gt; 'yaml' # 'mruby-' prefix could be omitted
+</code></p>
+
+<p>For specifying commit hash to checkout use <code>:checksum_hash</code> option:
+<code>ruby
+conf.gem mgem: 'mruby-redis', checksum_hash: '3446d19fc4a3f9697b5ddbf2a904f301c42f2f4e'
 </code></p>
 
 <p>If there is missing dependencies, mrbgem dependencies solver will reference
@@ -418,9 +423,9 @@ function is called. Make sure <em>mruby script</em> depends on <em>C code</em> a
 </div></div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:29 2019 by
+  Generated on Wed Nov 27 22:35:07 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

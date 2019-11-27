@@ -6,7 +6,7 @@
 <title>
   Exception: Exception
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Exception</li>
           
@@ -117,7 +117,7 @@
 
 <div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="File/FileError.html" title="File::FileError (class)">File::FileError</a></span>, <span class='object_link'><a href="NoMemoryError.html" title="NoMemoryError (class)">NoMemoryError</a></span>, <span class='object_link'><a href="ScriptError.html" title="ScriptError (class)">ScriptError</a></span>, <span class='object_link'><a href="StandardError.html" title="StandardError (class)">StandardError</a></span>, <span class='object_link'><a href="SystemStackError.html" title="SystemStackError (class)">SystemStackError</a></span></p>
+  <p class="children"><span class='object_link'><a href="NoMemoryError.html" title="NoMemoryError (class)">NoMemoryError</a></span>, <span class='object_link'><a href="ScriptError.html" title="ScriptError (class)">ScriptError</a></span>, <span class='object_link'><a href="StandardError.html" title="StandardError (class)">StandardError</a></span>, <span class='object_link'><a href="SystemStackError.html" title="SystemStackError (class)">SystemStackError</a></span></p>
 </div>
 
 
@@ -354,9 +354,7 @@
 49
 50
 51
-52
-53
-54</pre>
+52</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'src/error.c', line 43</span>
@@ -365,10 +363,8 @@ static mrb_value
 exc_initialize(mrb_state *mrb, mrb_value exc)
 {
   mrb_value mesg;
-  mrb_int argc;
-  mrb_value *argv;
 
-  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|o*!</span><span style="color:#710">&quot;</span></span>, &amp;mesg, &amp;argv, &amp;argc) &gt;= <span style="color:#00D">1</span>) {
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|o</span><span style="color:#710">&quot;</span></span>, &amp;mesg) == <span style="color:#00D">1</span>) {
     mrb_iv_set(mrb, exc, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">mesg</span><span style="color:#710">&quot;</span></span>), mesg);
   }
   <span style="color:#080;font-weight:bold">return</span> exc;
@@ -388,7 +384,7 @@ exc_initialize(mrb_state *mrb, mrb_value exc)
       <div class="method_details first">
   <h3 class="signature first" id="backtrace-instance_method">
   
-    #<strong>backtrace</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>backtrace</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -400,7 +396,7 @@ exc_initialize(mrb_state *mrb, mrb_value exc)
       <div class="method_details ">
   <h3 class="signature " id="exception-instance_method">
   
-    #<strong>exception</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>exception</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -430,6 +426,8 @@ message equal to <code>string</code>.</p>
       <pre class="lines">
 
 
+67
+68
 69
 70
 71
@@ -442,12 +440,10 @@ message equal to <code>string</code>.</p>
 78
 79
 80
-81
-82
-83</pre>
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/error.c', line 69</span>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 67</span>
 
 static mrb_value
 exc_exception(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -526,6 +522,8 @@ returns message and class name.</p>
       <pre class="lines">
 
 
+131
+132
 133
 134
 135
@@ -555,12 +553,10 @@ returns message and class name.</p>
 159
 160
 161
-162
-163
-164</pre>
+162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/error.c', line 133</span>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 131</span>
 
 static mrb_value
 exc_inspect(mrb_state *mrb, mrb_value exc)
@@ -583,14 +579,14 @@ exc_inspect(mrb_state *mrb, mrb_value exc)
   str = mrb_str_new_cstr(mrb, cname);
   <span style="color:#080;font-weight:bold">if</span> (mrb_string_p(file) &amp;&amp; mrb_fixnum_p(line)) {
     <span style="color:#080;font-weight:bold">if</span> (append_mesg) {
-      str = mrb_format(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%S:%S: %S (%S)</span><span style="color:#710">&quot;</span></span>, file, line, mesg, str);
+      str = mrb_format(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%v:%v: %v (%v)</span><span style="color:#710">&quot;</span></span>, file, line, mesg, str);
     }
     <span style="color:#080;font-weight:bold">else</span> {
-      str = mrb_format(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%S:%S: %S</span><span style="color:#710">&quot;</span></span>, file, line, str);
+      str = mrb_format(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%v:%v: %v</span><span style="color:#710">&quot;</span></span>, file, line, str);
     }
   }
   <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (append_mesg) {
-    str = mrb_format(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%S: %S</span><span style="color:#710">&quot;</span></span>, str, mesg);
+    str = mrb_format(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%v: %v</span><span style="color:#710">&quot;</span></span>, str, mesg);
   }
   <span style="color:#080;font-weight:bold">return</span> str;
 }</pre>
@@ -654,14 +650,14 @@ Normally this returns the exception’s message or name.</p>
       <pre class="lines">
 
 
+115
+116
 117
 118
-119
-120
-121</pre>
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/error.c', line 117</span>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 115</span>
 
 static mrb_value
 exc_message(mrb_state *mrb, mrb_value exc)
@@ -676,7 +672,7 @@ exc_message(mrb_state *mrb, mrb_value exc)
       <div class="method_details ">
   <h3 class="signature " id="set_backtrace-instance_method">
   
-    #<strong>set_backtrace</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>set_backtrace</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -688,18 +684,18 @@ exc_message(mrb_state *mrb, mrb_value exc)
       <pre class="lines">
 
 
+185
+186
 187
 188
 189
 190
 191
 192
-193
-194
-195</pre>
+193</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/error.c', line 187</span>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 185</span>
 
 static mrb_value
 exc_set_backtrace(mrb_state *mrb, mrb_value exc)
@@ -770,6 +766,8 @@ no message is set).</p>
       <pre class="lines">
 
 
+91
+92
 93
 94
 95
@@ -782,12 +780,10 @@ no message is set).</p>
 102
 103
 104
-105
-106
-107</pre>
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/error.c', line 93</span>
+      <pre class="code"><span class="info file"># File 'src/error.c', line 91</span>
 
 static mrb_value
 exc_to_s(mrb_state *mrb, mrb_value exc)
@@ -814,9 +810,9 @@ exc_to_s(mrb_state *mrb, mrb_value exc)
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:31 2019 by
+  Generated on Wed Nov 27 22:35:09 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

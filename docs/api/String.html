@@ -6,7 +6,7 @@
 <title>
   Class: String
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">String</li>
           
@@ -104,7 +104,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>mrblib/string.rb<span class="defines">,<br />
-  src/string.c,<br /> mrblib/string.rb,<br /> mrbgems/mruby-sprintf/mrblib/string.rb,<br /> mrbgems/mruby-string-ext/mrblib/string.rb</span>
+  src/string.c,<br /> mrbgems/mruby-sprintf/mrblib/string.rb,<br /> mrbgems/mruby-string-ext/mrblib/string.rb</span>
 </dd>
   </dl>
   
@@ -280,29 +280,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#=~-instance_method" title="#=~ (instance method)">#<strong>=~</strong>(re)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>ISO 15.2.10.5.3.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>  &#x21d2; Object </a>
     
 
@@ -326,7 +303,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#[]=-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(*args)  &#x21d2; Object </a>
+      <a href="#[]=-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>  &#x21d2; Object </a>
     
 
     
@@ -455,7 +432,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>Byte Reference—If passed a single Integer, returns a substring of one byte at that position.</p>
 </div></span>
   
 </li>
@@ -1064,7 +1041,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_line-instance_method" title="#each_line (instance method)">#<strong>each_line</strong>(rs = &quot;\n&quot;, &amp;block)  &#x21d2; Object </a>
+      <a href="#each_line-instance_method" title="#each_line (instance method)">#<strong>each_line</strong>(separator = &quot;\n&quot;, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -1156,7 +1133,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getbyte-instance_method" title="#getbyte (instance method)">#<strong>getbyte</strong>  &#x21d2; Object </a>
+      <a href="#getbyte-instance_method" title="#getbyte (instance method)">#<strong>getbyte</strong>(index)  &#x21d2; 0 .. 255 </a>
     
 
     
@@ -1170,7 +1147,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>returns the <i>index</i>th byte as an integer.</p>
 </div></span>
   
 </li>
@@ -1294,7 +1271,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#index-instance_method" title="#index (instance method)">#<strong>index</strong>  &#x21d2; Object </a>
+      <a href="#index-instance_method" title="#index (instance method)">#<strong>index</strong>(substring[, offset])  &#x21d2; Fixnum<sup>?</sup> </a>
     
 
     
@@ -1308,7 +1285,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the index of the first occurrence of the given <i>substring</i>, character (<i>fixnum</i>), or pattern (<i>regexp</i>) in <i>str</i>.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the index of the first occurrence of the given <i>substring</i>.</p>
 </div></span>
   
 </li>
@@ -1579,7 +1556,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#match-instance_method" title="#match (instance method)">#<strong>match</strong>(re, &amp;block)  &#x21d2; Object </a>
+      <a href="#next-instance_method" title="#next (instance method)">#<strong>next</strong>  &#x21d2; Object </a>
     
 
     
@@ -1593,7 +1570,30 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>ISO 15.2.10.5.27.</p>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#next!-instance_method" title="#succ (instance method)">#<strong>succ</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns next sequence of the string;.</p>
 </div></span>
   
 </li>
@@ -1763,7 +1763,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rindex-instance_method" title="#rindex (instance method)">#<strong>rindex</strong>  &#x21d2; Object </a>
+      <a href="#rindex-instance_method" title="#rindex (instance method)">#<strong>rindex</strong>(substring[, offset])  &#x21d2; Fixnum<sup>?</sup> </a>
     
 
     
@@ -1777,7 +1777,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the index of the last occurrence of the given <i>substring</i>, character (<i>fixnum</i>), or pattern (<i>regexp</i>) in <i>str</i>.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the index of the last occurrence of the given <i>substring</i>.</p>
 </div></span>
   
 </li>
@@ -1878,7 +1878,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#scan-instance_method" title="#scan (instance method)">#<strong>scan</strong>(reg, &amp;block)  &#x21d2; Object </a>
+      <a href="#setbyte-instance_method" title="#setbyte (instance method)">#<strong>setbyte</strong>(index, integer)  &#x21d2; Integer </a>
     
 
     
@@ -1892,30 +1892,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Calls the given block for each match of +pattern+ If no block is given return an array with all matches of +pattern+.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#setbyte-instance_method" title="#setbyte (instance method)">#<strong>setbyte</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>modifies the <i>index</i>th byte as <i>integer</i>.</p>
 </div></span>
   
 </li>
@@ -2608,21 +2585,21 @@
       <pre class="lines">
 
 
-1618
-1619
-1620
-1621
-1622
-1623
-1624
-1625
-1626
-1627
-1628
-1629</pre>
+1901
+1902
+1903
+1904
+1905
+1906
+1907
+1908
+1909
+1910
+1911
+1912</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1618</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1901</span>
 
 static mrb_value
 mrb_str_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2651,7 +2628,7 @@ mrb_str_init(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details first">
   <h3 class="signature first" id="%-instance_method">
   
-    #<strong>%</strong>(args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>%</strong>(args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2743,41 +2720,42 @@ the receiver.</p>
       <pre class="lines">
 
 
-818
-819
-820
-821
-822
-823
-824
-825
-826
-827
-828
-829
-830
-831
-832
-833
-834
-835
-836
-837
-838
-839
-840
-841
-842
-843
-844
-845
-846
-847
-848
-849</pre>
+941
+942
+943
+944
+945
+946
+947
+948
+949
+950
+951
+952
+953
+954
+955
+956
+957
+958
+959
+960
+961
+962
+963
+964
+965
+966
+967
+968
+969
+970
+971
+972
+973</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 818</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 941</span>
 
 static mrb_value
 mrb_str_times(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2796,7 +2774,7 @@ mrb_str_times(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 
   len = RSTRING_LEN(<span style="color:#069">self</span>)*times;
   str2 = str_new(mrb, <span style="color:#00D">0</span>, len);
-  str_with_class(mrb, str2, <span style="color:#069">self</span>);
+  str_with_class(str2, <span style="color:#069">self</span>);
   p = RSTR_PTR(str2);
   <span style="color:#080;font-weight:bold">if</span> (len &gt; <span style="color:#00D">0</span>) {
     n = RSTRING_LEN(<span style="color:#069">self</span>);
@@ -2808,6 +2786,7 @@ mrb_str_times(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
     memcpy(p + n, p, len-n);
   }
   p[RSTR_LEN(str2)] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">\0</span><span style="color:#710">'</span></span>;
+  RSTR_COPY_ASCII_FLAG(str2, mrb_str_ptr(<span style="color:#069">self</span>));
 
   <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(str2);
 }</pre>
@@ -2873,17 +2852,17 @@ mrb_str_times(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-777
-778
-779
-780
-781
-782
-783
-784</pre>
+900
+901
+902
+903
+904
+905
+906
+907</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 777</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 900</span>
 
 static mrb_value
 mrb_str_plus_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2919,7 +2898,8 @@ mrb_str_plus_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <div class="discussion">
     <p>Append—Concatenates the given object to <i>str</i>. If the object is a
 <code>Integer</code>, it is considered as a codepoint, and is converted
-to a character before concatenation.</p>
+to a character before concatenation
+(equivalent to <code>str.concat(integer.chr(__ENCODING__))</code>).</p>
 
 <p>a = “hello “
    a « “world”   #=&gt; “hello world”
@@ -3068,22 +3048,26 @@ to a character before concatenation.</p>
       <pre class="lines">
 
 
-157
-158
-159
-160
-161
-162
-163
 164
 165
 166
 167
 168
-169</pre>
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 157</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 164</span>
 
 static mrb_value
 mrb_str_concat_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3091,11 +3075,15 @@ mrb_str_concat_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   mrb_value str;
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;str);
-  <span style="color:#080;font-weight:bold">if</span> (mrb_fixnum_p(str))
-    str = mrb_fixnum_chr(mrb, str);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_fixnum_p(str) || mrb_float_p(str))
+<span style="color:#777">#ifdef MRB_UTF8_STRING</span>
+    str = int_chr_utf8(mrb, str);
+<span style="color:#777">#else</span>
+    str = int_chr_binary(mrb, str);
+<span style="color:#777">#endif</span>
   <span style="color:#080;font-weight:bold">else</span>
-    str = mrb_ensure_string_type(mrb, str);
-  mrb_str_concat(mrb, <span style="color:#069">self</span>, str);
+    mrb_ensure_string_type(mrb, str);
+  mrb_str_cat_str(mrb, <span style="color:#069">self</span>, str);
   <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
 }</pre>
     </td>
@@ -3175,38 +3163,24 @@ included from module <code>Comparable</code>.  The method
       <pre class="lines">
 
 
-907
-908
-909
-910
-911
-912
-913
-914
-915
-916
-917
-918
-919
-920
-921
-922
-923
-924
-925
-926
-927
-928
-929
-930
-931
-932
-933
-934
-935</pre>
+1031
+1032
+1033
+1034
+1035
+1036
+1037
+1038
+1039
+1040
+1041
+1042
+1043
+1044
+1045</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 907</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1031</span>
 
 static mrb_value
 mrb_str_cmp_m(mrb_state *mrb, mrb_value str1)
@@ -3216,21 +3190,7 @@ mrb_str_cmp_m(mrb_state *mrb, mrb_value str1)
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;str2);
   <span style="color:#080;font-weight:bold">if</span> (!mrb_string_p(str2)) {
-    <span style="color:#080;font-weight:bold">if</span> (!mrb_respond_to(mrb, str2, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>))) {
-      <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
-    }
-    <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (!mrb_respond_to(mrb, str2, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&lt;=&gt;</span><span style="color:#710">&quot;</span></span>))) {
-      <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
-    }
-    <span style="color:#080;font-weight:bold">else</span> {
-      mrb_value tmp = mrb_funcall(mrb, str2, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&lt;=&gt;</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span>, str1);
-
-      <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(tmp)) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
-      <span style="color:#080;font-weight:bold">if</span> (!mrb_fixnum_p(tmp)) {
-        <span style="color:#080;font-weight:bold">return</span> mrb_funcall(mrb, mrb_fixnum_value(<span style="color:#00D">0</span>), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">-</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span>, tmp);
-      }
-      result = -mrb_fixnum(tmp);
-    }
+    <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
   }
   <span style="color:#080;font-weight:bold">else</span> {
     result = mrb_str_cmp(mrb, str1, str2);
@@ -3300,18 +3260,18 @@ Otherwise, returns <code>false</code> or <code>true</code></p>
       <pre class="lines">
 
 
-966
-967
-968
-969
-970
-971
-972
-973
-974</pre>
+1076
+1077
+1078
+1079
+1080
+1081
+1082
+1083
+1084</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 966</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1076</span>
 
 static mrb_value
 mrb_str_equal_m(mrb_state *mrb, mrb_value str1)
@@ -3322,48 +3282,6 @@ mrb_str_equal_m(mrb_state *mrb, mrb_value str1)
 
   <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_str_equal(mrb, str1, str2));
 }</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="=~-instance_method">
-  
-    #<strong>=~</strong>(re)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>ISO 15.2.10.5.3</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-247
-248
-249</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 247</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">=~</span>(re)
-  re =~ <span style="color:#069">self</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -3754,47 +3672,31 @@ match.</p>
       <pre class="lines">
 
 
-1120
-1121
-1122
-1123
-1124
-1125
-1126
-1127
-1128
-1129
-1130
-1131
-1132
-1133
-1134
-1135
-1136
-1137
-1138</pre>
+1259
+1260
+1261
+1262
+1263
+1264
+1265
+1266
+1267
+1268
+1269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1120</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1259</span>
 
 static mrb_value
 mrb_str_aref_m(mrb_state *mrb, mrb_value str)
 {
   mrb_value a1, a2;
-  mrb_int argc;
 
-  argc = mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|o</span><span style="color:#710">&quot;</span></span>, &amp;a1, &amp;a2);
-  <span style="color:#080;font-weight:bold">if</span> (argc == <span style="color:#00D">2</span>) {
-    mrb_int n1, n2;
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|o</span><span style="color:#710">&quot;</span></span>, &amp;a1, &amp;a2) == <span style="color:#00D">1</span>) {
+    a2 = mrb_undef_value();
+  }
 
-    mrb_regexp_check(mrb, a1);
-    mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ii</span><span style="color:#710">&quot;</span></span>, &amp;n1, &amp;n2);
-    <span style="color:#080;font-weight:bold">return</span> str_substr(mrb, str, n1, n2);
-  }
-  <span style="color:#080;font-weight:bold">if</span> (argc != <span style="color:#00D">1</span>) {
-    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong number of arguments (%S for 1)</span><span style="color:#710">&quot;</span></span>, mrb_fixnum_value(argc));
-  }
-  <span style="color:#080;font-weight:bold">return</span> mrb_str_aref(mrb, str, a1);
+  <span style="color:#080;font-weight:bold">return</span> mrb_str_aref(mrb, str, a1, a2);
 }</pre>
     </td>
   </tr>
@@ -3804,7 +3706,19 @@ mrb_str_aref_m(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="[]=-instance_method">
   
-    #<strong>[]=</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>[]=</strong>(fixnum)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>[]=</strong>(fixnum, fixnum)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>[]=</strong>(range)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>[]=</strong>(regexp)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>[]=</strong>(regexp, fixnum)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>[]=</strong>(other_str)  &#x21d2; <tt>Object</tt> </span>
+    
   
 
   
@@ -3829,108 +3743,42 @@ The portion of the string affected is determined using the same criteria as +Str
       <pre class="lines">
 
 
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243</pre>
+1442
+1443
+1444
+1445
+1446
+1447
+1448
+1449
+1450
+1451
+1452
+1453
+1454
+1455
+1456
+1457</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1442</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">[]=</span>(*args)
-  anum = args.size
-  <span style="color:#080;font-weight:bold">if</span> anum == <span style="color:#00D">2</span>
-    pos, value = args
-    <span style="color:#080;font-weight:bold">case</span> pos
-    <span style="color:#080;font-weight:bold">when</span> <span style="color:#036;font-weight:bold">String</span>
-      posnum = <span style="color:#069">self</span>.index(pos)
-      <span style="color:#080;font-weight:bold">if</span> posnum
-        b = <span style="color:#069">self</span>[<span style="color:#00D">0</span>, posnum.to_i]
-        a = <span style="color:#069">self</span>[(posnum + pos.length)..<span style="color:#00D">-1</span>]
-        <span style="color:#069">self</span>.replace([b, value, a].join(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#710">'</span></span>))
-      <span style="color:#080;font-weight:bold">else</span>
-        raise <span style="color:#036;font-weight:bold">IndexError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">string not matched</span><span style="color:#710">&quot;</span></span>
-      <span style="color:#080;font-weight:bold">end</span>
-    <span style="color:#080;font-weight:bold">when</span> <span style="color:#036;font-weight:bold">Range</span>
-      head = pos.begin
-      tail = pos.end
-      tail += <span style="color:#069">self</span>.length <span style="color:#080;font-weight:bold">if</span> tail &lt; <span style="color:#00D">0</span>
-      <span style="color:#080;font-weight:bold">unless</span> pos.exclude_end?
-        tail += <span style="color:#00D">1</span>
-      <span style="color:#080;font-weight:bold">end</span>
-      <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>[head, tail-head]=value
-    <span style="color:#080;font-weight:bold">else</span>
-      pos += <span style="color:#069">self</span>.length <span style="color:#080;font-weight:bold">if</span> pos &lt; <span style="color:#00D">0</span>
-      <span style="color:#080;font-weight:bold">if</span> pos &lt; <span style="color:#00D">0</span> || pos &gt; <span style="color:#069">self</span>.length
-        raise <span style="color:#036;font-weight:bold">IndexError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">index </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>args[<span style="color:#00D">0</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> out of string</span><span style="color:#710">&quot;</span></span>
-      <span style="color:#080;font-weight:bold">end</span>
-      b = <span style="color:#069">self</span>[<span style="color:#00D">0</span>, pos.to_i]
-      a = <span style="color:#069">self</span>[pos + <span style="color:#00D">1</span>..<span style="color:#00D">-1</span>]
-      <span style="color:#069">self</span>.replace([b, value, a].join(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#710">'</span></span>))
-    <span style="color:#080;font-weight:bold">end</span>
-    <span style="color:#080;font-weight:bold">return</span> value
-  <span style="color:#080;font-weight:bold">elsif</span> anum == <span style="color:#00D">3</span>
-    pos, len, value = args
-    pos += <span style="color:#069">self</span>.length <span style="color:#080;font-weight:bold">if</span> pos &lt; <span style="color:#00D">0</span>
-    <span style="color:#080;font-weight:bold">if</span> pos &lt; <span style="color:#00D">0</span> || pos &gt; <span style="color:#069">self</span>.length
-      raise <span style="color:#036;font-weight:bold">IndexError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">index </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>args[<span style="color:#00D">0</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> out of string</span><span style="color:#710">&quot;</span></span>
-    <span style="color:#080;font-weight:bold">end</span>
-    <span style="color:#080;font-weight:bold">if</span> len &lt; <span style="color:#00D">0</span>
-      raise <span style="color:#036;font-weight:bold">IndexError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative length </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>len<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
-    <span style="color:#080;font-weight:bold">end</span>
-    b = <span style="color:#069">self</span>[<span style="color:#00D">0</span>, pos.to_i]
-    a = <span style="color:#069">self</span>[pos + len..<span style="color:#00D">-1</span>]
-    <span style="color:#069">self</span>.replace([b, value, a].join(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#710">'</span></span>))
-    <span style="color:#080;font-weight:bold">return</span> value
-  <span style="color:#080;font-weight:bold">else</span>
-    raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong number of arguments (</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>anum<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> for 2..3)</span><span style="color:#710">&quot;</span></span>
-  <span style="color:#080;font-weight:bold">end</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+static mrb_value
+mrb_str_aset_m(mrb_state *mrb, mrb_value str)
+{
+  mrb_value indx, alen, replace;
+
+  switch (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">oo|S!</span><span style="color:#710">&quot;</span></span>, &amp;indx, &amp;alen, &amp;replace)) {
+    <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">2</span>:
+      replace = alen;
+      alen = mrb_undef_value();
+      <span style="color:#080;font-weight:bold">break</span>;
+    <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">3</span>:
+      <span style="color:#080;font-weight:bold">break</span>;
+  }
+  mrb_str_aset(mrb, str, indx, alen, replace);
+  <span style="color:#080;font-weight:bold">return</span> str;
+}</pre>
     </td>
   </tr>
 </table>
@@ -3939,7 +3787,7 @@ The portion of the string affected is determined using the same criteria as +Str
       <div class="method_details ">
   <h3 class="signature " id="__lines-instance_method">
   
-    #<strong>__lines</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>__lines</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3951,9 +3799,6 @@ The portion of the string affected is determined using the same criteria as +Str
       <pre class="lines">
 
 
-1171
-1172
-1173
 1174
 1175
 1176
@@ -3974,10 +3819,11 @@ The portion of the string affected is determined using the same criteria as +Str
 1191
 1192
 1193
-1194</pre>
+1194
+1195</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1171</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1174</span>
 
 static mrb_value
 mrb_str_lines(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3988,8 +3834,6 @@ mrb_str_lines(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   char *b = RSTRING_PTR(<span style="color:#069">self</span>);
   char *p = b, *t;
   char *e = b + RSTRING_LEN(<span style="color:#069">self</span>);
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>);
 
   result = mrb_ary_new(mrb);
   ai = mrb_gc_arena_save(mrb);
@@ -4011,7 +3855,7 @@ mrb_str_lines(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="__sub_replace-instance_method">
   
-    #<strong>__sub_replace</strong>(pre, m, post)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>__sub_replace</strong>(pre, m, post)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4035,33 +3879,33 @@ mrb_str_lines(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51</pre>
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 55</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">__sub_replace</span>(pre, m, post)
   s = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>
@@ -4095,7 +3939,7 @@ mrb_str_lines(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="bytes-instance_method">
   
-    #<strong>bytes</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>bytes</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4124,22 +3968,22 @@ mrb_str_lines(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-2695
-2696
-2697
-2698
-2699
-2700
-2701
-2702
-2703
-2704
-2705
-2706
-2707</pre>
+2765
+2766
+2767
+2768
+2769
+2770
+2771
+2772
+2773
+2774
+2775
+2776
+2777</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 2695</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2765</span>
 
 static mrb_value
 mrb_str_bytes(mrb_state *mrb, mrb_value str)
@@ -4162,7 +4006,7 @@ mrb_str_bytes(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="bytesize-instance_method">
   
-    #<strong>bytesize</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>bytesize</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4174,15 +4018,15 @@ mrb_str_bytes(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-801
-802
-803
-804
-805
-806</pre>
+924
+925
+926
+927
+928
+929</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 801</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 924</span>
 
 static mrb_value
 mrb_str_bytesize(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -4198,105 +4042,209 @@ mrb_str_bytesize(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="byteslice-instance_method">
   
-    #<strong>byteslice</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    
+      <span class="overload">#<strong>byteslice</strong>(integer)  &#x21d2; <tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt><sup>?</sup> </span>
+    
+      <span class="overload">#<strong>byteslice</strong>(integer, integer)  &#x21d2; <tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt><sup>?</sup> </span>
+    
+      <span class="overload">#<strong>byteslice</strong>(range)  &#x21d2; <tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt><sup>?</sup> </span>
+    
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Byte Reference—If passed a single Integer, returns a
+substring of one byte at that position. If passed two Integer
+objects, returns a substring starting at the offset given by the first, and
+a length given by the second. If given a Range, a substring containing
+bytes at offsets given by the range is returned. In all three cases, if
+an offset is negative, it is counted from the end of <i>str</i>. Returns
+<code>nil</code> if the initial offset falls outside the string, the length
+is negative, or the beginning of the range is greater than the end.
+The encoding of the resulted string keeps original encoding.</p>
+
+<p>“hello”.byteslice(1)     #=&gt; “e”
+   “hello”.byteslice(-1)    #=&gt; “o”
+   “hello”.byteslice(1, 2)  #=&gt; “el”
+   “\x80\u3042”.byteslice(1, 3) #=&gt; “\u3042”
+   “\x03\u3042\xff”.byteslice(1..3) #=&gt; “\u3042”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>byteslice</strong>(integer)  &#x21d2; <tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt><sup>?</sup> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>byteslice</strong>(integer, integer)  &#x21d2; <tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt><sup>?</sup> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>byteslice</strong>(range)  &#x21d2; <tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt><sup>?</sup> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+      </li>
+    
+  </ul>
+
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83</pre>
+2847
+2848
+2849
+2850
+2851
+2852
+2853
+2854
+2855
+2856
+2857
+2858
+2859
+2860
+2861
+2862
+2863
+2864
+2865
+2866
+2867
+2868
+2869
+2870
+2871
+2872
+2873
+2874
+2875</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 42</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2847</span>
 
 static mrb_value
 mrb_str_byteslice(mrb_state *mrb, mrb_value str)
 {
-  mrb_value a1;
-  mrb_int len;
+  mrb_value a1, a2;
+  mrb_int str_len = RSTRING_LEN(str), beg, len;
+  mrb_bool empty = <span style="color:#069">TRUE</span>;
 
-  <span style="color:#080;font-weight:bold">if</span> (mrb_get_argc(mrb) == <span style="color:#00D">2</span>) {
-    mrb_int pos;
-    mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ii</span><span style="color:#710">&quot;</span></span>, &amp;pos, &amp;len);
-    <span style="color:#080;font-weight:bold">return</span> mrb_str_substr(mrb, str, pos, len);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|o</span><span style="color:#710">&quot;</span></span>, &amp;a1, &amp;a2) == <span style="color:#00D">2</span>) {
+    beg = mrb_fixnum(mrb_to_int(mrb, a1));
+    len = mrb_fixnum(mrb_to_int(mrb, a2));
   }
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|i</span><span style="color:#710">&quot;</span></span>, &amp;a1, &amp;len);
-  switch (mrb_type(a1)) {
-  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_RANGE</span>:
-    {
-      mrb_int beg;
-
-      len = RSTRING_LEN(str);
-      switch (mrb_range_beg_len(mrb, a1, &amp;beg, &amp;len, len, <span style="color:#069">TRUE</span>)) {
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">0</span>:                   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* not range *</span><span style="color:#404">/</span></span>
-        <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">1</span>:                   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* range *</span><span style="color:#404">/</span></span>
-        <span style="color:#080;font-weight:bold">return</span> mrb_str_substr(mrb, str, beg, len);
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">2</span>:                   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* out of range *</span><span style="color:#404">/</span></span>
-        mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_RANGE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%S out of range</span><span style="color:#710">&quot;</span></span>, a1);
-        <span style="color:#080;font-weight:bold">break</span>;
-      }
+  <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (mrb_range_p(a1)) {
+    <span style="color:#080;font-weight:bold">if</span> (mrb_range_beg_len(mrb, a1, &amp;beg, &amp;len, str_len, <span style="color:#069">TRUE</span>) != <span style="color:#036;font-weight:bold">MRB_RANGE_OK</span>) {
       <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
     }
-<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
-  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FLOAT</span>:
-    a1 = mrb_fixnum_value((mrb_int)mrb_float(a1));
-    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* fall through *</span><span style="color:#404">/</span></span>
-<span style="color:#777">#endif</span>
-  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FIXNUM</span>:
-    <span style="color:#080;font-weight:bold">return</span> mrb_str_substr(mrb, str, mrb_fixnum(a1), <span style="color:#00D">1</span>);
-  <span style="color:#606">default</span>:
-    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong type of argument</span><span style="color:#710">&quot;</span></span>);
   }
-  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* not reached *</span><span style="color:#404">/</span></span>
-  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  <span style="color:#080;font-weight:bold">else</span> {
+    beg = mrb_fixnum(mrb_to_int(mrb, a1));
+    len = <span style="color:#00D">1</span>;
+    empty = <span style="color:#069">FALSE</span>;
+  }
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_str_beg_len(str_len, &amp;beg, &amp;len) &amp;&amp; (empty || len != <span style="color:#00D">0</span>)) {
+    <span style="color:#080;font-weight:bold">return</span> mrb_str_byte_subseq(mrb, str, beg, len);
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+  }
 }</pre>
     </td>
   </tr>
@@ -4362,18 +4310,18 @@ and the remainder to lowercase.</p>
       <pre class="lines">
 
 
-1189
-1190
-1191
-1192
-1193
-1194
-1195
-1196
-1197</pre>
+1508
+1509
+1510
+1511
+1512
+1513
+1514
+1515
+1516</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1189</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1508</span>
 
 static mrb_value
 mrb_str_capitalize(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -4449,32 +4397,32 @@ remainder to lowercase. Returns <code>nil</code> if no changes are made.</p>
       <pre class="lines">
 
 
-1153
-1154
-1155
-1156
-1157
-1158
-1159
-1160
-1161
-1162
-1163
-1164
-1165
-1166
-1167
-1168
-1169
-1170
-1171
-1172
-1173
-1174
-1175</pre>
+1472
+1473
+1474
+1475
+1476
+1477
+1478
+1479
+1480
+1481
+1482
+1483
+1484
+1485
+1486
+1487
+1488
+1489
+1490
+1491
+1492
+1493
+1494</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1153</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1472</span>
 
 static mrb_value
 mrb_str_capitalize_bang(mrb_state *mrb, mrb_value str)
@@ -4483,7 +4431,7 @@ mrb_str_capitalize_bang(mrb_state *mrb, mrb_value str)
   mrb_bool modify = <span style="color:#069">FALSE</span>;
   struct <span style="color:#036;font-weight:bold">RString</span> *s = mrb_str_ptr(str);
 
-  mrb_str_modify(mrb, s);
+  mrb_str_modify_keep_ascii(mrb, s);
   <span style="color:#080;font-weight:bold">if</span> (RSTR_LEN(s) == <span style="color:#00D">0</span> || !RSTR_PTR(s)) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
   p = RSTR_PTR(s); pend = RSTR_PTR(s) + RSTR_LEN(s);
   <span style="color:#080;font-weight:bold">if</span> (ISLOWER(*p)) {
@@ -4507,7 +4455,7 @@ mrb_str_capitalize_bang(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="casecmp-instance_method">
   
-    #<strong>casecmp</strong>(str)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>casecmp</strong>(str)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4624,7 +4572,7 @@ false if they are not equal, and nil if other_str is not a string.</p>
       <div class="method_details ">
   <h3 class="signature " id="chars-instance_method">
   
-    #<strong>chars</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>chars</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4677,9 +4625,8 @@ false if they are not equal, and nil if other_str is not a string.</p>
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns a new <code>String</code> with the given record separator removed
-from the end of <i>str</i> (if present). If <code>$/</code> has not been
-changed from the default Ruby record separator, then <code>chomp</code> also
-removes carriage return characters (that is it will remove <code>\n</code>,
+from the end of <i>str</i> (if present). <code>chomp</code> also removes
+carriage return characters (that is it will remove <code>\n</code>,
 <code>\r</code>, and <code>\r\n</code>).</p>
 
 <p>“hello”.chomp            #=&gt; “hello”
@@ -4731,18 +4678,18 @@ removes carriage return characters (that is it will remove <code>\n</code>,
       <pre class="lines">
 
 
-1294
-1295
-1296
-1297
-1298
-1299
-1300
-1301
-1302</pre>
+1612
+1613
+1614
+1615
+1616
+1617
+1618
+1619
+1620</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1294</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1612</span>
 
 static mrb_value
 mrb_str_chomp(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -4813,76 +4760,76 @@ returning <i>str</i>, or <code>nil</code> if no modifications were made.</p>
       <pre class="lines">
 
 
-1207
-1208
-1209
-1210
-1211
-1212
-1213
-1214
-1215
-1216
-1217
-1218
-1219
-1220
-1221
-1222
-1223
-1224
-1225
-1226
-1227
-1228
-1229
-1230
-1231
-1232
-1233
-1234
-1235
-1236
-1237
-1238
-1239
-1240
-1241
-1242
-1243
-1244
-1245
-1246
-1247
-1248
-1249
-1250
-1251
-1252
-1253
-1254
-1255
-1256
-1257
-1258
-1259
-1260
-1261
-1262
-1263
-1264
-1265
-1266
-1267
-1268
-1269
-1270
-1271
-1272
-1273</pre>
+1526
+1527
+1528
+1529
+1530
+1531
+1532
+1533
+1534
+1535
+1536
+1537
+1538
+1539
+1540
+1541
+1542
+1543
+1544
+1545
+1546
+1547
+1548
+1549
+1550
+1551
+1552
+1553
+1554
+1555
+1556
+1557
+1558
+1559
+1560
+1561
+1562
+1563
+1564
+1565
+1566
+1567
+1568
+1569
+1570
+1571
+1572
+1573
+1574
+1575
+1576
+1577
+1578
+1579
+1580
+1581
+1582
+1583
+1584
+1585
+1586
+1587
+1588
+1589
+1590
+1591
+1592</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1207</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1526</span>
 
 static mrb_value
 mrb_str_chomp_bang(mrb_state *mrb, mrb_value str)
@@ -4896,7 +4843,7 @@ mrb_str_chomp_bang(mrb_state *mrb, mrb_value str)
   struct <span style="color:#036;font-weight:bold">RString</span> *s = mrb_str_ptr(str);
 
   argc = mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|S</span><span style="color:#710">&quot;</span></span>, &amp;rs);
-  mrb_str_modify(mrb, s);
+  mrb_str_modify_keep_ascii(mrb, s);
   len = RSTR_LEN(s);
   <span style="color:#080;font-weight:bold">if</span> (argc == <span style="color:#00D">0</span>) {
     <span style="color:#080;font-weight:bold">if</span> (len == <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
@@ -5020,17 +4967,17 @@ the string unchanged if it doesn’t end in a record separator.</p>
       <pre class="lines">
 
 
-1363
-1364
-1365
-1366
-1367
-1368
-1369
-1370</pre>
+1681
+1682
+1683
+1684
+1685
+1686
+1687
+1688</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1363</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1681</span>
 
 static mrb_value
 mrb_str_chop(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -5101,48 +5048,48 @@ or <code>nil</code> if <i>str</i> is the empty string.  See also
       <pre class="lines">
 
 
-1313
-1314
-1315
-1316
-1317
-1318
-1319
-1320
-1321
-1322
-1323
-1324
-1325
-1326
-1327
-1328
-1329
-1330
-1331
-1332
-1333
-1334
-1335
-1336
-1337
-1338
-1339
-1340
-1341
-1342
-1343
-1344</pre>
+1631
+1632
+1633
+1634
+1635
+1636
+1637
+1638
+1639
+1640
+1641
+1642
+1643
+1644
+1645
+1646
+1647
+1648
+1649
+1650
+1651
+1652
+1653
+1654
+1655
+1656
+1657
+1658
+1659
+1660
+1661
+1662</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1313</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1631</span>
 
 static mrb_value
 mrb_str_chop_bang(mrb_state *mrb, mrb_value str)
 {
   struct <span style="color:#036;font-weight:bold">RString</span> *s = mrb_str_ptr(str);
 
-  mrb_str_modify(mrb, s);
+  mrb_str_modify_keep_ascii(mrb, s);
   <span style="color:#080;font-weight:bold">if</span> (RSTR_LEN(s) &gt; <span style="color:#00D">0</span>) {
     mrb_int len;
 <span style="color:#777">#ifdef MRB_UTF8_STRING</span>
@@ -5231,14 +5178,14 @@ mrb_str_chop_bang(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-845
-846
-847
-848
-849</pre>
+855
+856
+857
+858
+859</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 845</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 855</span>
 
 static mrb_value
 mrb_str_chr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -5253,7 +5200,7 @@ mrb_str_chr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="clear-instance_method">
   
-    #<strong>clear</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>clear</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5301,7 +5248,7 @@ mrb_str_chr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="codepoints-instance_method">
   
-    #<strong>codepoints</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>codepoints</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5317,10 +5264,6 @@ mrb_str_chr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-322
-323
-324
-325
 326
 327
 328
@@ -5328,10 +5271,14 @@ mrb_str_chr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 330
 331
 332
-333</pre>
+333
+334
+335
+336
+337</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/mrblib/string.rb', line 322</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/mrblib/string.rb', line 326</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">codepoints</span>(&amp;block)
   len = <span style="color:#069">self</span>.size
@@ -5371,7 +5318,8 @@ mrb_str_chr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <div class="discussion">
     <p>Append—Concatenates the given object to <i>str</i>. If the object is a
 <code>Integer</code>, it is considered as a codepoint, and is converted
-to a character before concatenation.</p>
+to a character before concatenation
+(equivalent to <code>str.concat(integer.chr(__ENCODING__))</code>).</p>
 
 <p>a = “hello “
    a « “world”   #=&gt; “hello world”
@@ -5520,22 +5468,26 @@ to a character before concatenation.</p>
       <pre class="lines">
 
 
-157
-158
-159
-160
-161
-162
-163
 164
 165
 166
 167
 168
-169</pre>
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 157</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 164</span>
 
 static mrb_value
 mrb_str_concat_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -5543,11 +5495,15 @@ mrb_str_concat_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   mrb_value str;
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;str);
-  <span style="color:#080;font-weight:bold">if</span> (mrb_fixnum_p(str))
-    str = mrb_fixnum_chr(mrb, str);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_fixnum_p(str) || mrb_float_p(str))
+<span style="color:#777">#ifdef MRB_UTF8_STRING</span>
+    str = int_chr_utf8(mrb, str);
+<span style="color:#777">#else</span>
+    str = int_chr_binary(mrb, str);
+<span style="color:#777">#endif</span>
   <span style="color:#080;font-weight:bold">else</span>
-    str = mrb_ensure_string_type(mrb, str);
-  mrb_str_concat(mrb, <span style="color:#069">self</span>, str);
+    mrb_ensure_string_type(mrb, str);
+  mrb_str_cat_str(mrb, <span style="color:#069">self</span>, str);
   <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
 }</pre>
     </td>
@@ -5558,7 +5514,7 @@ mrb_str_concat_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="count-instance_method">
   
-    #<strong>count</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>count</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5590,16 +5546,6 @@ the end of a sequence or the end of a other_str.</p>
       <pre class="lines">
 
 
-800
-801
-802
-803
-804
-805
-806
-807
-808
-809
 810
 811
 812
@@ -5612,10 +5558,20 @@ the end of a sequence or the end of a other_str.</p>
 819
 820
 821
-822</pre>
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 800</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 810</span>
 
 static mrb_value
 mrb_str_count(mrb_state *mrb, mrb_value str)
@@ -5632,7 +5588,7 @@ mrb_str_count(mrb_state *mrb, mrb_value str)
   tr_parse_pattern(mrb, &amp;pat, v_pat, <span style="color:#069">TRUE</span>);
   tr_compile_pattern(&amp;pat, v_pat, bitmap);
   tr_free_pattern(mrb, &amp;pat);
-  
+
   s = RSTRING_PTR(str);
   len = RSTRING_LEN(str);
   <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i &lt; len; i++) {
@@ -5707,6 +5663,14 @@ and <code>begin &lt;= obj &lt; end</code> when #exclude_end? is +true+.</p>
       <pre class="lines">
 
 
+34
+35
+36
+37
+38
+39
+40
+41
 42
 43
 44
@@ -5723,18 +5687,10 @@ and <code>begin &lt;= obj &lt; end</code> when #exclude_end? is +true+.</p>
 55
 56
 57
-58
-59
-60
-61
-62
-63
-64
-65
-66</pre>
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-range-ext/src/range.c', line 42</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-range-ext/src/range.c', line 34</span>
 
 static mrb_value
 range_cover(mrb_state *mrb, mrb_value range)
@@ -5769,7 +5725,7 @@ range_cover(mrb_state *mrb, mrb_value range)
       <div class="method_details ">
   <h3 class="signature " id="delete-instance_method">
   
-    #<strong>delete</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>delete</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5781,20 +5737,20 @@ range_cover(mrb_state *mrb, mrb_value range)
       <pre class="lines">
 
 
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775</pre>
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 765</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 775</span>
 
 static mrb_value
 mrb_str_delete(mrb_state *mrb, mrb_value str)
@@ -5815,7 +5771,7 @@ mrb_str_delete(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="delete!-instance_method">
   
-    #<strong>delete!</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>delete!</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5827,20 +5783,20 @@ mrb_str_delete(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-777
-778
-779
-780
-781
-782
-783
-784
-785
-786
-787</pre>
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 777</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 787</span>
 
 static mrb_value
 mrb_str_delete_bang(mrb_state *mrb, mrb_value str)
@@ -5915,9 +5871,6 @@ mrb_str_delete_bang(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-1102
-1103
-1104
 1105
 1106
 1107
@@ -5927,10 +5880,13 @@ mrb_str_delete_bang(mrb_state *mrb, mrb_value str)
 1111
 1112
 1113
-1114</pre>
+1114
+1115
+1116
+1117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1102</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1105</span>
 
 static mrb_value
 mrb_str_del_prefix(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6008,9 +5964,6 @@ mrb_str_del_prefix(mrb_state *mrb, mrb_value <span style="color:#069">self</span
       <pre class="lines">
 
 
-1069
-1070
-1071
 1072
 1073
 1074
@@ -6030,10 +5983,13 @@ mrb_str_del_prefix(mrb_state *mrb, mrb_value <span style="color:#069">self</span
 1088
 1089
 1090
-1091</pre>
+1091
+1092
+1093
+1094</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1069</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1072</span>
 
 static mrb_value
 mrb_str_del_prefix_bang(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6047,7 +6003,7 @@ mrb_str_del_prefix_bang(mrb_state *mrb, mrb_value <span style="color:#069">self<
   <span style="color:#080;font-weight:bold">if</span> (plen &gt; slen) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
   s = RSTR_PTR(str);
   <span style="color:#080;font-weight:bold">if</span> (memcmp(s, ptr, plen) != <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
-  <span style="color:#080;font-weight:bold">if</span> (!MRB_FROZEN_P(str) &amp;&amp; (RSTR_SHARED_P(str) || RSTR_FSHARED_P(str))) {
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_frozen_p(str) &amp;&amp; (RSTR_SHARED_P(str) || RSTR_FSHARED_P(str))) {
     str-&gt;as.heap.ptr += plen;
   }
   <span style="color:#080;font-weight:bold">else</span> {
@@ -6120,9 +6076,6 @@ mrb_str_del_prefix_bang(mrb_state *mrb, mrb_value <span style="color:#069">self<
       <pre class="lines">
 
 
-1157
-1158
-1159
 1160
 1161
 1162
@@ -6132,10 +6085,13 @@ mrb_str_del_prefix_bang(mrb_state *mrb, mrb_value <span style="color:#069">self<
 1166
 1167
 1168
-1169</pre>
+1169
+1170
+1171
+1172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1157</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1160</span>
 
 static mrb_value
 mrb_str_del_suffix(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6213,9 +6169,6 @@ mrb_str_del_suffix(mrb_state *mrb, mrb_value <span style="color:#069">self</span
       <pre class="lines">
 
 
-1126
-1127
-1128
 1129
 1130
 1131
@@ -6233,10 +6186,13 @@ mrb_str_del_suffix(mrb_state *mrb, mrb_value <span style="color:#069">self</span
 1143
 1144
 1145
-1146</pre>
+1146
+1147
+1148
+1149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1126</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1129</span>
 
 static mrb_value
 mrb_str_del_suffix_bang(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6250,7 +6206,7 @@ mrb_str_del_suffix_bang(mrb_state *mrb, mrb_value <span style="color:#069">self<
   <span style="color:#080;font-weight:bold">if</span> (plen &gt; slen) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
   s = RSTR_PTR(str);
   <span style="color:#080;font-weight:bold">if</span> (memcmp(s+slen-plen, ptr, plen) != <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
-  <span style="color:#080;font-weight:bold">if</span> (!MRB_FROZEN_P(str) &amp;&amp; (RSTR_SHARED_P(str) || RSTR_FSHARED_P(str))) {
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_frozen_p(str) &amp;&amp; (RSTR_SHARED_P(str) || RSTR_FSHARED_P(str))) {
     <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* no need to modify string *</span><span style="color:#404">/</span></span>
   }
   <span style="color:#080;font-weight:bold">else</span> {
@@ -6322,18 +6278,18 @@ characters ‘A’ to ‘Z’ are affected.</p>
       <pre class="lines">
 
 
-1413
-1414
-1415
-1416
-1417
-1418
-1419
-1420
-1421</pre>
+1731
+1732
+1733
+1734
+1735
+1736
+1737
+1738
+1739</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1413</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1731</span>
 
 static mrb_value
 mrb_str_downcase(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6404,30 +6360,30 @@ changes were made.</p>
       <pre class="lines">
 
 
-1380
-1381
-1382
-1383
-1384
-1385
-1386
-1387
-1388
-1389
-1390
-1391
-1392
-1393
-1394
-1395
-1396
-1397
-1398
-1399
-1400</pre>
+1698
+1699
+1700
+1701
+1702
+1703
+1704
+1705
+1706
+1707
+1708
+1709
+1710
+1711
+1712
+1713
+1714
+1715
+1716
+1717
+1718</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1380</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1698</span>
 
 static mrb_value
 mrb_str_downcase_bang(mrb_state *mrb, mrb_value str)
@@ -6436,7 +6392,7 @@ mrb_str_downcase_bang(mrb_state *mrb, mrb_value str)
   mrb_bool modify = <span style="color:#069">FALSE</span>;
   struct <span style="color:#036;font-weight:bold">RString</span> *s = mrb_str_ptr(str);
 
-  mrb_str_modify(mrb, s);
+  mrb_str_modify_keep_ascii(mrb, s);
   p = RSTR_PTR(s);
   pend = RSTR_PTR(s) + RSTR_LEN(s);
   <span style="color:#080;font-weight:bold">while</span> (p &lt; pend) {
@@ -6510,231 +6466,19 @@ mrb_str_downcase_bang(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-2427
-2428
-2429
-2430
-2431
-2432
-2433
-2434
-2435
-2436
-2437
-2438
-2439
-2440
-2441
-2442
-2443
-2444
-2445
-2446
-2447
-2448
-2449
-2450
-2451
-2452
-2453
-2454
-2455
-2456
-2457
-2458
-2459
-2460
-2461
-2462
-2463
-2464
-2465
-2466
-2467
-2468
-2469
-2470
-2471
-2472
-2473
-2474
-2475
-2476
-2477
-2478
-2479
-2480
-2481
-2482
-2483
-2484
-2485
-2486
-2487
-2488
-2489
-2490
-2491
-2492
-2493
-2494
-2495
-2496
-2497
-2498
-2499
-2500
-2501
-2502
-2503
-2504
-2505
-2506
-2507
-2508
-2509
-2510
-2511
-2512
-2513
-2514
-2515
-2516
-2517
-2518
-2519
-2520
-2521
-2522
-2523
-2524
-2525
-2526
-2527
-2528
-2529
-2530
-2531
-2532
-2533
-2534
-2535
-2536
-2537</pre>
+2666
+2667
+2668
+2669
+2670</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 2427</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2666</span>
 
 mrb_value
 mrb_str_dump(mrb_state *mrb, mrb_value str)
 {
-  mrb_int len;
-  const char *p, *pend;
-  char *q;
-  struct <span style="color:#036;font-weight:bold">RString</span> *result;
-
-  len = <span style="color:#00D">2</span>;                  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* &quot;&quot; *</span><span style="color:#404">/</span></span>
-  p = RSTRING_PTR(str); pend = p + RSTRING_LEN(str);
-  <span style="color:#080;font-weight:bold">while</span> (p &lt; pend) {
-    unsigned char c = *p++;
-    switch (c) {
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>&quot;</span><span style="color:#404">'</span></span>:  <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span style="color:#60f">\\</span><span style="color:#404">'</span></span>:
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\n</span><span style="color:#404">'</span></span>: <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\r</span><span style="color:#404">'</span></span>:
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\t</span><span style="color:#404">'</span></span>: <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\f</span><span style="color:#404">'</span></span>:
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>13</span><span style="color:#404">'</span></span>: <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>10</span><span style="color:#404">'</span></span>: <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>07</span><span style="color:#404">'</span></span>: <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>33</span><span style="color:#404">'</span></span>:
-        len += <span style="color:#00D">2</span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>#</span><span style="color:#404">'</span></span>:
-        len += IS_EVSTR(p, pend) ? <span style="color:#00D">2</span> : <span style="color:#00D">1</span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#606">default</span>:
-        <span style="color:#080;font-weight:bold">if</span> (ISPRINT(c)) {
-          len++;
-        }
-        <span style="color:#080;font-weight:bold">else</span> {
-          len += <span style="color:#00D">4</span>;                <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* </span><span style="color:#D20">\N</span><span style="color:#808">NN *</span><span style="color:#404">/</span></span>
-        }
-        <span style="color:#080;font-weight:bold">break</span>;
-    }
-  }
-
-  result = str_new(mrb, <span style="color:#00D">0</span>, len);
-  str_with_class(mrb, result, str);
-  p = RSTRING_PTR(str); pend = p + RSTRING_LEN(str);
-  q = RSTR_PTR(result);
-  *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&quot;</span><span style="color:#710">'</span></span>;
-  <span style="color:#080;font-weight:bold">while</span> (p &lt; pend) {
-    unsigned char c = *p++;
-
-    switch (c) {
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>&quot;</span><span style="color:#404">'</span></span>:
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span style="color:#60f">\\</span><span style="color:#404">'</span></span>:
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = c;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\n</span><span style="color:#404">'</span></span>:
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">n</span><span style="color:#710">'</span></span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\r</span><span style="color:#404">'</span></span>:
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">r</span><span style="color:#710">'</span></span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\t</span><span style="color:#404">'</span></span>:
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">t</span><span style="color:#710">'</span></span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\f</span><span style="color:#404">'</span></span>:
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">f</span><span style="color:#710">'</span></span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>13</span><span style="color:#404">'</span></span>:
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">v</span><span style="color:#710">'</span></span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>10</span><span style="color:#404">'</span></span>:
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">b</span><span style="color:#710">'</span></span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>07</span><span style="color:#404">'</span></span>:
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">a</span><span style="color:#710">'</span></span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>33</span><span style="color:#404">'</span></span>:
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">e</span><span style="color:#710">'</span></span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>#</span><span style="color:#404">'</span></span>:
-        <span style="color:#080;font-weight:bold">if</span> (IS_EVSTR(p, pend)) *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-        *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">#</span><span style="color:#710">'</span></span>;
-        <span style="color:#080;font-weight:bold">break</span>;
-
-      <span style="color:#606">default</span>:
-        <span style="color:#080;font-weight:bold">if</span> (ISPRINT(c)) {
-          *q++ = c;
-        }
-        <span style="color:#080;font-weight:bold">else</span> {
-          *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-          *q++ = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">x</span><span style="color:#710">'</span></span>;
-          q[<span style="color:#00D">1</span>] = mrb_digitmap[c % <span style="color:#00D">16</span>]; c /= <span style="color:#00D">16</span>;
-          q[<span style="color:#00D">0</span>] = mrb_digitmap[c % <span style="color:#00D">16</span>];
-          q += <span style="color:#00D">2</span>;
-        }
-    }
-  }
-  *q = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&quot;</span><span style="color:#710">'</span></span>;
-  <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(result);
+  <span style="color:#080;font-weight:bold">return</span> str_escape(mrb, str, <span style="color:#069">FALSE</span>);
 }</pre>
     </td>
   </tr>
@@ -6744,7 +6488,7 @@ mrb_str_dump(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="each_byte-instance_method">
   
-    #<strong>each_byte</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each_byte</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6768,20 +6512,22 @@ mrb_str_dump(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-182
-183
-184
-185
-186
-187
-188
-189
-190</pre>
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 194</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_byte</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_byte</span>, &amp;block) <span style="color:#080;font-weight:bold">unless</span> block
   bytes = <span style="color:#069">self</span>.bytes
   pos = <span style="color:#00D">0</span>
   <span style="color:#080;font-weight:bold">while</span> pos &lt; bytes.size
@@ -6798,7 +6544,7 @@ mrb_str_dump(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="each_char-instance_method">
   
-    #<strong>each_char</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each_char</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6823,19 +6569,21 @@ mrb_str_dump(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-171
-172
-173
-174
-175
-176
-177
-178</pre>
+316
+317
+318
+319
+320
+321
+322
+323
+324</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/mrblib/string.rb', line 316</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_char</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:each_char</span> <span style="color:#080;font-weight:bold">unless</span> block
   pos = <span style="color:#00D">0</span>
   <span style="color:#080;font-weight:bold">while</span> pos &lt; <span style="color:#069">self</span>.size
     block.call(<span style="color:#069">self</span>[pos])
@@ -6851,7 +6599,7 @@ mrb_str_dump(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="each_line-instance_method">
   
-    #<strong>each_line</strong>(rs = &quot;\n&quot;, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each_line</strong>(separator = &quot;\n&quot;, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6869,6 +6617,19 @@ and pass the respective line.</p>
 </div>
 <div class="tags">
   
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TypeError.html" title="TypeError (class)">TypeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -6878,8 +6639,6 @@ and pass the respective line.</p>
       <pre class="lines">
 
 
-12
-13
 14
 15
 16
@@ -6891,23 +6650,75 @@ and pass the respective line.</p>
 22
 23
 24
-25</pre>
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 14</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_line</span>(rs = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>, &amp;block)
-  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_line</span>, rs, &amp;block) <span style="color:#080;font-weight:bold">unless</span> block
-  <span style="color:#080;font-weight:bold">return</span> block.call(<span style="color:#069">self</span>) <span style="color:#080;font-weight:bold">if</span> rs.nil?
-  rs.__to_str
-  offset = <span style="color:#00D">0</span>
-  rs_len = rs.length
-  this = dup
-  <span style="color:#080;font-weight:bold">while</span> pos = this.index(rs, offset)
-    block.call(this[offset, pos + rs_len - offset])
-    offset = pos + rs_len
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_line</span>(separator = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>, &amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_line</span>, separator) <span style="color:#080;font-weight:bold">unless</span> block
+
+  <span style="color:#080;font-weight:bold">if</span> separator.nil?
+    block.call(<span style="color:#069">self</span>)
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>
   <span style="color:#080;font-weight:bold">end</span>
-  block.call(this[offset, this.size - offset]) <span style="color:#080;font-weight:bold">if</span> this.size &gt; offset
+  raise <span style="color:#036;font-weight:bold">TypeError</span> <span style="color:#080;font-weight:bold">unless</span> separator.is_a?(<span style="color:#036;font-weight:bold">String</span>)
+
+  paragraph_mode = <span style="color:#069">false</span>
+  <span style="color:#080;font-weight:bold">if</span> separator.empty?
+    paragraph_mode = <span style="color:#069">true</span>
+    separator = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+  start = <span style="color:#00D">0</span>
+  string = dup
+  self_len = length
+  sep_len = separator.length
+  should_yield_subclass_instances = <span style="color:#069">self</span>.class != <span style="color:#036;font-weight:bold">String</span>
+
+  <span style="color:#080;font-weight:bold">while</span> (pointer = string.index(separator, start))
+    pointer += sep_len
+    pointer += <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">while</span> paragraph_mode &amp;&amp; string[pointer] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>
+    <span style="color:#080;font-weight:bold">if</span> should_yield_subclass_instances
+      block.call(<span style="color:#069">self</span>.class.new(string[start, pointer - start]))
+    <span style="color:#080;font-weight:bold">else</span>
+      block.call(string[start, pointer - start])
+    <span style="color:#080;font-weight:bold">end</span>
+    start = pointer
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span> <span style="color:#080;font-weight:bold">if</span> start == self_len
+
+  <span style="color:#080;font-weight:bold">if</span> should_yield_subclass_instances
+    block.call(<span style="color:#069">self</span>.class.new(string[start, self_len - start]))
+  <span style="color:#080;font-weight:bold">else</span>
+    block.call(string[start, self_len - start])
+  <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#069">self</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
@@ -6972,16 +6783,16 @@ and pass the respective line.</p>
       <pre class="lines">
 
 
-1433
-1434
-1435
-1436
-1437
-1438
-1439</pre>
+1751
+1752
+1753
+1754
+1755
+1756
+1757</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1433</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1751</span>
 
 static mrb_value
 mrb_str_empty_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -7049,17 +6860,6 @@ mrb_str_empty_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
 224
 225
 226
@@ -7072,10 +6872,21 @@ mrb_str_empty_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 233
 234
 235
-236</pre>
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 213</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 224</span>
 
 static mrb_value
 mrb_str_end_with(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -7160,20 +6971,20 @@ mrb_str_end_with(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-1448
-1449
-1450
-1451
-1452
-1453
-1454
-1455
-1456
-1457
-1458</pre>
+1766
+1767
+1768
+1769
+1770
+1771
+1772
+1773
+1774
+1775
+1776</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1448</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1766</span>
 
 static mrb_value
 mrb_str_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -7182,7 +6993,7 @@ mrb_str_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   mrb_bool eql_p;
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;str2);
-  eql_p = (mrb_type(str2) == <span style="color:#036;font-weight:bold">MRB_TT_STRING</span>) &amp;&amp; str_eql(mrb, <span style="color:#069">self</span>, str2);
+  eql_p = (mrb_string_p(str2)) &amp;&amp; str_eql(mrb, <span style="color:#069">self</span>, str2);
 
   <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(eql_p);
 }</pre>
@@ -7194,34 +7005,73 @@ mrb_str_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="getbyte-instance_method">
   
-    #<strong>getbyte</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>getbyte</strong>(index)  &#x21d2; <tt>0 .. 255</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>returns the <i>index</i>th byte as an integer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>0 .. 255</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre>
+2785
+2786
+2787
+2788
+2789
+2790
+2791
+2792
+2793
+2794
+2795
+2796
+2797</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 8</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2785</span>
 
 static mrb_value
 mrb_str_getbyte(mrb_state *mrb, mrb_value str)
@@ -7244,7 +7094,7 @@ mrb_str_getbyte(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="gsub-instance_method">
   
-    #<strong>gsub</strong>(*args, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>gsub</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -7286,39 +7136,39 @@ final value.</p>
       <pre class="lines">
 
 
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
 87
 88
-89</pre>
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 87</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">gsub</span>(*args, &amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:gsub</span>, *args) <span style="color:#080;font-weight:bold">if</span> args.length == <span style="color:#00D">1</span> &amp;&amp; !block
@@ -7358,7 +7208,7 @@ final value.</p>
       <div class="method_details ">
   <h3 class="signature " id="gsub!-instance_method">
   
-    #<strong>gsub!</strong>(*args, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>gsub!</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -7400,16 +7250,16 @@ Call block (if given) for each match and replace
       <pre class="lines">
 
 
-98
-99
-100
-101
-102
-103
-104</pre>
+125
+126
+127
+128
+129
+130
+131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 125</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">gsub!</span>(*args, &amp;block)
   raise <span style="color:#036;font-weight:bold">FrozenError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't modify frozen String</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> frozen?
@@ -7477,15 +7327,15 @@ Call block (if given) for each match and replace
       <pre class="lines">
 
 
-1489
-1490
-1491
-1492
-1493
-1494</pre>
+1807
+1808
+1809
+1810
+1811
+1812</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1489</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1807</span>
 
 static mrb_value
 mrb_str_hash_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -7501,7 +7351,7 @@ mrb_str_hash_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="hex-instance_method">
   
-    #<strong>hex</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>hex</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -7513,14 +7363,14 @@ mrb_str_hash_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-824
-825
-826
-827
-828</pre>
+834
+835
+836
+837
+838</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 824</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 834</span>
 
 static mrb_value
 mrb_str_hex(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -7635,19 +7485,19 @@ character.</p>
       <pre class="lines">
 
 
-1509
-1510
-1511
-1512
-1513
-1514
-1515
-1516
-1517
-1518</pre>
+1827
+1828
+1829
+1830
+1831
+1832
+1833
+1834
+1835
+1836</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1509</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1827</span>
 
 static mrb_value
 mrb_str_include(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -7667,13 +7517,7 @@ mrb_str_include(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="index-instance_method">
   
-    
-      <span class="overload">#<strong>index</strong>(substring[, offset])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-    
-      <span class="overload">#<strong>index</strong>(fixnum[, offset])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-    
-      <span class="overload">#<strong>index</strong>(regexp[, offset])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-    
+    #<strong>index</strong>(substring[, offset])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> 
   
 
   
@@ -7682,31 +7526,21 @@ mrb_str_include(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the index of the first occurrence of the given
-<i>substring</i>,
-character (<i>fixnum</i>), or pattern (<i>regexp</i>) in <i>str</i>.
-Returns
-<code>nil</code> if not found.
+<i>substring</i>. Returns <code>nil</code> if not found.
 If the second parameter is present, it
 specifies the position in the string to begin the search.</p>
 
-<p>“hello”.index(‘e’)             #=&gt; 1
+<p>“hello”.index(‘l’)             #=&gt; 2
    “hello”.index(‘lo’)            #=&gt; 3
    “hello”.index(‘a’)             #=&gt; nil
-   “hello”.index(101)             #=&gt; 1(101=0x65=’e’)
-   “hello”.index(/[aeiou]/, -3)   #=&gt; 4</p>
+   “hello”.index(‘l’, -2)         #=&gt; 3</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <p class="tag_title">Overloads:</p>
-  <ul class="overload">
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>index</strong>(substring[, offset])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-        <div class="docstring">
+  <div class="docstring">
   <div class="discussion">
     
 
@@ -7732,71 +7566,6 @@ specifies the position in the string to begin the search.</p>
 </div>
 
 
-      </li>
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>index</strong>(fixnum[, offset])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-      </li>
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>index</strong>(regexp[, offset])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-      </li>
-    
-  </ul>
 
 
 </div>
@@ -7807,109 +7576,51 @@ specifies the position in the string to begin the search.</p>
       <pre class="lines">
 
 
-1541
-1542
-1543
-1544
-1545
-1546
-1547
-1548
-1549
-1550
-1551
-1552
-1553
-1554
-1555
-1556
-1557
-1558
-1559
-1560
-1561
-1562
-1563
-1564
-1565
-1566
-1567
-1568
-1569
-1570
-1571
-1572
-1573
-1574
-1575
-1576
-1577
-1578
-1579
-1580
-1581
-1582
-1583
-1584
-1585
-1586
-1587
-1588
-1589
-1590
-1591</pre>
+1853
+1854
+1855
+1856
+1857
+1858
+1859
+1860
+1861
+1862
+1863
+1864
+1865
+1866
+1867
+1868
+1869
+1870
+1871
+1872
+1873
+1874</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1541</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1853</span>
 
 static mrb_value
 mrb_str_index_m(mrb_state *mrb, mrb_value str)
 {
-  mrb_value *argv;
-  mrb_int argc;
   mrb_value sub;
-  mrb_int pos, clen;
+  mrb_int pos;
 
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*!</span><span style="color:#710">&quot;</span></span>, &amp;argv, &amp;argc);
-  <span style="color:#080;font-weight:bold">if</span> (argc == <span style="color:#00D">2</span>) {
-    mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">oi</span><span style="color:#710">&quot;</span></span>, &amp;sub, &amp;pos);
-  }
-  <span style="color:#080;font-weight:bold">else</span> {
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">S|i</span><span style="color:#710">&quot;</span></span>, &amp;sub, &amp;pos) == <span style="color:#00D">1</span>) {
     pos = <span style="color:#00D">0</span>;
-    <span style="color:#080;font-weight:bold">if</span> (argc &gt; <span style="color:#00D">0</span>)
-      sub = argv[<span style="color:#00D">0</span>];
-    <span style="color:#080;font-weight:bold">else</span>
-      sub = mrb_nil_value();
   }
-  mrb_regexp_check(mrb, sub);
-  clen = RSTRING_CHAR_LEN(str);
-  <span style="color:#080;font-weight:bold">if</span> (pos &lt; <span style="color:#00D">0</span>) {
+  <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (pos &lt; <span style="color:#00D">0</span>) {
+    mrb_int clen = RSTRING_CHAR_LEN(str);
     pos += clen;
     <span style="color:#080;font-weight:bold">if</span> (pos &lt; <span style="color:#00D">0</span>) {
       <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
     }
   }
-  <span style="color:#080;font-weight:bold">if</span> (pos &gt; clen) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
-  pos = chars2bytes(str, <span style="color:#00D">0</span>, pos);
-
-  switch (mrb_type(sub)) {
-    <span style="color:#606">default</span>: {
-      mrb_value tmp;
-
-      tmp = mrb_check_string_type(mrb, sub);
-      <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(tmp)) {
-        mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">type mismatch: %S given</span><span style="color:#710">&quot;</span></span>, sub);
-      }
-      sub = tmp;
-    }
-    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* fall through *</span><span style="color:#404">/</span></span>
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_STRING</span>:
-      pos = str_index_str(mrb, str, sub, pos);
-      <span style="color:#080;font-weight:bold">break</span>;
-  }
+  pos = str_index_str_by_char(mrb, str, sub, pos);
 
   <span style="color:#080;font-weight:bold">if</span> (pos == <span style="color:#00D">-1</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
-  pos = bytes2chars(RSTRING_PTR(str), pos);
   BYTES_ALIGN_CHECK(pos);
   <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(pos);
 }</pre>
@@ -7973,17 +7684,17 @@ mrb_str_index_m(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-1602
-1603
-1604
-1605
-1606
-1607
-1608
-1609</pre>
+1885
+1886
+1887
+1888
+1889
+1890
+1891
+1892</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1602</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1885</span>
 
 static mrb_value
 mrb_str_replace(mrb_state *mrb, mrb_value str)
@@ -8001,7 +7712,7 @@ mrb_str_replace(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="insert-instance_method">
   
-    #<strong>insert</strong>(idx, str)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>insert</strong>(idx, str)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -8125,141 +7836,19 @@ with special characters escaped.</p>
       <pre class="lines">
 
 
-2619
-2620
-2621
-2622
-2623
-2624
-2625
-2626
-2627
-2628
-2629
-2630
-2631
-2632
-2633
-2634
-2635
-2636
-2637
-2638
-2639
-2640
-2641
-2642
-2643
-2644
-2645
-2646
-2647
-2648
-2649
-2650
-2651
-2652
-2653
-2654
-2655
-2656
-2657
-2658
-2659
-2660
-2661
-2662
-2663
-2664
-2665
-2666
-2667
-2668
-2669
-2670
-2671
-2672
-2673
-2674
-2675
-2676
-2677
-2678
-2679
-2680
-2681
-2682
-2683
-2684</pre>
+2750
+2751
+2752
+2753
+2754</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 2619</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2750</span>
 
 mrb_value
 mrb_str_inspect(mrb_state *mrb, mrb_value str)
 {
-  const char *p, *pend;
-  char buf[<span style="color:#036;font-weight:bold">CHAR_ESC_LEN</span> + <span style="color:#00D">1</span>];
-  mrb_value result = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\&quot;</span><span style="color:#710">&quot;</span></span>);
-
-  p = RSTRING_PTR(str); pend = RSTRING_END(str);
-  <span style="color:#080;font-weight:bold">for</span> (;p &lt; pend; p++) {
-    unsigned char c, cc;
-<span style="color:#777">#ifdef MRB_UTF8_STRING</span>
-    mrb_int clen;
-
-    clen = utf8len(p, pend);
-    <span style="color:#080;font-weight:bold">if</span> (clen &gt; <span style="color:#00D">1</span>) {
-      mrb_int i;
-
-      <span style="color:#080;font-weight:bold">for</span> (i=<span style="color:#00D">0</span>; i&lt;clen; i++) {
-        buf[i] = p[i];
-      }
-      mrb_str_cat(mrb, result, buf, clen);
-      p += clen-<span style="color:#00D">1</span>;
-      continue;
-    }
-<span style="color:#777">#endif</span>
-    c = *p;
-    <span style="color:#080;font-weight:bold">if</span> (c == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&quot;</span><span style="color:#710">'</span></span>|| c == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span> || (c == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">#</span><span style="color:#710">'</span></span> &amp;&amp; IS_EVSTR(p+<span style="color:#00D">1</span>, pend))) {
-      buf[<span style="color:#00D">0</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>; buf[<span style="color:#00D">1</span>] = c;
-      mrb_str_cat(mrb, result, buf, <span style="color:#00D">2</span>);
-      continue;
-    }
-    <span style="color:#080;font-weight:bold">if</span> (ISPRINT(c)) {
-      buf[<span style="color:#00D">0</span>] = c;
-      mrb_str_cat(mrb, result, buf, <span style="color:#00D">1</span>);
-      continue;
-    }
-    switch (c) {
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\n</span><span style="color:#404">'</span></span>: cc = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">n</span><span style="color:#710">'</span></span>; <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\r</span><span style="color:#404">'</span></span>: cc = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">r</span><span style="color:#710">'</span></span>; <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\t</span><span style="color:#404">'</span></span>: cc = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">t</span><span style="color:#710">'</span></span>; <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\f</span><span style="color:#404">'</span></span>: cc = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">f</span><span style="color:#710">'</span></span>; <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>13</span><span style="color:#404">'</span></span>: cc = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">v</span><span style="color:#710">'</span></span>; <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>10</span><span style="color:#404">'</span></span>: cc = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">b</span><span style="color:#710">'</span></span>; <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>\0</span><span>07</span><span style="color:#404">'</span></span>: cc = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">a</span><span style="color:#710">'</span></span>; <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">033</span>: cc = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">e</span><span style="color:#710">'</span></span>; <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#606">default</span>: cc = <span style="color:#00D">0</span>; <span style="color:#080;font-weight:bold">break</span>;
-    }
-    <span style="color:#080;font-weight:bold">if</span> (cc) {
-      buf[<span style="color:#00D">0</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-      buf[<span style="color:#00D">1</span>] = (char)cc;
-      mrb_str_cat(mrb, result, buf, <span style="color:#00D">2</span>);
-      continue;
-    }
-    <span style="color:#080;font-weight:bold">else</span> {
-      buf[<span style="color:#00D">0</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#b0b">\\</span><span style="color:#710">'</span></span>;
-      buf[<span style="color:#00D">1</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">x</span><span style="color:#710">'</span></span>;
-      buf[<span style="color:#00D">3</span>] = mrb_digitmap[c % <span style="color:#00D">16</span>]; c /= <span style="color:#00D">16</span>;
-      buf[<span style="color:#00D">2</span>] = mrb_digitmap[c % <span style="color:#00D">16</span>];
-      mrb_str_cat(mrb, result, buf, <span style="color:#00D">4</span>);
-      continue;
-    }
-  }
-  mrb_str_cat_lit(mrb, result, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\&quot;</span><span style="color:#710">&quot;</span></span>);
-
-  <span style="color:#080;font-weight:bold">return</span> result;
+  <span style="color:#080;font-weight:bold">return</span> str_escape(mrb, str, <span style="color:#069">TRUE</span>);
 }</pre>
     </td>
   </tr>
@@ -8270,9 +7859,9 @@ mrb_str_inspect(mrb_state *mrb, mrb_value str)
   <h3 class="signature " id="intern-instance_method">
   
     
-      <span class="overload">#<strong>intern</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>intern</strong>  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">#<strong>to_sym</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>to_sym</strong>  &#x21d2; <tt>Object</tt> </span>
     
   
 
@@ -8309,14 +7898,14 @@ symbol if it did not previously exist. See <code>Symbol#id2name</code>.</p>
       <pre class="lines">
 
 
-1652
-1653
-1654
-1655
-1656</pre>
+1935
+1936
+1937
+1938
+1939</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1652</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1935</span>
 
 <span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_str_intern(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -8332,7 +7921,7 @@ mrb_str_intern(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <h3 class="signature " id="last-instance_method">
   
     
-      <span class="overload">#<strong>last</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>last</strong>  &#x21d2; <tt>Object</tt> </span>
     
       <span class="overload">#<strong>last</strong>(n)  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt> </span>
     
@@ -8364,7 +7953,7 @@ the end of the range even if #exclude_end? is +true+.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>last</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+        <span class="signature">#<strong>last</strong>  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -8380,7 +7969,7 @@ the end of the range even if #exclude_end? is +true+.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -8435,22 +8024,22 @@ the end of the range even if #exclude_end? is +true+.</p>
       <pre class="lines">
 
 
+76
+77
+78
+79
+80
+81
+82
+83
 84
 85
 86
 87
-88
-89
-90
-91
-92
-93
-94
-95
-96</pre>
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-range-ext/src/range.c', line 84</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-range-ext/src/range.c', line 76</span>
 
 static mrb_value
 range_last(mrb_state *mrb, mrb_value range)
@@ -8524,15 +8113,15 @@ range_last(mrb_state *mrb, mrb_value range)
       <pre class="lines">
 
 
-794
-795
-796
-797
-798
-799</pre>
+917
+918
+919
+920
+921
+922</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 794</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 917</span>
 
 static mrb_value
 mrb_str_size(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -8548,7 +8137,7 @@ mrb_str_size(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="lines-instance_method">
   
-    #<strong>lines</strong>(&amp;blk)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>lines</strong>(&amp;blk)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -8581,18 +8170,18 @@ mrb_str_size(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-361
-362
-363
-364
 365
 366
 367
 368
-369</pre>
+369
+370
+371
+372
+373</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/mrblib/string.rb', line 361</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/mrblib/string.rb', line 365</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">lines</span>(&amp;blk)
   lines = <span style="color:#069">self</span>.__lines
@@ -8611,7 +8200,7 @@ mrb_str_size(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="ljust-instance_method">
   
-    #<strong>ljust</strong>(idx, padstr = &#39; &#39;)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>ljust</strong>(idx, padstr = &#39; &#39;)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -8684,7 +8273,7 @@ mrb_str_size(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="lstrip-instance_method">
   
-    #<strong>lstrip</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>lstrip</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -8739,7 +8328,7 @@ mrb_str_size(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="lstrip!-instance_method">
   
-    #<strong>lstrip!</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>lstrip!</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -8804,69 +8393,9 @@ change was made. See also <code>String#rstrip!</code> and
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="match-instance_method">
+  <h3 class="signature " id="next-instance_method">
   
-    #<strong>match</strong>(re, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>ISO 15.2.10.5.27</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 253</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">match</span>(re, &amp;block)
-  <span style="color:#080;font-weight:bold">if</span> <span style="color:#036;font-weight:bold">String</span> === re
-    <span style="color:#080;font-weight:bold">if</span> <span style="color:#036;font-weight:bold">Object</span>.const_defined?(<span style="color:#A60">:Regexp</span>)
-      r = <span style="color:#036;font-weight:bold">Regexp</span>.new(re)
-      r.match(<span style="color:#069">self</span>, &amp;block)
-    <span style="color:#080;font-weight:bold">else</span>
-      raise <span style="color:#036;font-weight:bold">NotImplementedError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">String#match needs Regexp class</span><span style="color:#710">&quot;</span></span>
-    <span style="color:#080;font-weight:bold">end</span>
-  <span style="color:#080;font-weight:bold">else</span>
-    re.match(<span style="color:#069">self</span>, &amp;block)
-  <span style="color:#080;font-weight:bold">end</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="oct-instance_method">
-  
-    #<strong>oct</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>next</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -8878,14 +8407,276 @@ change was made. See also <code>String#rstrip!</code> and
       <pre class="lines">
 
 
-830
-831
-832
-833
-834</pre>
+986
+987
+988
+989
+990
+991
+992
+993
+994</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 830</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 986</span>
+
+static mrb_value
+mrb_str_succ(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value str;
+
+  str = mrb_str_dup(mrb, <span style="color:#069">self</span>);
+  mrb_str_succ_bang(mrb, str);
+  <span style="color:#080;font-weight:bold">return</span> str;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="next!-instance_method">
+  
+    #<strong>succ</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns next sequence of the string;</p>
+
+<p>a = “abc”
+   a.succ    #=&gt; “abd”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+908
+909
+910
+911
+912
+913
+914
+915
+916
+917
+918
+919
+920
+921
+922
+923
+924
+925
+926
+927
+928
+929
+930
+931
+932
+933
+934
+935
+936
+937
+938
+939
+940
+941
+942
+943
+944
+945
+946
+947
+948
+949
+950
+951
+952
+953
+954
+955
+956
+957
+958
+959
+960
+961
+962
+963
+964
+965
+966
+967
+968
+969
+970
+971
+972
+973
+974
+975
+976
+977
+978
+979
+980
+981
+982
+983
+984</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 908</span>
+
+static mrb_value
+mrb_str_succ_bang(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value result;
+  unsigned char *p, *e, *b, *t;
+  const char *prepend;
+  struct <span style="color:#036;font-weight:bold">RString</span> *s = mrb_str_ptr(<span style="color:#069">self</span>);
+  mrb_int l;
+
+  <span style="color:#080;font-weight:bold">if</span> (RSTRING_LEN(<span style="color:#069">self</span>) == <span style="color:#00D">0</span>)
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+
+  mrb_str_modify(mrb, s);
+  l = RSTRING_LEN(<span style="color:#069">self</span>);
+  b = p = (unsigned char*) RSTRING_PTR(<span style="color:#069">self</span>);
+  t = e = p + l;
+  *(e--) = <span style="color:#00D">0</span>;
+
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> find trailing ascii/number
+  <span style="color:#080;font-weight:bold">while</span> (e &gt;= b) {
+    <span style="color:#080;font-weight:bold">if</span> (ISALNUM(*e))
+      <span style="color:#080;font-weight:bold">break</span>;
+    e--;
+  }
+  <span style="color:#080;font-weight:bold">if</span> (e &lt; b) {
+    e = p + l - <span style="color:#00D">1</span>;
+    result = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>);
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> find leading letter of the ascii/number
+    b = e;
+    <span style="color:#080;font-weight:bold">while</span> (b &gt; p) {
+      <span style="color:#080;font-weight:bold">if</span> (!ISALNUM(*b) || (ISALNUM(*b) &amp;&amp; *b != <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">9</span><span style="color:#710">'</span></span> &amp;&amp; *b != <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">z</span><span style="color:#710">'</span></span> &amp;&amp; *b != <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Z</span><span style="color:#710">'</span></span>))
+        <span style="color:#080;font-weight:bold">break</span>;
+      b--;
+    }
+    <span style="color:#080;font-weight:bold">if</span> (!ISALNUM(*b))
+      b++;
+    result = mrb_str_new(mrb, (char*) p, b - p);
+  }
+
+  <span style="color:#080;font-weight:bold">while</span> (e &gt;= b) {
+    <span style="color:#080;font-weight:bold">if</span> (!ISALNUM(*e)) {
+      <span style="color:#080;font-weight:bold">if</span> (*e == <span style="color:#00D">0xff</span>) {
+        mrb_str_cat_lit(mrb, result, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\x01</span><span style="color:#710">&quot;</span></span>);
+        (*e) = <span style="color:#00D">0</span>;
+      }
+      <span style="color:#080;font-weight:bold">else</span>
+        (*e)++;
+      <span style="color:#080;font-weight:bold">break</span>;
+    }
+    prepend = <span style="color:#036;font-weight:bold">NULL</span>;
+    <span style="color:#080;font-weight:bold">if</span> (*e == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">9</span><span style="color:#710">'</span></span>) {
+      <span style="color:#080;font-weight:bold">if</span> (e == b) prepend = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">1</span><span style="color:#710">&quot;</span></span>;
+      *e = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">0</span><span style="color:#710">'</span></span>;
+    }
+    <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (*e == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">z</span><span style="color:#710">'</span></span>) {
+      <span style="color:#080;font-weight:bold">if</span> (e == b) prepend = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>;
+      *e = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">a</span><span style="color:#710">'</span></span>;
+    }
+    <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (*e == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Z</span><span style="color:#710">'</span></span>) {
+      <span style="color:#080;font-weight:bold">if</span> (e == b) prepend = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">A</span><span style="color:#710">&quot;</span></span>;
+      *e = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">A</span><span style="color:#710">'</span></span>;
+    }
+    <span style="color:#080;font-weight:bold">else</span> {
+      (*e)++;
+      <span style="color:#080;font-weight:bold">break</span>;
+    }
+    <span style="color:#080;font-weight:bold">if</span> (prepend) mrb_str_cat_cstr(mrb, result, prepend);
+    e--;
+  }
+  result = mrb_str_cat(mrb, result, (char*) b, t - b);
+  l = RSTRING_LEN(result);
+  mrb_str_resize(mrb, <span style="color:#069">self</span>, l);
+  memcpy(RSTRING_PTR(<span style="color:#069">self</span>), RSTRING_PTR(result), l);
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="oct-instance_method">
+  
+    #<strong>oct</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+840
+841
+842
+843
+844</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 840</span>
 
 static mrb_value
 mrb_str_oct(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -8900,7 +8691,7 @@ mrb_str_oct(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="ord-instance_method">
   
-    #<strong>ord</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>ord</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -8912,16 +8703,16 @@ mrb_str_oct(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-1050
-1051
-1052
 1053
 1054
 1055
-1056</pre>
+1056
+1057
+1058
+1059</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1050</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 1053</span>
 
 static mrb_value
 mrb_str_ord(mrb_state* mrb, mrb_value str)
@@ -8938,7 +8729,7 @@ mrb_str_ord(mrb_state* mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="partition-instance_method">
   
-    #<strong>partition</strong>(sep)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>partition</strong>(sep)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -9007,7 +8798,7 @@ mrb_str_ord(mrb_state* mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="prepend-instance_method">
   
-    #<strong>prepend</strong>(arg)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>prepend</strong>(arg)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -9038,13 +8829,13 @@ mrb_str_ord(mrb_state* mrb, mrb_value str)
       <pre class="lines">
 
 
-345
-346
-347
-348</pre>
+349
+350
+351
+352</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/mrblib/string.rb', line 345</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/mrblib/string.rb', line 349</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">prepend</span>(arg)
   <span style="color:#069">self</span>[<span style="color:#00D">0</span>, <span style="color:#00D">0</span>] = arg
@@ -9110,17 +8901,17 @@ mrb_str_ord(mrb_state* mrb, mrb_value str)
       <pre class="lines">
 
 
-1602
-1603
-1604
-1605
-1606
-1607
-1608
-1609</pre>
+1885
+1886
+1887
+1888
+1889
+1890
+1891
+1892</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1602</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1885</span>
 
 static mrb_value
 mrb_str_replace(mrb_state *mrb, mrb_value str)
@@ -9191,16 +8982,16 @@ mrb_str_replace(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-1771
-1772
-1773
-1774
-1775
-1776
-1777</pre>
+2051
+2052
+2053
+2054
+2055
+2056
+2057</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1771</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2051</span>
 
 static mrb_value
 mrb_str_reverse(mrb_state *mrb, mrb_value str)
@@ -9268,111 +9059,81 @@ mrb_str_reverse(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-1709
-1710
-1711
-1712
-1713
-1714
-1715
-1716
-1717
-1718
-1719
-1720
-1721
-1722
-1723
-1724
-1725
-1726
-1727
-1728
-1729
-1730
-1731
-1732
-1733
-1734
-1735
-1736
-1737
-1738
-1739
-1740
-1741
-1742
-1743
-1744
-1745
-1746
-1747
-1748
-1749
-1750
-1751
-1752
-1753
-1754
-1755
-1756
-1757
-1758
-1759</pre>
+2004
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+2024
+2025
+2026
+2027
+2028
+2029
+2030
+2031
+2032
+2033
+2034
+2035
+2036
+2037
+2038
+2039</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1709</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2004</span>
 
 static mrb_value
 mrb_str_reverse_bang(mrb_state *mrb, mrb_value str)
 {
+  struct <span style="color:#036;font-weight:bold">RString</span> *s = mrb_str_ptr(str);
+  char *p, *e;
+
 <span style="color:#777">#ifdef MRB_UTF8_STRING</span>
   mrb_int utf8_len = RSTRING_CHAR_LEN(str);
-  mrb_int len = RSTRING_LEN(str);
+  mrb_int len = RSTR_LEN(s);
 
-  <span style="color:#080;font-weight:bold">if</span> (utf8_len == len) goto bytes;
-  <span style="color:#080;font-weight:bold">if</span> (utf8_len &gt; <span style="color:#00D">1</span>) {
-    char *buf;
-    char *p, *e, *r;
-
-    mrb_str_modify(mrb, mrb_str_ptr(str));
-    len = RSTRING_LEN(str);
-    buf = (char*)mrb_malloc(mrb, (size_t)len);
-    p = buf;
-    e = buf + len;
-
-    memcpy(buf, RSTRING_PTR(str), len);
-    r = RSTRING_PTR(str) + len;
-
+  <span style="color:#080;font-weight:bold">if</span> (utf8_len &lt; <span style="color:#00D">2</span>) <span style="color:#080;font-weight:bold">return</span> str;
+  <span style="color:#080;font-weight:bold">if</span> (utf8_len &lt; len) {
+    mrb_str_modify(mrb, s);
+    p = RSTR_PTR(s);
+    e = p + RSTR_LEN(s);
     <span style="color:#080;font-weight:bold">while</span> (p&lt;e) {
       mrb_int clen = utf8len(p, e);
-      r -= clen;
-      memcpy(r, p, clen);
+      str_reverse(p, p + clen - <span style="color:#00D">1</span>);
       p += clen;
     }
-    mrb_free(mrb, buf);
+    goto bytes;
+  }
+<span style="color:#777">#endif</span>
+
+  <span style="color:#080;font-weight:bold">if</span> (RSTR_LEN(s) &gt; <span style="color:#00D">1</span>) {
+    mrb_str_modify(mrb, s);
+    goto bytes;
   }
   <span style="color:#080;font-weight:bold">return</span> str;
 
  <span style="color:#606">bytes</span>:
-<span style="color:#777">#endif</span>
-  {
-    struct <span style="color:#036;font-weight:bold">RString</span> *s = mrb_str_ptr(str);
-    char *p, *e;
-    char c;
-
-    mrb_str_modify(mrb, s);
-    <span style="color:#080;font-weight:bold">if</span> (RSTR_LEN(s) &gt; <span style="color:#00D">1</span>) {
-      p = RSTR_PTR(s);
-      e = p + RSTR_LEN(s) - <span style="color:#00D">1</span>;
-      <span style="color:#080;font-weight:bold">while</span> (p &lt; e) {
-      c = *p;
-      *p++ = *e;
-      *e-- = c;
-      }
-    }
-    <span style="color:#080;font-weight:bold">return</span> str;
-  }
+  p = RSTR_PTR(s);
+  e = p + RSTR_LEN(s) - <span style="color:#00D">1</span>;
+  str_reverse(p, e);
+  <span style="color:#080;font-weight:bold">return</span> str;
 }</pre>
     </td>
   </tr>
@@ -9382,13 +9143,7 @@ mrb_str_reverse_bang(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="rindex-instance_method">
   
-    
-      <span class="overload">#<strong>rindex</strong>(substring[, fixnum])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-    
-      <span class="overload">#<strong>rindex</strong>(fixnum[, fixnum])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-    
-      <span class="overload">#<strong>rindex</strong>(regexp[, fixnum])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-    
+    #<strong>rindex</strong>(substring[, offset])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> 
   
 
   
@@ -9396,30 +9151,22 @@ mrb_str_reverse_bang(mrb_state *mrb, mrb_value str)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the index of the last occurrence of the given <i>substring</i>,
-character (<i>fixnum</i>), or pattern (<i>regexp</i>) in <i>str</i>. Returns
-<code>nil</code> if not found. If the second parameter is present, it
-specifies the position in the string to end the search—characters beyond
-this point will not be considered.</p>
+    <p>Returns the index of the last occurrence of the given <i>substring</i>.
+Returns <code>nil</code> if not found. If the second parameter is
+present, it specifies the position in the string to end the
+search—characters beyond this point will not be considered.</p>
 
 <p>“hello”.rindex(‘e’)             #=&gt; 1
    “hello”.rindex(‘l’)             #=&gt; 3
    “hello”.rindex(‘a’)             #=&gt; nil
-   “hello”.rindex(101)             #=&gt; 1
-   “hello”.rindex(/[aeiou]/, -2)   #=&gt; 1</p>
+   “hello”.rindex(‘l’, 2)          #=&gt; 2</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <p class="tag_title">Overloads:</p>
-  <ul class="overload">
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>rindex</strong>(substring[, fixnum])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-        <div class="docstring">
+  <div class="docstring">
   <div class="discussion">
     
 
@@ -9445,71 +9192,6 @@ this point will not be considered.</p>
 </div>
 
 
-      </li>
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>rindex</strong>(fixnum[, fixnum])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-      </li>
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>rindex</strong>(regexp[, fixnum])  &#x21d2; <tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt><sup>?</sup> </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-      </li>
-    
-  </ul>
 
 
 </div>
@@ -9520,116 +9202,64 @@ this point will not be considered.</p>
       <pre class="lines">
 
 
-1798
-1799
-1800
-1801
-1802
-1803
-1804
-1805
-1806
-1807
-1808
-1809
-1810
-1811
-1812
-1813
-1814
-1815
-1816
-1817
-1818
-1819
-1820
-1821
-1822
-1823
-1824
-1825
-1826
-1827
-1828
-1829
-1830
-1831
-1832
-1833
-1834
-1835
-1836
-1837
-1838
-1839
-1840
-1841
-1842
-1843
-1844
-1845
-1846
-1847
-1848
-1849
-1850</pre>
+2074
+2075
+2076
+2077
+2078
+2079
+2080
+2081
+2082
+2083
+2084
+2085
+2086
+2087
+2088
+2089
+2090
+2091
+2092
+2093
+2094
+2095
+2096
+2097
+2098
+2099
+2100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1798</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2074</span>
 
 static mrb_value
 mrb_str_rindex(mrb_state *mrb, mrb_value str)
 {
-  mrb_value *argv;
-  mrb_int argc;
   mrb_value sub;
   mrb_int pos, len = RSTRING_CHAR_LEN(str);
 
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*!</span><span style="color:#710">&quot;</span></span>, &amp;argv, &amp;argc);
-  <span style="color:#080;font-weight:bold">if</span> (argc == <span style="color:#00D">2</span>) {
-    mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">oi</span><span style="color:#710">&quot;</span></span>, &amp;sub, &amp;pos);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">S|i</span><span style="color:#710">&quot;</span></span>, &amp;sub, &amp;pos) == <span style="color:#00D">1</span>) {
+    pos = len;
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
     <span style="color:#080;font-weight:bold">if</span> (pos &lt; <span style="color:#00D">0</span>) {
       pos += len;
       <span style="color:#080;font-weight:bold">if</span> (pos &lt; <span style="color:#00D">0</span>) {
-        mrb_regexp_check(mrb, sub);
         <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
       }
     }
     <span style="color:#080;font-weight:bold">if</span> (pos &gt; len) pos = len;
   }
-  <span style="color:#080;font-weight:bold">else</span> {
-    pos = len;
-    <span style="color:#080;font-weight:bold">if</span> (argc &gt; <span style="color:#00D">0</span>)
-      sub = argv[<span style="color:#00D">0</span>];
-    <span style="color:#080;font-weight:bold">else</span>
-      sub = mrb_nil_value();
-  }
   pos = chars2bytes(str, <span style="color:#00D">0</span>, pos);
-  mrb_regexp_check(mrb, sub);
-
-  switch (mrb_type(sub)) {
-    <span style="color:#606">default</span>: {
-      mrb_value tmp;
-
-      tmp = mrb_check_string_type(mrb, sub);
-      <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(tmp)) {
-        mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">type mismatch: %S given</span><span style="color:#710">&quot;</span></span>, sub);
-      }
-      sub = tmp;
-    }
-     <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* fall through *</span><span style="color:#404">/</span></span>
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_STRING</span>:
-      pos = str_rindex(mrb, str, sub, pos);
-      <span style="color:#080;font-weight:bold">if</span> (pos &gt;= <span style="color:#00D">0</span>) {
-        pos = bytes2chars(RSTRING_PTR(str), pos);
-        BYTES_ALIGN_CHECK(pos);
-        <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(pos);
-      }
-      <span style="color:#080;font-weight:bold">break</span>;
-
-  } /* <span style="color:#080;font-weight:bold">end</span> of switch (TYPE(sub)) *<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">
-  return mrb_nil_value();
-}</span></span></pre>
+  pos = str_rindex(mrb, str, sub, pos);
+  <span style="color:#080;font-weight:bold">if</span> (pos &gt;= <span style="color:#00D">0</span>) {
+    pos = bytes2chars(RSTRING_PTR(str), RSTRING_LEN(str), pos);
+    BYTES_ALIGN_CHECK(pos);
+    <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(pos);
+  }
+  <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
+}</pre>
     </td>
   </tr>
 </table>
@@ -9638,7 +9268,7 @@ mrb_str_rindex(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="rjust-instance_method">
   
-    #<strong>rjust</strong>(idx, padstr = &#39; &#39;)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>rjust</strong>(idx, padstr = &#39; &#39;)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -9711,7 +9341,7 @@ mrb_str_rindex(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="rpartition-instance_method">
   
-    #<strong>rpartition</strong>(sep)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>rpartition</strong>(sep)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -9780,7 +9410,7 @@ mrb_str_rindex(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="rstrip-instance_method">
   
-    #<strong>rstrip</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>rstrip</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -9835,7 +9465,7 @@ mrb_str_rindex(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="rstrip!-instance_method">
   
-    #<strong>rstrip!</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>rstrip!</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -9900,9 +9530,9 @@ no change was made. See also <code>String#lstrip!</code> and
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="scan-instance_method">
+  <h3 class="signature " id="setbyte-instance_method">
   
-    #<strong>scan</strong>(reg, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>setbyte</strong>(index, integer)  &#x21d2; <tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt> 
   
 
   
@@ -9910,17 +9540,40 @@ no change was made. See also <code>String#lstrip!</code> and
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Calls the given block for each match of +pattern+
-If no block is given return an array with all
-matches of +pattern+.</p>
-
-<p>ISO 15.2.10.5.32</p>
+    <p>modifies the <i>index</i>th byte as <i>integer</i>.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
 
 </div>
 
@@ -9930,64 +9583,28 @@ matches of +pattern+.</p>
       <pre class="lines">
 
 
-112
-113
-114
-115
-116
-117</pre>
+2805
+2806
+2807
+2808
+2809
+2810
+2811
+2812
+2813
+2814
+2815
+2816
+2817
+2818
+2819
+2820
+2821
+2822
+2823</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 112</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">scan</span>(reg, &amp;block)
-  <span style="color:#777">### *** TODO *** ###</span>
-  <span style="color:#080;font-weight:bold">unless</span> <span style="color:#036;font-weight:bold">Object</span>.const_defined?(<span style="color:#A60">:Regexp</span>)
-    raise <span style="color:#036;font-weight:bold">NotImplementedError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">scan not available (yet)</span><span style="color:#710">&quot;</span></span>
-  <span style="color:#080;font-weight:bold">end</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="setbyte-instance_method">
-  
-    #<strong>setbyte</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 22</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2805</span>
 
 static mrb_value
 mrb_str_setbyte(mrb_state *mrb, mrb_value str)
@@ -9999,7 +9616,7 @@ mrb_str_setbyte(mrb_state *mrb, mrb_value str)
 
   len = RSTRING_LEN(str);
   <span style="color:#080;font-weight:bold">if</span> (pos &lt; -len || len &lt;= pos)
-    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_INDEX_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">index %S is out of array</span><span style="color:#710">&quot;</span></span>, mrb_fixnum_value(pos));
+    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_INDEX_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">index %i out of string</span><span style="color:#710">&quot;</span></span>, pos);
   <span style="color:#080;font-weight:bold">if</span> (pos &lt; <span style="color:#00D">0</span>)
     pos += len;
 
@@ -10067,15 +9684,15 @@ mrb_str_setbyte(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-794
-795
-796
-797
-798
-799</pre>
+917
+918
+919
+920
+921
+922</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 794</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 917</span>
 
 static mrb_value
 mrb_str_size(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -10473,47 +10090,31 @@ match.</p>
       <pre class="lines">
 
 
-1120
-1121
-1122
-1123
-1124
-1125
-1126
-1127
-1128
-1129
-1130
-1131
-1132
-1133
-1134
-1135
-1136
-1137
-1138</pre>
+1259
+1260
+1261
+1262
+1263
+1264
+1265
+1266
+1267
+1268
+1269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1120</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1259</span>
 
 static mrb_value
 mrb_str_aref_m(mrb_state *mrb, mrb_value str)
 {
   mrb_value a1, a2;
-  mrb_int argc;
 
-  argc = mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|o</span><span style="color:#710">&quot;</span></span>, &amp;a1, &amp;a2);
-  <span style="color:#080;font-weight:bold">if</span> (argc == <span style="color:#00D">2</span>) {
-    mrb_int n1, n2;
+  <span style="color:#080;font-weight:bold">if</span> (mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|o</span><span style="color:#710">&quot;</span></span>, &amp;a1, &amp;a2) == <span style="color:#00D">1</span>) {
+    a2 = mrb_undef_value();
+  }
 
-    mrb_regexp_check(mrb, a1);
-    mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ii</span><span style="color:#710">&quot;</span></span>, &amp;n1, &amp;n2);
-    <span style="color:#080;font-weight:bold">return</span> str_substr(mrb, str, n1, n2);
-  }
-  <span style="color:#080;font-weight:bold">if</span> (argc != <span style="color:#00D">1</span>) {
-    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong number of arguments (%S for 1)</span><span style="color:#710">&quot;</span></span>, mrb_fixnum_value(argc));
-  }
-  <span style="color:#080;font-weight:bold">return</span> mrb_str_aref(mrb, str, a1);
+  <span style="color:#080;font-weight:bold">return</span> mrb_str_aref(mrb, str, a1, a2);
 }</pre>
     </td>
   </tr>
@@ -10523,7 +10124,7 @@ mrb_str_aref_m(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="slice!-instance_method">
   
-    #<strong>slice!</strong>(arg1, arg2 = nil)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>slice!</strong>(arg1, arg2 = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -10778,124 +10379,116 @@ suppressed.</p>
       <pre class="lines">
 
 
-1893
-1894
-1895
-1896
-1897
-1898
-1899
-1900
-1901
-1902
-1903
-1904
-1905
-1906
-1907
-1908
-1909
-1910
-1911
-1912
-1913
-1914
-1915
-1916
-1917
-1918
-1919
-1920
-1921
-1922
-1923
-1924
-1925
-1926
-1927
-1928
-1929
-1930
-1931
-1932
-1933
-1934
-1935
-1936
-1937
-1938
-1939
-1940
-1941
-1942
-1943
-1944
-1945
-1946
-1947
-1948
-1949
-1950
-1951
-1952
-1953
-1954
-1955
-1956
-1957
-1958
-1959
-1960
-1961
-1962
-1963
-1964
-1965
-1966
-1967
-1968
-1969
-1970
-1971
-1972
-1973
-1974
-1975
-1976
-1977
-1978
-1979
-1980
-1981
-1982
-1983
-1984
-1985
-1986
-1987
-1988
-1989
-1990
-1991
-1992
-1993
-1994
-1995
-1996
-1997
-1998
-1999
-2000
-2001
-2002
-2003
-2004
-2005
-2006
-2007</pre>
+2143
+2144
+2145
+2146
+2147
+2148
+2149
+2150
+2151
+2152
+2153
+2154
+2155
+2156
+2157
+2158
+2159
+2160
+2161
+2162
+2163
+2164
+2165
+2166
+2167
+2168
+2169
+2170
+2171
+2172
+2173
+2174
+2175
+2176
+2177
+2178
+2179
+2180
+2181
+2182
+2183
+2184
+2185
+2186
+2187
+2188
+2189
+2190
+2191
+2192
+2193
+2194
+2195
+2196
+2197
+2198
+2199
+2200
+2201
+2202
+2203
+2204
+2205
+2206
+2207
+2208
+2209
+2210
+2211
+2212
+2213
+2214
+2215
+2216
+2217
+2218
+2219
+2220
+2221
+2222
+2223
+2224
+2225
+2226
+2227
+2228
+2229
+2230
+2231
+2232
+2233
+2234
+2235
+2236
+2237
+2238
+2239
+2240
+2241
+2242
+2243
+2244
+2245
+2246
+2247
+2248
+2249</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1893</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2143</span>
 
 static mrb_value
 mrb_str_split_m(mrb_state *mrb, mrb_value str)
@@ -10924,16 +10517,11 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
   <span style="color:#080;font-weight:bold">if</span> (argc == <span style="color:#00D">0</span> || mrb_nil_p(spat)) {
     split_type = awk;
   }
-  <span style="color:#080;font-weight:bold">else</span> {
-    <span style="color:#080;font-weight:bold">if</span> (mrb_string_p(spat)) {
-      split_type = string;
-      <span style="color:#080;font-weight:bold">if</span> (RSTRING_LEN(spat) == <span style="color:#00D">1</span> &amp;&amp; RSTRING_PTR(spat)[<span style="color:#00D">0</span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20"> </span><span style="color:#710">'</span></span>) {
-          split_type = awk;
-      }
-    }
-    <span style="color:#080;font-weight:bold">else</span> {
-      mrb_noregexp(mrb, str);
-    }
+  <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (!mrb_string_p(spat)) {
+    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">expected String</span><span style="color:#710">&quot;</span></span>);
+  }
+  <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (RSTRING_LEN(spat) == <span style="color:#00D">1</span> &amp;&amp; RSTRING_PTR(spat)[<span style="color:#00D">0</span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20"> </span><span style="color:#710">'</span></span>) {
+    split_type = awk;
   }
 
   result = mrb_ary_new(mrb);
@@ -10959,7 +10547,7 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
         }
       }
       <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (ISSPACE(c)) {
-        mrb_ary_push(mrb, result, byte_subseq(mrb, str, beg, <span style="color:#080;font-weight:bold">end</span>-beg));
+        mrb_ary_push(mrb, result, mrb_str_byte_subseq(mrb, str, beg, <span style="color:#080;font-weight:bold">end</span>-beg));
         mrb_gc_arena_restore(mrb, ai);
         skip = <span style="color:#069">TRUE</span>;
         beg = idx;
@@ -10970,7 +10558,7 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
       }
     }
   }
-  <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (split_type == string) {
+  <span style="color:#080;font-weight:bold">else</span> {                        <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* split_type == string *</span><span style="color:#404">/</span></span>
     mrb_int str_len = RSTRING_LEN(str);
     mrb_int pat_len = RSTRING_LEN(spat);
     mrb_int idx = <span style="color:#00D">0</span>;
@@ -10984,22 +10572,19 @@ mrb_str_split_m(mrb_state *mrb, mrb_value str)
       <span style="color:#080;font-weight:bold">else</span> {
         <span style="color:#080;font-weight:bold">end</span> = chars2bytes(str, idx, <span style="color:#00D">1</span>);
       }
-      mrb_ary_push(mrb, result, byte_subseq(mrb, str, idx, <span style="color:#080;font-weight:bold">end</span>));
+      mrb_ary_push(mrb, result, mrb_str_byte_subseq(mrb, str, idx, <span style="color:#080;font-weight:bold">end</span>));
       mrb_gc_arena_restore(mrb, ai);
       idx += <span style="color:#080;font-weight:bold">end</span> + pat_len;
       <span style="color:#080;font-weight:bold">if</span> (lim_p &amp;&amp; lim &lt;= ++i) <span style="color:#080;font-weight:bold">break</span>;
     }
     beg = idx;
   }
-  <span style="color:#080;font-weight:bold">else</span> {
-    mrb_noregexp(mrb, str);
-  }
   <span style="color:#080;font-weight:bold">if</span> (RSTRING_LEN(str) &gt; <span style="color:#00D">0</span> &amp;&amp; (lim_p || RSTRING_LEN(str) &gt; beg || lim &lt; <span style="color:#00D">0</span>)) {
     <span style="color:#080;font-weight:bold">if</span> (RSTRING_LEN(str) == beg) {
       tmp = mrb_str_new_empty(mrb, str);
     }
     <span style="color:#080;font-weight:bold">else</span> {
-      tmp = byte_subseq(mrb, str, beg, RSTRING_LEN(str)-beg);
+      tmp = mrb_str_byte_subseq(mrb, str, beg, RSTRING_LEN(str)-beg);
     }
     mrb_ary_push(mrb, result, tmp);
   }
@@ -11079,20 +10664,20 @@ identical characters are replaced by a single character.</p>
       <pre class="lines">
 
 
-702
-703
-704
-705
-706
-707
-708
-709
-710
-711
-712</pre>
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 702</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 712</span>
 
 static mrb_value
 mrb_str_squeeze(mrb_state *mrb, mrb_value str)
@@ -11165,20 +10750,20 @@ changes were made.</p>
       <pre class="lines">
 
 
-721
-722
-723
-724
-725
-726
-727
-728
-729
-730
-731</pre>
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 721</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 731</span>
 
 static mrb_value
 mrb_str_squeeze_bang(mrb_state *mrb, mrb_value str)
@@ -11257,17 +10842,6 @@ mrb_str_squeeze_bang(mrb_state *mrb, mrb_value str)
       <pre class="lines">
 
 
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
 195
 196
 197
@@ -11278,10 +10852,21 @@ mrb_str_squeeze_bang(mrb_state *mrb, mrb_value str)
 202
 203
 204
-205</pre>
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 184</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 195</span>
 
 static mrb_value
 mrb_str_start_with(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -11313,7 +10898,7 @@ mrb_str_start_with(mrb_state *mrb, mrb_value <span style="color:#069">self</span
       <div class="method_details ">
   <h3 class="signature " id="strip-instance_method">
   
-    #<strong>strip</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>strip</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -11369,7 +10954,7 @@ mrb_str_start_with(mrb_state *mrb, mrb_value <span style="color:#069">self</span
       <div class="method_details ">
   <h3 class="signature " id="strip!-instance_method">
   
-    #<strong>strip!</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>strip!</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -11432,7 +11017,7 @@ mrb_str_start_with(mrb_state *mrb, mrb_value <span style="color:#069">self</span
       <div class="method_details ">
   <h3 class="signature " id="sub-instance_method">
   
-    #<strong>sub</strong>(*args, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sub</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -11461,36 +11046,36 @@ block. Return the final value.</p>
       <pre class="lines">
 
 
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
 150
 151
-152</pre>
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 126</span>
+      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 150</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">sub</span>(*args, &amp;block)
   <span style="color:#080;font-weight:bold">unless</span> (<span style="color:#00D">1</span>..<span style="color:#00D">2</span>).include?(args.length)
@@ -11527,7 +11112,7 @@ block. Return the final value.</p>
       <div class="method_details ">
   <h3 class="signature " id="sub!-instance_method">
   
-    #<strong>sub!</strong>(*args, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sub!</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -11569,15 +11154,15 @@ block. Modify +self+ with the final value.</p>
       <pre class="lines">
 
 
-161
-162
-163
-164
-165
-166</pre>
+185
+186
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'mrblib/string.rb', line 185</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">sub!</span>(*args, &amp;block)
   raise <span style="color:#036;font-weight:bold">FrozenError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't modify frozen String</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> frozen?
@@ -11593,7 +11178,7 @@ block. Modify +self+ with the final value.</p>
       <div class="method_details ">
   <h3 class="signature " id="succ-instance_method">
   
-    #<strong>succ</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>succ</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -11605,18 +11190,18 @@ block. Modify +self+ with the final value.</p>
       <pre class="lines">
 
 
-983
-984
-985
 986
 987
 988
 989
 990
-991</pre>
+991
+992
+993
+994</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 983</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 986</span>
 
 static mrb_value
 mrb_str_succ(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -11689,9 +11274,6 @@ mrb_str_succ(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-905
-906
-907
 908
 909
 910
@@ -11765,10 +11347,13 @@ mrb_str_succ(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 978
 979
 980
-981</pre>
+981
+982
+983
+984</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 905</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 908</span>
 
 static mrb_value
 mrb_str_succ_bang(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -11911,18 +11496,18 @@ Note: case conversion is effective only in ASCII region.</p>
       <pre class="lines">
 
 
-130
-131
-132
-133
-134
-135
-136
-137
-138</pre>
+138
+139
+140
+141
+142
+143
+144
+145
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 130</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 138</span>
 
 static mrb_value
 mrb_str_swapcase(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -11994,14 +11579,6 @@ Note: case conversion is effective only in ASCII region.</p>
       <pre class="lines">
 
 
-93
-94
-95
-96
-97
-98
-99
-100
 101
 102
 103
@@ -12018,10 +11595,18 @@ Note: case conversion is effective only in ASCII region.</p>
 114
 115
 116
-117</pre>
+117
+118
+119
+120
+121
+122
+123
+124
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 93</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 101</span>
 
 static mrb_value
 mrb_str_swapcase_bang(mrb_state *mrb, mrb_value str)
@@ -12114,14 +11699,14 @@ are ignored. If there is not a valid number at the start of <i>str</i>,
       <pre class="lines">
 
 
-2344
-2345
-2346
-2347
-2348</pre>
+2585
+2586
+2587
+2588
+2589</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 2344</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2585</span>
 
 static mrb_value
 mrb_str_to_f(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -12201,20 +11786,20 @@ exception.</p>
       <pre class="lines">
 
 
-2233
-2234
-2235
-2236
-2237
-2238
-2239
-2240
-2241
-2242
-2243</pre>
+2489
+2490
+2491
+2492
+2493
+2494
+2495
+2496
+2497
+2498
+2499</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 2233</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2489</span>
 
 static mrb_value
 mrb_str_to_i(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -12223,7 +11808,7 @@ mrb_str_to_i(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">|i</span><span style="color:#710">&quot;</span></span>, &amp;base);
   <span style="color:#080;font-weight:bold">if</span> (base &lt; <span style="color:#00D">0</span>) {
-    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">illegal radix %S</span><span style="color:#710">&quot;</span></span>, mrb_fixnum_value(base));
+    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">illegal radix %i</span><span style="color:#710">&quot;</span></span>, base);
   }
   <span style="color:#080;font-weight:bold">return</span> mrb_str_to_inum(mrb, <span style="color:#069">self</span>, base, <span style="color:#069">FALSE</span>);
 }</pre>
@@ -12286,17 +11871,17 @@ mrb_str_to_i(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-2358
-2359
-2360
-2361
-2362
-2363
-2364
-2365</pre>
+2599
+2600
+2601
+2602
+2603
+2604
+2605
+2606</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 2358</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2599</span>
 
 static mrb_value
 mrb_str_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -12365,17 +11950,17 @@ mrb_str_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-2358
-2359
-2360
-2361
-2362
-2363
-2364
-2365</pre>
+2599
+2600
+2601
+2602
+2603
+2604
+2605
+2606</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 2358</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2599</span>
 
 static mrb_value
 mrb_str_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -12394,9 +11979,9 @@ mrb_str_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <h3 class="signature " id="to_sym-instance_method">
   
     
-      <span class="overload">#<strong>intern</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>intern</strong>  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">#<strong>to_sym</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>to_sym</strong>  &#x21d2; <tt>Object</tt> </span>
     
   
 
@@ -12433,14 +12018,14 @@ symbol if it did not previously exist. See <code>Symbol#id2name</code>.</p>
       <pre class="lines">
 
 
-1652
-1653
-1654
-1655
-1656</pre>
+1935
+1936
+1937
+1938
+1939</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 1652</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 1935</span>
 
 <span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_str_intern(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -12536,20 +12121,20 @@ from_str or to_str:</p>
       <pre class="lines">
 
 
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576</pre>
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 566</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 576</span>
 
 static mrb_value
 mrb_str_tr(mrb_state *mrb, mrb_value str)
@@ -12622,20 +12207,20 @@ Returns str, or nil if no changes were made.</p>
       <pre class="lines">
 
 
-585
-586
-587
-588
-589
-590
-591
-592
-593
-594
-595</pre>
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 585</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 595</span>
 
 static mrb_value
 mrb_str_tr_bang(mrb_state *mrb, mrb_value str)
@@ -12712,20 +12297,20 @@ duplicate characters in regions that were affected by the translation.</p>
       <pre class="lines">
 
 
-608
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618</pre>
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 608</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 618</span>
 
 static mrb_value
 mrb_str_tr_s(mrb_state *mrb, mrb_value str)
@@ -12798,20 +12383,20 @@ str, or nil if no changes were made.</p>
       <pre class="lines">
 
 
-627
-628
-629
-630
-631
-632
-633
-634
-635
-636
-637</pre>
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 627</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/src/string.c', line 637</span>
 
 static mrb_value
 mrb_str_tr_s_bang(mrb_state *mrb, mrb_value str)
@@ -12887,18 +12472,18 @@ characters ‘a’ to ‘z’ are affected.</p>
       <pre class="lines">
 
 
-2408
-2409
-2410
-2411
-2412
-2413
-2414
-2415
-2416</pre>
+2649
+2650
+2651
+2652
+2653
+2654
+2655
+2656
+2657</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 2408</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2649</span>
 
 static mrb_value
 mrb_str_upcase(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -12969,30 +12554,30 @@ were made.</p>
       <pre class="lines">
 
 
-2375
-2376
-2377
-2378
-2379
-2380
-2381
-2382
-2383
-2384
-2385
-2386
-2387
-2388
-2389
-2390
-2391
-2392
-2393
-2394
-2395</pre>
+2616
+2617
+2618
+2619
+2620
+2621
+2622
+2623
+2624
+2625
+2626
+2627
+2628
+2629
+2630
+2631
+2632
+2633
+2634
+2635
+2636</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/string.c', line 2375</span>
+      <pre class="code"><span class="info file"># File 'src/string.c', line 2616</span>
 
 static mrb_value
 mrb_str_upcase_bang(mrb_state *mrb, mrb_value str)
@@ -13001,7 +12586,7 @@ mrb_str_upcase_bang(mrb_state *mrb, mrb_value str)
   char *p, *pend;
   mrb_bool modify = <span style="color:#069">FALSE</span>;
 
-  mrb_str_modify(mrb, s);
+  mrb_str_modify_keep_ascii(mrb, s);
   p = RSTRING_PTR(str);
   pend = RSTRING_END(str);
   <span style="color:#080;font-weight:bold">while</span> (p &lt; pend) {
@@ -13023,7 +12608,7 @@ mrb_str_upcase_bang(mrb_state *mrb, mrb_value str)
       <div class="method_details ">
   <h3 class="signature " id="upto-instance_method">
   
-    #<strong>upto</strong>(max, exclusive = false, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>upto</strong>(max, exclusive = false, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -13091,10 +12676,6 @@ a8 a9 b0 b1 b2 b3 b4 b5 b6
       <pre class="lines">
 
 
-401
-402
-403
-404
 405
 406
 407
@@ -13132,10 +12713,14 @@ a8 a9 b0 b1 b2 b3 b4 b5 b6
 439
 440
 441
-442</pre>
+442
+443
+444
+445
+446</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/mrblib/string.rb', line 401</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-string-ext/mrblib/string.rb', line 405</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">upto</span>(max, exclusive=<span style="color:#069">false</span>, &amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:upto</span>, max, exclusive) <span style="color:#080;font-weight:bold">unless</span> block
@@ -13149,7 +12734,7 @@ a8 a9 b0 b1 b2 b3 b4 b5 b6
     e = max.ord
     <span style="color:#080;font-weight:bold">while</span> c &lt;= e
       <span style="color:#080;font-weight:bold">break</span> <span style="color:#080;font-weight:bold">if</span> exclusive <span style="color:#080;font-weight:bold">and</span> c == e
-      <span style="color:#080;font-weight:bold">yield</span> c.chr
+      <span style="color:#080;font-weight:bold">yield</span> c.chr(<span style="color:#069">__ENCODING__</span>)
       c += <span style="color:#00D">1</span>
     <span style="color:#080;font-weight:bold">end</span>
     <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>
@@ -13189,9 +12774,9 @@ a8 a9 b0 b1 b2 b3 b4 b5 b6
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:32 2019 by
+  Generated on Wed Nov 27 22:35:10 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

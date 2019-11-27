@@ -6,7 +6,7 @@
 <title>
   Class: IO
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">IO</li>
           
@@ -894,7 +894,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#readline-instance_method" title="#readline (instance method)">#<strong>readline</strong>(arg = $/, limit = nil)  &#x21d2; Object </a>
+      <a href="#readline-instance_method" title="#readline (instance method)">#<strong>readline</strong>(arg = &quot;\n&quot;, limit = nil)  &#x21d2; Object </a>
     
 
     
@@ -1153,7 +1153,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1177,6 +1177,7 @@
       <pre class="lines">
 
 
+612
 613
 614
 615
@@ -1213,11 +1214,10 @@
 646
 647
 648
-649
-650</pre>
+649</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 613</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 612</span>
 
 mrb_value
 mrb_io_initialize(mrb_state *mrb, mrb_value io)
@@ -1237,7 +1237,7 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
     opt = mrb_hash_new(mrb);
   }
 
-  flags = mrb_io_modestr_to_flags(mrb, mrb_string_value_cstr(mrb, &amp;mode));
+  flags = mrb_io_modestr_to_flags(mrb, RSTRING_CSTR(mrb, mode));
 
   mrb_iv_set(mrb, io, mrb_intern_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@buf</span><span style="color:#710">&quot;</span></span>), mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>));
 
@@ -1272,7 +1272,7 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
       <div class="method_details first">
   <h3 class="signature first" id="open-class_method">
   
-    .<strong>open</strong>(*args, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>open</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1324,7 +1324,7 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="pipe-class_method">
   
-    .<strong>pipe</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>pipe</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1380,7 +1380,7 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="popen-class_method">
   
-    .<strong>popen</strong>(command, mode = &#39;r&#39;, opts = {}, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>popen</strong>(command, mode = &#39;r&#39;, opts = {}, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1438,7 +1438,7 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="read-class_method">
   
-    .<strong>read</strong>(path, length = nil, offset = nil, opt = nil)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>read</strong>(path, length = nil, offset = nil, opt = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1562,7 +1562,7 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
       <div class="method_details first">
   <h3 class="signature first" id="<<-instance_method">
   
-    #<strong>&lt;&lt;</strong>(str)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&lt;&lt;</strong>(str)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1594,7 +1594,7 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="_check_readable-instance_method">
   
-    #<strong>_check_readable</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>_check_readable</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1606,6 +1606,7 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
+714
 715
 716
 717
@@ -1613,11 +1614,10 @@ mrb_io_initialize(mrb_state *mrb, mrb_value io)
 719
 720
 721
-722
-723</pre>
+722</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 715</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 714</span>
 
 mrb_value
 mrb_io_check_readable(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1636,7 +1636,7 @@ mrb_io_check_readable(mrb_state *mrb, mrb_value <span style="color:#069">self</s
       <div class="method_details ">
   <h3 class="signature " id="_read_buf-instance_method">
   
-    #<strong>_read_buf</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>_read_buf</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1651,14 +1651,24 @@ mrb_io_check_readable(mrb_state *mrb, mrb_value <span style="color:#069">self</s
 172
 173
 174
-175</pre>
+175
+176
+177
+178
+179
+180</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 172</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">_read_buf</span>
-  <span style="color:#080;font-weight:bold">return</span> <span style="color:#33B">@buf</span> <span style="color:#080;font-weight:bold">if</span> <span style="color:#33B">@buf</span> &amp;&amp; <span style="color:#33B">@buf</span>.size &gt; <span style="color:#00D">0</span>
-  <span style="color:#33B">@buf</span> = sysread(<span style="color:#036;font-weight:bold">BUF_SIZE</span>)
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#33B">@buf</span> <span style="color:#080;font-weight:bold">if</span> <span style="color:#33B">@buf</span> &amp;&amp; <span style="color:#33B">@buf</span>.bytesize &gt;= <span style="color:#00D">4</span> <span style="color:#777"># maximum UTF-8 character is 4 bytes</span>
+  <span style="color:#33B">@buf</span> ||= <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">begin</span>
+    <span style="color:#33B">@buf</span> += sysread(<span style="color:#036;font-weight:bold">BUF_SIZE</span>)
+  <span style="color:#080;font-weight:bold">rescue</span> <span style="color:#036;font-weight:bold">EOFError</span> =&gt; e
+    raise e <span style="color:#080;font-weight:bold">if</span> <span style="color:#33B">@buf</span>.empty?
+  <span style="color:#080;font-weight:bold">end</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -1668,7 +1678,7 @@ mrb_io_check_readable(mrb_state *mrb, mrb_value <span style="color:#069">self</s
       <div class="method_details ">
   <h3 class="signature " id="close-instance_method">
   
-    #<strong>close</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>close</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1692,17 +1702,17 @@ mrb_io_check_readable(mrb_state *mrb, mrb_value <span style="color:#069">self</s
       <pre class="lines">
 
 
-934
-935
-936
-937
-938
-939
-940
-941</pre>
+926
+927
+928
+929
+930
+931
+932
+933</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 934</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 926</span>
 
 mrb_value
 mrb_io_close(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1720,7 +1730,7 @@ mrb_io_close(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="close_on_exec=-instance_method">
   
-    #<strong>close_on_exec=</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>close_on_exec=</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1732,6 +1742,14 @@ mrb_io_close(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
+1238
+1239
+1240
+1241
+1242
+1243
+1244
+1245
 1246
 1247
 1248
@@ -1758,18 +1776,10 @@ mrb_io_close(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 1269
 1270
 1271
-1272
-1273
-1274
-1275
-1276
-1277
-1278
-1279
-1280</pre>
+1272</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1246</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1238</span>
 
 mrb_value
 mrb_io_set_close_on_exec(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1851,6 +1861,14 @@ mrb_io_set_close_on_exec(mrb_state *mrb, mrb_value <span style="color:#069">self
       <pre class="lines">
 
 
+1214
+1215
+1216
+1217
+1218
+1219
+1220
+1221
 1222
 1223
 1224
@@ -1865,18 +1883,10 @@ mrb_io_set_close_on_exec(mrb_state *mrb, mrb_value <span style="color:#069">self
 1233
 1234
 1235
-1236
-1237
-1238
-1239
-1240
-1241
-1242
-1243
-1244</pre>
+1236</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1222</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1214</span>
 
 mrb_value
 mrb_io_close_on_exec_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1909,7 +1919,7 @@ mrb_io_close_on_exec_p(mrb_state *mrb, mrb_value <span style="color:#069">self</
       <div class="method_details ">
   <h3 class="signature " id="close_write-instance_method">
   
-    #<strong>close_write</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>close_write</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1933,19 +1943,19 @@ mrb_io_close_on_exec_p(mrb_state *mrb, mrb_value <span style="color:#069">self</
       <pre class="lines">
 
 
+935
+936
+937
+938
+939
+940
+941
+942
 943
-944
-945
-946
-947
-948
-949
-950
-951
-952</pre>
+944</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 943</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 935</span>
 
 mrb_value
 mrb_io_close_write(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2002,26 +2012,26 @@ mrb_io_close_write(mrb_state *mrb, mrb_value <span style="color:#069">self</span
       <pre class="lines">
 
 
+946
+947
+948
+949
+950
+951
+952
+953
 954
 955
-956
-957
-958
-959
-960
-961
-962
-963
-964</pre>
+956</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 954</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 946</span>
 
 mrb_value
 mrb_io_closed(mrb_state *mrb, mrb_value io)
 {
   struct mrb_io *fptr;
-  fptr = (struct mrb_io *)mrb_get_datatype(mrb, io, &amp;mrb_io_type);
+  fptr = (struct mrb_io *)mrb_data_get_ptr(mrb, io, &amp;mrb_io_type);
   <span style="color:#080;font-weight:bold">if</span> (fptr == <span style="color:#036;font-weight:bold">NULL</span> || fptr-&gt;fd &gt;= <span style="color:#00D">0</span>) {
     <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
   }
@@ -2036,7 +2046,7 @@ mrb_io_closed(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2064,17 +2074,21 @@ mrb_io_closed(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-301
-302
-303
-304
 305
-306</pre>
+306
+307
+308
+309
+310
+311
+312</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 301</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 305</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#080;font-weight:bold">unless</span> block
+
   <span style="color:#080;font-weight:bold">while</span> line = <span style="color:#069">self</span>.gets
     block.call(line)
   <span style="color:#080;font-weight:bold">end</span>
@@ -2088,7 +2102,7 @@ mrb_io_closed(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="each_byte-instance_method">
   
-    #<strong>each_byte</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each_byte</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2116,17 +2130,21 @@ mrb_io_closed(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-309
-310
-311
-312
-313
-314</pre>
+315
+316
+317
+318
+319
+320
+321
+322</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 309</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 315</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_byte</span>(&amp;block)
+  <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:each_byte</span>) <span style="color:#080;font-weight:bold">unless</span> block
+
   <span style="color:#080;font-weight:bold">while</span> char = <span style="color:#069">self</span>.getc
     block.call(char)
   <span style="color:#080;font-weight:bold">end</span>
@@ -2197,8 +2215,8 @@ mrb_io_closed(mrb_state *mrb, mrb_value io)
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">eof?</span>
   _check_readable
   <span style="color:#080;font-weight:bold">begin</span>
-    buf = _read_buf
-    <span style="color:#080;font-weight:bold">return</span> buf.size == <span style="color:#00D">0</span>
+    _read_buf
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#33B">@buf</span>.empty?
   <span style="color:#080;font-weight:bold">rescue</span> <span style="color:#036;font-weight:bold">EOFError</span>
     <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">true</span>
   <span style="color:#080;font-weight:bold">end</span>
@@ -2211,7 +2229,7 @@ mrb_io_closed(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="fileno-instance_method">
   
-    #<strong>fileno</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>fileno</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2239,16 +2257,16 @@ mrb_io_closed(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-1214
-1215
-1216
-1217
-1218
-1219
-1220</pre>
+1206
+1207
+1208
+1209
+1210
+1211
+1212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1214</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1206</span>
 
 mrb_value
 mrb_io_fileno(mrb_state *mrb, mrb_value io)
@@ -2265,7 +2283,7 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="flush-instance_method">
   
-    #<strong>flush</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>flush</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2324,7 +2342,7 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="getc-instance_method">
   
-    #<strong>getc</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>getc</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2336,16 +2354,16 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-292
-293
-294
-295
 296
 297
-298</pre>
+298
+299
+300
+301
+302</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 292</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 296</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">getc</span>
   <span style="color:#080;font-weight:bold">begin</span>
@@ -2362,7 +2380,7 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="gets-instance_method">
   
-    #<strong>gets</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>gets</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2374,16 +2392,16 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-277
-278
-279
-280
 281
 282
-283</pre>
+283
+284
+285
+286
+287</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 277</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 281</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">gets</span>(*args)
   <span style="color:#080;font-weight:bold">begin</span>
@@ -2400,7 +2418,7 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="hash-instance_method">
   
-    #<strong>hash</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>hash</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2434,7 +2452,7 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="initialize_copy-instance_method">
   
-    #<strong>initialize_copy</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize_copy</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2458,6 +2476,7 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
+563
 564
 565
 566
@@ -2504,11 +2523,10 @@ mrb_io_fileno(mrb_state *mrb, mrb_value io)
 607
 608
 609
-610
-611</pre>
+610</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 564</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 563</span>
 
 mrb_value
 mrb_io_initialize_copy(mrb_state *mrb, mrb_value copy)
@@ -2566,7 +2584,7 @@ mrb_io_initialize_copy(mrb_state *mrb, mrb_value copy)
       <div class="method_details ">
   <h3 class="signature " id="isatty-instance_method">
   
-    #<strong>isatty</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>isatty</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2582,6 +2600,7 @@ mrb_io_initialize_copy(mrb_state *mrb, mrb_value copy)
       <pre class="lines">
 
 
+724
 725
 726
 727
@@ -2590,11 +2609,10 @@ mrb_io_initialize_copy(mrb_state *mrb, mrb_value copy)
 730
 731
 732
-733
-734</pre>
+733</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 725</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 724</span>
 
 mrb_value
 mrb_io_isatty(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2614,7 +2632,7 @@ mrb_io_isatty(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="pid-instance_method">
   
-    #<strong>pid</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>pid</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2638,21 +2656,21 @@ mrb_io_isatty(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
+958
+959
+960
+961
+962
+963
+964
+965
 966
 967
 968
-969
-970
-971
-972
-973
-974
-975
-976
-977</pre>
+969</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 966</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 958</span>
 
 mrb_value
 mrb_io_pid(mrb_state *mrb, mrb_value io)
@@ -2674,7 +2692,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="pos-instance_method">
   
-    #<strong>pos</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>pos</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2725,7 +2743,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">pos</span>
   raise <span style="color:#036;font-weight:bold">IOError</span> <span style="color:#080;font-weight:bold">if</span> closed?
-  sysseek(<span style="color:#00D">0</span>, <span style="color:#036;font-weight:bold">SEEK_CUR</span>) - <span style="color:#33B">@buf</span>.length
+  sysseek(<span style="color:#00D">0</span>, <span style="color:#036;font-weight:bold">SEEK_CUR</span>) - <span style="color:#33B">@buf</span>.bytesize
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -2735,7 +2753,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="pos=-instance_method">
   
-    #<strong>pos=</strong>(i)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>pos=</strong>(i)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2765,7 +2783,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="print-instance_method">
   
-    #<strong>print</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>print</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2777,17 +2795,17 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-342
-343
-344
-345
-346
-347
-348
-349</pre>
+350
+351
+352
+353
+354
+355
+356
+357</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 342</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 350</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">print</span>(*args)
   i = <span style="color:#00D">0</span>
@@ -2805,7 +2823,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="printf-instance_method">
   
-    #<strong>printf</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>printf</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2817,13 +2835,13 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-351
-352
-353
-354</pre>
+359
+360
+361
+362</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 351</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 359</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">printf</span>(*args)
   write sprintf(*args)
@@ -2837,7 +2855,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="puts-instance_method">
   
-    #<strong>puts</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>puts</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2849,21 +2867,21 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-329
-330
-331
-332
-333
-334
-335
-336
 337
 338
 339
-340</pre>
+340
+341
+342
+343
+344
+345
+346
+347
+348</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 329</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 337</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">puts</span>(*args)
   i = <span style="color:#00D">0</span>
@@ -2885,7 +2903,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="read-instance_method">
   
-    #<strong>read</strong>(length = nil, outbuf = &quot;&quot;)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>read</strong>(length = nil, outbuf = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2897,11 +2915,6 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-187
-188
-189
-190
-191
 192
 193
 194
@@ -2937,10 +2950,14 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
 224
 225
 226
-227</pre>
+227
+228
+229
+230
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 192</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">read</span>(length = <span style="color:#069">nil</span>, outbuf = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>)
   <span style="color:#080;font-weight:bold">unless</span> length.nil?
@@ -2965,9 +2982,8 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
     <span style="color:#080;font-weight:bold">end</span>
 
     <span style="color:#080;font-weight:bold">if</span> length
-      consume = (length &lt;= <span style="color:#33B">@buf</span>.size) ? length : <span style="color:#33B">@buf</span>.size
-      array.push <span style="color:#33B">@buf</span>[<span style="color:#00D">0</span>, consume]
-      <span style="color:#33B">@buf</span> = <span style="color:#33B">@buf</span>[consume, <span style="color:#33B">@buf</span>.size - consume]
+      consume = (length &lt;= <span style="color:#33B">@buf</span>.bytesize) ? length : <span style="color:#33B">@buf</span>.bytesize
+      array.push <span style="color:#036;font-weight:bold">IO</span>._bufread(<span style="color:#33B">@buf</span>, consume)
       length -= consume
       <span style="color:#080;font-weight:bold">break</span> <span style="color:#080;font-weight:bold">if</span> length == <span style="color:#00D">0</span>
     <span style="color:#080;font-weight:bold">else</span>
@@ -2991,7 +3007,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="readchar-instance_method">
   
-    #<strong>readchar</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>readchar</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3003,20 +3019,20 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-285
-286
-287
-288
 289
-290</pre>
+290
+291
+292
+293
+294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 285</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 289</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">readchar</span>
   _read_buf
   c = <span style="color:#33B">@buf</span>[<span style="color:#00D">0</span>]
-  <span style="color:#33B">@buf</span> = <span style="color:#33B">@buf</span>[<span style="color:#00D">1</span>, <span style="color:#33B">@buf</span>.size]
+  <span style="color:#33B">@buf</span>[<span style="color:#00D">0</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>
   c
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
@@ -3027,7 +3043,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="readline-instance_method">
   
-    #<strong>readline</strong>(arg = $/, limit = nil)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>readline</strong>(arg = &quot;\n&quot;, limit = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3039,10 +3055,6 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-229
-230
-231
-232
 233
 234
 235
@@ -3085,17 +3097,21 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
 272
 273
 274
-275</pre>
+275
+276
+277
+278
+279</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 233</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">readline</span>(arg = <span style="color:#d70">$/</span>, limit = <span style="color:#069">nil</span>)
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">readline</span>(arg = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>, limit = <span style="color:#069">nil</span>)
   <span style="color:#080;font-weight:bold">case</span> arg
   <span style="color:#080;font-weight:bold">when</span> <span style="color:#036;font-weight:bold">String</span>
     rs = arg
   <span style="color:#080;font-weight:bold">when</span> <span style="color:#036;font-weight:bold">Fixnum</span>
-    rs = <span style="color:#d70">$/</span>
+    rs = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>
     limit = arg
   <span style="color:#080;font-weight:bold">else</span>
     raise <span style="color:#036;font-weight:bold">ArgumentError</span>
@@ -3106,7 +3122,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
   <span style="color:#080;font-weight:bold">end</span>
 
   <span style="color:#080;font-weight:bold">if</span> rs == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>
-    rs = <span style="color:#d70">$/</span> + <span style="color:#d70">$/</span>
+    rs = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>
   <span style="color:#080;font-weight:bold">end</span>
 
   array = []
@@ -3120,12 +3136,12 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
 
     <span style="color:#080;font-weight:bold">if</span> limit &amp;&amp; limit &lt;= <span style="color:#33B">@buf</span>.size
       array.push <span style="color:#33B">@buf</span>[<span style="color:#00D">0</span>, limit]
-      <span style="color:#33B">@buf</span> = <span style="color:#33B">@buf</span>[limit, <span style="color:#33B">@buf</span>.size - limit]
+      <span style="color:#33B">@buf</span>[<span style="color:#00D">0</span>, limit] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>
       <span style="color:#080;font-weight:bold">break</span>
     <span style="color:#080;font-weight:bold">elsif</span> idx = <span style="color:#33B">@buf</span>.index(rs)
       len = idx + rs.size
       array.push <span style="color:#33B">@buf</span>[<span style="color:#00D">0</span>, len]
-      <span style="color:#33B">@buf</span> = <span style="color:#33B">@buf</span>[len, <span style="color:#33B">@buf</span>.size - len]
+      <span style="color:#33B">@buf</span>[<span style="color:#00D">0</span>, len] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>
       <span style="color:#080;font-weight:bold">break</span>
     <span style="color:#080;font-weight:bold">else</span>
       array.push <span style="color:#33B">@buf</span>
@@ -3145,7 +3161,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="readlines-instance_method">
   
-    #<strong>readlines</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>readlines</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3157,16 +3173,16 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-321
-322
-323
-324
-325
-326
-327</pre>
+329
+330
+331
+332
+333
+334
+335</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 321</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 329</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">readlines</span>
   ary = []
@@ -3183,7 +3199,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="rewind-instance_method">
   
-    #<strong>rewind</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>rewind</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3213,7 +3229,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="seek-instance_method">
   
-    #<strong>seek</strong>(i, whence = SEEK_SET)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>seek</strong>(i, whence = SEEK_SET)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3274,7 +3290,7 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="sync-instance_method">
   
-    #<strong>sync</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sync</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3286,16 +3302,16 @@ mrb_io_pid(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-1294
-1295
-1296
-1297
-1298
-1299
-1300</pre>
+1286
+1287
+1288
+1289
+1290
+1291
+1292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1294</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1286</span>
 
 mrb_value
 mrb_io_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3312,7 +3328,7 @@ mrb_io_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="sync=-instance_method">
   
-    #<strong>sync=</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sync=</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3324,20 +3340,20 @@ mrb_io_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
+1274
+1275
+1276
+1277
+1278
+1279
+1280
+1281
 1282
 1283
-1284
-1285
-1286
-1287
-1288
-1289
-1290
-1291
-1292</pre>
+1284</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1282</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 1274</span>
 
 mrb_value
 mrb_io_set_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3358,7 +3374,7 @@ mrb_io_set_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="sysread-instance_method">
   
-    #<strong>sysread</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sysread</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3370,6 +3386,10 @@ mrb_io_set_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
+818
+819
+820
+821
 822
 823
 824
@@ -3416,14 +3436,10 @@ mrb_io_set_sync(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 865
 866
 867
-868
-869
-870
-871
-872</pre>
+868</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 822</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 818</span>
 
 mrb_value
 mrb_io_sysread(mrb_state *mrb, mrb_value io)
@@ -3484,7 +3500,7 @@ mrb_io_sysread(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="sysseek-instance_method">
   
-    #<strong>sysseek</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sysseek</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3496,6 +3512,10 @@ mrb_io_sysread(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
+870
+871
+872
+873
 874
 875
 876
@@ -3518,14 +3538,10 @@ mrb_io_sysread(mrb_state *mrb, mrb_value io)
 893
 894
 895
-896
-897
-898
-899
-900</pre>
+896</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 874</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 870</span>
 
 mrb_value
 mrb_io_sysseek(mrb_state *mrb, mrb_value io)
@@ -3562,7 +3578,7 @@ mrb_io_sysseek(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="syswrite-instance_method">
   
-    #<strong>syswrite</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>syswrite</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3574,6 +3590,10 @@ mrb_io_sysseek(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
+898
+899
+900
+901
 902
 903
 904
@@ -3596,18 +3616,10 @@ mrb_io_sysseek(mrb_state *mrb, mrb_value io)
 921
 922
 923
-924
-925
-926
-927
-928
-929
-930
-931
-932</pre>
+924</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 902</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/io.c', line 898</span>
 
 mrb_value
 mrb_io_syswrite(mrb_state *mrb, mrb_value io)
@@ -3622,11 +3634,7 @@ mrb_io_syswrite(mrb_state *mrb, mrb_value io)
   }
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">S</span><span style="color:#710">&quot;</span></span>, &amp;str);
-  <span style="color:#080;font-weight:bold">if</span> (mrb_type(str) != <span style="color:#036;font-weight:bold">MRB_TT_STRING</span>) {
-    buf = mrb_funcall(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>);
-  } <span style="color:#080;font-weight:bold">else</span> {
-    buf = str;
-  }
+  buf = str;
 
   <span style="color:#080;font-weight:bold">if</span> (fptr-&gt;fd2 == <span style="color:#00D">-1</span>) {
     fd = fptr-&gt;fd;
@@ -3648,7 +3656,7 @@ mrb_io_syswrite(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="ungetc-instance_method">
   
-    #<strong>ungetc</strong>(substr)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>ungetc</strong>(substr)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3660,18 +3668,18 @@ mrb_io_syswrite(mrb_state *mrb, mrb_value io)
       <pre class="lines">
 
 
-177
-178
-179
-180
-181
 182
 183
 184
-185</pre>
+185
+186
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 177</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 182</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">ungetc</span>(substr)
   raise <span style="color:#036;font-weight:bold">TypeError</span>.new <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">expect String, got </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>substr.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> substr.is_a?(<span style="color:#036;font-weight:bold">String</span>)
@@ -3690,7 +3698,7 @@ mrb_io_syswrite(mrb_state *mrb, mrb_value io)
       <div class="method_details ">
   <h3 class="signature " id="write-instance_method">
   
-    #<strong>write</strong>(string)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>write</strong>(string)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3718,8 +3726,8 @@ mrb_io_syswrite(mrb_state *mrb, mrb_value io)
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">write</span>(string)
   str = string.is_a?(<span style="color:#036;font-weight:bold">String</span>) ? string : string.to_s
-  <span style="color:#080;font-weight:bold">return</span> str.size <span style="color:#080;font-weight:bold">unless</span> str.size &gt; <span style="color:#00D">0</span>
-  <span style="color:#080;font-weight:bold">if</span> <span style="color:#00D">0</span> &lt; <span style="color:#33B">@buf</span>.length
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">if</span> str.empty?
+  <span style="color:#080;font-weight:bold">unless</span> <span style="color:#33B">@buf</span>.empty?
     <span style="color:#777"># reset real pos ignore buf</span>
     seek(pos, <span style="color:#036;font-weight:bold">SEEK_SET</span>)
   <span style="color:#080;font-weight:bold">end</span>
@@ -3736,9 +3744,9 @@ mrb_io_syswrite(mrb_state *mrb, mrb_value io)
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:32 2019 by
+  Generated on Wed Nov 27 22:35:10 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

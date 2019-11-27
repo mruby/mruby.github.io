@@ -6,7 +6,7 @@
 <title>
   Module: Kernel
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -83,7 +83,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>mrblib/kernel.rb<span class="defines">,<br />
-  src/kernel.c,<br /> mrbgems/mruby-sprintf/src/kernel.c,<br /> mrbgems/mruby-io/mrblib/io.rb,<br /> mrbgems/mruby-io/mrblib/kernel.rb,<br /> mrbgems/mruby-print/mrblib/print.rb,<br /> mrbgems/mruby-method/mrblib/kernel.rb,<br /> mrbgems/mruby-kernel-ext/mrblib/kernel.rb,<br /> mrbgems/mruby-enumerator/mrblib/enumerator.rb</span>
+  src/kernel.c,<br /> mrbgems/mruby-sprintf/src/kernel.c,<br /> mrbgems/mruby-io/mrblib/kernel.rb,<br /> mrbgems/mruby-print/mrblib/print.rb,<br /> mrbgems/mruby-method/mrblib/kernel.rb,<br /> mrbgems/mruby-object-ext/mrblib/object.rb,<br /> mrbgems/mruby-rational/mrblib/rational.rb,<br /> mrbgems/mruby-enumerator/mrblib/enumerator.rb</span>
 </dd>
   </dl>
   
@@ -251,29 +251,6 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Converts <i>arg</i> to a <code>Fixnum</code>.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#itself-class_method" title="itself (class method)">.<strong>itself</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Returns <i>obj</i>.</p>
 </div></span>
   
 </li>
@@ -475,7 +452,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#_inspect-instance_method" title="#_inspect (instance method)">#<strong>_inspect</strong>  &#x21d2; Object </a>
+      <a href="#_inspect-instance_method" title="#_inspect (instance method)">#<strong>_inspect</strong>(_recur_list)  &#x21d2; Object </a>
     
 
     
@@ -659,29 +636,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#equal%3F-instance_method" title="#equal? (instance method)">#<strong>equal?</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Equality—At the <code>Object</code> level, <code>==</code> returns <code>true</code> only if <i>obj</i> and <i>other</i> are the same object.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#extend-instance_method" title="#extend (instance method)">#<strong>extend</strong>  &#x21d2; Object </a>
     
 
@@ -752,29 +706,6 @@
   <span class="summary_signature">
     
       <a href="#frozen%3F-instance_method" title="#frozen? (instance method)">#<strong>frozen?</strong>  &#x21d2; Boolean </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getc-instance_method" title="#getc (instance method)">#<strong>getc</strong>(*args)  &#x21d2; Object </a>
     
 
     
@@ -1441,6 +1372,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#Rational-instance_method" title="#Rational (instance method)">#<strong>Rational</strong>(numerator, denominator = 1)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#remove_instance_variable-instance_method" title="#remove_instance_variable (instance method)">#<strong>remove_instance_variable</strong>(symbol)  &#x21d2; Object </a>
     
 
@@ -1524,7 +1478,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>15.3.1.3.28.</p>
+    <span class="summary_desc"><div class='inline'><p>15.3.1.3.28 (15.3.1.2.7).</p>
 </div></span>
   
 </li>
@@ -1602,6 +1556,36 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#tap-instance_method" title="#tap (instance method)">#<strong>tap</strong> {|_self| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:     obj.tap      <td>x</td>
+      <td>…    -&gt; obj.</td>
+    </tr>
+  </tbody>
+</table>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#to_enum-instance_method" title="#to_enum (instance method)">#<strong>to_enum</strong>(meth = :each, *args)  &#x21d2; Object </a>
     
 
@@ -1618,15 +1602,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><table>
-  <tbody>
-    <tr>
-      <td>call-seq:   obj.to_enum(method = :each, *args)                 -&gt; enum   obj.enum_for(method = :each, *args)                -&gt; enum   obj.to_enum(method = :each, *args)       <td>*args</td>
-      <td>block -&gt; enum   obj.enum_for(method = :each, *args)      <td>*args</td>
-      <td>block -&gt; enum.</td>
-    </tr>
-  </tbody>
-</table>
+    <span class="summary_desc"><div class='inline'><p>call-seq:   obj.to_enum(method = :each, *args)                 -&gt; enum   obj.enum_for(method = :each, *args)                -&gt; enum.</p>
 </div></span>
   
 </li>
@@ -1701,7 +1677,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="method_missing-instance_method">
   
-    #<strong>method_missing</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>method_missing</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1725,21 +1701,21 @@
       <pre class="lines">
 
 
-720
-721
-722
-723
-724
-725
-726
-727
-728
-729
-730
-731</pre>
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 720</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 689</span>
 
 static mrb_value
 mrb_obj_missing(mrb_state *mrb, mrb_value mod)
@@ -1821,6 +1797,7 @@ mrb_obj_missing(mrb_state *mrb, mrb_value mod)
       <pre class="lines">
 
 
+168
 169
 170
 171
@@ -1832,11 +1809,10 @@ mrb_obj_missing(mrb_state *mrb, mrb_value mod)
 177
 178
 179
-180
-181</pre>
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 169</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 168</span>
 
 static mrb_value
 mrb_f_array(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1859,7 +1835,7 @@ mrb_f_array(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="caller-class_method">
   
-    .<strong>caller</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>caller</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1925,8 +1901,7 @@ mrb_f_array(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 58
 59
 60
-61
-62</pre>
+61</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 7</span>
@@ -1947,9 +1922,9 @@ mrb_f_caller(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       n = bt_len - lev;
       <span style="color:#080;font-weight:bold">break</span>;
     <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">1</span>:
-      <span style="color:#080;font-weight:bold">if</span> (mrb_type(v) == <span style="color:#036;font-weight:bold">MRB_TT_RANGE</span>) {
+      <span style="color:#080;font-weight:bold">if</span> (mrb_range_p(v)) {
         mrb_int beg, len;
-        <span style="color:#080;font-weight:bold">if</span> (mrb_range_beg_len(mrb, v, &amp;beg, &amp;len, bt_len, <span style="color:#069">TRUE</span>) == <span style="color:#00D">1</span>) {
+        <span style="color:#080;font-weight:bold">if</span> (mrb_range_beg_len(mrb, v, &amp;beg, &amp;len, bt_len, <span style="color:#069">TRUE</span>) == <span style="color:#036;font-weight:bold">MRB_RANGE_OK</span>) {
           lev = beg;
           n = len;
         }
@@ -1958,22 +1933,21 @@ mrb_f_caller(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
         }
       }
       <span style="color:#080;font-weight:bold">else</span> {
-        v = mrb_to_int(mrb, v);
-        lev = mrb_fixnum(v);
+        lev = mrb_int(mrb, v);
         <span style="color:#080;font-weight:bold">if</span> (lev &lt; <span style="color:#00D">0</span>) {
-          mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative level (%S)</span><span style="color:#710">&quot;</span></span>, v);
+          mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative level (%v)</span><span style="color:#710">&quot;</span></span>, v);
         }
         n = bt_len - lev;
       }
       <span style="color:#080;font-weight:bold">break</span>;
     <span style="color:#080;font-weight:bold">case</span> <span style="color:#00D">2</span>:
-      lev = mrb_fixnum(mrb_to_int(mrb, v));
-      n = mrb_fixnum(mrb_to_int(mrb, length));
+      lev = mrb_int(mrb, v);
+      n = mrb_int(mrb, length);
       <span style="color:#080;font-weight:bold">if</span> (lev &lt; <span style="color:#00D">0</span>) {
-        mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative level (%S)</span><span style="color:#710">&quot;</span></span>, v);
+        mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative level (%v)</span><span style="color:#710">&quot;</span></span>, v);
       }
       <span style="color:#080;font-weight:bold">if</span> (n &lt; <span style="color:#00D">0</span>) {
-        mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative size (%S)</span><span style="color:#710">&quot;</span></span>, length);
+        mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">negative size (%v)</span><span style="color:#710">&quot;</span></span>, length);
       }
       <span style="color:#080;font-weight:bold">break</span>;
     <span style="color:#606">default</span>:
@@ -1996,11 +1970,11 @@ mrb_f_caller(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <h3 class="signature " id="fail-class_method">
   
     
-      <span class="overload">.<strong>raise</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">.<strong>raise</strong>  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">.<strong>raise</strong>(string)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">.<strong>raise</strong>(string)  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">.<strong>raise</strong>(exception[, string])  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">.<strong>raise</strong>(exception[, string])  &#x21d2; <tt>Object</tt> </span>
     
   
 
@@ -2036,35 +2010,35 @@ array of callback information. Exceptions are caught by the
       <pre class="lines">
 
 
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627
-628
-629
-630
-631
-632
-633
-634
-635
-636
-637
-638
-639
-640
-641</pre>
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 616</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 585</span>
 
 <span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_f_raise(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2157,17 +2131,17 @@ directly, the rest are converted using <i>arg</i>.to_f.</p>
       <pre class="lines">
 
 
+128
 129
 130
 131
 132
 133
 134
-135
-136</pre>
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 129</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 128</span>
 
 static mrb_value
 mrb_f_float(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2244,6 +2218,7 @@ Hash([<span style="color:#00D">1</span>, <span style="color:#00D">2</span>, <spa
       <pre class="lines">
 
 
+196
 197
 198
 199
@@ -2253,11 +2228,10 @@ Hash([<span style="color:#00D">1</span>, <span style="color:#00D">2</span>, <spa
 203
 204
 205
-206
-207</pre>
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 197</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 196</span>
 
 static mrb_value
 mrb_f_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2345,6 +2319,7 @@ Passing <code>nil</code> raises a TypeError.</p>
       <pre class="lines">
 
 
+105
 106
 107
 108
@@ -2352,11 +2327,10 @@ Passing <code>nil</code> raises a TypeError.</p>
 110
 111
 112
-113
-114</pre>
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 106</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 105</span>
 
 static mrb_value
 mrb_f_integer(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2366,83 +2340,6 @@ mrb_f_integer(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o|i</span><span style="color:#710">&quot;</span></span>, &amp;arg, &amp;base);
   <span style="color:#080;font-weight:bold">return</span> mrb_convert_to_integer(mrb, arg, base);
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="itself-class_method">
-  
-    .<strong>itself</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns <i>obj</i>.</p>
-
-<pre class="code"><code class="">string = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">my string</span><span style="color:#710">'</span></span> <span style="color:#777">#=&gt; &quot;my string&quot;</span>
-string.itself.object_id == string.object_id <span style="color:#777">#=&gt; true</span>
-</code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-219
-220
-221
-222
-223</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 219</span>
-
-static mrb_value
-mrb_f_itself(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
 }</pre>
     </td>
   </tr>
@@ -2508,6 +2405,7 @@ converted using <code>to_s</code> method.</p>
       <pre class="lines">
 
 
+149
 150
 151
 152
@@ -2515,11 +2413,10 @@ converted using <code>to_s</code> method.</p>
 154
 155
 156
-157
-158</pre>
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 150</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 149</span>
 
 static mrb_value
 mrb_f_string(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2544,7 +2441,7 @@ mrb_f_string(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details first">
   <h3 class="signature first" id="!~-instance_method">
   
-    #<strong>!~</strong>(y)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>!~</strong>(y)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2667,7 +2564,7 @@ mrb_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="__case_eqq-instance_method">
   
-    #<strong>__case_eqq</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>__case_eqq</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2691,25 +2588,25 @@ mrb_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-777
-778
-779
-780
-781
-782
-783
-784
-785
-786
-787
-788
-789
-790
-791
-792</pre>
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 777</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 746</span>
 
 static mrb_value
 mrb_obj_ceqq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2735,7 +2632,7 @@ mrb_obj_ceqq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="__method__-instance_method">
   
-    #<strong>__method__</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>__method__</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2763,6 +2660,7 @@ If called outside of a method, it returns <code>nil</code>.</p>
       <pre class="lines">
 
 
+72
 73
 74
 75
@@ -2771,11 +2669,10 @@ If called outside of a method, it returns <code>nil</code>.</p>
 78
 79
 80
-81
-82</pre>
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 73</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/src/kernel.c', line 72</span>
 
 static mrb_value
 mrb_f_method(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2795,7 +2692,7 @@ mrb_f_method(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="__printstr__-instance_method">
   
-    #<strong>__printstr__</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>__printstr__</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2851,7 +2748,7 @@ mrb_printstr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="__to_int-instance_method">
   
-    #<strong>__to_int</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>__to_int</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2875,7 +2772,7 @@ mrb_printstr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="__to_str-instance_method">
   
-    #<strong>__to_str</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>__to_str</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2899,7 +2796,7 @@ mrb_printstr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="_inspect-instance_method">
   
-    #<strong>_inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>_inspect</strong>(_recur_list)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2930,7 +2827,7 @@ mrb_printstr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
     <td>
       <pre class="code"><span class="info file"># File 'mrblib/kernel.rb', line 43</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">_inspect</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">_inspect</span>(_recur_list)
   <span style="color:#069">self</span>.inspect
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
@@ -2941,7 +2838,7 @@ mrb_printstr(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="`-instance_method">
   
-    #<strong>`</strong>(cmd)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>`</strong>(cmd)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3304,7 +3201,7 @@ mrb_obj_class_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="clone-instance_method">
   
-    #<strong>clone</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>clone</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3353,7 +3250,7 @@ the class.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -3406,9 +3303,9 @@ mrb_obj_clone(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   mrb_value clone;
 
   <span style="color:#080;font-weight:bold">if</span> (mrb_immediate_p(<span style="color:#069">self</span>)) {
-    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't clone %S</span><span style="color:#710">&quot;</span></span>, <span style="color:#069">self</span>);
+    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't clone %v</span><span style="color:#710">&quot;</span></span>, <span style="color:#069">self</span>);
   }
-  <span style="color:#080;font-weight:bold">if</span> (mrb_type(<span style="color:#069">self</span>) == <span style="color:#036;font-weight:bold">MRB_TT_SCLASS</span>) {
+  <span style="color:#080;font-weight:bold">if</span> (mrb_sclass_p(<span style="color:#069">self</span>)) {
     mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't clone singleton class</span><span style="color:#710">&quot;</span></span>);
   }
   p = (struct <span style="color:#036;font-weight:bold">RObject</span>*)mrb_obj_alloc(mrb, mrb_type(<span style="color:#069">self</span>), mrb_obj_class(mrb, <span style="color:#069">self</span>));
@@ -3428,7 +3325,7 @@ mrb_obj_clone(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="define_singleton_method-instance_method">
   
-    #<strong>define_singleton_method</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>define_singleton_method</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3452,7 +3349,6 @@ mrb_obj_clone(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-383
 384
 385
 386
@@ -3468,12 +3364,10 @@ mrb_obj_clone(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 396
 397
 398
-399
-400
-401</pre>
+399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 383</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 384</span>
 
 static mrb_value
 mod_define_singleton_method(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3483,10 +3377,7 @@ mod_define_singleton_method(mrb_state *mrb, mrb_value <span style="color:#069">s
   mrb_sym mid;
   mrb_value blk = mrb_nil_value();
 
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">n&amp;</span><span style="color:#710">&quot;</span></span>, &amp;mid, &amp;blk);
-  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(blk)) {
-    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_ARGUMENT_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no block given</span><span style="color:#710">&quot;</span></span>);
-  }
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">n&amp;!</span><span style="color:#710">&quot;</span></span>, &amp;mid, &amp;blk);
   p = (struct <span style="color:#036;font-weight:bold">RProc</span>*)mrb_obj_alloc(mrb, <span style="color:#036;font-weight:bold">MRB_TT_PROC</span>, mrb-&gt;proc_class);
   mrb_proc_copy(p, mrb_proc_ptr(blk));
   p-&gt;flags |= <span style="color:#036;font-weight:bold">MRB_PROC_STRICT</span>;
@@ -3502,7 +3393,7 @@ mod_define_singleton_method(mrb_state *mrb, mrb_value <span style="color:#069">s
       <div class="method_details ">
   <h3 class="signature " id="dup-instance_method">
   
-    #<strong>dup</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>dup</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3543,7 +3434,7 @@ the class.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -3593,9 +3484,9 @@ mrb_obj_dup(mrb_state *mrb, mrb_value obj)
   mrb_value dup;
 
   <span style="color:#080;font-weight:bold">if</span> (mrb_immediate_p(obj)) {
-    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't dup %S</span><span style="color:#710">&quot;</span></span>, obj);
+    mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't dup %v</span><span style="color:#710">&quot;</span></span>, obj);
   }
-  <span style="color:#080;font-weight:bold">if</span> (mrb_type(obj) == <span style="color:#036;font-weight:bold">MRB_TT_SCLASS</span>) {
+  <span style="color:#080;font-weight:bold">if</span> (mrb_sclass_p(obj)) {
     mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't dup singleton class</span><span style="color:#710">&quot;</span></span>);
   }
   p = mrb_obj_alloc(mrb, mrb_type(obj), mrb_obj_class(mrb, obj));
@@ -3760,193 +3651,17 @@ perform type conversion across <code>==</code>, but not across
       <pre class="lines">
 
 
-1636
-1637
-1638
-1639
-1640
-1641
-1642
-1643</pre>
+1670
+1671
+1672
+1673
+1674
+1675
+1676
+1677</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/class.c', line 1636</span>
-
-mrb_value
-mrb_obj_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  mrb_value arg;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;arg);
-  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_obj_equal(mrb, <span style="color:#069">self</span>, arg));
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="equal?-instance_method">
-  
-    
-      <span class="overload">#<strong>==</strong>(other)  &#x21d2; <tt>Boolean</tt> </span>
-    
-      <span class="overload">#<strong>equal?</strong>(other)  &#x21d2; <tt>Boolean</tt> </span>
-    
-      <span class="overload">#<strong>eql?</strong>(other)  &#x21d2; <tt>Boolean</tt> </span>
-    
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Equality—At the <code>Object</code> level, <code>==</code> returns
-<code>true</code> only if <i>obj</i> and <i>other</i> are the
-same object. Typically, this method is overridden in descendant
-classes to provide class-specific meaning.</p>
-
-<p>Unlike <code>==</code>, the <code>equal?</code> method should never be
-overridden by subclasses: it is used to determine object identity
-(that is, <code>a.equal?(b)</code> iff <code>a</code> is the same
-object as <code>b</code>).</p>
-
-<p>The <code>eql?</code> method returns <code>true</code> if
-<i>obj</i> and <i>anObject</i> have the same value. Used by
-<code>Hash</code> to test members for equality.  For objects of
-class <code>Object</code>, <code>eql?</code> is synonymous with
-<code>==</code>. Subclasses normally continue this tradition, but
-there are exceptions. <code>Numeric</code> types, for example,
-perform type conversion across <code>==</code>, but not across
-<code>eql?</code>, so:</p>
-
-<p>1 == 1.0     #=&gt; true
-   1.eql? 1.0   #=&gt; false</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <p class="tag_title">Overloads:</p>
-  <ul class="overload">
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>==</strong>(other)  &#x21d2; <tt>Boolean</tt> </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-      </li>
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>equal?</strong>(other)  &#x21d2; <tt>Boolean</tt> </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-      </li>
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>eql?</strong>(other)  &#x21d2; <tt>Boolean</tt> </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-      </li>
-    
-  </ul>
-
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1636
-1637
-1638
-1639
-1640
-1641
-1642
-1643</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/class.c', line 1636</span>
+      <pre class="code"><span class="info file"># File 'src/class.c', line 1670</span>
 
 mrb_value
 mrb_obj_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3964,7 +3679,7 @@ mrb_obj_equal_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="extend-instance_method">
   
-    #<strong>extend</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>extend</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4012,7 +3727,7 @@ parameter.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -4063,7 +3778,7 @@ mrb_obj_extend_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="format-instance_method">
   
-    #<strong>format</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>format</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4101,7 +3816,7 @@ mrb_value mrb_f_sprintf(mrb_state *mrb, mrb_value obj);</pre>
       <div class="method_details ">
   <h3 class="signature " id="freeze-instance_method">
   
-    #<strong>freeze</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>freeze</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4136,44 +3851,20 @@ mrb_value mrb_f_sprintf(mrb_state *mrb, mrb_value obj);</pre>
 442
 443
 444
-445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457</pre>
+445</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'src/kernel.c', line 434</span>
 
-static mrb_value
+<span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_obj_freeze(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  struct <span style="color:#036;font-weight:bold">RBasic</span> *b;
-
-  switch (mrb_type(<span style="color:#069">self</span>)) {
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FALSE</span>:
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_TRUE</span>:
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FIXNUM</span>:
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_SYMBOL</span>:
-<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FLOAT</span>:
-<span style="color:#777">#endif</span>
-      <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
-    <span style="color:#606">default</span>:
-      <span style="color:#080;font-weight:bold">break</span>;
-  }
-
-  b = mrb_basic_ptr(<span style="color:#069">self</span>);
-  <span style="color:#080;font-weight:bold">if</span> (!MRB_FROZEN_P(b)) {
-    MRB_SET_FROZEN_FLAG(b);
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_immediate_p(<span style="color:#069">self</span>)) {
+    struct <span style="color:#036;font-weight:bold">RBasic</span> *b = mrb_basic_ptr(<span style="color:#069">self</span>);
+    <span style="color:#080;font-weight:bold">if</span> (!mrb_frozen_p(b)) {
+      MRB_SET_FROZEN_FLAG(b);
+      <span style="color:#080;font-weight:bold">if</span> (b-&gt;c-&gt;tt == <span style="color:#036;font-weight:bold">MRB_TT_SCLASS</span>) MRB_SET_FROZEN_FLAG(b-&gt;c);
+    }
   }
   <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>;
 }</pre>
@@ -4222,88 +3913,20 @@ mrb_obj_freeze(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-459
-460
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477
-478
-479
-480
-481
-482</pre>
+447
+448
+449
+450
+451</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 459</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 447</span>
 
 static mrb_value
 mrb_obj_frozen(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  struct <span style="color:#036;font-weight:bold">RBasic</span> *b;
-
-  switch (mrb_type(<span style="color:#069">self</span>)) {
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FALSE</span>:
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_TRUE</span>:
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FIXNUM</span>:
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_SYMBOL</span>:
-<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
-    <span style="color:#080;font-weight:bold">case</span> <span style="color:#606">MRB_TT_FLOAT</span>:
-<span style="color:#777">#endif</span>
-      <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
-    <span style="color:#606">default</span>:
-      <span style="color:#080;font-weight:bold">break</span>;
-  }
-
-  b = mrb_basic_ptr(<span style="color:#069">self</span>);
-  <span style="color:#080;font-weight:bold">if</span> (!MRB_FROZEN_P(b)) {
-    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
-  }
-  <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
+  <span style="color:#080;font-weight:bold">return</span> mrb_bool_value(mrb_immediate_p(<span style="color:#069">self</span>) || mrb_frozen_p(mrb_basic_ptr(<span style="color:#069">self</span>)));
 }</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getc-instance_method">
-  
-    #<strong>getc</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-385
-386
-387</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 385</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">getc</span>(*args)
-  <span style="color:#d70">$stdin</span>.getc(*args)
-<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -4312,7 +3935,7 @@ mrb_obj_frozen(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="gets-instance_method">
   
-    #<strong>gets</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>gets</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4324,12 +3947,12 @@ mrb_obj_frozen(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-381
-382
-383</pre>
+28
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 381</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/kernel.rb', line 28</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">gets</span>(*args)
   <span style="color:#d70">$stdin</span>.gets(*args)
@@ -4395,42 +4018,26 @@ mrb_obj_frozen(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-960
-961
-962
-963
-964
-965
-966
-967
-968
-969
-970
-971
-972
-973
-974
-975
-976</pre>
+985
+986
+987
+988
+989
+990
+991
+992
+993</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/variable.c', line 960</span>
+      <pre class="code"><span class="info file"># File 'src/variable.c', line 985</span>
 
 mrb_value
 mrb_f_global_variables(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
   iv_tbl *t = mrb-&gt;globals;
   mrb_value ary = mrb_ary_new(mrb);
-  size_t i;
-  char buf[<span style="color:#00D">3</span>];
 
   iv_foreach(mrb, t, gv_i, &amp;ary);
-  buf[<span style="color:#00D">0</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">$</span><span style="color:#710">'</span></span>;
-  buf[<span style="color:#00D">2</span>] = <span style="color:#00D">0</span>;
-  <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">1</span>; i &lt;= <span style="color:#00D">9</span>; ++i) {
-    buf[<span style="color:#00D">1</span>] = (char)(i + <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">0</span><span style="color:#710">'</span></span>);
-    mrb_ary_push(mrb, ary, mrb_symbol_value(mrb_intern(mrb, buf, <span style="color:#00D">2</span>)));
-  }
   <span style="color:#080;font-weight:bold">return</span> ary;
 }</pre>
     </td>
@@ -4496,14 +4103,14 @@ function must have the property that <code>a.eql?(b)</code> implies
       <pre class="lines">
 
 
-495
-496
-497
-498
-499</pre>
+464
+465
+466
+467
+468</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 495</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 464</span>
 
 static mrb_value
 mrb_obj_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -4518,7 +4125,7 @@ mrb_obj_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="initialize_copy-instance_method">
   
-    #<strong>initialize_copy</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize_copy</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4542,21 +4149,21 @@ mrb_obj_hash(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-502
-503
-504
-505
-506
-507
-508
-509
-510
-511
-512
-513</pre>
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 502</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 471</span>
 
 static mrb_value
 mrb_obj_init_copy(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -4651,7 +4258,7 @@ generate the string.</p>
 <span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_obj_inspect(mrb_state *mrb, mrb_value obj)
 {
-  <span style="color:#080;font-weight:bold">if</span> ((mrb_type(obj) == <span style="color:#036;font-weight:bold">MRB_TT_OBJECT</span>) &amp;&amp; mrb_obj_basic_to_s_p(mrb, obj)) {
+  <span style="color:#080;font-weight:bold">if</span> (mrb_object_p(obj) &amp;&amp; mrb_obj_basic_to_s_p(mrb, obj)) {
     <span style="color:#080;font-weight:bold">return</span> mrb_obj_iv_inspect(mrb, mrb_obj_ptr(obj));
   }
   <span style="color:#080;font-weight:bold">return</span> mrb_any_to_s(mrb, obj);
@@ -4716,18 +4323,18 @@ class. See also <code>Object#kind_of?</code>.</p>
       <pre class="lines">
 
 
-531
-532
-533
-534
-535
-536
-537
-538
-539</pre>
+500
+501
+502
+503
+504
+505
+506
+507
+508</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 531</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 500</span>
 
 static mrb_value
 obj_is_instance_of(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -4838,7 +4445,7 @@ mrb_obj_ivar_defined(mrb_state *mrb, mrb_value <span style="color:#069">self</sp
       <div class="method_details ">
   <h3 class="signature " id="instance_variable_get-instance_method">
   
-    #<strong>instance_variable_get</strong>(symbol)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>instance_variable_get</strong>(symbol)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4881,7 +4488,7 @@ supplied symbol is not valid as an instance variable name.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -4932,7 +4539,7 @@ mrb_obj_ivar_get(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="instance_variable_set-instance_method">
   
-    #<strong>instance_variable_set</strong>(symbol, obj)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>instance_variable_set</strong>(symbol, obj)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4975,7 +4582,7 @@ did not have to exist prior to this call.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -5091,8 +4698,6 @@ instance variable.</p>
       <pre class="lines">
 
 
-566
-567
 568
 569
 570
@@ -5101,10 +4706,12 @@ instance variable.</p>
 573
 574
 575
-576</pre>
+576
+577
+578</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/variable.c', line 566</span>
+      <pre class="code"><span class="info file"># File 'src/variable.c', line 568</span>
 
 mrb_value
 mrb_obj_instance_variables(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -5238,18 +4845,18 @@ mrb_obj_instance_variables(mrb_state *mrb, mrb_value <span style="color:#069">se
       <pre class="lines">
 
 
-568
-569
-570
-571
-572
-573
-574
-575
-576</pre>
+537
+538
+539
+540
+541
+542
+543
+544
+545</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 568</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 537</span>
 
 static mrb_value
 mrb_obj_is_kind_of_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -5609,18 +5216,18 @@ mrb_f_block_given_p_m(mrb_state *mrb, mrb_value <span style="color:#069">self</s
       <pre class="lines">
 
 
-568
-569
-570
-571
-572
-573
-574
-575
-576</pre>
+537
+538
+539
+540
+541
+542
+543
+544
+545</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 568</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 537</span>
 
 static mrb_value
 mrb_obj_is_kind_of_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -5695,7 +5302,6 @@ method always returns an empty array.</p>
       <pre class="lines">
 
 
-131
 132
 133
 134
@@ -5733,10 +5339,11 @@ method always returns an empty array.</p>
 166
 167
 168
-169</pre>
+169
+170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 131</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 132</span>
 
 static mrb_value
 mrb_local_variables(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -5759,7 +5366,7 @@ mrb_local_variables(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
     <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i + <span style="color:#00D">1</span> &lt; irep-&gt;nlocals; ++i) {
       <span style="color:#080;font-weight:bold">if</span> (irep-&gt;lv[i].name) {
         mrb_sym sym = irep-&gt;lv[i].name;
-        const char *name = mrb_sym2name(mrb, sym);
+        const char *name = mrb_sym_name(mrb, sym);
         switch (name[<span style="color:#00D">0</span>]) {
         <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>*</span><span style="color:#404">'</span></span>: <span style="color:#080;font-weight:bold">case</span> <span style="color:#606"><span style="color:#404">'</span><span>&amp;</span><span style="color:#404">'</span></span>:
           <span style="color:#080;font-weight:bold">break</span>;
@@ -5785,7 +5392,7 @@ mrb_local_variables(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
       <div class="method_details ">
   <h3 class="signature " id="loop-instance_method">
   
-    #<strong>loop</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>loop</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5904,16 +5511,16 @@ mrb_local_variables(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
       <pre class="lines">
 
 
-251
 252
 253
 254
 255
 256
-257</pre>
+257
+258</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 251</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 252</span>
 
 static mrb_value
 mrb_obj_methods_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -5972,25 +5579,25 @@ Only the object <i>nil</i> responds <code>true</code> to <code>nil?</code>.
       <pre class="lines">
 
 
-578
-579
-580
-581
-582
-583
-584
-585
-586
-587
-588
-589
-590
-591
-592
-593</pre>
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 578</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 547</span>
 
 KHASH_DECLARE(st, mrb_sym, char, <span style="color:#069">FALSE</span>)
 KHASH_DEFINE(st, mrb_sym, char, <span style="color:#069">FALSE</span>, kh_int_hash_func, kh_int_hash_equal)
@@ -6016,7 +5623,7 @@ mrb_false(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="object_id-instance_method">
   
-    #<strong>object_id</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>object_id</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6071,7 +5678,7 @@ mrb_obj_id_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="open-instance_method">
   
-    #<strong>open</strong>(file, *rest, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>open</strong>(file, *rest, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6138,7 +5745,7 @@ mrb_obj_id_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="p-instance_method">
   
-    #<strong>p</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>p</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6196,7 +5803,7 @@ mrb_obj_id_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="print-instance_method">
   
-    #<strong>print</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>print</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6240,49 +5847,24 @@ mrb_obj_id_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="printf-instance_method">
   
-    #<strong>printf</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>printf</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="NotImplementedError.html" title="NotImplementedError (class)">NotImplementedError</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-<table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-377
-378
-379</pre>
+24
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/io.rb', line 377</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/kernel.rb', line 24</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">printf</span>(*args)
   <span style="color:#d70">$stdout</span>.printf(*args)
@@ -6348,16 +5930,16 @@ in the receiver will be listed.</p>
       <pre class="lines">
 
 
-268
 269
 270
 271
 272
 273
-274</pre>
+274
+275</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 268</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 269</span>
 
 static mrb_value
 mrb_obj_private_methods(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6427,16 +6009,16 @@ in the receiver will be listed.</p>
       <pre class="lines">
 
 
-285
 286
 287
 288
 289
 290
-291</pre>
+291
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 285</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 286</span>
 
 static mrb_value
 mrb_obj_protected_methods(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6506,16 +6088,16 @@ in the receiver will be listed.</p>
       <pre class="lines">
 
 
-302
 303
 304
 305
 306
 307
-308</pre>
+308
+309</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 302</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 303</span>
 
 static mrb_value
 mrb_obj_public_methods(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6532,7 +6114,7 @@ mrb_obj_public_methods(mrb_state *mrb, mrb_value <span style="color:#069">self</
       <div class="method_details ">
   <h3 class="signature " id="puts-instance_method">
   
-    #<strong>puts</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>puts</strong>(*args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6577,11 +6159,11 @@ mrb_obj_public_methods(mrb_state *mrb, mrb_value <span style="color:#069">self</
   <h3 class="signature " id="raise-instance_method">
   
     
-      <span class="overload">#<strong>raise</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>raise</strong>  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">#<strong>raise</strong>(string)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>raise</strong>(string)  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">#<strong>raise</strong>(exception[, string])  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>raise</strong>(exception[, string])  &#x21d2; <tt>Object</tt> </span>
     
   
 
@@ -6617,35 +6199,35 @@ array of callback information. Exceptions are caught by the
       <pre class="lines">
 
 
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627
-628
-629
-630
-631
-632
-633
-634
-635
-636
-637
-638
-639
-640
-641</pre>
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 616</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 585</span>
 
 <span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_f_raise(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6679,9 +6261,45 @@ mrb_f_raise(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="Rational-instance_method">
+  
+    #<strong>Rational</strong>(numerator, denominator = 1)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-rational/mrblib/rational.rb', line 86</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">Rational</span>(numerator, denominator = <span style="color:#00D">1</span>)
+  a = numerator
+  b = denominator
+  a, b = b, a % b <span style="color:#080;font-weight:bold">until</span> b == <span style="color:#00D">0</span>
+  <span style="color:#036;font-weight:bold">Rational</span>._new(numerator.div(a), denominator.div(a))
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="remove_instance_variable-instance_method">
   
-    #<strong>remove_instance_variable</strong>(symbol)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>remove_instance_variable</strong>(symbol)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -6726,7 +6344,7 @@ variable’s value.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -6747,23 +6365,23 @@ variable’s value.</p>
       <pre class="lines">
 
 
-665
-666
-667
-668
-669
-670
-671
-672
-673
-674
-675
-676
-677
-678</pre>
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 665</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 634</span>
 
 static mrb_value
 mrb_obj_remove_instance_variable(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6775,7 +6393,7 @@ mrb_obj_remove_instance_variable(mrb_state *mrb, mrb_value <span style="color:#0
   mrb_iv_name_sym_check(mrb, sym);
   val = mrb_iv_remove(mrb, <span style="color:#069">self</span>, sym);
   <span style="color:#080;font-weight:bold">if</span> (mrb_undef_p(val)) {
-    mrb_name_error(mrb, sym, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">instance variable %S not defined</span><span style="color:#710">&quot;</span></span>, mrb_sym2str(mrb, sym));
+    mrb_name_error(mrb, sym, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">instance variable %n not defined</span><span style="color:#710">&quot;</span></span>, sym);
   }
   <span style="color:#080;font-weight:bold">return</span> val;
 }</pre>
@@ -6847,29 +6465,29 @@ method is called and the result is returned.</p>
       <pre class="lines">
 
 
-756
-757
-758
-759
-760
-761
-762
-763
-764
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775</pre>
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/kernel.c', line 756</span>
+      <pre class="code"><span class="info file"># File 'src/kernel.c', line 725</span>
 
 static mrb_value
 obj_respond_to(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -6900,9 +6518,9 @@ obj_respond_to(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <h3 class="signature " id="send-instance_method">
   
     
-      <span class="overload">#<strong>send</strong>(symbol[, args...])  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>send</strong>(symbol[, args...])  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">#<strong>__send__</strong>(symbol[, args...])  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>__send__</strong>(symbol[, args...])  &#x21d2; <tt>Object</tt> </span>
     
   
 
@@ -6933,7 +6551,7 @@ arguments specified. You can use <code>__send__</code> if the name
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>send</strong>(symbol[, args...])  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+        <span class="signature">#<strong>send</strong>(symbol[, args...])  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -6949,7 +6567,7 @@ arguments specified. You can use <code>__send__</code> if the name
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -6964,7 +6582,7 @@ arguments specified. You can use <code>__send__</code> if the name
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>__send__</strong>(symbol[, args...])  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+        <span class="signature">#<strong>__send__</strong>(symbol[, args...])  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -6980,7 +6598,7 @@ arguments specified. You can use <code>__send__</code> if the name
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -7004,6 +6622,10 @@ arguments specified. You can use <code>__send__</code> if the name
       <pre class="lines">
 
 
+592
+593
+594
+595
 596
 597
 598
@@ -7044,14 +6666,10 @@ arguments specified. You can use <code>__send__</code> if the name
 633
 634
 635
-636
-637
-638
-639
-640</pre>
+636</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/vm.c', line 596</span>
+      <pre class="code"><span class="info file"># File 'src/vm.c', line 592</span>
 
 mrb_value
 mrb_f_send(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -7106,7 +6724,7 @@ mrb_f_send(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="singleton_class-instance_method">
   
-    #<strong>singleton_class</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>singleton_class</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -7114,7 +6732,7 @@ mrb_f_send(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>15.3.1.3.28</p>
+    <p>15.3.1.3.28 (15.3.1.2.7)</p>
 
 
   </div>
@@ -7130,37 +6748,37 @@ mrb_f_send(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-1232
-1233
-1234
-1235
-1236
-1237
-1238
-1239
-1240
-1241
-1242
-1243
-1244
-1245
-1246
-1247
-1248
-1249
-1250
-1251
-1252
-1253
-1254
-1255
-1256
-1257
-1258
-1259</pre>
+1264
+1265
+1266
+1267
+1268
+1269
+1270
+1271
+1272
+1273
+1274
+1275
+1276
+1277
+1278
+1279
+1280
+1281
+1282
+1283
+1284
+1285
+1286
+1287
+1288
+1289
+1290
+1291</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/class.c', line 1232</span>
+      <pre class="code"><span class="info file"># File 'src/class.c', line 1264</span>
 
 <span style="color:#036;font-weight:bold">MRB_API</span> mrb_value
 mrb_singleton_class(mrb_state *mrb, mrb_value v)
@@ -7198,7 +6816,7 @@ mrb_singleton_class(mrb_state *mrb, mrb_value v)
       <div class="method_details ">
   <h3 class="signature " id="singleton_method-instance_method">
   
-    #<strong>singleton_method</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>singleton_method</strong>(name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -7315,16 +6933,16 @@ Only public and protected singleton methods are returned.</p>
       <pre class="lines">
 
 
-375
 376
 377
 378
 379
 380
-381</pre>
+381
+382</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 375</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-metaprog/src/metaprog.c', line 376</span>
 
 static mrb_value
 mrb_obj_singleton_methods_m(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -7341,7 +6959,7 @@ mrb_obj_singleton_methods_m(mrb_state *mrb, mrb_value <span style="color:#069">s
       <div class="method_details ">
   <h3 class="signature " id="sprintf-instance_method">
   
-    #<strong>sprintf</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sprintf</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -7377,9 +6995,118 @@ mrb_value mrb_f_sprintf(mrb_state *mrb, mrb_value obj);</pre>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="tap-instance_method">
+  
+    #<strong>tap</strong> {|_self| ... } &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+    obj.tap{|x|…}    -&gt; obj</p>
+
+<p>Yields <code>x</code> to the block, and then returns <code>x</code>.
+ The primary purpose of this method is to “tap into” a method chain,
+ in order to perform operations on intermediate results within the chain.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>(1..10)                .tap       <td>x</td>
+      <td>puts “original: #{x.inspect”}</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>.to_a                .tap       <td>x</td>
+      <td>puts “array: #{x.inspect”}</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>.select       <td>x</td>
+      <td>x%2==0 .tap       <td>x</td>
+      <td>puts “evens: #{x.inspect”}</td>
+    </tr>
+    <tr>
+      <td>.map {</td>
+      <td>x</td>
+      <td>x*x }     .tap       <td>x</td>
+      <td>puts “squares: #{x.inspect”}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>_self</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>_self</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Kernel (module)">Kernel</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the object that the method was called on</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-object-ext/mrblib/object.rb', line 29</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">tap</span>
+  <span style="color:#080;font-weight:bold">yield</span> <span style="color:#069">self</span>
+  <span style="color:#069">self</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="to_enum-instance_method">
   
-    #<strong>to_enum</strong>(meth = :each, *args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_enum</strong>(meth = :each, *args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -7392,16 +7119,11 @@ mrb_value mrb_f_sprintf(mrb_state *mrb, mrb_value obj);</pre>
 </h3><div class="docstring">
   <div class="discussion">
     <p>call-seq:
-  obj.to_enum(method = :each, <em>args)                 -&gt; enum
-  obj.enum_for(method = :each, *args)                -&gt; enum
-  obj.to_enum(method = :each, *args) {|</em>args| block} -&gt; enum
-  obj.enum_for(method = :each, <em>args){|</em>args| block} -&gt; enum</p>
+  obj.to_enum(method = :each, *args)                 -&gt; enum
+  obj.enum_for(method = :each, *args)                -&gt; enum</p>
 
 <p>Creates a new Enumerator which will enumerate by calling +method+ on
 +obj+, passing +args+ if any.</p>
-
-<p>If a block is given, it will be used to calculate the size of
-the enumerator without the need to iterate it (see Enumerator#size).</p>
 
 <p>=== Examples</p>
 
@@ -7420,17 +7142,14 @@ the enumerator without the need to iterate it (see Enumerator#size).</p>
 <p>It is typical to call to_enum when defining methods for
 a generic Enumerable, in case no block is passed.</p>
 
-<p>Here is such an example, with parameter passing and a sizing block:</p>
+<p>Here is such an example with parameter passing:</p>
 
 <pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">Enumerable</span>
   <span style="color:#777"># a generic method to repeat the values of any enumerable</span>
   <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">repeat</span>(n)
     raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>n<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> is negative!</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> n &lt; <span style="color:#00D">0</span>
     <span style="color:#080;font-weight:bold">unless</span> block_given?
-      <span style="color:#080;font-weight:bold">return</span> to_enum(__method__, n) <span style="color:#080;font-weight:bold">do</span> <span style="color:#777"># __method__ is :repeat here</span>
-        sz = size     <span style="color:#777"># Call size and multiply by n...</span>
-        sz * n <span style="color:#080;font-weight:bold">if</span> sz  <span style="color:#777"># but return nil if size itself is nil</span>
-      <span style="color:#080;font-weight:bold">end</span>
+      <span style="color:#080;font-weight:bold">return</span> to_enum(__method__, n) <span style="color:#777"># __method__ is :repeat here</span>
     <span style="color:#080;font-weight:bold">end</span>
     each <span style="color:#080;font-weight:bold">do</span> |*val|
       n.times { <span style="color:#080;font-weight:bold">yield</span> *val }
@@ -7459,12 +7178,12 @@ enum.first(<span style="color:#00D">4</span>) <span style="color:#777"># =&gt; [
       <pre class="lines">
 
 
-615
-616
-617</pre>
+647
+648
+649</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 615</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 647</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_enum</span>(*a)
   raise <span style="color:#036;font-weight:bold">NotImplementedError</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">fiber required for enumerator</span><span style="color:#710">&quot;</span></span>)
@@ -7477,7 +7196,7 @@ enum.first(<span style="color:#00D">4</span>) <span style="color:#777"># =&gt; [
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -7501,7 +7220,7 @@ enum.first(<span style="color:#00D">4</span>) <span style="color:#777"># =&gt; [
       <div class="method_details ">
   <h3 class="signature " id="yield_self-instance_method">
   
-    #<strong>yield_self</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>yield_self</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -7548,7 +7267,7 @@ enum.first(<span style="color:#00D">4</span>) <span style="color:#777"># =&gt; [
 13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-kernel-ext/mrblib/kernel.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-object-ext/mrblib/object.rb', line 10</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">yield_self</span>(&amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:yield_self</span> <span style="color:#080;font-weight:bold">unless</span> block
@@ -7564,9 +7283,9 @@ enum.first(<span style="color:#00D">4</span>) <span style="color:#777"># =&gt; [
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:30 2019 by
+  Generated on Wed Nov 27 22:35:07 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

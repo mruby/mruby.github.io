@@ -6,7 +6,7 @@
 <title>
   Header: mruby/proc.h
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -124,7 +124,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_proc_new_cfunc_with_env-function" title="mrb_proc_new_cfunc_with_env">struct RProc * <strong>mrb_proc_new_cfunc_with_env</strong>(mrb_state*, mrb_func_t, mrb_int, const mrb_value*)</a>
+    <a href="#mrb_proc_new_cfunc_with_env-function" title="mrb_proc_new_cfunc_with_env">struct RProc * <strong>mrb_proc_new_cfunc_with_env</strong>(mrb_state *, mrb_func_t, mrb_int, const mrb_value *)</a>
 
     
   </span>
@@ -142,7 +142,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_proc_cfunc_env_get-function" title="mrb_proc_cfunc_env_get">mrb_value <strong>mrb_proc_cfunc_env_get</strong>(mrb_state*, mrb_int)</a>
+    <a href="#mrb_proc_cfunc_env_get-function" title="mrb_proc_cfunc_env_get">mrb_value <strong>mrb_proc_cfunc_env_get</strong>(mrb_state *, mrb_int)</a>
 
     
   </span>
@@ -360,7 +360,22 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="MRB_METHOD_NOARG_FL-define" class=""><small>#define</small> MRB_METHOD_NOARG_FL
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="MRB_METHOD_FUNC_P-define" class=""><small>#define</small> MRB_METHOD_FUNC_P
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_METHOD_NOARG_P-define" class=""><small>#define</small> MRB_METHOD_NOARG_P
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_METHOD_NOARG_SET-define" class=""><small>#define</small> MRB_METHOD_NOARG_SET
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -434,7 +449,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_proc_new_cfunc_with_env-function">
-  struct RProc * <strong>mrb_proc_new_cfunc_with_env</strong>(mrb_state* , mrb_func_t , mrb_int , const mrb_value* )
+  struct RProc * <strong>mrb_proc_new_cfunc_with_env</strong>(mrb_state * mrb, mrb_func_t func, mrb_int argc, const mrb_value * argv)
 
   
 </h3>
@@ -456,7 +471,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_proc_cfunc_env_get-function">
-  mrb_value <strong>mrb_proc_cfunc_env_get</strong>(mrb_state* , mrb_int )
+  mrb_value <strong>mrb_proc_cfunc_env_get</strong>(mrb_state * mrb, mrb_int idx)
 
   
 </h3>
@@ -468,9 +483,9 @@
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:34 2019 by
+  Generated on Wed Nov 27 22:35:12 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

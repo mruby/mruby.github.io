@@ -6,7 +6,7 @@
 <title>
   Class: Method
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Method</li>
           
@@ -192,6 +192,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#arity-instance_method" title="#arity (instance method)">#<strong>arity</strong>  &#x21d2; Object </a>
     
 
@@ -216,6 +239,29 @@
   <span class="summary_signature">
     
       <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eql%3F-instance_method" title="#eql? (instance method)">#<strong>eql?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -477,7 +523,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="<<-instance_method">
   
-    #<strong>&lt;&lt;</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&lt;&lt;</strong>(other)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -489,12 +535,12 @@
       <pre class="lines">
 
 
-21
-22
-23</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/mrblib/method.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/mrblib/method.rb', line 9</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&lt;&lt;</span>(other)
   -&gt;(*args, &amp;block) { call(other.call(*args, &amp;block)) }
@@ -507,7 +553,7 @@
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    #<strong>==</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>==</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -519,10 +565,6 @@
       <pre class="lines">
 
 
-47
-48
-49
-50
 51
 52
 53
@@ -575,10 +617,14 @@
 100
 101
 102
-103</pre>
+103
+104
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 47</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 51</span>
 
 static mrb_value
 method_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -594,22 +640,22 @@ method_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   <span style="color:#080;font-weight:bold">if</span> (mrb_class(mrb, <span style="color:#069">self</span>) != mrb_class(mrb, other))
     <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
 
-  klass = mrb_class_ptr(IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@klass</span><span style="color:#710">&quot;</span></span>));
-  <span style="color:#080;font-weight:bold">if</span> (klass != mrb_class_ptr(IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@klass</span><span style="color:#710">&quot;</span></span>)))
+  klass = mrb_class_ptr(IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>));
+  <span style="color:#080;font-weight:bold">if</span> (klass != mrb_class_ptr(IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>)))
     <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
 
-  owner = mrb_class_ptr(IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@owner</span><span style="color:#710">&quot;</span></span>));
-  <span style="color:#080;font-weight:bold">if</span> (owner != mrb_class_ptr(IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@owner</span><span style="color:#710">&quot;</span></span>)))
+  owner = mrb_class_ptr(IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>));
+  <span style="color:#080;font-weight:bold">if</span> (owner != mrb_class_ptr(IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>)))
     <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
 
-  receiver = IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@recv</span><span style="color:#710">&quot;</span></span>);
-  <span style="color:#080;font-weight:bold">if</span> (!mrb_obj_equal(mrb, receiver, IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@recv</span><span style="color:#710">&quot;</span></span>)))
+  receiver = IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_obj_equal(mrb, receiver, IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>)))
     <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
 
-  orig_proc = IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">proc</span><span style="color:#710">&quot;</span></span>);
-  other_proc = IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">proc</span><span style="color:#710">&quot;</span></span>);
+  orig_proc = IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>);
+  other_proc = IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>);
   <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(orig_proc) &amp;&amp; mrb_nil_p(other_proc)) {
-    <span style="color:#080;font-weight:bold">if</span> (mrb_symbol(IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@name</span><span style="color:#710">&quot;</span></span>)) == mrb_symbol(IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@name</span><span style="color:#710">&quot;</span></span>)))
+    <span style="color:#080;font-weight:bold">if</span> (mrb_symbol(IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>)) == mrb_symbol(IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>)))
       <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
     <span style="color:#080;font-weight:bold">else</span>
       <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
@@ -645,7 +691,7 @@ method_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id=">>-instance_method">
   
-    #<strong>&gt;&gt;</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&gt;&gt;</strong>(other)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -657,12 +703,12 @@ method_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-25
-26
-27</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/mrblib/method.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/mrblib/method.rb', line 13</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&gt;&gt;</span>(other)
   -&gt;(*args, &amp;block) { other.call(call(*args, &amp;block)) }
@@ -673,9 +719,9 @@ method_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="arity-instance_method">
+  <h3 class="signature " id="[]-instance_method">
   
-    #<strong>arity</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>[]</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -687,45 +733,73 @@ method_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228</pre>
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 211</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 138</span>
+
+static mrb_value
+method_call(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>));
+  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>));
+  mrb_value recv = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>));
+  struct <span style="color:#036;font-weight:bold">RClass</span> *owner = mrb_class_ptr(mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>)));
+  mrb_int argc;
+  mrb_value *argv, block;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*&amp;</span><span style="color:#710">&quot;</span></span>, &amp;argv, &amp;argc, &amp;block);
+  <span style="color:#080;font-weight:bold">return</span> mcall(mrb, recv, proc, name, owner, argc, argv, block);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="arity-instance_method">
+  
+    #<strong>arity</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+238
+239
+240
+241
+242
+243
+244</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 238</span>
 
 static mrb_value
 method_arity(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">proc</span><span style="color:#710">&quot;</span></span>));
-  struct <span style="color:#036;font-weight:bold">RProc</span> *rproc;
-  struct <span style="color:#036;font-weight:bold">RClass</span> *orig;
-  mrb_value ret;
-
-  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(proc))
-    <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(<span style="color:#00D">-1</span>);
-
-  rproc = mrb_proc_ptr(proc);
-  orig = rproc-&gt;c;
-  rproc-&gt;c = mrb-&gt;proc_class;
-  ret = mrb_funcall(mrb, proc, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">arity</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>);
-  rproc-&gt;c = orig;
-  <span style="color:#080;font-weight:bold">return</span> ret;
+  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>));
+  mrb_int arity = mrb_nil_p(proc) ? <span style="color:#00D">-1</span> : mrb_proc_arity(mrb_proc_ptr(proc));
+  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(arity);
 }</pre>
     </td>
   </tr>
@@ -735,7 +809,7 @@ method_arity(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="call-instance_method">
   
-    #<strong>call</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>call</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -747,73 +821,198 @@ method_arity(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138</pre>
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 107</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 138</span>
 
 static mrb_value
 method_call(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">proc</span><span style="color:#710">&quot;</span></span>));
-  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@name</span><span style="color:#710">&quot;</span></span>));
-  mrb_value recv = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@recv</span><span style="color:#710">&quot;</span></span>));
-  struct <span style="color:#036;font-weight:bold">RClass</span> *owner = mrb_class_ptr(mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@owner</span><span style="color:#710">&quot;</span></span>)));
+  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>));
+  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>));
+  mrb_value recv = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>));
+  struct <span style="color:#036;font-weight:bold">RClass</span> *owner = mrb_class_ptr(mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>)));
   mrb_int argc;
-  mrb_value *argv, ret, block;
-  mrb_sym orig_mid;
+  mrb_value *argv, block;
 
   mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">*&amp;</span><span style="color:#710">&quot;</span></span>, &amp;argv, &amp;argc, &amp;block);
-  orig_mid = mrb-&gt;c-&gt;ci-&gt;mid;
-  mrb-&gt;c-&gt;ci-&gt;mid = mrb_symbol(name);
-  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(proc)) {
-    mrb_value missing_argv = mrb_ary_new_from_values(mrb, argc, argv);
-    mrb_ary_unshift(mrb, missing_argv, name);
-    ret = mrb_funcall_argv(mrb, recv, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">method_missing</span><span style="color:#710">&quot;</span></span>), argc + <span style="color:#00D">1</span>, RARRAY_PTR(missing_argv));
+  <span style="color:#080;font-weight:bold">return</span> mcall(mrb, recv, proc, name, owner, argc, argv, block);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eql?-instance_method">
+  
+    #<strong>eql?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 51</span>
+
+static mrb_value
+method_eql(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value other, receiver, orig_proc, other_proc;
+  struct <span style="color:#036;font-weight:bold">RClass</span> *owner, *klass;
+  struct <span style="color:#036;font-weight:bold">RProc</span> *orig_rproc, *other_rproc;
+
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;other);
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_obj_is_instance_of(mrb, other, mrb_class(mrb, <span style="color:#069">self</span>)))
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_class(mrb, <span style="color:#069">self</span>) != mrb_class(mrb, other))
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+
+  klass = mrb_class_ptr(IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>));
+  <span style="color:#080;font-weight:bold">if</span> (klass != mrb_class_ptr(IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>)))
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+
+  owner = mrb_class_ptr(IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>));
+  <span style="color:#080;font-weight:bold">if</span> (owner != mrb_class_ptr(IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>)))
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+
+  receiver = IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#080;font-weight:bold">if</span> (!mrb_obj_equal(mrb, receiver, IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>)))
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+
+  orig_proc = IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>);
+  other_proc = IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(orig_proc) &amp;&amp; mrb_nil_p(other_proc)) {
+    <span style="color:#080;font-weight:bold">if</span> (mrb_symbol(IV_GET(<span style="color:#069">self</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>)) == mrb_symbol(IV_GET(other, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>)))
+      <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
+    <span style="color:#080;font-weight:bold">else</span>
+      <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
   }
-  <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (!mrb_nil_p(block)) {
-    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">*
-      workaround since `mrb_yield_with_class` does not support passing block as parameter
-      need new API that initializes `mrb-&gt;c-&gt;stack[argc+1]` with block passed by argument
-    *</span><span style="color:#404">/</span></span>
-    ret = mrb_funcall_with_block(mrb, recv, mrb_symbol(name), argc, argv, block);
+
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(orig_proc))
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+  <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(other_proc))
+    <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+
+  orig_rproc = mrb_proc_ptr(orig_proc);
+  other_rproc = mrb_proc_ptr(other_proc);
+  <span style="color:#080;font-weight:bold">if</span> (MRB_PROC_CFUNC_P(orig_rproc)) {
+    <span style="color:#080;font-weight:bold">if</span> (!MRB_PROC_CFUNC_P(other_rproc))
+      <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+    <span style="color:#080;font-weight:bold">if</span> (orig_rproc-&gt;body.func != other_rproc-&gt;body.func)
+      <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
   }
   <span style="color:#080;font-weight:bold">else</span> {
-    ret = mrb_yield_with_class(mrb, proc, argc, argv, recv, owner);
+    <span style="color:#080;font-weight:bold">if</span> (MRB_PROC_CFUNC_P(other_rproc))
+      <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
+    <span style="color:#080;font-weight:bold">if</span> (orig_rproc-&gt;body.irep != other_rproc-&gt;body.irep)
+      <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
   }
-  mrb-&gt;c-&gt;ci-&gt;mid = orig_mid;
-  <span style="color:#080;font-weight:bold">return</span> ret;
+
+  <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
 }</pre>
     </td>
   </tr>
@@ -823,7 +1022,7 @@ method_call(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>inspect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -835,6 +1034,158 @@ method_call(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 287</span>
+
+static mrb_value
+method_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  mrb_value owner = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>));
+  mrb_value klass = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>));
+  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>));
+  mrb_value str = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#&lt;</span><span style="color:#710">&quot;</span></span>);
+  struct <span style="color:#036;font-weight:bold">RClass</span> *rklass;
+
+  mrb_str_cat_cstr(mrb, str, mrb_obj_classname(mrb, <span style="color:#069">self</span>));
+  mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">: </span><span style="color:#710">&quot;</span></span>);
+  rklass = mrb_class_ptr(klass);
+  <span style="color:#080;font-weight:bold">if</span> (mrb_class_ptr(owner) == rklass) {
+    mrb_str_concat(mrb, str, owner);
+    mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span>);
+    mrb_str_concat(mrb, str, name);
+  }
+  <span style="color:#080;font-weight:bold">else</span> {
+    mrb_str_cat_cstr(mrb, str, mrb_class_name(mrb, rklass));
+    mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">(</span><span style="color:#710">&quot;</span></span>);
+    mrb_str_concat(mrb, str, owner);
+    mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">)#</span><span style="color:#710">&quot;</span></span>);
+    mrb_str_concat(mrb, str, name);
+  }
+  mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&gt;</span><span style="color:#710">&quot;</span></span>);
+  <span style="color:#080;font-weight:bold">return</span> str;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+401
+402
+403
+404
+405</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 401</span>
+
+static mrb_value
+method_name(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  <span style="color:#080;font-weight:bold">return</span> mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="owner-instance_method">
+  
+    #<strong>owner</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+389
+390
+391
+392
+393</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 389</span>
+
+static mrb_value
+method_owner(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  <span style="color:#080;font-weight:bold">return</span> mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="parameters-instance_method">
+  
+    #<strong>parameters</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267
+268
+269
+270
 271
 272
 273
@@ -849,159 +1200,15 @@ method_call(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 282
 283
 284
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295
-296
-297</pre>
+285</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 271</span>
-
-static mrb_value
-method_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  mrb_value owner = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@owner</span><span style="color:#710">&quot;</span></span>));
-  mrb_value klass = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@klass</span><span style="color:#710">&quot;</span></span>));
-  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@name</span><span style="color:#710">&quot;</span></span>));
-  mrb_value str = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#&lt;</span><span style="color:#710">&quot;</span></span>);
-  struct <span style="color:#036;font-weight:bold">RClass</span> *rklass;
-
-  mrb_str_cat_cstr(mrb, str, mrb_obj_classname(mrb, <span style="color:#069">self</span>));
-  mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">: </span><span style="color:#710">&quot;</span></span>);
-  rklass = mrb_class_ptr(klass);
-  <span style="color:#080;font-weight:bold">if</span> (mrb_class_ptr(owner) == rklass) {
-    mrb_str_cat_str(mrb, str, mrb_funcall(mrb, owner, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>));
-    mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span>);
-    mrb_str_cat_str(mrb, str, mrb_funcall(mrb, name, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>));
-  }
-  <span style="color:#080;font-weight:bold">else</span> {
-    mrb_str_cat_cstr(mrb, str, mrb_class_name(mrb, rklass));
-    mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">(</span><span style="color:#710">&quot;</span></span>);
-    mrb_str_cat_str(mrb, str, mrb_funcall(mrb, owner, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>));
-    mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">)#</span><span style="color:#710">&quot;</span></span>);
-    mrb_str_cat_str(mrb, str, mrb_funcall(mrb, name, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>));
-  }
-  mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&gt;</span><span style="color:#710">&quot;</span></span>);
-  <span style="color:#080;font-weight:bold">return</span> str;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="name-instance_method">
-  
-    #<strong>name</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-17
-18
-19</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/mrblib/method.rb', line 17</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">name</span>
-  <span style="color:#33B">@name</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="owner-instance_method">
-  
-    #<strong>owner</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-9
-10
-11</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/mrblib/method.rb', line 9</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">owner</span>
-  <span style="color:#33B">@owner</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="parameters-instance_method">
-  
-    #<strong>parameters</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 249</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 265</span>
 
 static mrb_value
 method_parameters(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">proc</span><span style="color:#710">&quot;</span></span>));
+  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>));
   struct <span style="color:#036;font-weight:bold">RProc</span> *rproc;
   struct <span style="color:#036;font-weight:bold">RClass</span> *orig;
   mrb_value ret;
@@ -1027,7 +1234,7 @@ method_parameters(mrb_state *mrb, mrb_value <span style="color:#069">self</span>
       <div class="method_details ">
   <h3 class="signature " id="receiver-instance_method">
   
-    #<strong>receiver</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>receiver</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1039,16 +1246,20 @@ method_parameters(mrb_state *mrb, mrb_value <span style="color:#069">self</span>
       <pre class="lines">
 
 
-13
-14
-15</pre>
+395
+396
+397
+398
+399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/mrblib/method.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 395</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">receiver</span>
-  <span style="color:#33B">@recv</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+static mrb_value
+method_receiver(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+{
+  <span style="color:#080;font-weight:bold">return</span> mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>));
+}</pre>
     </td>
   </tr>
 </table>
@@ -1057,7 +1268,7 @@ method_parameters(mrb_state *mrb, mrb_value <span style="color:#069">self</span>
       <div class="method_details ">
   <h3 class="signature " id="source_location-instance_method">
   
-    #<strong>source_location</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>source_location</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1069,32 +1280,32 @@ method_parameters(mrb_state *mrb, mrb_value <span style="color:#069">self</span>
       <pre class="lines">
 
 
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
 246
-247</pre>
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 230</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 246</span>
 
 static mrb_value
 method_source_location(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">proc</span><span style="color:#710">&quot;</span></span>));
+  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>));
   struct <span style="color:#036;font-weight:bold">RProc</span> *rproc;
   struct <span style="color:#036;font-weight:bold">RClass</span> *orig;
   mrb_value ret;
@@ -1117,7 +1328,7 @@ method_source_location(mrb_state *mrb, mrb_value <span style="color:#069">self</
       <div class="method_details ">
   <h3 class="signature " id="super_method-instance_method">
   
-    #<strong>super_method</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>super_method</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1129,33 +1340,6 @@ method_source_location(mrb_state *mrb, mrb_value <span style="color:#069">self</
       <pre class="lines">
 
 
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
 197
 198
 199
@@ -1168,18 +1352,45 @@ method_source_location(mrb_state *mrb, mrb_value <span style="color:#069">self</
 206
 207
 208
-209</pre>
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 170</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 197</span>
 
 static mrb_value
 method_super_method(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_value recv = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@recv</span><span style="color:#710">&quot;</span></span>));
-  mrb_value klass = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@klass</span><span style="color:#710">&quot;</span></span>));
-  mrb_value owner = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@owner</span><span style="color:#710">&quot;</span></span>));
-  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@name</span><span style="color:#710">&quot;</span></span>));
+  mrb_value recv = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>));
+  mrb_value klass = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>));
+  mrb_value owner = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>));
+  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>));
   struct <span style="color:#036;font-weight:bold">RClass</span> *<span style="color:#080;font-weight:bold">super</span>, *rklass;
   struct <span style="color:#036;font-weight:bold">RProc</span> *proc;
   struct <span style="color:#036;font-weight:bold">RObject</span> *me;
@@ -1205,11 +1416,11 @@ method_super_method(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
     <span style="color:#080;font-weight:bold">super</span> = <span style="color:#080;font-weight:bold">super</span>-&gt;c;
 
   me = method_object_alloc(mrb, mrb_obj_class(mrb, <span style="color:#069">self</span>));
-  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@owner</span><span style="color:#710">&quot;</span></span>), mrb_obj_value(<span style="color:#080;font-weight:bold">super</span>));
-  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@recv</span><span style="color:#710">&quot;</span></span>), recv);
-  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@name</span><span style="color:#710">&quot;</span></span>), name);
-  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">proc</span><span style="color:#710">&quot;</span></span>), mrb_obj_value(proc));
-  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@klass</span><span style="color:#710">&quot;</span></span>), mrb_obj_value(rklass));
+  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>), mrb_obj_value(<span style="color:#080;font-weight:bold">super</span>));
+  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>), recv);
+  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>), name);
+  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>), mrb_obj_value(proc));
+  mrb_obj_iv_set(mrb, me, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>), mrb_obj_value(rklass));
 
   <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(me);
 }</pre>
@@ -1221,7 +1432,7 @@ method_super_method(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
       <div class="method_details ">
   <h3 class="signature " id="to_proc-instance_method">
   
-    #<strong>to_proc</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_proc</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1257,7 +1468,7 @@ method_super_method(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1269,22 +1480,6 @@ method_super_method(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
       <pre class="lines">
 
 
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286
 287
 288
 289
@@ -1295,17 +1490,33 @@ method_super_method(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
 294
 295
 296
-297</pre>
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 271</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 287</span>
 
 static mrb_value
 method_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_value owner = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@owner</span><span style="color:#710">&quot;</span></span>));
-  mrb_value klass = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@klass</span><span style="color:#710">&quot;</span></span>));
-  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@name</span><span style="color:#710">&quot;</span></span>));
+  mrb_value owner = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>));
+  mrb_value klass = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>));
+  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>));
   mrb_value str = mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#&lt;</span><span style="color:#710">&quot;</span></span>);
   struct <span style="color:#036;font-weight:bold">RClass</span> *rklass;
 
@@ -1313,16 +1524,16 @@ method_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">: </span><span style="color:#710">&quot;</span></span>);
   rklass = mrb_class_ptr(klass);
   <span style="color:#080;font-weight:bold">if</span> (mrb_class_ptr(owner) == rklass) {
-    mrb_str_cat_str(mrb, str, mrb_funcall(mrb, owner, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>));
+    mrb_str_concat(mrb, str, owner);
     mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span>);
-    mrb_str_cat_str(mrb, str, mrb_funcall(mrb, name, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>));
+    mrb_str_concat(mrb, str, name);
   }
   <span style="color:#080;font-weight:bold">else</span> {
     mrb_str_cat_cstr(mrb, str, mrb_class_name(mrb, rklass));
     mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">(</span><span style="color:#710">&quot;</span></span>);
-    mrb_str_cat_str(mrb, str, mrb_funcall(mrb, owner, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>));
+    mrb_str_concat(mrb, str, owner);
     mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">)#</span><span style="color:#710">&quot;</span></span>);
-    mrb_str_cat_str(mrb, str, mrb_funcall(mrb, name, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_s</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>));
+    mrb_str_concat(mrb, str, name);
   }
   mrb_str_cat_lit(mrb, str, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&gt;</span><span style="color:#710">&quot;</span></span>);
   <span style="color:#080;font-weight:bold">return</span> str;
@@ -1335,7 +1546,7 @@ method_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="unbind-instance_method">
   
-    #<strong>unbind</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>unbind</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1347,43 +1558,43 @@ method_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157</pre>
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 140</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-method/src/method.c', line 167</span>
 
 static mrb_value
 method_unbind(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
   struct <span style="color:#036;font-weight:bold">RObject</span> *ume;
-  mrb_value owner = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@owner</span><span style="color:#710">&quot;</span></span>));
-  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@name</span><span style="color:#710">&quot;</span></span>));
-  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">proc</span><span style="color:#710">&quot;</span></span>));
-  mrb_value klass = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@klass</span><span style="color:#710">&quot;</span></span>));
+  mrb_value owner = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>));
+  mrb_value name = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>));
+  mrb_value proc = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>));
+  mrb_value klass = mrb_iv_get(mrb, <span style="color:#069">self</span>, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>));
 
   ume = method_object_alloc(mrb, mrb_class_get(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">UnboundMethod</span><span style="color:#710">&quot;</span></span>));
-  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@owner</span><span style="color:#710">&quot;</span></span>), owner);
-  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@recv</span><span style="color:#710">&quot;</span></span>), mrb_nil_value());
-  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@name</span><span style="color:#710">&quot;</span></span>), name);
-  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">proc</span><span style="color:#710">&quot;</span></span>), proc);
-  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">@klass</span><span style="color:#710">&quot;</span></span>), klass);
+  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_owner</span><span style="color:#710">&quot;</span></span>), owner);
+  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_recv</span><span style="color:#710">&quot;</span></span>), mrb_nil_value());
+  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_name</span><span style="color:#710">&quot;</span></span>), name);
+  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_proc</span><span style="color:#710">&quot;</span></span>), proc);
+  mrb_obj_iv_set(mrb, ume, mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">_klass</span><span style="color:#710">&quot;</span></span>), klass);
 
   <span style="color:#080;font-weight:bold">return</span> mrb_obj_value(ume);
 }</pre>
@@ -1397,9 +1608,9 @@ method_unbind(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:33 2019 by
+  Generated on Wed Nov 27 22:35:11 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

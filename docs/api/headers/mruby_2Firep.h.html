@@ -6,7 +6,7 @@
 <title>
   Header: mruby/irep.h
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -124,7 +124,43 @@
     
       <li class="public ">
   <span class="summary_signature">
+    <a href="#mrb_load_irep_buf-function" title="mrb_load_irep_buf">mrb_value <strong>mrb_load_irep_buf</strong>(mrb_state*, const void*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
     <a href="#mrb_load_irep_cxt-function" title="mrb_load_irep_cxt">mrb_value <strong>mrb_load_irep_cxt</strong>(mrb_state*, const uint8_t*, mrbc_context*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_irep_buf_cxt-function" title="mrb_load_irep_buf_cxt">mrb_value <strong>mrb_load_irep_buf_cxt</strong>(mrb_state*, const void*, size_t, mrbc_context*)</a>
 
     
   </span>
@@ -215,6 +251,62 @@
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_load_irep_buf-function">
+  mrb_value <strong>mrb_load_irep_buf</strong>(mrb_state* , const void* , size_t )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>irep</span>
+      
+      
+        <span class='type'>(<tt>const void*</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>code</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>size</span>
+      
+      
+        <span class='type'>(<tt>size_t</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>of irep buffer. If -1 is given, it is considered unrestricted.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_load_irep_cxt-function">
   mrb_value <strong>mrb_load_irep_cxt</strong>(mrb_state* , const uint8_t* , mrbc_context* )
 
@@ -255,13 +347,69 @@
 </div>
 
   
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_load_irep_buf_cxt-function">
+  mrb_value <strong>mrb_load_irep_buf_cxt</strong>(mrb_state* , const void* , size_t , mrbc_context* )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>irep</span>
+      
+      
+        <span class='type'>(<tt>const void*</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>code</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>size</span>
+      
+      
+        <span class='type'>(<tt>size_t</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>of irep buffer. If -1 is given, it is considered unrestricted.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+
+</div>
+
+  
 </div>
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:34 2019 by
+  Generated on Wed Nov 27 22:35:12 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

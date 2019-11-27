@@ -6,7 +6,7 @@
 <title>
   Class: Numeric
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Numeric</li>
           
@@ -104,7 +104,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>mrblib/numeric.rb<span class="defines">,<br />
-  src/numeric.c</span>
+  src/numeric.c,<br /> mrbgems/mruby-rational/mrblib/rational.rb,<br /> mrbgems/mruby-numeric-ext/mrblib/numeric_ext.rb</span>
 </dd>
   </dl>
   
@@ -126,7 +126,7 @@
 
 <div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span>, <span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></p>
+  <p class="children"><span class='object_link'><a href="Complex.html" title="Complex (class)">Complex</a></span>, <span class='object_link'><a href="Float.html" title="Float (class)">Float</a></span>, <span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span>, <span class='object_link'><a href="Rational.html" title="Rational (class)">Rational</a></span></p>
 </div>
 
 
@@ -142,29 +142,6 @@
     </h2>
 
     <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#**-instance_method" title="#** (instance method)">#<strong>**</strong>(other)  &#x21d2; Numeric </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Raises <code>num</code> the <code>other</code> power.</p>
-</div></span>
-  
-</li>
-
       
         <li class="public ">
   <span class="summary_signature">
@@ -215,169 +192,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%2F-instance_method" title="#quo (instance method)">#<strong>quo</strong>(numeric)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Returns most exact division.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#<-instance_method" title="#&lt; (instance method)">#<strong>&lt;</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>15.2.9.3.6.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#<=-instance_method" title="#&lt;= (instance method)">#<strong>&lt;=</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#<=>-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><blockquote>
-  <p>=&gt; +1  Comparison—Returns -1, 0, or +1 depending on whether <i>fix</i> is  less than, equal to, or greater than <i>numeric</i>.</p>
-</blockquote>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#>-instance_method" title="#&gt; (instance method)">#<strong>&gt;</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#>=-instance_method" title="#&gt;= (instance method)">#<strong>&gt;=</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#__coerce_step_counter-instance_method" title="#__coerce_step_counter (instance method)">#<strong>__coerce_step_counter</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#abs-instance_method" title="#abs (instance method)">#<strong>abs</strong>  &#x21d2; Object </a>
     
 
@@ -415,7 +229,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>15.2.7.</p>
 </div></span>
   
 </li>
@@ -447,7 +261,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#quo-instance_method" title="#quo (instance method)">#<strong>quo</strong>(numeric)  &#x21d2; Object </a>
+      <a href="#negative%3F-instance_method" title="#negative? (instance method)">#<strong>negative?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -461,7 +275,99 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns most exact division.</p>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nonzero%3F-instance_method" title="#nonzero? (instance method)">#<strong>nonzero?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#positive%3F-instance_method" title="#positive? (instance method)">#<strong>positive?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_r-instance_method" title="#to_r (instance method)">#<strong>to_r</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#zero%3F-instance_method" title="#zero? (instance method)">#<strong>zero?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -480,7 +386,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Comparable.html" title="Comparable (module)">Comparable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Comparable.html#==-instance_method" title="Comparable#== (method)">#==</a></span>, <span class='object_link'><a href="Comparable.html#between%3F-instance_method" title="Comparable#between? (method)">#between?</a></span>, <span class='object_link'><a href="Comparable.html#clamp-instance_method" title="Comparable#clamp (method)">#clamp</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Comparable.html#<-instance_method" title="Comparable#&lt; (method)">#<</a></span>, <span class='object_link'><a href="Comparable.html#<=-instance_method" title="Comparable#&lt;= (method)">#<=</a></span>, <span class='object_link'><a href="Comparable.html#==-instance_method" title="Comparable#== (method)">#==</a></span>, <span class='object_link'><a href="Comparable.html#>-instance_method" title="Comparable#&gt; (method)">#></a></span>, <span class='object_link'><a href="Comparable.html#>=-instance_method" title="Comparable#&gt;= (method)">#>=</a></span>, <span class='object_link'><a href="Comparable.html#between%3F-instance_method" title="Comparable#between? (method)">#between?</a></span>, <span class='object_link'><a href="Comparable.html#clamp-instance_method" title="Comparable#clamp (method)">#clamp</a></span></p>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -488,168 +394,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="**-instance_method">
+  <h3 class="signature first" id="+@-instance_method">
   
-    #<strong>**</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="" title="Numeric (class)">Numeric</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Raises <code>num</code> the <code>other</code> power.</p>
-
-<p>2.0**3      #=&gt; 8.0</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Numeric (class)">Numeric</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 58</span>
-
-static mrb_value
-num_pow(mrb_state *mrb, mrb_value x)
-{
-  mrb_value y;
-<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
-  mrb_float d;
-<span style="color:#777">#endif</span>
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;y);
-  <span style="color:#080;font-weight:bold">if</span> (mrb_fixnum_p(x) &amp;&amp; mrb_fixnum_p(y)) {
-    <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* try ipow() *</span><span style="color:#404">/</span></span>
-    mrb_int base = mrb_fixnum(x);
-    mrb_int exp = mrb_fixnum(y);
-    mrb_int result = <span style="color:#00D">1</span>;
-
-    <span style="color:#080;font-weight:bold">if</span> (exp &lt; <span style="color:#00D">0</span>)
-<span style="color:#777">#ifdef MRB_WITHOUT_FLOAT</span>
-      <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(<span style="color:#00D">0</span>);
-<span style="color:#777">#else</span>
-      goto float_pow;
-<span style="color:#777">#endif</span>
-    <span style="color:#080;font-weight:bold">for</span> (;;) {
-      <span style="color:#080;font-weight:bold">if</span> (exp &amp; <span style="color:#00D">1</span>) {
-        <span style="color:#080;font-weight:bold">if</span> (mrb_int_mul_overflow(result, base, &amp;result)) {
-<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
-          goto float_pow;
-<span style="color:#777">#endif</span>
-        }
-      }
-      exp &gt;&gt;= <span style="color:#00D">1</span>;
-      <span style="color:#080;font-weight:bold">if</span> (exp == <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">break</span>;
-      <span style="color:#080;font-weight:bold">if</span> (mrb_int_mul_overflow(base, base, &amp;base)) {
-<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
-        goto float_pow;
-<span style="color:#777">#endif</span>
-      }
-    }
-    <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(result);
-  }
-<span style="color:#777">#ifdef MRB_WITHOUT_FLOAT</span>
-  mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">non fixnum value</span><span style="color:#710">&quot;</span></span>);
-<span style="color:#777">#else</span>
- <span style="color:#606">float_pow</span>:
-  d = pow(mrb_to_flo(mrb, x), mrb_to_flo(mrb, y));
-  <span style="color:#080;font-weight:bold">return</span> mrb_float_value(mrb, d);
-<span style="color:#777">#endif</span>
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="+@-instance_method">
-  
-    #<strong>+@</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>+@</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -693,7 +440,7 @@ num_pow(mrb_state *mrb, mrb_value x)
       <div class="method_details ">
   <h3 class="signature " id="-@-instance_method">
   
-    #<strong>-@</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>-@</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -735,475 +482,9 @@ num_pow(mrb_state *mrb, mrb_value x)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="/-instance_method">
-  
-    #<strong>quo</strong>(numeric)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns most exact division.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  
-
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 138</span>
-
-static mrb_value
-num_div(mrb_state *mrb, mrb_value x)
-{
-<span style="color:#777">#ifdef MRB_WITHOUT_FLOAT</span>
-  mrb_value y;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;y);
-  <span style="color:#080;font-weight:bold">if</span> (!mrb_fixnum_p(y)) {
-    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">non fixnum value</span><span style="color:#710">&quot;</span></span>);
-  }
-  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(mrb_fixnum(x) / mrb_fixnum(y));
-<span style="color:#777">#else</span>
-  mrb_float y;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">f</span><span style="color:#710">&quot;</span></span>, &amp;y);
-  <span style="color:#080;font-weight:bold">return</span> mrb_float_value(mrb, mrb_to_flo(mrb, x) / y);
-<span style="color:#777">#endif</span>
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="<-instance_method">
-  
-    #<strong>&lt;</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>15.2.9.3.6</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1452
-1453
-1454
-1455
-1456
-1457
-1458
-1459
-1460
-1461
-1462
-1463</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 1452</span>
-
-static mrb_value
-num_lt(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  mrb_value other;
-  mrb_int n;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;other);
-  n = cmpnum(mrb, <span style="color:#069">self</span>, other);
-  <span style="color:#080;font-weight:bold">if</span> (n == <span style="color:#00D">-2</span>) cmperr(mrb, <span style="color:#069">self</span>, other);
-  <span style="color:#080;font-weight:bold">if</span> (n &lt; <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
-  <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="<=-instance_method">
-  
-    #<strong>&lt;=</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1465
-1466
-1467
-1468
-1469
-1470
-1471
-1472
-1473
-1474
-1475
-1476</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 1465</span>
-
-static mrb_value
-num_le(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  mrb_value other;
-  mrb_int n;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;other);
-  n = cmpnum(mrb, <span style="color:#069">self</span>, other);
-  <span style="color:#080;font-weight:bold">if</span> (n == <span style="color:#00D">-2</span>) cmperr(mrb, <span style="color:#069">self</span>, other);
-  <span style="color:#080;font-weight:bold">if</span> (n &lt;= <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
-  <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="<=>-instance_method">
-  
-    
-      <span class="overload">#<strong>&lt;=&gt;</strong>(other.f)  &#x21d2; <tt>-1</tt>, ... </span>
-    
-      <span class="overload">#<strong>&lt;</strong>  &#x21d2; <tt>-1</tt> </span>
-    
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <blockquote>
-  <p>=&gt; +1
- Comparison—Returns -1, 0, or +1 depending on whether <i>fix</i> is
- less than, equal to, or greater than <i>numeric</i>. This is the
- basis for the tests in <code>Comparable</code>.</p>
-</blockquote>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <p class="tag_title">Overloads:</p>
-  <ul class="overload">
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>&lt;=&gt;</strong>(other.f)  &#x21d2; <tt>-1</tt>, ... </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>-1</tt>, <tt>0</tt>, <tt>+1</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-      </li>
-    
-      
-      <li class="overload_item">
-        <span class="signature">#<strong>&lt;</strong>  &#x21d2; <tt>-1</tt> </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>-1</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
-
-      </li>
-    
-  </ul>
-
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1432
-1433
-1434
-1435
-1436
-1437
-1438
-1439
-1440
-1441
-1442</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 1432</span>
-
-static mrb_value
-num_cmp(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  mrb_value other;
-  mrb_int n;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;other);
-  n = cmpnum(mrb, <span style="color:#069">self</span>, other);
-  <span style="color:#080;font-weight:bold">if</span> (n == <span style="color:#00D">-2</span>) <span style="color:#080;font-weight:bold">return</span> mrb_nil_value();
-  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(n);
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id=">-instance_method">
-  
-    #<strong>&gt;</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1478
-1479
-1480
-1481
-1482
-1483
-1484
-1485
-1486
-1487
-1488
-1489</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 1478</span>
-
-static mrb_value
-num_gt(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  mrb_value other;
-  mrb_int n;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;other);
-  n = cmpnum(mrb, <span style="color:#069">self</span>, other);
-  <span style="color:#080;font-weight:bold">if</span> (n == <span style="color:#00D">-2</span>) cmperr(mrb, <span style="color:#069">self</span>, other);
-  <span style="color:#080;font-weight:bold">if</span> (n &gt; <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
-  <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id=">=-instance_method">
-  
-    #<strong>&gt;=</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-1491
-1492
-1493
-1494
-1495
-1496
-1497
-1498
-1499
-1500
-1501
-1502</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 1491</span>
-
-static mrb_value
-num_ge(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  mrb_value other;
-  mrb_int n;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;other);
-  n = cmpnum(mrb, <span style="color:#069">self</span>, other);
-  <span style="color:#080;font-weight:bold">if</span> (n == <span style="color:#00D">-2</span>) cmperr(mrb, <span style="color:#069">self</span>, other);
-  <span style="color:#080;font-weight:bold">if</span> (n &gt;= <span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
-  <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="__coerce_step_counter-instance_method">
-  
-    #<strong>__coerce_step_counter</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 157</span>
-
-static mrb_value
-num_coerce_step_counter(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
-{
-  mrb_value counter = <span style="color:#069">self</span>, num, step;
-
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">oo</span><span style="color:#710">&quot;</span></span>, &amp;num, &amp;step);
-
-<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
-  <span style="color:#080;font-weight:bold">if</span> (mrb_float_p(<span style="color:#069">self</span>) || mrb_float_p(num) || mrb_float_p(step)) {
-    counter = mrb_funcall(mrb, counter, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">to_f</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">0</span>);
-  }
-<span style="color:#777">#endif</span>
-
-  <span style="color:#080;font-weight:bold">return</span> counter;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="abs-instance_method">
   
-    #<strong>abs</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>abs</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1263,7 +544,7 @@ num_coerce_step_counter(mrb_state *mrb, mrb_value <span style="color:#069">self<
   
 </h3><div class="docstring">
   <div class="discussion">
-    
+    <p>15.2.7</p>
 
 
   </div>
@@ -1292,20 +573,18 @@ num_coerce_step_counter(mrb_state *mrb, mrb_value <span style="color:#069">self<
       <pre class="lines">
 
 
-1504
-1505
-1506
-1507
-1508
-1509</pre>
+1576
+1577
+1578
+1579
+1580</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 1504</span>
+      <pre class="code"><span class="info file"># File 'src/numeric.c', line 1576</span>
 
 static mrb_value
 num_finite_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>);
   <span style="color:#080;font-weight:bold">return</span> mrb_true_value();
 }</pre>
     </td>
@@ -1353,20 +632,18 @@ num_finite_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-1511
-1512
-1513
-1514
-1515
-1516</pre>
+1582
+1583
+1584
+1585
+1586</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 1511</span>
+      <pre class="code"><span class="info file"># File 'src/numeric.c', line 1582</span>
 
 static mrb_value
 num_infinite_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>);
   <span style="color:#080;font-weight:bold">return</span> mrb_false_value();
 }</pre>
     </td>
@@ -1375,9 +652,9 @@ num_infinite_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="quo-instance_method">
+  <h3 class="signature " id="negative?-instance_method">
   
-    #<strong>quo</strong>(numeric)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>negative?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1385,15 +662,26 @@ num_infinite_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns most exact division.</p>
+    
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
-
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -1403,46 +691,219 @@ num_infinite_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/numeric.c', line 138</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-numeric-ext/mrblib/numeric_ext.rb', line 18</span>
 
-static mrb_value
-num_div(mrb_state *mrb, mrb_value x)
-{
-<span style="color:#777">#ifdef MRB_WITHOUT_FLOAT</span>
-  mrb_value y;
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">negative?</span>
+  <span style="color:#069">self</span> &lt; <span style="color:#00D">0</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nonzero?-instance_method">
+  
+    #<strong>nonzero?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
 
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;y);
-  <span style="color:#080;font-weight:bold">if</span> (!mrb_fixnum_p(y)) {
-    mrb_raise(mrb, <span style="color:#036;font-weight:bold">E_TYPE_ERROR</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">non fixnum value</span><span style="color:#710">&quot;</span></span>);
-  }
-  <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(mrb_fixnum(x) / mrb_fixnum(y));
-<span style="color:#777">#else</span>
-  mrb_float y;
+  
 
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">f</span><span style="color:#710">&quot;</span></span>, &amp;y);
-  <span style="color:#080;font-weight:bold">return</span> mrb_float_value(mrb, mrb_to_flo(mrb, x) / y);
-<span style="color:#777">#endif</span>
-}</pre>
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-numeric-ext/mrblib/numeric_ext.rb', line 6</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">nonzero?</span>
+  <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span> == <span style="color:#00D">0</span>
+    <span style="color:#069">nil</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#069">self</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="positive?-instance_method">
+  
+    #<strong>positive?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-numeric-ext/mrblib/numeric_ext.rb', line 14</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">positive?</span>
+  <span style="color:#069">self</span> &gt; <span style="color:#00D">0</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_r-instance_method">
+  
+    #<strong>to_r</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-rational/mrblib/rational.rb', line 80</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_r</span>
+  Rational(<span style="color:#069">self</span>, <span style="color:#00D">1</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="zero?-instance_method">
+  
+    #<strong>zero?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2
+3
+4</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-numeric-ext/mrblib/numeric_ext.rb', line 2</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">zero?</span>
+  <span style="color:#069">self</span> == <span style="color:#00D">0</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1453,9 +914,9 @@ num_div(mrb_state *mrb, mrb_value x)
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:32 2019 by
+  Generated on Wed Nov 27 22:35:10 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   File: mrbconf
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -113,15 +113,21 @@
 * When defined single precision floating point type(C type <code>float</code>) is used as <code>mrb_float</code>.
 * Else double precision floating point type(C type <code>double</code>) is used as <code>mrb_float</code>.</p>
 
+<p><code>MRB_WITHOUT_FLOAT</code>
+* When defined removes floating point numbers from mruby.
+* It makes mruby easier to handle in “Microcontroller without FPU” and “Kernel Space”.</p>
+
 <p><code>MRB_INT16</code>
 * When defined <code>int16_t</code> will be defined as <code>mrb_int</code>.
-* Conflicts with <code>MRB_INT64</code>.</p>
+* Conflicts with <code>MRB_INT32</code> and <code>MRB_INT64</code>.</p>
+
+<p><code>MRB_INT32</code>
+* When defined, or both <code>MRB_INT16</code> and <code>MRB_INT64</code> are not defined on 32-bit CPU mode, <code>int32_t</code> will be defined as <code>mrb_int</code>.
+* Conflicts with <code>MRB_INT16</code> and <code>MRB_INT64</code>.</p>
 
 <p><code>MRB_INT64</code>
-* When defined <code>int64_t</code> will be defined as <code>mrb_int</code>.
-* Conflicts with <code>MRB_INT16</code>.
-* When <code>MRB_INT16</code> or <code>MRB_INT64</code> isn’t defined <code>int</code>(most of the times 32-bit integer)
-will be defined as <code>mrb_int</code>.</p>
+* When defined, or both <code>MRB_INT16</code> and <code>MRB_INT32</code> are not defined on 64-bit CPU mode, <code>int64_t</code> will be defined as <code>mrb_int</code>.
+* Conflicts with <code>MRB_INT16</code> and <code>MRB_INT32</code>.</p>
 
 <h2 id="garbage-collector-configuration">Garbage collector configuration.</h2>
 
@@ -178,7 +184,7 @@ largest value of required alignment.</p>
 
 <p><code>MRB_NAN_BOXING</code>
 * If defined represent <code>mrb_value</code> in boxed <code>double</code>.
-* Conflicts with <code>MRB_USE_FLOAT</code>.</p>
+* Conflicts with <code>MRB_USE_FLOAT</code> and <code>MRB_WITHOUT_FLOAT</code>.</p>
 
 <p><code>MRB_WORD_BOXING</code>
 * If defined represent <code>mrb_value</code> as a word.
@@ -188,6 +194,22 @@ largest value of required alignment.</p>
 <p><code>MRB_IV_SEGMENT_SIZE</code>
 * Default value is <code>4</code>.
 * Specifies size of each segment in segment list.</p>
+
+<h2 id="reduce-heap-memory-configuration">Reduce heap memory configuration.</h2>
+
+<p><code>MRB_USE_LINK_TIME_RO_DATA_P</code>
+* Only available on ELF platforms.
+* If you specify the address of a read-only section when creating a symbol or string, that string will be used as it is.
+* Heap memory can be saved.
+* Uses <code>__ehdr_start</code> and <code>__init_array_start</code>.
+* It must be <code>__ehdr_start &lt; data_addr &lt; __init_array_start</code>.</p>
+
+<p><code>MRB_USE_CUSTOM_RO_DATA_P</code>
+* Takes precedence over <code>MRB_USE_LINK_TIME_RO_DATA_P</code>.
+* Please try if <code>MRB_USE_LINK_TIME_RO_DATA_P</code> is not available.
+* The <code>mrb_ro_data_p()</code> function is implemented by the user in an arbitrary file.
+* The prototype declaration is <code>mrb_bool mrb_ro_data_p(const char *ptr)</code>.
+* Return <code>TRUE</code> if <code>ptr</code> is in read-only section, otherwise return <code>FALSE</code>.</p>
 
 <h2 id="other-configuration">Other configuration.</h2>
 <p><code>MRB_UTF8_STRING</code>
@@ -207,12 +229,29 @@ largest value of required alignment.</p>
 <p><code>MRB_STR_BUF_MIN_SIZE</code>
 * Default value is <code>128</code>.
 * Specifies initial capacity of <code>RString</code> created by <code>mrb_str_buf_new</code> function..</p>
+
+<p><code>MRB_METHOD_CACHE</code>
+* Improve performance for method dispatch.</p>
+
+<p><code>MRB_METHOD_CACHE_SIZE</code>
+* Default value is <code>128</code>.
+* Ignored if <code>MRB_METHOD_CACHE</code> is not defined.
+* Need to be the power of 2.</p>
+
+<p><code>MRB_METHOD_T_STRUCT</code>
+* Use C struct to represent <code>mrb_method_t</code>
+* No <code>MRB_METHOD_T_STRUCT</code> requires highest 2 bits of function pointers to be zero
+* Define this macro on machines that use higher bits of pointers</p>
+
+<p><code>MRB_ENABLE_ALL_SYMBOLS</code>
+* Make it available <code>Symbols.all_symbols</code> in <code>mrbgems/mruby-symbol-ext</code>
+* Increase heap memory usage.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:29 2019 by
+  Generated on Wed Nov 27 22:35:07 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

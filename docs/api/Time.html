@@ -6,7 +6,7 @@
 <title>
   Class: Time
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Time</li>
           
@@ -542,7 +542,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a string that describes the time.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -818,7 +818,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a Fixnum with the time since the epoch in seconds.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns an Integer with the time since the epoch in seconds.</p>
 </div></span>
   
 </li>
@@ -841,7 +841,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a string that describes the time.</p>
+    <span class="summary_desc"><div class='inline'><p>15.2.19.7.3.</p>
 </div></span>
   
 </li>
@@ -887,7 +887,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a Float with the time since the epoch in microseconds.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns an Integer with the time since the epoch in microseconds.</p>
 </div></span>
   
 </li>
@@ -1063,7 +1063,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1087,34 +1087,34 @@
       <pre class="lines">
 
 
-655
-656
-657
-658
-659
-660
-661
-662
-663
-664
-665
-666
-667
-668
-669
-670
-671
-672
-673
-674
-675
-676
-677
-678
-679</pre>
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 655</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 739</span>
 
 static mrb_value
 mrb_time_initialize(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1156,7 +1156,7 @@ mrb_time_initialize(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
       <div class="method_details first">
   <h3 class="signature first" id="+-instance_method">
   
-    #<strong>+</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>+</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1180,29 +1180,33 @@ mrb_time_initialize(mrb_state *mrb, mrb_value <span style="color:#069">self</spa
       <pre class="lines">
 
 
-478
-479
-480
-481
-482
-483
-484
-485
-486
-487</pre>
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 478</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 553</span>
 
 static mrb_value
 mrb_time_plus(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_float f;
+  mrb_value o;
   struct mrb_time *tm;
+  time_t sec, usec;
 
-  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">f</span><span style="color:#710">&quot;</span></span>, &amp;f);
+  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">o</span><span style="color:#710">&quot;</span></span>, &amp;o);
   tm = time_get_ptr(mrb, <span style="color:#069">self</span>);
-  <span style="color:#080;font-weight:bold">return</span> mrb_time_make(mrb, mrb_obj_class(mrb, <span style="color:#069">self</span>), (double)tm-&gt;sec+f, (double)tm-&gt;usec, tm-&gt;timezone);
+  sec = mrb_to_time_t(mrb, o, &amp;usec);
+  <span style="color:#080;font-weight:bold">return</span> mrb_time_make_time(mrb, mrb_obj_class(mrb, <span style="color:#069">self</span>), tm-&gt;sec+sec, tm-&gt;usec+usec, tm-&gt;timezone);
 }</pre>
     </td>
   </tr>
@@ -1212,7 +1216,7 @@ mrb_time_plus(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="--instance_method">
   
-    #<strong>-</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>-</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1236,34 +1240,41 @@ mrb_time_plus(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-489
-490
-491
-492
-493
-494
-495
-496
-497
-498
-499
-500
-501
-502
-503
-504
-505
-506
-507
-508</pre>
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 489</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 566</span>
 
 static mrb_value
 mrb_time_minus(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
-  mrb_float f;
   mrb_value other;
   struct mrb_time *tm, *tm2;
 
@@ -1271,13 +1282,22 @@ mrb_time_minus(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   tm = time_get_ptr(mrb, <span style="color:#069">self</span>);
   tm2 = DATA_CHECK_GET_PTR(mrb, other, &amp;mrb_time_type, struct mrb_time);
   <span style="color:#080;font-weight:bold">if</span> (tm2) {
-    f = (mrb_float)(tm-&gt;sec - tm2-&gt;sec)
-      + (mrb_float)(tm-&gt;usec - tm2-&gt;usec) / <span style="color:#60E">1.0e6</span>;
+<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
+    mrb_float f;
+    f = (mrb_sec)(tm-&gt;sec - tm2-&gt;sec)
+      + (mrb_sec)(tm-&gt;usec - tm2-&gt;usec) / <span style="color:#60E">1.0e6</span>;
     <span style="color:#080;font-weight:bold">return</span> mrb_float_value(mrb, f);
+<span style="color:#777">#else</span>
+    mrb_int f;
+    f = tm-&gt;sec - tm2-&gt;sec;
+    <span style="color:#080;font-weight:bold">if</span> (tm-&gt;usec &lt; tm2-&gt;usec) f--;
+    <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value(f);
+<span style="color:#777">#endif</span>
   }
   <span style="color:#080;font-weight:bold">else</span> {
-    mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">f</span><span style="color:#710">&quot;</span></span>, &amp;f);
-    <span style="color:#080;font-weight:bold">return</span> mrb_time_make(mrb, mrb_obj_class(mrb, <span style="color:#069">self</span>), (double)tm-&gt;sec-f, (double)tm-&gt;usec, tm-&gt;timezone);
+    time_t sec, usec;
+    sec = mrb_to_time_t(mrb, other, &amp;usec);
+    <span style="color:#080;font-weight:bold">return</span> mrb_time_make_time(mrb, mrb_obj_class(mrb, <span style="color:#069">self</span>), tm-&gt;sec-sec, tm-&gt;usec-usec, tm-&gt;timezone);
   }
 }</pre>
     </td>
@@ -1288,7 +1308,7 @@ mrb_time_minus(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="<=>-instance_method">
   
-    #<strong>&lt;=&gt;</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>&lt;=&gt;</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1312,34 +1332,34 @@ mrb_time_minus(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476</pre>
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 452</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 527</span>
 
 static mrb_value
 mrb_time_cmp(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1374,7 +1394,7 @@ mrb_time_cmp(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="==-instance_method">
   
-    #<strong>==</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>==</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1398,23 +1418,23 @@ mrb_time_cmp(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-437
-438
-439
-440
-441
-442
-443
-444
-445
-446
-447
-448
-449
-450</pre>
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 437</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 512</span>
 
 static mrb_value
 mrb_time_eq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1438,7 +1458,7 @@ mrb_time_eq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="asctime-instance_method">
   
-    #<strong>asctime</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>asctime</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1462,36 +1482,35 @@ mrb_time_eq(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-560
-561
-562
-563
-564
-565
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586</pre>
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 560</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 645</span>
 
 static mrb_value
 mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1512,10 +1531,9 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 <span style="color:#777">#else</span>
   char buf[<span style="color:#00D">256</span>];
 
-  len = snprintf(buf, sizeof(buf), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%s %s %02d %02d:%02d:%02d %s%d</span><span style="color:#710">&quot;</span></span>,
+  len = snprintf(buf, sizeof(buf), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%s %s %2d %02d:%02d:%02d %.4d</span><span style="color:#710">&quot;</span></span>,
     wday_names[d-&gt;tm_wday], mon_names[d-&gt;tm_mon], d-&gt;tm_mday,
     d-&gt;tm_hour, d-&gt;tm_min, d-&gt;tm_sec,
-    tm-&gt;timezone == <span style="color:#036;font-weight:bold">MRB_TIMEZONE_UTC</span> ? <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">UTC </span><span style="color:#710">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>,
     d-&gt;tm_year + <span style="color:#00D">1900</span>);
 <span style="color:#777">#endif</span>
   <span style="color:#080;font-weight:bold">return</span> mrb_str_new(mrb, buf, len);
@@ -1528,7 +1546,7 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="ctime-instance_method">
   
-    #<strong>ctime</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>ctime</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1552,36 +1570,35 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-560
-561
-562
-563
-564
-565
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586</pre>
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 560</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 645</span>
 
 static mrb_value
 mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1602,10 +1619,9 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 <span style="color:#777">#else</span>
   char buf[<span style="color:#00D">256</span>];
 
-  len = snprintf(buf, sizeof(buf), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%s %s %02d %02d:%02d:%02d %s%d</span><span style="color:#710">&quot;</span></span>,
+  len = snprintf(buf, sizeof(buf), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%s %s %2d %02d:%02d:%02d %.4d</span><span style="color:#710">&quot;</span></span>,
     wday_names[d-&gt;tm_wday], mon_names[d-&gt;tm_mon], d-&gt;tm_mday,
     d-&gt;tm_hour, d-&gt;tm_min, d-&gt;tm_sec,
-    tm-&gt;timezone == <span style="color:#036;font-weight:bold">MRB_TIMEZONE_UTC</span> ? <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">UTC </span><span style="color:#710">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>,
     d-&gt;tm_year + <span style="color:#00D">1900</span>);
 <span style="color:#777">#endif</span>
   <span style="color:#080;font-weight:bold">return</span> mrb_str_new(mrb, buf, len);
@@ -1618,7 +1634,7 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="day-instance_method">
   
-    #<strong>day</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>day</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1642,17 +1658,17 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-590
-591
-592
-593
-594
-595
-596
-597</pre>
+674
+675
+676
+677
+678
+679
+680
+681</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 590</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 674</span>
 
 static mrb_value
 mrb_time_day(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1707,17 +1723,17 @@ mrb_time_day(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-602
-603
-604
-605
-606
-607
-608
-609</pre>
+686
+687
+688
+689
+690
+691
+692
+693</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 602</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 686</span>
 
 static mrb_value
 mrb_time_dst_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1786,7 +1802,7 @@ mrb_time_dst_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="getgm-instance_method">
   
-    #<strong>getgm</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>getgm</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1810,21 +1826,21 @@ mrb_time_dst_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625</pre>
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 614</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 698</span>
 
 static mrb_value
 mrb_time_getutc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1846,7 +1862,7 @@ mrb_time_getutc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="getlocal-instance_method">
   
-    #<strong>getlocal</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>getlocal</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1870,21 +1886,21 @@ mrb_time_getutc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-629
-630
-631
-632
-633
-634
-635
-636
-637
-638
-639
-640</pre>
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 629</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 713</span>
 
 static mrb_value
 mrb_time_getlocal(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1906,7 +1922,7 @@ mrb_time_getlocal(mrb_state *mrb, mrb_value <span style="color:#069">self</span>
       <div class="method_details ">
   <h3 class="signature " id="getutc-instance_method">
   
-    #<strong>getutc</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>getutc</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1930,21 +1946,21 @@ mrb_time_getlocal(mrb_state *mrb, mrb_value <span style="color:#069">self</span>
       <pre class="lines">
 
 
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625</pre>
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 614</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 698</span>
 
 static mrb_value
 mrb_time_getutc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2003,17 +2019,17 @@ mrb_time_getutc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-819
-820
-821
-822
-823
-824
-825
-826</pre>
+908
+909
+910
+911
+912
+913
+914
+915</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 819</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 908</span>
 
 static mrb_value
 mrb_time_utc_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2031,7 +2047,7 @@ mrb_time_utc_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="gmtime-instance_method">
   
-    #<strong>gmtime</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>gmtime</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2055,19 +2071,19 @@ mrb_time_utc_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-806
-807
-808
-809
-810
-811
-812
-813
-814
-815</pre>
+895
+896
+897
+898
+899
+900
+901
+902
+903
+904</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 806</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 895</span>
 
 static mrb_value
 mrb_time_utc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2087,7 +2103,7 @@ mrb_time_utc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="hour-instance_method">
   
-    #<strong>hour</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>hour</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2111,17 +2127,17 @@ mrb_time_utc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-644
-645
-646
-647
-648
-649
-650
-651</pre>
+728
+729
+730
+731
+732
+733
+734
+735</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 644</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 728</span>
 
 static mrb_value
 mrb_time_hour(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2139,7 +2155,7 @@ mrb_time_hour(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="initialize_copy-instance_method">
   
-    #<strong>initialize_copy</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize_copy</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2163,32 +2179,32 @@ mrb_time_hour(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-683
-684
-685
-686
-687
-688
-689
-690
-691
-692
-693
-694
-695
-696
-697
-698
-699
-700
-701
-702
-703
-704
-705</pre>
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 683</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 767</span>
 
 static mrb_value
 mrb_time_initialize_copy(mrb_state *mrb, mrb_value copy)
@@ -2221,86 +2237,38 @@ mrb_time_initialize_copy(mrb_state *mrb, mrb_value copy)
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>inspect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns a string that describes the time.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-<table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-560
-561
-562
-563
-564
-565
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586</pre>
+948
+949
+950
+951
+952
+953
+954
+955
+956</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 560</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 948</span>
 
 static mrb_value
-mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+mrb_time_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
+  char buf[<span style="color:#00D">64</span>];
   struct mrb_time *tm = time_get_ptr(mrb, <span style="color:#069">self</span>);
-  struct tm *d = &amp;tm-&gt;datetime;
-  int len;
-
-<span style="color:#777">#if defined(MRB_DISABLE_STDIO)</span>
-  char *s;
-<span style="color:#777"># ifdef NO_ASCTIME_R</span>
-  s = asctime(d);
-<span style="color:#777"># else</span>
-  char buf[<span style="color:#00D">32</span>];
-  s = asctime_r(d, buf);
-<span style="color:#777"># endif</span>
-  len = strlen(s)-<span style="color:#00D">1</span>;            <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* truncate the last newline *</span><span style="color:#404">/</span></span>
-<span style="color:#777">#else</span>
-  char buf[<span style="color:#00D">256</span>];
-
-  len = snprintf(buf, sizeof(buf), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%s %s %02d %02d:%02d:%02d %s%d</span><span style="color:#710">&quot;</span></span>,
-    wday_names[d-&gt;tm_wday], mon_names[d-&gt;tm_mon], d-&gt;tm_mday,
-    d-&gt;tm_hour, d-&gt;tm_min, d-&gt;tm_sec,
-    tm-&gt;timezone == <span style="color:#036;font-weight:bold">MRB_TIMEZONE_UTC</span> ? <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">UTC </span><span style="color:#710">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>,
-    d-&gt;tm_year + <span style="color:#00D">1900</span>);
-<span style="color:#777">#endif</span>
+  mrb_bool utc = tm-&gt;timezone == <span style="color:#036;font-weight:bold">MRB_TIMEZONE_UTC</span>;
+  size_t len = (utc ? time_to_s_utc : time_to_s_local)(mrb, tm, buf, sizeof(buf));
   <span style="color:#080;font-weight:bold">return</span> mrb_str_new(mrb, buf, len);
 }</pre>
     </td>
@@ -2311,7 +2279,7 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="localtime-instance_method">
   
-    #<strong>localtime</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>localtime</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2335,19 +2303,19 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-709
-710
-711
-712
-713
-714
-715
-716
-717
-718</pre>
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 709</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 793</span>
 
 static mrb_value
 mrb_time_localtime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2367,7 +2335,7 @@ mrb_time_localtime(mrb_state *mrb, mrb_value <span style="color:#069">self</span
       <div class="method_details ">
   <h3 class="signature " id="mday-instance_method">
   
-    #<strong>mday</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>mday</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2391,17 +2359,17 @@ mrb_time_localtime(mrb_state *mrb, mrb_value <span style="color:#069">self</span
       <pre class="lines">
 
 
-722
-723
-724
-725
-726
-727
-728
-729</pre>
+806
+807
+808
+809
+810
+811
+812
+813</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 722</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 806</span>
 
 static mrb_value
 mrb_time_mday(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2419,7 +2387,7 @@ mrb_time_mday(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="min-instance_method">
   
-    #<strong>min</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>min</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2443,17 +2411,17 @@ mrb_time_mday(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-733
-734
-735
-736
-737
-738
-739
-740</pre>
+817
+818
+819
+820
+821
+822
+823
+824</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 733</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 817</span>
 
 static mrb_value
 mrb_time_min(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2471,7 +2439,7 @@ mrb_time_min(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="mon-instance_method">
   
-    #<strong>mon</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>mon</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2495,17 +2463,17 @@ mrb_time_min(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-744
-745
-746
-747
-748
-749
-750
-751</pre>
+828
+829
+830
+831
+832
+833
+834
+835</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 744</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 828</span>
 
 static mrb_value
 mrb_time_mon(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2574,7 +2542,7 @@ mrb_time_mon(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="month-instance_method">
   
-    #<strong>month</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>month</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2598,17 +2566,17 @@ mrb_time_mon(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-744
-745
-746
-747
-748
-749
-750
-751</pre>
+828
+829
+830
+831
+832
+833
+834
+835</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 744</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 828</span>
 
 static mrb_value
 mrb_time_mon(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2677,7 +2645,7 @@ mrb_time_mon(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="sec-instance_method">
   
-    #<strong>sec</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>sec</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2701,17 +2669,17 @@ mrb_time_mon(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-755
-756
-757
-758
-759
-760
-761
-762</pre>
+839
+840
+841
+842
+843
+844
+845
+846</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 755</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 839</span>
 
 static mrb_value
 mrb_time_sec(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2831,7 +2799,7 @@ mrb_time_sec(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="to_f-instance_method">
   
-    #<strong>to_f</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_f</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2855,17 +2823,17 @@ mrb_time_sec(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-767
-768
-769
-770
-771
-772
-773
-774</pre>
+851
+852
+853
+854
+855
+856
+857
+858</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 767</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 851</span>
 
 static mrb_value
 mrb_time_to_f(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2883,7 +2851,7 @@ mrb_time_to_f(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="to_i-instance_method">
   
-    #<strong>to_i</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_i</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2891,7 +2859,7 @@ mrb_time_to_f(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a Fixnum with the time since the epoch in seconds.</p>
+    <p>Returns an Integer with the time since the epoch in seconds.</p>
 
 
   </div>
@@ -2907,20 +2875,22 @@ mrb_time_to_f(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-778
-779
-780
-781
-782
-783
-784
-785
-786
-787
-788</pre>
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+875</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 778</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 863</span>
 
 static mrb_value
 mrb_time_to_i(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2928,9 +2898,11 @@ mrb_time_to_i(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   struct mrb_time *tm;
 
   tm = time_get_ptr(mrb, <span style="color:#069">self</span>);
+<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
   <span style="color:#080;font-weight:bold">if</span> (tm-&gt;sec &gt; <span style="color:#036;font-weight:bold">MRB_INT_MAX</span> || tm-&gt;sec &lt; <span style="color:#036;font-weight:bold">MRB_INT_MIN</span>) {
     <span style="color:#080;font-weight:bold">return</span> mrb_float_value(mrb, (mrb_float)tm-&gt;sec);
   }
+<span style="color:#777">#endif</span>
   <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value((mrb_int)tm-&gt;sec);
 }</pre>
     </td>
@@ -2941,7 +2913,7 @@ mrb_time_to_i(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2949,7 +2921,7 @@ mrb_time_to_i(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a string that describes the time.</p>
+    <p>15.2.19.7.3</p>
 
 
   </div>
@@ -2965,62 +2937,26 @@ mrb_time_to_i(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-560
-561
-562
-563
-564
-565
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586</pre>
+948
+949
+950
+951
+952
+953
+954
+955
+956</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 560</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 948</span>
 
 static mrb_value
-mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
+mrb_time_to_s(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 {
+  char buf[<span style="color:#00D">64</span>];
   struct mrb_time *tm = time_get_ptr(mrb, <span style="color:#069">self</span>);
-  struct tm *d = &amp;tm-&gt;datetime;
-  int len;
-
-<span style="color:#777">#if defined(MRB_DISABLE_STDIO)</span>
-  char *s;
-<span style="color:#777"># ifdef NO_ASCTIME_R</span>
-  s = asctime(d);
-<span style="color:#777"># else</span>
-  char buf[<span style="color:#00D">32</span>];
-  s = asctime_r(d, buf);
-<span style="color:#777"># endif</span>
-  len = strlen(s)-<span style="color:#00D">1</span>;            <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* truncate the last newline *</span><span style="color:#404">/</span></span>
-<span style="color:#777">#else</span>
-  char buf[<span style="color:#00D">256</span>];
-
-  len = snprintf(buf, sizeof(buf), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%s %s %02d %02d:%02d:%02d %s%d</span><span style="color:#710">&quot;</span></span>,
-    wday_names[d-&gt;tm_wday], mon_names[d-&gt;tm_mon], d-&gt;tm_mday,
-    d-&gt;tm_hour, d-&gt;tm_min, d-&gt;tm_sec,
-    tm-&gt;timezone == <span style="color:#036;font-weight:bold">MRB_TIMEZONE_UTC</span> ? <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">UTC </span><span style="color:#710">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>,
-    d-&gt;tm_year + <span style="color:#00D">1900</span>);
-<span style="color:#777">#endif</span>
+  mrb_bool utc = tm-&gt;timezone == <span style="color:#036;font-weight:bold">MRB_TIMEZONE_UTC</span>;
+  size_t len = (utc ? time_to_s_utc : time_to_s_local)(mrb, tm, buf, sizeof(buf));
   <span style="color:#080;font-weight:bold">return</span> mrb_str_new(mrb, buf, len);
 }</pre>
     </td>
@@ -3082,7 +3018,7 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="usec-instance_method">
   
-    #<strong>usec</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>usec</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3090,7 +3026,7 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a Float with the time since the epoch in microseconds.</p>
+    <p>Returns an Integer with the time since the epoch in microseconds.</p>
 
 
   </div>
@@ -3106,20 +3042,22 @@ mrb_time_asctime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-792
-793
-794
-795
-796
-797
-798
-799
-800
-801
-802</pre>
+879
+880
+881
+882
+883
+884
+885
+886
+887
+888
+889
+890
+891</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 792</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 879</span>
 
 static mrb_value
 mrb_time_usec(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3127,9 +3065,11 @@ mrb_time_usec(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
   struct mrb_time *tm;
 
   tm = time_get_ptr(mrb, <span style="color:#069">self</span>);
+<span style="color:#777">#ifndef MRB_WITHOUT_FLOAT</span>
   <span style="color:#080;font-weight:bold">if</span> (tm-&gt;usec &gt; <span style="color:#036;font-weight:bold">MRB_INT_MAX</span> || tm-&gt;usec &lt; <span style="color:#036;font-weight:bold">MRB_INT_MIN</span>) {
     <span style="color:#080;font-weight:bold">return</span> mrb_float_value(mrb, (mrb_float)tm-&gt;usec);
   }
+<span style="color:#777">#endif</span>
   <span style="color:#080;font-weight:bold">return</span> mrb_fixnum_value((mrb_int)tm-&gt;usec);
 }</pre>
     </td>
@@ -3140,7 +3080,7 @@ mrb_time_usec(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="utc-instance_method">
   
-    #<strong>utc</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>utc</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3164,19 +3104,19 @@ mrb_time_usec(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-806
-807
-808
-809
-810
-811
-812
-813
-814
-815</pre>
+895
+896
+897
+898
+899
+900
+901
+902
+903
+904</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 806</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 895</span>
 
 static mrb_value
 mrb_time_utc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3233,17 +3173,17 @@ mrb_time_utc(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-819
-820
-821
-822
-823
-824
-825
-826</pre>
+908
+909
+910
+911
+912
+913
+914
+915</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 819</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 908</span>
 
 static mrb_value
 mrb_time_utc_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3261,7 +3201,7 @@ mrb_time_utc_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="wday-instance_method">
   
-    #<strong>wday</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>wday</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3285,17 +3225,17 @@ mrb_time_utc_p(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-512
-513
-514
-515
-516
-517
-518
-519</pre>
+597
+598
+599
+600
+601
+602
+603
+604</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 512</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 597</span>
 
 static mrb_value
 mrb_time_wday(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3364,7 +3304,7 @@ mrb_time_wday(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="yday-instance_method">
   
-    #<strong>yday</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>yday</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3388,17 +3328,17 @@ mrb_time_wday(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-523
-524
-525
-526
-527
-528
-529
-530</pre>
+608
+609
+610
+611
+612
+613
+614
+615</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 523</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 608</span>
 
 static mrb_value
 mrb_time_yday(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3416,7 +3356,7 @@ mrb_time_yday(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="year-instance_method">
   
-    #<strong>year</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>year</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3440,17 +3380,17 @@ mrb_time_yday(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-534
-535
-536
-537
-538
-539
-540
-541</pre>
+619
+620
+621
+622
+623
+624
+625
+626</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 534</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 619</span>
 
 static mrb_value
 mrb_time_year(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3468,7 +3408,7 @@ mrb_time_year(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="zone-instance_method">
   
-    #<strong>zone</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>zone</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3492,21 +3432,21 @@ mrb_time_year(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556</pre>
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 545</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-time/src/time.c', line 630</span>
 
 static mrb_value
 mrb_time_zone(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -3530,9 +3470,9 @@ mrb_time_zone(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:33 2019 by
+  Generated on Wed Nov 27 22:35:11 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

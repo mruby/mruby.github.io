@@ -6,7 +6,7 @@
 <title>
   Class: Struct
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Struct</li>
           
@@ -192,7 +192,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#_inspect-instance_method" title="#_inspect (instance method)">#<strong>_inspect</strong>  &#x21d2; Object </a>
+      <a href="#_inspect-instance_method" title="#_inspect (instance method)">#<strong>_inspect</strong>(recur_list)  &#x21d2; Object </a>
     
 
     
@@ -570,7 +570,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -594,18 +594,18 @@
       <pre class="lines">
 
 
-355
-356
-357
-358
-359
-360
-361
-362
-363</pre>
+344
+345
+346
+347
+348
+349
+350
+351
+352</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 355</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 344</span>
 
 static mrb_value
 mrb_struct_initialize(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -692,6 +692,20 @@ must be equal (according to <code>Object#==</code>).</p>
       <pre class="lines">
 
 
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
 559
 560
 561
@@ -705,24 +719,10 @@ must be equal (according to <code>Object#==</code>).</p>
 569
 570
 571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586</pre>
+572</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 559</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 545</span>
 
 static mrb_value
 mrb_struct_equal(mrb_state *mrb, mrb_value s)
@@ -761,9 +761,9 @@ mrb_struct_equal(mrb_state *mrb, mrb_value s)
   <h3 class="signature " id="[]-instance_method">
   
     
-      <span class="overload">#<strong>[]</strong>(symbol)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>[]</strong>(symbol)  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">#<strong>[]</strong>(fixnum)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>[]</strong>(fixnum)  &#x21d2; <tt>Object</tt> </span>
     
   
 
@@ -795,7 +795,7 @@ out of range.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>[]</strong>(symbol)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+        <span class="signature">#<strong>[]</strong>(symbol)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -811,7 +811,7 @@ out of range.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -826,7 +826,7 @@ out of range.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>[]</strong>(fixnum)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+        <span class="signature">#<strong>[]</strong>(fixnum)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -842,7 +842,7 @@ out of range.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -866,28 +866,28 @@ out of range.</p>
       <pre class="lines">
 
 
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
 440
 441
 442
 443
 444
 445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458</pre>
+446</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 440</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 428</span>
 
 static mrb_value
 mrb_struct_aref(mrb_state *mrb, mrb_value s)
@@ -899,7 +899,7 @@ mrb_struct_aref(mrb_state *mrb, mrb_value s)
     mrb_value sym = mrb_check_intern_str(mrb, idx);
 
     <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(sym)) {
-      mrb_name_error(mrb, mrb_intern_str(mrb, idx), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no member '%S' in struct</span><span style="color:#710">&quot;</span></span>, idx);
+      mrb_name_error(mrb, mrb_intern_str(mrb, idx), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no member '%v' in struct</span><span style="color:#710">&quot;</span></span>, idx);
     }
     idx = sym;
   }
@@ -917,9 +917,9 @@ mrb_struct_aref(mrb_state *mrb, mrb_value s)
   <h3 class="signature " id="[]=-instance_method">
   
     
-      <span class="overload">#<strong>[]=</strong>(symbol)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>[]=</strong>(symbol)  &#x21d2; <tt>Object</tt> </span>
     
-      <span class="overload">#<strong>[]=</strong>(fixnum)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+      <span class="overload">#<strong>[]=</strong>(fixnum)  &#x21d2; <tt>Object</tt> </span>
     
   
 
@@ -953,7 +953,7 @@ is out of range.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>[]=</strong>(symbol)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+        <span class="signature">#<strong>[]=</strong>(symbol)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -969,7 +969,7 @@ is out of range.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -984,7 +984,7 @@ is out of range.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>[]=</strong>(fixnum)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> </span>
+        <span class="signature">#<strong>[]=</strong>(fixnum)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1000,7 +1000,7 @@ is out of range.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+        <span class='type'>(<tt>Object</tt>)</span>
       
       
       
@@ -1024,6 +1024,18 @@ is out of range.</p>
       <pre class="lines">
 
 
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
 504
 505
 506
@@ -1045,24 +1057,10 @@ is out of range.</p>
 522
 523
 524
-525
-526
-527
-528
-529
-530
-531
-532
-533
-534
-535
-536
-537
-538
-539</pre>
+525</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 504</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 492</span>
 
 static mrb_value
 mrb_struct_aset(mrb_state *mrb, mrb_value s)
@@ -1077,7 +1075,7 @@ mrb_struct_aset(mrb_state *mrb, mrb_value s)
     mrb_value sym = mrb_check_intern_str(mrb, idx);
 
     <span style="color:#080;font-weight:bold">if</span> (mrb_nil_p(sym)) {
-      mrb_name_error(mrb, mrb_intern_str(mrb, idx), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no member '%S' in struct</span><span style="color:#710">&quot;</span></span>, idx);
+      mrb_name_error(mrb, mrb_intern_str(mrb, idx), <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no member '%v' in struct</span><span style="color:#710">&quot;</span></span>, idx);
     }
     idx = sym;
   }
@@ -1089,13 +1087,11 @@ mrb_struct_aset(mrb_state *mrb, mrb_value s)
   <span style="color:#080;font-weight:bold">if</span> (i &lt; <span style="color:#00D">0</span>) i = RSTRUCT_LEN(s) + i;
   <span style="color:#080;font-weight:bold">if</span> (i &lt; <span style="color:#00D">0</span>) {
     mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_INDEX_ERROR</span>,
-               <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">offset %S too small for struct(size:%S)</span><span style="color:#710">&quot;</span></span>,
-               mrb_fixnum_value(i), mrb_fixnum_value(RSTRUCT_LEN(s)));
+               <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">offset %i too small for struct(size:%i)</span><span style="color:#710">&quot;</span></span>, i, RSTRUCT_LEN(s));
   }
   <span style="color:#080;font-weight:bold">if</span> (RSTRUCT_LEN(s) &lt;= i) {
     mrb_raisef(mrb, <span style="color:#036;font-weight:bold">E_INDEX_ERROR</span>,
-               <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">offset %S too large for struct(size:%S)</span><span style="color:#710">&quot;</span></span>,
-               mrb_fixnum_value(i), mrb_fixnum_value(RSTRUCT_LEN(s)));
+               <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">offset %i too large for struct(size:%i)</span><span style="color:#710">&quot;</span></span>, i, RSTRUCT_LEN(s));
   }
   mrb_struct_modify(mrb, s);
   <span style="color:#080;font-weight:bold">return</span> RSTRUCT_PTR(s)[i] = val;
@@ -1108,7 +1104,7 @@ mrb_struct_aset(mrb_state *mrb, mrb_value s)
       <div class="method_details ">
   <h3 class="signature " id="_inspect-instance_method">
   
-    #<strong>_inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>_inspect</strong>(recur_list)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1132,12 +1128,16 @@ mrb_struct_aset(mrb_state *mrb, mrb_value s)
 58
 59
 60
-61</pre>
+61
+62
+63</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/mrblib/struct.rb', line 49</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">_inspect</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">_inspect</span>(recur_list)
+  <span style="color:#080;font-weight:bold">return</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#&lt;struct </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span><span style="color:#069">self</span>.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">:...&gt;</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> recur_list[<span style="color:#069">self</span>.object_id]
+  recur_list[<span style="color:#069">self</span>.object_id] = <span style="color:#069">true</span>
   name = <span style="color:#069">self</span>.class.to_s
   <span style="color:#080;font-weight:bold">if</span> name[<span style="color:#00D">0</span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#</span><span style="color:#710">&quot;</span></span>
     str = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#&lt;struct </span><span style="color:#710">&quot;</span></span>
@@ -1146,7 +1146,7 @@ mrb_struct_aset(mrb_state *mrb, mrb_value s)
   <span style="color:#080;font-weight:bold">end</span>
   buf = []
   <span style="color:#069">self</span>.each_pair <span style="color:#080;font-weight:bold">do</span> |k,v|
-    buf.push [k.to_s + <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">=</span><span style="color:#710">&quot;</span></span> + v._inspect]
+    buf.push [k.to_s + <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">=</span><span style="color:#710">&quot;</span></span> + v._inspect(recur_list)]
   <span style="color:#080;font-weight:bold">end</span>
   str + buf.join(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">, </span><span style="color:#710">&quot;</span></span>) + <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">&gt;</span><span style="color:#710">&quot;</span></span>
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -1158,7 +1158,7 @@ mrb_struct_aset(mrb_state *mrb, mrb_value s)
       <div class="method_details ">
   <h3 class="signature " id="dig-instance_method">
   
-    #<strong>dig</strong>(idx, *args)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>dig</strong>(idx, *args)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1187,17 +1187,17 @@ intermediate step is +nil+.</p>
       <pre class="lines">
 
 
+91
+92
 93
 94
 95
 96
 97
-98
-99
-100</pre>
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/mrblib/struct.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/mrblib/struct.rb', line 91</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">dig</span>(idx,*args)
   n = <span style="color:#069">self</span>[idx]
@@ -1215,7 +1215,7 @@ intermediate step is +nil+.</p>
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    #<strong>each</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1266,7 +1266,7 @@ and pass the respective element.</p>
       <div class="method_details ">
   <h3 class="signature " id="each_pair-instance_method">
   
-    #<strong>each_pair</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each_pair</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1359,6 +1359,20 @@ fields are equal (using <code>eql?</code>).</p>
       <pre class="lines">
 
 
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
 596
 597
 598
@@ -1372,24 +1386,10 @@ fields are equal (using <code>eql?</code>).</p>
 606
 607
 608
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623</pre>
+609</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 596</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 582</span>
 
 static mrb_value
 mrb_struct_eql(mrb_state *mrb, mrb_value s)
@@ -1427,7 +1427,7 @@ mrb_struct_eql(mrb_state *mrb, mrb_value s)
       <div class="method_details ">
   <h3 class="signature " id="initialize_copy-instance_method">
   
-    #<strong>initialize_copy</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize_copy</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1451,26 +1451,26 @@ mrb_struct_eql(mrb_state *mrb, mrb_value s)
       <pre class="lines">
 
 
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
 367
 368
 369
 370
 371
-372
-373
-374
-375
-376
-377
-378
-379
-380
-381
-382
-383</pre>
+372</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 367</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 356</span>
 
 static mrb_value
 mrb_struct_init_copy(mrb_state *mrb, mrb_value copy)
@@ -1497,7 +1497,7 @@ mrb_struct_init_copy(mrb_state *mrb, mrb_value copy)
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>inspect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1531,23 +1531,15 @@ mrb_struct_init_copy(mrb_state *mrb, mrb_value copy)
       <pre class="lines">
 
 
-72
-73
 74
 75
-76
-77
-78</pre>
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/mrblib/struct.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/mrblib/struct.rb', line 74</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">inspect</span>
-  <span style="color:#080;font-weight:bold">begin</span>
-    <span style="color:#069">self</span>._inspect
-  <span style="color:#080;font-weight:bold">rescue</span> <span style="color:#036;font-weight:bold">SystemStackError</span>
-    <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#&lt;struct </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span><span style="color:#069">self</span>.class.to_s<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">:...&gt;</span><span style="color:#710">&quot;</span></span>
-  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">self</span>._inspect({})
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -1652,14 +1644,14 @@ mrb_struct_init_copy(mrb_state *mrb, mrb_value copy)
       <pre class="lines">
 
 
-632
-633
-634
-635
-636</pre>
+618
+619
+620
+621
+622</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 632</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 618</span>
 
 static mrb_value
 mrb_struct_len(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1730,14 +1722,14 @@ variables.</p>
       <pre class="lines">
 
 
+107
+108
+109
 110
-111
-112
-113
-114</pre>
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 110</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 107</span>
 
 static mrb_value
 mrb_struct_members(mrb_state *mrb, mrb_value obj)
@@ -1752,7 +1744,7 @@ mrb_struct_members(mrb_state *mrb, mrb_value obj)
       <div class="method_details ">
   <h3 class="signature " id="select-instance_method">
   
-    #<strong>select</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>select</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1903,14 +1895,14 @@ block is not false.</p>
       <pre class="lines">
 
 
-632
-633
-634
-635
-636</pre>
+618
+619
+620
+621
+622</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 632</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 618</span>
 
 static mrb_value
 mrb_struct_len(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2020,14 +2012,14 @@ mrb_struct_len(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-645
-646
-647
-648
-649</pre>
+631
+632
+633
+634
+635</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 645</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 631</span>
 
 static mrb_value
 mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2093,24 +2085,24 @@ mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-657
-658
-659
-660
-661
-662
-663
-664
-665
-666
-667
-668
-669
-670
-671</pre>
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 657</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 643</span>
 
 static mrb_value
 mrb_struct_to_h(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2230,14 +2222,14 @@ mrb_struct_to_h(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-645
-646
-647
-648
-649</pre>
+631
+632
+633
+634
+635</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 645</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 631</span>
 
 static mrb_value
 mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2252,7 +2244,7 @@ mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="values_at-instance_method">
   
-    #<strong>values_at</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>values_at</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2264,19 +2256,19 @@ mrb_struct_to_a(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-673
-674
-675
-676
-677
-678
-679
-680
-681
-682</pre>
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 673</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-struct/src/struct.c', line 659</span>
 
 static mrb_value
 mrb_struct_values_at(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -2298,9 +2290,9 @@ mrb_struct_values_at(mrb_state *mrb, mrb_value <span style="color:#069">self</sp
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:33 2019 by
+  Generated on Wed Nov 27 22:35:11 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

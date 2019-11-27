@@ -6,7 +6,7 @@
 <title>
   Header: mruby/range.h
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -111,7 +111,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_range_beg_len-function" title="mrb_range_beg_len">mrb_int <strong>mrb_range_beg_len</strong>(mrb_state *, mrb_value, mrb_int *, mrb_int *, mrb_int, mrb_bool)</a>
+    <a href="#mrb_range_beg_len-function" title="mrb_range_beg_len">enum <strong>mrb_range_beg_len</strong>(mrb_state *, mrb_value, mrb_int *, mrb_int *, mrb_int, mrb_bool)</a>
 
     
   </span>
@@ -121,7 +121,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>(failure) out of range.</p>
 </div></span>
   
 </li>
@@ -281,10 +281,22 @@ If the third parameter is TRUE then it excludes the last value in the range.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_range_beg_len-function">
-  mrb_int <strong>mrb_range_beg_len</strong>(mrb_state * mrb, mrb_value range, mrb_int * begp, mrb_int * lenp, mrb_int len, mrb_bool trunc)
+  enum <strong>mrb_range_beg_len</strong>(mrb_state * mrb, mrb_value range, mrb_int * begp, mrb_int * lenp, mrb_int len, mrb_bool trunc)
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    <p>(failure) out of range</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
@@ -293,9 +305,9 @@ If the third parameter is TRUE then it excludes the last value in the range.</p>
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:34 2019 by
+  Generated on Wed Nov 27 22:35:13 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

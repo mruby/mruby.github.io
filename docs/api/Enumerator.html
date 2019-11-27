@@ -6,7 +6,7 @@
 <title>
   Class: Enumerator
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -73,10 +73,10 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      <span class="inheritName">Object</span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next">Enumerator</li>
           
@@ -346,11 +346,73 @@ or raises StopIteration if the Enumerator is at the end.</p>
 
   
     <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#produce-class_method" title="produce (class method)">.<strong>produce</strong>(init = NONE, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><table>
+  <tbody>
+    <tr>
+      <td>call-seq:    Enumerator.produce(initial = nil)       <td>val</td>
+      <td> -&gt; enumerator.</td>
+    </tr>
+  </tbody>
+</table>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
       Instance Method Summary
       <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%2B-instance_method" title="#+ (instance method)">#<strong>+</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -442,7 +504,7 @@ or raises StopIteration if the Enumerator is at the end.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(obj = NONE, meth = :each, *args, &amp;block)  &#x21d2; Enumerator </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(obj, method = :each, *args)  &#x21d2; Enumerator </a>
     
 
     
@@ -702,18 +764,14 @@ or raises StopIteration if the Enumerator is at the end.</p>
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Enumerable.html" title="Enumerable (module)">Enumerable</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Enumerable.html#%2B-instance_method" title="Enumerable#+ (method)">#+</a></span>, <span class='object_link'><a href="Enumerable.html#__update_hash-class_method" title="Enumerable.__update_hash (method)">__update_hash</a></span>, <span class='object_link'><a href="Enumerable.html#all%3F-instance_method" title="Enumerable#all? (method)">#all?</a></span>, <span class='object_link'><a href="Enumerable.html#any%3F-instance_method" title="Enumerable#any? (method)">#any?</a></span>, <span class='object_link'><a href="Enumerable.html#chain-instance_method" title="Enumerable#chain (method)">#chain</a></span>, <span class='object_link'><a href="Enumerable.html#collect-instance_method" title="Enumerable#collect (method)">#collect</a></span>, <span class='object_link'><a href="Enumerable.html#count-instance_method" title="Enumerable#count (method)">#count</a></span>, <span class='object_link'><a href="Enumerable.html#cycle-instance_method" title="Enumerable#cycle (method)">#cycle</a></span>, <span class='object_link'><a href="Enumerable.html#detect-instance_method" title="Enumerable#detect (method)">#detect</a></span>, <span class='object_link'><a href="Enumerable.html#drop-instance_method" title="Enumerable#drop (method)">#drop</a></span>, <span class='object_link'><a href="Enumerable.html#drop_while-instance_method" title="Enumerable#drop_while (method)">#drop_while</a></span>, <span class='object_link'><a href="Enumerable.html#each_cons-instance_method" title="Enumerable#each_cons (method)">#each_cons</a></span>, <span class='object_link'><a href="Enumerable.html#each_slice-instance_method" title="Enumerable#each_slice (method)">#each_slice</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_object-instance_method" title="Enumerable#each_with_object (method)">#each_with_object</a></span>, <span class='object_link'><a href="Enumerable.html#entries-instance_method" title="Enumerable#entries (method)">#entries</a></span>, <span class='object_link'><a href="Enumerable.html#find_all-instance_method" title="Enumerable#find_all (method)">#find_all</a></span>, <span class='object_link'><a href="Enumerable.html#find_index-instance_method" title="Enumerable#find_index (method)">#find_index</a></span>, <span class='object_link'><a href="Enumerable.html#first-instance_method" title="Enumerable#first (method)">#first</a></span>, <span class='object_link'><a href="Enumerable.html#flat_map-instance_method" title="Enumerable#flat_map (method)">#flat_map</a></span>, <span class='object_link'><a href="Enumerable.html#grep-instance_method" title="Enumerable#grep (method)">#grep</a></span>, <span class='object_link'><a href="Enumerable.html#group_by-instance_method" title="Enumerable#group_by (method)">#group_by</a></span>, <span class='object_link'><a href="Enumerable.html#hash-instance_method" title="Enumerable#hash (method)">#hash</a></span>, <span class='object_link'><a href="Enumerable.html#include%3F-instance_method" title="Enumerable#include? (method)">#include?</a></span>, <span class='object_link'><a href="Enumerable.html#inject-instance_method" title="Enumerable#inject (method)">#inject</a></span>, <span class='object_link'><a href="Enumerable.html#lazy-instance_method" title="Enumerable#lazy (method)">#lazy</a></span>, <span class='object_link'><a href="Enumerable.html#max-instance_method" title="Enumerable#max (method)">#max</a></span>, <span class='object_link'><a href="Enumerable.html#max_by-instance_method" title="Enumerable#max_by (method)">#max_by</a></span>, <span class='object_link'><a href="Enumerable.html#min-instance_method" title="Enumerable#min (method)">#min</a></span>, <span class='object_link'><a href="Enumerable.html#min_by-instance_method" title="Enumerable#min_by (method)">#min_by</a></span>, <span class='object_link'><a href="Enumerable.html#minmax-instance_method" title="Enumerable#minmax (method)">#minmax</a></span>, <span class='object_link'><a href="Enumerable.html#minmax_by-instance_method" title="Enumerable#minmax_by (method)">#minmax_by</a></span>, <span class='object_link'><a href="Enumerable.html#none%3F-instance_method" title="Enumerable#none? (method)">#none?</a></span>, <span class='object_link'><a href="Enumerable.html#one%3F-instance_method" title="Enumerable#one? (method)">#one?</a></span>, <span class='object_link'><a href="Enumerable.html#partition-instance_method" title="Enumerable#partition (method)">#partition</a></span>, <span class='object_link'><a href="Enumerable.html#reject-instance_method" title="Enumerable#reject (method)">#reject</a></span>, <span class='object_link'><a href="Enumerable.html#reverse_each-instance_method" title="Enumerable#reverse_each (method)">#reverse_each</a></span>, <span class='object_link'><a href="Enumerable.html#sort-instance_method" title="Enumerable#sort (method)">#sort</a></span>, <span class='object_link'><a href="Enumerable.html#sort_by-instance_method" title="Enumerable#sort_by (method)">#sort_by</a></span>, <span class='object_link'><a href="Enumerable.html#take-instance_method" title="Enumerable#take (method)">#take</a></span>, <span class='object_link'><a href="Enumerable.html#take_while-instance_method" title="Enumerable#take_while (method)">#take_while</a></span>, <span class='object_link'><a href="Enumerable.html#to_h-instance_method" title="Enumerable#to_h (method)">#to_h</a></span>, <span class='object_link'><a href="Enumerable.html#to_h-class_method" title="Enumerable.to_h (method)">to_h</a></span>, <span class='object_link'><a href="Enumerable.html#uniq-instance_method" title="Enumerable#uniq (method)">#uniq</a></span>, <span class='object_link'><a href="Enumerable.html#zip-instance_method" title="Enumerable#zip (method)">#zip</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Enumerable.html#__update_hash-class_method" title="Enumerable.__update_hash (method)">__update_hash</a></span>, <span class='object_link'><a href="Enumerable.html#all%3F-instance_method" title="Enumerable#all? (method)">#all?</a></span>, <span class='object_link'><a href="Enumerable.html#any%3F-instance_method" title="Enumerable#any? (method)">#any?</a></span>, <span class='object_link'><a href="Enumerable.html#chain-instance_method" title="Enumerable#chain (method)">#chain</a></span>, <span class='object_link'><a href="Enumerable.html#collect-instance_method" title="Enumerable#collect (method)">#collect</a></span>, <span class='object_link'><a href="Enumerable.html#count-instance_method" title="Enumerable#count (method)">#count</a></span>, <span class='object_link'><a href="Enumerable.html#cycle-instance_method" title="Enumerable#cycle (method)">#cycle</a></span>, <span class='object_link'><a href="Enumerable.html#detect-instance_method" title="Enumerable#detect (method)">#detect</a></span>, <span class='object_link'><a href="Enumerable.html#drop-instance_method" title="Enumerable#drop (method)">#drop</a></span>, <span class='object_link'><a href="Enumerable.html#drop_while-instance_method" title="Enumerable#drop_while (method)">#drop_while</a></span>, <span class='object_link'><a href="Enumerable.html#each_cons-instance_method" title="Enumerable#each_cons (method)">#each_cons</a></span>, <span class='object_link'><a href="Enumerable.html#each_slice-instance_method" title="Enumerable#each_slice (method)">#each_slice</a></span>, <span class='object_link'><a href="Enumerable.html#each_with_object-instance_method" title="Enumerable#each_with_object (method)">#each_with_object</a></span>, <span class='object_link'><a href="Enumerable.html#entries-instance_method" title="Enumerable#entries (method)">#entries</a></span>, <span class='object_link'><a href="Enumerable.html#filter_map-instance_method" title="Enumerable#filter_map (method)">#filter_map</a></span>, <span class='object_link'><a href="Enumerable.html#find_all-instance_method" title="Enumerable#find_all (method)">#find_all</a></span>, <span class='object_link'><a href="Enumerable.html#find_index-instance_method" title="Enumerable#find_index (method)">#find_index</a></span>, <span class='object_link'><a href="Enumerable.html#first-instance_method" title="Enumerable#first (method)">#first</a></span>, <span class='object_link'><a href="Enumerable.html#flat_map-instance_method" title="Enumerable#flat_map (method)">#flat_map</a></span>, <span class='object_link'><a href="Enumerable.html#grep-instance_method" title="Enumerable#grep (method)">#grep</a></span>, <span class='object_link'><a href="Enumerable.html#group_by-instance_method" title="Enumerable#group_by (method)">#group_by</a></span>, <span class='object_link'><a href="Enumerable.html#hash-instance_method" title="Enumerable#hash (method)">#hash</a></span>, <span class='object_link'><a href="Enumerable.html#include%3F-instance_method" title="Enumerable#include? (method)">#include?</a></span>, <span class='object_link'><a href="Enumerable.html#inject-instance_method" title="Enumerable#inject (method)">#inject</a></span>, <span class='object_link'><a href="Enumerable.html#lazy-instance_method" title="Enumerable#lazy (method)">#lazy</a></span>, <span class='object_link'><a href="Enumerable.html#max-instance_method" title="Enumerable#max (method)">#max</a></span>, <span class='object_link'><a href="Enumerable.html#max_by-instance_method" title="Enumerable#max_by (method)">#max_by</a></span>, <span class='object_link'><a href="Enumerable.html#min-instance_method" title="Enumerable#min (method)">#min</a></span>, <span class='object_link'><a href="Enumerable.html#min_by-instance_method" title="Enumerable#min_by (method)">#min_by</a></span>, <span class='object_link'><a href="Enumerable.html#minmax-instance_method" title="Enumerable#minmax (method)">#minmax</a></span>, <span class='object_link'><a href="Enumerable.html#minmax_by-instance_method" title="Enumerable#minmax_by (method)">#minmax_by</a></span>, <span class='object_link'><a href="Enumerable.html#none%3F-instance_method" title="Enumerable#none? (method)">#none?</a></span>, <span class='object_link'><a href="Enumerable.html#one%3F-instance_method" title="Enumerable#one? (method)">#one?</a></span>, <span class='object_link'><a href="Enumerable.html#partition-instance_method" title="Enumerable#partition (method)">#partition</a></span>, <span class='object_link'><a href="Enumerable.html#reject-instance_method" title="Enumerable#reject (method)">#reject</a></span>, <span class='object_link'><a href="Enumerable.html#reverse_each-instance_method" title="Enumerable#reverse_each (method)">#reverse_each</a></span>, <span class='object_link'><a href="Enumerable.html#sort-instance_method" title="Enumerable#sort (method)">#sort</a></span>, <span class='object_link'><a href="Enumerable.html#sort_by-instance_method" title="Enumerable#sort_by (method)">#sort_by</a></span>, <span class='object_link'><a href="Enumerable.html#take-instance_method" title="Enumerable#take (method)">#take</a></span>, <span class='object_link'><a href="Enumerable.html#take_while-instance_method" title="Enumerable#take_while (method)">#take_while</a></span>, <span class='object_link'><a href="Enumerable.html#tally-instance_method" title="Enumerable#tally (method)">#tally</a></span>, <span class='object_link'><a href="Enumerable.html#to_h-instance_method" title="Enumerable#to_h (method)">#to_h</a></span>, <span class='object_link'><a href="Enumerable.html#uniq-instance_method" title="Enumerable#uniq (method)">#uniq</a></span>, <span class='object_link'><a href="Enumerable.html#zip-instance_method" title="Enumerable#zip (method)">#zip</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    
-      <span class="overload">#<strong>initialize</strong>(size = nil, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="" title="Enumerator (class)">Enumerator</a></span></tt> </span>
-    
-      <span class="overload">#<strong>initialize</strong>(obj, method = :each, *args)  &#x21d2; <tt><span class='object_link'><a href="" title="Enumerator (class)">Enumerator</a></span></tt> </span>
-    
+    #<strong>initialize</strong>(obj, method = :each, *args)  &#x21d2; <tt><span class='object_link'><a href="" title="Enumerator (class)">Enumerator</a></span></tt> 
   
 
   
@@ -751,6 +809,8 @@ instead.</p>
 </div>
 <div class="tags">
   
+  
+
 
 </div>
 
@@ -760,6 +820,7 @@ instead.</p>
       <pre class="lines">
 
 
+117
 118
 119
 120
@@ -774,11 +835,10 @@ instead.</p>
 129
 130
 131
-132
-133</pre>
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 117</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize</span>(obj=<span style="color:#036;font-weight:bold">NONE</span>, meth=<span style="color:#A60">:each</span>, *args, &amp;block)
   <span style="color:#080;font-weight:bold">if</span> block
@@ -811,7 +871,7 @@ instead.</p>
       <div class="method_details first">
   <h3 class="signature first" id="args-instance_method">
   
-    #<strong>args</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>args</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -835,12 +895,12 @@ instead.</p>
       <pre class="lines">
 
 
+133
 134
-135
-136</pre>
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 133</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">args</span>
   <span style="color:#33B">@args</span>
@@ -855,7 +915,7 @@ instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="fib-instance_method">
   
-    #<strong>fib</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+    #<strong>fib</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -879,12 +939,12 @@ instead.</p>
       <pre class="lines">
 
 
+134
 135
-136
-137</pre>
+136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 134</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">fib</span>
   <span style="color:#33B">@fib</span>
@@ -899,7 +959,7 @@ instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="meth-instance_method">
   
-    #<strong>meth</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>meth</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -923,12 +983,12 @@ instead.</p>
       <pre class="lines">
 
 
+133
 134
-135
-136</pre>
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 133</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">meth</span>
   <span style="color:#33B">@meth</span>
@@ -943,7 +1003,7 @@ instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="obj-instance_method">
   
-    #<strong>obj</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>obj</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -967,12 +1027,12 @@ instead.</p>
       <pre class="lines">
 
 
+133
 134
-135
-136</pre>
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 133</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">obj</span>
   <span style="color:#33B">@obj</span>
@@ -985,14 +1045,166 @@ instead.</p>
   </div>
 
 
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="produce-class_method">
+  
+    .<strong>produce</strong>(init = NONE, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+   Enumerator.produce(initial = nil) { |val| } -&gt; enumerator</p>
+
+<p>Creates an infinite enumerator from any block, just called over and
+over.  Result of the previous iteration is passed to the next one.
+If +initial+ is provided, it is passed to the first iteration, and
+becomes the first element of the enumerator; if it is not provided,
+first iteration receives +nil+, and its result becomes first
+element of the iterator.</p>
+
+<p>Raising StopIteration from the block stops an iteration.</p>
+
+<p>Examples of usage:</p>
+
+<p>Enumerator.produce(1, &amp;:succ)   # =&gt; enumerator of 1, 2, 3, 4, ….</p>
+
+<p>Enumerator.produce { rand(10) } # =&gt; infinite random number sequence</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ancestors = Enumerator.produce(node) {</td>
+      <td>prev</td>
+      <td>node = prev.parent or raise StopIteration }</td>
+    </tr>
+    <tr>
+      <td>enclosing_section = ancestors.find {</td>
+      <td>n</td>
+      <td>n.type == :section }</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ArgumentError.html" title="ArgumentError (class)">ArgumentError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 580</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#036;font-weight:bold">Enumerator</span>.<span style="color:#06B;font-weight:bold">produce</span>(init=<span style="color:#036;font-weight:bold">NONE</span>, &amp;block)
+  raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">no block given</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> block.nil?
+  <span style="color:#036;font-weight:bold">Enumerator</span>.new <span style="color:#080;font-weight:bold">do</span> |y|
+    <span style="color:#080;font-weight:bold">if</span> init == <span style="color:#036;font-weight:bold">NONE</span>
+      val = <span style="color:#069">nil</span>
+    <span style="color:#080;font-weight:bold">else</span>
+      val = init
+      y.yield(val)
+    <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">begin</span>
+      <span style="color:#080;font-weight:bold">while</span> <span style="color:#069">true</span>
+        y.yield(val = block.call(val))
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">rescue</span> <span style="color:#036;font-weight:bold">StopIteration</span>
+      <span style="color:#777"># do nothing</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="each-instance_method">
+  <h3 class="signature first" id="+-instance_method">
   
-    #<strong>each</strong>(*argv, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>+</strong>(other)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enum-chain/mrblib/chain.rb', line 12</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">+</span>(other)
+  <span style="color:#036;font-weight:bold">Chain</span>.new(<span style="color:#069">self</span>, other)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-instance_method">
+  
+    #<strong>each</strong>(*argv, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1011,9 +1223,10 @@ If no block and no arguments are given, returns self.</p>
 
 <p>=== Examples</p>
 
-<p>“Hello, world!”.scan(/\w+/)                     #=&gt; [“Hello”, “world”]
-  “Hello, world!”.to_enum(:scan, /\w+/).to_a      #=&gt; [“Hello”, “world”]
-  “Hello, world!”.to_enum(:scan).each(/\w+/).to_a #=&gt; [“Hello”, “world”]</p>
+<p>Array.new(3)                     #=&gt; [nil, nil, nil]
+  Array.new(3) { |i| i }           #=&gt; [0, 1, 2]
+  Array.to_enum(:new, 3).to_a      #=&gt; [0, 1, 2]
+  Array.to_enum(:new).each(3).to_a #=&gt; [0, 1, 2]</p>
 
 <p>obj = Object.new</p>
 
@@ -1092,7 +1305,7 @@ If no block and no arguments are given, returns self.</p>
       <div class="method_details ">
   <h3 class="signature " id="each_with_index-instance_method">
   
-    #<strong>each_with_index</strong>(&amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>each_with_index</strong>(&amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1122,12 +1335,12 @@ If no block and no arguments are given, returns self.</p>
       <pre class="lines">
 
 
+184
 185
-186
-187</pre>
+186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 185</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 184</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">each_with_index</span>(&amp;block)
   with_index(<span style="color:#00D">0</span>, &amp;block)
@@ -1140,7 +1353,7 @@ If no block and no arguments are given, returns self.</p>
       <div class="method_details ">
   <h3 class="signature " id="feed-instance_method">
   
-    #<strong>feed</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>feed</strong>(value)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1241,7 +1454,7 @@ If no block and no arguments are given, returns self.</p>
       <div class="method_details ">
   <h3 class="signature " id="initialize_copy-instance_method">
   
-    #<strong>initialize_copy</strong>(obj)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>initialize_copy</strong>(obj)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1278,6 +1491,7 @@ If no block and no arguments are given, returns self.</p>
       <pre class="lines">
 
 
+136
 137
 138
 139
@@ -1287,11 +1501,10 @@ If no block and no arguments are given, returns self.</p>
 143
 144
 145
-146
-147</pre>
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 136</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize_copy</span>(obj)
   raise <span style="color:#036;font-weight:bold">TypeError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">can't copy type </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>obj.class<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> obj.kind_of? <span style="color:#036;font-weight:bold">Enumerator</span>
@@ -1312,7 +1525,7 @@ If no block and no arguments are given, returns self.</p>
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>inspect</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1324,17 +1537,17 @@ If no block and no arguments are given, returns self.</p>
       <pre class="lines">
 
 
+225
 226
 227
 228
 229
 230
 231
-232
-233</pre>
+232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 226</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 225</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">inspect</span>
   <span style="color:#080;font-weight:bold">if</span> <span style="color:#33B">@args</span> &amp;&amp; <span style="color:#33B">@args</span>.size &gt; <span style="color:#00D">0</span>
@@ -1352,7 +1565,7 @@ If no block and no arguments are given, returns self.</p>
       <div class="method_details ">
   <h3 class="signature " id="next-instance_method">
   
-    #<strong>next</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>next</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1411,7 +1624,7 @@ side-effect</p>
       <div class="method_details ">
   <h3 class="signature " id="next_values-instance_method">
   
-    #<strong>next_values</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>next_values</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1579,7 +1792,7 @@ methods unless underlying iteration method itself has side-effect</p>
       <div class="method_details ">
   <h3 class="signature " id="peek-instance_method">
   
-    #<strong>peek</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>peek</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1638,7 +1851,7 @@ is raised.</p>
       <div class="method_details ">
   <h3 class="signature " id="peek_values-instance_method">
   
-    #<strong>peek_values</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>peek_values</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1709,7 +1922,7 @@ the end, StopIteration is raised.</p>
       <div class="method_details ">
   <h3 class="signature " id="rewind-instance_method">
   
-    #<strong>rewind</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>rewind</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1768,7 +1981,7 @@ the end, StopIteration is raised.</p>
       <div class="method_details ">
   <h3 class="signature " id="with_index-instance_method">
   
-    #<strong>with_index</strong>(offset = 0, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>with_index</strong>(offset = 0, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1800,6 +2013,7 @@ that includes the index, starting from +offset+</p>
       <pre class="lines">
 
 
+159
 160
 161
 162
@@ -1813,11 +2027,10 @@ that includes the index, starting from +offset+</p>
 170
 171
 172
-173
-174</pre>
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 159</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">with_index</span>(offset=<span style="color:#00D">0</span>, &amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum <span style="color:#A60">:with_index</span>, offset <span style="color:#080;font-weight:bold">unless</span> block
@@ -1842,7 +2055,7 @@ that includes the index, starting from +offset+</p>
       <div class="method_details ">
   <h3 class="signature " id="with_object-instance_method">
   
-    #<strong>with_object</strong>(object, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>with_object</strong>(object, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1896,17 +2109,17 @@ to_three_with_string.each <span style="color:#080;font-weight:bold">do</span> |x
       <pre class="lines">
 
 
+216
 217
 218
 219
 220
 221
 222
-223
-224</pre>
+223</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 217</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-enumerator/mrblib/enumerator.rb', line 216</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">with_object</span>(object, &amp;block)
   <span style="color:#080;font-weight:bold">return</span> to_enum(<span style="color:#A60">:with_object</span>, object) <span style="color:#080;font-weight:bold">unless</span> block
@@ -1926,9 +2139,9 @@ to_three_with_string.each <span style="color:#080;font-weight:bold">do</span> |x
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:34 2019 by
+  Generated on Wed Nov 27 22:35:12 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

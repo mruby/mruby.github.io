@@ -6,7 +6,7 @@
 <title>
   Header: mruby/hash.h
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -88,7 +88,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_hash_new_capa-function" title="mrb_hash_new_capa">mrb_value <strong>mrb_hash_new_capa</strong>(mrb_state*, mrb_int)</a>
+    <a href="#mrb_hash_new_capa-function" title="mrb_hash_new_capa">mrb_value <strong>mrb_hash_new_capa</strong>(mrb_state *, mrb_int)</a>
 
     
   </span>
@@ -474,7 +474,7 @@
   
     <div class="method_details first">
   <h3 class="signature first" id="mrb_hash_new_capa-function">
-  mrb_value <strong>mrb_hash_new_capa</strong>(mrb_state* , mrb_int )
+  mrb_value <strong>mrb_hash_new_capa</strong>(mrb_state * mrb, mrb_int capa)
 
   
 </h3>
@@ -956,7 +956,7 @@ used.</p>
       
       
         
-        <div class='inline'><p>The deleted value.</p>
+        <div class='inline'><p>The deleted value. This value is not protected from GC. Use <code>mrb_gc_protect()</code> if necessary.</p>
 </div>
       
     </li>
@@ -1611,9 +1611,9 @@ second hash.</p>
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:34 2019 by
+  Generated on Wed Nov 27 22:35:12 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>

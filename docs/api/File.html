@@ -6,7 +6,7 @@
 <title>
   Class: File
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -76,7 +76,7 @@
       <span class="inheritName"><span class='object_link'><a href="IO.html" title="IO (class)">IO</a></span></span>
       
         <ul class="fullTree">
-          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          <li>Object</li>
           
             <li class="next"><span class='object_link'><a href="IO.html" title="IO (class)">IO</a></span></li>
           
@@ -119,8 +119,6 @@
       <strong class="modules">Modules:</strong> <span class='object_link'><a href="File/Constants.html" title="File::Constants (module)">Constants</a></span>
     
   
-    
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="File/FileError.html" title="File::FileError (class)">FileError</a></span>, <span class='object_link'><a href="File/NoFileError.html" title="File::NoFileError (class)">NoFileError</a></span>, <span class='object_link'><a href="File/PermissionError.html" title="File::PermissionError (class)">PermissionError</a></span>, <span class='object_link'><a href="File/UnableToStat.html" title="File::UnableToStat (class)">UnableToStat</a></span>
     
   
 </p>
@@ -680,18 +678,18 @@
       <pre class="lines">
 
 
+4
+5
+6
+7
+8
 9
 10
 11
-12
-13
-14
-15
-16
-17</pre>
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 4</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize</span>(fd_or_path, mode = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">r</span><span style="color:#710">&quot;</span></span>, perm = <span style="color:#00D">0666</span>)
   <span style="color:#080;font-weight:bold">if</span> fd_or_path.kind_of? <span style="color:#036;font-weight:bold">Fixnum</span>
@@ -717,7 +715,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="path-instance_method">
   
-    #<strong>path</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>path</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -741,12 +739,12 @@
       <pre class="lines">
 
 
-7
-8
-9</pre>
+2
+3
+4</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 2</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">path</span>
   <span style="color:#33B">@path</span>
@@ -803,12 +801,12 @@
       <pre class="lines">
 
 
-152
-153
-154</pre>
+147
+148
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 147</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">directory?</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.directory?(file)
@@ -858,12 +856,12 @@
       <pre class="lines">
 
 
-156
-157
-158</pre>
+151
+152
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 151</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">exist?</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.exist?(file)
@@ -913,12 +911,12 @@
       <pre class="lines">
 
 
-160
-161
-162</pre>
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 155</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">exists?</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.exists?(file)
@@ -931,7 +929,7 @@
       <div class="method_details ">
   <h3 class="signature " id="expand_path-class_method">
   
-    .<strong>expand_path</strong>(path, default_dir = &#39;.&#39;)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>expand_path</strong>(path, default_dir = &#39;.&#39;)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -943,6 +941,11 @@
       <pre class="lines">
 
 
+58
+59
+60
+61
+62
 63
 64
 65
@@ -1015,15 +1018,10 @@
 132
 133
 134
-135
-136
-137
-138
-139
-140</pre>
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 58</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">expand_path</span>(path, default_dir = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">.</span><span style="color:#710">'</span></span>)
   <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">concat_path</span>(path, base_path)
@@ -1111,7 +1109,7 @@
       <div class="method_details ">
   <h3 class="signature " id="extname-class_method">
   
-    .<strong>extname</strong>(filename)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>extname</strong>(filename)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1123,15 +1121,15 @@
       <pre class="lines">
 
 
-192
-193
-194
-195
-196
-197</pre>
+187
+188
+189
+190
+191
+192</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 187</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">extname</span>(filename)
   fname = <span style="color:#069">self</span>.basename(filename)
@@ -1184,12 +1182,12 @@
       <pre class="lines">
 
 
-164
-165
-166</pre>
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 159</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">file?</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.file?(file)
@@ -1202,7 +1200,7 @@
       <div class="method_details ">
   <h3 class="signature " id="foreach-class_method">
   
-    .<strong>foreach</strong>(file)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>foreach</strong>(file)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1214,18 +1212,18 @@
       <pre class="lines">
 
 
+137
+138
+139
+140
+141
 142
 143
 144
-145
-146
-147
-148
-149
-150</pre>
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 137</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">foreach</span>(file)
   <span style="color:#080;font-weight:bold">if</span> block_given?
@@ -1244,7 +1242,7 @@
       <div class="method_details ">
   <h3 class="signature " id="join-class_method">
   
-    .<strong>join</strong>(*names)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>join</strong>(*names)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1256,6 +1254,11 @@
       <pre class="lines">
 
 
+14
+15
+16
+17
+18
 19
 20
 21
@@ -1293,15 +1296,10 @@
 53
 54
 55
-56
-57
-58
-59
-60
-61</pre>
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 14</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">join</span>(*names)
   <span style="color:#080;font-weight:bold">return</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">if</span> names.empty?
@@ -1354,7 +1352,7 @@
       <div class="method_details ">
   <h3 class="signature " id="path-class_method">
   
-    .<strong>path</strong>(filename)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>path</strong>(filename)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1366,18 +1364,18 @@
       <pre class="lines">
 
 
+194
+195
+196
+197
+198
 199
 200
 201
-202
-203
-204
-205
-206
-207</pre>
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 199</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 194</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">path</span>(filename)
   <span style="color:#080;font-weight:bold">if</span> filename.kind_of?(<span style="color:#036;font-weight:bold">String</span>)
@@ -1433,12 +1431,12 @@
       <pre class="lines">
 
 
-168
-169
-170</pre>
+163
+164
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 163</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">pipe?</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.pipe?(file)
@@ -1451,7 +1449,7 @@
       <div class="method_details ">
   <h3 class="signature " id="size-class_method">
   
-    .<strong>size</strong>(file)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    .<strong>size</strong>(file)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1463,12 +1461,12 @@
       <pre class="lines">
 
 
-172
-173
-174</pre>
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 172</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 167</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">size</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.size(file)
@@ -1518,12 +1516,12 @@
       <pre class="lines">
 
 
-176
-177
-178</pre>
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 171</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">size?</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.size?(file)
@@ -1573,12 +1571,12 @@
       <pre class="lines">
 
 
-180
-181
-182</pre>
+175
+176
+177</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 180</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 175</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">socket?</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.socket?(file)
@@ -1628,12 +1626,12 @@
       <pre class="lines">
 
 
-184
-185
-186</pre>
+179
+180
+181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 184</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 179</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">symlink?</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.symlink?(file)
@@ -1683,12 +1681,12 @@
       <pre class="lines">
 
 
-188
-189
-190</pre>
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 183</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">zero?</span>(file)
   <span style="color:#036;font-weight:bold">FileTest</span>.zero?(file)
@@ -1707,7 +1705,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="concat_path-instance_method">
   
-    #<strong>concat_path</strong>(path, base_path)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>concat_path</strong>(path, base_path)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1719,6 +1717,11 @@
       <pre class="lines">
 
 
+59
+60
+61
+62
+63
 64
 65
 66
@@ -1750,15 +1753,10 @@
 92
 93
 94
-95
-96
-97
-98
-99
-100</pre>
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/mrblib/file.rb', line 59</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">concat_path</span>(path, base_path)
   <span style="color:#080;font-weight:bold">if</span> path[<span style="color:#00D">0</span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/</span><span style="color:#710">&quot;</span></span> || path[<span style="color:#00D">1</span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">:</span><span style="color:#710">'</span></span> <span style="color:#777"># Windows root!</span>
@@ -1805,7 +1803,7 @@
       <div class="method_details ">
   <h3 class="signature " id="flock-instance_method">
   
-    #<strong>flock</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>flock</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1817,8 +1815,6 @@
       <pre class="lines">
 
 
-351
-352
 353
 354
 355
@@ -1849,10 +1845,12 @@
 380
 381
 382
-383</pre>
+383
+384
+385</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/file.c', line 351</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/file.c', line 353</span>
 
 mrb_value
 mrb_file_flock(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1895,7 +1893,7 @@ mrb_file_flock(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <div class="method_details ">
   <h3 class="signature " id="mtime-instance_method">
   
-    #<strong>mtime</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt> 
+    #<strong>mtime</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1907,8 +1905,6 @@ mrb_file_flock(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
       <pre class="lines">
 
 
-337
-338
 339
 340
 341
@@ -1919,10 +1915,12 @@ mrb_file_flock(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 346
 347
 348
-349</pre>
+349
+350
+351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/file.c', line 337</span>
+      <pre class="code"><span class="info file"># File 'mrbgems/mruby-io/src/file.c', line 339</span>
 
 static mrb_value
 mrb_file_mtime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
@@ -1947,9 +1945,9 @@ mrb_file_mtime(mrb_state *mrb, mrb_value <span style="color:#069">self</span>)
 </div>
 
       <div id="footer">
-  Generated on Thu May 16 08:48:33 2019 by
+  Generated on Wed Nov 27 22:35:10 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
 </div>
 
     </div>
