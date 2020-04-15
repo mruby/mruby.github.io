@@ -282,13 +282,6 @@
   protocol: git
   repository: https://github.com/mobiruby/mruby-cocoa.git
   repooptions: 
-- name: mruby-complex
-  description: Complex numbers.
-  author: Paolo Bosetti, University of Trento
-  website: https://github.com/pbosetti/mruby-complex
-  protocol: git
-  repository: https://github.com/pbosetti/mruby-complex.git
-  repooptions: 
 - name: mruby-concurrently
   description: A concurrency framework based on fibers
   author: Christopher Aue
@@ -835,13 +828,6 @@
   protocol: git
   repository: https://github.com/FlavourSys/mruby-inotify.git
   repooptions: 
-- name: mruby-io
-  description: IO, File class implementation
-  author: iij
-  website: https://github.com/iij/mruby-io
-  protocol: git
-  repository: https://github.com/iij/mruby-io.git
-  repooptions: 
 - name: mruby-io-console
   description: The implementation of io/console as CRuby.
   author: ksss
@@ -1327,13 +1313,6 @@
   protocol: git
   repository: https://github.com/IceDragon200/mruby-oui
   repooptions: 
-- name: mruby-pack
-  description: Array#pack implementation
-  author: Internet Initiative Japan., Inc.
-  website: https://github.com/iij/mruby-pack
-  protocol: git
-  repository: https://github.com/iij/mruby-pack.git
-  repooptions: 
 - name: mruby-passwdqc
   description: A Password quality checker
   author: Hendrik Beskow
@@ -1522,13 +1501,6 @@
   website: https://github.com/UniTN-Mechatronics/mruby-raspberry
   protocol: git
   repository: https://github.com/UniTN-Mechatronics/mruby-raspberry.git
-  repooptions: 
-- name: mruby-rational
-  description: Rational class
-  author: Daisuke YAMAGUCHI
-  website: https://github.com/dyama/mruby-rational
-  protocol: git
-  repository: https://github.com/dyama/mruby-rational.git
   repooptions: 
 - name: mruby-rcon
   description: resource management mrbgem using cgroup
@@ -1787,26 +1759,12 @@
   protocol: git
   repository: https://github.com/ksss/mruby-siphash.git
   repooptions: 
-- name: mruby-sleep
-  description: Sleep Module
-  author: MATSUMOTO Ryosuke
-  website: https://github.com/matsumotory/mruby-sleep
-  protocol: git
-  repository: https://github.com/matsumotory/mruby-sleep.git
-  repooptions: 
 - name: mruby-smallhttp
   description: Small http-client gem for mruby
   author: Nazarii Sheremet
   website: https://github.com/nsheremet/mruby-smallhttp
   protocol: git
   repository: https://github.com/nsheremet/mruby-smallhttp.git
-  repooptions: 
-- name: mruby-socket
-  description: Socket library for mruby
-  author: iij
-  website: https://github.com/iij/mruby-socket
-  protocol: git
-  repository: https://github.com/iij/mruby-socket.git
   repooptions: 
 - name: mruby-spdy
   description: SPDY module for mruby
