@@ -1,0 +1,123 @@
+---
+layout: post
+title:  "mruby 2.1.1 released"
+date:   2020-06-04 00:00:00
+categories: releases
+---
+
+# mruby 2.1.1
+
+We are announcing the stable release of mruby 2.1 series - [mruby 2.1.1](https://github.com/mruby/mruby/releases/tag/2.1.1).
+
+---
+
+# New Features
+
+## Core Language Features
+
+### Ruby 2.7 features
+
+- Numbered parameters as default block parameters are introduced. ([72d57ad0](https://github.com/mruby/mruby/commit/72d57ad094b8e1c529e2e8b41d895fc6f212e31e))
+
+## Core Libraries
+
+### Ruby 2.7 features
+
+- Revert Implement Ruby2.7's frozen strings from `Symbol#to_s`. ([a367373f](https://github.com/mruby/mruby/commit/4296c77e29b67e72399dde8295dd6fa4a10cc321))
+
+---
+
+# Update Features
+
+## Core Language Features
+
+- Always enable the rational and complex literals. ([351c9c80](https://github.com/mruby/mruby/commit/351c9c80e786b6a3f3779cdf2d89879a58f35407))
+
+## Core Libraries
+
+- The `#prepend_features` and `#module_function` methods are not haves for class objects. ([cc52fa66](https://github.com/mruby/mruby/commit/cc52fa66e8c12be2b6bbe3c7fd850ea0b2beb0c1))
+- Remove location info from `Exception#inspect`. ([d2f2f9db](https://github.com/mruby/mruby/commit/d2f2f9db511afc348a88f864b9f0b0ccfc59a8f1))
+-  Allow `true`/`false` argument to `Kernel#exit`. (mrbgems/mruby-exit) ([d81e4d71](https://github.com/mruby/mruby/commit/d81e4d71c17f9d65ea87f0e66a4338411863f7bf))
+- Improved the judgment of absolute path on Windows. [#4950](https://github.com/mruby/mruby/pull/4950)
+
+## Tools
+
+- Support short options concatenation to `mruby` command. ([9de7130a](https://github.com/mruby/mruby/commit/9de7130a9a77482b27a101211ff0f4a63d57a613))
+- Support `--` (end of options) to `mruby` command. ([f4b528e0](https://github.com/mruby/mruby/commit/f4b528e07a069b9acbbcb61cced2b04115e61db7))
+- Quit `mruby -v` immediately if no program is given for Ruby compatibility. ([49653b81](https://github.com/mruby/mruby/commit/49653b81ea978a5f02c4a6ce1ed53eb1cd0dbe7a))
+
+## for mruby Developer
+
+- Add assertion to `RVALUE` size. ([6cf99d12](https://github.com/mruby/mruby/commit/6cf99d12ac17e50b91e6aeb0dd79c611e579fd1b))
+
+---
+
+# Compatibility
+
+## Core Libraries
+
+- Add `File#size` and `File#truncate`. (mrbgems/mruby-io) ([6d9ac89f](https://github.com/mruby/mruby/commit/6d9ac89f925e83bd7ca25e04190f264bea600831))
+- Add `IO#pread` and `IO#pwrite`. (mrbgems/mruby-io) ([4c6d524c](https://github.com/mruby/mruby/commit/4c6d524c473ebb9174d0183dc1d1ac0530337314))
+- Support bit flags for `IO.open`. (mrbgems/mruby-io) ([69619aee](https://github.com/mruby/mruby/commit/69619aeeb1434c30565ff1229897cf5b1af462da))
+
+---
+
+# Changes
+
+## Build system
+
+- Abandon `minirake`. Use `rake` for compilation.  
+  Currently, `minirake` is left for compatibility, but it will be removed in the future. ([de17f63](https://github.com/mruby/mruby/commit/de17f63b4567cad3b02f1f1f9386eaf8dd704bbe))
+
+---
+
+# Breaking Changes
+
+- Remove `MRB_INT16` configuration option. ([ff57c027](https://github.com/mruby/mruby/commit/ff57c0278fe7c2b83231fa40e0284e6685a29ee7))
+
+---
+
+# Major bug fixes
+
+- Parser rejects heredoc without following comma or closing bracket in array/hash literal. [#4796](https://github.com/mruby/mruby/issues/4796)
+- Segfault due to invalid read in `str_init_shared`. [#4807](https://github.com/mruby/mruby/issues/4807)
+- Invalid read in array_copy and `mrb_ary_unshift_m`. [#4808](https://github.com/mruby/mruby/issues/4808)
+- Parser segfault (invalid read) in `local_add_f`. [#4810](https://github.com/mruby/mruby/issues/4810)
+- Parser rejects some heredoc in hash literal. [#4815](https://github.com/mruby/mruby/issues/4815)
+- Rakefile in mruby build emits warnings with Windows paths. [#4817](https://github.com/mruby/mruby/issues/4817)
+- Coredump when use `ensure` in `Kernel#eval` script. [#4833](https://github.com/mruby/mruby/issues/4833)
+- Fix keyword arguments not be obtained with `mrb_get_args()`. [#4855](https://github.com/mruby/mruby/issues/4855)
+- Undefined method `Pathname' for MRuby::Toolchain::Android. [#4895](https://github.com/mruby/mruby/issues/4895)
+- Cygwin compile error. [#4904](https://github.com/mruby/mruby/issues/4904)
+- `String#to_f` should not allow hexdecimal format. [#4924](https://github.com/mruby/mruby/issues/4924)
+- Heap use after free in hash_values_at in mrbgems/mruby-hash-ext/src/hash-ext.c:33. [#4926](https://github.com/mruby/mruby/issues/4926)
+- The method name becomes `call` in backtrace inside a block outside a method. [#4936](https://github.com/mruby/mruby/issues/4936)
+- Segmentation fault at mrbgems/mruby-metaprog/src/metaprog.c:142. [#4955](https://github.com/mruby/mruby/issues/4955)
+- Test `mruby-io` in tmpdir when AF_UNIX cannot be created on cwd. [#4981](https://github.com/mruby/mruby/issues/4981)
+- IO#readlines/IO#getc hangs while reading over TCPSocket [#4982](https://github.com/mruby/mruby/issues/4982)
+- `p->locals` may be `NULL` when error occurs before the point. [oss-fuzz: Issue 19886](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=19886)
+- Fix buffer overflow in `mrb_str_len_to_dbl`. [oss-fuzz: Issue 19902](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=19902)
+- Fix file/directory name parameter for `git` command.
+- Fix `MRB_FIXNUM_SHIFT` with `MRB_WORD_BOXING`, `MRB_INT32` and `MRB_64BIT`.
+- Build when directories and files have spaces.
+- Fix argument specs of below methods.  
+  - `Exception`  
+    `Exception#exception`.
+  - `IO` (mrbgems/mruby-io)  
+    `IO._popen`, `IO.for_fd`, `IO.select`, `IO.sysopen`, `IO.new`, `IO#sysread` and `IO#sysseek`.
+  - `File` (mrbgems/mruby-io)  
+    `File.umask`.
+  - `Integer`  
+    `Integer#ceil`, `Integer#floor`, `Integer#round` and `Integer#truncate`.
+  - `Kernel`  
+    `BasicObject#instance_eval`, `Kernel#integer`, `Kernel#define_singleton_method`, `Kernel#send`, `Kernel#proc`, `Kernel#sprintf`, `Kernel#format` and `Kernel#respond_to?`.
+  - `Hash`  
+    `Hash.new` and `Hash#default`.
+  - `Fiber` (mrbgems/mruby-fiber)  
+    `Fiber.new`.
+
+---
+
+We have done 321 commits to 134 files, 4,084 lines were added, 2,742 lines removed since mruby 2.1.0. For more detail of the updates, [see Commit Log](https://github.com/mruby/mruby/compare/2.1.0...2.1.1).
+
+Stay Home and enjoy `mruby 2.1.1`.
