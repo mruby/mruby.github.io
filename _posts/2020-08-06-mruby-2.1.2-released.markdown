@@ -1,0 +1,96 @@
+---
+layout: post
+title:  "mruby 2.1.2 released"
+date:   2020-08-06 00:00:00
+categories: releases
+---
+
+# mruby 2.1.2
+
+We are announcing the stable release of mruby 2.1 series - [mruby 2.1.2](https://github.com/mruby/mruby/releases/tag/2.1.2).
+
+---
+
+# New Features
+
+## Core Language Features
+
+- Support for `Argument Forwarding`, which allows you to forward argyments in the form `def foo(...)`.
+
+## mruby VM and bytecode
+
+- Add `OP_LOADI16` instruction that loads a 16-bit integer into a register.
+- Remove endian information/flags from compiled binary format.
+- The version of the mruby binary has changed from `0006` to `0007`.
+
+## for mruby Developer
+
+- Add new C APIs.
+  - `mrb_float_to_cstr()` - Convert Float to C String.
+  - `mrb_singleton_class_ptr()` - Get pointer of Singleton class. [#4973](https://github.com/mruby/mruby/pull/4973)
+  - `mrb_utf8len()` - Get size of UTF-8 string. [#4712](https://github.com/mruby/mruby/pull/4712)
+  - `mrb_utf8_strlen()` - Get length of UTF-8 string. [#4712](https://github.com/mruby/mruby/pull/4712)
+  - `mrb_get_arg1()` - Retrieve the first and only argument from mrb_state.
+
+---
+
+# Update Features
+
+## Core Libraries
+
+- Add to the libraries included by default in the mruby VM.
+  - `mruby-eval`
+  - `mruby-complex`
+  - `mruby-rational`
+- Support `MRB_DISABLE_STDIO` for `mruby-pack` and `mruby-sprintf`. [#4954](https://github.com/mruby/mruby/pull/4954)
+- Support `IO#pread` and `IO#pwrite` on macOS.
+- Improve `Kernel.#eval` to call method with the same name as a variable name without any arguments.
+- `IO#readchar` supports UTF-8 characters.
+
+## Tools
+
+- Remove `-e` / `-E` options from `mrbc`.
+
+## for mruby Developer
+
+- Support width specifier with `mrb_float_to_str()`.
+- Support integer and float combination in `mrb_equal()`.
+
+## Improve mruby build
+
+- A mruby can be built without GNU Bison. ([a3ec6ede](https://github.com/mruby/mruby/commit/a3ec6ede))
+- Supports GitHub Actions. [#4903](https://github.com/mruby/mruby/pull/4903)  
+  Execute CI of the following platforms updating the repository.
+  - Ubuntu 16.04
+  - Ubuntu 18.04 (gcc)
+  - Ubuntu 18.04 (clang)
+  - macOS
+  - Windows (MinGW)
+  - Windows (Cygwin)
+  - Windows (MSVC)
+
+---
+
+# Breaking Changes
+
+- `IO#readchar` returns a UTF-8 character fragment instead of `EOFError` if EOF is reached in the middle of UTF-8 characters. ([86271572]((https://github.com/mruby/mruby/commit/86271572)))  
+  This behavior is different from CRuby, but it is a mruby specification that supports either ASCII or UTF-8 exclusively.
+- Remove `mrb_run()` from C APIs.
+
+---
+
+# Major bug fixes
+
+- Segmentation fault at `mrb_io_s_select`. [#4966](https://github.com/mruby/mruby/issues/4966)
+- Segmentation fault at `mrb_vm_exec`. [#4973](https://github.com/mruby/mruby/issues/4973)
+- Some `Hash` methods are inconsistent with `values` when hash has duplicate key. [181f7b97](https://github.com/mruby/mruby/commit/181f7b97)
+- Get local variable names from orphan block. [#5014](https://github.com/mruby/mruby/issues/5014)
+- Memory leaks in some places when out of memory. [f1523d24](https://github.com/mruby/mruby/commit/f1523d24)
+- Heap buffer overflow in mruby interpreter. [#5042](https://github.com/mruby/mruby/issues/5042)
+- Type tag not used when calculating hash code. [#5049](https://github.com/mruby/mruby/issues/5049)
+
+---
+
+We have done 185 commits to 99 files with 14,883 addtions and 1,653 deletions since mruby 2.1.1. For more detail of the updates, [see Commit Log](https://github.com/mruby/mruby/compare/2.1.1...2.1.2).
+
+Thanks all the contributors who have worked on bug fix and improvements in the release of `mruby 2.1.2`.
