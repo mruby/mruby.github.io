@@ -164,7 +164,7 @@ programming → compiling (`mrbc`) → testing (`mruby`) → programming
 ## Bytecode (.c)
 
 This variant is interesting for those who want to integrate Ruby code directly
-into their C code. It will create a C array containg the bytecode which you
+into their C code. It will create a C array containing the bytecode which you
 then have to execute by yourself.
 
 The first step is to compile the Ruby program. This is done by using `mrbc`

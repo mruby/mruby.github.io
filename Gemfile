@@ -10,4 +10,3 @@ group :scripts do
   gem 'yard-mruby'
   gem 'yard-coderay'
 end
-
