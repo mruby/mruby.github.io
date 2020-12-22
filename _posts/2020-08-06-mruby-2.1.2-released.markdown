@@ -15,7 +15,7 @@ We are announcing the stable release of mruby 2.1 series - [mruby 2.1.2](https:/
 
 ## Core Language Features
 
-- Support for `Argument Forwarding`, which allows you to forward argyments in the form `def foo(...)`.
+- Support for `Argument Forwarding`, which allows you to forward arguments in the form `def foo(...)`.
 
 ## mruby VM and bytecode
 
