@@ -17,7 +17,7 @@ and extending (`mrbgems`) mruby.
 {% for page in site.pages %}
   {% if page.categories contains 'articles' %}
     {% capture article %} - [{{ page.title }}]({{ page.url }}) {% endcapture %}
-    {{ article  | markdownify }}
+    {{ article | markdownify }}
   {% endif %}
 {% endfor %}
 </div>
