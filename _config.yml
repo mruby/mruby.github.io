@@ -11,6 +11,8 @@ highlighter: rouge
 url: https://mruby.org
 repository: https://github.com/mruby/mruby.github.io
 include: _index.html
+plugins:
+  - jekyll-sitemap
 exclude:
 - Gemfile
 - Gemfile.lock
