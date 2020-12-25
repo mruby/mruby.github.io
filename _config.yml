@@ -12,8 +12,9 @@ url: https://mruby.org
 repository: https://github.com/mruby/mruby.github.io
 include: _index.html
 exclude:
-- Gemfile
-- Gemfile.lock
-- README.md
-- gen_mgemdata.rb
-- vendor
+  - CODEOWNERS
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - gen_mgemdata.rb
+  - vendor
