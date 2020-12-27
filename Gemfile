@@ -6,6 +6,7 @@ group :jekyll_plugins do
   gem 'jekyll-avatar'
   gem 'jekyll-feed'
   gem 'jekyll-sitemap'
+  gem 'jekyll-twitter-plugin'
 end
 
 group :scripts do
