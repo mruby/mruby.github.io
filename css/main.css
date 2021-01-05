@@ -8,6 +8,8 @@ a {
 
 .navbar-header img {
   margin-left: 160px;
+  top:0;
+  position: absolute;
 }
 
 .footer {
@@ -25,7 +27,7 @@ a {
   right: 0px;
   left: 0px;
   z-index: 100;
-  height: 90px;
+  height: unset;
 }
 
 .navbar-mruby .navbar-brand {
@@ -48,7 +50,7 @@ a {
 }
 
 .navbar-mruby .navbar-nav > li > a {
-  padding: 17px 22px;
+  padding: 15px 22px!important;
   color: #ce2812;
 }
 .navbar-mruby .navbar-nav > li > a:hover, .navbar-mruby .navbar-nav > li > a:focus {
