@@ -23,9 +23,9 @@
 - name: mruby-ansi-colors
   description: Extends String class to use ANSI color escape codes.
   author: Mav7
-  website: https://github.com/Mav7/mruby-ansi-colors
+  website: https://github.com/mruby-Forum/mruby-ansi-colors
   protocol: git
-  repository: https://github.com/Mav7/mruby-ansi-colors.git
+  repository: https://github.com/mruby-Forum/mruby-ansi-colors.git
   repooptions: 
 - name: mruby-apr
   description: Cross platform standard library components à la MRI
@@ -281,6 +281,13 @@
   website: https://github.com/mobiruby/mruby-cocoa
   protocol: git
   repository: https://github.com/mobiruby/mruby-cocoa.git
+  repooptions: 
+- name: mruby-complex
+  description: Complex numbers.
+  author: Paolo Bosetti, University of Trento
+  website: https://github.com/pbosetti/mruby-complex
+  protocol: git
+  repository: https://github.com/pbosetti/mruby-complex.git
   repooptions: 
 - name: mruby-concurrently
   description: A concurrency framework based on fibers
@@ -828,6 +835,13 @@
   protocol: git
   repository: https://github.com/FlavourSys/mruby-inotify.git
   repooptions: 
+- name: mruby-io
+  description: IO, File class implementation
+  author: iij
+  website: https://github.com/iij/mruby-io
+  protocol: git
+  repository: https://github.com/iij/mruby-io.git
+  repooptions: 
 - name: mruby-io-console
   description: The implementation of io/console as CRuby.
   author: ksss
@@ -1052,6 +1066,14 @@
   protocol: git
   repository: https://github.com/take-cheeze/mruby-marshal.git
   repooptions: 
+- name: mruby-marshal-c
+  description: Marshal module for mruby written in C-language with full object-link
+    & symbol link support
+  author: Lanza Schneider
+  website: https://github.com/LanzaSchneider/mruby-marshal-c
+  protocol: git
+  repository: https://github.com/LanzaSchneider/mruby-marshal-c.git
+  repooptions: 
 - name: mruby-marshal-fast
   description: Marshal module for mruby written in C, with speed advantages
   author: Carlo Prelz
@@ -1067,7 +1089,7 @@
   repository: https://github.com/listrophy/mruby-matrix.git
   repooptions: 
 - name: mruby-maxminddb
-  description: mruby [GeoIP2 MaxMind DB](http://maxmind.github.io/MaxMind-DB/) reader
+  description: mruby [GeoIP2 MaxMind DB](https://maxmind.github.io/MaxMind-DB/) reader
   author: Kenichi Mitsugi
   website: https://github.com/happysiro/mruby-maxminddb
   protocol: git
@@ -1313,6 +1335,13 @@
   protocol: git
   repository: https://github.com/IceDragon200/mruby-oui
   repooptions: 
+- name: mruby-pack
+  description: Array#pack implementation
+  author: Internet Initiative Japan., Inc.
+  website: https://github.com/iij/mruby-pack
+  protocol: git
+  repository: https://github.com/iij/mruby-pack.git
+  repooptions: 
 - name: mruby-passwdqc
   description: A Password quality checker
   author: Hendrik Beskow
@@ -1501,6 +1530,13 @@
   website: https://github.com/UniTN-Mechatronics/mruby-raspberry
   protocol: git
   repository: https://github.com/UniTN-Mechatronics/mruby-raspberry.git
+  repooptions: 
+- name: mruby-rational
+  description: Rational class
+  author: Daisuke YAMAGUCHI
+  website: https://github.com/dyama/mruby-rational
+  protocol: git
+  repository: https://github.com/dyama/mruby-rational.git
   repooptions: 
 - name: mruby-rcon
   description: resource management mrbgem using cgroup
@@ -1759,12 +1795,26 @@
   protocol: git
   repository: https://github.com/ksss/mruby-siphash.git
   repooptions: 
+- name: mruby-sleep
+  description: Sleep Module
+  author: MATSUMOTO Ryosuke
+  website: https://github.com/matsumotory/mruby-sleep
+  protocol: git
+  repository: https://github.com/matsumotory/mruby-sleep.git
+  repooptions: 
 - name: mruby-smallhttp
   description: Small http-client gem for mruby
   author: Nazarii Sheremet
   website: https://github.com/nsheremet/mruby-smallhttp
   protocol: git
   repository: https://github.com/nsheremet/mruby-smallhttp.git
+  repooptions: 
+- name: mruby-socket
+  description: Socket library for mruby
+  author: iij
+  website: https://github.com/iij/mruby-socket
+  protocol: git
+  repository: https://github.com/iij/mruby-socket.git
   repooptions: 
 - name: mruby-spdy
   description: SPDY module for mruby
@@ -1783,7 +1833,7 @@
   repository: https://github.com/k0kubun/mruby-specinfra.git
   repooptions: 
 - name: mruby-sqlite
-  description: "(Another) SQLite3 mrbgem, aiming for compatibility with MRI's sqlite3
+  description: "(Another) SQLite3 mrbgem, aiming for compatability with MRI's sqlite3
     gem."
   author: Jared Breeden
   website: https://github.com/jbreeden/mruby-sqlite
