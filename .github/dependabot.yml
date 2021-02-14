@@ -1,0 +1,10 @@
+# Basic set up
+
+version: 2
+updates:
+
+  # Maintain dependencies for Ruby
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "daily"
