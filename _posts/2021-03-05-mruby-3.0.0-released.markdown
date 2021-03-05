@@ -1,0 +1,135 @@
+---
+layout: post
+title:  "mruby 3.0.0 released"
+date:   2021-03-05 00:00:00
+categories: releases
+---
+
+# mruby 3.0.0
+
+We are announcing the first stable release of mruby 3.0 series - [mruby 3.0.0](https://github.com/mruby/mruby/releases/tag/3.0.0).
+
+With mruby 3.0, the memory used of the mruby VM has been significantly reduced, and we have succeeded in significantly saving memory.
+Previous versions required several hundred KB of RAM, but mruby 3.0 can launch an application with about 100 KB of RAM.
+
+Describes the new features and changes in mruby 3.0.  
+The main changes in mruby 3.0 are also described in [doc/mruby3.md](https://github.com/mruby/mruby/blob/master/doc/mruby3.md).
+
+---
+
+# New Features
+
+## Core Language Features
+
+- Implement endless-def. [Ruby:Feature#16746](https://bugs.ruby-lang.org/issues/16746)
+- Replace `R-assignment` by `single-line pattern matching`. [Ruby:Feature#15921](https://bugs.ruby-lang.org/issues/15921)
+- Support squiggly heredocs. [#5246](https://github.com/mruby/mruby/pull/5246)
+
+## Features for mruby Developer
+
+- Add new C APIs
+  - `mrbc_cleanup_local_variables()` - Clean up local variables on mrbc_context. [#4931](https://github.com/mruby/mruby/pull/4931)
+  - Add functions that take symbols as arguments.
+    - `mrb_define_singleton_method_id()`
+    - `mrb_define_class_method_id()`
+    - `mrb_define_module_function_id()`
+    - `mrb_undef_method_id()`
+    - `mrb_undef_class_method_id()`
+    - `mrb_define_const_id()`
+    - `mrb_funcall_id()`
+  - Add functions for symbol checking that return mrb_sym value.
+    - `mrb_intern_check()`
+    - `mrb_intern_check_cstr()`
+    - `mrb_intern_check_str()`
+  - `mrb_fiber_resume()` - Allow context switch from C module.
+
+---
+
+# Update Features
+
+## Reduce memory usage
+
+- Preallocate Symbols  
+  The mruby 3.0 can now significantly reduce RAM usage by allocating symbols to static memory area at compile time. See [doc/guides/symbol.md](https://github.com/mruby/mruby/blob/master/doc/guides/symbol.md) for more information.
+- Reduce memory usage of Hash objects. [f2d8db39](https://github.com/mruby/mruby/commit/f2d8db39)
+- Reduce memory usage when calling methods. [#5272](https://github.com/mruby/mruby/pull/5272)
+
+## Updated build process
+
+The old build configuration file `build_config.rb` has been reconfigured to a file in the `build_config` directory.  
+For example, the following typical build configuration is available.
+
+- `default`: the default configuration
+- `host-gprof`: compiles with `gprof` for performance tuning
+- `host-m32`: compiles in gcc 32bit mode on 64bit platforms
+- `boxing`: compiles all three boxing options
+- `clang-asan`: compiles with clang's Address Sanitizer
+
+You can specify the mruby build configuration by building mruby with the `rake` build, specifying the build configuration file in the environment variable `MRUBY_CONFIG`.
+
+## Core Libraries
+
+- Add new libraries.
+  - `mruby-catch` - Support `Kernel.#catch` and `Kernel.#throw`. [7eaaee54](https://github.com/mruby/mruby/commit/7eaaee54)
+  - `mruby-os-memsize` - Support `ObjectSpace.memsize_of` and `ObjectSpace.memsize_of_all`. [#5032](https://github.com/mruby/mruby/pull/5032) [#5040](https://github.com/mruby/mruby/pull/5040) [#5041](https://github.com/mruby/mruby/pull/5041)
+- Add `Array.new([])` initialization. (mruby-array)
+- Add `Hash#except` (mruby-hash-ext)
+- Update `IO#popen` to use keyword arguments. (mruby-io)
+- Make `Module#include` and `Module#prepend` behave like Ruby 3.0. [3972df57](https://github.com/mruby/mruby/commit/3972df57)
+
+## Tools
+
+- Allow to mixed and specify `*.rb` and `*.mrb` in `mruby` interpreter. [a045b6b8](https://github.com/mruby/mruby/commit/a045b6b8)
+- Add `irep` C struct dump from `mrbc` with `-S` option.
+
+## Features for mruby Developer
+
+- Add new specifier `c` to `mrb_get_args()` for receive Class/Module.
+
+---
+
+# Breaking Changes
+
+## mruby VM and bytecode
+
+Due to improvements in the binary format, mruby binaries are no longer backward compatible. 
+To run the mruby binaries on mruby 3.0, recompile with the mruby 3.0 `mrbc`.
+
+- Upgrade mruby VM version `RITE_VM_VER` to `0300` (means mruby 3.0).
+- Upgrade mruby binary version `RITE_BINARY_FORMAT_VER` to `0200`.
+
+## Recognize Integer system
+
+`Integer` has been changed to a specification similar to CRuby.
+
+- Integrate `Finxnum` and `Integer`.
+- Remove `Integral`.
+- `int / int -> int`
+- Add APIs for `Integer`.  APIs for`Fixnum` (`mrb_fixnum_xxx()`) is also left for compatibility.
+  - `mrb_fixnum()` -> `mrb_integer()`
+  - `mrb_fixnum_value()` -> `mrb_int_value()`
+  - `mrb_fixnum_p()` -> `mrb_integer_p()`
+
+---
+
+# Major bug fixes
+
+- Fix take over file scope variables with `mruby` and `mirb` command. [#4933](https://github.com/mruby/mruby/issues/4933)
+- Fix performing `block_given?` from inside an orphan block always returns false. [#5039](https://github.com/mruby/mruby/issues/5039)
+- Fix segmentation fault in Mruby interpreter making it crash [#5046](https://github.com/mruby/mruby/issues/5046)
+- Fix splat operator to frozen Array raises FrozenError. [#5067](https://github.com/mruby/mruby/issues/5067)
+- Fix wrong behavior of File.extname when the filename starts or ends with a period. (mruby-io) [#5077](https://github.com/mruby/mruby/issues/5077)
+- Fix #parameters mistakes keyword "splat" for a block parameter. [#5066](https://github.com/mruby/mruby/issues/5066)
+- Fix mruby-io doesn't work in processes started as Windows service. [#5114](https://github.com/mruby/mruby/issues/5114)
+- Fix resuming fiber from C seems to loop infinitely. [#5261](https://github.com/mruby/mruby/issues/5261)
+- Fix invalid UTF-8 string length. [#5269](https://github.com/mruby/mruby/issues/5269)
+- Fix avoid syntax error when EXPR_MID appears in conditional operator. [#5290](https://github.com/mruby/mruby/issues/5290)
+- Fix symbols like numbered parameters in blocks get a syntax error. [#5295](https://github.com/mruby/mruby/issues/5295)
+- Avoid infinite loops when converting objects to strings. [01a8d849](https://github.com/mruby/mruby/commit/01a8d849)
+- Fix module order of `#include`. [ruby-bug:7844](https://bugs.ruby-lang.org/issues/7844)
+
+---
+
+We have done 983 commits to 274 files with 16,929 additions and 11,685 deletions since mruby 2.1.2. For more detail of the updates, [see Commit Log](https://github.com/mruby/mruby/compare/2.1.2...3.0.0).
+
+Thanks to all the contributors who have worked on bug fixes and improvements in the release of `mruby 3.0.0`.
