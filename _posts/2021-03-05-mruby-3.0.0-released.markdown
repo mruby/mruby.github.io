@@ -102,10 +102,10 @@ To run the mruby binaries on mruby 3.0, recompile with the mruby 3.0 `mrbc`.
 
 `Integer` has been changed to a specification similar to CRuby.
 
-- Integrate `Finxnum` and `Integer`.
+- Integrate `Fixnum` and `Integer`.
 - Remove `Integral`.
 - `int / int -> int`
-- Add APIs for `Integer`.  APIs for`Fixnum` (`mrb_fixnum_xxx()`) is also left for compatibility.
+- Add APIs for `Integer`.  APIs for `Fixnum` (`mrb_fixnum_xxx()`) is also left for compatibility.
   - `mrb_fixnum()` -> `mrb_integer()`
   - `mrb_fixnum_value()` -> `mrb_int_value()`
   - `mrb_fixnum_p()` -> `mrb_integer_p()`
