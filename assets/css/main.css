@@ -20,7 +20,7 @@ a {
 
 .navbar-mruby {
   background-color: transparent;
-  background-image: url('/images/navigation_bg.png');
+  background-image: url('/assets/images/navigation_bg.png');
   border: 0px;
   position: fixed;
   top: 0px;
