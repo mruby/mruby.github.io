@@ -275,6 +275,7 @@ PLATFORMS
 DEPENDENCIES
   git
   github-pages
+  jekyll-feed
   jekyll-sitemap
   mgem
   yard-coderay
