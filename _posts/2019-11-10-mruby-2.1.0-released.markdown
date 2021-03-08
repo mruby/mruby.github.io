@@ -249,7 +249,7 @@ There are three major breaking changes from mruby 2.0.1.
 - memcpy-param-overlap in str_replace_partial. (#4627)
 - Symbol#inspect does not handle Unicode characters. (#4678)
 - mrb_funcall returns odd value. (#4696)
-- behavior of alias is defferent from CRuby. (#4718)
+- behavior of alias is different from CRuby. (#4718)
 - compile error at master by clang 9. (#4786)
 
 ---

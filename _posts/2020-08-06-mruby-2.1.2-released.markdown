@@ -91,6 +91,6 @@ We are announcing the stable release of mruby 2.1 series - [mruby 2.1.2](https:/
 
 ---
 
-We have done 185 commits to 99 files with 14,883 addtions and 1,653 deletions since mruby 2.1.1. For more detail of the updates, [see Commit Log](https://github.com/mruby/mruby/compare/2.1.1...2.1.2).
+We have done 185 commits to 99 files with 14,883 additions and 1,653 deletions since mruby 2.1.1. For more detail of the updates, [see Commit Log](https://github.com/mruby/mruby/compare/2.1.1...2.1.2).
 
 Thanks all the contributors who have worked on bug fix and improvements in the release of `mruby 2.1.2`.
