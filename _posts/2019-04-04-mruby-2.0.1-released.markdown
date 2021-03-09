@@ -7,7 +7,7 @@ categories: releases
 
 # mruby 2.0.1
 
-We are proudly annoucing the stable release of mruby 2.0 series - mruby 2.0.1.
+We are proudly announcing the stable release of mruby 2.0 series - mruby 2.0.1.
 
 ---
 
@@ -133,7 +133,7 @@ Developers must use following APIs for accessing attributes of RRange because RR
 
 - Fixed a bug on platforms without `BYTE_ORDER`; fix [#4190](https://github.com/mruby/mruby/issues/4190)
 - Fix 0.0 and -0.0 handling.
-- Fix dump/load float leteral evaluate to infinity.
+- Fix dump/load float literal evaluate to infinity.
 - Fix `Symbol#size` for multi-byte characters with `MRB_UTF8_STRING`.
 - Add `OP_ENTER` to blocks without parameters; fix [#4175](https://github.com/mruby/mruby/issues/4175)
 - Should not check non-node value to `void_expr_error`; fix [#4203](https://github.com/mruby/mruby/issues/4175) [#4192](https://github.com/mruby/mruby/issues/4192)
