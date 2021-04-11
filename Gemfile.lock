@@ -275,6 +275,7 @@ PLATFORMS
 DEPENDENCIES
   git
   github-pages
+  jekyll-avatar
   jekyll-feed
   jekyll-sitemap
   mgem

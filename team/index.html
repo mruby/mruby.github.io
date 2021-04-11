@@ -9,67 +9,19 @@ title: mruby - team
 	<tr>
 		<th>Name</th>
 		<th>GitHub</th>
+		<th>Avatar</th>
 	</tr>
+	{%- for member in site.data.team -%}
 	<tr>
-		<td>Yukihiro "Matz" Matsumoto</td>
-		<td><a href="https://github.com/matz">matz</a></td>
+		<td>{{ member.name }}</td>
+		<td><a href="https://github.com/{{ member.github }}">{{ member.github }}</a></td>
+		<td>
+			<a href="https://github.com/{{ member.github}}">
+				{% avatar user=member.github size=50 %}
+			</a>
+		</td>
 	</tr>
-	<tr>
-		<td>Daniel Bovensiepen</td>
-		<td><a href="https://github.com/bovi">bovi</a></td>
-	</tr>
-	<tr>
-		<td>Carson McDonald</td>
-		<td><a href="https://github.com/carsonmcdonald">carsonmcdonald</a></td>
-	</tr>
-	<tr>
-		<td>Goro Kikuchi</td>
-		<td><a href="https://github.com/gorogit">gorogit</a></td>
-	</tr>
-	<tr>
-		<td>h2so5</td>
-		<td><a href="https://github.com/h2so5">h2so5</a></td>
-	</tr>
-	<tr>
-		<td>Hir0</td>
-		<td><a href="https://github.com/Hir0">Hir0</a></td>
-	</tr>
-	<tr>
-		<td>Terence Lee</td>
-		<td><a href="https://github.com/hone">hone</a></td>
-	</tr>
-	<tr>
-		<td>Kazuaki Tanaka</td>
-		<td><a href="https://github.com/kaz0505">kaz0505</a></td>
-	</tr>
-	<tr>
-		<td>MATSUMOTO, Ryosuke</td>
-		<td><a href="https://github.com/matsumotory">matsumotory</a></td>
-	</tr>
-	<tr>
-		<td>Ralph Desir</td>
-		<td><a href="https://github.com/Mav7">Mav7</a></td>
-	</tr>
-	<tr>
-		<td>Hiroshi Mimaki</td>
-		<td><a href="https://github.com/mimaki">mimaki</a></td>
-	</tr>
-	<tr>
-		<td>Jun Hiroe</td>
-		<td><a href="https://github.com/suzukaze">suzukaze</a></td>
-	</tr>
-	<tr>
-		<td>Hidetaka Takano</td>
-		<td><a href="https://github.com/TJ-Hidetaka-Takano">TJ-Hidetaka-Takano</a></td>
-	</tr>
-	<tr>
-		<td>Zachary Scott</td>
-		<td><a href="https://github.com/zzak">zzak</a></td>
-	</tr>
-	<tr>
-		<td>Tomoyuki Sahara</td>
-		<td><a href="https://github.com/tsahara">tsahara</a></td>
-	</tr>
+	{% endfor %}
 </table>
 
 <h2><a href="https://github.com/mruby/mruby/blob/master/AUTHORS">mruby developers</a></h2>
