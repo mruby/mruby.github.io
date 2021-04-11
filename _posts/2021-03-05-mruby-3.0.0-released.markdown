@@ -92,7 +92,7 @@ You can specify the mruby build configuration by building mruby with the `rake` 
 
 ## mruby VM and bytecode
 
-Due to improvements in the binary format, mruby binaries are no longer backward compatible. 
+Due to improvements in the binary format, mruby binaries are no longer backward compatible.
 To run the mruby binaries on mruby 3.0, recompile with the mruby 3.0 `mrbc`.
 
 - Upgrade mruby VM version `RITE_VM_VER` to `0300` (means mruby 3.0).
