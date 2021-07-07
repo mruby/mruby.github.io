@@ -28,7 +28,7 @@ mruby 1.4.1 is released. Download [mruby 1.4.1][mruby-1.4.1-dl] now.
 
 ## What's new in mruby 1.4.1
 
-### * Debbuger bug and lot of small bug fixes
+### * Debugger bug and lots of small bug fixes
 ### * New mrbgems (merge from https://github.com/iij)
 
 - mruby-io

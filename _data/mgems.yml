@@ -396,7 +396,7 @@
   repository: https://github.com/gromnitsky/mruby-dir-glob.git
   repooptions: 
 - name: mruby-discount
-  description: html generater from markdown using discount
+  description: HTML generator from Markdown using discount
   author: MATSUMOTO Ryosuke
   website: https://github.com/matsumotory/mruby-discount
   protocol: git
@@ -1096,7 +1096,7 @@
   repository: https://github.com/happysiro/mruby-maxminddb
   repooptions: 
 - name: mruby-md5
-  description: MD5 Hash Alghorithm
+  description: MD5 Hash Algorithm
   author: mattn
   website: https://github.com/mattn/mruby-md5
   protocol: git
@@ -1674,7 +1674,7 @@
   repository: https://github.com/appplant/mruby-sftp-glob.git
   repooptions: 
 - name: mruby-sha1
-  description: SHA1 Hash Alghorithm
+  description: SHA1 Hash Algorithm
   author: mattn
   website: https://github.com/mattn/mruby-sha1
   protocol: git
