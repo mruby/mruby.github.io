@@ -285,6 +285,7 @@ DEPENDENCIES
   github-pages
   jekyll-avatar
   jekyll-feed
+  jekyll-seo-tag
   jekyll-sitemap
   mgem
   yard-coderay
