@@ -14,6 +14,7 @@ include: ['_index.html']
 plugins:
   - jekyll-avatar
   - jekyll-feed
+  - jekyll-minifier
   - jekyll-sitemap
 exclude:
   - CODEOWNERS
