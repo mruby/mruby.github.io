@@ -472,6 +472,13 @@
   protocol: git
   repository: https://github.com/matsumotory/mruby-eventfd.git
   repooptions: 
+- name: mruby-factory
+  description: Factory implementation for mruby
+  author: OKURA Masafumi
+  website: https://github.com/okuramasafumi/mruby-factory
+  protocol: git
+  repository: https://github.com/okuramasafumi/mruby-factory.git
+  repooptions: 
 - name: mruby-fast-remote-check
   description: FastRemoteCheck can perform port listening check at high speed using
     raw socket
