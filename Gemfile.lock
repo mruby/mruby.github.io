@@ -276,7 +276,7 @@ PLATFORMS
 DEPENDENCIES
   git
   github-pages
-  jekyll-avatar
+  jekyll-avatar (~> 0.7.0)
   jekyll-feed
   jekyll-sitemap
   mgem
@@ -284,4 +284,4 @@ DEPENDENCIES
   yard-mruby
 
 BUNDLED WITH
-   2.2.0
+   2.4.1
