@@ -15,6 +15,16 @@ plugins:
   - jekyll-avatar
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+include: ['_index.html']
+defaults:
+  - scope:
+      path: ''
+    values:
+      image:
+        path: '/assets/images/mruby_logo_red_icon.png'
+        height: 300
+        width: 300
 exclude:
   - CODEOWNERS
   - Gemfile
