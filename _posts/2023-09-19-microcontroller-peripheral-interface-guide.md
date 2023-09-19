@@ -15,4 +15,4 @@ Additionally, we would like to introduce libraries developed by enthusiastic con
 
 # mruby, mruby/c Common I/O API Guidelines
 
-https://github.com/mruby/microcontroller-peripheral-interface-guide
+[https://github.com/mruby/microcontroller-peripheral-interface-guide](https://github.com/mruby/microcontroller-peripheral-interface-guide)
