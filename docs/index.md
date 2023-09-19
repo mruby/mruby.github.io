@@ -25,4 +25,4 @@ and extending (`mrbgems`) mruby.
 ## Components
 
 - [API docs](api)
-- [mruby, mruby/c Common API Guidance and Community-developed Libraries](https://github.com/mruby/microcontroller-peripheral-interface-guide)
+- [mruby, mruby/c Common I/O API Guidance and Community-developed Libraries](https://github.com/mruby/microcontroller-peripheral-interface-guide)
