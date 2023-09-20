@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "mruby, mruby/c Common I/O API Guidance and Community-developed Libraries released"
+title:  "mruby, mruby/c Common I/O API Guideline and Community-developed Libraries released"
 date:   2023-09-19 00:00:00
 categories: releases
 ---
