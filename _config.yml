@@ -17,9 +17,12 @@ plugins:
   - jekyll-sitemap
 exclude:
   - CODEOWNERS
+  - .editorconfig
   - Gemfile
   - Gemfile.lock
-  - README.md
   - gen_mgemdata.rb
   - gen_mrbdoc.rb
+  - README.md
+  - server
+  - super-linter.report
   - vendor
