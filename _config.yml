@@ -16,7 +16,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 exclude:
-  - CODEOWNERS
   - Gemfile
   - Gemfile.lock
   - README.md
