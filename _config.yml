@@ -15,6 +15,7 @@ plugins:
   - jekyll-avatar
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-twitter-plugin
 exclude:
   - Gemfile
   - Gemfile.lock
