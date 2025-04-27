@@ -2,3 +2,4 @@ _site
 mruby
 /.bundle/
 /vendor/
+.tweet-cache
