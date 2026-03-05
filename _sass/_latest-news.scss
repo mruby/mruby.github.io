@@ -52,6 +52,11 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: background 0.15s ease;
+}
+
+.news-card:hover {
+  background: var(--color-bg-warm);
 }
 
 .news-card + .news-card {
@@ -81,13 +86,9 @@
   font-size: 13px;
   font-weight: 400;
   color: var(--color-red);
-  transition: opacity 0.15s ease;
   margin-top: 4px;
 }
 
-.news-card__read-more:hover {
-  opacity: 0.75;
-}
 
 @media (max-width: 768px) {
   .latest-news__heading {

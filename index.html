@@ -32,14 +32,14 @@ title: mruby - Lightweight Ruby
       <a href="https://github.com/mruby/mruby/releases" class="latest-news__all-link">All releases</a>
     </div>
     <div class="latest-news__divider"></div>
-    <ul class="news-cards" role="list">
+    <div class="news-cards">
       {% for post in site.posts limit:3 %}
-      <li class="news-card">
+      <a href="{{ post.url }}" class="news-card">
         <time class="news-card__date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %b %Y" | upcase }}</time>
         <h3 class="news-card__title">{{ post.title }}</h3>
-        <a href="{{ post.url }}" class="news-card__read-more">&#8212; Read more</a>
-      </li>
+        <span class="news-card__read-more">&#8212; Read more</span>
+      </a>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 </section>
