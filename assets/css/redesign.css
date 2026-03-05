@@ -1931,8 +1931,8 @@ ul {
 }
 
 .team-members__grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1px;
   background: var(--color-border);
   margin-bottom: 80px;
@@ -1942,11 +1942,9 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 256px;
   padding: 32px 24px;
   gap: 12px;
   background: var(--color-white);
-  flex-shrink: 0;
   transition: background 0.15s ease;
 }
 
@@ -2048,10 +2046,6 @@ ul {
   .team-header__heading {
     font-size: 40px;
   }
-
-  .team-member {
-    width: calc(25% - 1px);
-  }
 }
 
 /* ------------------------------------------------------------
@@ -2061,10 +2055,6 @@ ul {
   .team-header__heading {
     font-size: 32px;
   }
-
-  .team-member {
-    width: calc(50% - 1px);
-  }
 }
 
 /* ------------------------------------------------------------
@@ -2073,10 +2063,6 @@ ul {
 @media (max-width: 480px) {
   .team-header__heading {
     font-size: 28px;
-  }
-
-  .team-member {
-    width: 100%;
   }
 }
 
