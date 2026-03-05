@@ -1,19 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'github-pages', group: :jekyll_plugins
-
-group :jekyll_plugins do
-  gem 'jekyll-avatar', '~> 0.8.0'
-  gem 'jekyll-feed'
-  gem 'jekyll-sitemap'
-end
-
-group :scripts do
-  gem 'mgem'
-  gem 'git'
-
-  # API Docs
-  gem 'yard-mruby'
-  gem 'yard-coderay'
-end
+gem 'github-pages'
+gem 'jekyll-avatar', '~> 0.8.0'
+gem 'jekyll-feed'
+gem 'jekyll-sitemap'
