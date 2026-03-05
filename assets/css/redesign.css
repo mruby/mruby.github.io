@@ -1841,3 +1841,238 @@ ul {
   }
 
 }
+
+/* ------------------------------------------------------------
+   Team — Page Header
+   ------------------------------------------------------------ */
+.team-header {
+  background: var(--color-bg-warm);
+  border-bottom: 1px solid var(--color-border);
+  padding: 80px var(--container-padding) 64px;
+}
+
+.team-header__inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.team-header__heading {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.07;
+  color: var(--color-black);
+  margin-bottom: 20px;
+}
+
+.team-header__description {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--color-muted);
+  max-width: 520px;
+}
+
+.team-header__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-red);
+  flex-shrink: 0;
+  padding-bottom: 4px;
+  transition: opacity 0.15s ease;
+}
+
+.team-header__link:hover {
+  opacity: 0.75;
+}
+
+/* ------------------------------------------------------------
+   Team — Shared Section Pattern
+   ------------------------------------------------------------ */
+.team-section__inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.team-section__heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.team-section__bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--color-red);
+  flex-shrink: 0;
+}
+
+.team-section__title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-black);
+  line-height: 28px;
+}
+
+/* ------------------------------------------------------------
+   Team — Organization Members
+   ------------------------------------------------------------ */
+.team-members {
+  padding: 80px var(--container-padding) 0;
+}
+
+.team-members__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  background: var(--color-border);
+  margin-bottom: 80px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 256px;
+  padding: 32px 24px;
+  gap: 12px;
+  background: var(--color-white);
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.team-member:hover {
+  background: var(--color-bg-warm);
+}
+
+.team-member__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.team-member__avatar img {
+  width: 72px;
+  height: 72px;
+  display: block;
+}
+
+.team-member__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.team-member__name {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-black);
+  text-align: center;
+  line-height: 18px;
+}
+
+.team-member__handle {
+  font-size: 13px;
+  color: var(--color-red);
+  line-height: 16px;
+}
+
+/* ------------------------------------------------------------
+   Team — Developers
+   ------------------------------------------------------------ */
+.team-developers {
+  padding: 0 var(--container-padding) 80px;
+}
+
+.team-developers__subtitle {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-left: 4px;
+  line-height: 16px;
+}
+
+.team-developers__names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.team-developers__name {
+  font-size: 14px;
+  color: #3a3530;
+  line-height: 32px;
+}
+
+.team-developers__dot {
+  font-size: 14px;
+  color: var(--color-border);
+  line-height: 32px;
+}
+
+.team-developers__more {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-red);
+  transition: opacity 0.15s ease;
+}
+
+.team-developers__more:hover {
+  opacity: 0.75;
+}
+
+/* ------------------------------------------------------------
+   Team — Responsive ≤1024px
+   ------------------------------------------------------------ */
+@media (max-width: 1024px) {
+  .team-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .team-header__heading {
+    font-size: 40px;
+  }
+
+  .team-member {
+    width: calc(25% - 1px);
+  }
+}
+
+/* ------------------------------------------------------------
+   Team — Responsive ≤768px
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .team-header__heading {
+    font-size: 32px;
+  }
+
+  .team-member {
+    width: calc(50% - 1px);
+  }
+}
+
+/* ------------------------------------------------------------
+   Team — Responsive ≤480px
+   ------------------------------------------------------------ */
+@media (max-width: 480px) {
+  .team-member {
+    width: 100%;
+  }
+}
