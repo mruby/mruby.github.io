@@ -1,4 +1,4 @@
-name: Deploy
+name: Pages
 
 on:
   push:
@@ -25,10 +25,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
-          bundler-cache: false
-
-      - name: Install dependencies
-        run: bundle install --with scripts
+          bundler-cache: true
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -41,8 +38,6 @@ jobs:
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site/
 
   deploy:
     environment:
