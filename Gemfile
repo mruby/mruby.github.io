@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'github-pages'
-gem 'jekyll-avatar', '~> 0.8.0'
+gem 'jekyll'
+gem 'jekyll-avatar'
 gem 'jekyll-feed'
 gem 'jekyll-sitemap'
