@@ -1,3 +1,8 @@
+---
+---
+
+@import "page-header";
+
 /* ============================================================
    mruby.org — Redesign CSS
    Swiss Clean aesthetic: Space Grotesk + Inter, mruby red
@@ -197,66 +202,6 @@ ul {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ------------------------------------------------------------
-   Hero Section
-   ------------------------------------------------------------ */
-.hero {
-  background: var(--color-bg-warm);
-  padding: 88px var(--container-padding) 100px;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.hero__inner {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-}
-
-.hero__content {
-  max-width: 600px;
-}
-
-.hero__eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-red);
-  margin-bottom: 24px;
-}
-
-.hero__eyebrow-dot {
-  font-size: 10px;
-  line-height: 1;
-}
-
-.hero__headline {
-  font-family: var(--font-heading);
-  font-size: 64px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.0;
-  color: var(--color-black);
-  margin-bottom: 28px;
-}
-
-.hero__description {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--color-muted);
-  margin-bottom: 40px;
-  max-width: 460px;
-}
-
-.hero__actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
 
 .btn {
   display: inline-flex;
@@ -444,64 +389,6 @@ ul {
   color: var(--color-footer-muted-hover);
 }
 
-/* ------------------------------------------------------------
-   Page Header (inner pages)
-   ------------------------------------------------------------ */
-.page-header {
-  padding: 80px var(--container-padding) 64px;
-}
-
-.page-header__inner {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-}
-
-.page-header__eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-red);
-  margin-bottom: 20px;
-}
-
-.page-header__eyebrow-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-red);
-  flex-shrink: 0;
-}
-
-.page-header__heading {
-  font-family: var(--font-heading);
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
-  color: var(--color-black);
-  margin-bottom: 16px;
-}
-
-.page-header__description {
-  font-size: 17px;
-  line-height: 1.65;
-  color: var(--color-muted);
-  max-width: 560px;
-}
-
-.page-header__description a {
-  color: var(--color-red);
-  transition: opacity 0.15s ease;
-}
-
-.page-header__description a:hover {
-  opacity: 0.75;
-}
 
 /* ------------------------------------------------------------
    Downloads — Current Release
@@ -795,26 +682,12 @@ ul {
 
 
 /* ------------------------------------------------------------
-   Page Header — Warm variant (Documentation)
+   Documentation — API Version meta (aside)
    ------------------------------------------------------------ */
-.page-header--warm {
-  background: var(--color-bg-warm);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.page-header__inner--split {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.page-header__meta {
+.docs-version-aside {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-shrink: 0;
-  padding-bottom: 4px;
 }
 
 .page-header__meta-label {
@@ -1068,14 +941,6 @@ ul {
     --container-padding: 40px;
   }
 
-  .hero__headline {
-    font-size: 48px;
-  }
-
-  .page-header__heading {
-    font-size: 40px;
-  }
-
   .release-card {
     gap: 48px;
     padding: 40px 40px;
@@ -1130,23 +995,6 @@ ul {
     font-size: 15px;
   }
 
-  .hero {
-    padding: 56px var(--container-padding) 64px;
-  }
-
-  .hero__headline {
-    font-size: 36px;
-  }
-
-  .hero__actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero__actions .btn {
-    justify-content: center;
-  }
-
   .latest-news__heading {
     font-size: 28px;
   }
@@ -1164,10 +1012,6 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-  }
-
-  .page-header__heading {
-    font-size: 32px;
   }
 
   .release-card {
@@ -1194,16 +1038,6 @@ ul {
     width: 100px;
   }
 
-  .page-header__inner--split {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-
-  .page-header__meta {
-    padding-bottom: 0;
-  }
-
   .docs-grid__inner {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -1222,14 +1056,6 @@ ul {
     --container-padding: 16px;
   }
 
-  .hero__headline {
-    font-size: 28px;
-  }
-
-  .page-header__heading {
-    font-size: 28px;
-  }
-
   .release-card {
     padding: 24px 20px;
   }
@@ -1240,23 +1066,8 @@ ul {
 }
 
 /* ------------------------------------------------------------
-   Libraries — Page Header
+   Libraries — Count Aside (page-specific)
    ------------------------------------------------------------ */
-.libs-header {
-  background: var(--color-bg-warm);
-  border-bottom: 1px solid var(--color-border);
-  padding: 80px var(--container-padding) 56px;
-}
-
-.libs-header__inner {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-}
-
 .libs-header__count {
   display: flex;
   align-items: center;
@@ -1505,36 +1316,6 @@ ul {
   color: var(--color-text-body);
 }
 
-/* ------------------------------------------------------------
-   About — Page Header
-   ------------------------------------------------------------ */
-.about-header {
-  background: var(--color-bg-warm);
-  border-bottom: 1px solid var(--color-border);
-  padding: 80px var(--container-padding) 56px;
-}
-
-.about-header__inner {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-}
-
-.about-heading {
-  font-family: var(--font-heading);
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: var(--color-black);
-  margin-bottom: 28px;
-}
-
-.about-description {
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--color-text-body);
-  max-width: 680px;
-}
 
 /* ------------------------------------------------------------
    About — Key Features
@@ -1753,10 +1534,6 @@ ul {
    About — Responsive ≤1024px
    ------------------------------------------------------------ */
 @media (max-width: 1024px) {
-  .about-heading {
-    font-size: 44px;
-  }
-
   .about-feature {
     padding: 32px 28px;
   }
@@ -1778,10 +1555,6 @@ ul {
    About — Responsive ≤768px
    ------------------------------------------------------------ */
 @media (max-width: 768px) {
-  .about-heading {
-    font-size: 36px;
-  }
-
   .about-features__inner {
     flex-wrap: wrap;
   }
@@ -1807,10 +1580,6 @@ ul {
    About — Responsive ≤480px
    ------------------------------------------------------------ */
 @media (max-width: 480px) {
-  .about-heading {
-    font-size: 28px;
-  }
-
   .about-feature {
     flex: 1 1 100%;
   }
@@ -1820,16 +1589,6 @@ ul {
    Libraries — Responsive ≤768px
    ------------------------------------------------------------ */
 @media (max-width: 768px) {
-  .libs-header__inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-
-  .libs-header__count {
-    padding-bottom: 0;
-  }
-
   .libs-search {
     width: 100%;
   }
@@ -1843,40 +1602,8 @@ ul {
 }
 
 /* ------------------------------------------------------------
-   Team — Page Header
+   Team — GitHub link (page-specific aside element)
    ------------------------------------------------------------ */
-.team-header {
-  background: var(--color-bg-warm);
-  border-bottom: 1px solid var(--color-border);
-  padding: 80px var(--container-padding) 64px;
-}
-
-.team-header__inner {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.team-header__heading {
-  font-family: var(--font-heading);
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.07;
-  color: var(--color-black);
-  margin-bottom: 20px;
-}
-
-.team-header__description {
-  font-size: 17px;
-  line-height: 1.65;
-  color: var(--color-muted);
-  max-width: 520px;
-}
-
 .team-header__link {
   font-size: 14px;
   font-weight: 500;
@@ -2033,84 +1760,7 @@ ul {
   opacity: 0.75;
 }
 
-/* ------------------------------------------------------------
-   Team — Responsive ≤1024px
-   ------------------------------------------------------------ */
-@media (max-width: 1024px) {
-  .team-header__inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
 
-  .team-header__heading {
-    font-size: 40px;
-  }
-}
-
-/* ------------------------------------------------------------
-   Team — Responsive ≤768px
-   ------------------------------------------------------------ */
-@media (max-width: 768px) {
-  .team-header__heading {
-    font-size: 32px;
-  }
-}
-
-/* ------------------------------------------------------------
-   Team — Responsive ≤480px
-   ------------------------------------------------------------ */
-@media (max-width: 480px) {
-  .team-header__heading {
-    font-size: 28px;
-  }
-}
-
-/* ------------------------------------------------------------
-   Article — Header
-   ------------------------------------------------------------ */
-.article-header {
-  background: var(--color-bg-warm);
-  border-bottom: 1px solid var(--color-border);
-  padding: 64px var(--container-padding) 56px;
-}
-
-.article-header__inner {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-}
-
-.article-header__meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  line-height: 1;
-  margin-bottom: 24px;
-}
-
-.article-header__category {
-  font-weight: 500;
-  color: var(--color-muted);
-}
-
-.article-header__meta-sep {
-  color: var(--color-muted-secondary);
-}
-
-.article-header__date {
-  color: var(--color-muted);
-}
-
-.article-header__title {
-  font-family: var(--font-heading);
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  color: var(--color-black);
-  max-width: 800px;
-}
 
 /* ------------------------------------------------------------
    Article — Body Layout
@@ -2334,24 +1984,12 @@ ul {
   .article-body__inner {
     gap: 0;
   }
-
-  .article-header__title {
-    font-size: 44px;
-  }
 }
 
 /* ------------------------------------------------------------
    Article — Responsive ≤768px
    ------------------------------------------------------------ */
 @media (max-width: 768px) {
-  .article-header {
-    padding: 48px var(--container-padding) 40px;
-  }
-
-  .article-header__title {
-    font-size: 36px;
-  }
-
   .article-body {
     padding: 48px var(--container-padding);
   }
@@ -2366,10 +2004,6 @@ ul {
    Article — Responsive ≤480px
    ------------------------------------------------------------ */
 @media (max-width: 480px) {
-  .article-header__title {
-    font-size: 28px;
-  }
-
   .article-content h1 {
     font-size: 20px;
   }

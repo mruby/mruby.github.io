@@ -5,9 +5,9 @@ title: mruby - Documentation
 
 {% assign current = site.data.releases | where: "prerelease", false | first %}
 
-<section class="page-header page-header--warm">
-  <div class="page-header__inner page-header__inner--split">
-    <div>
+<section class="page-header page-header--split">
+  <div class="page-header__inner">
+    <div class="page-header__content">
       <div class="page-header__eyebrow">
         <span class="page-header__eyebrow-dot"></span>
         Documentation
@@ -15,7 +15,7 @@ title: mruby - Documentation
       <h1 class="page-header__heading">Learn mruby</h1>
       <p class="page-header__description">Guides, API reference, and articles to help you embed, extend, and build with mruby.</p>
     </div>
-    <div class="page-header__meta">
+    <div class="page-header__aside docs-version-aside">
       <span class="page-header__meta-label">API docs for mruby</span>
       <span class="page-header__meta-version">{{ current.version }}</span>
     </div>

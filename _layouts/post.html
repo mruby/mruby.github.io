@@ -6,8 +6,8 @@
   <body>
     {% include redesign_nav.html %}
     <main>
-      <header class="article-header">
-        <div class="article-header__inner">
+      <header class="page-header page-header--article">
+        <div class="page-header__inner">
           {% assign first_cat = page.categories | first %}
           {% if first_cat.size > 1 %}
             {% assign display_cat = first_cat | capitalize %}
@@ -15,13 +15,13 @@
             {% assign display_cat = page.categories | capitalize %}
           {% endif %}
           {% if display_cat or page.date %}
-          <div class="article-header__meta">
-            {% if display_cat %}<span class="article-header__category">{{ display_cat }}</span>{% endif %}
-            {% if display_cat and page.date %}<span class="article-header__meta-sep" aria-hidden="true">—</span>{% endif %}
-            {% if page.date %}<time class="article-header__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time>{% endif %}
+          <div class="page-header__meta">
+            {% if display_cat %}<span class="page-header__meta-category">{{ display_cat }}</span>{% endif %}
+            {% if display_cat and page.date %}<span class="page-header__meta-sep" aria-hidden="true">—</span>{% endif %}
+            {% if page.date %}<time class="page-header__meta-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time>{% endif %}
           </div>
           {% endif %}
-          <h1 class="article-header__title">{{ page.title }}</h1>
+          <h1 class="page-header__heading">{{ page.title }}</h1>
         </div>
       </header>
 

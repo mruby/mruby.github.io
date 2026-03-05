@@ -5,15 +5,15 @@ title: mruby - Lightweight Ruby
 
 {% assign current_release = site.data.releases | where: "prerelease", false | first %}
 
-<section class="hero">
-  <div class="hero__inner">
-    <div class="hero__content">
-      <span class="hero__eyebrow"><span class="hero__eyebrow-dot">●</span> OPEN SOURCE · LIGHTWEIGHT · EMBEDDABLE</span>
-      <h1 class="hero__headline">Lightweight Ruby for Everywhere</h1>
-      <p class="hero__description">
+<section class="page-header page-header--hero">
+  <div class="page-header__inner">
+    <div class="page-header__content">
+      <span class="page-header__eyebrow"><span class="page-header__eyebrow-dot"></span> OPEN SOURCE · LIGHTWEIGHT · EMBEDDABLE</span>
+      <h1 class="page-header__heading">Lightweight Ruby for Everywhere</h1>
+      <p class="page-header__description">
         mruby is the lightweight implementation of the Ruby language, complying with part of the ISO standard. Designed to be embedded within your application.
       </p>
-      <div class="hero__actions">
+      <div class="page-header__actions">
         <a href="https://github.com/mruby/mruby/archive/{{ current_release.version }}.zip" class="btn btn--primary">
           Download {{ current_release.version }}
         </a>
