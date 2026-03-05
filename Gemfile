@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'irb'
 gem 'jekyll'
 gem 'jekyll-avatar'
 gem 'jekyll-feed'
@@ -8,4 +9,3 @@ gem 'mgem'
 gem 'rake'
 gem 'yard-coderay'
 gem 'yard-mruby'
-gem 'irb'
