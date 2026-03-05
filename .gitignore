@@ -1,5 +1,6 @@
 _site
 mruby
+/docs/api/
 /.bundle/
 /vendor/
 .worktrees

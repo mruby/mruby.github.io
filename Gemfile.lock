@@ -258,6 +258,7 @@ GEM
       track_open_instances (~> 0.1)
     public_suffix (5.1.1)
     racc (1.8.1)
+    rake (13.3.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
@@ -304,6 +305,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-sitemap
   mgem
+  rake
   yard-coderay
   yard-mruby
 
