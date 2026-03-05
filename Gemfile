@@ -1,7 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rake'
 gem 'jekyll'
 gem 'jekyll-avatar'
 gem 'jekyll-feed'
 gem 'jekyll-sitemap'
+gem 'mgem'
+gem 'rake'
+gem 'yard-coderay'
+gem 'yard-mruby'
+gem 'irb'
