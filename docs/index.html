@@ -1,0 +1,87 @@
+---
+layout: redesign
+title: mruby - Documentation
+---
+
+{% assign current = site.data.releases | where: "prerelease", false | first %}
+
+<section class="page-header page-header--warm">
+  <div class="page-header__inner page-header__inner--split">
+    <div>
+      <div class="page-header__eyebrow">
+        <span class="page-header__eyebrow-dot"></span>
+        Documentation
+      </div>
+      <h1 class="page-header__heading">Learn mruby</h1>
+      <p class="page-header__description">Guides, API reference, and articles to help you embed, extend, and build with mruby.</p>
+    </div>
+    <div class="page-header__meta">
+      <span class="page-header__meta-label">API docs for mruby</span>
+      <span class="page-header__meta-version">{{ current.version }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="docs-grid">
+  <div class="docs-grid__inner">
+
+    <div class="docs-articles">
+      <div class="docs-source-note">
+        <p class="docs-source-note__text">Further documentation on compiling, configuring (<span class="docs-badge">mrbconf</span>), debugging (<span class="docs-badge">mrdb</span>), and extending (<span class="docs-badge">mrbgems</span>) is in the source repo.</p>
+        <a href="https://github.com/mruby/mruby/tree/master/doc" class="docs-source-note__link">
+          <span class="docs-source-note__dash"></span>
+          Browse mruby/doc/ on GitHub &rarr;
+        </a>
+      </div>
+
+      <div class="docs-section">
+        <div class="docs-section__header">
+          <div class="docs-section__bar"></div>
+          <h2 class="docs-section__heading">Articles</h2>
+        </div>
+        {% for article in site.pages %}
+          {% if article.categories contains 'articles' %}
+          <a href="{{ article.url }}" class="docs-article-row">
+            <div class="docs-article-row__info">
+              <span class="docs-article-row__title">{{ article.title }}</span>
+              {% if article.description %}<span class="docs-article-row__desc">{{ article.description }}</span>{% endif %}
+            </div>
+            <span class="docs-article-row__link">Read &rarr;</span>
+          </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="docs-components">
+      <div class="docs-section__header">
+        <div class="docs-section__bar"></div>
+        <h2 class="docs-section__heading">Components</h2>
+      </div>
+
+      <a href="/docs/api/" class="docs-component-card docs-component-card--warm">
+        <div class="docs-component-card__info">
+          <span class="docs-component-card__title">API docs</span>
+          <span class="docs-component-card__desc">Full Ruby class documentation generated from mruby source &mdash; Array, Hash, String, Enumerable, and more.</span>
+          <div class="docs-component-card__tags">
+            <span class="docs-component-tag">Array</span>
+            <span class="docs-component-tag">Hash</span>
+            <span class="docs-component-tag">String</span>
+            <span class="docs-component-tag">Kernel</span>
+            <span class="docs-component-tag docs-component-tag--muted">+more</span>
+          </div>
+        </div>
+        <span class="docs-component-card__link">Browse &rarr;</span>
+      </a>
+
+      <a href="https://github.com/mruby/microcontroller-peripheral-interface-guide" class="docs-component-card docs-component-card--bordered">
+        <div class="docs-component-card__info">
+          <span class="docs-component-card__title">mruby, mruby/c Common I/O API Guidelines</span>
+          <span class="docs-component-card__desc">Community-developed libraries and peripheral interface guidelines for microcontrollers.</span>
+        </div>
+        <span class="docs-component-card__link">GitHub &rarr;</span>
+      </a>
+    </div>
+
+  </div>
+</section>
