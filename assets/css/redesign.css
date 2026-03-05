@@ -1305,7 +1305,7 @@ ul {
   height: 40px;
   padding: 0 16px;
   gap: 12px;
-  background: #FAF9F8;
+  background: var(--color-bg-warm);
   border: 1.5px solid var(--color-border);
   flex-shrink: 0;
 }
@@ -1330,6 +1330,10 @@ ul {
   color: var(--color-muted-secondary);
 }
 
+.libs-search:focus-within {
+  border-color: var(--color-black);
+}
+
 .libs-toolbar__count {
   font-size: 13px;
   color: var(--color-muted);
@@ -1341,7 +1345,7 @@ ul {
    Libraries — Gem Grid
    ------------------------------------------------------------ */
 .libs-grid {
-  padding: 0 var(--container-padding) 0;
+  padding: 0 var(--container-padding);
   background: var(--color-bg-warm);
 }
 
@@ -1371,6 +1375,10 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.libs-card:hover {
+  background: var(--color-bg-warm);
 }
 
 .libs-card[hidden] {
@@ -1458,7 +1466,9 @@ ul {
   opacity: 0.75;
 }
 
-/* No results state */
+/* ------------------------------------------------------------
+   Libraries — No Results
+   ------------------------------------------------------------ */
 .libs-no-results {
   display: none;
   padding: 64px 32px;
