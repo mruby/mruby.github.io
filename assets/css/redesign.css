@@ -147,6 +147,15 @@ ul {
   background: var(--color-bg-warm);
 }
 
+.site-nav__links a[aria-current="page"] {
+  color: var(--color-black);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--color-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
 .site-nav__hamburger {
   display: none;
   flex-direction: column;
@@ -436,6 +445,356 @@ ul {
 }
 
 /* ------------------------------------------------------------
+   Page Header (inner pages)
+   ------------------------------------------------------------ */
+.page-header {
+  padding: 80px var(--container-padding) 64px;
+}
+
+.page-header__inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.page-header__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  margin-bottom: 20px;
+}
+
+.page-header__eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-red);
+  flex-shrink: 0;
+}
+
+.page-header__heading {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.page-header__description {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--color-muted);
+  max-width: 560px;
+}
+
+.page-header__description a {
+  color: var(--color-red);
+  transition: opacity 0.15s ease;
+}
+
+.page-header__description a:hover {
+  opacity: 0.75;
+}
+
+/* ------------------------------------------------------------
+   Downloads — Current Release
+   ------------------------------------------------------------ */
+.downloads-current {
+  padding: 0 var(--container-padding) 80px;
+}
+
+.downloads-current__inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.release-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 48px 56px;
+  gap: 80px;
+  background: var(--color-bg-warm);
+  border-left: 4px solid var(--color-red);
+}
+
+.release-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.release-card__label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  line-height: 16px;
+}
+
+.release-card__version {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--color-black);
+}
+
+.release-card__date {
+  font-size: 13px;
+  color: var(--color-muted);
+  line-height: 16px;
+}
+
+.release-card__downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.release-card__downloads-label {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.download-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+}
+
+.download-row + .download-row {
+  border-top: none;
+}
+
+.download-row__info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.download-row__name {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-black);
+  line-height: 18px;
+}
+
+.download-row__filename {
+  font-size: 12px;
+  color: var(--color-muted);
+  line-height: 16px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 20px;
+  background: var(--color-red);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.download-btn:hover {
+  background: var(--color-red-hover);
+  color: var(--color-white);
+}
+
+.download-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  background: var(--color-white);
+  border: 1px dashed var(--color-border);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.download-more__text {
+  color: var(--color-muted);
+}
+
+.download-more__link {
+  font-weight: 500;
+  color: var(--color-red);
+  transition: opacity 0.15s ease;
+}
+
+.download-more__link:hover {
+  opacity: 0.75;
+}
+
+/* ------------------------------------------------------------
+   Downloads — Upcoming Release
+   ------------------------------------------------------------ */
+.upcoming-releases {
+  padding: 0 var(--container-padding) 64px;
+}
+
+.upcoming-releases__inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.upcoming-releases__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.upcoming-releases__heading {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 34px;
+  color: var(--color-black);
+}
+
+.upcoming-releases__tag {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted-secondary);
+  border: 1px solid var(--color-border);
+  padding: 2px 8px;
+  line-height: 18px;
+}
+
+/* ------------------------------------------------------------
+   Downloads — Previous Releases
+   ------------------------------------------------------------ */
+.prev-releases {
+  padding: 0 var(--container-padding) 96px;
+}
+
+.prev-releases__inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.prev-releases__header {
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.prev-releases__heading {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 34px;
+  color: var(--color-black);
+}
+
+.releases-table__head {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.releases-table__col-version {
+  width: 140px;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  line-height: 14px;
+}
+
+.releases-table__col-date {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  line-height: 14px;
+}
+
+.release-row {
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-bg-warm);
+}
+
+.release-row:last-child {
+  border-bottom: none;
+}
+
+.release-row__version {
+  width: 140px;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-black);
+  line-height: 18px;
+}
+
+.release-row__version--muted {
+  color: var(--color-muted);
+}
+
+.release-row__date {
+  flex: 1;
+  font-size: 14px;
+  color: var(--color-muted);
+  line-height: 18px;
+}
+
+.release-row__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-red);
+  transition: opacity 0.15s ease;
+}
+
+.release-row__link:hover {
+  opacity: 0.75;
+}
+
+
+/* ------------------------------------------------------------
    Responsive — ≤1024px
    ------------------------------------------------------------ */
 @media (max-width: 1024px) {
@@ -445,6 +804,19 @@ ul {
 
   .hero__headline {
     font-size: 48px;
+  }
+
+  .page-header__heading {
+    font-size: 40px;
+  }
+
+  .release-card {
+    gap: 48px;
+    padding: 40px 40px;
+  }
+
+  .release-card__version {
+    font-size: 40px;
   }
 }
 
@@ -519,6 +891,34 @@ ul {
     align-items: flex-start;
     gap: 12px;
   }
+
+  .page-header__heading {
+    font-size: 32px;
+  }
+
+  .release-card {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 28px;
+  }
+
+  .release-card__version {
+    font-size: 36px;
+  }
+
+  .release-card__downloads-label {
+    margin-bottom: 0;
+  }
+
+  .download-row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .releases-table__col-version,
+  .release-row__version {
+    width: 100px;
+  }
 }
 
 /* ------------------------------------------------------------
@@ -531,5 +931,17 @@ ul {
 
   .hero__headline {
     font-size: 28px;
+  }
+
+  .page-header__heading {
+    font-size: 28px;
+  }
+
+  .release-card {
+    padding: 24px 20px;
+  }
+
+  .release-card__version {
+    font-size: 32px;
   }
 }

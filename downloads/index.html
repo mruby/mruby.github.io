@@ -1,13 +1,105 @@
 ---
-layout: default
-title: mruby - downloads
+layout: redesign
+title: mruby - Downloads
 ---
 
-<div id="home">
-  <div>
-    <h2>Downloads</h2>
-    <p>
-      <b>Current stable</b>: <a href="https://github.com/mruby/mruby/archive/3.4.0.zip">mruby 3.4.0</a>
-    </p>
+{% assign current = site.data.releases | where: "prerelease", false | first %}
+{% assign all_stable = site.data.releases | where: "prerelease", false %}
+
+{% comment %} Collect any prereleases that are newer than the current stable {% endcomment %}
+{% assign upcoming = "" | split: "" %}
+{% assign collecting = true %}
+{% for release in site.data.releases %}
+  {% if collecting %}
+    {% if release.version == current.version %}
+      {% assign collecting = false %}
+    {% elsif release.prerelease %}
+      {% assign upcoming = upcoming | push: release %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<section class="page-header">
+  <div class="page-header__inner">
+    <div class="page-header__eyebrow">
+      <span class="page-header__eyebrow-dot"></span>
+      Downloads
+    </div>
+    <h1 class="page-header__heading">Get mruby</h1>
+    <p class="page-header__description">Download the latest stable release or browse previous versions. mruby is open source under the <a href="https://github.com/mruby/mruby/blob/master/LICENSE">MIT license</a>.</p>
   </div>
-</div>
+</section>
+
+<section class="downloads-current">
+  <div class="downloads-current__inner">
+    <div class="release-card">
+      <div class="release-card__info">
+        <span class="release-card__label">Current Stable</span>
+        <span class="release-card__version">{{ current.version }}</span>
+        <span class="release-card__date">Released {{ current.date | date: "%-d %b %Y" }}</span>
+      </div>
+      <div class="release-card__downloads">
+        <div class="release-card__downloads-label">Download</div>
+        <div class="download-row">
+          <div class="download-row__info">
+            <span class="download-row__name">Source .zip</span>
+            <span class="download-row__filename">mruby-{{ current.version }}.zip &middot; via GitHub</span>
+          </div>
+          <a href="https://github.com/mruby/mruby/archive/{{ current.version }}.zip" class="download-btn">Download</a>
+        </div>
+        <div class="download-row">
+          <div class="download-row__info">
+            <span class="download-row__name">Source .tar.gz</span>
+            <span class="download-row__filename">mruby-{{ current.version }}.tar.gz &middot; via GitHub</span>
+          </div>
+          <a href="https://github.com/mruby/mruby/archive/{{ current.version }}.tar.gz" class="download-btn">Download</a>
+        </div>
+        <div class="download-more">
+          <span class="download-more__text">More assets and checksums available on</span>
+          <a href="https://github.com/mruby/mruby/releases/tag/{{ current.version }}" class="download-more__link">GitHub Releases &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if upcoming.size > 0 %}
+<section class="upcoming-releases">
+  <div class="upcoming-releases__inner">
+    <div class="upcoming-releases__header">
+      <h2 class="upcoming-releases__heading">Upcoming Release</h2>
+      <span class="upcoming-releases__tag">Pre-release</span>
+    </div>
+    <div class="releases-table__head">
+      <span class="releases-table__col-version">Version</span>
+      <span class="releases-table__col-date">Date</span>
+    </div>
+    {% for release in upcoming %}
+    <div class="release-row">
+      <span class="release-row__version">{{ release.version }}</span>
+      <span class="release-row__date">{{ release.date | date: "%-d %b %Y" }}</span>
+      <a href="https://github.com/mruby/mruby/releases/tag/{{ release.version }}" class="release-row__link">Changelog &#8594;</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="prev-releases">
+  <div class="prev-releases__inner">
+    <div class="prev-releases__header">
+      <h2 class="prev-releases__heading">Previous Releases</h2>
+    </div>
+    <div class="releases-table__head">
+      <span class="releases-table__col-version">Version</span>
+      <span class="releases-table__col-date">Date</span>
+    </div>
+    {% for release in all_stable %}{% unless forloop.first %}
+    <div class="release-row">
+      <span class="release-row__version">{{ release.version }}</span>
+      <span class="release-row__date">{{ release.date | date: "%-d %b %Y" }}</span>
+      <a href="https://github.com/mruby/mruby/releases/tag/{{ release.version }}" class="release-row__link">Changelog &#8594;</a>
+    </div>
+    {% endunless %}{% endfor %}
+  </div>
+</section>

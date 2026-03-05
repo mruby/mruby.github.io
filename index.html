@@ -3,6 +3,8 @@ layout: redesign
 title: mruby - Lightweight Ruby
 ---
 
+{% assign current_release = site.data.releases | where: "prerelease", false | first %}
+
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__content">
@@ -12,8 +14,8 @@ title: mruby - Lightweight Ruby
         mruby is the lightweight implementation of the Ruby language, complying with part of the ISO standard. Designed to be embedded within your application.
       </p>
       <div class="hero__actions">
-        <a href="https://github.com/mruby/mruby/archive/{{ site.data.release.version }}.zip" class="btn btn--primary">
-          Download {{ site.data.release.version }}
+        <a href="https://github.com/mruby/mruby/archive/{{ current_release.version }}.zip" class="btn btn--primary">
+          Download {{ current_release.version }}
         </a>
         <a href="https://github.com/mruby/mruby" class="btn btn--outline">
           View on GitHub

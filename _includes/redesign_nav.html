@@ -12,11 +12,11 @@
     </button>
 
     <ul class="site-nav__links" id="site-nav-links" role="list">
-      <li><a href="/downloads/">Downloads</a></li>
-      <li><a href="/docs/">Documentation</a></li>
-      <li><a href="/libraries/">Libraries</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/team.html">Team</a></li>
+      <li><a href="/downloads/"{% if page.url contains '/downloads/' %} aria-current="page"{% endif %}>Downloads</a></li>
+      <li><a href="/docs/"{% if page.url contains '/docs/' %} aria-current="page"{% endif %}>Documentation</a></li>
+      <li><a href="/libraries/"{% if page.url contains '/libraries/' %} aria-current="page"{% endif %}>Libraries</a></li>
+      <li><a href="/about.html"{% if page.url == '/about.html' %} aria-current="page"{% endif %}>About</a></li>
+      <li><a href="/team.html"{% if page.url == '/team.html' %} aria-current="page"{% endif %}>Team</a></li>
     </ul>
   </div>
 </nav>
