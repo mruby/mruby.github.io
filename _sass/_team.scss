@@ -1,0 +1,146 @@
+.team-header__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-red);
+  flex-shrink: 0;
+  padding-bottom: 4px;
+  transition: opacity 0.15s ease;
+}
+
+.team-header__link:hover {
+  opacity: 0.75;
+}
+
+.team-section__inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.team-section__heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.team-section__bar {
+  width: 20px;
+  height: 2px;
+  background: var(--color-red);
+  flex-shrink: 0;
+}
+
+.team-section__title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-black);
+  line-height: 28px;
+}
+
+.team-members {
+  padding: 80px var(--container-padding) 0;
+}
+
+.team-members__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--color-border);
+  margin-bottom: 80px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+  gap: 12px;
+  background: var(--color-white);
+  transition: background 0.15s ease;
+}
+
+.team-member:hover {
+  background: var(--color-bg-warm);
+}
+
+.team-member__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.team-member__avatar img {
+  width: 72px;
+  height: 72px;
+  display: block;
+}
+
+.team-member__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.team-member__name {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-black);
+  text-align: center;
+  line-height: 18px;
+}
+
+.team-member__handle {
+  font-size: 13px;
+  color: var(--color-red);
+  line-height: 16px;
+}
+
+.team-developers {
+  padding: 0 var(--container-padding) 80px;
+}
+
+.team-developers__subtitle {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-left: 4px;
+  line-height: 16px;
+}
+
+.team-developers__names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.team-developers__name {
+  font-size: 14px;
+  color: #3a3530;
+  line-height: 32px;
+}
+
+.team-developers__dot {
+  font-size: 14px;
+  color: var(--color-border);
+  line-height: 32px;
+}
+
+.team-developers__more {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-red);
+  transition: opacity 0.15s ease;
+}
+
+.team-developers__more:hover {
+  opacity: 0.75;
+}

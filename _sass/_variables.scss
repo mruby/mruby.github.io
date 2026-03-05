@@ -1,0 +1,42 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #0d0d0d;
+  --color-red: #ce2812;
+  --color-red-hover: #b52310;
+  --color-bg-warm: #f5f3f0;
+  --color-bg-dark: #111110;
+  --color-border: #e0dbd5;
+  --color-border-dark: #222222;
+  --color-muted: #6b6560;
+  --color-muted-secondary: #9d9894;
+  --color-text-body: #3d3a37;
+  --color-hover-overlay: rgba(0, 0, 0, 0.02);
+  --color-nav-shadow: rgba(0, 0, 0, 0.08);
+  --color-footer-muted: #5a5550;
+  --color-footer-muted-hover: #8a8580;
+
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --nav-height: 56px;
+  --container-padding: 80px;
+  --container-max-width: 1200px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 16px;
+  }
+}
