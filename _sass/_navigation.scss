@@ -1,3 +1,20 @@
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 1000;
+  padding: 8px 16px;
+  background: var(--color-red);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .site-nav {
   position: sticky;
   top: 0;
@@ -64,6 +81,12 @@
   background: var(--color-bg-warm);
 }
 
+.site-nav__links a:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+  color: var(--color-black);
+}
+
 .site-nav__links a[aria-current="page"] {
   color: var(--color-black);
   font-weight: 600;
@@ -91,6 +114,16 @@
 
 .site-nav__hamburger:hover {
   background: var(--color-bg-warm);
+}
+
+.site-nav__hamburger:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+.site-nav__brand:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
 }
 
 .site-nav__hamburger span {

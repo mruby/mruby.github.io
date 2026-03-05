@@ -121,6 +121,11 @@
   color: var(--color-white);
 }
 
+.download-btn:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
 .download-more {
   display: flex;
   align-items: center;
@@ -277,6 +282,11 @@
 
 .release-row__link:hover {
   opacity: 0.75;
+}
+
+.release-row__link:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
 }
 
 @media (max-width: 1024px) {

@@ -132,11 +132,24 @@
 
 .article-content a {
   color: var(--color-red);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
   transition: opacity 0.15s ease;
 }
 
 .article-content a:hover {
   opacity: 0.75;
+}
+
+.article-content a:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+.article-toc__link:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
 }
 
 .article-content ul,

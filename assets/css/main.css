@@ -83,7 +83,7 @@ a {
 }
 .navbar-mruby .navbar-link:hover {
   color: #f00;
-  background-color: 000;
+  background-color: #000;
 }
 
 @media (max-width: 950px) {

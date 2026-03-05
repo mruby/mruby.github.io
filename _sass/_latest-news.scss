@@ -35,6 +35,11 @@
   opacity: 0.75;
 }
 
+.latest-news__all-link:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
 .latest-news__divider {
   height: 1px;
   background: var(--color-border);
@@ -56,6 +61,12 @@
 }
 
 .news-card:hover {
+  background: var(--color-bg-warm);
+}
+
+.news-card:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: -2px;
   background: var(--color-bg-warm);
 }
 

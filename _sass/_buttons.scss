@@ -38,3 +38,8 @@
   background: var(--color-hover-overlay);
   color: var(--color-black);
 }
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}

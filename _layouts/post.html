@@ -5,7 +5,7 @@
   </head>
   <body>
     {% include redesign_nav.html %}
-    <main>
+    <main id="main-content">
       <header class="page-header page-header--article">
         <div class="page-header__inner">
           {% assign first_cat = page.categories | first %}
@@ -53,6 +53,11 @@
         }
 
         // TOC generation
+        // Add role="list" to article lists (VoiceOver Safari removes list semantics with list-style:none)
+        document.querySelectorAll('.article-content ul, .article-content ol').forEach(function (el) {
+          el.setAttribute('role', 'list');
+        });
+
         var content = document.querySelector('.article-content');
         var tocNav = document.getElementById('article-toc-nav');
         var tocAside = document.getElementById('article-toc');
@@ -66,6 +71,7 @@
 
         var list = document.createElement('ul');
         list.className = 'article-toc__list';
+        list.setAttribute('role', 'list');
         headings.forEach(function (h) {
           if (!h.id) return;
           var li = document.createElement('li');

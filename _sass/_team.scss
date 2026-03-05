@@ -11,6 +11,11 @@
   opacity: 0.75;
 }
 
+.team-header__link:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
 .team-section__inner {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -64,6 +69,12 @@
 }
 
 .team-member:hover {
+  background: var(--color-bg-warm);
+}
+
+.team-member:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: -2px;
   background: var(--color-bg-warm);
 }
 
@@ -143,4 +154,9 @@
 
 .team-developers__more:hover {
   opacity: 0.75;
+}
+
+.team-developers__more:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
 }
