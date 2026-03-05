@@ -10,11 +10,18 @@
   background: var(--color-bg-warm);
   border-bottom: 1px solid var(--color-border);
   padding: 80px var(--container-padding) 56px;
+  overflow: hidden;
 
   /* --plain: no background, no border (downloads) */
   &--plain {
     background: transparent;
     border-bottom: none;
+  }
+
+  &--plain &__inner::after,
+  &--article &__inner::after,
+  &--split &__inner::after {
+    display: none;
   }
 
   /* --article: tighter top padding, used in post layout */
@@ -38,6 +45,20 @@
 .page-header__inner {
   max-width: var(--container-max-width);
   margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+    height: 340px;
+    background: url('/assets/images/mruby_logo_red_icon.png') no-repeat center / contain;
+    opacity: 0.07;
+    pointer-events: none;
+  }
 }
 
 /* Left column in split layouts (implicit — no special style needed) */
@@ -176,6 +197,10 @@
 
   .page-header__aside {
     padding-bottom: 0;
+  }
+
+  .page-header__inner::after {
+    display: none;
   }
 }
 
