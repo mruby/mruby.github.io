@@ -65,14 +65,17 @@
   text-transform: uppercase;
   color: var(--color-red);
   margin-bottom: 20px;
-}
 
-.page-header__eyebrow-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-red);
-  flex-shrink: 0;
+  &::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-red);
+    flex-shrink: 0;
+    transform: translateY(-1px);
+  }
 }
 
 /* ------------------------------------------------------------
