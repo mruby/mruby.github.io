@@ -55,16 +55,17 @@ title: mruby - Libraries
       {% for mgem in gems %}
         {% assign mod = row_index | modulo: row_size %}
         {% if mod == 0 %}<div class="libs-row">{% endif %}
+        {% if mgem.author.first %}{% assign mgem_author = mgem.author | join: ", " %}{% else %}{% assign mgem_author = mgem.author %}{% endif %}
         <a
           href="{{ mgem.website }}"
           class="libs-card"
-          data-name="{{ mgem.name | downcase }}"
-          data-author="{{ mgem.author | downcase }}"
-          data-description="{{ mgem.description | downcase }}"
+          data-name="{{ mgem.name | downcase | xml_escape }}"
+          data-author="{{ mgem_author | downcase | xml_escape }}"
+          data-description="{{ mgem.description | downcase | xml_escape }}"
         >
           <div class="libs-card__header">
             <span class="libs-card__name">{{ mgem.name }}</span>
-            <span class="libs-card__author">{{ mgem.author }}</span>
+            <span class="libs-card__author">{{ mgem_author }}</span>
           </div>
           <p class="libs-card__description">{{ mgem.description }}</p>
         </a>
@@ -79,12 +80,12 @@ title: mruby - Libraries
   </div>
 </section>
 
-<div class="libs-footer">
+<section class="libs-footer">
   <div class="libs-footer__inner">
-    <span class="libs-footer__text" id="libs-footer-count">Showing {{ total }} libraries —</span>
+    <span class="libs-footer__text" id="libs-footer-count">Showing {{ total }} libraries &#8212;</span>
     <a href="https://github.com/mruby/mgem-list" class="libs-footer__link">view all on GitHub &#8594;</a>
   </div>
-</div>
+</section>
 
 <script>
 (function () {
@@ -95,6 +96,8 @@ title: mruby - Libraries
   var cards = Array.from(document.querySelectorAll('.libs-card'));
   var total = cards.length;
   var timer;
+
+  if (!input || !countLabel || !footerCount || !noResults) return;
 
   function update(query) {
     var q = query.trim().toLowerCase();
@@ -110,6 +113,17 @@ title: mruby - Libraries
         visible++;
       } else {
         card.setAttribute('hidden', '');
+      }
+    });
+
+    document.querySelectorAll('.libs-row').forEach(function (row) {
+      var hasVisible = Array.from(row.querySelectorAll('.libs-card')).some(function (c) {
+        return !c.hasAttribute('hidden');
+      });
+      if (hasVisible) {
+        row.removeAttribute('hidden');
+      } else {
+        row.setAttribute('hidden', '');
       }
     });
 
