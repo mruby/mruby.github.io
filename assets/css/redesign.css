@@ -1356,15 +1356,8 @@ ul {
 }
 
 .libs-grid__rows {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  background: var(--color-border);
-}
-
-.libs-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1px;
   background: var(--color-border);
 }
@@ -1522,16 +1515,4 @@ ul {
     gap: 12px;
   }
 
-  .libs-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ------------------------------------------------------------
-   Libraries — Responsive ≤480px
-   ------------------------------------------------------------ */
-@media (max-width: 480px) {
-  .libs-row {
-    grid-template-columns: 1fr;
-  }
 }

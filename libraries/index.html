@@ -49,12 +49,7 @@ title: mruby - Libraries
 <section class="libs-grid">
   <div class="libs-grid__inner">
     <div class="libs-grid__rows" id="libs-grid">
-      {% assign gems = site.data.mgems %}
-      {% assign row_size = 3 %}
-      {% assign row_index = 0 %}
-      {% for mgem in gems %}
-        {% assign mod = row_index | modulo: row_size %}
-        {% if mod == 0 %}<div class="libs-row">{% endif %}
+      {% for mgem in site.data.mgems %}
         {% if mgem.author.first %}{% assign mgem_author = mgem.author | join: ", " %}{% else %}{% assign mgem_author = mgem.author %}{% endif %}
         <a
           href="{{ mgem.website }}"
@@ -69,9 +64,6 @@ title: mruby - Libraries
           </div>
           <p class="libs-card__description">{{ mgem.description | xml_escape }}</p>
         </a>
-        {% assign row_index = row_index | plus: 1 %}
-        {% assign mod_end = row_index | modulo: row_size %}
-        {% if mod_end == 0 or forloop.last %}</div>{% endif %}
       {% endfor %}
     </div>
     <div class="libs-no-results" id="libs-no-results" aria-live="polite">
@@ -113,17 +105,6 @@ title: mruby - Libraries
         visible++;
       } else {
         card.setAttribute('hidden', '');
-      }
-    });
-
-    document.querySelectorAll('.libs-row').forEach(function (row) {
-      var hasVisible = Array.from(row.querySelectorAll('.libs-card')).some(function (c) {
-        return !c.hasAttribute('hidden');
-      });
-      if (hasVisible) {
-        row.removeAttribute('hidden');
-      } else {
-        row.setAttribute('hidden', '');
       }
     });
 
