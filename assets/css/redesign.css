@@ -1381,6 +1381,14 @@ ul {
   background: var(--color-bg-warm);
 }
 
+.libs-card:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: -2px;
+  background: var(--color-bg-warm);
+  z-index: 1;
+  position: relative;
+}
+
 .libs-card[hidden] {
   display: none;
 }
@@ -1464,6 +1472,11 @@ ul {
 
 .libs-footer__link:hover {
   opacity: 0.75;
+}
+
+.libs-footer__link:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
 }
 
 /* ------------------------------------------------------------

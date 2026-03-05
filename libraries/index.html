@@ -64,10 +64,10 @@ title: mruby - Libraries
           data-description="{{ mgem.description | downcase | xml_escape }}"
         >
           <div class="libs-card__header">
-            <span class="libs-card__name">{{ mgem.name }}</span>
-            <span class="libs-card__author">{{ mgem_author }}</span>
+            <span class="libs-card__name">{{ mgem.name | xml_escape }}</span>
+            <span class="libs-card__author">{{ mgem_author | xml_escape }}</span>
           </div>
-          <p class="libs-card__description">{{ mgem.description }}</p>
+          <p class="libs-card__description">{{ mgem.description | xml_escape }}</p>
         </a>
         {% assign row_index = row_index | plus: 1 %}
         {% assign mod_end = row_index | modulo: row_size %}
