@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+<!-- Preconnect for Google Fonts performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Space Grotesk (headings/buttons) + Inter (body) — only weights in use -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/assets/css/redesign.css">
+
+<!-- Feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="/rss.xml">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }} Atom Feed" href="/feed.xml">
+
+<!-- Favicons & theme -->
+{% include icons.html %}

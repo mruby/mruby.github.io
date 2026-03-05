@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include redesign_head.html %}
+  </head>
+  <body>
+    {% include redesign_nav.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include redesign_footer.html %}
+    <script>
+      (function () {
+        var btn = document.querySelector('.site-nav__hamburger');
+        var links = document.getElementById('site-nav-links');
+        if (!btn || !links) return;
+        btn.addEventListener('click', function () {
+          var expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          links.classList.toggle('is-open', !expanded);
+        });
+      })();
+    </script>
+  </body>
+</html>
