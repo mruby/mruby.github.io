@@ -77,6 +77,30 @@ namespace :gen do
     puts "Copied mruby API docs to #{dest}"
   end
 
+  desc 'Regenerate contributor list from mruby AUTHORS file (_data/contributors.yml)'
+  task :contributors do
+    require 'yaml'
+
+    mruby_dir = File.join(__dir__, 'mruby')
+    raise "mruby/ not found — run gen:mrbdoc first" unless Dir.exist?(mruby_dir)
+
+    threshold = (ENV['CONTRIBUTOR_THRESHOLD'] || '10').to_i
+
+    # AUTHORS format: "   COUNT Name (@login)[*+]"
+    contributors = File.readlines(File.join(mruby_dir, 'AUTHORS'), chomp: true)
+      .filter_map do |line|
+        m = line.match(/^\s*(\d+)\s+(.+?)\s+\(@([\w-]+)\)[*+]?\s*$/)
+        next unless m
+        count = m[1].to_i
+        next if count < threshold
+        { 'name' => m[2], 'login' => m[3], 'count' => count }
+      end
+
+    dest = File.join(__dir__, '_data', 'contributors.yml')
+    File.write(dest, contributors.to_yaml)
+    puts "Written #{contributors.size} contributors (threshold: #{threshold} commits) to #{dest}"
+  end
+
   desc 'Regenerate release data from GitHub API (_data/releases.yml)'
   task :releasedata do
     require 'json'
@@ -124,7 +148,7 @@ namespace :gen do
 end
 
 desc 'Build the Jekyll site'
-task build: %w[gen:mgemdata gen:mrbdoc gen:releasedata] do
+task build: %w[gen:mgemdata gen:mrbdoc gen:contributors gen:releasedata] do
   sh 'bundle exec jekyll build'
 end
 

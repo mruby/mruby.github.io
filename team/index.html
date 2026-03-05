@@ -50,85 +50,11 @@ title: mruby — Team
       <span class="team-developers__subtitle">— from the AUTHORS file</span>
     </div>
     <div class="team-developers__names">
-      <span class="team-developers__name">Yukihiro Matsumoto</span>
+      {%- for contributor in site.data.contributors -%}
+      <a href="https://github.com/{{ contributor.login }}" class="team-developers__name">{{ contributor.name }}</a>
       <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">FUKUOKA CSK CORPORATION</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Kyushu Institute of Technology</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Network Applied Communication Laboratory, Inc.</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Daniel Bovensiepen</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Jon Maken</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Bjorn De Meyer</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Yuichiro MASUI</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Masamitsu MURASE</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Masaki Muranaka</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Internet Initiative Japan Inc.</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Tadashi FUKUZAWA</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">MATSUMOTO Ryosuke</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Koji Yoshioka</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Jun Hiroe</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Narihiro Nakamura</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Yuichi Nishiwaki</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Tatsuhiko Kubo</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Takeshi Watanabe</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">specified non-profit corporation mruby Forum</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Kazuaki Tanaka</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Hiromasa Ishii</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Hiroshi Mimaki</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Satoshi Odawara</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Mitsubishi Electric Micro-Computer Application Software Co.,Ltd.</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Ralph Desir</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Hiroyuki Matsuzaki</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Yuhei Okazaki</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Manycolors, Inc.</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Shota Nakano</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Yuichi Osawa</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Terence Lee</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Zachary Scott</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Tomasz Dąbrowski</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Christopher Aue</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">Masahiro Wakame</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">YAMAMOTO Masaya</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">KOBAYASHI Shuji</span>
-      <span class="team-developers__dot">·</span>
-      <span class="team-developers__name">John Bampton</span>
-      <span class="team-developers__dot">·</span>
-      <a href="https://github.com/mruby/mruby/graphs/contributors" class="team-developers__more">+ 100 more on GitHub →</a>
+      {%- endfor -%}
+      <a href="https://github.com/mruby/mruby/graphs/contributors" class="team-developers__more">300+ contributors on GitHub →</a>
     </div>
   </div>
 </section>
