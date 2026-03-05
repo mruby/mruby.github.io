@@ -1908,7 +1908,6 @@ ul {
 }
 
 .team-section__bar {
-  display: block;
   width: 20px;
   height: 2px;
   background: var(--color-red);
@@ -2072,6 +2071,10 @@ ul {
    Team — Responsive ≤480px
    ------------------------------------------------------------ */
 @media (max-width: 480px) {
+  .team-header__heading {
+    font-size: 28px;
+  }
+
   .team-member {
     width: 100%;
   }
