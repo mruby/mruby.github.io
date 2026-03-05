@@ -4,6 +4,7 @@ namespace :gen do
     require 'mgem'
     require 'yaml'
 
+    # mgem still uses old exists? method
     class File
       class << self
         alias_method :exists?, :exist? unless method_defined?(:exists?)
@@ -28,45 +29,52 @@ namespace :gen do
 
     mgem_info.sort_by! { |g| g['name'].downcase }
 
-    File.open('_data/mgems.yml', 'w') { |f| f.write(mgem_info.to_yaml) }
-    puts 'Written _data/mgems.yml'
+    dest = File.join(__dir__, '_data', 'mgems.yml')
+
+    File.write(dest, mgem_info.to_yaml)
+    puts "Written #{dest}"
   end
 
   desc 'Regenerate API documentation from mruby source (clones latest release into mruby/)'
   task :mrbdoc do
     require 'json'
+    require 'shellwords'
 
     # Resolve latest stable release tag via gh CLI (mruby uses tags, not GitHub Releases)
-    tags = JSON.parse(`gh api 'repos/mruby/mruby/tags?per_page=100'`)
-    tag  = tags.map { |t| t['name'] }.find { |n| n.match?(/^\d+\.\d+\.\d+$/) }
+    tags = []
+    page = 1
+    loop do
+      batch = JSON.parse(`gh api "repos/mruby/mruby/tags?per_page=100&page=#{page}"`)
+      break if batch.empty?
+      tags.concat(batch)
+      break if batch.size < 100
+      page += 1
+    end
+    tag = tags.map { |t| t['name'] }.find { |n| n.match?(/^\d+\.\d+\.\d+$/) }
     raise "Could not determine latest stable mruby release tag" unless tag
     puts "Latest mruby release: #{tag}"
 
     # Clone mruby at the release tag (or skip if already at the right version)
     mruby_dir = File.join(__dir__, 'mruby')
-    if Dir.exist?(mruby_dir)
-      current_tag = `git -C #{mruby_dir} describe --exact-match HEAD 2>/dev/null`.strip
-      if current_tag == tag
-        puts "mruby #{tag} already cloned, skipping clone"
-      else
-        puts "mruby dir exists at #{current_tag.empty? ? 'unknown version' : current_tag}, re-cloning at #{tag}"
-        FileUtils.rm_rf(mruby_dir)
-        sh "git clone --depth 1 --branch #{tag} https://github.com/mruby/mruby.git #{mruby_dir}"
-      end
+    current_tag = Dir.exist?(mruby_dir) ? `git -C #{Shellwords.escape(mruby_dir)} describe --exact-match HEAD 2>/dev/null`.strip : nil
+    if current_tag == tag
+      puts "mruby #{tag} already cloned, skipping clone"
     else
-      sh "git clone --depth 1 --branch #{tag} https://github.com/mruby/mruby.git #{mruby_dir}"
+      puts current_tag ? "mruby dir exists at #{current_tag}, re-cloning at #{tag}" : "Cloning mruby #{tag}"
+      FileUtils.rm_rf(mruby_dir)
+      sh "git clone --depth 1 --branch #{Shellwords.escape(tag)} https://github.com/mruby/mruby.git #{Shellwords.escape(mruby_dir)}"
     end
 
     # Run mrbdoc (from yard-mruby) in the mruby directory — equivalent to doc:api
     Dir.chdir(mruby_dir) do
-      sh "BUNDLE_GEMFILE=#{__dir__}/Gemfile bundle exec mrbdoc"
+      sh "env BUNDLE_GEMFILE=#{Shellwords.escape(File.join(__dir__, 'Gemfile'))} bundle exec mrbdoc"
     end
 
     # Copy generated docs into our docs/api/ directory
     dest = File.join(__dir__, 'docs', 'api')
     FileUtils.mkdir_p(dest)
     FileUtils.cp_r(Dir.glob("#{mruby_dir}/doc/api/*"), dest)
-    puts "Copied mruby API docs to docs/api/"
+    puts "Copied mruby API docs to #{dest}"
   end
 
   desc 'Regenerate release data from GitHub API (_data/releases.yml)'
