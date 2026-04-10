@@ -6,17 +6,17 @@
 <title>
   Header: mruby/compile.h
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mruby/compile.h";
   relpath = '../';
 </script>
@@ -75,7 +75,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrbc_context_new-function" title="mrbc_context_new">mrbc_context* <strong>mrbc_context_new</strong>(mrb_state *)</a>
+    <a href="#mrb_ccontext_new-function" title="mrb_ccontext_new">mrb_ccontext* <strong>mrb_ccontext_new</strong>(mrb_state *)</a>
 
     
   </span>
@@ -86,6 +86,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>compiler context.</p>
 </div></span>
   
 </li>
@@ -93,7 +94,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrbc_context_free-function" title="mrbc_context_free">void <strong>mrbc_context_free</strong>(mrb_state *, mrbc_context *)</a>
+    <a href="#mrb_ccontext_free-function" title="mrb_ccontext_free">void <strong>mrb_ccontext_free</strong>(mrb_state *, mrb_ccontext *)</a>
 
     
   </span>
@@ -103,8 +104,24 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ccontext_cleanup_local_variables-function" title="mrb_ccontext_cleanup_local_variables">void <strong>mrb_ccontext_cleanup_local_variables</strong>(mrb_state *, mrb_ccontext *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -121,8 +138,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -139,15 +155,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_parser_parse-function" title="mrb_parser_parse">void <strong>mrb_parser_parse</strong>(struct mrb_parser_state*, mrbc_context*)</a>
+    <a href="#mrb_parser_parse-function" title="mrb_parser_parse">void <strong>mrb_parser_parse</strong>(struct mrb_parser_state*, mrb_ccontext*)</a>
 
     
   </span>
@@ -157,8 +172,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -175,8 +189,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -193,15 +206,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_parse_file-function" title="mrb_parse_file">struct mrb_parser_state* <strong>mrb_parse_file</strong>(mrb_state*, FILE*, mrbc_context*)</a>
+    <a href="#mrb_parse_file-function" title="mrb_parse_file">struct mrb_parser_state* <strong>mrb_parse_file</strong>(mrb_state*, FILE*, mrb_ccontext*)</a>
 
     
   </span>
@@ -211,15 +223,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_parse_string-function" title="mrb_parse_string">struct mrb_parser_state* <strong>mrb_parse_string</strong>(mrb_state*, const char*, mrbc_context*)</a>
+    <a href="#mrb_parse_string-function" title="mrb_parse_string">struct mrb_parser_state* <strong>mrb_parse_string</strong>(mrb_state*, const char*, mrb_ccontext*)</a>
 
     
   </span>
@@ -229,15 +240,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_parse_nstring-function" title="mrb_parse_nstring">struct mrb_parser_state* <strong>mrb_parse_nstring</strong>(mrb_state*, const char*, size_t, mrbc_context*)</a>
+    <a href="#mrb_parse_nstring-function" title="mrb_parse_nstring">struct mrb_parser_state* <strong>mrb_parse_nstring</strong>(mrb_state*, const char*, size_t, mrb_ccontext*)</a>
 
     
   </span>
@@ -247,8 +257,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -265,15 +274,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_load_exec-function" title="mrb_load_exec">mrb_value <strong>mrb_load_exec</strong>(mrb_state *, struct mrb_parser_state *, mrbc_context *)</a>
+    <a href="#mrb_load_exec-function" title="mrb_load_exec">mrb_value <strong>mrb_load_exec</strong>(mrb_state *, struct mrb_parser_state *, mrb_ccontext *)</a>
 
     
   </span>
@@ -283,8 +291,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -301,15 +308,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_load_file_cxt-function" title="mrb_load_file_cxt">mrb_value <strong>mrb_load_file_cxt</strong>(mrb_state*, FILE*, mrbc_context *)</a>
+    <a href="#mrb_load_file_cxt-function" title="mrb_load_file_cxt">mrb_value <strong>mrb_load_file_cxt</strong>(mrb_state*, FILE*, mrb_ccontext *)</a>
 
     
   </span>
@@ -319,8 +325,24 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_load_detect_file_cxt-function" title="mrb_load_detect_file_cxt">mrb_value <strong>mrb_load_detect_file_cxt</strong>(mrb_state *, FILE *, mrb_ccontext *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -337,8 +359,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -355,15 +376,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_load_string_cxt-function" title="mrb_load_string_cxt">mrb_value <strong>mrb_load_string_cxt</strong>(mrb_state *, const char *, mrbc_context *)</a>
+    <a href="#mrb_load_string_cxt-function" title="mrb_load_string_cxt">mrb_value <strong>mrb_load_string_cxt</strong>(mrb_state *, const char *, mrb_ccontext *)</a>
 
     
   </span>
@@ -373,15 +393,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_load_nstring_cxt-function" title="mrb_load_nstring_cxt">mrb_value <strong>mrb_load_nstring_cxt</strong>(mrb_state *, const char *, size_t, mrbc_context *)</a>
+    <a href="#mrb_load_nstring_cxt-function" title="mrb_load_nstring_cxt">mrb_value <strong>mrb_load_nstring_cxt</strong>(mrb_state *, const char *, size_t, mrb_ccontext *)</a>
 
     
   </span>
@@ -391,8 +410,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -404,6 +422,49 @@
   <dl class="constants">
     
       <dt id="MRUBY_COMPILE_H-define" class=""><small>#define</small> MRUBY_COMPILE_H
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrbc_context-define" class=""><small>#define</small> mrbc_context
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>compatibility macros</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrbc_context_new-define" class=""><small>#define</small> mrbc_context_new
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrbc_context_free-define" class=""><small>#define</small> mrbc_context_free
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrbc_filename-define" class=""><small>#define</small> mrbc_filename
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrbc_partial_hook-define" class=""><small>#define</small> mrbc_partial_hook
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrbc_cleanup_local_variables-define" class=""><small>#define</small> mrbc_cleanup_local_variables
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -466,8 +527,31 @@
 
   
     <div class="method_details first">
-  <h3 class="signature first" id="mrbc_context_new-function">
-  mrbc_context* <strong>mrbc_context_new</strong>(mrb_state * mrb)
+  <h3 class="signature first" id="mrb_ccontext_new-function">
+  mrb_ccontext* <strong>mrb_ccontext_new</strong>(mrb_state * mrb)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>compiler context</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ccontext_free-function">
+  void <strong>mrb_ccontext_free</strong>(mrb_state * mrb, mrb_ccontext * cxt)
 
   
 </h3>
@@ -476,8 +560,8 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrbc_context_free-function">
-  void <strong>mrbc_context_free</strong>(mrb_state * mrb, mrbc_context * cxt)
+  <h3 class="signature " id="mrb_ccontext_cleanup_local_variables-function">
+  void <strong>mrb_ccontext_cleanup_local_variables</strong>(mrb_state * mrb, mrb_ccontext * c)
 
   
 </h3>
@@ -507,7 +591,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_parser_parse-function">
-  void <strong>mrb_parser_parse</strong>(struct mrb_parser_state* , mrbc_context* )
+  void <strong>mrb_parser_parse</strong>(struct mrb_parser_state* , mrb_ccontext* )
 
   
 </h3>
@@ -537,7 +621,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_parse_file-function">
-  struct mrb_parser_state* <strong>mrb_parse_file</strong>(mrb_state* , FILE* , mrbc_context* )
+  struct mrb_parser_state* <strong>mrb_parse_file</strong>(mrb_state* , FILE* , mrb_ccontext* )
 
   
 </h3>
@@ -547,7 +631,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_parse_string-function">
-  struct mrb_parser_state* <strong>mrb_parse_string</strong>(mrb_state* , const char* , mrbc_context* )
+  struct mrb_parser_state* <strong>mrb_parse_string</strong>(mrb_state* , const char* , mrb_ccontext* )
 
   
 </h3>
@@ -557,7 +641,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_parse_nstring-function">
-  struct mrb_parser_state* <strong>mrb_parse_nstring</strong>(mrb_state* , const char* , size_t , mrbc_context* )
+  struct mrb_parser_state* <strong>mrb_parse_nstring</strong>(mrb_state* , const char* , size_t , mrb_ccontext* )
 
   
 </h3>
@@ -577,7 +661,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_load_exec-function">
-  mrb_value <strong>mrb_load_exec</strong>(mrb_state * mrb, struct mrb_parser_state * p, mrbc_context * c)
+  mrb_value <strong>mrb_load_exec</strong>(mrb_state * mrb, struct mrb_parser_state * p, mrb_ccontext * c)
 
   
 </h3>
@@ -597,7 +681,17 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_load_file_cxt-function">
-  mrb_value <strong>mrb_load_file_cxt</strong>(mrb_state* , FILE* , mrbc_context * cxt)
+  mrb_value <strong>mrb_load_file_cxt</strong>(mrb_state* , FILE* , mrb_ccontext * cxt)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_load_detect_file_cxt-function">
+  mrb_value <strong>mrb_load_detect_file_cxt</strong>(mrb_state * mrb, FILE * fp, mrb_ccontext * c)
 
   
 </h3>
@@ -627,7 +721,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_load_string_cxt-function">
-  mrb_value <strong>mrb_load_string_cxt</strong>(mrb_state * mrb, const char * s, mrbc_context * cxt)
+  mrb_value <strong>mrb_load_string_cxt</strong>(mrb_state * mrb, const char * s, mrb_ccontext * cxt)
 
   
 </h3>
@@ -637,7 +731,7 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_load_nstring_cxt-function">
-  mrb_value <strong>mrb_load_nstring_cxt</strong>(mrb_state * mrb, const char * s, size_t len, mrbc_context * cxt)
+  mrb_value <strong>mrb_load_nstring_cxt</strong>(mrb_state * mrb, const char * s, size_t len, mrb_ccontext * cxt)
 
   
 </h3>
@@ -649,9 +743,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:13 2019 by
+  Generated on Fri Apr 10 23:46:14 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

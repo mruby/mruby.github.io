@@ -6,17 +6,17 @@
 <title>
   Class: Proc
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Proc";
   relpath = '';
 </script>
@@ -98,23 +98,9 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>src/class.c<span class="defines">,<br />
-  mrbgems/mruby-proc-ext/mrblib/proc.rb</span>
-</dd>
+    <dd>mrbgems/mruby-proc-ext/mrblib/proc.rb</dd>
   </dl>
   
-</div>
-
-<h2>Overview</h2><div class="docstring">
-  <div class="discussion">
-    <p>15.2.17</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
 </div>
 
 
@@ -149,8 +135,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -172,8 +157,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -195,8 +179,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -218,8 +201,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -241,8 +223,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -264,8 +245,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -302,7 +282,7 @@
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-proc-ext/mrblib/proc.rb', line 42</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&lt;&lt;</span>(other)
-  -&gt;(*args, &amp;block) { call(other.call(*args, &amp;block)) }
+  -&gt;(*args, **opts, &amp;block) { call(other.call(*args, **opts, &amp;block)) }
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -362,7 +342,7 @@
       <pre class="code"><span class="info file"># File 'mrbgems/mruby-proc-ext/mrblib/proc.rb', line 46</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">&gt;&gt;</span>(other)
-  -&gt;(*args, &amp;block) { other.call(call(*args, &amp;block)) }
+  -&gt;(*args, **opts, &amp;block) { other.call(call(*args, **opts, &amp;block)) }
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -423,7 +403,7 @@
     self_arity = <span style="color:#069">self</span>.arity
     <span style="color:#080;font-weight:bold">if</span> (self_arity &gt;= <span style="color:#00D">0</span> &amp;&amp; arity != self_arity) ||
        (self_arity &lt; <span style="color:#00D">0</span> &amp;&amp; abs[self_arity] &gt; arity)
-      raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong number of arguments (</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>arity<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> for </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>abs[self_arity]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">)</span><span style="color:#710">&quot;</span></span>
+      raise <span style="color:#036;font-weight:bold">ArgumentError</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">wrong number of arguments (given </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>arity<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">, expected </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>abs[self_arity]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">)</span><span style="color:#710">&quot;</span></span>
     <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#080;font-weight:bold">end</span>
 
@@ -510,9 +490,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:09 2019 by
+  Generated on Fri Apr 10 23:46:12 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

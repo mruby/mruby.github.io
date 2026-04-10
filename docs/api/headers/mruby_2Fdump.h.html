@@ -6,17 +6,17 @@
 <title>
   Header: mruby/dump.h
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mruby/dump.h";
   relpath = '../';
 </script>
@@ -85,15 +85,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_load_irep_file_cxt-function" title="mrb_load_irep_file_cxt">mrb_value <strong>mrb_load_irep_file_cxt</strong>(mrb_state*, FILE*, mrbc_context*)</a>
+    <a href="#mrb_load_irep_file_cxt-function" title="mrb_load_irep_file_cxt">mrb_value <strong>mrb_load_irep_file_cxt</strong>(mrb_state*, FILE*, mrb_ccontext*)</a>
 
     
   </span>
@@ -103,8 +102,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -122,6 +120,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>avoid mrb_read_irep(); use mrb_read_irep_buf() instead (may cause buffer overflow).</p>
 </div></span>
   
 </li>
@@ -139,8 +138,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -156,10 +154,11 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="DUMP_DEBUG_INFO-define" class=""><small>#define</small> DUMP_DEBUG_INFO
+      <dt id="MRB_DUMP_DEBUG_INFO-define" class=""><small>#define</small> MRB_DUMP_DEBUG_INFO
         <div class="docstring">
   <div class="discussion">
-    <p>Dumping compiled mruby script.</p>
+    
+<p>flags for mrb_dump_irepmruby/dump.h.,_binary,_cfunc,_cstruct</p>
 
 
   </div>
@@ -173,22 +172,12 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="DUMP_ENDIAN_BIG-define" class=""><small>#define</small> DUMP_ENDIAN_BIG
+      <dt id="MRB_DUMP_STATIC-define" class=""><small>#define</small> MRB_DUMP_STATIC
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="DUMP_ENDIAN_LIL-define" class=""><small>#define</small> DUMP_ENDIAN_LIL
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="DUMP_ENDIAN_NAT-define" class=""><small>#define</small> DUMP_ENDIAN_NAT
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="DUMP_ENDIAN_MASK-define" class=""><small>#define</small> DUMP_ENDIAN_MASK
+      <dt id="MRB_DUMP_NO_LVAR-define" class=""><small>#define</small> MRB_DUMP_NO_LVAR
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -196,10 +185,10 @@
       <dt id="MRB_DUMP_OK-define" class=""><small>#define</small> MRB_DUMP_OK
         <div class="docstring">
   <div class="discussion">
-    <p>dump/load error code</p>
+    
+<p>dump/load error code</p>
 
-<p>NOTE: MRB_DUMP_GENERAL_FAILURE is caused by
-unspecified issues like malloc failed.</p>
+<p>NOTE: MRB_DUMP_GENERAL_FAILURE is caused by unspecified issues like malloc failed.</p>
 
 
   </div>
@@ -228,11 +217,6 @@ unspecified issues like malloc failed.</p>
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_DUMP_CRC_ERROR-define" class=""><small>#define</small> MRB_DUMP_CRC_ERROR
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
       <dt id="MRB_DUMP_INVALID_FILE_HEADER-define" class=""><small>#define</small> MRB_DUMP_INVALID_FILE_HEADER
         
       </dt>
@@ -251,7 +235,8 @@ unspecified issues like malloc failed.</p>
       <dt id="MRB_DUMP_NULL_SYM_LEN-define" class=""><small>#define</small> MRB_DUMP_NULL_SYM_LEN
         <div class="docstring">
   <div class="discussion">
-    <p>null symbol length</p>
+    
+<p>null symbol length</p>
 
 
   </div>
@@ -268,7 +253,8 @@ unspecified issues like malloc failed.</p>
       <dt id="RITE_BINARY_IDENT-define" class=""><small>#define</small> RITE_BINARY_IDENT
         <div class="docstring">
   <div class="discussion">
-    <p>Rite Binary File header</p>
+    
+<p>Rite Binary File header</p>
 
 
   </div>
@@ -282,7 +268,25 @@ unspecified issues like malloc failed.</p>
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="RITE_BINARY_IDENT_LIL-define" class=""><small>#define</small> RITE_BINARY_IDENT_LIL
+      <dt id="RITE_BINARY_MAJOR_VER-define" class=""><small>#define</small> RITE_BINARY_MAJOR_VER
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Minor: Upper-compatible to prior versions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="RITE_BINARY_MINOR_VER-define" class=""><small>#define</small> RITE_BINARY_MINOR_VER
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -330,7 +334,8 @@ unspecified issues like malloc failed.</p>
       <dt id="RITE_SECTION_HEADER-define" class=""><small>#define</small> RITE_SECTION_HEADER
         <div class="docstring">
   <div class="discussion">
-    <p>section header</p>
+    
+<p>section header</p>
 
 
   </div>
@@ -368,7 +373,7 @@ unspecified issues like malloc failed.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_load_irep_file_cxt-function">
-  mrb_value <strong>mrb_load_irep_file_cxt</strong>(mrb_state* , FILE* , mrbc_context* )
+  mrb_value <strong>mrb_load_irep_file_cxt</strong>(mrb_state* , FILE* , mrb_ccontext* )
 
   
 </h3>
@@ -382,6 +387,19 @@ unspecified issues like malloc failed.</p>
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>avoid mrb_read_irep(); use mrb_read_irep_buf() instead (may cause buffer overflow)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
@@ -400,9 +418,9 @@ unspecified issues like malloc failed.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:12 2019 by
+  Generated on Fri Apr 10 23:46:13 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

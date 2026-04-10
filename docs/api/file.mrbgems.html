@@ -6,17 +6,17 @@
 <title>
   File: mrbgems
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mrbgems";
   relpath = '';
 </script>
@@ -61,371 +61,417 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="mrbgems">mrbgems</h1>
+      <div id="content"><div id='filecontents'><!-- summary: About the Build-time Library Manager -->
+<h1 id="label-mrbgems">mrbgems</h1>
 
-<p>mrbgems is a library manager to integrate C and Ruby extension in an easy and
-standardised way into mruby.</p>
+<p>mrbgems is a library manager to integrate C and Ruby extensions in an easy and standardised way into mruby. Conventionally, each mrbgem name is prefixed by <code>mruby-</code>, e.g. <code>mruby-time</code> for a gem that provides <code>Time</code> class functionality.</p>
 
-<h2 id="usage">Usage</h2>
+<h2 id="label-Usage">Usage</h2>
 
-<p>By default mrbgems is currently deactivated. As soon as you add a GEM to your
-build configuration (i.e. <em>build_config.rb</em>), mrbgems will be activated and the
-extension integrated.</p>
+<p>You have to activate mrbgems explicitly in your build configuration. To add a gem, add the following line to your build configuration file, for example:</p>
 
-<p>To add a GEM into the <em>build_config.rb</em> add the following line for example:
-<code>ruby
-conf.gem '/path/to/your/gem/dir'
-</code></p>
+<pre class="code ruby"><code class="ruby">conf.gem <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">/path/to/your/gem/dir</span><span style="color:#710">'</span></span>
+</code></pre>
 
-<p>You can also use a relative path which would be relative from the mruby root:
-<code>ruby
-conf.gem 'examples/mrbgems/ruby_extension_example'
-</code></p>
+<p>You can also use a relative path to specify a gem.</p>
 
-<p>A remote GIT repository location for a GEM is also supported:
-<code>ruby
-conf.gem :git =&gt; 'https://github.com/masuidrive/mrbgems-example.git', :branch =&gt; 'master'
-conf.gem :github =&gt; 'masuidrive/mrbgems-example', :branch =&gt; 'master'
-conf.gem :bitbucket =&gt; 'mruby/mrbgems-example', :branch =&gt; 'master'
-</code></p>
+<pre class="code ruby"><code class="ruby">conf.gem <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">examples/mrbgems/ruby_extension_example</span><span style="color:#710">'</span></span>
+</code></pre>
 
-<p>You can specify the sub directory of the repository with <code>:path</code> option:
-<code>ruby
-conf.gem github: 'mruby/mruby', path: 'mrbgems/mruby-socket'
-</code></p>
+<p>In that case,</p>
+<ul><li>
+<p>if your build configuration file is in the <code>build_config</code> directory, it’s relative from <code>MRUBY_ROOT</code>.</p>
+</li><li>
+<p>otherwise, it is relative from the directory where your build configuration is.</p>
+</li></ul>
 
-<p>To use mrbgem from <a href="https://github.com/mruby/mgem-list">mgem-list</a> use <code>:mgem</code> option:
-<code>ruby
-conf.gem :mgem =&gt; 'mruby-yaml'
-conf.gem :mgem =&gt; 'yaml' # 'mruby-' prefix could be omitted
-</code></p>
+<p>A remote GIT repository location for a GEM is also supported:</p>
 
-<p>For specifying commit hash to checkout use <code>:checksum_hash</code> option:
-<code>ruby
-conf.gem mgem: 'mruby-redis', checksum_hash: '3446d19fc4a3f9697b5ddbf2a904f301c42f2f4e'
-</code></p>
-
-<p>If there is missing dependencies, mrbgem dependencies solver will reference
-mrbgem from core or mgem-list.</p>
-
-<p>To pull all gems from remote GIT repository on build, call <code>./minirake -p</code>,
-or <code>./minirake --pull-gems</code>.</p>
+<pre class="code ruby"><code class="ruby">conf.gem <span style="color:#A60">:git</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">https://github.com/masuidrive/mrbgems-example.git</span><span style="color:#710">'</span></span>, <span style="color:#A60">:branch</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">master</span><span style="color:#710">'</span></span>
+conf.gem <span style="color:#A60">:github</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">masuidrive/mrbgems-example</span><span style="color:#710">'</span></span>, <span style="color:#A60">:branch</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">master</span><span style="color:#710">'</span></span>
+conf.gem <span style="color:#A60">:bitbucket</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby/mrbgems-example</span><span style="color:#710">'</span></span>, <span style="color:#A60">:branch</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">master</span><span style="color:#710">'</span></span>
+</code></pre>
 
 <p>NOTE: <code>:bitbucket</code> option supports only git. Hg is unsupported in this version.</p>
 
-<h2 id="gembox">GemBox</h2>
+<p>You can specify the subdirectory of the repository with <code>:path</code> option:</p>
 
-<p>There are instances when you wish to add a collection of mrbgems into mruby at
-once, or be able to substitute mrbgems based on configuration, without having to
-add each gem to the <em>build_config.rb</em> file.  A packaged collection of mrbgems
-is called a GemBox.  A GemBox is a file that contains a list of mrbgems to load
-into mruby, in the same format as if you were adding them to <em>build_config.rb</em>
-via <code>config.gem</code>, but wrapped in an <code>MRuby::GemBox</code> object.  GemBoxes are
-loaded into mruby via <code>config.gembox 'boxname'</code>.</p>
+<pre class="code ruby"><code class="ruby">conf.gem <span style="color:#606">github</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby/mruby</span><span style="color:#710">'</span></span>, <span style="color:#606">path</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mrbgems/mruby-socket</span><span style="color:#710">'</span></span>
+</code></pre>
 
-<p>Below we have created a GemBox containing <em>mruby-time</em> and <em>mrbgems-example</em>:
-<code>ruby
-MRuby::GemBox.new do |conf|
-  conf.gem "#{root}/mrbgems/mruby-time"
-  conf.gem :github =&gt; 'masuidrive/mrbgems-example'
-end
-</code></p>
+<p>To use mrbgem from <a href="https://github.com/mruby/mgem-list">mgem-list</a> use <code>:mgem</code> option:</p>
 
-<p>As mentioned, the GemBox uses the same conventions as <code>MRuby::Build</code>.  The GemBox
-must be saved with a <em>.gembox</em> extension inside the <em>mrbgems</em> directory to to be
-picked up by mruby.</p>
+<pre class="code ruby"><code class="ruby">conf.gem <span style="color:#A60">:mgem</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-yaml</span><span style="color:#710">'</span></span>
+conf.gem <span style="color:#A60">:mgem</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">yaml</span><span style="color:#710">'</span></span> <span style="color:#777"># 'mruby-' prefix could be omitted</span>
+</code></pre>
 
-<p>To use this example GemBox, we save it as <code>custom.gembox</code> inside the <em>mrbgems</em>
-directory in mruby, and add the following to our <em>build_config.rb</em> file inside
-the build block:
-<code>ruby
-conf.gembox 'custom'
-</code>
-This will cause the <em>custom</em> GemBox to be read in during the build process,
-adding <em>mruby-time</em> and <em>mrbgems-example</em> to the build.</p>
+<p>For specifying the commit hash to checkout use <code>:checksum_hash</code> option:</p>
 
-<p>If you want, you can put GemBox outside of mruby directory. In that case you must
-specify an absolute path like below.
-<code>ruby
-conf.gembox "#{ENV["HOME"]}/mygemboxes/custom"
-</code></p>
+<pre class="code ruby"><code class="ruby">conf.gem <span style="color:#606">mgem</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-redis</span><span style="color:#710">'</span></span>, <span style="color:#606">checksum_hash</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">3446d19fc4a3f9697b5ddbf2a904f301c42f2f4e</span><span style="color:#710">'</span></span>
+</code></pre>
 
-<p>There are two GemBoxes that ship with mruby: <a href="../../mrbgems/default.gembox">default</a>
-and <a href="../../mrbgems/full-core.gembox">full-core</a>. The <a href="../../mrbgems/default.gembox">default</a> GemBox
-contains several core components of mruby, and <a href="../../mrbgems/full-core.gembox">full-core</a>
-contains every gem found in the <em>mrbgems</em> directory.</p>
+<p>If there are missing dependencies, mrbgem dependencies solver will reference mrbgem from the core or mgem-list.</p>
 
-<h2 id="gem-structure">GEM Structure</h2>
+<p>Note that if more than one git-based gem has the same base name (i.e. the default checkout directory name), it is (now) an error <strong>UNLESS</strong> they have the same repository URL, branch name and commit-id (i.e. checksum hash). You can bypass this by explicitly importing your preferred version <strong>first</strong> and setting the <code>canonical:</code> option to <code>true</code>:</p>
+
+<pre class="code ruby"><code class="ruby">conf.gem <span style="color:#606">github</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">me/mruby-yaml</span><span style="color:#710">'</span></span>, <span style="color:#606">branch</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">my-hacked-branch</span><span style="color:#710">'</span></span>, <span style="color:#606">canonical</span>: <span style="color:#069">true</span>
+</code></pre>
+
+<p>If you do this, the system will (mostly) silently ignore other attempts to clone a gem with this name.</p>
+
+<p>Note that this only affects cloning the gem from git. It does not resolve version conflicts. If the version as specified in the gem’s rakefile is incompatible with a dependency, your build will still fail.</p>
+
+<h3 id="label-Tweak+the+gem+in+your+build+configuration+file">Tweak the gem in your build configuration file</h3>
+
+<p>You can give blocks in the <code>conf.gem</code> call to make adjustments for environments where the original gem does not expect them:</p>
+
+<pre class="code ruby"><code class="ruby">conf.gem <span style="color:#606">core</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">mruby-bin-mirb</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">do</span> |g|
+  <span style="color:#777"># For cross build to NetBSD</span>
+  g.linker.libraries = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">%w(</span><span style="color:#D20">edit termcap</span><span style="color:#710">)</span></span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<p>However, it should be used with caution, as it may deviate from the intent of the gem’s author.</p>
+
+<h3 id="label-Gem+Testing">Gem Testing</h3>
+
+<p>If you enable unit tests in your build with <code>enable_test</code>, tests will be generated for all gems and their dependencies by default. If necessary, it is possible to suppress tests for a specific gem like so:</p>
+
+<pre class="code ruby"><code class="ruby">conf.gem <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-noisygem</span><span style="color:#710">'</span></span> <span style="color:#080;font-weight:bold">do</span> |g|
+  g.skip_test = <span style="color:#069">true</span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<p>However, it is considered best practice to leave all tests enabled whenever possible. A warning message will be generated for each gem with disabled tests.</p>
+
+<h2 id="label-GemBox">GemBox</h2>
+
+<p>There are instances when you wish to add a collection of mrbgems into mruby at once, or be able to substitute mrbgems based on configuration, without having to add each gem to your build configuration file. A packaged collection of mrbgems is called a GemBox. A GemBox is a file that contains a list of mrbgems to load into mruby, in the same format as if you were adding them to the build config via <code>config.gem</code>, but wrapped in an <code>MRuby::GemBox</code> object. GemBoxes are loaded into mruby via <code>config.gembox &#39;boxname&#39;</code>.</p>
+
+<p>Below we have created a GemBox containing <code>mruby-time</code> and <code>mrbgems-example</code>:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">MRuby</span>::<span style="color:#036;font-weight:bold">GemBox</span>.new <span style="color:#080;font-weight:bold">do</span> |conf|
+  conf.gem <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>root<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">/mrbgems/mruby-time</span><span style="color:#710">&quot;</span></span>
+  conf.gem <span style="color:#A60">:github</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">masuidrive/mrbgems-example</span><span style="color:#710">'</span></span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<p>As mentioned, the GemBox uses the same conventions as <code>MRuby::Build</code>. The GemBox must be saved with a <code>.gembox</code> extension inside the <code>mrbgems</code> directory to be picked up by mruby.</p>
+
+<p>To use this example GemBox, we save it as <code>custom.gembox</code> inside the <code>mrbgems</code> directory in mruby, and add the following to your build configuration file inside the build block:</p>
+
+<pre class="code ruby"><code class="ruby">conf.gembox <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">custom</span><span style="color:#710">'</span></span>
+</code></pre>
+
+<p>This will cause the <code>custom</code> GemBox to be read in during the build process, adding <code>mruby-time</code> and <code>mrbgems-example</code> to the build.</p>
+
+<p>If you want, you can put GemBox outside the mruby directory. In that case you must specify an absolute path like below.</p>
+
+<pre class="code ruby"><code class="ruby">conf.gembox <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span><span style="color:#069">ENV</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">HOME</span><span style="color:#710">&quot;</span></span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">/mygemboxes/custom</span><span style="color:#710">&quot;</span></span>
+</code></pre>
+
+<p>There are two GemBoxes that ship with mruby: <a href="../../mrbgems/default.gembox">default</a> and <a href="../../mrbgems/full-core.gembox">full-core</a>. The <a href="../../mrbgems/default.gembox">default</a> GemBox contains several core components of mruby, and <a href="../../mrbgems/full-core.gembox">full-core</a> contains every gem found in the <code>mrbgems</code> directory.</p>
+
+<h2 id="label-GEM+Structure">GEM Structure</h2>
 
 <p>The maximal GEM structure looks like this:</p>
 
-<pre class="code ruby"><code class="ruby">+- <span style="color:#036;font-weight:bold">GEM_NAME</span>         &lt;- <span style="color:#036;font-weight:bold">Name</span> of <span style="color:#036;font-weight:bold">GEM</span>
-   |
-   +- include/      &lt;- <span style="color:#036;font-weight:bold">Header</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Ruby</span> extension (will exported)
-   |
-   +- mrblib/       &lt;- <span style="color:#036;font-weight:bold">Source</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Ruby</span> extension
-   |
-   +- src/          &lt;- <span style="color:#036;font-weight:bold">Source</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">C</span> extension
-   |
-   +- test/         &lt;- <span style="color:#036;font-weight:bold">Test</span> code (<span style="color:#036;font-weight:bold">Ruby</span>)
-   |
-   +- mrbgem.rake   &lt;- <span style="color:#036;font-weight:bold">GEM</span> <span style="color:#036;font-weight:bold">Specification</span>
-   |
-   +- <span style="color:#036;font-weight:bold">README</span>.md     &lt;- <span style="color:#036;font-weight:bold">Readme</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">GEM</span>
+<pre class="code ruby"><code class="ruby">+- <span style="color:#036;font-weight:bold">GEM_NAME</span>             &lt;- <span style="color:#036;font-weight:bold">Name</span> of <span style="color:#036;font-weight:bold">GEM</span>
+    |
+    +- <span style="color:#036;font-weight:bold">README</span>.md        &lt;- <span style="color:#036;font-weight:bold">Readme</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">GEM</span>
+    |
+    +- mrbgem.rake      &lt;- <span style="color:#036;font-weight:bold">GEM</span> <span style="color:#036;font-weight:bold">Specification</span>
+    |
+    +- include/         &lt;- <span style="color:#036;font-weight:bold">Header</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Ruby</span> extension (will exported)
+    |
+    +- mrblib/          &lt;- <span style="color:#036;font-weight:bold">Source</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Ruby</span> extension
+    |
+    +- src/             &lt;- <span style="color:#036;font-weight:bold">Source</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">C</span> extension
+    |
+    +- tools/           &lt;- <span style="color:#036;font-weight:bold">Source</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Executable</span> (<span style="color:#080;font-weight:bold">in</span> <span style="color:#036;font-weight:bold">C</span>)
+    |
+    +- test/            &lt;- <span style="color:#036;font-weight:bold">Test</span> code (<span style="color:#036;font-weight:bold">Ruby</span>)
 </code></pre>
 
-<p>The folder <em>mrblib</em> contains pure Ruby files to extend mruby. The folder <em>src</em>
-contains C/C++ files to extend mruby. The folder <em>include</em> contains C/C++ header
-files. The folder <em>test</em> contains C/C++ and pure Ruby files for testing purposes
-which will be used by <code>mrbtest</code>. <em>mrbgem.rake</em> contains the specification
-to compile C and Ruby files. <em>README.md</em> is a short description of your GEM.</p>
+<p>The <code>mrblib</code> directory contains pure Ruby files to extend mruby. The <code>src</code> directory contains C/C++ files to extend mruby. The <code>include</code> directory contains C/C++ header files. The <code>test</code> directory contains C/C++ and pure Ruby files for testing purposes which will be used by <code>mrbtest</code>. <code>mrbgem.rake</code> contains the specification to compile C and Ruby files. <code>README.md</code> is a short description of your GEM.</p>
 
-<h2 id="build-process">Build process</h2>
+<h2 id="label-Build+process">Build process</h2>
 
-<p>mrbgems expects a specification file called <em>mrbgem.rake</em> inside of your
-GEM directory. A typical GEM specification could look like this for example:
-<code>ruby
-MRuby::Gem::Specification.new('c_and_ruby_extension_example') do |spec|
-  spec.license = 'MIT'
-  spec.author  = 'mruby developers'
-  spec.summary = 'Example mrbgem using C and ruby'
-end
-</code></p>
+<p>mrbgems expects a specification file called <code>mrbgem.rake</code> inside of your GEM directory. A typical GEM specification could look like this for example:</p>
 
-<p>The mrbgems build process will use this specification to compile Object and Ruby
-files. The compilation results will be added to <em>lib/libmruby.a</em>. This file exposes
-the GEM functionality to tools like <code>mruby</code> and <code>mirb</code>.</p>
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">MRuby</span>::<span style="color:#036;font-weight:bold">Gem</span>::<span style="color:#036;font-weight:bold">Specification</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">c_and_ruby_extension_example</span><span style="color:#710">'</span></span>) <span style="color:#080;font-weight:bold">do</span> |spec|
+  spec.license = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">MIT</span><span style="color:#710">'</span></span>
+  spec.author  = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby developers</span><span style="color:#710">'</span></span>
+  spec.summary = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Example mrbgem using C and Ruby</span><span style="color:#710">'</span></span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
 
-<p>The following properties can be set inside of your <code>MRuby::Gem::Specification</code> for
-information purpose:</p>
+<p>The mrbgems build process will use this specification to compile Object and Ruby files. The compilation results will be added to <code>lib/libmruby.a</code>. This file exposes the GEM functionality to tools like <code>mruby</code> and <code>mirb</code>.</p>
 
-<ul>
-  <li><code>spec.license</code> or <code>spec.licenses</code> (A single license or a list of them under which this GEM is licensed)</li>
-  <li><code>spec.author</code> or <code>spec.authors</code> (Developer name or a list of them)</li>
-  <li><code>spec.version</code> (Current version)</li>
-  <li><code>spec.description</code> (Detailed description)</li>
-  <li><code>spec.summary</code>
-    <ul>
-      <li>One line short description of mrbgem.</li>
-      <li>Printed in build summary of rake when set.</li>
-    </ul>
-  </li>
-  <li><code>spec.homepage</code> (Homepage)</li>
-  <li><code>spec.requirements</code> (External requirements as information for user)</li>
-</ul>
+<p>The following properties can be set inside your <code>MRuby::Gem::Specification</code> for information purpose:</p>
+<ul><li>
+<p><code>spec.license</code> or <code>spec.licenses</code> (A single license or a list of them under which this GEM is licensed)</p>
+</li><li>
+<p><code>spec.author</code> or <code>spec.authors</code> (Developer name or a list of them)</p>
+</li><li>
+<p><code>spec.version</code> (Current version)</p>
+</li><li>
+<p><code>spec.description</code> (Detailed description)</p>
+</li><li>
+<p><code>spec.summary</code></p>
+</li><li>
+<p>One line short description of mrbgem.</p>
+</li><li>
+<p>Printed in build summary of rake when set.</p>
+</li><li>
+<p><code>spec.homepage</code> (Homepage)</p>
+</li><li>
+<p><code>spec.requirements</code> (External requirements as information for user)</p>
+</li></ul>
 
 <p>The <code>license</code> and <code>author</code> properties are required in every GEM!</p>
 
-<p>In case your GEM is depending on other GEMs please use
-<code>spec.add_dependency(gem, *requirements[, default_get_info])</code> like:
-```ruby
-MRuby::Gem::Specification.new(‘c_and_ruby_extension_example’) do |spec|
-  spec.license = ‘MIT’
-  spec.author  = ‘mruby developers’</p>
+<p>In case your GEM is depending on other GEMs please use <code>spec.add_dependency(gem, *requirements[, default_get_info])</code> like:</p>
 
-<p># Add GEM dependency mruby-parser.
-  # The version must be between 1.0.0 and 1.5.2 .
-  spec.add_dependency(‘mruby-parser’, ‘&gt;= 1.0.0’, ‘&lt;= 1.5.2’)</p>
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">MRuby</span>::<span style="color:#036;font-weight:bold">Gem</span>::<span style="color:#036;font-weight:bold">Specification</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">c_and_ruby_extension_example</span><span style="color:#710">'</span></span>) <span style="color:#080;font-weight:bold">do</span> |spec|
+  spec.license = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">MIT</span><span style="color:#710">'</span></span>
+  spec.author  = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby developers</span><span style="color:#710">'</span></span>
 
-<p># Use any version of mruby-uv from github.
-  spec.add_dependency(‘mruby-uv’, ‘&gt;= 0.0.0’, :github =&gt; ‘mattn/mruby-uv’)</p>
+  <span style="color:#777"># Add GEM dependency mruby-parser.</span>
+  <span style="color:#777"># The version must be between 1.0.0 and 1.5.2 .</span>
+  spec.add_dependency(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-parser</span><span style="color:#710">'</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&gt;= 1.0.0</span><span style="color:#710">'</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;= 1.5.2</span><span style="color:#710">'</span></span>)
 
-<p># Use latest mruby-onig-regexp from github. (version requirements can be omitted)
-  spec.add_dependency(‘mruby-onig-regexp’, :github =&gt; ‘mattn/mruby-onig-regexp’)</p>
+  <span style="color:#777"># Use any version of mruby-uv from GitHub.</span>
+  spec.add_dependency(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-uv</span><span style="color:#710">'</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&gt;= 0.0.0</span><span style="color:#710">'</span></span>, <span style="color:#A60">:github</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mattn/mruby-uv</span><span style="color:#710">'</span></span>)
 
-<p># You can add extra mgems active only on test
-  spec.add_test_dependency(‘mruby-process’, :github =&gt; ‘iij/mruby-process’)
-end
-```</p>
+  <span style="color:#777"># Use latest mruby-onig-regexp from GitHub. (version requirements can be omitted)</span>
+  spec.add_dependency(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-onig-regexp</span><span style="color:#710">'</span></span>, <span style="color:#A60">:github</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mattn/mruby-onig-regexp</span><span style="color:#710">'</span></span>)
+
+  <span style="color:#777"># You can add extra mgems active only on test</span>
+  spec.add_test_dependency(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-process</span><span style="color:#710">'</span></span>, <span style="color:#A60">:github</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">iij/mruby-process</span><span style="color:#710">'</span></span>)
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
 
 <p>The version requirements and default gem information are optional.</p>
 
-<p>Version requirement supports following operators:
-* ‘=’: is equal
-* ‘!=’: is not equal
-* ‘&gt;’: is greater
-* ‘&lt;’: is lesser
-* ‘&gt;=’: is equal or greater
-* ‘&lt;=’: is equal or lesser
-* ‘~&gt;’: is equal or greater and is lesser than the next major version
-    * example 1: ‘~&gt; 2.2.2’ means ‘&gt;= 2.2.2’ and ‘&lt; 2.3.0’
-    * example 2: ‘~&gt; 2.2’   means ‘&gt;= 2.2.0’ and ‘&lt; 3.0.0’</p>
+<p>Version requirement supports following operators:</p>
+<ul><li>
+<p>‘=’: is equal</p>
+</li><li>
+<p>‘!=’: is not equal</p>
+</li><li>
+<p>‘&gt;’: is greater</p>
+</li><li>
+<p>‘&lt;’: is lesser</p>
+</li><li>
+<p>‘&gt;=’: is equal or greater</p>
+</li><li>
+<p>‘&lt;=’: is equal or lesser</p>
+</li><li>
+<p>‘~&gt;’: is equal or greater and is lesser than the next major version</p>
+</li><li>
+<p>example 1: ‘~&gt; 2.2.2’ means ‘&gt;= 2.2.2’ and ‘&lt; 2.3.0’</p>
+</li><li>
+<p>example 2: ‘~&gt; 2.2’ means ‘&gt;= 2.2.0’ and ‘&lt; 3.0.0’</p>
+</li></ul>
 
 <p>When more than one version requirements is passed, the dependency must satisfy all of it.</p>
 
-<p>You can have default gem to use as dependency when it’s not defined in <em>build_config.rb</em>.
-When the last argument of <code>add_dependency</code> call is <code>Hash</code>, it will be treated as default gem information.
-Its format is same as argument of method <code>MRuby::Build#gem</code>, expect that it can’t be treated as path gem location.</p>
+<p>You can have default gem to use as dependency when it’s not defined in your build configuration. When the last argument of <code>add_dependency</code> call is <code>Hash</code>, it will be treated as default gem information. Its format is same as argument of method <code>MRuby::Build#gem</code>, expect that it can’t be treated as path gem location.</p>
 
-<p>When a special version of dependency is required,
-use <code>MRuby::Build#gem</code> in <em>build_config.rb</em> to override default gem.</p>
+<p>When a special version of dependency is required, use <code>MRuby::Build#gem</code> in the build configuration to override default gem.</p>
 
-<p>If you have conflicting GEMs use the following method:
-* <code>spec.add_conflict(gem, *requirements)</code>
-    * The <code>requirements</code> argument is same as in <code>add_dependency</code> method.</p>
+<p>If you have conflicting GEMs use the following method:</p>
+<ul><li>
+<p><code>spec.add_conflict(gem, *requirements)</code></p>
+</li><li>
+<p>The <code>requirements</code> argument is same as in <code>add_dependency</code> method.</p>
+</li></ul>
 
-<p>like following code:
-```ruby
-MRuby::Gem::Specification.new ‘some-regexp-binding’ do |spec|
-  spec.license = ‘BSD’
-  spec.author = ‘John Doe’</p>
+<p>like following code:</p>
 
-<p>spec.add_conflict ‘mruby-onig-regexp’, ‘&gt; 0.0.0’
-  spec.add_conflict ‘mruby-hs-regexp’
-  spec.add_conflict ‘mruby-pcre-regexp’
-  spec.add_conflict ‘mruby-regexp-pcre’
-end
-```</p>
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">MRuby</span>::<span style="color:#036;font-weight:bold">Gem</span>::<span style="color:#036;font-weight:bold">Specification</span>.new <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">some-regexp-binding</span><span style="color:#710">'</span></span> <span style="color:#080;font-weight:bold">do</span> |spec|
+  spec.license = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">BSD</span><span style="color:#710">'</span></span>
+  spec.author = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">John Doe</span><span style="color:#710">'</span></span>
 
-<p>In case your GEM has more complex build requirements you can use
-the following options additionally inside of your GEM specification:</p>
+  spec.add_conflict <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-onig-regexp</span><span style="color:#710">'</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&gt; 0.0.0</span><span style="color:#710">'</span></span>
+  spec.add_conflict <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-hs-regexp</span><span style="color:#710">'</span></span>
+  spec.add_conflict <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-pcre-regexp</span><span style="color:#710">'</span></span>
+  spec.add_conflict <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mruby-regexp-pcre</span><span style="color:#710">'</span></span>
+<span style="color:#080;font-weight:bold">end</span>
+</code></pre>
 
-<ul>
-  <li><code>spec.cc.flags</code> (C compiler flags)</li>
-  <li><code>spec.cc.defines</code> (C compiler defines)</li>
-  <li><code>spec.cc.include_paths</code> (C compiler include paths)</li>
-  <li><code>spec.linker.flags</code> (Linker flags)</li>
-  <li><code>spec.linker.libraries</code> (Linker libraries)</li>
-  <li><code>spec.linker.library_paths</code> (Linker additional library path)</li>
-  <li><code>spec.bins</code> (Generate binary file)</li>
-  <li><code>spec.rbfiles</code> (Ruby files to compile)</li>
-  <li><code>spec.objs</code> (Object files to compile)</li>
-  <li><code>spec.test_rbfiles</code> (Ruby test files for integration into mrbtest)</li>
-  <li><code>spec.test_objs</code> (Object test files for integration into mrbtest)</li>
-  <li><code>spec.test_preload</code> (Initialization files for mrbtest)</li>
-</ul>
+<p>In case your GEM has more complex build requirements you can use the following options additionally inside your GEM specification:</p>
+<ul><li>
+<p><code>spec.cc.flags</code> (C compiler flags)</p>
+</li><li>
+<p><code>spec.cc.defines</code> (C compiler defines)</p>
+</li><li>
+<p><code>spec.cc.include_paths</code> (C compiler include paths)</p>
+</li><li>
+<p><code>spec.linker.flags</code> (Linker flags)</p>
+</li><li>
+<p><code>spec.linker.libraries</code> (Linker libraries)</p>
+</li><li>
+<p><code>spec.linker.library_paths</code> (Linker additional library path)</p>
+</li><li>
+<p><code>spec.bins</code> (Generate binary file)</p>
+</li><li>
+<p><code>spec.rbfiles</code> (Ruby files to compile)</p>
+</li><li>
+<p><code>spec.objs</code> (Object files to compile)</p>
+</li><li>
+<p><code>spec.test_rbfiles</code> (Ruby test files for integration into mrbtest)</p>
+</li><li>
+<p><code>spec.test_objs</code> (Object test files for integration into mrbtest)</p>
+</li><li>
+<p><code>spec.test_preload</code> (Initialization files for mrbtest)</p>
+</li></ul>
 
-<p>You also can use <code>spec.mruby.cc</code> and <code>spec.mruby.linker</code> to add extra global parameters for compiler and linker.</p>
+<p>You also can use <code>spec.mruby.cc</code> and <code>spec.mruby.linker</code> to add extra global parameters for the compiler and linker.</p>
 
-<h3 id="includepaths-and-dependency">include_paths and dependency</h3>
+<h3 id="label-include_paths+and+dependency">include_paths and dependency</h3>
 
-<p>Your GEM can export include paths to another GEMs that depends on your GEM.
-By default, <code>/...absolute path.../{GEM_NAME}/include</code> will be exported.
-So it is recommended not to put GEM’s local header files on include/.</p>
+<p>Your GEM can export include paths to another GEMs that depends on your GEM. By default, <code>/...absolute path.../{GEM_NAME}/include</code> will be exported. So it is recommended not to put GEM’s local header files on include/.</p>
 
-<p>These exports are retroactive.
-For example: when B depends to C and A depends to B, A will get include paths exported by C.</p>
+<p>These exports are retroactive. For example: when B depends on C and A depends on B, A will get include paths exported by C.</p>
 
-<p>Exported include_paths are automatically appended to GEM local include_paths by Minirake.
-You can use <code>spec.export_include_paths</code> accessor if you want more complex build.</p>
+<p>Exported include_paths are automatically appended to GEM local include_paths by rake. You can use <code>spec.export_include_paths</code> accessor if you want more complex build.</p>
 
-<h2 id="c-extension">C Extension</h2>
+<h2 id="label-C+Extension">C Extension</h2>
 
-<p>mruby can be extended with C. This is possible by using the C API to
-integrate C libraries into mruby.</p>
+<p>mruby can be extended with C. This is possible by using the C API to integrate C libraries into mruby.</p>
 
-<h3 id="preconditions">Preconditions</h3>
+<h3 id="label-Preconditions">Preconditions</h3>
 
-<p>mrbgems expects that you have implemented a C method called
-<code>mrb_YOURGEMNAME_gem_init(mrb_state)</code>. <code>YOURGEMNAME</code> will be replaced
-by the name of your GEM. If you call your GEM <em>c_extension_example</em>, your
-initialisation method could look like this:
-<code>C
-void
+<p>mrbgems expects that you have implemented a C method called <code>mrb_YOURGEMNAME_gem_init(mrb_state)</code>. <code>YOURGEMNAME</code> will be replaced by the name of your GEM. If you call your GEM <code>c_extension_example</code>, your initialisation method could look like this:</p>
+
+<pre class="code ruby"><code class="ruby">void
 mrb_c_extension_example_gem_init(mrb_state* mrb) {
-  struct RClass *class_cextension = mrb_define_module(mrb, "CExtension");
-  mrb_define_class_method(mrb, class_cextension, "c_method", mrb_c_method, MRB_ARGS_NONE());
+  struct <span style="color:#036;font-weight:bold">RClass</span> *class_cextension = mrb_define_module(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">CExtension</span><span style="color:#710">&quot;</span></span>);
+  mrb_define_class_method(mrb, class_cextension, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">c_method</span><span style="color:#710">&quot;</span></span>, mrb_c_method, MRB_ARGS_NONE());
 }
-</code></p>
+</code></pre>
 
-<h3 id="finalize">Finalize</h3>
+<h3 id="label-Finalize">Finalize</h3>
 
-<p>mrbgems expects that you have implemented a C method called
-<code>mrb_YOURGEMNAME_gem_final(mrb_state)</code>. <code>YOURGEMNAME</code> will be replaced
-by the name of your GEM. If you call your GEM <em>c_extension_example</em>, your
-finalizer method could look like this:</p>
+<p>mrbgems expects that you have implemented a C method called <code>mrb_YOURGEMNAME_gem_final(mrb_state)</code>. <code>YOURGEMNAME</code> will be replaced by the name of your GEM. If you call your GEM <code>c_extension_example</code>, your finalizer method could look like this:</p>
 
-<p><code>C
-void
+<pre class="code ruby"><code class="ruby">void
 mrb_c_extension_example_gem_final(mrb_state* mrb) {
   free(someone);
 }
-</code></p>
-
-<h3 id="example">Example</h3>
-
-<pre class="code ruby"><code class="ruby">+- c_extension_example/
-   |
-   +- src/
-   |  |
-   |  +- example.c         &lt;- <span style="color:#036;font-weight:bold">C</span> extension source
-   |
-   +- test/
-   |  |
-   |  +- example.rb        &lt;- <span style="color:#036;font-weight:bold">Test</span> code <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">C</span> extension
-   |
-   +- mrbgem.rake          &lt;- <span style="color:#036;font-weight:bold">GEM</span> specification
-   |
-   +- <span style="color:#036;font-weight:bold">README</span>.md
 </code></pre>
 
-<h2 id="ruby-extension">Ruby Extension</h2>
+<h3 id="label-Example">Example</h3>
 
-<p>mruby can be extended with pure Ruby. It is possible to override existing
-classes or add new ones in this way. Put all Ruby files into the <em>mrblib</em>
-folder.</p>
+<pre class="code ruby"><code class="ruby">+- c_extension_example/
+    |
+    +- <span style="color:#036;font-weight:bold">README</span>.md        (<span style="color:#036;font-weight:bold">Optional</span>)
+    |
+    +- src/
+    |   |
+    |   +- example.c    &lt;- <span style="color:#036;font-weight:bold">C</span> extension source
+    |
+    +- test/
+    |   |
+    |   +- example.rb   &lt;- <span style="color:#036;font-weight:bold">Test</span> code <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">C</span> extension
+    |
+    +- mrbgem.rake      &lt;- <span style="color:#036;font-weight:bold">GEM</span> specification
+</code></pre>
 
-<h3 id="pre-conditions">Pre-Conditions</h3>
+<h2 id="label-Ruby+Extension">Ruby Extension</h2>
+
+<p>mruby can be extended with pure Ruby. It is possible to override existing classes or add new ones in this way. Put all Ruby files into the <code>mrblib</code> directory.</p>
+
+<h3 id="label-Pre-Conditions">Pre-Conditions</h3>
 
 <p>none</p>
 
-<h3 id="example-1">Example</h3>
+<h3 id="label-Example">Example</h3>
 
 <pre class="code ruby"><code class="ruby">+- ruby_extension_example/
-   |
-   +- mrblib/
-   |  |
-   |  +- example.rb        &lt;- <span style="color:#036;font-weight:bold">Ruby</span> extension source
-   |
-   +- test/
-   |  |
-   |  +- example.rb        &lt;- <span style="color:#036;font-weight:bold">Test</span> code <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Ruby</span> extension
-   |
-   +- mrbgem.rake          &lt;- <span style="color:#036;font-weight:bold">GEM</span> specification
-   |
-   +- <span style="color:#036;font-weight:bold">README</span>.md
+    |
+    +- <span style="color:#036;font-weight:bold">README</span>.md        (<span style="color:#036;font-weight:bold">Optional</span>)
+    |
+    +- mrblib/
+    |   |
+    |   +- example.rb   &lt;- <span style="color:#036;font-weight:bold">Ruby</span> extension source
+    |
+    +- test/
+    |   |
+    |   +- example.rb   &lt;- <span style="color:#036;font-weight:bold">Test</span> code <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Ruby</span> extension
+    |
+    +- mrbgem.rake      &lt;- <span style="color:#036;font-weight:bold">GEM</span> specification
 </code></pre>
 
-<h2 id="c-and-ruby-extension">C and Ruby Extension</h2>
+<h2 id="label-C+and+Ruby+Extension">C and Ruby Extension</h2>
 
-<p>mruby can be extended with C and Ruby at the same time. It is possible to
-override existing classes or add new ones in this way. Put all Ruby files
-into the <em>mrblib</em> folder and all C files into the <em>src</em> folder.</p>
+<p>mruby can be extended with C and Ruby at the same time. It is possible to override existing classes or add new ones in this way. Put all Ruby files into the <code>mrblib</code> directory and all C files into the <code>src</code> directory.</p>
 
-<p>mruby codes under <em>mrblib</em> directory would be executed after gem init C
-function is called. Make sure <em>mruby script</em> depends on <em>C code</em> and
-<em>C code</em> doesn’t depend on <em>mruby script</em>.</p>
+<p>mruby codes under <code>mrblib</code> directory would be executed after gem init C function is called. Make sure <em>mruby script</em> depends on <em>C code</em> and <em>C code</em> doesn’t depend on <em>mruby script</em>.</p>
 
-<h3 id="pre-conditions-1">Pre-Conditions</h3>
+<h3 id="label-Pre-Conditions">Pre-Conditions</h3>
 
 <p>See C and Ruby example.</p>
 
-<h3 id="example-2">Example</h3>
+<h3 id="label-Example">Example</h3>
 
 <pre class="code ruby"><code class="ruby">+- c_and_ruby_extension_example/
-   |
-   +- mrblib/
-   |  |
-   |  +- example.rb        &lt;- <span style="color:#036;font-weight:bold">Ruby</span> extension source
-   |
-   +- src/
-   |  |
-   |  +- example.c         &lt;- <span style="color:#036;font-weight:bold">C</span> extension source
-   |
-   +- test/
-   |  |
-   |  +- example.rb        &lt;- <span style="color:#036;font-weight:bold">Test</span> code <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">C</span> <span style="color:#080;font-weight:bold">and</span> <span style="color:#036;font-weight:bold">Ruby</span> extension
-   |
-   +- mrbgem.rake          &lt;- <span style="color:#036;font-weight:bold">GEM</span> specification
-   |
-   +- <span style="color:#036;font-weight:bold">README</span>.md
+    |
+    +- <span style="color:#036;font-weight:bold">README</span>.md        (<span style="color:#036;font-weight:bold">Optional</span>)
+    |
+    +- mrblib/
+    |   |
+    |   +- example.rb   &lt;- <span style="color:#036;font-weight:bold">Ruby</span> extension source
+    |
+    +- src/
+    |   |
+    |   +- example.c    &lt;- <span style="color:#036;font-weight:bold">C</span> extension source
+    |
+    +- test/
+    |   |
+    |   +- example.rb   &lt;- <span style="color:#036;font-weight:bold">Test</span> code <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">C</span> <span style="color:#080;font-weight:bold">and</span> <span style="color:#036;font-weight:bold">Ruby</span> extension
+    |
+    +- mrbgem.rake      &lt;- <span style="color:#036;font-weight:bold">GEM</span> specification
+</code></pre>
+
+<h2 id="label-Binary+gems">Binary gems</h2>
+
+<p>Some gems can generate executables under <code>bin</code> directory. Those gems are called binary gems. Names of binary gems are conventionally prefixed by <code>mruby-bin</code>, e.g. <code>mruby-bin-mirb</code> and <code>mruby-bin-strip</code>.</p>
+
+<p>To specify the name of executable, you need to specify <code>spec.bins</code> in the <code>mrbgem.rake</code>. The entry point <code>main()</code> should be in the C source file under <code>tools/&lt;bin&gt;/*.c</code> where <code>&lt;bin&gt;</code> is a name of the executable. C files under the <code>&lt;bin&gt;</code> directory are compiled and linked to the executable, but not included in <code>libmruby.a</code>, whereas files under <code>mrblib</code> and <code>src</code> are.</p>
+
+<p>It is strongly recommended not to include <code>mrblib</code> and <code>src</code> directories in the binary gems, to separate normal gems and binary gems.</p>
+
+<h3 id="label-Example">Example</h3>
+
+<pre class="code ruby"><code class="ruby">+- mruby-bin-example/
+    |
+    +- <span style="color:#036;font-weight:bold">README</span>.md          (<span style="color:#036;font-weight:bold">Optional</span>)
+    |
+    +- bintest/
+    |   |
+    |   +- example.rb     &lt;- <span style="color:#036;font-weight:bold">Test</span> code <span style="color:#080;font-weight:bold">for</span> binary gem
+    |
+    +- mrbgem.rake        &lt;- <span style="color:#036;font-weight:bold">Gem</span> specification
+    |
+    +- mrblib/            &lt;- <span style="color:#036;font-weight:bold">Source</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Ruby</span> extension (<span style="color:#036;font-weight:bold">Optional</span>)
+    |
+    +- src/               &lt;- <span style="color:#036;font-weight:bold">Source</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">C</span> extension (<span style="color:#036;font-weight:bold">Optional</span>)
+    |
+    +- tools/
+        |
+        +- example/       &lt;- <span style="color:#036;font-weight:bold">Executable</span> name directory
+            |
+            +- example.c  &lt;- <span style="color:#036;font-weight:bold">Source</span> <span style="color:#080;font-weight:bold">for</span> <span style="color:#036;font-weight:bold">Executable</span> (includes main)
 </code></pre>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:07 2019 by
+  Generated on Fri Apr 10 23:46:09 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

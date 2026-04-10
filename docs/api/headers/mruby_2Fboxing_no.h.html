@@ -6,17 +6,17 @@
 <title>
   Header: mruby/boxing_no.h
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mruby/boxing_no.h";
   relpath = '../';
 </script>
@@ -80,7 +80,17 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_float_pool-define" class=""><small>#define</small> mrb_float_pool
+      <dt id="MRB_SYMBOL_SHIFT-define" class=""><small>#define</small> MRB_SYMBOL_SHIFT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_FIXNUM_MIN-define" class=""><small>#define</small> MRB_FIXNUM_MIN
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_FIXNUM_MAX-define" class=""><small>#define</small> MRB_FIXNUM_MAX
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -101,6 +111,32 @@
       <dd><pre class="code"></pre></dd>
     
       <dt id="mrb_fixnum-define" class=""><small>#define</small> mrb_fixnum
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>#ifdef MRB_32BIT</p>
+
+<p>#define mrb_fixnum(o) ((mrb_int)((intptr_t)0xffffffffffff&amp;((o).u))|(((o).u &amp; 0x800000000000)?0xffff000000000000:0))</p>
+
+<p>#else</p>
+
+<p>#define mrb_fixnum(o) ((mrb_int)(int32_t)((o).u))</p>
+
+<p>#endif</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_integer-define" class=""><small>#define</small> mrb_integer
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -115,7 +151,12 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="BOXNIX_SET_VALUE-define" class=""><small>#define</small> BOXNIX_SET_VALUE
+      <dt id="mrb_unboxed_type-define" class=""><small>#define</small> mrb_unboxed_type
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="BOXNO_SET_VALUE-define" class=""><small>#define</small> BOXNO_SET_VALUE
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -141,6 +182,11 @@
       <dd><pre class="code"></pre></dd>
     
       <dt id="SET_INT_VALUE-define" class=""><small>#define</small> SET_INT_VALUE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="SET_FIXNUM_VALUE-define" class=""><small>#define</small> SET_FIXNUM_VALUE
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -181,9 +227,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:13 2019 by
+  Generated on Fri Apr 10 23:46:14 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

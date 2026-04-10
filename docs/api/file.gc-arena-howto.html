@@ -6,17 +6,17 @@
 <title>
   File: gc-arena-howto
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "gc-arena-howto";
   relpath = '';
 </script>
@@ -61,191 +61,135 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="how-to-use-mrbgcarenasavemrbgcarenarestoremrbgcprotect">How to use <code>mrb_gc_arena_save()</code>/<code>mrb_gc_arena_restore()</code>/<code>mrb_gc_protect()</code></h1>
+      <div id="content"><div id='filecontents'><!-- summary: About GC Arena -->
+<h1 id="label-How+to+use+mrb_gc_arena_save-28-29-2Fmrb_gc_arena_restore-28-29-2Fmrb_gc_protect-28-29">How to use <code>mrb_gc_arena_save()</code>/<code>mrb_gc_arena_restore()</code>/<code>mrb_gc_protect()</code></h1>
 
-<p><em>This is an English translation of [Matz’s blog post][matz blog post]
-written in Japanese.</em>
-<em>Some parts are updated to reflect recent changes.</em>
-[matz blog post]: http://www.rubyist.net/~matz/20130731.html</p>
+<p><em>This is an English translation of blog post[https://www.rubyist.net/~matz/20130731.html] written in Japanese.</em> <em>Some parts are updated to reflect recent changes.</em></p>
 
-<p>When you are extending mruby using C language, you may encounter
-mysterious “arena overflow error” or memory leak or very slow
-execution speed.  This is an error indicating overflow of “GC arena”
-implementing “conservative GC”.</p>
+<p>When you are extending mruby using C language, you may encounter mysterious “arena overflow error” or memory leak or very slow execution speed. This is an error indicating overflow of “GC arena” implementing “conservative GC”.</p>
 
-<p>GC (garbage collector) must ensure that object is “alive”, in other
-words, that it is referenced by somewhere from program.  This can be
-determined by checking if the object can be directly or indirectly
-referenced by root.  The local variables, global variables and
-constants etc are root.</p>
+<p>GC (garbage collector) must ensure that object is “alive”, in other words, that it is referenced by somewhere from the program. This can be determined by checking if the object can be directly or indirectly referenced by root. The local variables, global variables and constants etc. are root.</p>
 
-<p>If program execution is performed inside mruby VM, there is nothing to
-worry about because GC can access all roots owned by VM.</p>
+<p>If program execution is performed inside mruby VM, there is nothing to worry about because GC can access all roots owned by the VM.</p>
 
-<p>The problem arises when executing C functions.  The object referenced
-by C variable is also “alive”, but mruby GC cannot aware of this, so
-it might mistakenly recognize the objects referenced by only C
-variables as dead.</p>
+<p>The problem arises when executing C functions. The object referenced by C variable is also “alive”, but mruby GC cannot aware of this, so it might mistakenly recognize the objects referenced by only C variables as dead.</p>
 
 <p>This can be a fatal bug if the GC tries to collect a live object.</p>
 
-<p>In CRuby, we scan C stack area, and use C variable as root to check
-whether object is alive or not.  Of course, because we are accessing C
-stack just as memory region, we never know it is an integer or a
-pointer.  We workaround this by assuming that if it looks like a
-pointer, then assume it as a pointer.  We call it “conservative”.</p>
+<p>In CRuby, we scan C stack area, and use C variable as root to check whether object is alive or not. Of course, because we are accessing C stack just as memory region, we never know it is an integer or a pointer. We work around this by assuming that if it looks like a pointer, then assume it as a pointer. We call it “conservative”.</p>
 
 <p>By the way, CRuby’s “conservative GC” has some problems.</p>
 
-<p>The biggest problem is we have no way to access to the stack area in
-portable way.  Therefore, we cannot use this method if we’d like to
-implement highly portable runtime, like mruby.</p>
+<p>The biggest problem is we have no way to access to the stack area in portable way. Therefore, we cannot use this method if we’d like to implement highly portable runtime, like mruby.</p>
 
-<p>So we came up with an another plan to implement “conservative GC” in mruby.</p>
+<p>So we came up with another plan to implement “conservative GC” in mruby.</p>
 
-<p>Again, the problem is when an object which was created in C function, becomes
-no longer referenced in the Ruby world, and cannot be treated as garbage.</p>
+<p>Again, the problem is when an object which was created in C function, becomes no longer referenced in the Ruby world, and cannot be treated as garbage.</p>
 
-<p>In mruby, we recognize all objects created in C function are alive.
-Then we have no problem such as confusing a live object as dead.</p>
+<p>In mruby, we recognize all objects created in C function are alive. Then we have no problem such as confusing a live object as dead.</p>
 
-<p>This means that because we cannot collect truly dead object, we may
-lose efficiency, but as a trade-off the GC itself is highly portable.
-We can say goodbye to the problem that GC deletes live objects due to
-optimization which sometimes occurs in CRuby.</p>
+<p>This means that because we cannot collect a truly dead object, we may lose efficiency, but as a trade-off the GC itself is highly portable. We can say goodbye to the problem that GC deletes live objects due to optimization which sometimes occurs in CRuby.</p>
 
-<p>According to this idea, we have a table, called “GC arena”, which
-remembers objects created in C function.</p>
+<p>According to this idea, we have a table, called “GC arena”, which remembers objects created in C function.</p>
 
-<p>The arena is stack structure, when C function execution is returned to mruby
-VM, all objects registered in the arena are popped.</p>
+<p>The arena is stack structure, when C function execution is returned to mruby VM, all objects registered in the arena are popped.</p>
 
-<p>This works very well, but can cause another problem: “arena overflow error” or
-memory leak.</p>
+<p>This works very well, but can cause another problem: “arena overflow error” or memory leak.</p>
 
-<p>As of this writing, mruby automatically extend arena to remember
-objects (See <code>MRB_GC_FIXED_ARENA</code> and <code>MRB_GC_ARENA_SIZE</code> in
-doc/guides/mrbconf.md).</p>
+<p>As of this writing, mruby automatically extend arena to remember objects (See <code>MRB_GC_FIXED_ARENA</code> and <code>MRB_GC_ARENA_SIZE</code> in <a href="mrbconf_md.html">doc/guides/mrbconf.md</a>).</p>
 
-<p>If you create many objects in C functions, memory usage will increase, since
-GC never kick in.  This memory usage may look like memory leak, but will also
-make execution slower as more memory will need to be allocated.</p>
+<p>If you create many objects in C functions, memory usage will increase, since GC never kicks in. This memory usage may look like memory leaks, but will also make execution slower as more memory will need to be allocated.</p>
 
-<p>With the build time configuration, you can limit the maximum size of
-arena (e.g., 100).  Then if you create many objects, arena overflows,
-thus you will get an “arena overflow error”.</p>
+<p>With the build time configuration, you can limit the maximum size of arena (e.g., 100). Then if you create many objects, arena overflows, thus you will get an “arena overflow error”.</p>
 
-<p>To workaround these problems, we have <code>mrb_gc_arena_save()</code> and
-<code>mrb_gc_arena_restore()</code> functions.</p>
+<p>To work around these problems, we have <code>mrb_gc_arena_save()</code> and <code>mrb_gc_arena_restore()</code> functions.</p>
 
-<p><code>int mrb_gc_arena_save(mrb)</code> returns the current position of the stack
-top of GC arena, and <code>void mrb_gc_arena_restore(mrb, idx)</code> sets the
-stack top position to back to given <code>idx</code>.</p>
+<p><code>int mrb_gc_arena_save(mrb)</code> returns the current position of the stack top of GC arena, and <code>void mrb_gc_arena_restore(mrb, idx)</code> sets the stack top position to back to given <code>idx</code>.</p>
 
 <p>We can use them like this:</p>
 
-<p>```c
-int arena_idx = mrb_gc_arena_save(mrb);</p>
+<pre class="code ruby"><code class="ruby">int arena_idx = mrb_gc_arena_save(mrb);
 
-<p>// …create objects…
-mrb_gc_arena_restore(mrb, arena_idx);</p>
+<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> ...create objects...
+mrb_gc_arena_restore(mrb, arena_idx);
+</code></pre>
 
-<p>```</p>
+<p>In mruby, C function calls are surrounded by this save/restore, but we can further optimize memory usage by surrounding save/restore, and can avoid creating arena overflow bugs.</p>
 
-<p>In mruby, C function calls are surrounded by this save/restore, but we
-can further optimize memory usage by surrounding save/restore, and can
-avoid creating arena overflow bugs.</p>
+<p>Let’s take a real example. Here is the source code of <code>Array#inspect</code>:</p>
 
-<p>Let’s take a real example.  Here is the source code of <code>Array#inspect</code>:</p>
-
-<p>```c
-static mrb_value
+<pre class="code ruby"><code class="ruby">static mrb_value
 inspect_ary(mrb_state *mrb, mrb_value ary, mrb_value list)
 {
   mrb_int i;
   mrb_value s, arystr;
-  char head[] = { ‘[’ };
-  char sep[] = { ‘,’, ‘ ‘ };
-  char tail[] = { ‘]’ };</p>
+  char head[] = { <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">[</span><span style="color:#710">'</span></span> };
+  char sep[] = { <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">,</span><span style="color:#710">'</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20"> </span><span style="color:#710">'</span></span> };
+  char tail[] = { <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">]</span><span style="color:#710">'</span></span> };
 
-<p>/* check recursive */
-  for(i=0; i&lt;RARRAY_LEN(list); i++) {
-    if (mrb_obj_equal(mrb, ary, RARRAY_PTR(list)[i])) {
-      return mrb_str_new(mrb, “[…]”, 5);
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* check recursive *</span><span style="color:#404">/</span></span>
+  <span style="color:#080;font-weight:bold">for</span> (i=<span style="color:#00D">0</span>; i&lt;RARRAY_LEN(list); i++) {
+    <span style="color:#080;font-weight:bold">if</span> (mrb_obj_equal(mrb, ary, RARRAY_PTR(list)[i])) {
+      <span style="color:#080;font-weight:bold">return</span> mrb_str_new(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">[...]</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">5</span>);
     }
-  }</p>
+  }
 
-<p>mrb_ary_push(mrb, list, ary);</p>
+  mrb_ary_push(mrb, list, ary);
 
-<p>arystr = mrb_str_new_capa(mrb, 64);
-  mrb_str_cat(mrb, arystr, head, sizeof(head));</p>
+  arystr = mrb_str_new_capa(mrb, <span style="color:#00D">64</span>);
+  mrb_str_cat(mrb, arystr, head, sizeof(head));
 
-<p>for(i=0; i&lt;RARRAY_LEN(ary); i++) {
-    int ai = mrb_gc_arena_save(mrb);</p>
+  <span style="color:#080;font-weight:bold">for</span> (i=<span style="color:#00D">0</span>; i&lt;RARRAY_LEN(ary); i++) {
+    int ai = mrb_gc_arena_save(mrb);
 
-<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">if</span> (i &gt; <span style="color:#00D">0</span>) {
-  mrb_str_cat(mrb, arystr, sep, sizeof(sep));
+    <span style="color:#080;font-weight:bold">if</span> (i &gt; <span style="color:#00D">0</span>) {
+      mrb_str_cat(mrb, arystr, sep, sizeof(sep));
+    }
+    <span style="color:#080;font-weight:bold">if</span> (mrb_array_p(RARRAY_PTR(ary)[i])) {
+      s = inspect_ary(mrb, RARRAY_PTR(ary)[i], list);
+    }
+    <span style="color:#080;font-weight:bold">else</span> {
+      s = mrb_inspect(mrb, RARRAY_PTR(ary)[i]);
+    }
+    mrb_str_cat(mrb, arystr, RSTRING_PTR(s), RSTRING_LEN(s));
+    mrb_gc_arena_restore(mrb, ai);
+  }
+
+  mrb_str_cat(mrb, arystr, tail, sizeof(tail));
+  mrb_ary_pop(mrb, list);
+
+  <span style="color:#080;font-weight:bold">return</span> arystr;
 }
-<span style="color:#080;font-weight:bold">if</span> (mrb_array_p(RARRAY_PTR(ary)[i])) {
-  s = inspect_ary(mrb, RARRAY_PTR(ary)[i], list);
-}
-<span style="color:#080;font-weight:bold">else</span> {
-  s = mrb_inspect(mrb, RARRAY_PTR(ary)[i]);
-}
-mrb_str_cat(mrb, arystr, RSTRING_PTR(s), RSTRING_LEN(s));
-mrb_gc_arena_restore(mrb, ai);   }
 </code></pre>
 
-<p>mrb_str_cat(mrb, arystr, tail, sizeof(tail));
-  mrb_ary_pop(mrb, list);</p>
+<p>This is a real example, so slightly complicated, but bear with me. The essence of <code>Array#inspect</code> is that after stringifying each element of array using <code>inspect</code> method, we join them together so that we can get <code>inspect</code> representation of the entire array.</p>
 
-<p>return arystr;
-}
-```</p>
+<p>After the <code>inspect</code> representation is created, we no longer require the individual string representation. This means that we don’t have to register these temporal objects into GC arena.</p>
 
-<p>This is a real example, so a little bit complicated, but bear with me.
-The essence of <code>Array#inspect</code> is that after stringifying each element
-of array using <code>inspect</code> method, we join them together so that we can
-get <code>inspect</code> representation of the entire array.</p>
+<p>Therefore, in order to keep the arena size small; the <code>ary_inspect()</code> function will do the following:</p>
+<ul><li>
+<p>save the position of the stack top using <code>mrb_gc_arena_save()</code>.</p>
+</li><li>
+<p>get <code>inspect</code> representation of each element.</p>
+</li><li>
+<p>append it to the constructing entire <code>inspect</code> representation of array.</p>
+</li><li>
+<p>restore stack top position using <code>mrb_gc_arena_restore()</code>.</p>
+</li></ul>
 
-<p>After the <code>inspect</code> representation is created, we no longer require the
-individual string representation.  This means that we don’t have to register
-these temporal objects into GC arena.</p>
+<p>Please note that the final <code>inspect</code> representation of entire array was created before the call of <code>mrb_gc_arena_restore()</code>. Otherwise, required temporal object may be deleted by GC.</p>
 
-<p>Therefore, in order to keep the arena size small; the <code>ary_inspect()</code> function
-will do the following:</p>
+<p>We may have an usecase where after creating many temporal objects, we’d like to keep some of them. In this case, we cannot use the same idea in <code>ary_inspect()</code> like appending objects to existing one. Instead, after <code>mrb_gc_arena_restore()</code>, we must re-register the objects we want to keep in the arena using <code>mrb_gc_protect(mrb, obj)</code>. Use <code>mrb_gc_protect()</code> with caution because it could also lead to an “arena overflow error”.</p>
 
-<ul>
-  <li>save the position of the stack top using <code>mrb_gc_arena_save()</code>.</li>
-  <li>get <code>inspect</code> representation of each element.</li>
-  <li>append it to the constructing entire <code>inspect</code> representation of array.</li>
-  <li>restore stack top position using <code>mrb_gc_arena_restore()</code>.</li>
-</ul>
+<p>We must also mention that when <code>mrb_funcall</code> is called in top level, the return value is also registered to GC arena, so repeated use of <code>mrb_funcall</code> may eventually lead to an “arena overflow error”.</p>
 
-<p>Please note that the final <code>inspect</code> representation of entire array
-was created before the call of <code>mrb_gc_arena_restore()</code>.  Otherwise,
-required temporal object may be deleted by GC.</p>
-
-<p>We may have a usecase where after creating many temporal objects, we’d
-like to keep some of them.  In this case, we cannot use the same idea
-in <code>ary_inspect()</code> like appending objects to existing one.
-Instead, after <code>mrb_gc_arena_restore()</code>, we must re-register the objects we
-want to keep in the arena using <code>mrb_gc_protect(mrb, obj)</code>.
-Use <code>mrb_gc_protect()</code> with caution because it could also lead to an “arena
-overflow error”.</p>
-
-<p>We must also mention that when <code>mrb_funcall</code> is called in top level, the return
-value is also registered to GC arena, so repeated use of <code>mrb_funcall</code> may
-eventually lead to an “arena overflow error”.</p>
-
-<p>Use <code>mrb_gc_arena_save()</code> and <code>mrb_gc_arena_restore()</code> or possible use of
-<code>mrb_gc_protect()</code> to workaround this.</p>
+<p>Use <code>mrb_gc_arena_save()</code> and <code>mrb_gc_arena_restore()</code> or possible use of <code>mrb_gc_protect()</code> to workaround this.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:07 2019 by
+  Generated on Fri Apr 10 23:46:09 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>
