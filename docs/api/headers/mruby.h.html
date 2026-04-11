@@ -6,17 +6,17 @@
 <title>
   Header: mruby.h
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mruby.h";
   relpath = '../';
 </script>
@@ -67,7 +67,8 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    <p>MRuby C API entry point</p>
+    
+<p>mruby C API entry point</p>
 
 
   </div>
@@ -98,8 +99,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a new class.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a new class.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_class_id-function" title="mrb_define_class_id">struct RClass * <strong>mrb_define_class_id</strong>(mrb_state *, mrb_sym, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -116,8 +135,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a new module.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a new module.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_module_id-function" title="mrb_define_module_id">struct RClass * <strong>mrb_define_module_id</strong>(mrb_state *, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -135,6 +172,26 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>Returns the singleton class of an object.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_singleton_class_ptr-function" title="mrb_singleton_class_ptr">struct RClass * <strong>mrb_singleton_class_ptr</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the singleton class of an object.</p>
 </div></span>
   
 </li>
@@ -152,7 +209,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Include a module in another class or module.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Include a module in another class or module.</p>
 </div></span>
   
 </li>
@@ -170,7 +228,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Prepends a module in another class or module.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepends a module in another class or module.</p>
 </div></span>
   
 </li>
@@ -188,8 +247,60 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a global function in ruby.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a global function in ruby.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_method_id-function" title="mrb_define_method_id">void <strong>mrb_define_method_id</strong>(mrb_state *, struct RClass *, mrb_sym, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_private_method-function" title="mrb_define_private_method">void <strong>mrb_define_private_method</strong>(mrb_state *, struct RClass *, const char *, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_private_method_id-function" title="mrb_define_private_method_id">void <strong>mrb_define_private_method_id</strong>(mrb_state *, struct RClass *, mrb_sym, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -206,8 +317,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a class method.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a class method.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_class_method_id-function" title="mrb_define_class_method_id">void <strong>mrb_define_class_method_id</strong>(mrb_state *, struct RClass *, mrb_sym, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -224,8 +353,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a singleton method.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a singleton method.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_singleton_method_id-function" title="mrb_define_singleton_method_id">void <strong>mrb_define_singleton_method_id</strong>(mrb_state *, struct RObject *, mrb_sym, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -242,8 +389,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a module function.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a module function.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_module_function_id-function" title="mrb_define_module_function_id">void <strong>mrb_define_module_function_id</strong>(mrb_state *, struct RClass *, mrb_sym, mrb_func_t, mrb_aspec)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -260,8 +425,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a constant.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a constant.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_const_id-function" title="mrb_define_const_id">void <strong>mrb_define_const_id</strong>(mrb_state*, struct RClass*, mrb_sym, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -278,7 +461,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Undefines a method.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Undefines a method.</p>
 </div></span>
   
 </li>
@@ -296,8 +480,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -314,8 +497,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Undefine a class method.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Undefine a class method.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_undef_class_method_id-function" title="mrb_undef_class_method_id">void <strong>mrb_undef_class_method_id</strong>(mrb_state *, struct RClass *, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -332,7 +533,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initialize a new object instance of c class.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize a new object instance of c class.</p>
 </div></span>
   
 </li>
@@ -350,8 +552,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -368,7 +569,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Creates a new instance of Class, Class.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new instance of Class, Class.</p>
 </div></span>
   
 </li>
@@ -386,7 +588,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Creates a new module, Module.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new module, Module.</p>
 </div></span>
   
 </li>
@@ -404,7 +607,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns an mrb_bool.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an mrb_bool.</p>
 </div></span>
   
 </li>
@@ -412,7 +616,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_class_get-function" title="mrb_class_get">struct RClass * <strong>mrb_class_get</strong>(mrb_state *, const char *)</a>
+    <a href="#mrb_class_defined_id-function" title="mrb_class_defined_id">mrb_bool <strong>mrb_class_defined_id</strong>(mrb_state *, mrb_sym)</a>
 
     
   </span>
@@ -422,15 +626,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets a class.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_exc_get-function" title="mrb_exc_get">struct RClass * <strong>mrb_exc_get</strong>(mrb_state *, const char *)</a>
+    <a href="#mrb_class_get-function" title="mrb_class_get">struct RClass* <strong>mrb_class_get</strong>(mrb_state *, const char *)</a>
 
     
   </span>
@@ -440,7 +643,44 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets a exception class.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a class.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_get_id-function" title="mrb_class_get_id">struct RClass* <strong>mrb_class_get_id</strong>(mrb_state *, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_exc_get_id-function" title="mrb_exc_get_id">struct RClass* <strong>mrb_exc_get_id</strong>(mrb_state *, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a exception class.</p>
 </div></span>
   
 </li>
@@ -458,8 +698,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns an mrb_bool.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an mrb_bool.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_defined_under_id-function" title="mrb_class_defined_under_id">mrb_bool <strong>mrb_class_defined_under_id</strong>(mrb_state *, struct RClass *, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -476,8 +734,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets a child class.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a child class.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_class_get_under_id-function" title="mrb_class_get_under_id">struct RClass * <strong>mrb_class_get_under_id</strong>(mrb_state *, struct RClass *, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -494,8 +770,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets a module.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a module.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_module_get_id-function" title="mrb_module_get_id">struct RClass * <strong>mrb_module_get_id</strong>(mrb_state *, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -512,8 +806,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets a module defined under another module.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a module defined under another module.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_module_get_under_id-function" title="mrb_module_get_under_id">struct RClass * <strong>mrb_module_get_under_id</strong>(mrb_state *, struct RClass *, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -530,7 +842,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>a function to raise NotImplementedError with current method name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>a function to raise NotImplementedError with current method name.</p>
 </div></span>
   
 </li>
@@ -548,7 +861,27 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>a function to be replacement of unimplemented method.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>a function to be replacement of unimplemented method.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_obj_itself-function" title="mrb_obj_itself">mrb_value <strong>mrb_obj_itself</strong>(mrb_state*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>just return it self.</p>
 </div></span>
   
 </li>
@@ -566,7 +899,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Duplicate an object.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Duplicate an object.</p>
 </div></span>
   
 </li>
@@ -584,7 +918,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns true if obj responds to the given method.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if obj responds to the given method.</p>
 </div></span>
   
 </li>
@@ -592,25 +927,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_define_class_under-function" title="mrb_define_class_under">struct RClass * <strong>mrb_define_class_under</strong>(mrb_state *, struct RClass *, const char *, struct RClass *)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Defines a new class under a given module.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_define_module_under-function" title="mrb_define_module_under">struct RClass * <strong>mrb_define_module_under</strong>(mrb_state *, struct RClass *, const char *)</a>
+    <a href="#mrb_define_class_under-function" title="mrb_define_class_under">struct RClass* <strong>mrb_define_class_under</strong>(mrb_state *, struct RClass *, const char *, struct RClass *)</a>
 
     
   </span>
@@ -621,7 +938,59 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>Defines a new class under a given module.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_class_under_id-function" title="mrb_define_class_under_id">struct RClass* <strong>mrb_define_class_under_id</strong>(mrb_state *, struct RClass *, mrb_sym, struct RClass *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_module_under-function" title="mrb_define_module_under">struct RClass* <strong>mrb_define_module_under</strong>(mrb_state *, struct RClass *, const char *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_module_under_id-function" title="mrb_define_module_under_id">struct RClass* <strong>mrb_define_module_under_id</strong>(mrb_state *, struct RClass *, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -638,7 +1007,27 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieve arguments from mrb_state.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve arguments from mrb_state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_get_args_a-function" title="mrb_get_args_a">mrb_int <strong>mrb_get_args_a</strong>(mrb_state *, mrb_args_format, void*, ptr)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Array version of mrb_get_args().</p>
 </div></span>
   
 </li>
@@ -656,7 +1045,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>get method symbol.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>get method symbol.</p>
 </div></span>
   
 </li>
@@ -674,7 +1064,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieve number of arguments from mrb_state.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve number of arguments from mrb_state.</p>
 </div></span>
   
 </li>
@@ -682,7 +1073,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_get_argv-function" title="mrb_get_argv">mrb_value* <strong>mrb_get_argv</strong>(mrb_state *)</a>
+    <a href="#mrb_get_arg1-function" title="mrb_get_arg1">mrb_value <strong>mrb_get_arg1</strong>(mrb_state *)</a>
 
     
   </span>
@@ -693,6 +1084,26 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>Retrieve the first and only argument from mrb_state.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_block_given_p-function" title="mrb_block_given_p">mrb_bool <strong>mrb_block_given_p</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check if a block argument is given from mrb_state.</p>
 </div></span>
   
 </li>
@@ -710,8 +1121,26 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Call existing ruby functions.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Call existing ruby functions.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_funcall_id-function" title="mrb_funcall_id">mrb_value <strong>mrb_funcall_id</strong>(mrb_state *, mrb_value, mrb_sym, mrb_int, ...)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -728,7 +1157,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Call existing ruby functions.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Call existing ruby functions.</p>
 </div></span>
   
 </li>
@@ -746,7 +1176,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Call existing ruby functions with a block.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Call existing ruby functions with a block.</p>
 </div></span>
   
 </li>
@@ -764,7 +1195,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Create a symbol.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Create a symbol from C string.</p>
 </div></span>
   
 </li>
@@ -782,8 +1214,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -800,8 +1231,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -818,8 +1248,60 @@
   
 
   
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_intern_check_cstr-function" title="mrb_intern_check_cstr">mrb_sym <strong>mrb_intern_check_cstr</strong>(mrb_state*, const char*)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
     <span class="summary_desc"><div class='inline'>
+<p>mrb_intern_check series functions returns 0 if the symbol is not defined.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_intern_check-function" title="mrb_intern_check">mrb_sym <strong>mrb_intern_check</strong>(mrb_state*, const char*, size_t)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_intern_check_str-function" title="mrb_intern_check_str">mrb_sym <strong>mrb_intern_check_str</strong>(mrb_state*, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -837,6 +1319,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>otherwise returns mrb_value.</p>
 </div></span>
   
 </li>
@@ -854,8 +1337,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -872,8 +1354,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -890,8 +1371,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -908,7 +1388,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>raise RuntimeError if no mem.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>raise RuntimeError if no mem.</p>
 </div></span>
   
 </li>
@@ -926,7 +1407,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>ditto.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>ditto.</p>
 </div></span>
   
 </li>
@@ -944,7 +1426,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>ditto.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>ditto.</p>
 </div></span>
   
 </li>
@@ -962,7 +1445,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>return NULL if no memory available.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>return NULL if no memory available.</p>
 </div></span>
   
 </li>
@@ -980,7 +1464,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>return NULL if no memory available.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>return NULL if no memory available.</p>
 </div></span>
   
 </li>
@@ -998,7 +1483,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>return NULL if no memory available.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>return NULL if no memory available.</p>
 </div></span>
   
 </li>
@@ -1016,15 +1502,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_str_new-function" title="mrb_str_new">mrb_value <strong>mrb_str_new</strong>(mrb_state *, const char *, size_t)</a>
+    <a href="#mrb_str_new-function" title="mrb_str_new">mrb_value <strong>mrb_str_new</strong>(mrb_state *, const char *, mrb_int)</a>
 
     
   </span>
@@ -1034,8 +1519,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1052,7 +1536,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Turns a C string into a Ruby string value.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Turns a C string into a Ruby string value.</p>
 </div></span>
   
 </li>
@@ -1060,7 +1545,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_str_new_static-function" title="mrb_str_new_static">mrb_value <strong>mrb_str_new_static</strong>(mrb_state *, const char *, size_t)</a>
+    <a href="#mrb_str_new_static-function" title="mrb_str_new_static">mrb_value <strong>mrb_str_new_static</strong>(mrb_state *, const char *, mrb_int)</a>
 
     
   </span>
@@ -1070,8 +1555,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1088,8 +1572,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1106,7 +1589,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Creates new mrb_state.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Creates new mrb_state.</p>
 </div></span>
   
 </li>
@@ -1124,7 +1608,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Create new mrb_state with custom allocators.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Create new mrb_state with custom allocators.</p>
 </div></span>
   
 </li>
@@ -1142,7 +1627,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Create new mrb_state with just the MRuby core.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Create new mrb_state with just the mruby core.</p>
 </div></span>
   
 </li>
@@ -1160,7 +1646,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Closes and frees a mrb_state.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Closes and frees a mrb_state.</p>
 </div></span>
   
 </li>
@@ -1178,7 +1665,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The default allocation function.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The default allocation function.</p>
 </div></span>
   
 </li>
@@ -1196,15 +1684,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_run-function" title="mrb_run">mrb_value <strong>mrb_run</strong>(mrb_state *, struct RProc*, mrb_value)</a>
+    <a href="#mrb_top_run-function" title="mrb_top_run">mrb_value <strong>mrb_top_run</strong>(mrb_state *, const struct RProc *, mrb_value, mrb_int)</a>
 
     
   </span>
@@ -1215,6 +1702,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>Enter the mruby VM and execute the proc.</p>
 </div></span>
   
 </li>
@@ -1222,7 +1710,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_top_run-function" title="mrb_top_run">mrb_value <strong>mrb_top_run</strong>(mrb_state *, struct RProc *, mrb_value, unsigned, stack_keep)</a>
+    <a href="#mrb_vm_run-function" title="mrb_vm_run">mrb_value <strong>mrb_vm_run</strong>(mrb_state *, const struct RProc *, mrb_value, mrb_int)</a>
 
     
   </span>
@@ -1232,15 +1720,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_vm_run-function" title="mrb_vm_run">mrb_value <strong>mrb_vm_run</strong>(mrb_state *, struct RProc *, mrb_value, unsigned, stack_keep)</a>
+    <a href="#mrb_vm_exec-function" title="mrb_vm_exec">mrb_value <strong>mrb_vm_exec</strong>(mrb_state *, const struct RProc *, const mrb_code *)</a>
 
     
   </span>
@@ -1250,26 +1737,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_vm_exec-function" title="mrb_vm_exec">mrb_value <strong>mrb_vm_exec</strong>(mrb_state *, struct RProc *, const mrb_code *)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1286,8 +1754,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1304,8 +1771,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1322,8 +1788,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1340,8 +1805,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1358,8 +1822,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1376,15 +1839,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_convert_to_integer-function" title="mrb_convert_to_integer">mrb_value <strong>mrb_convert_to_integer</strong>(mrb_state *, mrb_value, mrb_int)</a>
+    <a href="#mrb_ensure_float_type-function" title="mrb_ensure_float_type">mrb_value <strong>mrb_ensure_float_type</strong>(mrb_state *, mrb_value)</a>
 
     
   </span>
@@ -1394,44 +1856,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_Integer-function" title="mrb_Integer">mrb_value <strong>mrb_Integer</strong>(mrb_state *, mrb_value)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_Float-function" title="mrb_Float">mrb_value <strong>mrb_Float</strong>(mrb_state *, mrb_value)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1448,8 +1873,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1466,8 +1890,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1484,43 +1907,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>mrb_cmp(mrb, obj1, obj2): 1:0:-1; -2 for error.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_gc_arena_save-function" title="mrb_gc_arena_save">int <strong>mrb_gc_arena_save</strong>(mrb_state *)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
     <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_gc_arena_restore-function" title="mrb_gc_arena_restore">void <strong>mrb_gc_arena_restore</strong>(mrb_state *, int)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
+<p>mrb_cmp(mrb, obj1, obj2): 1:0:-1; -2 for error.</p>
 </div></span>
   
 </li>
@@ -1538,8 +1926,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1556,15 +1943,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_incremental_gc-function" title="mrb_incremental_gc">void <strong>mrb_incremental_gc</strong>(mrb_state *)</a>
+    <a href="#mrb_incremental_gc-function" title="mrb_incremental_gc">void <strong>mrb_incremental_gc</strong>(mrb_state*)</a>
 
     
   </span>
@@ -1574,8 +1960,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1592,15 +1977,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_field_write_barrier-function" title="mrb_field_write_barrier">void <strong>mrb_field_write_barrier</strong>(mrb_state *, struct RBasic*, struct RBasic*)</a>
+    <a href="#mrb_field_write_barrier-function" title="mrb_field_write_barrier">void <strong>mrb_field_write_barrier</strong>(mrb_state*, struct RBasic*, struct RBasic*)</a>
 
     
   </span>
@@ -1610,8 +1994,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1628,15 +2011,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_check_convert_type-function" title="mrb_check_convert_type">mrb_value <strong>mrb_check_convert_type</strong>(mrb_state *, mrb_value, enum, type, const char *, const char *)</a>
+    <a href="#mrb_type_convert-function" title="mrb_type_convert">mrb_value <strong>mrb_type_convert</strong>(mrb_state *, mrb_value, enum, type, mrb_sym)</a>
 
     
   </span>
@@ -1646,8 +2028,24 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_type_convert_check-function" title="mrb_type_convert_check">mrb_value <strong>mrb_type_convert_check</strong>(mrb_state *, mrb_value, enum, type, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1664,8 +2062,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1682,8 +2079,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1700,26 +2096,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_convert_type-function" title="mrb_convert_type">mrb_value <strong>mrb_convert_type</strong>(mrb_state *, mrb_value, enum, type, const char *, const char *)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1736,8 +2113,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1754,8 +2130,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1772,15 +2147,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_exc_new-function" title="mrb_exc_new">mrb_value <strong>mrb_exc_new</strong>(mrb_state *, struct RClass *, const char *, size_t)</a>
+    <a href="#mrb_exc_new-function" title="mrb_exc_new">mrb_value <strong>mrb_exc_new</strong>(mrb_state *, struct RClass *, const char *, mrb_int)</a>
 
     
   </span>
@@ -1790,8 +2164,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1808,8 +2181,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1826,8 +2198,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1844,8 +2215,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1862,8 +2232,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1880,8 +2249,24 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_argnum_error-function" title="mrb_argnum_error">mrb_noreturn <strong>mrb_argnum_error</strong>(mrb_state *, mrb_int, int, int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1898,15 +2283,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_bug-function" title="mrb_bug">mrb_noreturn <strong>mrb_bug</strong>(mrb_state *, const char *, ...)</a>
+    <a href="#mrb_bug-function" title="mrb_bug">mrb_noreturn <strong>mrb_bug</strong>(mrb_state *, const char *)</a>
 
     
   </span>
@@ -1916,8 +2300,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1934,8 +2317,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1952,8 +2334,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -1970,7 +2351,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>function for <code>raisef</code> formatting.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>function for <code>raisef</code> formatting.</p>
 </div></span>
   
 </li>
@@ -1988,8 +2370,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2006,8 +2387,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2024,8 +2404,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2042,7 +2421,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>mrb_gc_protect() leaves the object in the arena.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>mrb_gc_protect() leaves the object in the arena.</p>
 </div></span>
   
 </li>
@@ -2060,7 +2440,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>mrb_gc_register() keeps the object from GC.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>mrb_gc_register() keeps the object from GC.</p>
 </div></span>
   
 </li>
@@ -2078,7 +2459,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>mrb_gc_unregister() removes the object from GC root.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>mrb_gc_unregister() removes the object from GC root.</p>
 </div></span>
   
 </li>
@@ -2086,7 +2468,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_to_int-function" title="mrb_to_int">mrb_value <strong>mrb_to_int</strong>(mrb_state *, mrb_value)</a>
+    <a href="#mrb_ensure_array_type-function" title="mrb_ensure_array_type">mrb_value <strong>mrb_ensure_array_type</strong>(mrb_state *, mrb_value)</a>
 
     
   </span>
@@ -2097,6 +2479,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>type conversion/check functions.</p>
 </div></span>
   
 </li>
@@ -2104,7 +2487,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_to_str-function" title="mrb_to_str">mrb_value <strong>mrb_to_str</strong>(mrb_state *, mrb_value)</a>
+    <a href="#mrb_check_array_type-function" title="mrb_check_array_type">mrb_value <strong>mrb_check_array_type</strong>(mrb_state *, mrb_value)</a>
 
     
   </span>
@@ -2114,7 +2497,112 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>string type checking (contrary to the name, it doesn’t convert).</p>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ensure_hash_type-function" title="mrb_ensure_hash_type">mrb_value <strong>mrb_ensure_hash_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_hash_type-function" title="mrb_check_hash_type">mrb_value <strong>mrb_check_hash_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ensure_string_type-function" title="mrb_ensure_string_type">mrb_value <strong>mrb_ensure_string_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_string_type-function" title="mrb_check_string_type">mrb_value <strong>mrb_check_string_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ensure_integer_type-function" title="mrb_ensure_integer_type">mrb_value <strong>mrb_ensure_integer_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>check if val is an integer (including Bigint).</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_ensure_int_type-function" title="mrb_ensure_int_type">mrb_value <strong>mrb_ensure_int_type</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>check if val fit in mrb_int.</p>
 </div></span>
   
 </li>
@@ -2133,6 +2621,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>string type checking (contrary to the name, it doesn’t convert).</p>
 </div></span>
   
 </li>
@@ -2150,8 +2639,24 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_frozen_value-function" title="mrb_check_frozen_value">void <strong>mrb_check_frozen_value</strong>(mrb_state *, mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2168,8 +2673,24 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_define_alias_id-function" title="mrb_define_alias_id">void <strong>mrb_define_alias_id</strong>(mrb_state *, struct RClass *, mrb_sym, mrb_sym)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2186,8 +2707,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2204,8 +2724,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2222,15 +2741,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_obj_is_instance_of-function" title="mrb_obj_is_instance_of">mrb_bool <strong>mrb_obj_is_instance_of</strong>(mrb_state *, mrb_value, struct RClass*)</a>
+    <a href="#mrb_obj_is_instance_of-function" title="mrb_obj_is_instance_of">mrb_bool <strong>mrb_obj_is_instance_of</strong>(mrb_state *, mrb_value, const struct RClass*)</a>
 
     
   </span>
@@ -2240,8 +2758,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2258,7 +2775,25 @@
   
 
   
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_fiber_new-function" title="mrb_fiber_new">mrb_value <strong>mrb_fiber_new</strong>(mrb_state *, const struct RProc *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
     <span class="summary_desc"><div class='inline'>
+<p>Create a new Fiber from proc object.</p>
 </div></span>
   
 </li>
@@ -2276,7 +2811,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Resume a Fiber.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Resume a Fiber.</p>
 </div></span>
   
 </li>
@@ -2294,7 +2830,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Yield a Fiber.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Yield a Fiber.</p>
 </div></span>
   
 </li>
@@ -2312,7 +2849,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Check if a Fiber is alive.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Check if a Fiber is alive.</p>
 </div></span>
   
 </li>
@@ -2330,98 +2868,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_pool_open-function" title="mrb_pool_open">struct mrb_pool* <strong>mrb_pool_open</strong>(mrb_state*)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_pool_close-function" title="mrb_pool_close">void <strong>mrb_pool_close</strong>(struct mrb_pool*)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_pool_alloc-function" title="mrb_pool_alloc">void* <strong>mrb_pool_alloc</strong>(struct mrb_pool*, size_t)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_pool_realloc-function" title="mrb_pool_realloc">void* <strong>mrb_pool_realloc</strong>(struct mrb_pool*, void*, size_t, size_t)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_pool_can_realloc-function" title="mrb_pool_can_realloc">mrb_bool <strong>mrb_pool_can_realloc</strong>(struct mrb_pool*, void*, size_t)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2438,7 +2885,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>temporary memory allocation, only effective while GC arena is kept.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>temporary memory allocation, only effective while GC arena is kept.</p>
 </div></span>
   
 </li>
@@ -2456,8 +2904,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2474,8 +2921,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2492,8 +2938,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2510,8 +2955,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -2547,6 +2991,11 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="__func__-define" class=""><small>#define</small> __func__
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="mrb_assert-define" class=""><small>#define</small> mrb_assert
         
       </dt>
@@ -2558,6 +3007,76 @@
       <dd><pre class="code"></pre></dd>
     
       <dt id="mrb_static_assert-define" class=""><small>#define</small> mrb_static_assert
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>The <code>mrb_static_assert()</code> macro function takes one or two arguments.</p>
+
+<pre class="code c"><code class="c"> mrb_static_assert(expect_condition);
+ mrb_static_assert(expect_condition, error_message);
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_static_assert1-define" class=""><small>#define</small> mrb_static_assert1
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_static_assert2-define" class=""><small>#define</small> mrb_static_assert2
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>for old G+<code>/Clang+</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="_mrb_static_assert_cat0-define" class=""><small>#define</small> _mrb_static_assert_cat0
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="_mrb_static_assert_cat-define" class=""><small>#define</small> _mrb_static_assert_cat
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="_mrb_static_assert_id-define" class=""><small>#define</small> _mrb_static_assert_id
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_static_assert_expand-define" class=""><small>#define</small> mrb_static_assert_expand
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_static_assert_selector-define" class=""><small>#define</small> mrb_static_assert_selector
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_static_assert_powerof2-define" class=""><small>#define</small> mrb_static_assert_powerof2
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -2587,15 +3106,11 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_METHOD_CACHE-define" class=""><small>#define</small> MRB_METHOD_CACHE
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
       <dt id="MRB_METHOD_CACHE_SIZE-define" class=""><small>#define</small> MRB_METHOD_CACHE_SIZE
         <div class="docstring">
   <div class="discussion">
-    <p>cache size needs to be power of 2</p>
+    
+<p>cache size needs to be power of 2</p>
 
 
   </div>
@@ -2609,10 +3124,16 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="mrb_exc_get-define" class=""><small>#define</small> mrb_exc_get
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="MRB_ARGS_REQ-define" class=""><small>#define</small> MRB_ARGS_REQ
         <div class="docstring">
   <div class="discussion">
-    <p>Function requires n arguments.</p>
+    
+<p>Function requires n arguments.</p>
 
 
   </div>
@@ -2629,7 +3150,8 @@
       <dt id="MRB_ARGS_OPT-define" class=""><small>#define</small> MRB_ARGS_OPT
         <div class="docstring">
   <div class="discussion">
-    <p>Function takes n optional arguments</p>
+    
+<p>Function takes n optional arguments</p>
 
 
   </div>
@@ -2646,7 +3168,8 @@
       <dt id="MRB_ARGS_ARG-define" class=""><small>#define</small> MRB_ARGS_ARG
         <div class="docstring">
   <div class="discussion">
-    <p>Function takes n1 mandatory arguments and n2 optional arguments</p>
+    
+<p>Function takes n1 mandatory arguments and n2 optional arguments</p>
 
 
   </div>
@@ -2663,7 +3186,8 @@
       <dt id="MRB_ARGS_REST-define" class=""><small>#define</small> MRB_ARGS_REST
         <div class="docstring">
   <div class="discussion">
-    <p>rest argument</p>
+    
+<p>rest argument</p>
 
 
   </div>
@@ -2680,7 +3204,8 @@
       <dt id="MRB_ARGS_POST-define" class=""><small>#define</small> MRB_ARGS_POST
         <div class="docstring">
   <div class="discussion">
-    <p>required arguments after rest</p>
+    
+<p>required arguments after rest</p>
 
 
   </div>
@@ -2697,7 +3222,8 @@
       <dt id="MRB_ARGS_KEY-define" class=""><small>#define</small> MRB_ARGS_KEY
         <div class="docstring">
   <div class="discussion">
-    <p>keyword arguments (n of keys, kdict)</p>
+    
+<p>keyword arguments (n of keys, kdict)</p>
 
 
   </div>
@@ -2714,7 +3240,8 @@
       <dt id="MRB_ARGS_BLOCK-define" class=""><small>#define</small> MRB_ARGS_BLOCK
         <div class="docstring">
   <div class="discussion">
-    <p>Function takes a block argument</p>
+    
+<p>Function takes a block argument</p>
 
 
   </div>
@@ -2731,7 +3258,8 @@
       <dt id="MRB_ARGS_ANY-define" class=""><small>#define</small> MRB_ARGS_ANY
         <div class="docstring">
   <div class="discussion">
-    <p>Function accepts any number of arguments</p>
+    
+<p>Function accepts any number of arguments</p>
 
 
   </div>
@@ -2748,7 +3276,8 @@
       <dt id="MRB_ARGS_NONE-define" class=""><small>#define</small> MRB_ARGS_NONE
         <div class="docstring">
   <div class="discussion">
-    <p>Function accepts no arguments</p>
+    
+<p>Function accepts no arguments</p>
 
 
   </div>
@@ -2765,11 +3294,8 @@
       <dt id="mrb_strlen_lit-define" class=""><small>#define</small> mrb_strlen_lit
         <div class="docstring">
   <div class="discussion">
-    <p><code>strlen</code> for character string literals (use with caution or <code>strlen</code> instead)
-   Adjacent string literals are concatenated in C/C++ in translation phase 6.
-   If <code>lit</code> is not one, the compiler will report a syntax error:
-    MSVC: “error C2143: syntax error : missing ‘)’ before ‘string’”
-    GCC:  “error: expected ‘)’ before string constant”</p>
+    
+<p><code>strlen</code> for character string literals (use with caution or <code>strlen</code> instead) Adjacent string literals are concatenated in C/C++ in translation phase 6. If <code>lit</code> is not one, the compiler will report a syntax error: MSVC: “error C2143: syntax error : missing ‘)’ before ‘string’” GCC: “error: expected ‘)’ before string constant”</p>
 
 
   </div>
@@ -2800,6 +3326,42 @@
     
       <dt id="mrb_sym2str-define" class=""><small>#define</small> mrb_sym2str
         
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_OBJ_ALLOC-define" class=""><small>#define</small> MRB_OBJ_ALLOC
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Allocates a Ruby object that matches the constant literal defined in <code>enum mrb_vtype</code> and returns a pointer to the corresponding C type.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Reference to the newly created object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
       </dt>
       <dd><pre class="code"></pre></dd>
     
@@ -2851,7 +3413,8 @@
       <dt id="mrb_toplevel_run_keep-define" class=""><small>#define</small> mrb_toplevel_run_keep
         <div class="docstring">
   <div class="discussion">
-    <p>compatibility macros</p>
+    
+<p>compatibility macros</p>
 
 
   </div>
@@ -2875,12 +3438,55 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="mrb_as_float-define" class=""><small>#define</small> mrb_as_float
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_to_float-define" class=""><small>#define</small> mrb_to_float
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>obsolete: use mrb_ensure_float_type() instead</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_gc_arena_save-define" class=""><small>#define</small> mrb_gc_arena_save
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_gc_arena_restore-define" class=""><small>#define</small> mrb_gc_arena_restore
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="mrb_gc_mark_value-define" class=""><small>#define</small> mrb_gc_mark_value
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
       <dt id="mrb_field_write_barrier_value-define" class=""><small>#define</small> mrb_field_write_barrier_value
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_convert_type-define" class=""><small>#define</small> mrb_convert_type
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_check_convert_type-define" class=""><small>#define</small> mrb_check_convert_type
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -2940,13 +3546,11 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="E_RUNTIME_ERROR-define" class=""><small>#define</small> E_RUNTIME_ERROR
+      <dt id="MRB_ERROR_SYM-define" class=""><small>#define</small> MRB_ERROR_SYM
         <div class="docstring">
   <div class="discussion">
-    <p>macros to get typical exception objects
-  note:
-  + those E_* macros requires mrb_state* variable named mrb.
-  + exception objects obtained from those macros are local to mrb</p>
+    
+<p>macros to get typical exception objects note: + those E_* macros requires mrb_state* variable named mrb. + exception objects obtained from those macros are local to mrb</p>
 
 
   </div>
@@ -2960,7 +3564,27 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="E_EXCEPTION-define" class=""><small>#define</small> E_EXCEPTION
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_STANDARD_ERROR-define" class=""><small>#define</small> E_STANDARD_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_RUNTIME_ERROR-define" class=""><small>#define</small> E_RUNTIME_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="E_TYPE_ERROR-define" class=""><small>#define</small> E_TYPE_ERROR
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="E_ZERODIV_ERROR-define" class=""><small>#define</small> E_ZERODIV_ERROR
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -3020,25 +3644,108 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="E_FLOATDOMAIN_ERROR-define" class=""><small>#define</small> E_FLOATDOMAIN_ERROR
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
       <dt id="E_KEY_ERROR-define" class=""><small>#define</small> E_KEY_ERROR
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_int-define" class=""><small>#define</small> mrb_int
+      <dt id="E_FLOATDOMAIN_ERROR-define" class=""><small>#define</small> E_FLOATDOMAIN_ERROR
         
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_string_type-define" class=""><small>#define</small> mrb_string_type
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>obsolete: use mrb_ensure_string_type() instead</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_to_str-define" class=""><small>#define</small> mrb_to_str
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_str_to_str-define" class=""><small>#define</small> mrb_str_to_str
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>obsolete: use mrb_obj_as_string() instead</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_as_int-define" class=""><small>#define</small> mrb_as_int
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_to_integer-define" class=""><small>#define</small> mrb_to_integer
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>obsolete: use mrb_ensure_int_type() instead</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_to_int-define" class=""><small>#define</small> mrb_to_int
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_int-define" class=""><small>#define</small> mrb_int
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>obsolete function(s); will be removed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
       </dt>
       <dd><pre class="code"></pre></dd>
     
       <dt id="E_FIBER_ERROR-define" class=""><small>#define</small> E_FIBER_ERROR
         <div class="docstring">
   <div class="discussion">
-    <p>FiberError reference</p>
+    
+<p>FiberError reference</p>
 
 <p>Implemented in mruby-fiber</p>
 
@@ -3064,6 +3771,11 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="mrb_int_hash_func-define" class=""><small>#define</small> mrb_int_hash_func
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
   </dl>
 
 
@@ -3073,7 +3785,8 @@
       <dt id="mrb_code-typedef" class=""><small>typedef</small> mrb_code
         <div class="docstring">
   <div class="discussion">
-    <p>MRuby C API entry point</p>
+    
+<p>mruby C API entry point</p>
 
 
   </div>
@@ -3090,7 +3803,8 @@
       <dt id="mrb_aspec-typedef" class=""><small>typedef</small> mrb_aspec
         <div class="docstring">
   <div class="discussion">
-    <p>\class mrb_aspec</p>
+    
+<p>class mrb_aspec</p>
 
 <p>Specifies the number of arguments a function takes</p>
 
@@ -3108,7 +3822,7 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_method_t-typedef" class=""><small>typedef</small> mrb_method_t
+      <dt id="mrb_irep-typedef" class=""><small>typedef</small> mrb_irep
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -3116,135 +3830,163 @@
       <dt id="mrb_args_format-typedef" class=""><small>typedef</small> mrb_args_format
         <div class="docstring">
   <div class="discussion">
-    <p>Format specifiers for <span class='object_link'><a href="#mrb_get_args-function" title="mrb_get_args (function)">mrb_get_args</a></span> function</p>
+    
+<p>Format specifiers for <span class='object_link'><a href="#mrb_get_args-function" title="mrb_get_args (function)">mrb_get_args</a></span> function</p>
 
 <p>Must be a C string composed of the following format specifiers:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">char</th>
-      <th>Ruby type</th>
-      <th>C types</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><code>o</code></td>
-      <td>Object</td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-      <td>Could be used to retrieve any type of argument</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>C</code></td>
-      <td>Class/<span class='object_link'><a href="../Module.html" title="Module (class)">Module</a></span></td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>S</code></td>
-      <td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-      <td>when <code>!</code> follows, the value may be <code>nil</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>A</code></td>
-      <td><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-      <td>when <code>!</code> follows, the value may be <code>nil</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>H</code></td>
-      <td><span class='object_link'><a href="../Hash.html" title="Hash (class)">Hash</a></span></td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-      <td>when <code>!</code> follows, the value may be <code>nil</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>s</code></td>
-      <td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
-      <td>char *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
-      <td>Receive two arguments; <code>s!</code> gives (<code>NULL</code>,<code>0</code>) for <code>nil</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>z</code></td>
-      <td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
-      <td>char *</td>
-      <td><code>NULL</code> terminated string; <code>z!</code> gives <code>NULL</code> for <code>nil</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>a</code></td>
-      <td><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span> *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
-      <td>Receive two arguments; <code>a!</code> gives (<code>NULL</code>,<code>0</code>) for <code>nil</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>f</code></td>
-      <td><span class='object_link'><a href="../Fixnum.html" title="Fixnum (class)">Fixnum</a></span>/<span class='object_link'><a href="../Float.html" title="Float (class)">Float</a></span></td>
-      <td><span class='object_link'><a href="mruby_2Fboxing_no.h.html#mrb_float-define" title="mrb_float (define)">mrb_float</a></span></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>i</code></td>
-      <td><span class='object_link'><a href="../Fixnum.html" title="Fixnum (class)">Fixnum</a></span>/<span class='object_link'><a href="../Float.html" title="Float (class)">Float</a></span></td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>b</code></td>
-      <td>boolean</td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_bool-define" title="mrb_bool (define)">mrb_bool</a></span></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>n</code></td>
-      <td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span>/<span class='object_link'><a href="../Symbol.html" title="Symbol (class)">Symbol</a></span></td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_sym-typedef" title="mrb_sym (typedef)">mrb_sym</a></span></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>d</code></td>
-      <td>data</td>
-      <td>void *, mruby.h.mrb_data_type const</td>
-      <td>2nd argument will be used to check data type so it won’t be modified; when <code>!</code> follows, the value may be <code>nil</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>I</code></td>
-      <td>inline struct</td>
-      <td>void *</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>&amp;</code></td>
-      <td>block</td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
-      <td>&amp;! raises exception if no block given.</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>*</code></td>
-      <td>rest arguments</td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span> *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
-      <td>Receive the rest of arguments as an array; <code>*!</code> avoid copy of the stack.</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>\|</code></td>
-      <td>optional</td>
-      <td> </td>
-      <td>After this spec following specs would be optional.</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>?</code></td>
-      <td>optional given</td>
-      <td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_bool-define" title="mrb_bool (define)">mrb_bool</a></span></td>
-      <td><code>TRUE</code> if preceding argument is given. Used to check optional argument is given.</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><code>:</code></td>
-      <td>keyword args</td>
-      <td><span class='object_link'><a href="#mrb_kwargs-typedef" title="mrb_kwargs (typedef)">mrb_kwargs</a></span> const</td>
-      <td>Get keyword arguments. @see mrb_kwargs</td>
-    </tr>
-  </tbody>
+<table role="table">
+<thead>
+<tr>
+<th align="center">char</th>
+<th>Ruby type</th>
+<th>C types</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">‘o`</td>
+<td>Object</td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+<td>Could be used to retrieve any type of argument</td>
+</tr>
+<tr>
+<td align="center">‘C`</td>
+<td>Class/<span class='object_link'><a href="../Module.html" title="Module (class)">Module</a></span></td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+<td>when ‘!` follows, the value may be `nil`</td>
+</tr>
+<tr>
+<td align="center">‘S`</td>
+<td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+<td>when ‘!` follows, the value may be `nil`</td>
+</tr>
+<tr>
+<td align="center">‘A`</td>
+<td><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+<td>when ‘!` follows, the value may be `nil`</td>
+</tr>
+<tr>
+<td align="center">‘H`</td>
+<td><span class='object_link'><a href="../Hash.html" title="Hash (class)">Hash</a></span></td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+<td>when ‘!` follows, the value may be `nil`</td>
+</tr>
+<tr>
+<td align="center">‘s`</td>
+<td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
+<td>const char *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
+<td>Receive two arguments; ‘s!` gives (`NULL`,`0`) for `nil`</td>
+</tr>
+<tr>
+<td align="center">‘z`</td>
+<td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></td>
+<td>const char *</td>
+<td>‘NULL` terminated string; `z!` gives `NULL` for `nil`</td>
+</tr>
+<tr>
+<td align="center">‘a`</td>
+<td><span class='object_link'><a href="../Array.html" title="Array (class)">Array</a></span></td>
+<td>const <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span> *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
+<td>Receive two arguments; ‘a!` gives (`NULL`,`0`) for `nil`</td>
+</tr>
+<tr>
+<td align="center">‘c`</td>
+<td>Class/<span class='object_link'><a href="../Module.html" title="Module (class)">Module</a></span></td>
+<td>strcut RClass *</td>
+<td>‘c!` gives `NULL` for `nil`</td>
+</tr>
+<tr>
+<td align="center">‘f`</td>
+<td><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>/<span class='object_link'><a href="../Float.html" title="Float (class)">Float</a></span></td>
+<td><span class='object_link'><a href="mruby_2Fboxing_no.h.html#mrb_float-define" title="mrb_float (define)">mrb_float</a></span></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">‘i`</td>
+<td><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>/<span class='object_link'><a href="../Float.html" title="Float (class)">Float</a></span></td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">‘b`</td>
+<td>boolean</td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_bool-define" title="mrb_bool (define)">mrb_bool</a></span></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">‘n`</td>
+<td><span class='object_link'><a href="../String.html" title="String (class)">String</a></span>/<span class='object_link'><a href="../Symbol.html" title="Symbol (class)">Symbol</a></span></td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_sym-typedef" title="mrb_sym (typedef)">mrb_sym</a></span></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">‘d`</td>
+<td>data</td>
+<td>void *, mruby.h.mrb_data_type const</td>
+<td>2nd argument will be used to check data type so it won’t be modified; when ‘!` follows, the value may be `nil`</td>
+</tr>
+<tr>
+<td align="center">‘I`</td>
+<td>inline struct</td>
+<td>void *, struct RClass</td>
+<td>‘I!` gives `NULL` for `nil`</td>
+</tr>
+<tr>
+<td align="center">‘&amp;`</td>
+<td>block</td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span></td>
+<td>&amp;! raises exception if no block given.</td>
+</tr>
+<tr>
+<td align="center">‘*`</td>
+<td>rest arguments</td>
+<td>const <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_value-typedef" title="mrb_value (typedef)">mrb_value</a></span> *, <span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_int-typedef" title="mrb_int (typedef)">mrb_int</a></span></td>
+<td>Receive the rest of arguments as an array; ‘*!` avoid copy of the stack.</td>
+</tr>
+<tr>
+<td align="center"><code>|</code></td>
+<td>optional</td>
+<td></td>
+<td>After this spec following specs would be optional.</td>
+</tr>
+<tr>
+<td align="center">‘?`</td>
+<td>optional given</td>
+<td><span class='object_link'><a href="mruby_2Fvalue.h.html#mrb_bool-define" title="mrb_bool (define)">mrb_bool</a></span></td>
+<td>‘TRUE` if preceding argument is given. Used to check optional argument is given.</td>
+</tr>
+<tr>
+<td align="center">‘:`</td>
+<td>keyword args</td>
+<td><span class='object_link'><a href="#mrb_kwargs-typedef" title="mrb_kwargs (typedef)">mrb_kwargs</a></span> const</td>
+<td>Get keyword arguments. @see mrb_kwargs</td>
+</tr>
+</tbody>
+</table>
+
+<p>Immediately after format specifiers it can add format modifiers:</p>
+
+<table role="table">
+<thead>
+<tr>
+<th align="center">char</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">‘!`</td>
+<td>Switch to the alternate mode; The behaviour changes depending on the format specifier</td>
+</tr>
+<tr>
+<td align="center">‘+`</td>
+<td>Request a not frozen object; However, except nil value</td>
+</tr>
+</tbody>
 </table>
 
 
@@ -3269,29 +4011,28 @@
       <dt id="mrb_kwargs-typedef" class=""><small>typedef</small> mrb_kwargs
         <div class="docstring">
   <div class="discussion">
-    <p>Get keyword arguments by <code>mrb_get_args()</code> with <code>:</code> specifier.</p>
+    
+<p>Get keyword arguments by <code>mrb_get_args()</code> with <code>:</code> specifier.</p>
 
-<p><code>mrb_kwargs::num</code> indicates that the number of keyword values.</p>
+<p><code>mrb_kwargs::num</code> indicates that the total number of keyword values.</p>
 
-<p><code>mrb_kwargs::values</code> is an object array, and the keyword argument corresponding to the string array is assigned.
-Note that <code>undef</code> is assigned if there is no keyword argument corresponding to <code>mrb_kwargs::optional</code>.</p>
+<p><code>mrb_kwargs::required</code> indicates that the specified number of keywords starting from the beginning of the <code>mrb_sym</code> array are required.</p>
 
-<p><code>mrb_kwargs::table</code> accepts a string array.</p>
+<p><code>mrb_kwargs::table</code> accepts a <code>mrb_sym</code> array of C.</p>
 
-<p><code>mrb_kwargs::required</code> indicates that the specified number of keywords starting from the beginning of the string array are required.</p>
+<p><code>mrb_kwargs::values</code> is an object array of C, and the keyword argument corresponding to the <code>mrb_sym</code> array is assigned. Note that <code>undef</code> is assigned if there is no keyword argument corresponding over <code>mrb_kwargs::required</code> to <code>mrb_kwargs::num</code>.</p>
 
-<p><code>mrb_kwargs::rest</code> is the remaining keyword argument that can be accepted as <code>**rest</code> in Ruby.
-If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when there is an undefined keyword.</p>
+<p><code>mrb_kwargs::rest</code> is the remaining keyword argument that can be accepted as <code>**rest</code> in Ruby. If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when there is an undefined keyword.</p>
 
 <p>Examples:</p>
 
 <pre class="code ruby"><code class="ruby"> <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">method</span>(<span style="color:#606">a</span>: <span style="color:#00D">1</span>, <span style="color:#606">b</span>: <span style="color:#00D">2</span>)
 
- uint32_t kw_num = <span style="color:#00D">2</span>;
- const char *kw_names[kw_num] = { <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">b</span><span style="color:#710">&quot;</span></span> };
- uint32_t kw_required = <span style="color:#00D">0</span>;
+ mrb_int kw_num = <span style="color:#00D">2</span>;
+ mrb_int kw_required = <span style="color:#00D">0</span>;
+ mrb_sym kw_names[] = { mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">a</span><span style="color:#710">&quot;</span></span>), mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">b</span><span style="color:#710">&quot;</span></span>) };
  mrb_value kw_values[kw_num];
- const mrb_kwargs kwargs = { kw_num, kw_values, kw_names, kw_required, <span style="color:#036;font-weight:bold">NULL</span> };
+ mrb_kwargs kwargs = { kw_num, kw_required, kw_names, kw_values, <span style="color:#036;font-weight:bold">NULL</span> };
 
  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">:</span><span style="color:#710">&quot;</span></span>, &amp;kwargs);
  <span style="color:#080;font-weight:bold">if</span> (mrb_undef_p(kw_values[<span style="color:#00D">0</span>])) { kw_values[<span style="color:#00D">0</span>] = mrb_fixnum_value(<span style="color:#00D">1</span>); }
@@ -3302,33 +4043,18 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
 
  mrb_value str, kw_rest;
  uint32_t kw_num = <span style="color:#00D">3</span>;
- const char *kw_names[kw_num] = { <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">x</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">y</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">z</span><span style="color:#710">&quot;</span></span> };
  uint32_t kw_required = <span style="color:#00D">1</span>;
+ <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Note</span> that <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#161">`</span><span style="color:#2B2">#include &lt;mruby/presym.h&gt;</span><span style="color:#161">`</span></span> is required beforehand because <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#161">`</span><span style="color:#2B2">MRB_SYM()</span><span style="color:#161">`</span></span> is used.
+ // <span style="color:#036;font-weight:bold">If</span> the usage of <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#161">`</span><span style="color:#2B2">MRB_SYM()</span><span style="color:#161">`</span></span> is <span style="color:#080;font-weight:bold">not</span> desired, replace it with <span style="background-color:hsla(120,100%,50%,0.06)"><span style="color:#161">`</span><span style="color:#2B2">mrb_intern_lit()</span><span style="color:#161">`</span></span>.
+ mrb_sym kw_names[] = { MRB_SYM(x), MRB_SYM(y), MRB_SYM(z) };
  mrb_value kw_values[kw_num];
- const mrb_kwargs kwargs = { kw_num, kw_values, kw_names, kw_required, &amp;kw_rest };
+ mrb_kwargs kwargs = { kw_num, kw_required, kw_names, kw_values, &amp;kw_rest };
 
  mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">S:</span><span style="color:#710">&quot;</span></span>, &amp;str, &amp;kwargs);
  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#606">or</span>: mrb_get_args(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">:S</span><span style="color:#710">&quot;</span></span>, &amp;kwargs, &amp;str);
  <span style="color:#080;font-weight:bold">if</span> (mrb_undef_p(kw_values[<span style="color:#00D">1</span>])) { kw_values[<span style="color:#00D">1</span>] = mrb_fixnum_value(<span style="color:#00D">2</span>); }
  <span style="color:#080;font-weight:bold">if</span> (mrb_undef_p(kw_values[<span style="color:#00D">2</span>])) { kw_values[<span style="color:#00D">2</span>] = mrb_str_new_cstr(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">default string</span><span style="color:#710">&quot;</span></span>); }
 </code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="mrb_pool-typedef" class=""><small>typedef</small> mrb_pool
-        <div class="docstring">
-  <div class="discussion">
-    <p>memory pool implementation</p>
 
 
   </div>
@@ -3356,7 +4082,8 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Defines a new class.</p>
+    
+<p>Defines a new class.</p>
 
 <p>If you’re creating a gem it may look something like this:</p>
 
@@ -3387,7 +4114,8 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -3402,7 +4130,8 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
       
       
         &mdash;
-        <div class='inline'><p>The name of the defined class.</p>
+        <div class='inline'>
+<p>The name of the defined class.</p>
 </div>
       
     </li>
@@ -3417,7 +4146,8 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
       
       
         &mdash;
-        <div class='inline'><p>The new class parent.</p>
+        <div class='inline'>
+<p>The new class parent.</p>
 </div>
       
     </li>
@@ -3435,7 +4165,8 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
       
       
         &mdash;
-        <div class='inline'><p>Reference to the newly defined class.</p>
+        <div class='inline'>
+<p>Reference to the newly defined class.</p>
 </div>
       
     </li>
@@ -3445,12 +4176,22 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#mrb_define_class_under-function" title="mrb_define_class_under (function)">mrb_define_class_under</a></span></li>
+      <li><span class='object_link'><a href="mruby_2Fpresym_2Fscanning.h.html#mrb_define_class_under-define" title="mrb_define_class_under (define)">mrb_define_class_under</a></span></li>
     
   </ul>
 
 </div>
 
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_class_id-function">
+  struct RClass * <strong>mrb_define_class_id</strong>(mrb_state * mrb, mrb_sym name, struct RClass * super)
+
+  
+</h3>
 
 </div>
 
@@ -3463,7 +4204,8 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Defines a new module.</p>
+    
+<p>Defines a new module.</p>
 
 
   </div>
@@ -3482,7 +4224,8 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -3497,7 +4240,8 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
       
       
         &mdash;
-        <div class='inline'><p>The name of the module.</p>
+        <div class='inline'>
+<p>The name of the module.</p>
 </div>
       
     </li>
@@ -3515,7 +4259,8 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
       
       
         &mdash;
-        <div class='inline'><p>Reference to the newly defined module.</p>
+        <div class='inline'>
+<p>Reference to the newly defined module.</p>
 </div>
       
     </li>
@@ -3529,11 +4274,61 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_define_module_id-function">
+  struct RClass * <strong>mrb_define_module_id</strong>(mrb_state * mrb, mrb_sym name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_singleton_class-function">
   mrb_value <strong>mrb_singleton_class</strong>(mrb_state * mrb, mrb_value val)
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the singleton class of an object.</p>
+
+<p>Raises a <code>TypeError</code> exception for immediate values.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_singleton_class_ptr-function">
+  struct RClass * <strong>mrb_singleton_class_ptr</strong>(mrb_state * mrb, mrb_value val)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the singleton class of an object.</p>
+
+<p>Returns <code>NULL</code> for immediate values,</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
@@ -3546,12 +4341,10 @@ If <code>NULL</code> is specified, <code>ArgumentError</code> is raised when the
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Include a module in another class or module.
-Equivalent to:</p>
+    
+<p>Include a module in another class or module. Equivalent to:</p>
 
-<p>module B
-    include A
-  end</p>
+<p>module B include A end</p>
 
 
   </div>
@@ -3570,7 +4363,8 @@ Equivalent to:</p>
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -3585,7 +4379,8 @@ Equivalent to:</p>
       
       
         &mdash;
-        <div class='inline'><p>A reference to module or a class.</p>
+        <div class='inline'>
+<p>A reference to module or a class.</p>
 </div>
       
     </li>
@@ -3600,7 +4395,8 @@ Equivalent to:</p>
       
       
         &mdash;
-        <div class='inline'><p>A reference to the module to be included.</p>
+        <div class='inline'>
+<p>A reference to the module to be included.</p>
 </div>
       
     </li>
@@ -3622,12 +4418,10 @@ Equivalent to:</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Prepends a module in another class or module.</p>
+    
+<p>Prepends a module in another class or module.</p>
 
-<p>Equivalent to:
- module B
-   prepend A
- end</p>
+<p>Equivalent to: module B prepend A end</p>
 
 
   </div>
@@ -3646,7 +4440,8 @@ Equivalent to:</p>
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -3661,7 +4456,8 @@ Equivalent to:</p>
       
       
         &mdash;
-        <div class='inline'><p>A reference to module or a class.</p>
+        <div class='inline'>
+<p>A reference to module or a class.</p>
 </div>
       
     </li>
@@ -3676,7 +4472,8 @@ Equivalent to:</p>
       
       
         &mdash;
-        <div class='inline'><p>A reference to the module to be prepended.</p>
+        <div class='inline'>
+<p>A reference to the module to be prepended.</p>
 </div>
       
     </li>
@@ -3698,7 +4495,8 @@ Equivalent to:</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Defines a global function in ruby.</p>
+    
+<p>Defines a global function in ruby.</p>
 
 <p>If you’re creating a gem it may look something like this</p>
 
@@ -3733,7 +4531,8 @@ void mrb_example_gem_init(mrb_state* mrb)
       
       
         &mdash;
-        <div class='inline'><p>The MRuby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -3748,7 +4547,8 @@ void mrb_example_gem_init(mrb_state* mrb)
       
       
         &mdash;
-        <div class='inline'><p>The class pointer where the method will be defined.</p>
+        <div class='inline'>
+<p>The class pointer where the method will be defined.</p>
 </div>
       
     </li>
@@ -3763,7 +4563,8 @@ void mrb_example_gem_init(mrb_state* mrb)
       
       
         &mdash;
-        <div class='inline'><p>The name of the method being defined.</p>
+        <div class='inline'>
+<p>The name of the method being defined.</p>
 </div>
       
     </li>
@@ -3778,7 +4579,8 @@ void mrb_example_gem_init(mrb_state* mrb)
       
       
         &mdash;
-        <div class='inline'><p>The function pointer to the method definition.</p>
+        <div class='inline'>
+<p>The function pointer to the method definition.</p>
 </div>
       
     </li>
@@ -3793,7 +4595,8 @@ void mrb_example_gem_init(mrb_state* mrb)
       
       
         &mdash;
-        <div class='inline'><p>The method parameters declaration.</p>
+        <div class='inline'>
+<p>The method parameters declaration.</p>
 </div>
       
     </li>
@@ -3808,6 +4611,36 @@ void mrb_example_gem_init(mrb_state* mrb)
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_define_method_id-function">
+  void <strong>mrb_define_method_id</strong>(mrb_state * mrb, struct RClass * c, mrb_sym mid, mrb_func_t func, mrb_aspec aspec)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_private_method-function">
+  void <strong>mrb_define_private_method</strong>(mrb_state * mrb, struct RClass * cla, const char * name, mrb_func_t func, mrb_aspec aspec)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_private_method_id-function">
+  void <strong>mrb_define_private_method_id</strong>(mrb_state * mrb, struct RClass * c, mrb_sym mid, mrb_func_t func, mrb_aspec aspec)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_define_class_method-function">
   void <strong>mrb_define_class_method</strong>(mrb_state * mrb, struct RClass * cla, const char * name, mrb_func_t fun, mrb_aspec aspec)
 
@@ -3815,7 +4648,8 @@ void mrb_example_gem_init(mrb_state* mrb)
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Defines a class method.</p>
+    
+<p>Defines a class method.</p>
 
 <p>Example:</p>
 
@@ -3852,7 +4686,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The MRuby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -3867,7 +4702,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The class where the class method will be defined.</p>
+        <div class='inline'>
+<p>The class where the class method will be defined.</p>
 </div>
       
     </li>
@@ -3882,7 +4718,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The name of the class method being defined.</p>
+        <div class='inline'>
+<p>The name of the class method being defined.</p>
 </div>
       
     </li>
@@ -3897,7 +4734,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The function pointer to the class method definition.</p>
+        <div class='inline'>
+<p>The function pointer to the class method definition.</p>
 </div>
       
     </li>
@@ -3912,7 +4750,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The method parameters declaration.</p>
+        <div class='inline'>
+<p>The method parameters declaration.</p>
 </div>
       
     </li>
@@ -3927,6 +4766,16 @@ void mrb_example_gem_init(mrb_state* mrb){
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_define_class_method_id-function">
+  void <strong>mrb_define_class_method_id</strong>(mrb_state * mrb, struct RClass * cla, mrb_sym name, mrb_func_t fun, mrb_aspec aspec)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_define_singleton_method-function">
   void <strong>mrb_define_singleton_method</strong>(mrb_state * mrb, struct RObject * cla, const char * name, mrb_func_t fun, mrb_aspec aspec)
 
@@ -3934,7 +4783,8 @@ void mrb_example_gem_init(mrb_state* mrb){
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Defines a singleton method</p>
+    
+<p>Defines a singleton method</p>
 
 
   </div>
@@ -3945,12 +4795,22 @@ void mrb_example_gem_init(mrb_state* mrb){
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#mrb_define_class_method-function" title="mrb_define_class_method (function)">mrb_define_class_method</a></span></li>
+      <li><span class='object_link'><a href="mruby_2Fpresym_2Fscanning.h.html#mrb_define_class_method-define" title="mrb_define_class_method (define)">mrb_define_class_method</a></span></li>
     
   </ul>
 
 </div>
 
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_singleton_method_id-function">
+  void <strong>mrb_define_singleton_method_id</strong>(mrb_state * mrb, struct RObject * cla, mrb_sym name, mrb_func_t fun, mrb_aspec aspec)
+
+  
+</h3>
 
 </div>
 
@@ -3963,7 +4823,8 @@ void mrb_example_gem_init(mrb_state* mrb){
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Defines a module function.</p>
+    
+<p>Defines a module function.</p>
 
 <p>Example:</p>
 
@@ -4000,7 +4861,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The MRuby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -4015,7 +4877,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The module where the module function will be defined.</p>
+        <div class='inline'>
+<p>The module where the module function will be defined.</p>
 </div>
       
     </li>
@@ -4030,7 +4893,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The name of the module function being defined.</p>
+        <div class='inline'>
+<p>The name of the module function being defined.</p>
 </div>
       
     </li>
@@ -4045,7 +4909,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The function pointer to the module function definition.</p>
+        <div class='inline'>
+<p>The function pointer to the module function definition.</p>
 </div>
       
     </li>
@@ -4060,7 +4925,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The method parameters declaration.</p>
+        <div class='inline'>
+<p>The method parameters declaration.</p>
 </div>
       
     </li>
@@ -4075,6 +4941,16 @@ void mrb_example_gem_init(mrb_state* mrb){
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_define_module_function_id-function">
+  void <strong>mrb_define_module_function_id</strong>(mrb_state * mrb, struct RClass * cla, mrb_sym name, mrb_func_t fun, mrb_aspec aspec)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_define_const-function">
   void <strong>mrb_define_const</strong>(mrb_state* mrb, struct RClass* cla, const char * name, mrb_value val)
 
@@ -4082,7 +4958,8 @@ void mrb_example_gem_init(mrb_state* mrb){
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Defines a constant.</p>
+    
+<p>Defines a constant.</p>
 
 <p>Example:</p>
 
@@ -4121,7 +4998,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The MRuby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -4136,7 +5014,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>A class or module the constant is defined in.</p>
+        <div class='inline'>
+<p>A class or module the constant is defined in.</p>
 </div>
       
     </li>
@@ -4151,7 +5030,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The name of the constant being defined.</p>
+        <div class='inline'>
+<p>The name of the constant being defined.</p>
 </div>
       
     </li>
@@ -4166,7 +5046,8 @@ void mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The value for the constant.</p>
+        <div class='inline'>
+<p>The value for the constant.</p>
 </div>
       
     </li>
@@ -4181,6 +5062,16 @@ void mrb_example_gem_init(mrb_state* mrb){
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_define_const_id-function">
+  void <strong>mrb_define_const_id</strong>(mrb_state* mrb, struct RClass* cla, mrb_sym name, mrb_value val)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_undef_method-function">
   void <strong>mrb_undef_method</strong>(mrb_state * mrb, struct RClass * cla, const char * name)
 
@@ -4188,7 +5079,8 @@ void mrb_example_gem_init(mrb_state* mrb){
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Undefines a method.</p>
+    
+<p>Undefines a method.</p>
 
 <p>Example:</p>
 
@@ -4250,7 +5142,8 @@ mrb_example_gem_final(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -4265,7 +5158,8 @@ mrb_example_gem_final(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The class the method will be undefined from.</p>
+        <div class='inline'>
+<p>The class the method will be undefined from.</p>
 </div>
       
     </li>
@@ -4280,7 +5174,8 @@ mrb_example_gem_final(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The name of the method to be undefined.</p>
+        <div class='inline'>
+<p>The name of the method to be undefined.</p>
 </div>
       
     </li>
@@ -4312,8 +5207,8 @@ mrb_example_gem_final(mrb_state* mrb){
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Undefine a class method.
-Example:</p>
+    
+<p>Undefine a class method. Example:</p>
 
 <pre class="code ruby"><code class="ruby"> <span style="color:#777"># Ruby style</span>
  <span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">ExampleClass</span>
@@ -4363,7 +5258,8 @@ mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -4378,7 +5274,8 @@ mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>A class the class method will be undefined from.</p>
+        <div class='inline'>
+<p>A class the class method will be undefined from.</p>
 </div>
       
     </li>
@@ -4393,7 +5290,8 @@ mrb_example_gem_init(mrb_state* mrb){
       
       
         &mdash;
-        <div class='inline'><p>The name of the class method to be undefined.</p>
+        <div class='inline'>
+<p>The name of the class method to be undefined.</p>
 </div>
       
     </li>
@@ -4408,6 +5306,16 @@ mrb_example_gem_init(mrb_state* mrb){
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_undef_class_method_id-function">
+  void <strong>mrb_undef_class_method_id</strong>(mrb_state * mrb, struct RClass * cls, mrb_sym name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_obj_new-function">
   mrb_value <strong>mrb_obj_new</strong>(mrb_state * mrb, struct RClass * c, mrb_int argc, const mrb_value * argv)
 
@@ -4415,7 +5323,8 @@ mrb_example_gem_init(mrb_state* mrb){
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Initialize a new object instance of c class.</p>
+    
+<p>Initialize a new object instance of c class.</p>
 
 <p>Example:</p>
 
@@ -4455,7 +5364,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -4470,7 +5380,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>Reference to the class of the new object.</p>
+        <div class='inline'>
+<p>Reference to the class of the new object.</p>
 </div>
       
     </li>
@@ -4485,7 +5396,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>Number of arguments in argv</p>
+        <div class='inline'>
+<p>Number of arguments in argv</p>
 </div>
       
     </li>
@@ -4500,7 +5412,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>Array of mrb_value to initialize the object</p>
+        <div class='inline'>
+<p>Array of mrb_value to initialize the object</p>
 </div>
       
     </li>
@@ -4518,7 +5431,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The newly initialized object</p>
+        <div class='inline'>
+<p>The newly initialized object</p>
 </div>
       
     </li>
@@ -4540,7 +5454,6 @@ mrb_example_gem_init(mrb_state* mrb) {
 <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -4568,7 +5481,8 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Creates a new instance of Class, Class.</p>
+    
+<p>Creates a new instance of Class, Class.</p>
 
 <p>Example:</p>
 
@@ -4600,7 +5514,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -4615,7 +5530,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The super class or parent.</p>
+        <div class='inline'>
+<p>The super class or parent.</p>
 </div>
       
     </li>
@@ -4633,7 +5549,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>Reference to the new class.</p>
+        <div class='inline'>
+<p>Reference to the new class.</p>
 </div>
       
     </li>
@@ -4654,12 +5571,10 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Creates a new module, Module.</p>
+    
+<p>Creates a new module, Module.</p>
 
-<p>Example:
-     void
-     mrb_example_gem_init(mrb_state* mrb) {
-       struct RClass *example_module;</p>
+<p>Example: void mrb_example_gem_init(mrb_state* mrb) { struct RClass *example_module;</p>
 
 <pre class="code ruby"><code class="ruby">   example_module = mrb_module_new(mrb);
  }
@@ -4682,7 +5597,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -4700,7 +5616,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>Reference to the new module.</p>
+        <div class='inline'>
+<p>Reference to the new module.</p>
 </div>
       
     </li>
@@ -4721,20 +5638,17 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns an mrb_bool. True if class was defined, and false if the class was not defined.</p>
+    
+<p>Returns an mrb_bool. True if class was defined, and false if the class was not defined.</p>
 
-<p>Example:
-    void
-    mrb_example_gem_init(mrb_state* mrb) {
-      struct RClass *example_class;
-      mrb_bool cd;</p>
+<p>Example: void mrb_example_gem_init(mrb_state* mrb) { struct RClass *example_class; mrb_bool cd;</p>
 
 <pre class="code ruby"><code class="ruby">  example_class = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClass</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
   cd = mrb_class_defined(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClass</span><span style="color:#710">&quot;</span></span>);
 
-  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined returns <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>
-  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined returns <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>
-  <span style="color:#080;font-weight:bold">if</span> (cd == <span style="color:#00D">1</span>){
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined returns <span style="color:#069">TRUE</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined returns <span style="color:#069">FALSE</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">if</span> (cd) {
     puts(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>);
   }
   <span style="color:#080;font-weight:bold">else</span> {
@@ -4760,7 +5674,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -4775,7 +5690,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>A string representing the name of the class.</p>
+        <div class='inline'>
+<p>A string representing the name of the class.</p>
 </div>
       
     </li>
@@ -4793,7 +5709,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>A boolean value.</p>
+        <div class='inline'>
+<p>A boolean value.</p>
 </div>
       
     </li>
@@ -4802,19 +5719,30 @@ mrb_example_gem_init(mrb_state* mrb) {
 
 </div>
 
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_defined_id-function">
+  mrb_bool <strong>mrb_class_defined_id</strong>(mrb_state * mrb, mrb_sym name)
+
+  
+</h3>
 
 </div>
 
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_class_get-function">
-  struct RClass * <strong>mrb_class_get</strong>(mrb_state * mrb, const char * name)
+  struct RClass* <strong>mrb_class_get</strong>(mrb_state * mrb, const char * name)
 
   
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Gets a class.</p>
+    
+<p>Gets a class.</p>
 
 
   </div>
@@ -4833,7 +5761,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -4848,7 +5777,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The name of the class.</p>
+        <div class='inline'>
+<p>The name of the class.</p>
 </div>
       
     </li>
@@ -4866,7 +5796,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>A reference to the class.</p>
+        <div class='inline'>
+<p>A reference to the class.</p>
 </div>
       
     </li>
@@ -4880,14 +5811,25 @@ mrb_example_gem_init(mrb_state* mrb) {
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_exc_get-function">
-  struct RClass * <strong>mrb_exc_get</strong>(mrb_state * mrb, const char * name)
+  <h3 class="signature " id="mrb_class_get_id-function">
+  struct RClass* <strong>mrb_class_get_id</strong>(mrb_state * mrb, mrb_sym name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_exc_get_id-function">
+  struct RClass* <strong>mrb_exc_get_id</strong>(mrb_state * mrb, mrb_sym name)
 
   
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Gets a exception class.</p>
+    
+<p>Gets a exception class.</p>
 
 
   </div>
@@ -4906,7 +5848,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -4921,7 +5864,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The name of the class.</p>
+        <div class='inline'>
+<p>The name of the class.</p>
 </div>
       
     </li>
@@ -4939,7 +5883,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>A reference to the class.</p>
+        <div class='inline'>
+<p>A reference to the class.</p>
 </div>
       
     </li>
@@ -4960,22 +5905,19 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns an mrb_bool. True if inner class was defined, and false if the inner class was not defined.</p>
+    
+<p>Returns an mrb_bool. True if inner class was defined, and false if the inner class was not defined.</p>
 
-<p>Example:
-    void
-    mrb_example_gem_init(mrb_state* mrb) {
-      struct RClass *example_outer, *example_inner;
-      mrb_bool cd;</p>
+<p>Example: void mrb_example_gem_init(mrb_state* mrb) { struct RClass <em>example_outer, </em>example_inner; mrb_bool cd;</p>
 
 <pre class="code ruby"><code class="ruby">  example_outer = mrb_define_module(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleOuter</span><span style="color:#710">&quot;</span></span>);
 
   example_inner = mrb_define_class_under(mrb, example_outer, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleInner</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
   cd = mrb_class_defined_under(mrb, example_outer, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleInner</span><span style="color:#710">&quot;</span></span>);
 
-  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined_under returns <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>
-  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined_under returns <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>
-  <span style="color:#080;font-weight:bold">if</span> (cd == <span style="color:#00D">1</span>){
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined_under returns <span style="color:#069">TRUE</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>
+  <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_class_defined_under returns <span style="color:#069">FALSE</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">if</span> (cd) {
     puts(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>);
   }
   <span style="color:#080;font-weight:bold">else</span> {
@@ -5001,7 +5943,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -5016,7 +5959,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The name of the outer class.</p>
+        <div class='inline'>
+<p>The name of the outer class.</p>
 </div>
       
     </li>
@@ -5031,7 +5975,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>A string representing the name of the inner class.</p>
+        <div class='inline'>
+<p>A string representing the name of the inner class.</p>
 </div>
       
     </li>
@@ -5049,7 +5994,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>A boolean value.</p>
+        <div class='inline'>
+<p>A boolean value.</p>
 </div>
       
     </li>
@@ -5058,6 +6004,16 @@ mrb_example_gem_init(mrb_state* mrb) {
 
 </div>
 
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_defined_under_id-function">
+  mrb_bool <strong>mrb_class_defined_under_id</strong>(mrb_state * mrb, struct RClass * outer, mrb_sym name)
+
+  
+</h3>
 
 </div>
 
@@ -5070,7 +6026,8 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Gets a child class.</p>
+    
+<p>Gets a child class.</p>
 
 
   </div>
@@ -5089,7 +6046,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -5104,7 +6062,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The name of the parent class.</p>
+        <div class='inline'>
+<p>The name of the parent class.</p>
 </div>
       
     </li>
@@ -5119,7 +6078,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The name of the class.</p>
+        <div class='inline'>
+<p>The name of the class.</p>
 </div>
       
     </li>
@@ -5137,7 +6097,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>A reference to the class.</p>
+        <div class='inline'>
+<p>A reference to the class.</p>
 </div>
       
     </li>
@@ -5146,6 +6107,16 @@ mrb_example_gem_init(mrb_state* mrb) {
 
 </div>
 
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_class_get_under_id-function">
+  struct RClass * <strong>mrb_class_get_under_id</strong>(mrb_state * mrb, struct RClass * outer, mrb_sym name)
+
+  
+</h3>
 
 </div>
 
@@ -5158,7 +6129,8 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Gets a module.</p>
+    
+<p>Gets a module.</p>
 
 
   </div>
@@ -5177,7 +6149,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -5192,7 +6165,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The name of the module.</p>
+        <div class='inline'>
+<p>The name of the module.</p>
 </div>
       
     </li>
@@ -5210,7 +6184,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>A reference to the module.</p>
+        <div class='inline'>
+<p>A reference to the module.</p>
 </div>
       
     </li>
@@ -5224,6 +6199,16 @@ mrb_example_gem_init(mrb_state* mrb) {
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_module_get_id-function">
+  struct RClass * <strong>mrb_module_get_id</strong>(mrb_state * mrb, mrb_sym name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_module_get_under-function">
   struct RClass * <strong>mrb_module_get_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name)
 
@@ -5231,7 +6216,8 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Gets a module defined under another module.</p>
+    
+<p>Gets a module defined under another module.</p>
 
 
   </div>
@@ -5250,7 +6236,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -5265,7 +6252,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The name of the outer module.</p>
+        <div class='inline'>
+<p>The name of the outer module.</p>
 </div>
       
     </li>
@@ -5280,7 +6268,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The name of the module.</p>
+        <div class='inline'>
+<p>The name of the module.</p>
 </div>
       
     </li>
@@ -5298,7 +6287,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>A reference to the module.</p>
+        <div class='inline'>
+<p>A reference to the module.</p>
 </div>
       
     </li>
@@ -5312,6 +6302,16 @@ mrb_example_gem_init(mrb_state* mrb) {
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_module_get_under_id-function">
+  struct RClass * <strong>mrb_module_get_under_id</strong>(mrb_state * mrb, struct RClass * outer, mrb_sym name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_notimplement-function">
   void <strong>mrb_notimplement</strong>(mrb_state* )
 
@@ -5319,7 +6319,8 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>a function to raise NotImplementedError with current method name</p>
+    
+<p>a function to raise NotImplementedError with current method name</p>
 
 
   </div>
@@ -5341,7 +6342,31 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>a function to be replacement of unimplemented method</p>
+    
+<p>a function to be replacement of unimplemented method</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_obj_itself-function">
+  mrb_value <strong>mrb_obj_itself</strong>(mrb_state* , mrb_value )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>just return it self</p>
 
 
   </div>
@@ -5363,10 +6388,10 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Duplicate an object.</p>
+    
+<p>Duplicate an object.</p>
 
-<p>Equivalent to:
-  Object#dup</p>
+<p>Equivalent to: Object#dup</p>
 
 
   </div>
@@ -5385,7 +6410,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -5400,7 +6426,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>Object to be duplicate.</p>
+        <div class='inline'>
+<p>Object to be duplicate.</p>
 </div>
       
     </li>
@@ -5418,7 +6445,8 @@ mrb_example_gem_init(mrb_state* mrb) {
       
       
         &mdash;
-        <div class='inline'><p>The newly duplicated object.</p>
+        <div class='inline'>
+<p>The newly duplicated object.</p>
 </div>
       
     </li>
@@ -5439,8 +6467,8 @@ mrb_example_gem_init(mrb_state* mrb) {
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Returns true if obj responds to the given method. If the method was defined for that
-class it returns true, it returns false otherwise.</p>
+    
+<p>Returns true if obj responds to the given method. If the method was defined for that class it returns true, it returns false otherwise.</p>
 
 <pre class="code ruby"><code class="ruby"> <span style="color:#606">Example</span>:
  <span style="color:#777"># Ruby style</span>
@@ -5461,14 +6489,14 @@ class it returns true, it returns false otherwise.</p>
    example_class = mrb_define_class(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">ExampleClass</span><span style="color:#710">&quot;</span></span>, mrb-&gt;object_class);
    mrb_define_method(mrb, example_class, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span>, exampleMethod, MRB_ARGS_NONE());
    mid = mrb_intern_str(mrb, mrb_str_new_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">example_method</span><span style="color:#710">&quot;</span></span> ));
-   obj_resp = mrb_obj_respond_to(mrb, example_class, mid); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> =&gt; <span style="color:#00D">1</span>(<span style="color:#069">true</span> <span style="color:#080;font-weight:bold">in</span> <span style="color:#036;font-weight:bold">Ruby</span> world)
+   obj_resp = mrb_obj_respond_to(mrb, example_class, mid); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> =&gt; <span style="color:#069">TRUE</span> (<span style="color:#069">true</span> <span style="color:#080;font-weight:bold">in</span> <span style="color:#036;font-weight:bold">Ruby</span> world)
 
-   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_obj_respond_to returns <span style="color:#00D">1</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>
-   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_obj_respond_to returns <span style="color:#00D">0</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>
-   <span style="color:#080;font-weight:bold">if</span> (obj_resp == <span style="color:#00D">1</span>) {
+   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_obj_respond_to returns <span style="color:#069">TRUE</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>
+   <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">If</span> mrb_obj_respond_to returns <span style="color:#069">FALSE</span> <span style="color:#080;font-weight:bold">then</span> puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>
+   <span style="color:#080;font-weight:bold">if</span> (obj_resp) {
      puts(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">True</span><span style="color:#710">&quot;</span></span>);
    }
-   <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">if</span> (obj_resp == <span style="color:#00D">0</span>) {
+   <span style="color:#080;font-weight:bold">else</span> {
      puts(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">False</span><span style="color:#710">&quot;</span></span>);
    }
  }
@@ -5491,7 +6519,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -5506,7 +6535,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>A reference to a class.</p>
+        <div class='inline'>
+<p>A reference to a class.</p>
 </div>
       
     </li>
@@ -5521,7 +6551,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>A symbol referencing a method id.</p>
+        <div class='inline'>
+<p>A symbol referencing a method id.</p>
 </div>
       
     </li>
@@ -5539,7 +6570,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>A boolean value.</p>
+        <div class='inline'>
+<p>A boolean value.</p>
 </div>
       
     </li>
@@ -5554,13 +6586,14 @@ class it returns true, it returns false otherwise.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_define_class_under-function">
-  struct RClass * <strong>mrb_define_class_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name, struct RClass * super)
+  struct RClass* <strong>mrb_define_class_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name, struct RClass * super)
 
   
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Defines a new class under a given module</p>
+    
+<p>Defines a new class under a given module</p>
 
 
   </div>
@@ -5579,7 +6612,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -5594,7 +6628,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>Reference to the module under which the new class will be defined</p>
+        <div class='inline'>
+<p>Reference to the module under which the new class will be defined</p>
 </div>
       
     </li>
@@ -5609,7 +6644,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the defined class</p>
+        <div class='inline'>
+<p>The name of the defined class</p>
 </div>
       
     </li>
@@ -5624,7 +6660,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The new class parent</p>
+        <div class='inline'>
+<p>The new class parent</p>
 </div>
       
     </li>
@@ -5642,7 +6679,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>Reference to the newly defined class</p>
+        <div class='inline'>
+<p>Reference to the newly defined class</p>
 </div>
       
     </li>
@@ -5652,7 +6690,7 @@ class it returns true, it returns false otherwise.</p>
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#mrb_define_class-function" title="mrb_define_class (function)">mrb_define_class</a></span></li>
+      <li><span class='object_link'><a href="mruby_2Fpresym_2Fscanning.h.html#mrb_define_class-define" title="mrb_define_class (define)">mrb_define_class</a></span></li>
     
   </ul>
 
@@ -5663,8 +6701,28 @@ class it returns true, it returns false otherwise.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_define_class_under_id-function">
+  struct RClass* <strong>mrb_define_class_under_id</strong>(mrb_state * mrb, struct RClass * outer, mrb_sym name, struct RClass * super)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_define_module_under-function">
-  struct RClass * <strong>mrb_define_module_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name)
+  struct RClass* <strong>mrb_define_module_under</strong>(mrb_state * mrb, struct RClass * outer, const char * name)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_module_under_id-function">
+  struct RClass* <strong>mrb_define_module_under_id</strong>(mrb_state * mrb, struct RClass * outer, mrb_sym name)
 
   
 </h3>
@@ -5680,7 +6738,8 @@ class it returns true, it returns false otherwise.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Retrieve arguments from mrb_state.</p>
+    
+<p>Retrieve arguments from mrb_state.</p>
 
 
   </div>
@@ -5699,7 +6758,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The current MRuby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -5714,7 +6774,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>is a list of format specifiers</p>
+        <div class='inline'>
+<p>is a list of format specifiers</p>
 </div>
       
     </li>
@@ -5729,7 +6790,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The passing variadic arguments must be a pointer of retrieving type.</p>
+        <div class='inline'>
+<p>The passing variadic arguments must be a pointer of retrieving type.</p>
 </div>
       
     </li>
@@ -5747,7 +6809,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         
-        <div class='inline'><p>the number of arguments retrieved.</p>
+        <div class='inline'>
+<p>the number of arguments retrieved.</p>
 </div>
       
     </li>
@@ -5770,6 +6833,49 @@ class it returns true, it returns false otherwise.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_get_args_a-function">
+  mrb_int <strong>mrb_get_args_a</strong>(mrb_state * mrb, mrb_args_format format, void* , ptr )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Array version of mrb_get_args()</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ptr</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of void*, in the same order as the varargs version.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_get_mid-function">
   mrb_sym <strong>mrb_get_mid</strong>(mrb_state * mrb)
 
@@ -5777,7 +6883,8 @@ class it returns true, it returns false otherwise.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>get method symbol</p>
+    
+<p>get method symbol</p>
 
 
   </div>
@@ -5799,7 +6906,8 @@ class it returns true, it returns false otherwise.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Retrieve number of arguments from mrb_state.</p>
+    
+<p>Retrieve number of arguments from mrb_state.</p>
 
 <p>Correctly handles *splat arguments.</p>
 
@@ -5816,11 +6924,49 @@ class it returns true, it returns false otherwise.</p>
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_get_argv-function">
-  mrb_value* <strong>mrb_get_argv</strong>(mrb_state * mrb)
+  <h3 class="signature " id="mrb_get_arg1-function">
+  mrb_value <strong>mrb_get_arg1</strong>(mrb_state * mrb)
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve the first and only argument from mrb_state. Raises ArgumentError unless the number of arguments is exactly one.</p>
+
+<p>Correctly handles *splat arguments.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_block_given_p-function">
+  mrb_bool <strong>mrb_block_given_p</strong>(mrb_state * mrb)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Check if a block argument is given from mrb_state.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
@@ -5833,13 +6979,14 @@ class it returns true, it returns false otherwise.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Call existing ruby functions.</p>
+    
+<p>Call existing ruby functions.</p>
 
 <p>Example:</p>
 
 <pre class="code ruby"><code class="ruby"> <span style="color:#777">#include &lt;stdio.h&gt;</span>
  <span style="color:#777">#include &lt;mruby.h&gt;</span>
- <span style="color:#777">#include &quot;mruby/compile.h&quot;</span>
+ <span style="color:#777">#include &lt;mruby/compile.h&gt;</span>
 
  int
  main()
@@ -5851,6 +6998,7 @@ class it returns true, it returns false otherwise.</p>
    <span style="color:#036;font-weight:bold">FILE</span> *fp = fopen(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">test.rb</span><span style="color:#710">&quot;</span></span>,<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">r</span><span style="color:#710">&quot;</span></span>);
    mrb_value obj = mrb_load_file(mrb,fp);
    mrb_funcall(mrb, obj, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">method_name</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span>, mrb_fixnum_value(i));
+   mrb_funcall_id(mrb, obj, MRB_SYM(method_name), <span style="color:#00D">1</span>, mrb_fixnum_value(i));
    fclose(fp);
    mrb_close(mrb);
  }
@@ -5873,7 +7021,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -5888,7 +7037,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>A reference to an mruby value.</p>
+        <div class='inline'>
+<p>A reference to an mruby value.</p>
 </div>
       
     </li>
@@ -5903,7 +7053,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the method.</p>
+        <div class='inline'>
+<p>The name of the method.</p>
 </div>
       
     </li>
@@ -5918,7 +7069,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The number of arguments the method has.</p>
+        <div class='inline'>
+<p>The number of arguments the method has.</p>
 </div>
       
     </li>
@@ -5933,7 +7085,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>Variadic values(not type safe!).</p>
+        <div class='inline'>
+<p>Variadic values(not type safe!).</p>
 </div>
       
     </li>
@@ -5951,7 +7104,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>mruby function value.</p>
+        <div class='inline'>
+<p>mruby function value.</p>
 </div>
       
     </li>
@@ -5965,6 +7119,16 @@ class it returns true, it returns false otherwise.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_funcall_id-function">
+  mrb_value <strong>mrb_funcall_id</strong>(mrb_state * mrb, mrb_value val, mrb_sym mid, mrb_int argc, ... )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_funcall_argv-function">
   mrb_value <strong>mrb_funcall_argv</strong>(mrb_state * mrb, mrb_value val, mrb_sym name, mrb_int argc, const mrb_value * argv)
 
@@ -5972,23 +7136,23 @@ class it returns true, it returns false otherwise.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Call existing ruby functions. This is basically the type safe version of mrb_funcall.</p>
+    
+<p>Call existing ruby functions. This is basically the type safe version of mrb_funcall.</p>
 
 <pre class="code ruby"><code class="ruby"> <span style="color:#777">#include &lt;stdio.h&gt;</span>
  <span style="color:#777">#include &lt;mruby.h&gt;</span>
- <span style="color:#777">#include &quot;mruby/compile.h&quot;</span>
+ <span style="color:#777">#include &lt;mruby/compile.h&gt;</span>
  int
  main()
  {
-   mrb_int i = <span style="color:#00D">99</span>;
    mrb_state *mrb = mrb_open();
+   mrb_value obj = mrb_fixnum_value(<span style="color:#00D">1</span>);
 
    <span style="color:#080;font-weight:bold">if</span> (!mrb) { }
-   mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">method_name</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Symbol</span> <span style="color:#080;font-weight:bold">for</span> method.
 
-   FILE *fp = fopen(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">test.rb</span><span style="color:#710">&quot;</span></span>,<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">r</span><span style="color:#710">&quot;</span></span>);
+   <span style="color:#036;font-weight:bold">FILE</span> *fp = fopen(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">test.rb</span><span style="color:#710">&quot;</span></span>,<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">r</span><span style="color:#710">&quot;</span></span>);
    mrb_value obj = mrb_load_file(mrb,fp);
-   mrb_funcall_argv(mrb, obj, m_sym, <span style="color:#00D">1</span>, &amp;obj); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Calling</span> ruby function from test.rb.
+   mrb_funcall_argv(mrb, obj, MRB_SYM(method_name), <span style="color:#00D">1</span>, &amp;obj); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">Calling</span> ruby function from test.rb.
    fclose(fp);
    mrb_close(mrb);
   }
@@ -6011,7 +7175,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -6026,7 +7191,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>A reference to an mruby value.</p>
+        <div class='inline'>
+<p>A reference to an mruby value.</p>
 </div>
       
     </li>
@@ -6041,7 +7207,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The symbol representing the method.</p>
+        <div class='inline'>
+<p>The symbol representing the method.</p>
 </div>
       
     </li>
@@ -6056,7 +7223,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>The number of arguments the method has.</p>
+        <div class='inline'>
+<p>The number of arguments the method has.</p>
 </div>
       
     </li>
@@ -6071,7 +7239,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>Pointer to the object.</p>
+        <div class='inline'>
+<p>Pointer to the object.</p>
 </div>
       
     </li>
@@ -6089,7 +7258,8 @@ class it returns true, it returns false otherwise.</p>
       
       
         &mdash;
-        <div class='inline'><p>mrb_value mruby function value.</p>
+        <div class='inline'>
+<p>mrb_value mruby function value.</p>
 </div>
       
     </li>
@@ -6099,7 +7269,7 @@ class it returns true, it returns false otherwise.</p>
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#mrb_funcall-function" title="mrb_funcall (function)">mrb_funcall</a></span></li>
+      <li><span class='object_link'><a href="mruby_2Fpresym_2Fscanning.h.html#mrb_funcall-define" title="mrb_funcall (define)">mrb_funcall</a></span></li>
     
   </ul>
 
@@ -6117,7 +7287,8 @@ class it returns true, it returns false otherwise.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Call existing ruby functions with a block.</p>
+    
+<p>Call existing ruby functions with a block.</p>
 
 
   </div>
@@ -6139,7 +7310,8 @@ class it returns true, it returns false otherwise.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Create a symbol</p>
+    
+<p>Create a symbol from C string. But usually it’s better to use MRB_SYM, MRB_OPSYM, MRB_CVSYM, MRB_IVSYM, MRB_GVSYM, MRB_SYM_B, MRB_SYM_Q, MRB_SYM_E macros.</p>
 
 <p>Example:</p>
 
@@ -6147,7 +7319,9 @@ class it returns true, it returns false otherwise.</p>
 <span style="color:#A60">:pizza</span> <span style="color:#777"># =&gt; :pizza</span>
 
 <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span> <span style="color:#036;font-weight:bold">C</span> <span style="color:#606">style</span>:
-mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">pizza</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span>  =&gt; <span style="color:#A60">:pizza</span>
+mrb_sym sym1 = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">pizza</span><span style="color:#710">&quot;</span></span>); <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span>  =&gt; <span style="color:#A60">:pizza</span>
+mrb_sym sym2 = MRB_SYM(pizza);               <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span>  =&gt; <span style="color:#A60">:pizza</span>
+mrb_sym sym3 = MRB_SYM_Q(pizza);             <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#404">/</span></span>  =&gt; <span style="color:#A60">:pizza?</span>
 </code></pre>
 
 
@@ -6167,7 +7341,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
       
       
         &mdash;
-        <div class='inline'><p>The current mruby state.</p>
+        <div class='inline'>
+<p>The current mruby state.</p>
 </div>
       
     </li>
@@ -6182,7 +7357,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
       
       
         &mdash;
-        <div class='inline'><p>The string to be symbolized</p>
+        <div class='inline'>
+<p>The string to be symbolized</p>
 </div>
       
     </li>
@@ -6200,7 +7376,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
       
       
         &mdash;
-        <div class='inline'><p>mrb_sym A symbol.</p>
+        <div class='inline'>
+<p>mrb_sym A symbol.</p>
 </div>
       
     </li>
@@ -6244,11 +7421,67 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_intern_check_cstr-function">
+  mrb_sym <strong>mrb_intern_check_cstr</strong>(mrb_state* , const char* )
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>mrb_intern_check series functions returns 0 if the symbol is not defined</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_intern_check-function">
+  mrb_sym <strong>mrb_intern_check</strong>(mrb_state* , const char* , size_t )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_intern_check_str-function">
+  mrb_sym <strong>mrb_intern_check_str</strong>(mrb_state* , mrb_value )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_check_intern_cstr-function">
   mrb_value <strong>mrb_check_intern_cstr</strong>(mrb_state* , const char* )
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>otherwise returns mrb_value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
@@ -6291,7 +7524,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>raise RuntimeError if no mem</p>
+    
+<p>raise RuntimeError if no mem</p>
 
 
   </div>
@@ -6313,7 +7547,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>ditto</p>
+    
+<p>ditto</p>
 
 
   </div>
@@ -6335,7 +7570,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>ditto</p>
+    
+<p>ditto</p>
 
 
   </div>
@@ -6357,7 +7593,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>return NULL if no memory available</p>
+    
+<p>return NULL if no memory available</p>
 
 
   </div>
@@ -6379,7 +7616,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>return NULL if no memory available</p>
+    
+<p>return NULL if no memory available</p>
 
 
   </div>
@@ -6401,7 +7639,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>return NULL if no memory available</p>
+    
+<p>return NULL if no memory available</p>
 
 
   </div>
@@ -6427,7 +7666,7 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_str_new-function">
-  mrb_value <strong>mrb_str_new</strong>(mrb_state * mrb, const char * p, size_t len)
+  mrb_value <strong>mrb_str_new</strong>(mrb_state * mrb, const char * p, mrb_int len)
 
   
 </h3>
@@ -6443,7 +7682,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Turns a C string into a Ruby string value.</p>
+    
+<p>Turns a C string into a Ruby string value.</p>
 
 
   </div>
@@ -6459,7 +7699,7 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_str_new_static-function">
-  mrb_value <strong>mrb_str_new_static</strong>(mrb_state * mrb, const char * p, size_t len)
+  mrb_value <strong>mrb_str_new_static</strong>(mrb_state * mrb, const char * p, mrb_int len)
 
   
 </h3>
@@ -6485,7 +7725,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Creates new mrb_state.</p>
+    
+<p>Creates new mrb_state.</p>
 
 
   </div>
@@ -6503,7 +7744,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
       
       
         
-        <div class='inline'><p>Pointer to the newly created mrb_state.</p>
+        <div class='inline'>
+<p>Pointer to the newly created mrb_state.</p>
 </div>
       
     </li>
@@ -6524,7 +7766,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Create new mrb_state with custom allocators.</p>
+    
+<p>Create new mrb_state with custom allocators.</p>
 
 
   </div>
@@ -6543,7 +7786,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
       
       
         &mdash;
-        <div class='inline'><p>Reference to the allocation function.</p>
+        <div class='inline'>
+<p>Reference to the allocation function.</p>
 </div>
       
     </li>
@@ -6558,8 +7802,8 @@ mrb_sym m_sym = mrb_intern_lit(mrb, <span style="background-color:hsla(0,100%,50
       
       
         &mdash;
-        <div class='inline'><p>User data will be passed to custom allocator f.
-If user data isn’t required just pass NULL.</p>
+        <div class='inline'>
+<p>User data will be passed to custom allocator f. If user data isn’t required just pass NULL.</p>
 </div>
       
     </li>
@@ -6577,7 +7821,8 @@ If user data isn’t required just pass NULL.</p>
       
       
         
-        <div class='inline'><p>Pointer to the newly created mrb_state.</p>
+        <div class='inline'>
+<p>Pointer to the newly created mrb_state.</p>
 </div>
       
     </li>
@@ -6598,7 +7843,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Create new mrb_state with just the MRuby core</p>
+    
+<p>Create new mrb_state with just the mruby core</p>
 
 
   </div>
@@ -6617,8 +7863,8 @@ If user data isn’t required just pass NULL.</p>
       
       
         &mdash;
-        <div class='inline'><p>Reference to the allocation function.
-Use mrb_default_allocf for the default</p>
+        <div class='inline'>
+<p>Reference to the allocation function. Use mrb_default_allocf for the default</p>
 </div>
       
     </li>
@@ -6633,8 +7879,8 @@ Use mrb_default_allocf for the default</p>
       
       
         &mdash;
-        <div class='inline'><p>User data will be passed to custom allocator f.
-If user data isn’t required just pass NULL.</p>
+        <div class='inline'>
+<p>User data will be passed to custom allocator f. If user data isn’t required just pass NULL.</p>
 </div>
       
     </li>
@@ -6652,7 +7898,8 @@ If user data isn’t required just pass NULL.</p>
       
       
         
-        <div class='inline'><p>Pointer to the newly created mrb_state.</p>
+        <div class='inline'>
+<p>Pointer to the newly created mrb_state.</p>
 </div>
       
     </li>
@@ -6673,7 +7920,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Closes and frees a mrb_state.</p>
+    
+<p>Closes and frees a mrb_state.</p>
 
 
   </div>
@@ -6692,7 +7940,8 @@ If user data isn’t required just pass NULL.</p>
       
       
         &mdash;
-        <div class='inline'><p>Pointer to the mrb_state to be closed.</p>
+        <div class='inline'>
+<p>Pointer to the mrb_state to be closed.</p>
 </div>
       
     </li>
@@ -6714,7 +7963,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>The default allocation function.</p>
+    
+<p>The default allocation function.</p>
 
 
   </div>
@@ -6746,28 +7996,107 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_run-function">
-  mrb_value <strong>mrb_run</strong>(mrb_state * mrb, struct RProc* proc, mrb_value self)
+  <h3 class="signature " id="mrb_top_run-function">
+  mrb_value <strong>mrb_top_run</strong>(mrb_state * mrb, const struct RProc * proc, mrb_value self, mrb_int stack_keep)
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>When called from a C function defined as a method, the current stack is destroyed. If you want to use arguments obtained by <code>mrb_get_args()</code> or other methods after <code>mrb_top_run()</code>, you must protect them by <code>mrb_gc_protect()</code> or other ways before this function. Or consider using <code>mrb_yield()</code> family functions.</p>
+</div>
+  </div>
+
+
+<p>Enter the mruby VM and execute the proc.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mrb</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current mruby state.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>proc</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An object containing <code>irep</code>. If supplied an object containing anything other than <code>irep</code>, it will probably crash.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>self</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><code>self</code> on the execution context of <code>proc</code>.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>stack_keep</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Specifies the number of values to hold from the stack top. Values on the stack outside this range will be initialized to <code>nil</code>.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div>
 
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_top_run-function">
-  mrb_value <strong>mrb_top_run</strong>(mrb_state * mrb, struct RProc * proc, mrb_value self, unsigned int, stack_keep )
-
-  
-</h3>
 
 </div>
 
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_vm_run-function">
-  mrb_value <strong>mrb_vm_run</strong>(mrb_state * mrb, struct RProc * proc, mrb_value self, unsigned int, stack_keep )
+  mrb_value <strong>mrb_vm_run</strong>(mrb_state * mrb, const struct RProc * proc, mrb_value self, mrb_int stack_keep)
 
   
 </h3>
@@ -6777,7 +8106,7 @@ If user data isn’t required just pass NULL.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_vm_exec-function">
-  mrb_value <strong>mrb_vm_exec</strong>(mrb_state * mrb, struct RProc * proc, const mrb_code * iseq)
+  mrb_value <strong>mrb_vm_exec</strong>(mrb_state * mrb, const struct RProc * proc, const mrb_code * iseq)
 
   
 </h3>
@@ -6846,28 +8175,8 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_convert_to_integer-function">
-  mrb_value <strong>mrb_convert_to_integer</strong>(mrb_state * mrb, mrb_value val, mrb_int base)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_Integer-function">
-  mrb_value <strong>mrb_Integer</strong>(mrb_state * mrb, mrb_value val)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_Float-function">
-  mrb_value <strong>mrb_Float</strong>(mrb_state * mrb, mrb_value val)
+  <h3 class="signature " id="mrb_ensure_float_type-function">
+  mrb_value <strong>mrb_ensure_float_type</strong>(mrb_state * mrb, mrb_value val)
 
   
 </h3>
@@ -6903,7 +8212,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>mrb_cmp(mrb, obj1, obj2): 1:0:-1; -2 for error</p>
+    
+<p>mrb_cmp(mrb, obj1, obj2): 1:0:-1; -2 for error</p>
 
 
   </div>
@@ -6913,26 +8223,6 @@ If user data isn’t required just pass NULL.</p>
 
 </div>
 
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_gc_arena_save-function">
-  int <strong>mrb_gc_arena_save</strong>(mrb_state * mrb)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_gc_arena_restore-function">
-  void <strong>mrb_gc_arena_restore</strong>(mrb_state * mrb, int idx)
-
-  
-</h3>
 
 </div>
 
@@ -6959,7 +8249,7 @@ If user data isn’t required just pass NULL.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_incremental_gc-function">
-  void <strong>mrb_incremental_gc</strong>(mrb_state * )
+  void <strong>mrb_incremental_gc</strong>(mrb_state* )
 
   
 </h3>
@@ -6979,7 +8269,7 @@ If user data isn’t required just pass NULL.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_field_write_barrier-function">
-  void <strong>mrb_field_write_barrier</strong>(mrb_state * , struct RBasic* , struct RBasic* )
+  void <strong>mrb_field_write_barrier</strong>(mrb_state* , struct RBasic* , struct RBasic* )
 
   
 </h3>
@@ -6998,8 +8288,18 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_check_convert_type-function">
-  mrb_value <strong>mrb_check_convert_type</strong>(mrb_state * mrb, mrb_value val, enum mrb_vtype, type , const char * tname, const char * method)
+  <h3 class="signature " id="mrb_type_convert-function">
+  mrb_value <strong>mrb_type_convert</strong>(mrb_state * mrb, mrb_value val, enum mrb_vtype, type , mrb_sym method)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_type_convert_check-function">
+  mrb_value <strong>mrb_type_convert_check</strong>(mrb_state * mrb, mrb_value val, enum mrb_vtype, type , mrb_sym method)
 
   
 </h3>
@@ -7030,16 +8330,6 @@ If user data isn’t required just pass NULL.</p>
     <div class="method_details ">
   <h3 class="signature " id="mrb_class_path-function">
   mrb_value <strong>mrb_class_path</strong>(mrb_state * mrb, struct RClass * c)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_convert_type-function">
-  mrb_value <strong>mrb_convert_type</strong>(mrb_state * mrb, mrb_value val, enum mrb_vtype, type , const char * tname, const char * method)
 
   
 </h3>
@@ -7079,7 +8369,7 @@ If user data isn’t required just pass NULL.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_exc_new-function">
-  mrb_value <strong>mrb_exc_new</strong>(mrb_state * mrb, struct RClass * c, const char * ptr, size_t len)
+  mrb_value <strong>mrb_exc_new</strong>(mrb_state * mrb, struct RClass * c, const char * ptr, mrb_int len)
 
   
 </h3>
@@ -7138,6 +8428,16 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_argnum_error-function">
+  mrb_noreturn <strong>mrb_argnum_error</strong>(mrb_state * mrb, mrb_int argc, int min, int max)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_warn-function">
   void <strong>mrb_warn</strong>(mrb_state * mrb, const char * fmt, ... )
 
@@ -7149,7 +8449,7 @@ If user data isn’t required just pass NULL.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_bug-function">
-  mrb_noreturn <strong>mrb_bug</strong>(mrb_state * mrb, const char * fmt, ... )
+  mrb_noreturn <strong>mrb_bug</strong>(mrb_state * mrb, const char * mesg)
 
   
 </h3>
@@ -7185,7 +8485,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>function for <code>raisef</code> formatting</p>
+    
+<p>function for <code>raisef</code> formatting</p>
 
 
   </div>
@@ -7237,7 +8538,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>mrb_gc_protect() leaves the object in the arena</p>
+    
+<p>mrb_gc_protect() leaves the object in the arena</p>
 
 
   </div>
@@ -7259,7 +8561,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>mrb_gc_register() keeps the object from GC.</p>
+    
+<p>mrb_gc_register() keeps the object from GC.</p>
 
 
   </div>
@@ -7281,7 +8584,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>mrb_gc_unregister() removes the object from GC root.</p>
+    
+<p>mrb_gc_unregister() removes the object from GC root.</p>
 
 
   </div>
@@ -7296,8 +8600,31 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_to_int-function">
-  mrb_value <strong>mrb_to_int</strong>(mrb_state * mrb, mrb_value val)
+  <h3 class="signature " id="mrb_ensure_array_type-function">
+  mrb_value <strong>mrb_ensure_array_type</strong>(mrb_state * mrb, mrb_value self)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>type conversion/check functions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_array_type-function">
+  mrb_value <strong>mrb_check_array_type</strong>(mrb_state * mrb, mrb_value self)
 
   
 </h3>
@@ -7306,14 +8633,78 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_to_str-function">
-  mrb_value <strong>mrb_to_str</strong>(mrb_state * mrb, mrb_value val)
+  <h3 class="signature " id="mrb_ensure_hash_type-function">
+  mrb_value <strong>mrb_ensure_hash_type</strong>(mrb_state * mrb, mrb_value hash)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_hash_type-function">
+  mrb_value <strong>mrb_check_hash_type</strong>(mrb_state * mrb, mrb_value hash)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ensure_string_type-function">
+  mrb_value <strong>mrb_ensure_string_type</strong>(mrb_state * mrb, mrb_value str)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_string_type-function">
+  mrb_value <strong>mrb_check_string_type</strong>(mrb_state * mrb, mrb_value str)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ensure_integer_type-function">
+  mrb_value <strong>mrb_ensure_integer_type</strong>(mrb_state * mrb, mrb_value val)
 
   
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>string type checking (contrary to the name, it doesn’t convert)</p>
+    
+<p>check if val is an integer (including Bigint)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_ensure_int_type-function">
+  mrb_value <strong>mrb_ensure_int_type</strong>(mrb_state * mrb, mrb_value val)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>check if val fit in mrb_int</p>
 
 
   </div>
@@ -7333,13 +8724,36 @@ If user data isn’t required just pass NULL.</p>
 
   
 </h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>string type checking (contrary to the name, it doesn’t convert)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
 
 </div>
 
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_check_frozen-function">
-  void <strong>mrb_check_frozen</strong>(mrb_state * mrb, void * o)
+  void <strong>mrb_check_frozen</strong>(mrb_state * mrb, void * )
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_check_frozen_value-function">
+  void <strong>mrb_check_frozen_value</strong>(mrb_state * mrb, mrb_value v)
 
   
 </h3>
@@ -7350,6 +8764,16 @@ If user data isn’t required just pass NULL.</p>
     <div class="method_details ">
   <h3 class="signature " id="mrb_define_alias-function">
   void <strong>mrb_define_alias</strong>(mrb_state * mrb, struct RClass * c, const char * a, const char * b)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_define_alias_id-function">
+  void <strong>mrb_define_alias_id</strong>(mrb_state * mrb, struct RClass * c, mrb_sym a, mrb_sym b)
 
   
 </h3>
@@ -7389,7 +8813,7 @@ If user data isn’t required just pass NULL.</p>
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_obj_is_instance_of-function">
-  mrb_bool <strong>mrb_obj_is_instance_of</strong>(mrb_state * mrb, mrb_value obj, struct RClass* c)
+  mrb_bool <strong>mrb_obj_is_instance_of</strong>(mrb_state * mrb, mrb_value obj, const struct RClass* c)
 
   
 </h3>
@@ -7408,6 +8832,31 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_fiber_new-function">
+  mrb_value <strong>mrb_fiber_new</strong>(mrb_state * mrb, const struct RProc * proc)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new Fiber from proc object</p>
+
+<p>Implemented in mruby-fiber</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_fiber_resume-function">
   mrb_value <strong>mrb_fiber_resume</strong>(mrb_state * mrb, mrb_value fib, mrb_int argc, const mrb_value * argv)
 
@@ -7415,9 +8864,12 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Resume a Fiber</p>
+    
+<p>Resume a Fiber</p>
 
 <p>Implemented in mruby-fiber</p>
+
+<p>Switches to the specified fiber and executes. Like the <code>Fiber#resume</code> method.</p>
 
 
   </div>
@@ -7439,9 +8891,23 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Yield a Fiber</p>
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This function is only available from inside a function defined as a method by, for example, <code>mrb_define_method()</code>. Also, the work following <code>mrb_fiber_yield()</code> cannot be performed, and the return value of <code>mrb_fiber_yield()</code> must be returned as is.</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#080;font-weight:bold">return</span> mrb_fiber_yield(mrb, argc, argv);
+</code></pre>
+</div>
+  </div>
+
+
+<p>Yield a Fiber</p>
 
 <p>Implemented in mruby-fiber</p>
+
+<p>Passes control to the caller fiber of the running fiber. Like the <code>Fiber.yield</code> method.</p>
 
 
   </div>
@@ -7463,7 +8929,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Check if a Fiber is alive</p>
+    
+<p>Check if a Fiber is alive</p>
 
 <p>Implemented in mruby-fiber</p>
 
@@ -7490,56 +8957,6 @@ If user data isn’t required just pass NULL.</p>
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_pool_open-function">
-  struct mrb_pool* <strong>mrb_pool_open</strong>(mrb_state* )
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_pool_close-function">
-  void <strong>mrb_pool_close</strong>(struct mrb_pool* )
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_pool_alloc-function">
-  void* <strong>mrb_pool_alloc</strong>(struct mrb_pool* , size_t )
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_pool_realloc-function">
-  void* <strong>mrb_pool_realloc</strong>(struct mrb_pool* , void* , size_t oldlen, size_t newlen)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_pool_can_realloc-function">
-  mrb_bool <strong>mrb_pool_can_realloc</strong>(struct mrb_pool* , void* , size_t )
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
   <h3 class="signature " id="mrb_alloca-function">
   void* <strong>mrb_alloca</strong>(mrb_state * mrb, size_t )
 
@@ -7547,7 +8964,8 @@ If user data isn’t required just pass NULL.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>temporary memory allocation, only effective while GC arena is kept</p>
+    
+<p>temporary memory allocation, only effective while GC arena is kept</p>
 
 
   </div>
@@ -7605,9 +9023,9 @@ If user data isn’t required just pass NULL.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:12 2019 by
+  Generated on Fri Apr 10 23:46:13 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

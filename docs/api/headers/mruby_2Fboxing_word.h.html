@@ -6,17 +6,17 @@
 <title>
   Header: mruby/boxing_word.h
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mruby/boxing_word.h";
   relpath = '../';
 </script>
@@ -85,8 +85,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -103,15 +102,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_word_boxing_float_pool-function" title="mrb_word_boxing_float_pool">mrb_value <strong>mrb_word_boxing_float_pool</strong>(struct mrb_state*, mrb_float)</a>
+    <a href="#mrb_word_boxing_value_float-function" title="mrb_word_boxing_value_float">mrb_float <strong>mrb_word_boxing_value_float</strong>(mrb_value)</a>
 
     
   </span>
@@ -121,15 +119,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_type-function" title="mrb_type">enum <strong>mrb_type</strong>(mrb_value)</a>
+    <a href="#mrb_integer_func-function" title="mrb_integer_func">mrb_int <strong>mrb_integer_func</strong>(mrb_value)</a>
 
     
   </span>
@@ -139,8 +136,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -156,52 +152,90 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_SYMBOL_SHIFT-define" class=""><small>#define</small> MRB_SYMBOL_SHIFT
+      <dt id="MRB_WORDBOX_NO_FLOAT_TRUNCATE-define" class=""><small>#define</small> MRB_WORDBOX_NO_FLOAT_TRUNCATE
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_FIXNUM_FLAG-define" class=""><small>#define</small> MRB_FIXNUM_FLAG
+      <dt id="WORDBOX_FIXNUM_BIT_POS-define" class=""><small>#define</small> WORDBOX_FIXNUM_BIT_POS
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_SYMBOL_FLAG-define" class=""><small>#define</small> MRB_SYMBOL_FLAG
+      <dt id="WORDBOX_FIXNUM_SHIFT-define" class=""><small>#define</small> WORDBOX_FIXNUM_SHIFT
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_FIXNUM_MASK-define" class=""><small>#define</small> MRB_FIXNUM_MASK
+      <dt id="WORDBOX_FIXNUM_FLAG-define" class=""><small>#define</small> WORDBOX_FIXNUM_FLAG
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_SYMBOL_MASK-define" class=""><small>#define</small> MRB_SYMBOL_MASK
+      <dt id="WORDBOX_FIXNUM_MASK-define" class=""><small>#define</small> WORDBOX_FIXNUM_MASK
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="MRB_IMMEDIATE_MASK-define" class=""><small>#define</small> MRB_IMMEDIATE_MASK
+      <dt id="WORDBOX_SYMBOL_BIT_POS-define" class=""><small>#define</small> WORDBOX_SYMBOL_BIT_POS
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>floats are allocated in heaps</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="WORDBOX_SYMBOL_SHIFT-define" class=""><small>#define</small> WORDBOX_SYMBOL_SHIFT
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="BOXWORD_SHIFT_VALUE-define" class=""><small>#define</small> BOXWORD_SHIFT_VALUE
+      <dt id="WORDBOX_SYMBOL_FLAG-define" class=""><small>#define</small> WORDBOX_SYMBOL_FLAG
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="BOXWORD_SET_SHIFT_VALUE-define" class=""><small>#define</small> BOXWORD_SET_SHIFT_VALUE
+      <dt id="WORDBOX_SYMBOL_MASK-define" class=""><small>#define</small> WORDBOX_SYMBOL_MASK
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="BOXWORD_SHIFT_VALUE_P-define" class=""><small>#define</small> BOXWORD_SHIFT_VALUE_P
+      <dt id="WORDBOX_FLOAT_FLAG-define" class=""><small>#define</small> WORDBOX_FLOAT_FLAG
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="BOXWORD_OBJ_TYPE_P-define" class=""><small>#define</small> BOXWORD_OBJ_TYPE_P
+      <dt id="WORDBOX_FLOAT_MASK-define" class=""><small>#define</small> WORDBOX_FLOAT_MASK
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="WORDBOX_IMMEDIATE_MASK-define" class=""><small>#define</small> WORDBOX_IMMEDIATE_MASK
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="WORDBOX_SET_SHIFT_VALUE-define" class=""><small>#define</small> WORDBOX_SET_SHIFT_VALUE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="WORDBOX_SHIFT_VALUE_P-define" class=""><small>#define</small> WORDBOX_SHIFT_VALUE_P
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="WORDBOX_OBJ_TYPE_P-define" class=""><small>#define</small> WORDBOX_OBJ_TYPE_P
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -234,8 +268,8 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_word_boxing_float_pool-function">
-  mrb_value <strong>mrb_word_boxing_float_pool</strong>(struct mrb_state* , mrb_float )
+  <h3 class="signature " id="mrb_word_boxing_value_float-function">
+  mrb_float <strong>mrb_word_boxing_value_float</strong>(mrb_value v)
 
   
 </h3>
@@ -244,8 +278,8 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_type-function">
-  enum <strong>mrb_type</strong>(mrb_value o)
+  <h3 class="signature " id="mrb_integer_func-function">
+  mrb_int <strong>mrb_integer_func</strong>(mrb_value o)
 
   
 </h3>
@@ -257,9 +291,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:13 2019 by
+  Generated on Fri Apr 10 23:46:14 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

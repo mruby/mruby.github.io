@@ -6,17 +6,17 @@
 <title>
   Header: mruby/irep.h
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mruby/irep.h";
   relpath = '../';
 </script>
@@ -67,7 +67,8 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    <p>Compiled mruby scripts.</p>
+    
+<p>Compiled mruby scripts.</p>
 
 
   </div>
@@ -98,15 +99,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_load_irep-function" title="mrb_load_irep">mrb_value <strong>mrb_load_irep</strong>(mrb_state*, const uint8_t*)</a>
+    <a href="#mrb_load_irep-function" title="mrb_load_irep">mrb_value <strong>mrb_load_irep</strong>(mrb_state *, const uint8_t *)</a>
 
     
   </span>
@@ -116,15 +116,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_load_irep_buf-function" title="mrb_load_irep_buf">mrb_value <strong>mrb_load_irep_buf</strong>(mrb_state*, const void*, size_t)</a>
+    <a href="#mrb_load_irep_buf-function" title="mrb_load_irep_buf">mrb_value <strong>mrb_load_irep_buf</strong>(mrb_state *, const void *, size_t)</a>
 
     
   </span>
@@ -134,15 +133,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_load_irep_cxt-function" title="mrb_load_irep_cxt">mrb_value <strong>mrb_load_irep_cxt</strong>(mrb_state*, const uint8_t*, mrbc_context*)</a>
+    <a href="#mrb_load_irep_cxt-function" title="mrb_load_irep_cxt">mrb_value <strong>mrb_load_irep_cxt</strong>(mrb_state *, const uint8_t *, mrbc_context *)</a>
 
     
   </span>
@@ -152,15 +150,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_load_irep_buf_cxt-function" title="mrb_load_irep_buf_cxt">mrb_value <strong>mrb_load_irep_buf_cxt</strong>(mrb_state*, const void*, size_t, mrbc_context*)</a>
+    <a href="#mrb_load_irep_buf_cxt-function" title="mrb_load_irep_buf_cxt">mrb_value <strong>mrb_load_irep_buf_cxt</strong>(mrb_state *, const void *, size_t, mrbc_context *)</a>
 
     
   </span>
@@ -170,8 +167,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -187,7 +183,37 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="IREP_TT_NFLAG-define" class=""><small>#define</small> IREP_TT_NFLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="IREP_TT_SFLAG-define" class=""><small>#define</small> IREP_TT_SFLAG
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="MRB_ISEQ_NO_FREE-define" class=""><small>#define</small> MRB_ISEQ_NO_FREE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_IREP_NO_FREE-define" class=""><small>#define</small> MRB_IREP_NO_FREE
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_IREP_STATIC-define" class=""><small>#define</small> MRB_IREP_STATIC
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_irep_catch_handler_pack-define" class=""><small>#define</small> mrb_irep_catch_handler_pack
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="mrb_irep_catch_handler_unpack-define" class=""><small>#define</small> mrb_irep_catch_handler_unpack
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -211,14 +237,13 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_load_irep-function">
-  mrb_value <strong>mrb_load_irep</strong>(mrb_state* , const uint8_t* )
+  mrb_value <strong>mrb_load_irep</strong>(mrb_state * , const uint8_t * )
 
   
 </h3>
 <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -236,7 +261,8 @@
       
       
         &mdash;
-        <div class='inline'><p>code, expected as a literal</p>
+        <div class='inline'>
+<p>code, expected as a literal</p>
 </div>
       
     </li>
@@ -252,14 +278,13 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_load_irep_buf-function">
-  mrb_value <strong>mrb_load_irep_buf</strong>(mrb_state* , const void* , size_t )
+  mrb_value <strong>mrb_load_irep_buf</strong>(mrb_state * , const void * , size_t )
 
   
 </h3>
 <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -277,7 +302,8 @@
       
       
         &mdash;
-        <div class='inline'><p>code</p>
+        <div class='inline'>
+<p>code</p>
 </div>
       
     </li>
@@ -292,7 +318,8 @@
       
       
         &mdash;
-        <div class='inline'><p>of irep buffer. If -1 is given, it is considered unrestricted.</p>
+        <div class='inline'>
+<p>of irep buffer.</p>
 </div>
       
     </li>
@@ -308,14 +335,13 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_load_irep_cxt-function">
-  mrb_value <strong>mrb_load_irep_cxt</strong>(mrb_state* , const uint8_t* , mrbc_context* )
+  mrb_value <strong>mrb_load_irep_cxt</strong>(mrb_state * , const uint8_t * , mrbc_context * )
 
   
 </h3>
 <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -333,7 +359,8 @@
       
       
         &mdash;
-        <div class='inline'><p>code, expected as a literal</p>
+        <div class='inline'>
+<p>code, expected as a literal</p>
 </div>
       
     </li>
@@ -349,14 +376,13 @@
   
     <div class="method_details ">
   <h3 class="signature " id="mrb_load_irep_buf_cxt-function">
-  mrb_value <strong>mrb_load_irep_buf_cxt</strong>(mrb_state* , const void* , size_t , mrbc_context* )
+  mrb_value <strong>mrb_load_irep_buf_cxt</strong>(mrb_state * , const void * , size_t , mrbc_context * )
 
   
 </h3>
 <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -374,7 +400,8 @@
       
       
         &mdash;
-        <div class='inline'><p>code</p>
+        <div class='inline'>
+<p>code</p>
 </div>
       
     </li>
@@ -389,7 +416,8 @@
       
       
         &mdash;
-        <div class='inline'><p>of irep buffer. If -1 is given, it is considered unrestricted.</p>
+        <div class='inline'>
+<p>of irep buffer.</p>
 </div>
       
     </li>
@@ -407,9 +435,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:12 2019 by
+  Generated on Fri Apr 10 23:46:13 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

@@ -6,17 +6,17 @@
 <title>
   Class: Module
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Module";
   relpath = '';
 </script>
@@ -137,7 +137,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:   mod &lt; other   -&gt;  true, false, or nil.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq: mod &lt; other   -&gt; true, false, or nil.</p>
 </div></span>
   
 </li>
@@ -160,7 +161,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:   mod &lt;= other   -&gt;  true, false, or nil.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq: mod &lt;= other -&gt; true, false, or nil.</p>
 </div></span>
   
 </li>
@@ -183,7 +185,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:    module &lt;=&gt; other_module   -&gt; -1, 0, +1, or nil.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq: module &lt;=&gt; other_module -&gt; -1, 0, +1, or nil.</p>
 </div></span>
   
 </li>
@@ -206,7 +209,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:  mod &gt; other   -&gt;  true, false, or nil.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq: mod &gt; other -&gt; true, false, or nil.</p>
 </div></span>
   
 </li>
@@ -229,30 +233,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:   mod &gt;= other   -&gt;  true, false, or nil.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#attr_accessor-instance_method" title="#attr_accessor (instance method)">#<strong>attr_accessor</strong>(*names)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>15.2.2.4.12.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq: mod &gt;= other -&gt; true, false, or nil.</p>
 </div></span>
   
 </li>
@@ -275,7 +257,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>15.2.2.4.27.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>15.2.2.4.27.</p>
 </div></span>
   
 </li>
@@ -298,8 +281,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -324,13 +306,10 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  mod &lt; other   -&gt;  true, false, or nil</p>
+    
+<p>call-seq: mod &lt; other   -&gt; true, false, or nil</p>
 
-<p>Returns true if <code>mod</code> is a subclass of <code>other</code>. Returns
-<code>nil</code> if there’s no relationship between the two.
-(Think of the relationship in terms of the class definition:
-“class A &lt; B” implies “A &lt; B”.)</p>
+<p>Returns true if <code>mod</code> is a subclass of <code>other</code>. Returns <code>nil</code> if there’s no relationship between the two. (Think of the relationship in terms of the class definition: “class A &lt; B” implies “A &lt; B”.)</p>
 
 
   </div>
@@ -380,14 +359,10 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  mod &lt;= other   -&gt;  true, false, or nil</p>
+    
+<p>call-seq: mod &lt;= other -&gt; true, false, or nil</p>
 
-<p>Returns true if <code>mod</code> is a subclass of <code>other</code> or
-is the same as <code>other</code>. Returns
-<code>nil</code> if there’s no relationship between the two.
-(Think of the relationship in terms of the class definition:
-“class A &lt; B” implies “A &lt; B”.)</p>
+<p>Returns true if <code>mod</code> is a subclass of <code>other</code> or is the same as <code>other</code>. Returns <code>nil</code> if there’s no relationship between the two. (Think of the relationship in terms of the class definition: “class A &lt; B” implies “A &lt; B”.)</p>
 
 
   </div>
@@ -452,15 +427,12 @@ is the same as <code>other</code>. Returns
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-   module &lt;=&gt; other_module   -&gt; -1, 0, +1, or nil</p>
+    
+<p>call-seq: module &lt;=&gt; other_module -&gt; -1, 0, +1, or nil</p>
 
-<p>Comparison—Returns -1, 0, +1 or nil depending on whether <code>module</code>
-includes <code>other_module</code>, they are the same, or if <code>module</code> is included by
-<code>other_module</code>.</p>
+<p>Comparison—Returns -1, 0, +1 or nil depending on whether <code>module</code> includes <code>other_module</code>, they are the same, or if <code>module</code> is included by <code>other_module</code>.</p>
 
-<p>Returns <code>nil</code> if <code>module</code> has no relationship with <code>other_module</code>, if
-<code>other_module</code> is not a module, or if the two values are incomparable.</p>
+<p>Returns <code>nil</code> if <code>module</code> has no relationship with <code>other_module</code>, if <code>other_module</code> is not a module, or if the two values are incomparable.</p>
 
 
   </div>
@@ -512,13 +484,10 @@ includes <code>other_module</code>, they are the same, or if <code>module</code>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
- mod &gt; other   -&gt;  true, false, or nil</p>
+    
+<p>call-seq: mod &gt; other -&gt; true, false, or nil</p>
 
-<p>Returns true if <code>mod</code> is an ancestor of <code>other</code>. Returns
-<code>nil</code> if there’s no relationship between the two.
-(Think of the relationship in terms of the class definition:
-“class A &lt; B” implies “B &gt; A”.)</p>
+<p>Returns true if <code>mod</code> is an ancestor of <code>other</code>. Returns <code>nil</code> if there’s no relationship between the two. (Think of the relationship in terms of the class definition: “class A &lt; B” implies “B &gt; A”.)</p>
 
 
   </div>
@@ -568,14 +537,10 @@ includes <code>other_module</code>, they are the same, or if <code>module</code>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  mod &gt;= other   -&gt;  true, false, or nil</p>
+    
+<p>call-seq: mod &gt;= other -&gt; true, false, or nil</p>
 
-<p>Returns true if <code>mod</code> is an ancestor of <code>other</code>, or the
-two modules are the same. Returns
-<code>nil</code> if there’s no relationship between the two.
-(Think of the relationship in terms of the class definition:
-“class A &lt; B” implies “B &gt; A”.)</p>
+<p>Returns true if <code>mod</code> is an ancestor of <code>other</code>, or the two modules are the same. Returns <code>nil</code> if there’s no relationship between the two. (Think of the relationship in terms of the class definition: “class A &lt; B” implies “B &gt; A”.)</p>
 
 
   </div>
@@ -622,50 +587,6 @@ two modules are the same. Returns
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="attr_accessor-instance_method">
-  
-    #<strong>attr_accessor</strong>(*names)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>15.2.2.4.12</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-<table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-3
-4
-5
-6</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'mrblib/00class.rb', line 3</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">attr_accessor</span>(*names)
-  attr_reader(*names)
-  attr_writer(*names)
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="include-instance_method">
   
     #<strong>include</strong>(*args)  &#x21d2; <tt>Object</tt> 
@@ -676,7 +597,8 @@ two modules are the same. Returns
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>15.2.2.4.27</p>
+    
+<p>15.2.2.4.27</p>
 
 
   </div>
@@ -692,21 +614,25 @@ two modules are the same. Returns
       <pre class="lines">
 
 
-14
-15
 16
 17
 18
 19
-20</pre>
+20
+21
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/00class.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'mrblib/00class.rb', line 16</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">include</span>(*args)
-  args.reverse.each <span style="color:#080;font-weight:bold">do</span> |m|
-    m.append_features(<span style="color:#069">self</span>)
-    m.included(<span style="color:#069">self</span>)
+  args.reverse!
+  mod = <span style="color:#069">self</span>
+  args.each <span style="color:#080;font-weight:bold">do</span> |m|
+    m.__send__(<span style="color:#A60">:append_features</span>, mod)
+    m.__send__(<span style="color:#A60">:included</span>, mod)
   <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#069">self</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -730,21 +656,25 @@ two modules are the same. Returns
       <pre class="lines">
 
 
-22
-23
-24
-25
 26
 27
-28</pre>
+28
+29
+30
+31
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'mrblib/00class.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'mrblib/00class.rb', line 26</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">prepend</span>(*args)
-  args.reverse.each <span style="color:#080;font-weight:bold">do</span> |m|
-    m.prepend_features(<span style="color:#069">self</span>)
-    m.prepended(<span style="color:#069">self</span>)
+  args.reverse!
+  mod = <span style="color:#069">self</span>
+  args.each <span style="color:#080;font-weight:bold">do</span> |m|
+    m.__send__(<span style="color:#A60">:prepend_features</span>, mod)
+    m.__send__(<span style="color:#A60">:prepended</span>, mod)
   <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#069">self</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -758,9 +688,9 @@ two modules are the same. Returns
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:10 2019 by
+  Generated on Fri Apr 10 23:46:11 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

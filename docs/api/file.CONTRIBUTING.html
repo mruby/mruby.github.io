@@ -6,17 +6,17 @@
 <title>
   File: CONTRIBUTING
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "CONTRIBUTING";
   relpath = '';
 </script>
@@ -61,68 +61,154 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="how-to-contribute">How to contribute</h1>
+      <div id="content"><div id='filecontents'>
+<h1 id="label-How+to+contribute">How to contribute</h1>
 
-<p>mruby is an open-source project which is looking forward to each contribution.</p>
+<p>mruby is an open-source project which is looking forward to each contribution. Contributors agree to license their contribution(s) under MIT license.</p>
 
-<h2 id="your-pull-request">Your Pull Request</h2>
+<h2 id="label-Your+Pull+Request">Your Pull Request</h2>
 
-<p>To make it easy to review and understand your change please keep the following
-things in mind before submitting your pull request:</p>
+<p>To make it easy to review and understand your change please keep the following things in mind before submitting your pull request:</p>
+<ul><li>
+<p>Work on the latest possible state of <strong>mruby/master</strong></p>
+</li><li>
+<p>Create a branch which is dedicated to your change</p>
+</li><li>
+<p>Test your changes before creating a pull request (<code>rake test</code>)</p>
+</li><li>
+<p>If possible write a test case which confirms your change</p>
+</li><li>
+<p>Don’t mix several features or bug-fixes in one pull request</p>
+</li><li>
+<p>Create a meaningful commit message</p>
+</li><li>
+<p>Explain your change (i.e. with a link to the issue you are fixing)</p>
+</li><li>
+<p>Use mrbgem to provide non ISO features (classes, modules and methods) unless you have a special reason to implement them in the core</p>
+</li></ul>
 
-<ul>
-  <li>Work on the latest possible state of <strong>mruby/master</strong></li>
-  <li>Create a branch which is dedicated to your change</li>
-  <li>Test your changes before creating a pull request (<code>./minirake test</code>)</li>
-  <li>If possible write a test case which confirms your change</li>
-  <li>Don’t mix several features or bug-fixes in one pull request</li>
-  <li>Create a meaningful commit message</li>
-  <li>Explain your change (i.e. with a link to the issue you are fixing)</li>
-  <li>Use mrbgem to provide non ISO features (classes, modules and methods) unless
-you have a special reason to implement them in the core</li>
-</ul>
+<h2 id="label-pre-commit">pre-commit</h2>
 
-<h2 id="coding-conventions">Coding conventions</h2>
+<p>A framework for managing and maintaining multi-language <code>pre-commit</code> hooks. <code>pre-commit</code> can be <a href="https://pre-commit.com/#installation">installed</a> with <code>pip</code>, <code>curl</code>, <code>brew</code> or <code>conda</code>.</p>
+
+<p>You need to first install <code>pre-commit</code> and then install the <code>pre-commit</code> hooks with <code>pre-commit install</code>. Now <code>pre-commit</code> will run automatically on git commit!</p>
+
+<p>It’s usually a good idea to run the hooks against all the files when adding new hooks (usually <code>pre-commit</code> will only run on the changed files during git hooks). Use <code>pre-commit run --all-files</code> to check all files.</p>
+
+<p>To run a single hook use <code>pre-commit run --all-files &lt;hook_id&gt;</code></p>
+
+<p>To update use <code>pre-commit autoupdate</code></p>
+
+<p>Sometimes you might need to skip one or more hooks which can be done with the <code>SKIP</code> environment variable.</p>
+
+<p><code>$ SKIP=yamllint git commit -m &quot;foo&quot;</code></p>
+
+<p>For convenience, we have added <code>pre-commit run --all-files</code>, <code>pre-commit install</code> and <code>pre-commit autoupdate</code> to both the Makefile and the Rakefile. Run them with:</p>
+<ul><li>
+<p><code>make check</code> or <code>rake check</code></p>
+</li><li>
+<p><code>make checkinstall</code> or <code>rake checkinstall</code></p>
+</li><li>
+<p><code>make checkupdate</code> or <code>rake checkupdate</code></p>
+</li></ul>
+
+<p>To configure <code>pre-commit</code> you can modify the config file <a href=".pre-commit-config.yaml">.pre-commit-config.yaml</a>. We use <a href=".github/workflows/lint.yml">GitHub Actions</a> to run <code>pre-commit</code> on every pull request.</p>
+
+<h3 id="label-pre-commit+quick+links">pre-commit quick links</h3>
+<ul><li>
+<p><a href="https://pre-commit.com/#quick-start">Quick start</a></p>
+</li><li>
+<p><a href="https://pre-commit.com/#usage">Usage</a></p>
+</li><li>
+<p><a href="https://pre-commit.com/#pre-commit-autoupdate">pre-commit autoupdate</a></p>
+</li><li>
+<p><a href="https://pre-commit.com/#temporarily-disabling-hooks">Temporarily disabling hooks</a></p>
+</li></ul>
+
+<h2 id="label-Docker">Docker</h2>
+
+<p>We have both a <code>Dockerfile</code> and <code>docker-compose.yml</code> files in the repository root. You can run these with the command line or use <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a>.</p>
+
+<p>The Docker image is running Debian bullseye with Ruby and Python installed. You can build the Docker image with:</p>
+
+<p><code>$ docker-compose build test</code></p>
+
+<p>So far we just have one service: <code>test</code>. Running the default <code>docker-compose</code> command will create the Docker image, spin up a container and then build and run all mruby tests.</p>
+
+<p>The default <code>docker-compose</code> command is:</p>
+
+<p><code>$ docker-compose -p mruby run test</code></p>
+
+<p>You can also use Make or Rake to run the default <code>docker-compose</code> command from above:</p>
+<ul><li>
+<p><code>make composetest</code></p>
+</li><li>
+<p><code>rake composetest</code></p>
+</li></ul>
+
+<p>List your Docker images with:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> docker images
+<span style="color:#036;font-weight:bold">REPOSITORY</span>   <span style="color:#036;font-weight:bold">TAG</span>       <span style="color:#036;font-weight:bold">IMAGE</span> <span style="color:#036;font-weight:bold">ID</span>       <span style="color:#036;font-weight:bold">CREATED</span>          <span style="color:#036;font-weight:bold">SIZE</span>
+mruby-test   latest    ec60f9536948   <span style="color:#00D">29</span> seconds ago   <span style="color:#60E">1.29</span><span style="color:#036;font-weight:bold">GB</span>
+</code></pre>
+
+<p>You can also run any custom <code>docker-compose</code> command which will override the default. For example to run <code>pre-commit run --all-files</code> type:</p>
+
+<p><code>$ docker-compose -p mruby run test pre-commit run --all-files</code></p>
+
+<p>For convenience, you can also run <code>pre-commit</code> with:</p>
+<ul><li>
+<p><code>make composecheck</code></p>
+</li><li>
+<p><code>rake composecheck</code></p>
+</li></ul>
+
+<p>The bonus of running <code>pre-commit</code> with <code>docker-compose</code> is that you won’t need to install <code>pre-commit</code> and the hooks on your local machine. And that also means you won’t need to install <code>brew</code>, <code>conda</code> or <code>pip</code>.</p>
+
+<p>Note limitation: currently running <code>pre-commit</code> with <code>docker-compose</code> we skip the <code>check-executables-have-shebangs</code> hook.</p>
+
+<p>Two more examples of custom <code>docker-compose</code> commands are:</p>
+<ul><li>
+<p><code>$ docker-compose -p mruby run test ls</code></p>
+</li><li>
+<p><code>$ docker-compose -p mruby run test rake doc:api</code></p>
+</li></ul>
+
+<p>If you want to test using a different <code>docker-compose</code> YAML config file you can use the <code>-f</code> flag:</p>
+
+<p><code>$ docker-compose -p mruby -f docker-compose.test.yml run test</code></p>
+<ul><li>
+<p><a href="https://docs.docker.com/compose">docs.docker.com/compose</a>/</p>
+</li><li>
+<p><a href="https://docs.docker.com/engine/reference/commandline/cli">docs.docker.com/engine/reference/commandline/cli</a>/</p>
+</li></ul>
+
+<h2 id="label-Spell+Checking">Spell Checking</h2>
+
+<p>We are using <code>pre-commit</code> to run <a href="https://github.com/codespell-project/codespell">codespell</a> to check code for common misspellings. We have a small custom dictionary file <a href=".github/linters/codespell.txt">codespell.txt</a>.</p>
+
+<h2 id="label-Coding+conventions">Coding conventions</h2>
 
 <p>How to style your C and Ruby code which you want to submit.</p>
 
-<h3 id="c-code">C code</h3>
+<h3 id="label-C+code">C code</h3>
 
-<p>The core part (parser, bytecode-interpreter, core-lib, etc.) of mruby is
-written in the C programming language. Please note the following hints for your
-C code:</p>
+<p>The core part (parser, bytecode-interpreter, core-lib, etc.) of mruby is written in the C programming language. Please note the following hints for your C code:</p>
 
-<h4 id="comply-with-c99-isoiec-98991999">Comply with C99 (ISO/IEC 9899:1999)</h4>
+<h4 id="label-Comply+with+C99+-28ISO-2FIEC+9899-3A1999-29">Comply with C99 (ISO/IEC 9899:1999)</h4>
 
-<p>mruby should be highly portable to other systems and compilers. For this it is
-recommended to keep your code as close as possible to the C99 standard
-(http://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf).</p>
+<p>mruby should be highly portable to other systems and compilers. For this it is recommended to keep your code as close as possible to the C99 standard (<a href="http://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf">www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf</a>).</p>
 
-<p>Although we target C99, we’ve heard some compilers in the embedded environment
-still requires declarations of local variables to be at the beginning of a
-scope. Until we confirm the situation has changed, we use the old-style
-variable declaration.</p>
-
-<p>Visual C++ is also an important target for mruby (supported version is 2013 or
-later). For this reason features that are not supported by Visual C++ may not
-be used (e.g. <code>%z</code> of <code>strftime()</code>).</p>
+<p>Visual C++ is also an important target for mruby (supported version is 2013 or later). For this reason features that are not supported by Visual C++ may not be used (e.g. <code>%z</code> of <code>strftime()</code>).</p>
 
 <p>NOTE: Old GCC requires <code>-std=gnu99</code> option to enable C99 support.</p>
 
-<h4 id="reduce-library-dependencies-to-a-minimum">Reduce library dependencies to a minimum</h4>
+<h4 id="label-Reduce+library+dependencies+to+a+minimum">Reduce library dependencies to a minimum</h4>
 
-<p>The dependencies to libraries should be kept to an absolute minimum. This
-increases the portability but makes it also easier to cut away parts of mruby
-on-demand.</p>
+<p>The dependencies to libraries should be kept to an absolute minimum. This increases the portability but makes it also easier to cut away parts of mruby on-demand.</p>
 
-<h4 id="dont-use-c-style-comments">Don’t use C++ style comments</h4>
-
-<pre class="code ruby"><code class="ruby"><span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">* This is the preferred comment style *</span><span style="color:#404">/</span></span>
-</code></pre>
-
-<p>Use C++ style comments only for temporary comment e.g. commenting out some code lines.</p>
-
-<h4 id="insert-a-break-after-the-method-return-value">Insert a break after the method return value:</h4>
+<h4 id="label-Insert+a+break+after+the+function+return+value-3A">Insert a break after the function return value:</h4>
 
 <pre class="code ruby"><code class="ruby">int
 main(void)
@@ -131,21 +217,37 @@ main(void)
 }
 </code></pre>
 
-<h3 id="ruby-code">Ruby code</h3>
+<h3 id="label-Ruby+code">Ruby code</h3>
 
-<p>Parts of the standard library of mruby are written in the Ruby programming
-language itself. Please note the following hints for your Ruby code:</p>
+<p>Parts of the standard library of mruby are written in the Ruby programming language itself. Please note the following hints for your Ruby code:</p>
 
-<h4 id="comply-with-the-ruby-standard-isoiec-301702012">Comply with the Ruby standard (ISO/IEC 30170:2012)</h4>
+<h4 id="label-Comply+with+the+Ruby+standard+-28ISO-2FIEC+30170-3A2012-29">Comply with the Ruby standard (ISO/IEC 30170:2012)</h4>
 
-<p>mruby is currently targeting to execute Ruby code which complies to ISO/IEC
-30170:2012 (http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=59579).</p>
+<p>mruby is currently targeting to execute Ruby code which complies to ISO/IEC 30170:2012 (<a href="https://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=59579">www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=59579</a>), unless there’s a clear reason, e.g. the latest Ruby has changed behavior from ISO.</p>
+
+<h2 id="label-Building+documentation">Building documentation</h2>
+
+<h3 id="label-mruby+API">mruby API</h3>
+<ul><li>
+<p><a href="https://yardoc.org/">YARD</a> - YARD is a documentation generation tool for the Ruby programming language</p>
+</li><li>
+<p><a href="https://rubygems.org/gems/yard-mruby">yard-mruby</a> - Document mruby sources with YARD</p>
+</li><li>
+<p><a href="https://rubygems.org/gems/yard-coderay">yard-coderay</a> - Adds coderay syntax highlighting to YARD docs</p>
+</li></ul>
+
+<h3 id="label-C+API">C API</h3>
+<ul><li>
+<p><a href="https://www.doxygen.nl/">Doxygen</a> - Generate documentation from source code</p>
+</li><li>
+<p><a href="https://graphviz.org/">Graphviz</a> - Graphviz is open source graph visualization software</p>
+</li></ul>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:07 2019 by
+  Generated on Fri Apr 10 23:46:07 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

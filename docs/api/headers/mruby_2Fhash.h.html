@@ -6,17 +6,17 @@
 <title>
   Header: mruby/hash.h
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mruby/hash.h";
   relpath = '../';
 </script>
@@ -67,7 +67,8 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    <p>Hash class</p>
+    
+<p>offset of <code>iv</code> must be 3 words</p>
 
 
   </div>
@@ -98,44 +99,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_ensure_hash_type-function" title="mrb_ensure_hash_type">mrb_value <strong>mrb_ensure_hash_type</strong>(mrb_state *, mrb_value)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_check_hash_type-function" title="mrb_check_hash_type">mrb_value <strong>mrb_check_hash_type</strong>(mrb_state *, mrb_value)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -152,7 +116,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initializes a new hash.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes a new hash.</p>
 </div></span>
   
 </li>
@@ -170,7 +135,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets a keys and values to hashes.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets a keys and values to hashes.</p>
 </div></span>
   
 </li>
@@ -188,7 +154,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets a value from a key.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a value from a key.</p>
 </div></span>
   
 </li>
@@ -206,7 +173,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets a value from a key.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets a value from a key.</p>
 </div></span>
   
 </li>
@@ -224,7 +192,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Deletes hash key and value pair.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Deletes hash key and value pair.</p>
 </div></span>
   
 </li>
@@ -242,7 +211,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets an array of keys.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets an array of keys.</p>
 </div></span>
   
 </li>
@@ -260,7 +230,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Check if the hash has the key.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Check if the hash has the key.</p>
 </div></span>
   
 </li>
@@ -278,7 +249,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Check if the hash is empty.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Check if the hash is empty.</p>
 </div></span>
   
 </li>
@@ -296,7 +268,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets an array of values.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets an array of values.</p>
 </div></span>
   
 </li>
@@ -314,7 +287,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Clears the hash.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Clears the hash.</p>
 </div></span>
   
 </li>
@@ -332,7 +306,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Get hash size.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Get hash size.</p>
 </div></span>
   
 </li>
@@ -350,7 +325,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Copies the hash.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Copies the hash.</p>
 </div></span>
   
 </li>
@@ -368,7 +344,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Merges two hashes.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Merges two hashes.</p>
 </div></span>
   
 </li>
@@ -386,8 +363,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -414,33 +390,51 @@
       <dd><pre class="code"></pre></dd>
     
       <dt id="RHASH-define" class=""><small>#define</small> RHASH
-        <div class="docstring">
-  <div class="discussion">
-    <p>RHASH_TBL allocates st_table if not available.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-
-
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="RHASH_TBL-define" class=""><small>#define</small> RHASH_TBL
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="RHASH_IFNONE-define" class=""><small>#define</small> RHASH_IFNONE
+      <dt id="MRB_HASH_IB_BIT_BIT-define" class=""><small>#define</small> MRB_HASH_IB_BIT_BIT
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="RHASH_PROCDEFAULT-define" class=""><small>#define</small> RHASH_PROCDEFAULT
+      <dt id="MRB_HASH_AR_EA_CAPA_BIT-define" class=""><small>#define</small> MRB_HASH_AR_EA_CAPA_BIT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_HASH_IB_BIT_SHIFT-define" class=""><small>#define</small> MRB_HASH_IB_BIT_SHIFT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_HASH_AR_EA_CAPA_SHIFT-define" class=""><small>#define</small> MRB_HASH_AR_EA_CAPA_SHIFT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_HASH_AR_EA_N_USED_SHIFT-define" class=""><small>#define</small> MRB_HASH_AR_EA_N_USED_SHIFT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_HASH_SIZE_FLAGS_SHIFT-define" class=""><small>#define</small> MRB_HASH_SIZE_FLAGS_SHIFT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_HASH_IB_BIT_MASK-define" class=""><small>#define</small> MRB_HASH_IB_BIT_MASK
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_HASH_AR_EA_CAPA_MASK-define" class=""><small>#define</small> MRB_HASH_AR_EA_CAPA_MASK
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_HASH_AR_EA_N_USED_MASK-define" class=""><small>#define</small> MRB_HASH_AR_EA_N_USED_MASK
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -451,6 +445,11 @@
       <dd><pre class="code"></pre></dd>
     
       <dt id="MRB_HASH_PROC_DEFAULT-define" class=""><small>#define</small> MRB_HASH_PROC_DEFAULT
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_HASH_HT-define" class=""><small>#define</small> MRB_HASH_HT
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -483,26 +482,6 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_ensure_hash_type-function">
-  mrb_value <strong>mrb_ensure_hash_type</strong>(mrb_state * mrb, mrb_value hash)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_check_hash_type-function">
-  mrb_value <strong>mrb_check_hash_type</strong>(mrb_state * mrb, mrb_value hash)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
   <h3 class="signature " id="mrb_hash_new-function">
   mrb_value <strong>mrb_hash_new</strong>(mrb_state * mrb)
 
@@ -510,7 +489,8 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Initializes a new hash.</p>
+    
+<p>Initializes a new hash.</p>
 
 <p>Equivalent to:</p>
 
@@ -534,7 +514,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -552,7 +533,8 @@
       
       
         
-        <div class='inline'><p>The initialized hash.</p>
+        <div class='inline'>
+<p>The initialized hash.</p>
 </div>
       
     </li>
@@ -573,7 +555,8 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Sets a keys and values to hashes.</p>
+    
+<p>Sets a keys and values to hashes.</p>
 
 <p>Equivalent to:</p>
 
@@ -597,7 +580,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -612,7 +596,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -627,7 +612,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The key to set.</p>
+        <div class='inline'>
+<p>The key to set.</p>
 </div>
       
     </li>
@@ -642,7 +628,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The value to set.</p>
+        <div class='inline'>
+<p>The value to set.</p>
 </div>
       
     </li>
@@ -660,7 +647,8 @@
       
       
         
-        <div class='inline'><p>The value.</p>
+        <div class='inline'>
+<p>The value.</p>
 </div>
       
     </li>
@@ -681,8 +669,8 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Gets a value from a key. If the key is not found, the default of the
-hash is used.</p>
+    
+<p>Gets a value from a key. If the key is not found, the default of the hash is used.</p>
 
 <p>Equivalent to:</p>
 
@@ -706,7 +694,8 @@ hash is used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -721,7 +710,8 @@ hash is used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -736,7 +726,8 @@ hash is used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The key to get.</p>
+        <div class='inline'>
+<p>The key to get.</p>
 </div>
       
     </li>
@@ -754,7 +745,8 @@ hash is used.</p>
       
       
         
-        <div class='inline'><p>The found value.</p>
+        <div class='inline'>
+<p>The found value.</p>
 </div>
       
     </li>
@@ -775,8 +767,8 @@ hash is used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Gets a value from a key. If the key is not found, the default parameter is
-used.</p>
+    
+<p>Gets a value from a key. If the key is not found, the default parameter is used.</p>
 
 <p>Equivalent to:</p>
 
@@ -800,7 +792,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -815,7 +808,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -830,7 +824,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The key to get.</p>
+        <div class='inline'>
+<p>The key to get.</p>
 </div>
       
     </li>
@@ -845,7 +840,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The default value.</p>
+        <div class='inline'>
+<p>The default value.</p>
 </div>
       
     </li>
@@ -863,7 +859,8 @@ used.</p>
       
       
         
-        <div class='inline'><p>The found value.</p>
+        <div class='inline'>
+<p>The found value.</p>
 </div>
       
     </li>
@@ -884,7 +881,8 @@ used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Deletes hash key and value pair.</p>
+    
+<p>Deletes hash key and value pair.</p>
 
 <p>Equivalent to:</p>
 
@@ -908,7 +906,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -923,7 +922,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -938,7 +938,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The key to delete.</p>
+        <div class='inline'>
+<p>The key to delete.</p>
 </div>
       
     </li>
@@ -956,7 +957,8 @@ used.</p>
       
       
         
-        <div class='inline'><p>The deleted value. This value is not protected from GC. Use <code>mrb_gc_protect()</code> if necessary.</p>
+        <div class='inline'>
+<p>The deleted value. This value is not protected from GC. Use <code>mrb_gc_protect()</code> if necessary.</p>
 </div>
       
     </li>
@@ -977,7 +979,8 @@ used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Gets an array of keys.</p>
+    
+<p>Gets an array of keys.</p>
 
 <p>Equivalent to:</p>
 
@@ -1001,7 +1004,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -1016,7 +1020,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -1034,7 +1039,8 @@ used.</p>
       
       
         
-        <div class='inline'><p>An array with the keys of the hash.</p>
+        <div class='inline'>
+<p>An array with the keys of the hash.</p>
 </div>
       
     </li>
@@ -1055,7 +1061,8 @@ used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Check if the hash has the key.</p>
+    
+<p>Check if the hash has the key.</p>
 
 <p>Equivalent to:</p>
 
@@ -1079,7 +1086,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -1094,7 +1102,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -1109,7 +1118,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The key to check existence.</p>
+        <div class='inline'>
+<p>The key to check existence.</p>
 </div>
       
     </li>
@@ -1127,7 +1137,8 @@ used.</p>
       
       
         
-        <div class='inline'><p>True if the hash has the key</p>
+        <div class='inline'>
+<p>True if the hash has the key</p>
 </div>
       
     </li>
@@ -1148,7 +1159,8 @@ used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Check if the hash is empty</p>
+    
+<p>Check if the hash is empty</p>
 
 <p>Equivalent to:</p>
 
@@ -1172,7 +1184,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -1187,7 +1200,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -1205,7 +1219,8 @@ used.</p>
       
       
         
-        <div class='inline'><p>True if the hash is empty, false otherwise.</p>
+        <div class='inline'>
+<p>True if the hash is empty, false otherwise.</p>
 </div>
       
     </li>
@@ -1226,7 +1241,8 @@ used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Gets an array of values.</p>
+    
+<p>Gets an array of values.</p>
 
 <p>Equivalent to:</p>
 
@@ -1250,7 +1266,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -1265,7 +1282,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -1283,7 +1301,8 @@ used.</p>
       
       
         
-        <div class='inline'><p>An array with the values of the hash.</p>
+        <div class='inline'>
+<p>An array with the values of the hash.</p>
 </div>
       
     </li>
@@ -1304,7 +1323,8 @@ used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Clears the hash.</p>
+    
+<p>Clears the hash.</p>
 
 <p>Equivalent to:</p>
 
@@ -1328,7 +1348,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -1343,7 +1364,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -1361,7 +1383,8 @@ used.</p>
       
       
         
-        <div class='inline'><p>The hash</p>
+        <div class='inline'>
+<p>The hash</p>
 </div>
       
     </li>
@@ -1382,7 +1405,8 @@ used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Get hash size.</p>
+    
+<p>Get hash size.</p>
 
 <p>Equivalent to:</p>
 
@@ -1406,7 +1430,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -1421,7 +1446,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -1439,7 +1465,8 @@ used.</p>
       
       
         
-        <div class='inline'><p>The hash size.</p>
+        <div class='inline'>
+<p>The hash size.</p>
 </div>
       
     </li>
@@ -1460,7 +1487,8 @@ used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Copies the hash.</p>
+    
+<p>Copies the hash. This function does NOT copy the instance variables (except for the default value). Use mrb_obj_dup() to copy the instance variables as well.</p>
 
 
   </div>
@@ -1479,7 +1507,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -1494,7 +1523,8 @@ used.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -1512,7 +1542,8 @@ used.</p>
       
       
         
-        <div class='inline'><p>The copy of the hash</p>
+        <div class='inline'>
+<p>The copy of the hash</p>
 </div>
       
     </li>
@@ -1533,8 +1564,8 @@ used.</p>
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Merges two hashes. The first hash will be modified by the
-second hash.</p>
+    
+<p>Merges two hashes. The first hash will be modified by the second hash.</p>
 
 
   </div>
@@ -1553,7 +1584,8 @@ second hash.</p>
       
       
         &mdash;
-        <div class='inline'><p>The mruby state reference.</p>
+        <div class='inline'>
+<p>The mruby state reference.</p>
 </div>
       
     </li>
@@ -1568,7 +1600,8 @@ second hash.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target hash.</p>
+        <div class='inline'>
+<p>The target hash.</p>
 </div>
       
     </li>
@@ -1583,7 +1616,8 @@ second hash.</p>
       
       
         &mdash;
-        <div class='inline'><p>Updating hash</p>
+        <div class='inline'>
+<p>Updating hash</p>
 </div>
       
     </li>
@@ -1611,9 +1645,9 @@ second hash.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:12 2019 by
+  Generated on Fri Apr 10 23:46:13 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

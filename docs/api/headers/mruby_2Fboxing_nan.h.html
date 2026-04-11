@@ -6,17 +6,17 @@
 <title>
   Header: mruby/boxing_nan.h
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mruby/boxing_nan.h";
   relpath = '../';
 </script>
@@ -66,6 +66,66 @@
       <div id="content"><h1>Header: mruby/boxing_nan.h</h1>
 <!-- TODO: Included headers -->
 
+  <h2>
+    Function Summary
+    <small><a href="#" class="summary_toggle">collapse</a></small>
+  </h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_type-function" title="mrb_type">enum <strong>mrb_type</strong>(mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_unboxed_type-function" title="mrb_unboxed_type">enum <strong>mrb_unboxed_type</strong>(mrb_value)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_boxing_int_value-function" title="mrb_boxing_int_value">mrb_value <strong>mrb_boxing_int_value</strong>(struct mrb_state*, mrb_int)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
 
   <h2>Define Summary</h2>
   <dl class="constants">
@@ -75,22 +135,17 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_tt-define" class=""><small>#define</small> mrb_tt
+      <dt id="mrb_nb_tt-define" class=""><small>#define</small> mrb_nb_tt
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="BOXNAN_SHIFT_LONG_POINTER-define" class=""><small>#define</small> BOXNAN_SHIFT_LONG_POINTER
+      <dt id="NANBOX_SET_MISC_VALUE-define" class=""><small>#define</small> NANBOX_SET_MISC_VALUE
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="BOXNAN_SET_VALUE-define" class=""><small>#define</small> BOXNAN_SET_VALUE
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="BOXNAN_SET_OBJ_VALUE-define" class=""><small>#define</small> BOXNAN_SET_OBJ_VALUE
+      <dt id="NANBOX_SET_VALUE-define" class=""><small>#define</small> NANBOX_SET_VALUE
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -102,13 +157,43 @@
   <h2>Function Details</h2>
 
   
+    <div class="method_details first">
+  <h3 class="signature first" id="mrb_type-function">
+  enum <strong>mrb_type</strong>(mrb_value o)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_unboxed_type-function">
+  enum <strong>mrb_unboxed_type</strong>(mrb_value o)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_boxing_int_value-function">
+  mrb_value <strong>mrb_boxing_int_value</strong>(struct mrb_state* , mrb_int )
+
+  
+</h3>
+
+</div>
+
+  
 </div>
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:13 2019 by
+  Generated on Fri Apr 10 23:46:14 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>

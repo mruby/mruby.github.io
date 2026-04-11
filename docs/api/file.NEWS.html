@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: NEWS
+  
+    &mdash; Documentation by YARD 0.9.37
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/mruby.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "NEWS";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/mruby.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: NEWS</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h2 id="label-NEWS">NEWS</h2>
+
+<h1 id="label-User+visible+changes+in+mruby3.4+from+mruby3.3">User visible changes in <code>mruby3.4</code> from <code>mruby3.3</code></h1>
+
+<p>“<strong><em>NOTE</em></strong>:” are changes to be aware of.</p>
+
+<h1 id="label-The+language">The language</h1>
+<ul><li>
+<p>mruby now supports <code>private</code> and <code>protected</code> visibitily (<a href="https://github.com/mruby/mruby/commit/b0db0bd">b0db0bd</a>)</p>
+</li><li>
+<p>Maximum length of inlined symbols reduced from 5 to 4 characters to provide space for visibility flags (<a href="https://github.com/mruby/mruby/commit/6442a01">6442a01</a>)</p>
+</li><li>
+<p>Many methods are made private according to CRuby visibility (<a href="https://github.com/mruby/mruby/commit/4a0e806">4a0e806</a>)</p>
+</li><li>
+<p>Generate OP_SSEND for <code>self.method</code> type calls (<a href="https://github.com/mruby/mruby/commit/111fe4b">111fe4b</a>)</p>
+</li><li>
+<p><code>initialize</code> method will be always private (<a href="https://github.com/mruby/mruby/commit/eb8b412">eb8b412</a>)</p>
+</li><li>
+<p>Add new hooks <code>method_removed</code>, <code>method_undefined</code> (<a href="https://github.com/mruby/mruby/commit/9c74f6e">9c74f6e</a>)</p>
+</li><li>
+<p>Add new hooks <code>singleton_method_removed</code>, <code>singleton_method_undefined</code> (<a href="https://github.com/mruby/mruby/commit/0863c08">0863c08</a>)</p>
+</li><li>
+<p>Updated <code>OP_DEF</code> output from codedump (<a href="https://github.com/mruby/mruby/commit/3a3e877">3a3e877</a>)</p>
+</li><li>
+<p>Better handling of binary strings, e.g. String#b (<a href="https://github.com/mruby/mruby/commit/b0127f0">b0127f0</a>)</p>
+</li><li>
+<p>Hash <code>to_s</code> format has changed (<a href="https://github.com/mruby/mruby/commit/baeeb5e">baeeb5e</a>)</p>
+</li><li>
+<p>Some encoding related method such as <code>#force_encoding</code> (<a href="https://github.com/mruby/mruby/commit/e47b4ca">e47b4ca</a>), <code>#b</code> (<a href="https://github.com/mruby/mruby/commit/b0127f0">b0127f0</a>)</p>
+</li><li>
+<p>Constant folding for <code>String#+</code> (<a href="https://github.com/mruby/mruby/commit/6687bdd">6687bdd</a>)</p>
+</li><li>
+<p>Remove Float bit-operation (<a href="https://github.com/mruby/mruby/commit/db8368f">db8368f</a>)</p>
+</li><li>
+<p>use SWAR technique for strlen performance (<a href="https://github.com/mruby/mruby/commit/cbb31e6">cbb31e6</a>)</p>
+</li><li>
+<p>use merge sort for <code>Array#sort</code> (<a href="https://github.com/mruby/mruby/commit/5bd63d6">5bd63d6</a>)</p>
+</li></ul>
+
+<h1 id="label-Changes+in+C+API">Changes in C API</h1>
+<ul><li>
+<p>pool.c renamed to mempool.c (and mrb_pool to mrb_mempool) (<a href="https://github.com/mruby/mruby/commit/49525fa">49525fa</a>)</p>
+</li><li>
+<p>mrb_pool_value renamed to mrb_irep_pool to reduce confusion (<a href="https://github.com/mruby/mruby/commit/62ef5db">62ef5db</a>)</p>
+</li><li>
+<p>rename BOXNIX_SET_VALUE to BOXNO_SET_VALUE (<a href="https://github.com/mruby/mruby/pull/6397">#6397</a>)</p>
+</li><li>
+<p><code>MRB_FROZEN_P()</code> is replaced by <code>mrb_frozen_p()</code> (<a href="https://github.com/mruby/mruby/commit/c11d18e">c11d18e</a>)</p>
+</li><li>
+<p>rename <code>color</code> to <code>gc_color</code> (<a href="https://github.com/mruby/mruby/commit/0e79f6b">0e79f6b</a>, <a href="https://github.com/mruby/mruby/commit/1e36d76">1e36d76</a>)</p>
+</li><li>
+<p>add <code>obj-&gt;frozen</code> instead of flags <code>MRB_SET_FROZEN_FLAG</code>/<code>MRB_UNSET_FROZEN_FLAG</code> (<a href="https://github.com/mruby/mruby/commit/8276143">8276143</a>)</p>
+</li></ul>
+
+<h1 id="label-Build+-26+Configuration">Build &amp; Configuration</h1>
+<ul><li>
+<p>New Build Target: <code>test:run:serial</code>, <code>test:run:serial:lib</code>, <code>test:run:serial:bin</code> (<a href="https://github.com/mruby/mruby/pull/6423">#6423</a>)</p>
+</li><li>
+<p>New Platform: Playstation Portable (<a href="https://github.com/mruby/mruby/pull/6465">#6022</a>)</p>
+</li><li>
+<p>New Platform: emscripten (<a href="https://github.com/mruby/mruby/pull/6487">#6487</a>)</p>
+</li><li>
+<p>New Config: no-float (with MRB_NO_FLOAT) (<a href="https://github.com/mruby/mruby/commit/32200f1">32200f1</a>)</p>
+</li></ul>
+
+<h1 id="label-Changes+in+mrbgems">Changes in mrbgems</h1>
+<ul><li>
+<p><strong>mruby-print</strong>: removed; if you do not use <code>mruby-io</code>, mruby use <code>#print</code> etc. in the core (<a href="https://github.com/mruby/mruby/commit/8c8bbd9">8c8bbd9</a>)</p>
+</li><li>
+<p><strong>mruby-enum-lazy</strong>: Add Enumerable::Lazy#grep_v to mruby-enum-lazy (<a href="https://github.com/mruby/mruby/pull/6171">#6171</a>)</p>
+</li><li>
+<p><strong>mruby-io</strong>: Add <code>level</code> argument to <code>File.dirname</code> (<a href="https://github.com/mruby/mruby/pull/6463">#6463</a>)</p>
+</li><li>
+<p><strong>mruby-io</strong>: File.absolute_path? (<a href="https://github.com/mruby/mruby/pull/6482">#6482</a>)</p>
+</li><li>
+<p><strong>mruby-io</strong>: File.absolute_path (<a href="https://github.com/mruby/mruby/commit/96113a2">96113a2</a>)</p>
+</li><li>
+<p><strong>mruby-toplevel-ext</strong>: top-level public/private/protected moved to the core (<a href="https://github.com/mruby/mruby/commit/2a876d2">2a876d2</a>)</p>
+</li><li>
+<p><strong>mruby-metaprog</strong>: method list methods now works according to the visibility (<a href="https://github.com/mruby/mruby/commit/9229da1">9229da1</a>)</p>
+</li><li>
+<p><strong>mruby-metaprog</strong>: <code>public_instance_methods</code>, <code>private_instance_methods</code>, <code>protected_instance_methods</code> (<a href="https://github.com/mruby/mruby/commit/9e3e7b2">9e3e7b2</a>)</p>
+</li><li>
+<p><strong>mruby-encoding</strong>: MRB_UTF8_STRING turned on automatically with this gem (<a href="https://github.com/mruby/mruby/commit/74bdae9">74bdae9</a>)</p>
+</li></ul>
+
+<h1 id="label-Fixed+GitHub+Issues">Fixed GitHub Issues</h1>
+<ul><li>
+<p><a href="https://github.com/mruby/mruby/issues/6173">#6173</a> Fails to build with tcc(Tiny C Compiler)</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6156">#6156</a> ‘/LIBPATH’ issue</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6183">#6183</a> “.e”.to_f returns NAN</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6182">#6182</a> mrb_read_float() converts “0.3” with a small error compared to strtod()</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6210">#6210</a> Unary minus seems broken</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6255">#6255</a> Wrong number of characters in broken UTF-8 string</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/4038">#4038</a> Heap buffer overflow in OP_ENTER</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6262">#6262</a> Unable to define == for objects when using Array#delete</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6267">#6267</a> When MRB_UTF8_STRING is enabled, giving byte characters for String#index and String#split gives wrong results</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6277">#6277</a> MSVC: can’t use malloc() in string.c with WIN32_LEAN_AND_MEAN</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6240">#6240</a> Differentiate between lib and lib64 in the build settings.</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6304">#6304</a> Calling method_missing with only Kwargs passes arguments incorrectly</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6317">#6317</a> mrb_gc_register() may cause GC and collect the object being protected</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6307">#6307</a> Planned change patch for mrb_vm_exec()</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6298">#6298</a> foo :bar {} is legal in mruby?</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6326">#6326</a> Detect “Use-after-free” with address sanitizer</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/5358">#5358</a> static warning from getpwnam</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6339">#6339</a> mrb_ary_delete() may refer to an invalid address (use-after-free)</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6346">#6346</a> Block kwargs are passed as last positional arg when using yield</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6365">#6365</a> powl() not available when compiling for Dreamcast</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6369">#6369</a> 100x Performance Regression from 3.1</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6270">#6270</a> NODE_ZSUPER from deeply nested blocks will result in a truncated digits for block index in OP_ARGARY</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6297">#6297</a> Assigning to a block variable changes the actual block (thus affecting block_given? and yield)</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6389">#6389</a> instance_exec named block args don’t work properly</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6388">#6388</a> Recent commit broke my windows build</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6411">#6411</a> Wrong function unwinding when using return in a block</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6439">#6439</a> OP_JMPUW does not call the ensure block when it jumps to the beginning of the begin block</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6441">#6441</a> break inside while loop will execute the ensure block outside of the while loop</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6453">#6453</a> Bigint: incorrect behavior of ^ operator</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6452">#6452</a> Bigint: weird mod behavior</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6451">#6451</a> Bigint: incorrect division behavior</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6456">#6456</a> bigint: bug with division of a small number by a bigint</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6466">#6466</a> mruby-bin-mruby using Kernel#p and Kernel#print in bintest fails test</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6467">#6467</a> Heap-Use-After-Free due to Recursive group_by Calls</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6471">#6471</a> Discrepancy in codegen for binary operations between master branch and 3.3.0</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6477">#6477</a> heap-buffer-overflow in mrb_vm_exec</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6485">#6485</a> Hash#rehash does not check if the hash is frozen</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6483">#6483</a> Hash#default_proc= accepts arbitrary objects that are not callable</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/issues/6491">#6491</a> Destroy existing string literals when composing string literals</p>
+</li></ul>
+
+<h1 id="label-Merged+Pull+Requests+-28User+Visible+Ones-29">Merged Pull Requests (User Visible Ones)</h1>
+<ul><li>
+<p><a href="https://github.com/mruby/mruby/pull/6171">#6171</a> Add Enumerable::Lazy#grep_v to mruby-enum-lazy</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6174">#6174</a> Fix MRUBY_PACKAGE_DIR in mruby-config.bat</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6175">#6175</a> Corrected strange conditional in mrb_vm_run()</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6176">#6176</a> Stop assuming alias proc in CI_PROC_SET()</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6177">#6177</a> gha: add macOS 14 to the build</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6184">#6184</a> Remove the L_STOP label</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6185">#6185</a> Added mrb_callinfo::u.keep_context for clarity</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6186">#6186</a> Omit NULL check of e-&gt;cxt in OP_RETURN_BLK</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6191">#6191</a> Speed up symbol equality comparison</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6192">#6192</a> Fix <code>OP_STOP</code> with exception</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6193">#6193</a> Fix wrong assertion in <code>OP_SENDB</code>.</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6194">#6194</a> Simplify the calculation of the number of closures in <code>MRB_TT_FIBER</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6197">#6197</a> Fix int_xor to call flo_xor.</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6201">#6201</a> tasks/doc.rake: standardize the <code>rake doc</code> error messages</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6202">#6202</a> Remove the <code>.yardoc</code> folder with <code>rake doc:clean:api</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6204">#6204</a> Clean up the <code>.editorconfig</code> file</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6209">#6209</a> Minor <code>.gitignore</code> clean up</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6211">#6211</a> Minor <code>.gitignore</code> clean up; order entries</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6216">#6216</a> Shared empty <code>iv_tbl</code> of module</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6217">#6217</a> Strict declaration for <code>mrb_istruct_size()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6219">#6219</a> Avoid assigning a fixed value in the loop</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6220">#6220</a> Reorganize <code>mrb_cache_entry</code> and <code>mrb_method_t</code> types</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6221">#6221</a> Arranging <code>each_backtrace()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6222">#6222</a> Need to synchronize <code>dbg-&gt;regs</code> after VM call in <code>mrdb</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6224">#6224</a> <code>mrb_env_unshare()</code> to break the link to fiber</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6225">#6225</a> Revert “Adjust environment when <code>mrb_exec_irep</code> happened.”</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6227">#6227</a> fix: <code>Array#shuffle(!)</code> result distribution</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6228">#6228</a> Revert “<code>env</code> referred from top-level callinfo should not be unshared; fix #4019”</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6230">#6230</a> Fix status of fiber after switched by exception raised</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6231">#6231</a> Add a way to let other gems handle closing of fds in mruby-io</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6232">#6232</a> Fold the code for freeing <code>env</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6233">#6233</a> Free stack memory at end of fiber</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6235">#6235</a> fix <code>Array#delete</code> always firing the block when deleting <code>nil</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6236">#6236</a> unify the code for filter methods (and speed up <code>#reject!</code>)</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6237">#6237</a> Stricter env objects to attach to ci</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6238">#6238</a> Minimize zero initialization of the stack</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6243">#6243</a> Fixed base64 decoding in <code>mruby-pack</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6244">#6244</a> Revise scope of role of <code>mrb_vm_run()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6246">#6246</a> Fix typo in <code>test/t/hash.rb</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6249">#6249</a> Fix grammar in <code>src/vm.c</code>; <code>catched</code> -&gt; <code>caught</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6250">#6250</a> Fix spelling</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6251">#6251</a> Clean up root move <code>CODEOWNERS</code> to <code>.github</code> directory</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6253">#6253</a> Allow recycling fibers by GC if not referenced directly</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6256">#6256</a> Update documentation for <code>mrb_top_run()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6257">#6257</a> fix some mrbconf.md typos</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6260">#6260</a> Remove <code>exc_caught</code> from <code>mrb_vm_exec()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6261">#6261</a> fix: <code>to_a</code> integer ranges with <code>begin &gt; end</code> failing</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6263">#6263</a> fix: <code>Array#delete</code> mistakenly calling block even if not passed</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6264">#6264</a> Must pass keyword arguments for <code>Kernel#to_enum</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6265">#6265</a> Fixes <code>Dir.children</code> and <code>Dir.each_child</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6266">#6266</a> Passes the nonexistent key as a block argument in <code>Array#delete</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6273">#6273</a> Improvements to <code>mrb_protect_atexit()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6275">#6275</a> Fixed <code>Binding#eval</code> that failed to assign to the same variable</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6276">#6276</a> Always run <code>atexit</code> on the top-level call frame</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6279">#6279</a> Include headers for malloc() explicitly; fix #6277</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6280">#6280</a> Remove <code>MRB_ENV_CLOSED</code> flag</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6281">#6281</a> Fixes local variables in <code>mruby-binding</code>.</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6283">#6283</a> Simplify <code>uvenv()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6288">#6288</a> Detach <code>env</code> of ci explicitly on atexit</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6289">#6289</a> Simplify <code>OP_RETURN_BLK</code> and <code>OP_BREAK</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6290">#6290</a> Allow to change the output directory name of the <code>libmruby</code> file</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6293">#6293</a> Changed the instruction table in <code>opcode.md</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6294">#6294</a> Optimise <code>mrb_iv_get</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6302">#6302</a> Minor cleanup in mrb_str_init</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6303">#6303</a> mrb_str_aset_m() should return replace instead of str</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6305">#6305</a> Protect keyword arguments in <code>prepare_missing()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6308">#6308</a> Assume that <code>MRB_CATCH()</code> has <code>mrb-&gt;exc</code> set</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6310">#6310</a> Doubling the call stack when extending it</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6311">#6311</a> Added fast-path for positional arguments less than 15 in <code>OP_SEND</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6312">#6312</a> Omit error checking at <code>OP_RETURN</code>, <code>OP_RETURN_BLK</code> and <code>OP_BREAK</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6313">#6313</a> Fix wrong column number in opcode.md</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6314">#6314</a> Optimize even?/odd? for big integers</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6318">#6318</a> Shrink variables in <code>mrb_vm_exec()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6320">#6320</a> Shrinking the code in <code>OP_BREAK</code> and <code>OP_RETURN_BLK</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6321">#6321</a> Avoid warnings in <code>lib/<strong>*/</strong>.rb</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6322">#6322</a> Fix mrb_ro_data_p on Intel Mac</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6324">#6324</a> Remove <code>localjump_error()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6327">#6327</a> fix ncurses linking issues</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6328">#6328</a> Fix use-after-free in <code>obj_free()</code> for env objects</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6329">#6329</a> Fix use-after-free in <code>mrb_obj_alloc()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6330">#6330</a> Add a precondition to call <code>mrb_env_unshare()</code>.</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6331">#6331</a> Restore the GC arena with tests</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6332">#6332</a> Must not depend on the “host” build to generate <code>mruby-compiler/core/y.tab.c</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6333">#6333</a> Reduce the number of branch instructions in the <code>heap_p()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6335">#6335</a> Add <code>return_ci</code> in <code>CHECKPOINT_MAIN()</code> of <code>OP_RETURN</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6338">#6338</a> Need to place static proc objects into 8-byte alignments</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6340">#6340</a> Fix use-after-free for <code>Array#&lt;=&gt;</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6341">#6341</a> Need to restore the GC arena after some function calls</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6344">#6344</a> prefer using <code>mrb_yield</code> to call block arguments</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6347">#6347</a> codegen.c,parse.y: remove flattening of <code>yield</code> arguments; fix #6346</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6348">#6348</a> Cancel the warning disablement</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6349">#6349</a> Perform GC before deleting directories</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6350">#6350</a> Fixed character encoding conversion function mismatch</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6351">#6351</a> Remove unnecessary <code>mrb_gc_arena_restore()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6353">#6353</a> Fix use-after-free in <code>mrb_ary_delete()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6356">#6356</a> Making splat argument objects invisible from Ruby side</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6373">#6373</a> Add build config for Milk-V Duo (RISC-V Linux) board</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6382">#6382</a> Make array objects invisible in <code>mrb_gc_register()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6385">#6385</a> Small improvements for <code>mrb_gc_register()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6386">#6386</a> Avoid calling <code>mrb_gv_set()</code> from <code>mrb_gc_unregister()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6387">#6387</a> Small improvements for <code>mrb_gc_unregister()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6390">#6390</a> Fix use-after-free by <code>mrb_gc_unregistor()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6391">#6391</a> Fixed argument forwarding in <code>instance_exec</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6392">#6392</a> Fix argument forwarding in <code>mrb_exec_irep()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6393">#6393</a> Follow-up to #6391</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6395">#6395</a> Storing method-id inside Symbol#to_proc</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6396">#6396</a> Milk-V Build Config: update GPIO gem URL</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6397">#6397</a> boxing_no.h: rename BOXNIX_SET_VALUE -&gt; BOXNO_SET_VALUE</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6399">#6399</a> Add macOS 15 to the build</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6405">#6405</a> <code>io_read</code>: use <code>%i</code> instead of <code>%d</code> in call to <code>mrb_raisef</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6407">#6407</a> Allow to exclude specific files in <code>rake install</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6408">#6408</a> Improve compliance with C++ standards</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6410">#6410</a> Put <code>#include &lt;stdlib.h&gt;</code> in <code>parse.y</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6412">#6412</a> Distinguish the call frame of the generator with <code>OP_RETURN_BLK</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6413">#6413</a> Add links to documentation in <code>README.md</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6415">#6415</a> Fix numbered parameters when used as a singleton</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6416">#6416</a> Optimize the “new” method’s iseq</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6419">#6419</a> Follow Ruby’s behavior for numbered parameters in -&gt; {}</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6420">#6420</a> Update <code>labeler.yml</code>: add label for the <code>tools</code> directory</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6422">#6422</a> Add annotations for function names defined in the preprocessor</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6423">#6423</a> Adding a serialized test task</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6427">#6427</a> Need to update <code>ci</code> variable after re-entry to VM</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6428">#6428</a> Change the limits of OP_ADDI and OP_SUBI from 0-127 to 0-255.</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6429">#6429</a> Fix numbered parameters when used as hash keys</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6432">#6432</a> Moving code in macro arguments out of macros</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6434">#6434</a> Added document “Layout of the mruby filesystem”</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6436">#6436</a> Make <code>rake doc:update-index</code> prettier friendly</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6437">#6437</a> Add more details to the pre-commit config</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6438">#6438</a> Remove unused <code>MRuby::Build#list_install_excludes</code> method</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6440">#6440</a> Fix <code>redo</code> keyword</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6442">#6442</a> Fixed wrong range condition in <code>OP_JMPUW</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6443">#6443</a> Fix NODE_NEGATE for bigints</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6444">#6444</a> Add test cases for bigints</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6446">#6446</a> Omit the <code>_WIN64</code> definition check</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6447">#6447</a> Fixed <code>File.expand_path</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6448">#6448</a> Suppress presym in <code>mruby/ext/io.h</code> file</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6449">#6449</a> Using presym in the <code>mruby-io/src/file_test.c</code> file</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6450">#6450</a> Change <code>MRB_WITH_IO_PREAD_PWRITE</code> configuration name</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6454">#6454</a> mruby-bigint: handle rhs bigint in int_mod and int_divmod functions</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6455">#6455</a> mruby-bigint: fix rounding behavior in mpz_mdiv and mpz_mdivmod functions</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6457">#6457</a> bigint: fix bug with division of a small number by a bigint</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6459">#6459</a> <code>FileTest</code> is a module</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6461">#6461</a> To create a release package file in draft</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6462">#6462</a> Properly cast the return value of <code>memchr()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6463">#6463</a> Add <code>level</code> argument to <code>File.dirname</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6465">#6465</a> Add initial playstation portable crossbuild support</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6468">#6468</a> Fixed missing changes to <code>IB_FIND_BY_KEY()</code> parameter names</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6469">#6469</a> Add more <code>const</code> qualifier for <code>RProc</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6472">#6472</a> Moved tests for <code>Integer#quo</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6473">#6473</a> Hide <code>mpz_and()</code> symbol</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6473">#6473</a> Hide mpz_and() symbol</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6474">#6474</a> Avoid array object creation with “unknown keyword” error</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6475">#6475</a> Don’t include deleted mruby-print</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6478">#6478</a> Fixed buffer overrun in function <code>chars2bytes()</code></p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6479">#6479</a> Reimplementation of <code>File.expand_path</code> method</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6482">#6482</a> Add <code>File.absolute_path?</code> method</p>
+</li><li>
+<p><a href="https://github.com/mruby/mruby/pull/6487">#6487</a> Add Emscripten toolchain &amp; build_config</p>
+</li></ul>
+</div></div>
+
+      <div id="footer">
+  Generated on Fri Apr 10 23:46:10 2026 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
+</div>
+
+    </div>
+  </body>
+</html>

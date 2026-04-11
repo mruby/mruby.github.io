@@ -6,17 +6,17 @@
 <title>
   Header: mruby/error.h
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/mruby.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/mruby.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "mruby/error.h";
   relpath = '../';
 </script>
@@ -67,7 +67,8 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    <p>MRuby error handling.</p>
+    
+<p>mruby error handling.</p>
 
 
   </div>
@@ -88,7 +89,7 @@
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_sys_fail-function" title="mrb_sys_fail">void <strong>mrb_sys_fail</strong>(mrb_state *, const char *)</a>
+    <a href="#mrb_sys_fail-function" title="mrb_sys_fail">mrb_noreturn <strong>mrb_sys_fail</strong>(mrb_state *, const char *)</a>
 
     
   </span>
@@ -98,8 +99,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -116,62 +116,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_make_exception-function" title="mrb_make_exception">mrb_value <strong>mrb_make_exception</strong>(mrb_state *, mrb_int, const mrb_value *)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_exc_backtrace-function" title="mrb_exc_backtrace">mrb_value <strong>mrb_exc_backtrace</strong>(mrb_state *, mrb_value)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    <a href="#mrb_get_backtrace-function" title="mrb_get_backtrace">mrb_value <strong>mrb_get_backtrace</strong>(mrb_state *)</a>
-
-    
-  </span>
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -188,15 +133,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
       <li class="public ">
   <span class="summary_signature">
-    <a href="#mrb_f_raise-function" title="mrb_f_raise">mrb_value <strong>mrb_f_raise</strong>(mrb_state*, mrb_value)</a>
+    <a href="#mrb_clear_error-function" title="mrb_clear_error">void <strong>mrb_clear_error</strong>(mrb_state *)</a>
 
     
   </span>
@@ -206,8 +150,45 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>declaration for <code>fail</code> method.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>clear error status in the mrb_state structure.</p>
 </div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_check_error-function" title="mrb_check_error">mrb_bool <strong>mrb_check_error</strong>(mrb_state *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>returns TRUE if error in the previous call; internally calls mrb_clear_error().</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    <a href="#mrb_protect_error-function" title="mrb_protect_error">mrb_value <strong>mrb_protect_error</strong>(mrb_state *, mrb_protect_error_func *, void *, mrb_bool *)</a>
+
+    
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -224,7 +205,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Protect.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Protect (takes mrb_value for body argument).</p>
 </div></span>
   
 </li>
@@ -242,7 +224,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Ensure.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Ensure.</p>
 </div></span>
   
 </li>
@@ -260,7 +243,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Rescue.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Rescue.</p>
 </div></span>
   
 </li>
@@ -278,7 +262,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Rescue exception.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Rescue exception.</p>
 </div></span>
   
 </li>
@@ -295,12 +280,76 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
+      <dt id="MRB_EXC_EXIT-define" class=""><small>#define</small> MRB_EXC_EXIT
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>error that should terminate execution</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_EXC_EXIT_P-define" class=""><small>#define</small> MRB_EXC_EXIT_P
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_EXC_EXIT_STATUS-define" class=""><small>#define</small> MRB_EXC_EXIT_STATUS
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>retrieve status value from exc; need &lt;mruby/variable.h&gt; and &lt;mruby/presym.h&gt;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_EXC_CHECK_EXIT-define" class=""><small>#define</small> MRB_EXC_CHECK_EXIT
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>exit with SystemExit status</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
       <dt id="mrb_exc_ptr-define" class=""><small>#define</small> mrb_exc_ptr
         
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_exc_new_str_lit-define" class=""><small>#define</small> mrb_exc_new_str_lit
+      <dt id="mrb_exc_new_lit-define" class=""><small>#define</small> mrb_exc_new_lit
+        
+      </dt>
+      <dd><pre class="code"></pre></dd>
+    
+      <dt id="MRB_USE_RBREAK_VALUE_UNION-define" class=""><small>#define</small> MRB_USE_RBREAK_VALUE_UNION
         
       </dt>
       <dd><pre class="code"></pre></dd>
@@ -320,16 +369,6 @@
       </dt>
       <dd><pre class="code"></pre></dd>
     
-      <dt id="mrb_break_proc_get-define" class=""><small>#define</small> mrb_break_proc_get
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
-      <dt id="mrb_break_proc_set-define" class=""><small>#define</small> mrb_break_proc_set
-        
-      </dt>
-      <dd><pre class="code"></pre></dd>
-    
   </dl>
 
 
@@ -339,7 +378,7 @@
   
     <div class="method_details first">
   <h3 class="signature first" id="mrb_sys_fail-function">
-  void <strong>mrb_sys_fail</strong>(mrb_state * mrb, const char * mesg)
+  mrb_noreturn <strong>mrb_sys_fail</strong>(mrb_state * mrb, const char * mesg)
 
   
 </h3>
@@ -358,36 +397,6 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_make_exception-function">
-  mrb_value <strong>mrb_make_exception</strong>(mrb_state * mrb, mrb_int argc, const mrb_value * argv)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_exc_backtrace-function">
-  mrb_value <strong>mrb_exc_backtrace</strong>(mrb_state * mrb, mrb_value exc)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
-  <h3 class="signature " id="mrb_get_backtrace-function">
-  mrb_value <strong>mrb_get_backtrace</strong>(mrb_state * mrb)
-
-  
-</h3>
-
-</div>
-
-  
-    <div class="method_details ">
   <h3 class="signature " id="mrb_no_method_error-function">
   mrb_noreturn <strong>mrb_no_method_error</strong>(mrb_state * mrb, mrb_sym id, mrb_value args, const char * fmt, ... )
 
@@ -398,14 +407,15 @@
 
   
     <div class="method_details ">
-  <h3 class="signature " id="mrb_f_raise-function">
-  mrb_value <strong>mrb_f_raise</strong>(mrb_state* , mrb_value )
+  <h3 class="signature " id="mrb_clear_error-function">
+  void <strong>mrb_clear_error</strong>(mrb_state * mrb)
 
   
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>declaration for <code>fail</code> method</p>
+    
+<p>clear error status in the mrb_state structure</p>
 
 
   </div>
@@ -420,6 +430,39 @@
 
   
     <div class="method_details ">
+  <h3 class="signature " id="mrb_check_error-function">
+  mrb_bool <strong>mrb_check_error</strong>(mrb_state * mrb)
+
+  
+</h3>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>returns TRUE if error in the previous call; internally calls mrb_clear_error()</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div>
+
+  
+    <div class="method_details ">
+  <h3 class="signature " id="mrb_protect_error-function">
+  mrb_value <strong>mrb_protect_error</strong>(mrb_state * mrb, mrb_protect_error_func * body, void * userdata, mrb_bool * error)
+
+  
+</h3>
+
+</div>
+
+  
+    <div class="method_details ">
   <h3 class="signature " id="mrb_protect-function">
   mrb_value <strong>mrb_protect</strong>(mrb_state * mrb, mrb_func_t body, mrb_value data, mrb_bool * state)
 
@@ -427,7 +470,8 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Protect</p>
+    
+<p>Protect (takes mrb_value for body argument)</p>
 
 <p>Implemented in the mruby-error mrbgem</p>
 
@@ -451,7 +495,8 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Ensure</p>
+    
+<p>Ensure</p>
 
 <p>Implemented in the mruby-error mrbgem</p>
 
@@ -475,7 +520,8 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Rescue</p>
+    
+<p>Rescue</p>
 
 <p>Implemented in the mruby-error mrbgem</p>
 
@@ -499,7 +545,8 @@
 </h3>
 <div class="docstring">
   <div class="discussion">
-    <p>Rescue exception</p>
+    
+<p>Rescue exception</p>
 
 <p>Implemented in the mruby-error mrbgem</p>
 
@@ -519,9 +566,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 27 22:35:13 2019 by
+  Generated on Fri Apr 10 23:46:14 2026 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-2.5.5).
+  0.9.37 in <a href="https://github.com/sagmor/yard-mruby">mruby mode</a> 0.3.0 (ruby-3.4.5).
 </div>
 
     </div>
