@@ -1,4 +1,13 @@
 ---
+- version: 4.0.0-rc4
+  date: '2026-04-13'
+  prerelease: true
+- version: 4.0.0-rc3
+  date: '2026-04-02'
+  prerelease: true
+- version: 4.0.0-rc2
+  date: '2026-03-12'
+  prerelease: true
 - version: 4.0.0-rc
   date: '2026-03-05'
   prerelease: true
