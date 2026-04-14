@@ -1,24 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    {% include header.html %}
+    {% include head.html %}
   </head>
   <body>
+    {% include nav.html %}
+    <main id="main-content">
+      <header class="page-header page-header--article">
+        <div class="page-header__inner">
+          {% assign first_cat = page.categories | first %}
+          {% if first_cat.size > 1 %}
+            {% assign display_cat = first_cat | capitalize %}
+          {% elsif page.categories %}
+            {% assign display_cat = page.categories | capitalize %}
+          {% endif %}
+          {% if display_cat or page.date %}
+          <div class="page-header__meta">
+            {% if display_cat %}<span class="page-header__meta-category">{{ display_cat }}</span>{% endif %}
+            {% if display_cat and page.date %}<span class="page-header__meta-sep" aria-hidden="true">—</span>{% endif %}
+            {% if page.date %}<time class="page-header__meta-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time>{% endif %}
+          </div>
+          {% endif %}
+          <h1 class="page-header__heading">{{ page.title }}</h1>
+        </div>
+      </header>
 
-    {% include navigation.html %}
-
-    <div class="container">
-      <div class="row clearfix">
-
-        <div class="col-md-12 column">
-
-          {{ content }}
-
+      <div class="article-body">
+        <div class="article-body__inner">
+          <aside class="article-toc" id="article-toc" aria-label="Table of contents">
+            <p class="article-toc__label">Contents</p>
+            <nav class="article-toc__nav" id="article-toc-nav"></nav>
+          </aside>
+          <article class="article-content">
+            {{ content }}
+          </article>
         </div>
       </div>
-    </div>
-
+    </main>
     {% include footer.html %}
 
+    <script>
+      (function () {
+        // Mobile nav
+        var btn = document.querySelector('.site-nav__hamburger');
+        var links = document.getElementById('site-nav-links');
+        if (btn && links) {
+          btn.addEventListener('click', function () {
+            var expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+            links.classList.toggle('is-open', !expanded);
+          });
+        }
+
+        // TOC generation
+        // Add role="list" to article lists (VoiceOver Safari removes list semantics with list-style:none)
+        document.querySelectorAll('.article-content ul, .article-content ol').forEach(function (el) {
+          el.setAttribute('role', 'list');
+        });
+
+        var content = document.querySelector('.article-content');
+        var tocNav = document.getElementById('article-toc-nav');
+        var tocAside = document.getElementById('article-toc');
+        if (!content || !tocNav) return;
+
+        var headings = content.querySelectorAll('h1, h2, h3');
+        if (headings.length === 0) {
+          if (tocAside) tocAside.hidden = true;
+          return;
+        }
+
+        var list = document.createElement('ul');
+        list.className = 'article-toc__list';
+        list.setAttribute('role', 'list');
+        headings.forEach(function (h) {
+          if (!h.id) return;
+          var li = document.createElement('li');
+          var depth = parseInt(h.tagName[1], 10);
+          li.className = 'article-toc__item' + (depth > 1 ? ' article-toc__item--sub' : '');
+          var a = document.createElement('a');
+          a.href = '#' + h.id;
+          a.textContent = h.textContent;
+          a.className = 'article-toc__link';
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+
+        if (list.children.length === 0) {
+          if (tocAside) tocAside.hidden = true;
+          return;
+        }
+
+        tocNav.appendChild(list);
+
+        // Scrollspy — highlight active TOC item
+        var tocLinks = tocNav.querySelectorAll('.article-toc__link');
+        var tocItems = tocNav.querySelectorAll('.article-toc__item');
+
+        function setActive(id) {
+          tocItems.forEach(function (item) {
+            item.classList.remove('article-toc__item--active');
+          });
+          tocLinks.forEach(function (link) {
+            if (link.getAttribute('href') === '#' + id) {
+              link.closest('.article-toc__item').classList.add('article-toc__item--active');
+            }
+          });
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              setActive(entry.target.id);
+            }
+          });
+        }, {
+          rootMargin: '-' + (56 + 32) + 'px 0px -70% 0px',
+          threshold: 0
+        });
+
+        headings.forEach(function (h) {
+          if (h.id) observer.observe(h);
+        });
+
+        // Set first item active on load
+        if (headings.length > 0 && headings[0].id) {
+          setActive(headings[0].id);
+        }
+      })();
+    </script>
   </body>
 </html>

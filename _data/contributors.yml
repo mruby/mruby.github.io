@@ -1,0 +1,217 @@
+---
+- name: Yukihiro "Matz" Matsumoto
+  login: matz
+  count: 6083
+- name: dearblue
+  login: dearblue
+  count: 673
+- name: KOBAYASHI Shuji
+  login: shuujii
+  count: 587
+- name: Daniel Bovensiepen
+  login: bovi
+  count: 353
+- name: Takeshi Watanabe
+  login: take-cheeze
+  count: 345
+- name: Masaki Muranaka
+  login: monaka
+  count: 333
+- name: Jun Hiroe
+  login: suzukaze
+  count: 234
+- name: Tomoyuki Sahara
+  login: tsahara
+  count: 228
+- name: Cremno
+  login: cremno
+  count: 220
+- name: John Bampton
+  login: jbampton
+  count: 219
+- name: Yuki Kurihara
+  login: ksss
+  count: 209
+- name: Yasuhiro Matsumoto
+  login: mattn
+  count: 144
+- name: Carson McDonald
+  login: carsonmcdonald
+  count: 113
+- name: Tomasz Pędraszewski
+  login: dabroz
+  count: 104
+- name: Akira Yumiyama
+  login: akiray03
+  count: 83
+- name: skandhas
+  login: skandhas
+  count: 83
+- name: Masamitsu MURASE
+  login: masamitsu-murase
+  count: 80
+- name: Tatsuhiko Kubo
+  login: cubicdaiya
+  count: 71
+- name: Yuichiro MASUI
+  login: masuidrive
+  count: 71
+- name: Hiroshi Mimaki
+  login: mimaki
+  count: 69
+- name: Yuichiro Kaneko
+  login: yui-knk
+  count: 62
+- name: Kurebayashi, Takahiro
+  login: crimsonwoods
+  count: 59
+- name: h2so5
+  login: h2so5
+  count: 56
+- name: Ralph Desir
+  login: Mav7
+  count: 52
+- name: Paolo Bosetti
+  login: pbosetti
+  count: 48
+- name: Rory O'Connell
+  login: RoryO
+  count: 45
+- name: fleuria
+  login: flaneur2020
+  count: 42
+- name: Christopher Aue
+  login: christopheraue
+  count: 40
+- name: Seba Gamboa
+  login: sagmor
+  count: 40
+- name: Kouhei Sutou
+  login: kou
+  count: 39
+- name: Masayoshi Takahashi
+  login: takahashim
+  count: 32
+- name: MATSUMOTO Ryosuke
+  login: matsumotory
+  count: 31
+- name: Nobuyoshi Nakada
+  login: nobu
+  count: 30
+- name: Hoshiumi Arata
+  login: hoshiumiarata
+  count: 26
+- name: Julian Aron Prenner
+  login: furunkel
+  count: 25
+- name: Clayton Smith
+  login: clayton-shopify
+  count: 22
+- name: Uchio Kondo
+  login: udzura
+  count: 22
+- name: Zachary Scott
+  login: zzak
+  count: 22
+- name: Ryan Lopopolo
+  login: lopopolo
+  count: 21
+- name: Ryan Scott
+  login: ryan-scott-dev
+  count: 20
+- name: Bouke van der Bijl
+  login: bouk
+  count: 19
+- name: Jared Breeden
+  login: jbreeden
+  count: 19
+- name: go kikuta
+  login: gkta
+  count: 19
+- name: Corey Powell
+  login: IceDragon200
+  count: 18
+- name: Hidetaka Takano
+  login: TJ-Hidetaka-Takano
+  count: 18
+- name: Jon Maken
+  login: jonforums
+  count: 18
+- name: mirichi
+  login: mirichi
+  count: 18
+- name: Mitchell Blank Jr
+  login: mitchblank
+  count: 17
+- name: bggd
+  login: bggd
+  count: 16
+- name: kano4
+  login: kano4
+  count: 16
+- name: Felix Jones
+  login: felixjones
+  count: 15
+- name: Blaž Hrastnik
+  login: archseer
+  count: 14
+- name: Kazuki Tsujimoto
+  login: k-tsj
+  count: 14
+- name: Tadashi FUKUZAWA
+  login: FUKUZAWA-Tadashi
+  count: 14
+- name: fn ⌃ ⌥
+  login: FnControlOption
+  count: 14
+- name: leviongit
+  login: leviongit
+  count: 14
+- name: Jose Narvaez
+  login: goyox86
+  count: 13
+- name: Patrick Hogan
+  login: pbhogan
+  count: 13
+- name: Akira Kuroda
+  login: akuroda
+  count: 12
+- name: NAKAMURA Usaku
+  login: unak
+  count: 12
+- name: Ray Chason
+  login: chasonr
+  count: 12
+- name: Takashi Sawanaka
+  login: sdottaka
+  count: 12
+- name: Ukrainskiy Sergey
+  login: ukrainskiysergey
+  count: 12
+- name: Xuejie "Rafael" Xiao
+  login: xxuejie
+  count: 12
+- name: Julien Ammous
+  login: schmurfy
+  count: 11
+- name: Kazuho Oku
+  login: kazuho
+  count: 11
+- name: RIZAL Reckordp
+  login: Reckordp
+  count: 11
+- name: Seeker
+  login: SeekingMeaning
+  count: 11
+- name: takkaw
+  login: takkaw
+  count: 11
+- name: Miura Hideki
+  login: miura1729
+  count: 10
+- name: Narihiro Nakamura
+  login: authorNari
+  count: 10
+- name: Yuichi Nishiwaki
+  login: nyuichi
+  count: 10

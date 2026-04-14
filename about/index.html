@@ -1,23 +1,91 @@
 ---
 layout: default
-title: mruby - about
+title: mruby — About
 ---
 
-<div id="home">
-  <div>
-    <h2>About mruby</h2>
-    <p class="mruby-is">
-    mruby is the lightweight implementation of the <a href="https://www.ruby-lang.org">Ruby language</a> complying to (part of) the <a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=59579">ISO standard</a>. mruby can be linked and embedded within your application. We provide the interpreter program "mruby" and the interactive mruby shell "mirb" as examples. You can also compile Ruby programs into compiled byte code using the mruby compiler "mrbc". All those tools reside in the "bin" directory. "mrbc" is also able to generate compiled byte code in a C source file, see the "mrbtest" program under the "test" directory for an example.
-    </p>
-
-    <p>
-      This achievement was sponsored by the Regional Innovation Creation R&amp;D Programs of the Ministry of Economy, Trade and Industry of Japan.
+<section class="page-header">
+  <div class="page-header__inner">
+    <div class="page-header__eyebrow">
+      Project
+    </div>
+    <h1 class="page-header__heading">About mruby</h1>
+    <p class="page-header__description">
+      mruby is the lightweight implementation of the Ruby language complying to (part of)
+      the ISO standard. It can be linked and embedded within your application. We provide the interpreter
+      <span class="inline-code">mruby</span>, the interactive shell <span class="inline-code">mirb</span>,
+      and the compiler <span class="inline-code">mrbc</span>
+      which can also generate bytecode as a C source file.
     </p>
   </div>
+</section>
 
-  {% include _latest_news.html %}
+<section class="about-features">
+  <div class="about-features__inner">
+    <div class="about-feature">
+      <h2 class="about-feature__title">Lightweight</h2>
+      <p class="about-feature__desc">Designed for constrained environments — microcontrollers, embedded systems, and any place where MRI Ruby is too heavy.</p>
+    </div>
+    <div class="about-feature">
+      <h2 class="about-feature__title">Embeddable</h2>
+      <p class="about-feature__desc">Link <span class="inline-code">libmruby</span> directly into your C or C++ application and call mruby from native code.</p>
+    </div>
+    <div class="about-feature">
+      <h2 class="about-feature__title">ISO-compliant</h2>
+      <p class="about-feature__desc">Conforms to a subset of the ISO/IEC 30170 Ruby specification, ensuring predictable, standards-based behaviour.</p>
+    </div>
+    <div class="about-feature">
+      <h2 class="about-feature__title">Bytecode</h2>
+      <p class="about-feature__desc">Compile Ruby to <span class="inline-code">.mrb</span> bytecode or embed it as a C array — ship programs without distributing source.</p>
+    </div>
+  </div>
+</section>
 
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZXbs9yuzv-E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="about-body">
+  <div class="about-body__inner">
+    <section class="about-releases">
+      <p class="about-section-eyebrow">Release History</p>
+      <div class="about-releases__list">
+        {% assign release_posts = site.posts | where_exp: "post", "post.url contains '-released'" %}
+        {% for post in release_posts %}
+          <a href="{{ post.url }}" class="about-release-row">
+            <span class="about-release-row__date">{{ post.date | date: "%d %b %Y" }}</span>
+            <span class="about-release-row__title">{{ post.title }}</span>
+            {% if forloop.first %}<span class="about-release-badge">Latest</span>{% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </section>
 
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Xa08hqK7ozs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <aside class="about-sidebar">
+      <div class="about-videos">
+        <p class="about-section-eyebrow">Talks &amp; Videos</p>
+        <div class="about-video-list">
+          <div class="about-video-card">
+            <div class="about-video-embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/ZXbs9yuzv-E" title="mruby 3.0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="about-video-info">
+              <p class="about-video-title">mruby 3.0</p>
+              <p class="about-video-subtitle">福岡県未来ITイニシアティブ</p>
+            </div>
+          </div>
+          <div class="about-video-card">
+            <div class="about-video-embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/Xa08hqK7ozs" title="An Introduction to mRuby" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="about-video-info">
+              <p class="about-video-title">An Introduction to mRuby</p>
+              <p class="about-video-subtitle">Yukihiro &ldquo;Matz&rdquo; Matsumoto &middot; DraperTV</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-ack">
+        <p class="about-section-eyebrow">Acknowledgement</p>
+        <p class="about-ack__text">Sponsored by the Regional Innovation Creation R&amp;D Programs of the Ministry of Economy, Trade and Industry of Japan.</p>
+        <p class="about-ack__logo">mruby logo by <a href="https://github.com/h2so5">h2so5</a></p>
+      </div>
+    </aside>
+  </div>
 </div>

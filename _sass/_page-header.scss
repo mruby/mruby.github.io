@@ -1,0 +1,214 @@
+/* ============================================================
+   .page-header — Unified BEM Component
+   Variants: --plain, --article, --split
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Base
+   ------------------------------------------------------------ */
+.page-header {
+  background: var(--color-bg-warm);
+  border-bottom: 1px solid var(--color-border);
+  padding: 80px var(--container-padding) 56px;
+  overflow: hidden;
+
+  /* --plain: no background, no border (downloads) */
+  &--plain {
+    background: transparent;
+    border-bottom: none;
+  }
+
+  &--plain &__inner::after,
+  &--article &__inner::after,
+  &--split &__inner::after {
+    display: none;
+  }
+
+  /* --article: tighter top padding, used in post layout */
+  &--article {
+    padding-top: 64px;
+    padding-bottom: 56px;
+  }
+
+  /* --split: flex split with aside on right */
+  &--split &__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+
+/* ------------------------------------------------------------
+   Inner Container
+   ------------------------------------------------------------ */
+.page-header__inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+    height: 340px;
+    background: url('/assets/images/mruby_logo_red_icon.png') no-repeat center / contain;
+    opacity: 0.07;
+    pointer-events: none;
+  }
+}
+
+/* Left column in split layouts (implicit — no special style needed) */
+.page-header__content {
+  min-width: 0;
+}
+
+/* Right column in split layouts */
+.page-header__aside {
+  flex-shrink: 0;
+  padding-bottom: 4px;
+}
+
+/* ------------------------------------------------------------
+   Eyebrow
+   ------------------------------------------------------------ */
+.page-header__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-red);
+    flex-shrink: 0;
+    transform: translateY(-1px);
+  }
+}
+
+/* ------------------------------------------------------------
+   Heading
+   ------------------------------------------------------------ */
+.page-header__heading {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--color-black);
+  margin-bottom: 20px;
+
+  .page-header--article & {
+    margin-bottom: 0;
+    max-width: 800px;
+  }
+}
+
+/* ------------------------------------------------------------
+   Description
+   ------------------------------------------------------------ */
+.page-header__description {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--color-muted);
+  max-width: 560px;
+
+  a {
+    color: var(--color-red);
+    transition: opacity 0.15s ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+/* ------------------------------------------------------------
+   Actions (CTA buttons)
+   ------------------------------------------------------------ */
+.page-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+/* ------------------------------------------------------------
+   Meta line (article layout: category · sep · date)
+   ------------------------------------------------------------ */
+.page-header__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.page-header__meta-category {
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.page-header__meta-sep {
+  color: var(--color-muted-secondary);
+}
+
+.page-header__meta-date {
+  color: var(--color-muted);
+}
+
+/* ------------------------------------------------------------
+   Responsive — ≤1024px
+   ------------------------------------------------------------ */
+@media (max-width: 1024px) {
+  .page-header__heading {
+    font-size: 40px;
+  }
+
+  .page-header--split .page-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+/* ------------------------------------------------------------
+   Responsive — ≤768px
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .page-header__heading {
+    font-size: 32px;
+  }
+
+  .page-header__aside {
+    padding-bottom: 0;
+  }
+
+  .page-header__inner::after {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   Responsive — ≤480px
+   ------------------------------------------------------------ */
+@media (max-width: 480px) {
+  .page-header__heading {
+    font-size: 28px;
+  }
+}

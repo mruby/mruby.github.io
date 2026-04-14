@@ -1,43 +1,132 @@
 ---
 layout: default
-title: mruby - libraries
+title: mruby - Libraries
 ---
 
-<div class="row">
-  <div class="col-md-12">
-    <h2 class="page-header">Libraries</h2>
+{% assign total = site.data.mgems | size %}
+
+<section class="page-header page-header--split">
+  <div class="page-header__inner">
+    <div class="page-header__content">
+      <div class="page-header__eyebrow">
+        Libraries
+      </div>
+      <h1 class="page-header__heading">mrbgems</h1>
+      <p class="page-header__description">
+        <strong>mrbgems</strong> is mruby's package manager. See the
+        <a href="https://github.com/mruby/mruby/blob/master/doc/guides/mrbgems.md">mrbgems doc</a>
+        for how to use it.
+      </p>
+    </div>
+    <div class="page-header__aside">
+      <div class="libs-header__count">
+        <span class="libs-header__count-number">{{ total }}</span>
+        <span class="libs-header__count-label">community<br>libraries</span>
+      </div>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <p>
-      <strong>mrbgems</strong> is mruby's package manager. See the <a href="https://github.com/mruby/mruby/blob/master/doc/guides/mrbgems.md">mrbgems doc</a> for more information about how to use it.
-    </p>
+</section>
+
+<section class="libs-toolbar">
+  <div class="libs-toolbar__inner">
+    <div class="libs-search">
+      <svg class="libs-search__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="9.5" y1="9.5" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <input
+        class="libs-search__input"
+        id="libs-search-input"
+        type="search"
+        placeholder="Search libraries…"
+        aria-label="Search libraries"
+        autocomplete="off"
+      >
+    </div>
+    <span class="libs-toolbar__count" id="libs-count" aria-live="polite" aria-atomic="true">Showing {{ total }} libraries</span>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <table class="table table-striped table-bordered">
-      <thead>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Author</th>
-      </thead>
-      <tbody>
-        {% for mgem_data in site.data.mgems %}
-          <tr>
-            <td>
-              <a href="{{ mgem_data.website }}">{{ mgem_data.name }}</a>
-            </td>
-            <td>
-              {{ mgem_data.description }}
-            </td>
-            <td>
-              {{ mgem_data.author }}
-            </td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+</section>
+
+<section class="libs-grid">
+  <div class="libs-grid__inner">
+    <div class="libs-grid__rows" id="libs-grid">
+      {% for mgem in site.data.mgems %}
+        {% if mgem.author.first %}{% assign mgem_author = mgem.author | join: ", " %}{% else %}{% assign mgem_author = mgem.author %}{% endif %}
+        <a
+          href="{{ mgem.website }}"
+          class="libs-card"
+          data-name="{{ mgem.name | downcase | xml_escape }}"
+          data-author="{{ mgem_author | downcase | xml_escape }}"
+          data-description="{{ mgem.description | downcase | xml_escape }}"
+        >
+          <div class="libs-card__header">
+            <span class="libs-card__name">{{ mgem.name | xml_escape }}</span>
+            <span class="libs-card__author">{{ mgem_author | xml_escape }}</span>
+          </div>
+          <p class="libs-card__description">{{ mgem.description | xml_escape }}</p>
+        </a>
+      {% endfor %}
+    </div>
+    <div class="libs-no-results" id="libs-no-results" aria-live="polite">
+      <p class="libs-no-results__text">No libraries match your search.</p>
+    </div>
   </div>
-</div>
+</section>
+
+<section class="libs-footer">
+  <div class="libs-footer__inner">
+    <span class="libs-footer__text" id="libs-footer-count">Showing {{ total }} libraries &#8212;</span>
+    <a href="https://github.com/mruby/mgem-list" class="libs-footer__link">view all on GitHub &#8594;</a>
+  </div>
+</section>
+
+<script>
+(function () {
+  var input = document.getElementById('libs-search-input');
+  var countLabel = document.getElementById('libs-count');
+  var footerCount = document.getElementById('libs-footer-count');
+  var noResults = document.getElementById('libs-no-results');
+  var cards = Array.from(document.querySelectorAll('.libs-card'));
+  var total = cards.length;
+  var timer;
+
+  if (!input || !countLabel || !footerCount || !noResults) return;
+
+  function update(query) {
+    var q = query.trim().toLowerCase();
+    var visible = 0;
+
+    cards.forEach(function (card) {
+      var match = !q
+        || card.dataset.name.indexOf(q) !== -1
+        || card.dataset.author.indexOf(q) !== -1
+        || card.dataset.description.indexOf(q) !== -1;
+      if (match) {
+        card.removeAttribute('hidden');
+        visible++;
+      } else {
+        card.setAttribute('hidden', '');
+      }
+    });
+
+    if (q) {
+      countLabel.textContent = 'Showing ' + visible + ' of ' + total + ' libraries';
+      footerCount.textContent = 'Showing ' + visible + ' of ' + total + ' libraries \u2014';
+    } else {
+      countLabel.textContent = 'Showing ' + total + ' libraries';
+      footerCount.textContent = 'Showing ' + total + ' libraries \u2014';
+    }
+
+    if (visible === 0) {
+      noResults.classList.add('is-visible');
+    } else {
+      noResults.classList.remove('is-visible');
+    }
+  }
+
+  input.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () { update(input.value); }, 150);
+  });
+})();
+</script>

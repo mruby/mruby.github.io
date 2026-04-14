@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Executing Ruby code with mruby
+description: "REPL, .rb files, C embedding, bytecode \u2014 four execution methods compared"
 categories: articles
 ---
 

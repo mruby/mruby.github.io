@@ -1,22 +1,45 @@
 ---
 layout: default
-title: mruby
+title: mruby - Lightweight Ruby
 ---
 
-<div class="row clearfix">
-  <div class="col-md-12 column mruby-is">
-    <img src="/assets/images/mruby_logo_red_icon.png"/>
-    <p>
-    mruby is the lightweight implementation of the <a href="https://www.ruby-lang.org">Ruby language</a> complying with part of the <a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=59579">ISO standard</a>. mruby can be linked and embedded within your application.
-    </p>
+{% assign current_release = site.data.releases | where: "prerelease", false | first %}
 
-    <div class="mruby-is-get">
-      <a href="https://github.com/mruby/mruby/archive/3.4.0.zip" class="btn btn-lg btn-default" role="button">Download 3.4.0 Source</a>
-      &nbsp; or &nbsp;
-      <a href="https://github.com/mruby/mruby" class="btn btn-lg btn-default" role="button">Find on GitHub</a>
+<section class="page-header">
+  <div class="page-header__inner">
+    <div class="page-header__content">
+      <span class="page-header__eyebrow">OPEN SOURCE · LIGHTWEIGHT · EMBEDDABLE</span>
+      <h1 class="page-header__heading">Lightweight Ruby for Everywhere</h1>
+      <p class="page-header__description">
+        mruby is the lightweight implementation of the Ruby language, complying with part of the ISO standard. Designed to be embedded within your application.
+      </p>
+      <div class="page-header__actions">
+        <a href="https://github.com/mruby/mruby/archive/{{ current_release.version }}.zip" class="btn btn--primary">
+          Download {{ current_release.version }}
+        </a>
+        <a href="https://github.com/mruby/mruby" class="btn btn--outline">
+          View on GitHub
+        </a>
+      </div>
     </div>
   </div>
+</section>
 
-  {% include _latest_news.html %}
-
-</div>
+<section class="latest-news" aria-labelledby="latest-news-heading">
+  <div class="latest-news__inner">
+    <div class="latest-news__header">
+      <h2 class="latest-news__heading" id="latest-news-heading">Latest News</h2>
+      <a href="https://github.com/mruby/mruby/releases" class="latest-news__all-link">All releases</a>
+    </div>
+    <div class="latest-news__divider"></div>
+    <div class="news-cards">
+      {% for post in site.posts limit:3 %}
+      <a href="{{ post.url }}" class="news-card">
+        <time class="news-card__date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %b %Y" | upcase }}</time>
+        <h3 class="news-card__title">{{ post.title }}</h3>
+        <span class="news-card__read-more">&#8212; Read more</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

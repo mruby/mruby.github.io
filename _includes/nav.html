@@ -1,0 +1,23 @@
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="site-nav__inner">
+    <a href="/" class="site-nav__brand" aria-label="mruby home">
+      <img src="/assets/images/mruby_logo_red_icon.png" alt="" width="32" height="32" aria-hidden="true">
+      <span class="site-nav__wordmark">mruby</span>
+    </a>
+
+    <button class="site-nav__hamburger" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="site-nav__links" id="site-nav-links" role="list">
+      <li><a href="/downloads/"{% if page.url contains '/downloads/' %} aria-current="page"{% endif %}>Downloads</a></li>
+      <li><a href="/docs/"{% if page.url contains '/docs/' %} aria-current="page"{% endif %}>Documentation</a></li>
+      <li><a href="/libraries/"{% if page.url contains '/libraries/' %} aria-current="page"{% endif %}>Libraries</a></li>
+      <li><a href="/about/"{% if page.url contains '/about/' %} aria-current="page"{% endif %}>About</a></li>
+      <li><a href="/team/"{% if page.url contains '/team/' %} aria-current="page"{% endif %}>Team</a></li>
+    </ul>
+  </div>
+</nav>

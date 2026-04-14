@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    {% include header.html %}
+    {% include head.html %}
   </head>
   <body>
-
-    {% include navigation.html %}
-
-    <div class="container">
-
-      <div class="row clearfix">
-        <div class="col-md-12 column">
-
-          {{ content }}
-
-        </div>
-      </div>
-    </div>
-
+    {% include nav.html %}
+    <main id="main-content">
+      {{ content }}
+    </main>
     {% include footer.html %}
-
+    <script>
+      (function () {
+        var btn = document.querySelector('.site-nav__hamburger');
+        var links = document.getElementById('site-nav-links');
+        if (!btn || !links) return;
+        btn.addEventListener('click', function () {
+          var expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          links.classList.toggle('is-open', !expanded);
+        });
+      })();
+    </script>
   </body>
 </html>
